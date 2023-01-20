@@ -1,6 +1,6 @@
 # Portes logiques
 
-En informatique, les {glo}`syslogique|systèmes logiques` décrivent comment sont connectés les {glo}`circuitelectronique|circuits électroniques` des ordinateurs afin de leur permettre, d'une part, d'effectuer des calculs et de traiter des données et, d'autre part, d'utiliser leur mémoire de travail, où sont stockées les données qu'ils traitent.
+En informatique, les {glo}`syslogique|systèmes logiques` décrivent comment sont connectés les circuits électroniques des ordinateurs afin de leur permettre, d'une part, d'effectuer des calculs et de traiter des données et, d'autre part, d'utiliser leur mémoire de travail, où sont stockées les données qu'ils traitent.
 
 Même si on a l'impression que les ordinateurs peuvent faire toutes sortes de choses, il y a un ensemble limité d'opérations de base que l'électronique d'une machine peut faire. Parmi ces quelques opérations de base, on trouve l'addition, la soustraction, la multiplication ou la division de nombres. La plupart des tâches que l'ordinateur exécute reposent sur ces quelques opérations (ainsi que sur quelques opérations dites _logiques_, qui vont être explicitées).
 
@@ -22,7 +22,7 @@ Que se passe-t-il pour l'addition de deux nombres entiers ? On va utiliser leu
 | 0   | 1   | 1   |
 | 1   | 1   | 10  |
 
-La dernière ligne est intéressante : on sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi 10 (voir le chapitre {ref}`représentation de l'information <representationinformation>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux bits de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième bit de sortie, notre tableau devient :
+La dernière ligne est intéressante : on sait que $1+1=2$, mais en {glo}`codebinaire|binaire`, on sait aussi que n'existent que des 0 et des 1, et 2 s'écrit ainsi 10 (voir le chapitre {ref}`représentation de l'information <repinfo>`). Cela veut dire que, pour traiter tous les cas d'une addition de deux {glo}`bit|bits`, on a besoin aussi de deux bits de sortie, et qu'un seul ne suffit pas. En explicitant chaque fois le deuxième bit de sortie, notre tableau devient :
 
 | $A$ | $B$ | $S$ |
 | :-: | :-: | :-: |
@@ -43,7 +43,7 @@ Les opérations arithmétiques et logiques et l'accès à la mémoire ne suffise
 
 ## Portes logiques
 
-Les circuits électroniques qui composent un ordinateur sont constitués de composants électroniques comme des {glo}`resistance|résistances`, des {glo}`condensateur|condensateurs`, des {glo}`transistor|transistors`, etc., qui déterminent où va passer le courant électrique et sur quelles parties du circuit règnera quelle {glo}`tension|tension`.
+Les circuits électroniques qui composent un ordinateur sont constitués de composants électroniques comme des {glo}`resistance|résistances`, des condensateurs, des {glo}`transistor|transistors`, etc., qui déterminent où va passer le courant électrique et sur quelles parties du circuit règnera quelle {glo}`tension|tension`.
 
 Quand on parle de portes et de circuits logiques, on simplifie tout cela. On considèrera simplement qu'un segment de circuit électronique où la tension est nulle (0 volt) représente la valeur binaire 0, alors qu'une tension non nulle (par exemple, 3 volts) représente la valeur binaire 1. Ainsi, pour véhiculer deux bits comme $A$ et $B$ dans un circuit, on a besoin de deux «fils».
 
@@ -68,7 +68,7 @@ On peut dessiner des diagrammes avec des portes logiques. Ce ne sont pas des dia
 :height: 60
 :mode: static
 
-{"v": 1, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
+{"v": 3, "opts": {"showDisconnectedPins": true}, "gates": [{"type": "AND", "pos": [50, 30], "in": [0, 1], "out": 2}]}
 ```
 
 Sur ce schéma logique, les entrées sont à gauche, la sortie à droite et la porte est connectée au milieu. Les circuits sont représentés en noir s'ils véhiculent un «0» et avec une couleur s'ils véhiculent un «1».
@@ -81,7 +81,7 @@ Cliquez sur {logicref}`tryout_and.x|l'entrée $X$` ou {logicref}`tryout_and.y|l'
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 3, "ref": "x", "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "ref": "y", "name": "Y", "val": 0}
@@ -95,15 +95,13 @@ Cliquez sur {logicref}`tryout_and.x|l'entrée $X$` ou {logicref}`tryout_and.y|l'
 ````{dropdown} Pour aller plus loin
 Comment une porte **ET** est-elle elle-même construite ? Cela a déjà été mentionné : avec d'autres composants électroniques plus simples. En simplifiant un peu, on peut considérer qu'une porte **ET** est constituée de deux transistors :
 
-```{figure} media/andgatetransistor.png
+```{figure} media/andgatetransistor.svg
 ---
-height: 300px
 width: 200px
 ---
-Construction d'une porte logique **ET** à partir de deux transistors (et de résistances).
 ```
 
-Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la droite. Ici, si **V** représente une tension continue de, disons, 5 volts, on aura donc une tension similaire sur la sortie **Out** que si à la fois **A** et **B**, qui sont ici les entrées du circuit, sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volts sur la sortie **Out**.
+Ici, les deux transistors sont les composants symbolisés par un cercle. Rappelons qu'ils laissent passer du courant de haut en bas lorsqu'ils détectent un courant sur l'entrée qui vient de la gauche. Ici, comme on a en haut une tension de 4 volts, on aura une tension similaire sur la sortie **Z** que si à la fois les entrées **X** et **Y** sont «actives» — donc lorsque les deux transistors sont «ouverts». Sinon, on aura une tension de 0 volt sur la sortie **Z**.
 ````
 
 
@@ -130,7 +128,7 @@ Essayez la porte **OU** :
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -140,6 +138,17 @@ Essayez la porte **OU** :
   "wires": [[3, 0], [4, 1], [2, 5]]
 }
 ```
+
+````{dropdown} Pour aller plus loin
+Voici comment une porte **OU** peut être construite avec deux transistors :
+
+```{figure} media/orgatetransistor.svg
+---
+width: 200px
+---
+```
+````
+
 
 ## Porte NON
 
@@ -159,13 +168,23 @@ Essayez l'inverseur :
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [{"pos": [50, 30], "id": 0, "name": "X", "val": 0}],
   "out": [{"pos": [220, 30], "id": 2, "name": "Z"}],
   "gates": [{"type": "NOT", "pos": [130, 30], "in": 1, "out": 3}],
   "wires": [[0, 1], [3, 2]]
 }
 ```
+
+````{dropdown} Pour aller plus loin
+Voici comment un inverseur peut être construit avec un transistor :
+
+```{figure} media/notgatetransistor.svg
+---
+width: 200px
+---
+```
+````
 
 Ensemble, les portes **ET**, **OU** et **NON** représentent les relations logiques de la {glo}`conjonction|conjonction`, la {glo}`disjonction|disjonction` et la {glo}`negation|négation`. Même si on ne les appelle pas ainsi, on utilise tous les jours des relations logiques de conjonction, de disjonction et de négation.
 
@@ -202,7 +221,7 @@ Les portes peuvent être connectées les unes aux autres. Voici par exemple un d
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 0},
@@ -229,12 +248,12 @@ Ce diagramme n'est pas forcément facile à lire — discutons d'abord comment l
 
 Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera à établir sa table de vérité. En l'occurrence, comme pour les portes précédentes, ce circuit a {logicref}`xor_circuit_tryout.{x,y}|deux entrées`: si chaque entrée peut valoir 1 ou 0, on a en tout, de nouveau, quatre configurations possibles à examiner dans le but de remplir la dernière colonne :
 
-| $X$ | $Y$ | $Z$   |
-| :-: | :-: | :-:   |
-| 0   | 0   | $???$ |
-| 1   | 0   | $???$ |
-| 0   | 1   | $???$ |
-| 1   | 1   | $???$ |
+| $X$ | $Y$ | $Z$ |
+| :-: | :-: | :-: |
+| 0   | 0   | ?   |
+| 1   | 0   | ?   |
+| 0   | 1   | ?   |
+| 1   | 1   | ?   |
 
 
  Pour remplir chaque ligne, on va changer les entrées selon les valeurs de $X$ et $Y$ et observer l'effet des portes et ainsi voir comment le circuit se comporte. Prenons $X=Y=0$: c'est le cas représenté par le diagramme fixe ci-dessous. Rappelons qu'un segment noir véhicule un «0», alors qu'un segment coloré véhicule un «1».
@@ -245,7 +264,7 @@ Pour analyser un circuit logique comme celui présenté ci-dessus, on cherchera 
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 0},
@@ -272,7 +291,7 @@ Le cas est différent si l'une des deux entrées vaut 1. Voici deux diagrammes f
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 1},
@@ -295,7 +314,7 @@ Le cas est différent si l'une des deux entrées vaut 1. Voici deux diagrammes f
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 0},
@@ -323,7 +342,7 @@ Mais dans le cas $X = Y = 1$, représenté ici, la situation est différente :
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "ref": "x", "name": "X", "val": 1},
@@ -359,7 +378,7 @@ Cette fonction s'appelle «ou exclusif», car pour avoir un 1 de sortie, elle ex
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -394,7 +413,7 @@ Pourquoi rajouter une porte **ET** ? On utilise ici le fait que connecter une 
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"showGateTypes": true, "showDisconnectedPins": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
@@ -418,7 +437,7 @@ Ce qui reste à définir en complétant avant la porte **ET**, c'est l'exclusion
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
@@ -445,7 +464,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
@@ -473,7 +492,7 @@ Ceci est le même circuit que ci-dessus, mais sans la porte **ET** finale. À la
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -504,7 +523,7 @@ La table de vérité montre qu'il y a deux lignes où la sortie doit valoir 1 
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -532,7 +551,7 @@ On avance ainsi à ceci :
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -559,7 +578,7 @@ Voici le circuit final ainsi réalisé :
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": "?"},
@@ -598,7 +617,7 @@ En annotant le schéma logique avec les quatre cas de figure possibles pour les 
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 0, "name": "X", "val": 0},
@@ -629,7 +648,7 @@ Quelle est la porte cachée de ce circuit ?
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -653,7 +672,7 @@ Analysez ce circuit. De quel type de portes est-il constitué ? Fonctionne-t-i
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
@@ -676,7 +695,7 @@ Voici le circuit corrigé (il a la même apparence que le circuit de la question
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
@@ -721,7 +740,7 @@ Ce circuit, une fois corrigé, implémente en fait un **ET** à trois entrée $X
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 3, "name": "X", "val": 0},
     {"pos": [50, 70], "id": 4, "name": "Y", "val": 0}
@@ -749,7 +768,7 @@ Réalisez ensuite un circuit logique avec les mêmes deux entrées $X$ et $Y$ et
 :showonly: AND OR NOT
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
@@ -775,7 +794,7 @@ Il y plusieurs solutions possibles. Celle qui correspond aux indices est la suiv
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
@@ -799,7 +818,7 @@ Une autre solution est la suivante, où on se dit qu'on construit d'abord une {l
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
@@ -821,7 +840,7 @@ Voici un circuit plus simple, qui fait la même chose mais qui est plus difficil
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [
     {"pos": [50, 40], "id": 3, "name": "X", "val": 0},
@@ -842,7 +861,7 @@ En fait, il existe même une porte spéciale qui réalise exactement la fonction
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"showGateTypes": true},
   "in": [{
     "pos": [50, 40], "id": 3, "name": "X", "val": 0},

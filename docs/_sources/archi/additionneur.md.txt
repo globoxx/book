@@ -30,7 +30,7 @@ Et on constate que $S_1$ n'est autre qu'un **ET** logique de $A$ et $B$. On peut
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [50, 30], "id": 0, "val": 0, "name": "A"},
     {"pos": [50, 110], "id": 1, "val": 0, "name": "B"}
@@ -105,7 +105,7 @@ En faisant pour l'instant abstraction des détails d'un additionneur complet, on
 :mode: static
 
 {
-  "v": 1,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "components": [{"type": "adder", "pos": [60, 60], "in": [0, 1, 2], "out": [3, 4]}]
 }
@@ -124,7 +124,7 @@ Si $A$ est formé de deux bits $A_0$ et $A_1$ et que $B$ est formé des deux bit
 :mode: tryout
 
 {
-  "v": 2,
+  "v": 3,
   "opts": {"showDisconnectedPins": true},
   "in": [
     {"pos": [190, 40], "orient": "s", "id": 10, "ref": "a0", "name": "A0", "val": 0},
@@ -171,7 +171,7 @@ Les entrées sont déjà disposées. Glissez autant d'additionneurs et de bits d
 :showonly: out adder
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -193,7 +193,7 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [90, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [190, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -243,7 +243,7 @@ On a besoin de cinq bits de sortie. Le schéma, représenté horizontalement et 
 Cet exercice démontre l'opportunité de penser en termes modulaires, ce qui revient souvent en informatique. Ici, on a réalisé qu'un additionneur complet résout un sous-problème bien défini d'une addition générale d'un nombre à $n$ bits, et qu'une fois qu'on a créé un tel additionneur, il suffit d'en connecter plusieurs les uns derrière les autres de manière structurée pour additionner des nombres plus grands.
 
 
-````{admonition} Exercice 5 : overflow
+````{admonition} Exercice 5 : dépassement de capacité
 
 Le schéma ci-dessous montre le même additionneur de demi-octets de l'exercice précédent, mais, de plus, la valeur en base 10 de ses 4 bits d'entrée pour $A$ et pour $B$ est affichée avec {logicref}`fulladder_4bits_test.{displayA,displayB}|un module d'affichage spécial à droite`. {logicref}`fulladder_4bits_test.{displayS}|La même chose` est faite pour représenter la valeur $S = A + B$ (mais seulement sur les quatre premiers bits de $S$). Actuellement, le circuit effectue le calcul $0 + 0 = 0$.
 
@@ -262,7 +262,7 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 0},
     {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -323,7 +323,7 @@ Réglez les entrées du circuit de manière à lui faire effectuer les additions
 ```
 
 ```{dropdown} Corrigé
-Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l'on peut représenter (en l'occurrence, $2^{64} - 1 = 18\,446\,744\,073\,709\,551\,615$.) La retenue du dernier additionneur s'appelle le bit de dépassement (_overflow_ en anglais). Il vaut 1 lorsque le résultat de l'addition n'est pas correctement représenté avec les 4 (ou 64) bits de sortie. Dans les processeurs, il porte souvent le nom de $V$ (deuxième lettre d'_oVerflow_). On utilisera dorénavant aussi ce nom.
+Dès que la somme dépasse 15, elle n'est plus représentable sur les 4 bits qui sont affichés sur la sortie. La plupart des ordinateurs et smartphones actuels représentent les nombres non pas sur 4 bits, mais sur 64. Mais même avec 64 bits, il y a un nombre maximal que l'on peut représenter (en l'occurrence, $2^{64} - 1 = 18\,446\,744\,073\,709\,551\,615$.) La retenue du dernier additionneur indique si le résultat est valable : il vaut 1 lorsque le résultat de l'addition n'est pas correctement représenté avec les 4 (ou 64) bits de sortie. Dans les processeurs, il porte souvent simplement le nom de $C$ (pour _carry_, retenue). On utilisera dorénavant aussi ce nom.
 ```
 ````
 
@@ -340,7 +340,7 @@ Déterminez quel composant est défectueux dans ce circuit et comment il faudrai
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [100, 40], "orient": "s", "id": 3, "name": "A3", "val": 1},
     {"pos": [200, 40], "orient": "s", "id": 0, "name": "A2", "val": 0},
@@ -423,7 +423,7 @@ En s'aidant de la table de vérité d'un seul additionneur complet, créer un ci
 :mode: tryout
 
 {
-  "v": 1,
+  "v": 3,
   "in": [
     {"pos": [60, 30], "id": 0, "name": "A", "val": 0},
     {"pos": [60, 90], "id": 1, "name": "B", "val": 0},

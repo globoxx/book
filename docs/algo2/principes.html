@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Algorithmes de recherche" href="recherche.html" /><link rel="prev" title="Introduction" href="intro.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="3. Algorithmes de recherche" href="recherche.html" /><link rel="prev" title="1. Introduction" href="intro.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Terminaison et complexité - Apprendre</title>
+        <title>2. Terminaison et complexité - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -44,8 +44,8 @@
   --color-background-border: #eeebee;
   --color-announcement-background: #000000dd;
   --color-announcement-text: #eeebee;
-  --color-brand-primary: #5933D1;
-  --color-brand-content: #5933D1;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
   --admonition-font-size: 0.9rem;
   --admonition-title-font-size: 0.9rem;
   
@@ -275,31 +275,20 @@
 <li class="toctree-l2"><a class="reference internal" href="../archi/conclusion.html">8. Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">1. Histoire de l’informatique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html#une-breve-histoire-de-linformatique">2. Une (brève) histoire de l’informatique</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/portraits.html">3. Galerie de portraits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/jeuxvideo.html">4. Brève histoire des jeux vidéo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/machines.html">5. Histoire des machines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/notions.html">6. Notions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/technologies.html">7. Technologies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hist/entreprises.html">8. Entreprises</a></li>
-</ul>
-</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Deuxième année</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Algorithmique II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Terminaison et complexité</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recherche.html">Algorithmes de recherche</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tris.html">Algorithmes de tri</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Algorithmique II</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">2. Terminaison et complexité</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recherche.html">3. Algorithmes de recherche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tris.html">4. Algorithmes de tri</a></li>
 <li class="toctree-l2"><a class="reference internal" href="heuristiques.html">5. Algorithmes heuristiques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="recursivite.html">4. Récursivité [en option]</a></li>
-<li class="toctree-l2"><a class="reference internal" href="conclusion.html">6. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recursivite.html">6. Récursivité [en option]</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conclusion.html">7. Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../prog2/index.html">Programmation II</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../prog2/onkey.html">1. Déclencher - <code class="docutils literal notranslate"><span class="pre">onkey()</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog2/lambda.html">2. Formaliser - <code class="docutils literal notranslate"><span class="pre">lambda</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../prog2/onclick.html">3. Cliquer - <code class="docutils literal notranslate"><span class="pre">onclick()</span></code></a></li>
@@ -320,12 +309,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../prog2/idees.html">18. Idées</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">2. Adressage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">3. Paquets et protocoles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">4. Routage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">5. Le World Wide Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">6. Interopérabilité</a></li>
+</ul>
+</li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../projets/index.html">Projets</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projets/tic_tac_toe.html">1. Tic-tac-toe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projets/puissance4.html">2. Puissance 4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projets/mines.html">3. Démineur</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projets/snake.html">4. Snake</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../projets/game_of_life.html">5. Game of life</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../projets/game_of_life.html">5. Game of Life</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projets/cartes.html">6. Poker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projets/tetris.html">7. Tetris</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projets/art_absurde.html">8. Art absurde</a></li>
@@ -334,13 +332,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../projets/idees.html">11. Idées</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../resx/index.html">Réseaux</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../resx/intro.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/adressage.html">2. Adressage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/tcp-ip.html">3. Paquets et protocoles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/routage.html">4. Routage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/web.html">5. Le World Wide Web</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resx/couches.html">6. Interopérabilité</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Thématiques transversales</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hist/index.html">Histoire de l’informatique</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hist/main1.html">1. Histoire de l’informatique</a></li>
 </ul>
 </li>
 </ul>
@@ -374,17 +370,17 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="terminaison-et-complexite">
-<h1>Terminaison et complexité<a class="headerlink" href="#terminaison-et-complexite" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><span class="section-number">2. </span>Terminaison et complexité<a class="headerlink" href="#terminaison-et-complexite" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="attention admonition">
 <p class="admonition-title">Matière à réfléchir. Compte à rebours</p>
 <p>Voici une version naïve du compte à rebours des secondes pour le passage du Nouvel An :</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBDb21wdGUgw6AgcmVib3VycyAKZGVmIGNvbXB0ZV9hX3JlYm91cnMobmJfc2Vjb25kZXMpIDoKICAgIHdoaWxlIFRydWUgOgogICAgICAgIHByaW50KG5iX3NlY29uZGVzKQogICAgCW5iX3NlY29uZGVzID0gbmJfc2Vjb25kZXMgLSAxIAoKY29tcHRlX2FfcmVib3VycygxMCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Qu’arrive-t-il lorsqu’on exécute ce <span class="target" id="gl-programme-0"></span><span class="glossary-ref" data-definition="PHA+U8OpcXVlbmNlIGTigJlpbnN0cnVjdGlvbnMgKGRhbnMgdW4gbGFuZ2FnZSBkZSBwcm9ncmFtbWF0aW9uKSBwb3V2YW50IMOqdHJlIGV4w6ljdXTDqWUgcGFyIHVuIG9yZGluYXRldXIuPC9wPgo=" data-entry-name="UHJvZ3JhbW1l" data-glossary-uri="../glossaire.html#gl-def-programme-1" data-number="1">programme</span> avec <code class="docutils literal notranslate"><span class="pre">compte_a_rebours(10)</span></code> ?</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBDb21wdGUgw6AgcmVib3VycyAKZGVmIGNvbXB0ZV9hX3JlYm91cnMobmJfc2Vjb25kZXMpIDoKICAgIHdoaWxlIFRydWUgOgogICAgICAgIHByaW50KG5iX3NlY29uZGVzKQogICAgCW5iX3NlY29uZGVzID0gbmJfc2Vjb25kZXMgLSAxIAoKY29tcHRlX2FfcmVib3VycygxMCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Qu’arrive-t-il lorsqu’on exécute ce <span class="target" id="gl-programme-0"></span><span class="glossary-ref" data-definition="PHA+U8OpcXVlbmNlIGTigJlpbnN0cnVjdGlvbnMgKGRhbnMgdW4gbGFuZ2FnZSBkZSBwcm9ncmFtbWF0aW9uKSBwb3V2YW50IMOqdHJlIGV4w6ljdXTDqWUgcGFyIHVuIG9yZGluYXRldXIuPC9wPgo=" data-entry-name="UHJvZ3JhbW1l" data-glossary-uri="../glossaire.csv.html#gl-def-programme-1" data-number="1">programme</span> avec <code class="docutils literal notranslate"><span class="pre">compte_a_rebours(10)</span></code> ?</p>
 <p>Corriger le programme pour qu’il s’arrête à 0.</p>
 <p>Qu’arrive-t-il lorsque l’on exécute la nouvelle version du  programme avec  la valeur -10 en entrée ou <code class="docutils literal notranslate"><span class="pre">compte_a_rebours(-10)</span></code> ?</p>
 </div>
 <section id="principe-de-terminaison">
-<h2>Principe de terminaison<a class="headerlink" href="#principe-de-terminaison" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La <strong><span style="color:rgb(89, 51, 209)">terminaison</span></strong> est une propriété essentielle des <span class="target" id="gl-algo-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithmes</span>, qui garantit que les calculs de l’algorithme finiront par s’arrêter. Lorsque l’on conçoit un algorithme, il est important de faire en sorte que les calculs s’arrêtent à un moment donné. Cette garantie doit tenir pour toutes les entrées possibles. Voici un exemple d’algorithme qui compte et qui ne se termine pas :</p>
+<h2><span class="section-number">2.1. </span>Principe de terminaison<a class="headerlink" href="#principe-de-terminaison" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La <strong><span style="color:rgb(89, 51, 209)">terminaison</span></strong> est une propriété essentielle des <span class="target" id="gl-algo-0"></span><span class="glossary-ref" data-definition="PHA+VW4gYWxnb3JpdGhtZSBlc3QgdW5lIHN1aXRlIGZpbmllIGV0IG5vbiBhbWJpZ3XDqyBkJ2luc3RydWN0aW9ucyBldCBkJ29ww6lyYXRpb25zIHBlcm1ldHRhbnQgZGUgcsOpc291ZHJlIHVuZSBjbGFzc2UgZGUgcHJvYmzDqG1lcy48L3A+Cg==" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.csv.html#gl-def-algo-1" data-number="1">algorithmes</span>, qui garantit que les calculs de l’algorithme finiront par s’arrêter. Lorsque l’on conçoit un algorithme, il est important de faire en sorte que les calculs s’arrêtent à un moment donné. Cette garantie doit tenir pour toutes les entrées possibles. Voici un exemple d’algorithme qui compte et qui ne se termine pas :</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> # Algorithme qui compte infini 
  Variable i : numérique
  i ← nombre donné par l’utilisateur
@@ -394,7 +390,7 @@
  Fin Tant que
 </pre></div>
 </div>
-<p>Si on exécute cet <span class="target" id="gl-algo-1"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span>, le <span class="target" id="gl-programme-1"></span><span class="glossary-ref" data-definition="PHA+U8OpcXVlbmNlIGTigJlpbnN0cnVjdGlvbnMgKGRhbnMgdW4gbGFuZ2FnZSBkZSBwcm9ncmFtbWF0aW9uKSBwb3V2YW50IMOqdHJlIGV4w6ljdXTDqWUgcGFyIHVuIG9yZGluYXRldXIuPC9wPgo=" data-entry-name="UHJvZ3JhbW1l" data-glossary-uri="../glossaire.html#gl-def-programme-1" data-number="1">programme</span> ne s’arrête jamais : <code class="docutils literal notranslate"><span class="pre">i</span></code> est <span class="target" id="gl-incrementation-0"></span><span class="glossary-ref" data-definition="PHA+QWN0aW9uIGQnYXVnbWVudGVyIHVuZSB2YWxldXIgKGhlYmVyZ8OpZSBwYXIgdW5lIHZhcmlhYmxlIHNvdXZlbnQpIHN1aXZhbnQgdW4gaW5jcsOpbWVudCBkb25uw6kuIFNpIGonaW5jcsOpbWVudGUgMyBmb2lzIG1hIHZhcmlhYmxlIGluaXRpYWxlbWVudCDDoCAxIGRlIGxhIHZhbGV1ciAzLCBqZSB2YWlzIG9idGVuaXIgKDEpNCwgNywgMTA8L3A+Cg==" data-entry-name="SW5jcsOpbWVudGF0aW9u" data-glossary-uri="../glossaire.html#gl-def-incrementation-1" data-number="1">incrémenté</span> de <code class="docutils literal notranslate"><span class="pre">1</span></code> indéfiniment.  En pratique, si on retranscrit cet algorithme en programme et que l’on exécute le programme, le programme finira par s’arrêter lorsque les nombres représentés seront trop grands pour être représentés.</p>
+<p>Si on exécute cet <span class="target" id="gl-algo-1"></span><span class="glossary-ref" data-definition="PHA+VW4gYWxnb3JpdGhtZSBlc3QgdW5lIHN1aXRlIGZpbmllIGV0IG5vbiBhbWJpZ3XDqyBkJ2luc3RydWN0aW9ucyBldCBkJ29ww6lyYXRpb25zIHBlcm1ldHRhbnQgZGUgcsOpc291ZHJlIHVuZSBjbGFzc2UgZGUgcHJvYmzDqG1lcy48L3A+Cg==" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.csv.html#gl-def-algo-1" data-number="1">algorithme</span>, le <span class="target" id="gl-programme-1"></span><span class="glossary-ref" data-definition="PHA+U8OpcXVlbmNlIGTigJlpbnN0cnVjdGlvbnMgKGRhbnMgdW4gbGFuZ2FnZSBkZSBwcm9ncmFtbWF0aW9uKSBwb3V2YW50IMOqdHJlIGV4w6ljdXTDqWUgcGFyIHVuIG9yZGluYXRldXIuPC9wPgo=" data-entry-name="UHJvZ3JhbW1l" data-glossary-uri="../glossaire.csv.html#gl-def-programme-1" data-number="1">programme</span> ne s’arrête jamais : <code class="docutils literal notranslate"><span class="pre">i</span></code> est <span class="target" id="gl-incrementation-0"></span><span class="glossary-ref" data-definition="PHA+QWN0aW9uIGQnYXVnbWVudGVyIHVuZSB2YWxldXIgKGhlYmVyZ8OpZSBwYXIgdW5lIHZhcmlhYmxlIHNvdXZlbnQpIHN1aXZhbnQgdW4gaW5jcsOpbWVudCBkb25uw6kuIFNpIGonaW5jcsOpbWVudGUgMyBmb2lzIG1hIHZhcmlhYmxlIGluaXRpYWxlbWVudCDDoCAxIGRlIGxhIHZhbGV1ciAzLCBqZSB2YWlzIG9idGVuaXIgKDEpNCwgNywgMTA8L3A+Cg==" data-entry-name="SW5jcsOpbWVudGF0aW9u" data-glossary-uri="../glossaire.csv.html#gl-def-incrementation-1" data-number="1">incrémenté</span> de <code class="docutils literal notranslate"><span class="pre">1</span></code> indéfiniment.  En pratique, si on retranscrit cet algorithme en programme et que l’on exécute le programme, le programme finira par s’arrêter lorsque les nombres représentés seront trop grands pour être représentés.</p>
 <div class="note admonition">
 <p class="admonition-title">Exercice 1.0. L’infini en programme</p>
 <p>Retranscrire l’algorithme infini en programme. Après combien de boucles le programme s’arrête‑t‑il ?</p>
@@ -462,14 +458,14 @@
 </div>
 </section>
 <section id="principe-de-complexite">
-<h2>Principe de complexité<a class="headerlink" href="#principe-de-complexite" title="Lien permanent vers ce titre">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Principe de complexité<a class="headerlink" href="#principe-de-complexite" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="attention admonition">
 <p class="admonition-title">Matière à réfléchir. Record de vitesse</p>
 <p>On souhaite comparer deux algorithmes qui permettent de résoudre le même problème, afin d’utiliser l’algorithme qui permet de résoudre le problème plus rapidement. Mais comment pourrait‑on calculer la vitesse d’un algorithme ?</p>
 </div>
-<p>Il est important lorsqu’on utilise un <span class="target" id="gl-algo-2"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.html#gl-def-algo-1" data-number="1">algorithme</span> de nous préoccuper de son <span class="target" id="gl-efficacite-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="RWZmaWNhY2l0w6kgYWxnb3JpdGhtaXF1ZQ==" data-glossary-uri="../glossaire.html#gl-def-efficacite-1" data-number="1">efficacité</span>. Mais comment calculer l’efficacité d’un algorithme, comment calculer sa vitesse ?</p>
-<p>Est-ce qu’on peut utiliser la taille de l’algorithme pour prédire le temps qu’il va prendre à s’exécuter ? En d’autres termes, est-ce qu’un algorithme de 10 lignes est toujours plus lent qu’un algorithme de 5 lignes ? Nous avons vu que l’algorithme infini du chapitre précédent est très court (seulement 5 lignes), mais en théorie il ne s’arrête jamais. Une <span class="target" id="gl-bouclewhile-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="Qm91Y2xlIHRhbnQgcXVl" data-glossary-uri="../glossaire.html#gl-def-bouclewhile-1" data-number="1">boucle</span> rallonge le code de seulement 2 lignes, mais rallonge le temps d’exécution de manière importante.</p>
-<p>On pourrait croire qu’il suffit de programmer un algorithme et de chronométrer le temps que ce programme prend à s’exécuter. Cette métrique est problématique, car elle ne permet pas de comparer différents algorithmes entre eux lorsqu’ils sont exécutés sur différentes machines. Un algorithme lent <span class="target" id="gl-implementation-0"></span><span class="glossary-ref" data-definition="PHA+QWxnbzwvcD4K" data-entry-name="SW1wbMOpbWVudGF0aW9u" data-glossary-uri="../glossaire.html#gl-def-implementation-1" data-number="1">implémenté</span> sur une machine dernière génération pourrait prendre moins de temps à s’exécuter qu’un algorithme rapide implémenté sur une machine datant d’une dizaine d’années.</p>
+<p>Il est important lorsqu’on utilise un <span class="target" id="gl-algo-2"></span><span class="glossary-ref" data-definition="PHA+VW4gYWxnb3JpdGhtZSBlc3QgdW5lIHN1aXRlIGZpbmllIGV0IG5vbiBhbWJpZ3XDqyBkJ2luc3RydWN0aW9ucyBldCBkJ29ww6lyYXRpb25zIHBlcm1ldHRhbnQgZGUgcsOpc291ZHJlIHVuZSBjbGFzc2UgZGUgcHJvYmzDqG1lcy48L3A+Cg==" data-entry-name="QWxnb3JpdGhtZQ==" data-glossary-uri="../glossaire.csv.html#gl-def-algo-1" data-number="1">algorithme</span> de nous préoccuper de son <span class="target" id="gl-efficacite-0"></span><span class="glossary-ref" data-definition="PHA+TCdlZmZpY2FjaXTDqSBhbGdvcml0aG1pcXVlIGVzdCBsYSBtZXN1cmUgZW4gdGVtcHMgb3UgZW4gdm9sdW1lIGRlIGRvbm7DqWVzIHRyYWl0w6llcyBkZSBsYSBwZXJmb3JtYW5jZSBkJ3VuIGFsZ29yaXRobWUgZG9ubsOpIGRhbnMgdW5lIHNpdHVhdGlvbiBkb25uw6llLjwvcD4K" data-entry-name="RWZmaWNhY2l0w6kgYWxnb3JpdGhtaXF1ZQ==" data-glossary-uri="../glossaire.csv.html#gl-def-efficacite-1" data-number="1">efficacité</span>. Mais comment calculer l’efficacité d’un algorithme, comment calculer sa vitesse ?</p>
+<p>Est-ce qu’on peut utiliser la taille de l’algorithme pour prédire le temps qu’il va prendre à s’exécuter ? En d’autres termes, est-ce qu’un algorithme de 10 lignes est toujours plus lent qu’un algorithme de 5 lignes ? Nous avons vu que l’algorithme infini du chapitre précédent est très court (seulement 5 lignes), mais en théorie il ne s’arrête jamais. Une <span class="target" id="gl-bouclewhile-0"></span><span class="glossary-ref" data-definition="PHA+TGEgYm91Y2xlICZxdW90O3RhbnQgcXVlJnF1b3Q7IGNvbnRpbnVlIGRlIHMnZXjDqWN1dGVyIHRhbnQgcXUndW5lIGNvbmRpdGlvbiBkb25uw6llIMOgIHNvbiBpbml0aWFsaXNhdGlvbiBjb250aW51ZSBkJ8OqdHJlIHZyYWllLjwvcD4K" data-entry-name="Qm91Y2xlIHRhbnQgcXVl" data-glossary-uri="../glossaire.csv.html#gl-def-bouclewhile-1" data-number="1">boucle</span> rallonge le code de seulement 2 lignes, mais rallonge le temps d’exécution de manière importante.</p>
+<p>On pourrait croire qu’il suffit de programmer un algorithme et de chronométrer le temps que ce programme prend à s’exécuter. Cette métrique est problématique, car elle ne permet pas de comparer différents algorithmes entre eux lorsqu’ils sont exécutés sur différentes machines. Un algorithme lent <span class="target" id="gl-implementation-0"></span><span class="glossary-ref" data-definition="PHA+TCdpbXBsw6ltZW50YXRpb24gW2QndW4gYWxnb3JpdGhtZV0gZXN0IHNvbiDDqWNyaXR1cmUgZGFucyBsJ3VuIG91IGwnYXV0cmUgbGFuZ2FnZSBkZSBwcm9ncmFtbWF0aW9uPC9wPgo=" data-entry-name="SW1wbMOpbWVudGF0aW9u" data-glossary-uri="../glossaire.csv.html#gl-def-implementation-1" data-number="1">implémenté</span> sur une machine dernière génération pourrait prendre moins de temps à s’exécuter qu’un algorithme rapide implémenté sur une machine datant d’une dizaine d’années.</p>
 <p>Pour mesurer le temps d’exécution (ou la vitesse) d’un algorithme, il existe un critère plus objectif : le <strong><span style="color:rgb(89, 51, 209)">nombre d’instructions élémentaires</span></strong>.  De manière formelle et rigoureuse, on ne parle pas d’efficacité, mais plutôt de la <strong><span style="color:rgb(89, 51, 209)">complexité d’un algorithme</span></strong>, qui est en fait contraire à son efficacité. L’analyse de la complexité d’un algorithme étudie la quantité de ressources, par exemple de temps, nécessaires à son exécution.</p>
 <div class="hint admonition">
 <p class="admonition-title">Le saviez-vous ? Espace-temps et énergie</p>
@@ -496,7 +492,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Algorithmes de recherche</div>
+                <div class="title"><span class="section-number">3. </span>Algorithmes de recherche</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -507,7 +503,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Introduction</div>
+                <div class="title"><span class="section-number">1. </span>Introduction</div>
                 
               </div>
             </a>
@@ -534,9 +530,9 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Terminaison et complexité</a><ul>
-<li><a class="reference internal" href="#principe-de-terminaison">Principe de terminaison</a></li>
-<li><a class="reference internal" href="#principe-de-complexite">Principe de complexité</a></li>
+<li><a class="reference internal" href="#">2. Terminaison et complexité</a><ul>
+<li><a class="reference internal" href="#principe-de-terminaison">2.1. Principe de terminaison</a></li>
+<li><a class="reference internal" href="#principe-de-complexite">2.2. Principe de complexité</a></li>
 </ul>
 </li>
 </ul>

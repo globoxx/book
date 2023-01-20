@@ -1,3 +1,4 @@
+(appr:repinfo:entiers)=
 # Les entiers
 
 La plupart des civilisations humaines utilise le système décimal.
@@ -63,7 +64,7 @@ La forme canonique du nombre binaire $1101_{(2)}$ est : $1 \cdot 2^3 + 1 \cdot 2
 
 ```{admonition} Le saviez-vous ? 
 :class: hint
-vient de la terminologie anglo-saxonne de *binary digit*. Un ensemble
+Le *bit* vient de la terminologie anglo-saxonne de *binary digit*. Un ensemble
 de 8 bits et appelé un **octet**. Un *kilo-octet* (ko) correspond à
 $10^3$ octets soit $1000$ octets, donc $8000$ bits. Attention à ne pas
 confondre les préfixes binaires ($2^{10}$, $2^{20}$, $2^{30}$, etc.) et
@@ -83,11 +84,11 @@ on augmente de 1 le chiffre à sa gauche.
 On répète ces opérations pour tous les chiffres, quelle que soit leur
 position. Ainsi, en base 10 :
 
-$$\begin{equation}
+$$
 0;-;1;-;2;-;3;-;...;-;9;-;10;-;11;-;...;-;99;-;100;-;101;-;...
-\end{equation}$$
+$$
 
-En binaire, on obtient : $\begin{equation}0;-;1;-;10;-;11;-;100;-;101;-;110;-;111;-;1000;-;...\end{equation}$
+En binaire, on obtient : $0;-;1;-;10;-;11;-;100;-;101;-;110;-;111;-;1000;-;...$
 
 ```{admonition} Micro-activité ✏️📒 
 :class: note 
@@ -108,9 +109,9 @@ puissances de 2.
 
 Conversion du nombre 10101
 ^^^
-$$\begin{equation}
+$$
 10101_{(2)} = 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = 21_{(10)}
-\end{equation}$$
+$$
 ```
 
 Le {ref}`tableau <conversion-octet>` ci-dessous permet de convertir un
@@ -151,7 +152,7 @@ octet en nombre décimal.
 ```
 
 L'exemple utilisé ici est l'octet $(00101010_{(2)})$ dont la valeur
-décimale est : $\begin{equation} 00101010\_{(2)} = 0 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 42\_{(10)} \end{equation}$
+décimale est : $ 00101010\_{(2)} = 0 \cdot 2^7 + 0 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 42\_{(10)}$
 
 ```{admonition} Important 
 :class: caution 
@@ -219,17 +220,18 @@ Par exemple, la conversion du nombre décimal 666 en binaire s'obtient
 avec les étapes suivantes :
 
 ```{math}
-$$\begin{align}
-666 = 512 + 154 \\
-154 = 128 + 26 \\
-26 = 16 + 10 \\
-10 = 8 + 2 \\
-2 = 2 + 0
-\end{align}$$
+:nowrap:
+\begin{align}
+666 &= 512 + 154 \\
+154 &= 128 + 26 \\
+26 &= 16 + 10 \\
+10 &= 8 + 2 \\
+2 &= 2 + 0
+\end{align}
 ```
 
 ```{math}
-$\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|}
 %\hline
 %\text{Coefficient} & 2^{10} & 2^9 & 2^8 & 2^7 & 2^6 & 2^5 & 2^4 & 2^3 & 2^2 & 2^1 & 2^0  \\ 
 \hline
@@ -237,7 +239,7 @@ $\begin{array}{|l|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
 \text{Bit} &  & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0\\ 
 \hline 
-\end{array}$
+\end{array}
 ```
 
 Résultat : $(666_{(10)} = 1010011010_{(2)})$
@@ -274,7 +276,7 @@ système inertiel de référence. À un moment donné, un nombre codé en
 virgule flottante sur 64 bits (qui représentait la vitesse horizontale
 de la fusée par rapport à la plate-forme de tir) était converti en un
 entier sur 16 bits. Malheureusement, le nombre en question était plus
-grand que 32768 (le plus grand entier que l'on peut coder sur 16 bits)
+grand que 32767 (le plus grand entier que l'on peut coder en tant qu'entier signé sur 16 bits)
 et la conversion a été incorrecte, induisant un changement de
 trajectoire fatal.
 ```
@@ -285,9 +287,9 @@ trajectoire fatal.
 
 ## Représentation des entiers négatifs
 
-Après la représentation des entiers naturels $(\(\mathbb{N}\))$, on
+Après la représentation des entiers naturels $(\mathbb{N})$, on
 souhaite évidement pouvoir représenter les entiers négatifs afin d'avoir
-une représentation des entiers relatifs $(\(\mathbb{Z}\))$.  
+une représentation des entiers relatifs $(\mathbb{Z})$.  
 Un entier relatif est un entier naturel auquel on a ajoute un signe
 positif ou négatif indiquant sa position **relative** par rapport à 0.
 
@@ -305,21 +307,21 @@ Avec cette approche, un entier relatif est représenté par sa valeur
 absolue (entier naturel) auquel on associe un signe. Le domaine couvert
 se trouve donc divisé par deux, un bit étant utilisé pour le signe.  
 Ainsi, avec un octet, 7 bits sont utilisés pour encoder la valeur
-absolue, soit $\[0, 127\]$, ce qui permet de représenter les entiers
-relatifs dans l'intervalle $\[-127, 127\]$.
+absolue, soit $[0, 127]$, ce qui permet de représenter les entiers
+relatifs dans l'intervalle $[-127, 127]$.
 
 ```` {panels}
 :column: col-sm
 La représentation de -21 est :
 ^^^
 ```{math}
-$$\begin{array}{|l|c|c|c|c|c|c|c|}
+\begin{array}{|l|c|c|c|c|c|c|c|}
 \hline
 \text{signe} & 2^6 & 2^5 & 2^4 & 2^3 & 2^2 & 2^1 & 2^0  \\
 \hline
 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1\\ 
 \hline 
-\end{array}$$ 
+\end{array}
 ```
 ````
 
@@ -331,7 +333,7 @@ problèmes majeurs :
     Le résultat de cette opération devrait être 0, mais, sans rentrer
     dans le détail de l'arithmétique binaire qui sera abordée plus tard,
     l'addition bit à bit avec cette représentation donne
-    $(-2 \lvert x \rvert\)$. En effet, l'addition des bits de signe donne
+    $(-2 \lvert x \rvert)$. En effet, l'addition des bits de signe donne
     toujours 1 et le reste des bits représente l'addition de deux fois
     la valeur absolue.
 
@@ -373,7 +375,7 @@ La représentation de -21 en complément à 2 :
 +++
 La représentation de -21 est 11101011, qui additionné à 21, soit 00010101 donne bien zéro : 00000000.
 ```
-
+<!--
 ```{figure} media/4bitsIntegers.jpg 
 alt: Représentation des entiers
 avec 4 bits width: 600px align: left --- Représentation des entiers
@@ -382,16 +384,16 @@ couvert avec 4 bits pour la représentation des entiers naturels ou des
 entiers relatifs. Ainsi, avec 4 bits le domaine couvert pour les entiers
 naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].
 ```
+-->
 
-<!--
 ```{figure} media/4bitsIntegers.jpg
 :width: 550
 :height: 300
 ```
 Représentation des entiers avec 4 bits.
 La figure ci-dessus illustre la différence du domaine couvert avec 4 bits pour la représentation des entiers naturels ou des entiers relatifs.
-Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, -7\].  
--->
+Ainsi, avec 4 bits le domaine couvert pour les entiers naturels est : \[0, 15\], et pour les entiers relatif : \[-8, 7\].  
+
 
 ```{admonition} A retenir 
 :class: attention
@@ -403,7 +405,7 @@ et négatifs représentés. Par exemple, avec 4 bits on peut représenter
 ```
 
 ```{dropdown} Quel est le domaine couvert en utilisant la représentation en complément à deux sur un octet ?
-$[-128, 127\]$
+$[-128, 127]$
 ```
 
 ```{admonition} Micro-activité ✏️📒
