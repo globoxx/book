@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Introduction" href="introduction.html" /><link rel="prev" title="Informatique au gymnase : apprendre" href="../index.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Glossaire" href="../glossaire.html" /><link rel="prev" title="Informatique au gymnase : apprendre" href="../index.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Programmation I - Apprendre</title>
+        <title>Introduction - Apprendre</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -222,10 +222,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">TP de programmation</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Programmation I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Introduction</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
@@ -256,52 +253,103 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="programmation-i">
-<span id="prog1-programmation"></span><h1>Programmation I<a class="headerlink" href="#programmation-i" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Programmer, c’est facile. Si vous savez dessiner, écrire et calculer, alors vous savez aussi programmer.
-Quand vous envoyez un message avec WhatsApp, postez une image sur Instagram ou parlez à Siri, vous interagissez avec votre smartphone ou votre ordinateur. Vous communiquez avec cette machine.</p>
-<p>Ce sont des programmes qui disent à votre ordinateur comment manipuler une image, un texte ou le son de votre voix. Mais, quelque part, ces programmes ont été écrits par des humains.</p>
-<div class="toctree-wrapper compound">
+          <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<span id="prog1-intro"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a class="reference external" href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf">Mémento Python</a>
+<a class="reference external" href="https://support.apple.com/fr-ch/HT201236">Raccourcis clavier</a></p>
+<section id="votre-tout-premier-programme">
+<h2>Votre tout premier programme 🤩<a class="headerlink" href="#votre-tout-premier-programme" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Lors de ces travaux pratiques, vous allez écrire des petits programmes Python sur l’IDE <strong>Thonny</strong> qui est déjà installé sur les machines de l’école.</p>
+<p>Voici un exemple d’un tout petit programme en Python qui ne contient qu’une seule instruction:</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoImJvbmpvdXIiKQ==" data-file="Ym9uam91ci5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En anglais, “print” signifie “imprime ». En Python, l’instruction <code class="docutils literal notranslate"><span class="pre">print</span></code> demande à l’ordinateur <strong>d’afficher à l’écran le contenu de la parenthèse qui vient après</strong>.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ecrivez et exécutez le programme ci-dessus sur <code class="docutils literal notranslate"><span class="pre">Thonny</span></code>.<br/>
+Changez le texte pour que l’ordinateur écrive autre chose, par exemple “au revoir !”.<br/>
+Sauvegardez le fichier exercice1.py dans votre dossier personnel.</p>
 </div>
-<section id="objectifs">
-<h2>Objectifs<a class="headerlink" href="#objectifs" title="Lien permanent vers ce titre">¶</a></h2>
-<ul class="simple">
-<li><p>Découvrir le langage de programmation Python</p></li>
-<li><p>Dessiner, écrire et calculer en utilisant un ordinateur</p></li>
-<li><p>Comprendre la logique d’un programme</p></li>
-</ul>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ2F1IHJldm9pciAhJyk=" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !<br/>
+Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉</p>
+</div>
+</details></div>
 </section>
-<section id="personnages-cles">
-<h2>Personnages clés<a class="headerlink" href="#personnages-cles" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<img alt="img-top" class="card-img-top" src="prog1/media/ada.jpg"/>
-<div class="card-header docutils">
-<p class="card-text">Ada Lovelace 🇬🇧</p>
+<section id="les-commentaires">
+<h2>Les commentaires<a class="headerlink" href="#les-commentaires" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est souvent utile de mettre des commentaires dans un programme, pour expliquer ce qu’il fait.
+En Python, un commentaire est introduit par le caractère #.<br/>
+<strong>Tout ce qui vient après et jusqu’à la fin de la ligne n’est pas lu par l’ordinateur</strong>.<br/>
+Cela sert uniquement à l’humain qui va lire le programme 🤓</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyB1biB0b3V0IHBldGl0IHByb2dyYW1tZQpwcmludCgiYm9uam91ciIpICMgc2FsdXRhdGlvbnM=" data-file="Y29tbWVudGFpcmUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice</p>
+<p>Enlevez les guillemets autour de “bonjour”. Qu’est-ce qui se passe ?</p>
 </div>
-<div class="card-body docutils">
-<p class="card-text"><em><strong>1815-1852</strong></em></p>
-<p class="card-text"><a class="reference external" href="https://fr.wikipedia.org/wiki/Ada_Lovelace"><strong>Ada Lovelace</strong></a> est principalement connue pour avoir réalisé le premier programme informatique, lors de son travail sur un ancêtre de l’ordinateur : la machine analytique de Charles Babbage. Le langage de programmation <strong>Ada</strong> est nommé en son honneur.</p>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Le programme n’est plus compris par la machine car si “bonjour” était un texte pouvant être affiché sans problème, <code class="docutils literal notranslate"><span class="pre">bonjour</span></code> désigne une variable ayant pour nom bonjour.<br/>
+Cette variable n’existant pas au moment de son appel, l’ordinateur ne sait pas quoi afficher 🤔<br/>
+⚠️ Du texte s’écrit toujours entre guillemets ou apostrophes (<code class="docutils literal notranslate"><span class="pre">""</span></code> ou <code class="docutils literal notranslate"><span class="pre">''</span></code>). ⚠️</p>
 </div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<img alt="img-top" class="card-img-top" src="prog1/media/guido.jpg"/>
-<div class="card-header docutils">
-<p class="card-text">Guido van Rossum 🇳🇱</p>
-</div>
-<div class="card-body docutils">
-<p class="card-text"><em><strong>Né en 1954</strong></em></p>
-<p class="card-text"><a class="reference external" href="https://fr.wikipedia.org/wiki/Guido_van_Rossum"><strong>Guido van Rossum</strong></a> est le créateur du langage de programmation <strong>Python</strong>. Au sein de la communauté pythonienne, il est connu comme « dictateur bienveillant à vie », ce qui signifie qu’il suit le développement de Python et arbitre lorsque la situation le requiert.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+</details></div>
 </section>
+<section id="exercices-turtle-facultatif">
+<h2>Exercices Turtle 🐢 (facultatif)<a class="headerlink" href="#exercices-turtle-facultatif" title="Lien permanent vers ce titre">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">turtle</span></code> est un module Python permettant de faire du <strong>dessin en codant</strong>. La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">forward(d)</span></code> pour avancer d’une distance <code class="docutils literal notranslate"><span class="pre">d</span></code> (en pixels).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backward(d)</span></code> pour reculer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">left(a)</span></code> pour tourner à gauche d’un angle <code class="docutils literal notranslate"><span class="pre">a</span></code> (en degrés).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">right(a)</span></code> pour tourner à droite</p></li>
+</ol>
+<p>Ce code permet de dessiner un carré, testez-le !</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAjIEltcG9ydGUgbGUgbW9kdWxlCgp0dXJ0bGUuZm9yd2FyZCgxMDApICMgQXZhbmNlIGRlIDEwMCBwaXhlbHMKdHVydGxlLmxlZnQoOTApICMgVG91cm5lIGEgZ2F1Y2hlIGRlIDkwIGRlZ3Jlcwp0dXJ0bGUuZm9yd2FyZCgxMDApCnR1cnRsZS5sZWZ0KDkwKQp0dXJ0bGUuZm9yd2FyZCgxMDApCnR1cnRsZS5sZWZ0KDkwKQp0dXJ0bGUuZm9yd2FyZCgxMDApCnR1cnRsZS5sZWZ0KDkwKQoKdHVydGxlLmRvbmUoKSAjIFRlcm1pbmUgbGUgZGVzc2lu" data-file="Y2FycmUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Si vous êtes curieux, la plateforme <a class="reference external" href="https://apprendre.modulo-info.ch/prog1/dessiner.html">Modulo</a> propose beaucoup d’autres exemples et exercices dans son chapitre <strong>Programmation</strong>.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ayant une longueur de 100 pixels.<br/>
+(Rappel : chaque angle d’un triangle équilatéral fait 60 degrés).</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAjIEltcG9ydGUgbGUgbW9kdWxlCgp0dXJ0bGUuZm9yd2FyZCgxMDApICMgQXZhbmNlIGRlIDEwMCBwaXhlbHMKdHVydGxlLmxlZnQoMTIwKSAjIFRvdXJuZSBhIGdhdWNoZSBkZSAxMjAgZGVncmVzICgxODAtNjApCnR1cnRsZS5mb3J3YXJkKDEwMCkKdHVydGxlLmxlZnQoMTIwKQp0dXJ0bGUuZm9yd2FyZCgxMDApCnR1cnRsZS5sZWZ0KDEyMCkKCnR1cnRsZS5kb25lKCkgIyBUZXJtaW5lIGxlIGRlc3Npbg==" data-file="dHJpYW5nbGUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !<br/>
+Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉</p>
+</div>
+</details></div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Un programme informatique est</p>
+<p><label class="answer incorrect"><input type="checkbox"/>une instruction de séquence</label><br/>
+<label class="answer correct"><input type="checkbox"/>une séquence d’instructions</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>un algorithme</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une recette de cuisine</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Un algorithme est la description générale des étapes de résolution d’un problème. Il peut être traduit en un programme informatique.</p>
+</div>
+</div>
+</form></div></section>
 </section>
 
         </article>
@@ -309,12 +357,12 @@ Quand vous envoyez un message avec WhatsApp, postez une image sur Instagram ou p
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="introduction.html">
+          <a class="next-page" href="../glossaire.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Introduction</div>
+                <div class="title">Glossaire</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -332,7 +380,7 @@ Quand vous envoyez un message avec WhatsApp, postez une image sur Instagram ou p
         </div>
 
         <div class="related-information">
-            <a class="muted-link" href="../_sources/prog1/index.md.txt"
+            <a class="muted-link" href="../_sources/prog1/intro.md.txt"
                rel="nofollow">
               Montrer le code source
             </a>
@@ -352,9 +400,10 @@ Quand vous envoyez un message avec WhatsApp, postez une image sur Instagram ou p
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Programmation I</a><ul>
-<li><a class="reference internal" href="#objectifs">Objectifs</a></li>
-<li><a class="reference internal" href="#personnages-cles">Personnages clés</a></li>
+<li><a class="reference internal" href="#">Introduction</a><ul>
+<li><a class="reference internal" href="#votre-tout-premier-programme">Votre tout premier programme 🤩</a></li>
+<li><a class="reference internal" href="#les-commentaires">Les commentaires</a></li>
+<li><a class="reference internal" href="#exercices-turtle-facultatif">Exercices Turtle 🐢 (facultatif)</a></li>
 </ul>
 </li>
 </ul>

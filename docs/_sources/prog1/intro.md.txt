@@ -1,4 +1,4 @@
-(prog1.introduction)=
+(prog1.intro)=
 # Introduction
 
 [Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)

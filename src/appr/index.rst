@@ -15,7 +15,7 @@ découpé en **quatre thématiques**.
    :hidden:
 
    prog1/index
-   prog1/introduction
+   prog1/intro
 
 .. toctree::
    :name: Outils
