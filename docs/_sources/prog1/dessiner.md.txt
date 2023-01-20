@@ -26,36 +26,12 @@ Sauvegardez le fichier exercice1.py dans votre dossier personnel.
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-# import the turtle modules
-import turtle
- 
-# Start a work Screen
-ws = turtle.Screen()
- 
-# Define a Turtle Instance
-crayon = turtle.Turtle()
-
-crayon.speed(1)
-
-for i in range(8):
- 
-    # Avance d'à peu près 2 cm
-    crayon.forward(100) 
-
-    # Tourne à droite de 60°
-    crayon.right(60)
+print('au revoir !')
 ``` 
-Un hexagone. Pour vérifier, exécuter le code ci-dessus. On pourrait croire que le fait de répéter l'action qui dessine une ligne 8 fois aboutit à un octogone. Cependant, pour trouver la bonne réponse il faut simuler les effets de l'algorithme sur le crayon. La forme que l'on obtient en tournant de 60° est bien un hexagone et les deux dernières lignes sont dessinées par dessus des lignes déja existantes. Si on change la valeur 8 à 6, on obtient exactement le même dessin.
+Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
+Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
 ````
 `````
-
-> <details><summary markdown="span">Solution</summary>
-> ```python
-> print('au revoir !')
-> ```
-> Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
-> Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
-> </details>
 
 ## Les commentaires
 
@@ -68,15 +44,20 @@ Cela sert uniquement à l’humain qui va lire le programme 🤓
 print("bonjour") # salutations
 ```
 
-> ### <span style="background-color:#c6d9f7"> Exercice 2 </span>
-> 
-> Enlevez les guillemets autour de "bonjour". Qu’est-ce qui se passe ?
+```{admonition} Exercice
+:class: note
+Enlevez les guillemets autour de "bonjour". Qu’est-ce qui se passe ?
+```
 
-> <details><summary markdown="span">Solution</summary>
-> Le programme n’est plus compris par la machine car si "bonjour" était un texte pouvant être affiché sans problème, `bonjour` désigne une variable ayant pour nom bonjour.  
-> Cette variable n’existant pas au moment de son appel, l’ordinateur ne sait pas quoi afficher 🤔  
-> ⚠️ Du texte s'écrit toujours entre guillemets ou apostrophes (`""` ou `''`). ⚠️
-> </details>
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+Le programme n’est plus compris par la machine car si "bonjour" était un texte pouvant être affiché sans problème, `bonjour` désigne une variable ayant pour nom bonjour.  
+Cette variable n’existant pas au moment de son appel, l’ordinateur ne sait pas quoi afficher 🤔  
+⚠️ Du texte s'écrit toujours entre guillemets ou apostrophes (`""` ou `''`). ⚠️
+````
+`````
 
 ## Exercices Turtle 🐢 (facultatif)
 
@@ -104,36 +85,32 @@ turtle.done() # Termine le dessin
 
 Si vous êtes curieux, la plateforme [Modulo](https://apprendre.modulo-info.ch/prog1/dessiner.html) propose beaucoup d’autres exemples et exercices dans son chapitre **Programmation**.
 
-> ### <span style="background-color:#A8D6C2"> Exercice Turtle 1 </span>
->
-> Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ayant une longueur de 100 pixels.  
-> (Rappel : chaque angle d’un triangle équilatéral fait 60 degrés).
+```{admonition} Exercice
+:class: note
+Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ayant une longueur de 100 pixels.  
+(Rappel : chaque angle d’un triangle équilatéral fait 60 degrés).
+```
 
-> <details><summary markdown="span">Solution</summary>
-> ```python
-> import turtle # Importe le module
-> 
-> turtle.forward(100) # Avance de 100 pixels
-> turtle.left(120) # Tourne a gauche de 120 degres (180-60)
-> turtle.forward(100)
-> turtle.left(120)
-> turtle.forward(100)
-> turtle.left(120)
-> 
-> turtle.done() # Termine le dessin
-> ```
-> </details>
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+import turtle # Importe le module
 
-# Dessiner - `forward()`
+turtle.forward(100) # Avance de 100 pixels
+turtle.left(120) # Tourne a gauche de 120 degres (180-60)
+turtle.forward(100)
+turtle.left(120)
+turtle.forward(100)
+turtle.left(120)
 
-Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
- la métaphore du dessin. Ici, un programme est une séquence d'instructions pour dessiner une image.
-
-Allons de l'avant (forward) avec la programmation. Nous allons voir que :
-
-- l'expression `from turtle import *` met à disposition les fonctions de dessin,
-- les instructions `forward()`, `backward()` permettent de tracer une ligne,
-- les instructions `left()`, `right()` permettent de changer de direction.
+turtle.done() # Termine le dessin
+``` 
+Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
+Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
+````
+`````
 
 ```{question}
 Un programme informatique est
@@ -144,40 +121,4 @@ Un programme informatique est
 {f}`une recette de cuisine`
 ===
 Un algorithme est la description générale des étapes de résolution d'un problème. Il peut être traduit en un programme informatique. 
-```
-
-## Le module `turtle`
-
-Dans le langage de programmation Python, le module `turtle` (« tortue » en anglais) présente une façon sympathique pour faire des dessins. C'est pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme.
-
-On s'imagine une tortue qui se déplace sur un canevas et laisse une trace.
-
-Ci-dessus, vous trouvez notre premier programme de trois lignes :
-
-- dans la première ligne, nous importons toutes (`*`) les fonctions du module `turtle`,
-- avec `shape('turtle')`, nous affichons une tortue (au lieu de la flèche),
-- avec `forward(150)`, nous faisons avancer la tortue de 150 pixels.
-
-```{admonition} Exercice
-:class: note
-Ajoutez d'autres instructions telles que `backward()`, `left()`, et `right()` pour faire un dessin.
-```
-
-```{codeplay}
-:file: forward1.py
-from turtle import *
-
-shape('turtle')
-forward(150)
-```
-
-```{question}
-En Python, `turtle` est
-
-{v}`un module standard`  
-{f}`un éditeur de dessin`  
-{f}`une tortue`  
-{f}`une commande`
-===
-Le module `turtle` fait partie de la distribution standard de Python. Nous le trouvons donc inclus avec Python sur toutes les plateformes.
 ```
