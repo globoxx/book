@@ -24,5 +24,5 @@ découpé en **quatre thématiques**.
 
    glossaire
 
-`TP de programmation <https://dev-apprendre.modulo-info.ch/prog1/index.html>`_
+`TP de programmation <prog1/index.html>`_
 : ce chapitre contient tous les TP de programmation.

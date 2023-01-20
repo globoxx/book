@@ -1,4 +1,99 @@
-(prog1.dessiner)=
+(prog1.introduction)=
+# Introduction
+
+[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf){:target="_blank"}  
+[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236){:target="_blank"}
+
+## Votre tout premier programme 🤩
+
+Lors de ces travaux pratiques, vous allez écrire des petits programmes Python sur l’IDE **Thonny** qui est déjà installé sur les machines de l’école.
+
+Voici un exemple d’un tout petit programme en Python qui ne contient qu’une seule instruction:
+```python
+print("bonjour")
+```
+En anglais, "print" signifie “imprime". En Python, l’instruction `print` demande à l’ordinateur **d’afficher à l’écran le contenu de la parenthèse qui vient après**.
+
+> ### <span style="background-color:#c6d9f7"> Exercice 1 </span>
+>
+> Ecrivez et exécutez le programme ci-dessus sur `Thonny`.  
+> Changez le texte pour que l’ordinateur écrive autre chose, par exemple "au revoir !".  
+> Sauvegardez le fichier exercice1.py dans votre dossier personnel.
+
+> <details><summary markdown="span">Solution</summary>
+> ```python
+> print('au revoir !')
+> ```
+> Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
+> Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
+> </details>
+
+## Les commentaires
+
+Il est souvent utile de mettre des commentaires dans un programme, pour expliquer ce qu’il fait.
+En Python, un commentaire est introduit par le caractère \#.  
+**Tout ce qui vient après et jusqu’à la fin de la ligne n’est pas lu par l’ordinateur**.  
+Cela sert uniquement à l’humain qui va lire le programme 🤓
+```python
+# un tout petit programme
+print("bonjour") # salutations
+```
+
+> ### <span style="background-color:#c6d9f7"> Exercice 2 </span>
+> 
+> Enlevez les guillemets autour de "bonjour". Qu’est-ce qui se passe ?
+
+> <details><summary markdown="span">Solution</summary>
+> Le programme n’est plus compris par la machine car si "bonjour" était un texte pouvant être affiché sans problème, `bonjour` désigne une variable ayant pour nom bonjour.  
+> Cette variable n’existant pas au moment de son appel, l’ordinateur ne sait pas quoi afficher 🤔  
+> ⚠️ Du texte s'écrit toujours entre guillemets ou apostrophes ("" ou ''). ⚠️
+> </details>
+
+## Exercices Turtle 🐢 (facultatif)
+
+`turtle` est un module Python permettant de faire du **dessin en codant**. La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
+1. `forward(d)` pour avancer d’une distance `d` (en pixels).
+2. `backward(d)` pour reculer.
+3. `left(a)` pour tourner à gauche d’un angle `a` (en degrés).
+4. `right(a)` pour tourner à droite
+
+Ce code permet de dessiner un carré, testez-le !
+```python
+import turtle # Importe le module
+
+turtle.forward(100) # Avance de 100 pixels
+turtle.left(90) # Tourne a gauche de 90 degres
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+
+turtle.done() # Termine le dessin
+```
+Si vous êtes curieux, la plateforme [Modulo](https://apprendre.modulo-info.ch/prog1/dessiner.html){:target="_blank"} propose beaucoup d’autres exemples et exercices dans son chapitre **Programmation**.
+
+> ### <span style="background-color:#A8D6C2"> Exercice Turtle 1 </span>
+>
+> Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ayant une longueur de 100 pixels.  
+> (Rappel : chaque angle d’un triangle équilatéral fait 60 degrés).
+
+> <details><summary markdown="span">Solution</summary>
+> ```python
+> import turtle # Importe le module
+> 
+> turtle.forward(100) # Avance de 100 pixels
+> turtle.left(120) # Tourne a gauche de 120 degres (180-60)
+> turtle.forward(100)
+> turtle.left(120)
+> turtle.forward(100)
+> turtle.left(120)
+> 
+> turtle.done() # Termine le dessin
+> ```
+> </details>
+
 # Dessiner - `forward()`
 
 Dans ce chapitre, nous explorons ce que c'est un programme et nous prenons
@@ -55,336 +150,4 @@ En Python, `turtle` est
 {f}`une commande`
 ===
 Le module `turtle` fait partie de la distribution standard de Python. Nous le trouvons donc inclus avec Python sur toutes les plateformes.
-```
-
-## Se déplacer
-
-La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
-
-- `forward(d)` pour avancer d'une distance `d` (en pixels)
-- `backward(d)` pour reculer
-- `left(a)` pour tourner à gauche d'un angle `a` (en degrés)
-- `right(a)` pour tourner à droite
-
-## Le canevas
-
-Au début, la tortue se trouve au centre d'une zone rectangulaire appelée _canevas_.  Ce rectangle a les propriétés suivantes :
-
-- l'origine (0, 0) se trouve au centre,
-- l'axe X, horizontal, s'étend de -300 (tout à gauche) à +300 (tout à droite),
-- l'axe Y, vertical, s'étend de -200 (tout en bas) à +200 (tout en haut).
-
-```{admonition} Exercice
-:class: note
-Ajoutez une instruction dans le code ci-dessous pour mener la tortue tout en bas du canevas.
-```
-
-```{codeplay}
-:file: forward2.py
-from turtle import *
-
-shape('turtle')
-forward(300)
-backward(600)
-forward(300)
-
-left(90)
-forward(200)
-right(180)
-```
-
-```{question}
-La largeur de la zone de dessin de la tortue est
-
-{f}`200 pixels`   
-{f}`400 pixels`  
-{v}`600 pixels`  
-{f}`800 pixels`  
-```
-
-## Une séquence
-
-Un programme est une séquence d'instructions. Le bloc de 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner, etc.
-
-```{admonition} Exercice
-:class: note
-Modifiez ce code pour en faire un rectangle.
-```
-
-```{codeplay}
-:file: forward3.py
-from turtle import *
-
-forward(100)
-left(90)
-forward(100)
-left(90)
-forward(100)
-left(90)
-forward(100)
-left(90)
-```
-
-```{question}
-Une séquence d'instructions d'un bloc est exécutée
-
-{f}`selon la priorité`  
-{f}`simultanément`  
-{v}`dans l'ordre`  
-{f}`aléatoirement`   
-```
-
-## Equivalence
-
-La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car :
-
-- `backward(d)` est équivalent à `forward(-d)`
-- `right(a)` est équivalent à `left(-a)`
-
-Dans le programme ci-dessous, les 4 lignes du deuxième bloc sont équivalentes aux 4 instructions du premier bloc et donnent un résultat identique.
-
-```{codeplay}
-:file: forward4.py
-from turtle import *
-
-forward(160)
-left(90)
-forward(100)
-left(90)
-
-backward(-160)  # équivalent à forward(160)
-right(-90)  # équivalent à left(90)
-backward(-100)
-right(-90)
-```
-
-```{question}
-L'expression `left(90)` est équivalent à
-
-{v}`right(-90)`  
-{f}`right(180)`  
-{f}`left(180)`  
-{f}`left(-90)`  
-```
-
-## Épaisseur de ligne
-
-La fonction `width(d)` (épaisseur en anglais) permet de définir l'épaisseur de la ligne.
-Voici un triangle où chaque côté a une épaisseur différente.
-
-```{admonition} Exercice
-:class: note
-Explorez différentes épaisseurs de ligne.
-```
-
-```{codeplay}
-:file: forward5.py
-from turtle import *
-
-forward(200)
-left(120)
-
-width(5)
-forward(200)
-left(120)
-
-width(10)
-forward(200)
-left(120)
-```
-
-## Maison avec toit
-
-Nous dessinons une maison et marquons le toit par une ligne plus épaisse.
-
-```{admonition} Exercice
-:class: note
-Modifiez l'épaisseur du toit.
-```
-
-```{codeplay}
-:file: forward6.py
-from turtle import *
-
-forward(100)
-left(90)
-forward(60)
-left(45)
-width(5)
-forward(71)
-left(90)
-forward(71)
-width(1)
-left(45)
-forward(60)
-left(90)
-```
-
-## Raquette de ping-pong
-
-L'épaisseur de ligne est très utile dans le dessin.
-
-```{admonition} Exercice
-:class: note
-Transformez la raquette de ping-pong en haltères de musculation.
-```
-
-```{codeplay}
-:file: forward7.py
-from turtle import *
-
-width(20)
-forward(100)
-width(80)
-forward(20)
-```
-
-## Lunettes de soleil
-
-Voici encore un exemple où, avec un simple changement d'épaisseur, vous obtenez un effet très intéressant.
-
-```{admonition} Exercice
-:class: note
-Ajoutez la première branche qui manque.
-```
-
-```{codeplay}
-:file: forward8.py
-from turtle import *
-
-width(50)
-forward(20)
-width(10)
-forward(60)
-width(50)
-forward(20)
-width(10)
-forward(40)
-left(45)
-forward(60)
-```
-
-## Editeur de Python
-
-Jusqu'à maintenant, nous avons exécuté nos petits programmes ici dans cette page web. Malheureusement, ces programmes disparaissent quand nous rechargeons la page. Pour pouvoir les sauvegarder et programmer indépendamment de ce site web, nous avons besoin d'un éditeur de Python externe.
-
-Nous vous proposons d'utiliser [Thonny](https://thonny.org), qui est un logiciel libre, facile à installer, et un excellent éditeur pour débuter avec Python. Essayez de faire ceci :
-
-1. Ouvrez l'éditeur Thonny
-1. Écrivez le code pour dessiner une maison
-1. Sauvegardez le programme sous `maison.py`
-1. Exécutez le programme
-
-```{image} media/thonny.png
-```
-
-Quand vous utilisez le module `turtle` avec Thonny, ajoutez toujours la fonction `done()` comme dernière ligne de code, pour que vous puissiez quitter le programme.
-
-## Exercices
-
-- Téléchargez un exercice.
-- Ouvrez-le dans un éditeur externe (tel que Thonny).
-- Mettez votre prénom, nom et classe.
-- Remplacez `...` par votre code.
-- Déposez votre exercice sur Moodle (ou plateforme équivalente).
-
-### Rectangle
-
-Dessinez un rectangle.
-
-```{codeplay}
-:file: rectangle.py
-from turtle import *
-# Prénom, nom, classe
-
-forward(200)
-...
-done()
-```
-
-### Triangle
-
-Dessinez un triangle.
-
-```{codeplay}
-:file: triangle.py
-from turtle import *
-# Prénom, nom, classe
-
-forward(200)
-...
-done()
-```
-
-### Hexagone
-
-Dessinez un hexagone.
-
-```{codeplay}
-:file: hexagone.py
-from turtle import *
-# Prénom, nom, classe
-
-forward(100)
-...
-done()
-```
-
-### Maison
-
-Dessinez une maison.
-
-```{codeplay}
-:file: maison.py
-from turtle import *
-# Prénom, nom, classe
-
-forward(100)
-...
-done()
-```
-
-### Chaise
-
-Dessinez une chaise.
-
-```{codeplay}
-:file: chaise.py
-from turtle import *
-# Prénom, nom, classe
-
-left(90)
-forward(100)
-...
-done()
-```
-
-### Table
-
-Dessinez une table.
-
-```{codeplay}
-:file: table.py
-from turtle import *
-# Prénom, nom, classe
-
-left(90)
-forward(100)
-...
-done()
-```
-
-### Lit
-
-Dessinez un lit.
-
-```{codeplay}
-:file: lit.py
-from turtle import *
-# Prénom, nom, classe
-
-left(90)
-forward(100)
-...
-done()
 ```
