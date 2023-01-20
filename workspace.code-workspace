@@ -1,0 +1,112 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "Book",
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"build": true,
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true
+		},
+		"search.exclude": {
+			"build": true,
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true
+		},
+		"actionButtons": {
+			"defaultColor": "white",
+			"loadNpmCommands": false,
+			"commands": [
+				{
+					"name": "Start web server",
+					"color": "white",
+					"command": "source .env/bin/activate; cd build; kill -9 $(lsof -t -i:8000) 2> /dev/null; python -m http.server 8000 ",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "Apprendre (build)",
+					"color": "white",
+					"command": "source .env/bin/activate; sphinx-build src/appr build -E",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "Enseigner (build)",
+					"color": "white",
+					"command": "source .env/bin/activate; sphinx-build src/ens build -E",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "Apprendre (auto-build)",
+					"color": "white",
+					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/appr build --watch src --open-browser -a --delay 1",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "Enseigner (auto-build)",
+					"color": "white",
+					"command": "source .env/bin/activate; kill -9 $(lsof -t -i:8000) 2> /dev/null; sphinx-autobuild src/ens build --watch src --open-browser -a --delay 1",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": true,
+				},
+				{
+					"name": "git pull",
+					"color": "white",
+					"command": "git pull origin $(git rev-parse --abbrev-ref HEAD)",
+					"cwd": "${workspaceFolder}",
+					"singleInstance": false,
+				}
+			]
+		},
+		"files.watcherExclude": {
+			"**/target": true
+		},
+		"spellright.language": [
+			"fr"
+		],
+		"spellright.recheckOnSave": true,
+		"spellright.documentTypes": [
+			"markdown",
+			"latex",
+			"plaintext"
+		],
+		"ltex.language": "fr"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-python.python",
+			"redhat.vscode-yaml",
+			"executablebookproject.myst-highlight",
+			"seunlanlege.action-buttons",
+			"github.vscode-pull-request-github",
+			"ban.spellright",
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "pwa-node",
+				"request": "launch",
+				"name": "Launch Program",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${file}",
+				"__workspaceFolder": "."
+			}
+		]
+	}
+}
