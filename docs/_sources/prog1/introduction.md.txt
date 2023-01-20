@@ -10,6 +10,7 @@ Lors de ces travaux pratiques, vous allez écrire des petits programmes Python s
 
 Voici un exemple d’un tout petit programme en Python qui ne contient qu’une seule instruction:
 ```{codeplay}
+:file: bonjour.py
 print("bonjour")
 ```
 En anglais, "print" signifie “imprime". En Python, l’instruction `print` demande à l’ordinateur **d’afficher à l’écran le contenu de la parenthèse qui vient après**.
@@ -26,6 +27,7 @@ Sauvegardez le fichier exercice1.py dans votre dossier personnel.
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
+:file: au_revoir.py
 print('au revoir !')
 ``` 
 Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
@@ -40,6 +42,7 @@ En Python, un commentaire est introduit par le caractère \#.
 **Tout ce qui vient après et jusqu’à la fin de la ligne n’est pas lu par l’ordinateur**.  
 Cela sert uniquement à l’humain qui va lire le programme 🤓
 ```{codeplay}
+:file: commentaire.py
 # un tout petit programme
 print("bonjour") # salutations
 ```
@@ -69,6 +72,7 @@ Cette variable n’existant pas au moment de son appel, l’ordinateur ne sait p
 
 Ce code permet de dessiner un carré, testez-le !
 ```{codeplay}
+:file: carre.py
 import turtle # Importe le module
 
 turtle.forward(100) # Avance de 100 pixels
@@ -96,6 +100,7 @@ Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ay
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
+:file: triangle.py
 import turtle # Importe le module
 
 turtle.forward(100) # Avance de 100 pixels

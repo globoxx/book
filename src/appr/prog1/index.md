@@ -11,31 +11,7 @@ Ce sont des programmes qui disent à votre ordinateur comment manipuler une imag
 :hidden:
 :numbered: 2
 
-dessiner
-definir
-colorier
-repeter
-
-cercler
-memoriser
-parcourir
-write
-
-iterer
-parametrer
-randomiser
-
-questionner
-decider
-ecrire
-attendre
-renvoyer
-grouper
-trier
-turtleart
-
-projet
-annexe
+Introduction
 ````
 
 ## Objectifs
