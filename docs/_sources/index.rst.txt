@@ -14,7 +14,6 @@ découpé en **quatre thématiques**.
    :maxdepth: 3
    :hidden:
 
-   prog1/index
    prog1/intro
 
 .. toctree::
