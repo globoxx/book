@@ -3,8 +3,8 @@
 
 # Les variables simples
 
-[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf){:target="_blank"}  
-[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236){:target="_blank"}
+[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)
+[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
 
 ## Les types de variables simples
 
@@ -57,7 +57,7 @@ Pour les nombres entiers, les **opérateurs arithmétiques** suivants sont les p
 * \* (multiplication)
 * / (division)
 * // (division entière)
-* % (modulo ou reste de la division entière)
+* \% (modulo ou reste de la division entière)
 
 Toutes les opérations ci-dessus retournent un nombre entier, sauf la division (/) qui retourne un nombre à virgule.
 Les opérateurs similaires sont définis pour les nombres à virgules.
@@ -214,7 +214,7 @@ b = True
 
 Vous serez très heureux d’avoir correctement nommé vos variables quand votre programme deviendra plus complexe.
 Sans cela, il deviendrait rapidement illisible 🤯  
-Ces conventions et bonnes pratiques sont écrites par la communauté dans des [PEP](https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/){:target="_blank"}.
+Ces conventions et bonnes pratiques sont écrites par la communauté dans des [PEP](https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/).
 
 ### Exercices Turtle 🐢 (facultatif)
 
