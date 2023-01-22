@@ -14,6 +14,8 @@ Bienvenue sur la plateforme de TP d'informatique !
 
    prog1/intro
    prog1/variables
+   prog1/fonctions
+   prog1/definitions
 
 .. toctree::
    :name: Outils
