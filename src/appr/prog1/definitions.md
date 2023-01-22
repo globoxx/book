@@ -12,6 +12,7 @@ En programmation, le concept de fonction n’est pas exactement le même qu’en
 Il faut plutôt le voir comme un **sous-programme auquel on fournit des objets et qui peut en retourner d’autres**.
 
 Pour définir une fonction, il faut indiquer les éléments suivants :
+
 1. Le mot-clé `def` suivi du nom de la fonction puis de deux points (:).
 2. Les **arguments**, ou paramètres, qui indiquent quels sont **les objets à fournir** à la fonction pour que le programme puisse l’exécuter. Certaines fonctions ne prennent aucun argument.
 3. La liste des instructions de la fonction, autrement dit, le sous-programme effectué par la fonction. La liste des instructions est indentée par rapport au programme principal, c’est-à-dire qu’elle est **décalée à droite**. Une liste d’instruction est aussi appelée un **bloc d’instruction**.
@@ -21,6 +22,7 @@ Ces quatre éléments constituent la définition de la fonction.
 **Une fois une fonction ainsi définie, on peut l’utiliser (l’appeler) autant de fois que l’on désire dans un programme** 🤩
 
 Voici la syntaxe générale pour définir une fonction :
+
 ```python
 def nom_de_votre_fonction(argument1, argument2, ...):
 	...
@@ -81,7 +83,7 @@ La fonction s’exécute (ici elle affiche des choses) mais ne retourne rien.
 def saluer(prenom, nom):
 	print(f"Bonjour {prenom} {nom}")
 	print("Bienvenue !")
-	
+
 saluer("Pierre", "Schmutz")
 ```
 
@@ -112,7 +114,7 @@ saluer("Pierre", "Schmutz", 34)
 def volume_cylindre(rayon, hauteur):
 	vol = 3.14 * rayon**2 * hauteur
 	return vol
-	
+
 v1 = volume_cylindre(2.3, 10)
 v2 = volume_cylindre(1.2, 5)
 print(f"Le volume des cylindres est de {v1} et {v2}")
