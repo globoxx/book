@@ -1,7 +1,7 @@
 .. image:: ../static/assets/modulo-head-banner.png
    :alt: "Bannière"
 
-Informatique au gymnase : apprendre
+Informatique au gymnase : Travaux pratiques
 ====================================
 
 Bienvenue sur la plateforme de TP d'informatique !
