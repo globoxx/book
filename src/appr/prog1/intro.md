@@ -1,7 +1,8 @@
 (prog1.intro)=
+
 # Introduction
 
-[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)
+[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
 [Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
 
 ## Votre tout premier programme 🤩
@@ -9,10 +10,12 @@
 Lors de ces travaux pratiques, vous allez écrire des petits programmes Python sur l’IDE **Thonny** qui est déjà installé sur les machines de l’école.
 
 Voici un exemple d’un tout petit programme en Python qui ne contient qu’une seule instruction:
+
 ```{codeplay}
 :file: bonjour.py
 print("bonjour")
 ```
+
 En anglais, "print" signifie “imprime". En Python, l’instruction `print` demande à l’ordinateur **d’afficher à l’écran le contenu de la parenthèse qui vient après**.
 
 ```{admonition} Exercice
@@ -38,9 +41,10 @@ Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordi
 ## Les commentaires
 
 Il est souvent utile de mettre des commentaires dans un programme, pour expliquer ce qu’il fait.
-En Python, un commentaire est introduit par le caractère \#.  
+En Python, un commentaire est introduit par le caractère `#`.  
 **Tout ce qui vient après et jusqu’à la fin de la ligne n’est pas lu par l’ordinateur**.  
 Cela sert uniquement à l’humain qui va lire le programme 🤓
+
 ```{codeplay}
 :file: commentaire.py
 # un tout petit programme
@@ -65,12 +69,14 @@ Cette variable n’existant pas au moment de son appel, l’ordinateur ne sait p
 ## Exercices Turtle 🐢 (facultatif)
 
 `turtle` est un module Python permettant de faire du **dessin en codant**. La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:
+
 1. `forward(d)` pour avancer d’une distance `d` (en pixels).
 2. `backward(d)` pour reculer.
 3. `left(a)` pour tourner à gauche d’un angle `a` (en degrés).
 4. `right(a)` pour tourner à droite
 
 Ce code permet de dessiner un carré, testez-le !
+
 ```{codeplay}
 :file: carre.py
 import turtle # Importe le module

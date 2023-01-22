@@ -1,12 +1,10 @@
 .. image:: ../static/assets/modulo-head-banner.png
-   :alt: "Bannière Modulo"
+   :alt: "Bannière"
 
 Informatique au gymnase : apprendre
 ====================================
 
-Bienvenue dans le cours d'informatique au gymnase. 
-Ce cours a été conçu pour vous accompagner dans votre découverte de l'informatique. Il est 
-découpé en **quatre thématiques**. 
+Bienvenue sur la plateforme de TP d'informatique !
 
 .. toctree::
    :name: TP de programmation
@@ -15,6 +13,7 @@ découpé en **quatre thématiques**.
    :hidden:
 
    prog1/intro
+   prog1/variables
 
 .. toctree::
    :name: Outils
@@ -24,5 +23,5 @@ découpé en **quatre thématiques**.
 
    glossaire
 
-`TP de programmation <prog1/index.html>`_
+`TP de programmation <prog1/intro.html>`_
 : ce chapitre contient tous les TP de programmation.
