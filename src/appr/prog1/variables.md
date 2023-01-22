@@ -1,7 +1,7 @@
 
 (prog1.variables)=
 
-# Les variables simples
+# Les variables
 
 [Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
 [Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
@@ -216,7 +216,7 @@ Vous serez très heureux d’avoir correctement nommé vos variables quand votre
 Sans cela, il deviendrait rapidement illisible 🤯  
 Ces conventions et bonnes pratiques sont écrites par la communauté dans des [PEP](https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/).
 
-### Exercices Turtle 🐢 (facultatif)
+## Exercices Turtle 🐢 (facultatif)
 
 ```{admonition} Exercice
 :class: note
