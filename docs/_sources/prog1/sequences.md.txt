@@ -86,7 +86,9 @@ print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 
 moyennes[0] = 5.5  # Modification de ma moyenne de math
 branches.append('histoire')  # Ajout de la branche histoire
-moyennes.append('4.5')  # Ajout de ma moyenne d'histoire
+moyennes.append(4.5)  # Ajout de ma moyenne d'histoire
+print(branches)
+print(moyennes)
 ```
 ````
 `````
@@ -141,7 +143,7 @@ L'exemple suivant affiche le carré des nombres 1 à 19.
 ```{codeplay}
 nombres = range(1, 20)  # Contient les nombres 1 jusqu'à 19
 for nombre in nombres:
-    print(nombre ** 2)
+    print(f'{nombre}^2 = {nombre ** 2}')
 ```
 
 ```{admonition} Exercice
