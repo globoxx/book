@@ -1,4 +1,3 @@
-
 (prog1.variables)=
 
 # Les variables
