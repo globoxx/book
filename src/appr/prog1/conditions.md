@@ -24,6 +24,7 @@ else:
 
 Dans l’exemple ci-dessus, on définit la variable booléenne `ok` à True (vrai).
 L’instruction `if` teste cette variable.
+
 * Si elle est vraie, le bloc d’instructions (décalé à droite) qui vient après les deux points est exécuté. 
 * Sinon, le bloc `else` (sinon, en français) est exécuté à la place.  
 
@@ -83,6 +84,7 @@ Cette fonction ne permet de comparer que 2 nombres mais nous verrons plus tard c
 Le bloc `elif` peut être ajouté après le bloc `if` pour **tester des conditions supplémentaires**.
 Notez que `elif` est la contraction de *else if* (sinon si, en français).
 L'exemple suivant démontre son utilité quand on a 4 situations possibles:
+
 ```{codeplay}
 il_est_tard = False
 je_suis_fatigue = False
@@ -145,6 +147,7 @@ while a < 100:
 	a = a*2
 print(f"Maintenant a vaut {a} !")
 ```
+
 Dans cet exemple, on initialise la variable `a` à 1.
 Puis, tant qu’elle est inférieure à 100, on l’affiche à l’écran et on la double. 
 Ainsi, `a` passera de 1 à 2 à 4 à 8, etc. 
@@ -214,6 +217,7 @@ Cela signifie que "Salut" et "salut" ne sont pas égaux lors d'une comparaison (
 
 La fonction `randint(min, max)` du module `random` permet de **tirer un nombre entier aléatoire** entre `min` et `max` (compris).  
 Voici un exemple où le programme tire un nombre aléatoire entre 1 et 99.
+
 ```{codeplay}
 import random
 
