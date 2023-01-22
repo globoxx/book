@@ -1,0 +1,170 @@
+(prog1.sequences)=
+
+[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
+[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
+
+## Les types séquentiels
+
+Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable. Comme d'autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables séquentielles.
+
+## Le type liste
+
+Une liste est une variable séquentielle.  
+Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets `[]` séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le numéro de l'élément que l'on souhaite. **Attention, le numérotation commence à 0 !**
+
+Il est aussi possible d'accéder aux éléments en partant de la fin en commençant par l'index -1 pour le dernier élément, puis -2, -3, etc.
+
+```{codeplay}
+jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+visiteurs = [200, 120, 345, 256, 123, 765, 644]
+
+# On accède aux données du 1er jour (index 0)
+print(f"Le {jours[0]}, il y a eu {visiteurs[0]} visiteurs")
+# ...
+# On accède aux données du dernier jour (index 06)
+print(f"Le {jours[6]}, il y a eu {visiteurs[6]} visiteurs") 
+
+# Il est aussi possible d'accéder au dernier élément avec l'index -1
+print(f"Le {jours[-1]}, il y a eu {visiteurs[-1]} visiteurs") 
+```
+
+```{admonition} Exercice
+:class: note
+Faites une liste `branches` et une liste `moyennes` qui contiennent respectivement les noms de 3 branches du gymnase et les moyennes que vous y avez.  
+Affichez ensuite la moyenne pour chaque branche.  
+Que se passe-t-il si vous essayer d'accéder à un index en dehors de la liste (par exemple à l'index 3) ?
+```
+
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: au_revoir.py
+branches = ['math', 'français', 'info']
+moyennes = [5, 4, 6]
+
+print(f'Moyenne de {branches[0]}: {moyennes[0]}')
+print(f'Moyenne de {branches[1]}: {moyennes[1]}')
+print(f'Moyenne de {branches[2]}: {moyennes[2]}')
+```
+Si vous dépassez les limites de la liste en voulant accéder à l'index 3 (4ème élément) alors que la liste ne contient que 3 éléments, vous aurez une erreur.
+````
+`````
+
+Pour modifier un élément d'une liste, il suffit d'utiliser le signe `=` pour mettre une nouvelle valeur à l'index voulu.
+Pour ajouter un élément à une liste, on utilise la fonction `append()` ("ajouter" en français) en donnant en argument la valeur à ajouter.
+
+```{codeplay}
+nombres = [5, 2, 6, 3, 8]
+print(nombres)
+nombres[2] = -5  # On modifie le 3ème élément de la liste
+print(nombres)
+nombres.append(1000)  # On ajoute un élément à la liste
+print(nombres)
+```
+
+```{admonition} Exercice
+:class: note
+Reprenez l'exercice 21.
+1. Modifier la moyenne de l'une de vos branches
+2. Ajoutez une nouvelle branche avec sa moyenne.
+```
+
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: au_revoir.py
+branches = ['math', 'français', 'info']
+moyennes = [5, 4, 6]
+
+print(f'Moyenne de {branches[0]}: {moyennes[0]}')
+print(f'Moyenne de {branches[1]}: {moyennes[1]}')
+print(f'Moyenne de {branches[2]}: {moyennes[2]}')
+
+moyennes[0] = 5.5  # Modification de ma moyenne de math
+branches.append('histoire')  # Ajout de la branche histoire
+moyennes.append('4.5')  # Ajout de ma moyenne d'histoire
+```
+````
+`````
+
+## La boucle for
+
+L'instruction `for` permet d'itérer sur une variable séquentielle (par exemple une liste) et de répéter un bloc d'instructions pour chaque valeur de la séquence.
+
+```{codeplay}
+presidents = ["Bush", "Clinton", "Bush", "Obama", "Trump"]
+for name in presidents:
+    print(name)
+```
+
+Dans l'exemple ci-dessus, la variable `name` prendra successivement les valeurs de la liste `presidents` et la fonction `print()` sera à chaque fois exécutée.
+
+```{admonition} Exercice
+:class: note
+Ecrivez une fonction `calcule_moyenne()` qui prend une liste de nombres en argument et qui retourne la moyenne des nombres.
+Indice: la fonction `len()` permet de calculer la longueur d'une liste.
+```
+
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: au_revoir.py
+def calcule_moyenne(liste):
+    somme = 0
+    for n in liste:
+        somme += n
+
+    longueur_liste = len(liste)
+    moyenne = somme / longueur_liste
+    return moyenne
+
+notes = [4.5, 3, 5, 2, 6, 5.5]
+moyenne = calcule_moyenne(notes)
+print(moyenne)
+```
+````
+`````
+
+## Le type range
+
+Une `range` ("intervale" en français) est un autre exemple de variable séquentielle.  
+Les ranges sont utilisés pour stocker des intervales de nombres de manière plus efficace qu'une liste. Une variable de type `range`  peut être créée avec la fonction `range(a,b)` qui retourne un range contenant tous les entiers de `a` à `b-1`.
+
+L'exemple suivant affiche le carré des nombres 1 à 19.
+
+```{codeplay}
+nombres = range(1, 20)  # Contient les nombres 1 jusqu'à 19
+for nombre in nombres:
+    print(nombre ** 2)
+```
+
+```{admonition} Exercice
+:class: note
+Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
+Pour rappel, un nombre est premier quand il n'est divisible que par lui-même ou par 1.  
+Les plus petits sont: 1, 2, 3, 5, 7, 11, 13, etc...
+```
+
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: au_revoir.py
+def est_premier(n):
+    for i in range(2, n):  # On itère sur chaque nombre entre 2 et n-1
+        if n % i == 0:  # Si notre argument est divisible par un nombre
+            return False  # Alors il n'est pas premier
+    return True  # S'il n'est divisible par aucun nombre entre 2 et n-1, alors il est premier
+
+print(est_premier(13))  # True
+print(est_premier(8))  # False
+```
+````
+`````
