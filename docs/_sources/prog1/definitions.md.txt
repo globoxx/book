@@ -212,7 +212,7 @@ def dessine_maison(d):
 d = int(input("Entrez la taille de la maison: ")) # On demande à l'utilisateur la taille de la maison
 
 # On dessine la maison de taille d
-> dessine_maison(d)
+dessine_maison(d)
 
 # Il est ensuite très facile de dessiner d'autres maisons de tailles variables
 turtle.up() # Permet de lever le stylo
