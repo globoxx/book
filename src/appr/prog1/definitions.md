@@ -1,6 +1,6 @@
 (prog1.definitions)=
 
-# Introduction
+# Définition de fonctions
 
 [Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
 [Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
@@ -198,7 +198,7 @@ def dessine_triangle(d):
 
 # Fonction qui dessine une maison de taille d
 def dessine_maison(d):
-     On dessine le carré
+    # On dessine le carré
     dessine_carre(d)
 
     # On se déplace au sommet du carré
