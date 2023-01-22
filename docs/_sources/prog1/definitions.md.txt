@@ -34,6 +34,7 @@ nom_de_votre_fonction(arg1, arg2, ...)  # Appel de la fonction
 ```
 
 ⚠️ Rappelez-vous de ceci ⚠️ :
+
 1. On définit une fonction qu’une seule fois.
 2. On appelle une fonction autant de fois que l’on veut.
 3. Si on ne l’appelle pas, la fonction n’est pas exécutée.
