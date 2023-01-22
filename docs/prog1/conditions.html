@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Les structures conditionnelles" href="conditions.html" /><link rel="prev" title="Les fonctions" href="fonctions.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Les types séquentiels" href="sequences.html" /><link rel="prev" title="Définition de fonctions" href="definitions.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Définition de fonctions - Travaux pratiques</title>
+        <title>Les structures conditionnelles - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -225,8 +225,8 @@
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="variables.html">Les variables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fonctions.html">Les fonctions</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Définition de fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="conditions.html">Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Définition de fonctions</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Les structures conditionnelles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">Les types séquentiels</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
@@ -258,45 +258,78 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="definition-de-fonctions">
-<span id="prog1-definitions"></span><h1>Définition de fonctions<a class="headerlink" href="#definition-de-fonctions" title="Lien permanent vers ce titre">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="les-structures-conditionnelles">
+<span id="prog1-conditions"></span><h1>Les structures conditionnelles<a class="headerlink" href="#les-structures-conditionnelles" title="Lien permanent vers ce titre">¶</a></h1>
 <p><a class="reference external" href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf">Mémento Python</a><br/>
 <a class="reference external" href="https://support.apple.com/fr-ch/HT201236">Raccourcis clavier</a></p>
-<section id="definir-ses-propres-fonctions">
-<h2>Définir ses propres fonctions<a class="headerlink" href="#definir-ses-propres-fonctions" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il est souvent utile d’écrire ses propres fonctions, <strong>afin de ne pas avoir à écrire plusieurs fois le même bout de code</strong>🙏<br/>
-En programmation, le concept de fonction n’est pas exactement le même qu’en mathématiques.
-Il faut plutôt le voir comme un <strong>sous-programme auquel on fournit des objets et qui peut en retourner d’autres</strong>.</p>
-<p>Pour définir une fonction, il faut indiquer les éléments suivants :</p>
-<ol class="simple">
-<li><p>Le mot-clé <code class="docutils literal notranslate"><span class="pre">def</span></code> suivi du nom de la fonction puis de deux points (:).</p></li>
-<li><p>Les <strong>arguments</strong>, ou paramètres, qui indiquent quels sont <strong>les objets à fournir</strong> à la fonction pour que le programme puisse l’exécuter. Certaines fonctions ne prennent aucun argument.</p></li>
-<li><p>La liste des instructions de la fonction, autrement dit, le sous-programme effectué par la fonction. La liste des instructions est indentée par rapport au programme principal, c’est-à-dire qu’elle est <strong>décalée à droite</strong>. Une liste d’instruction est aussi appelée un <strong>bloc d’instruction</strong>.</p></li>
-<li><p>Dans le cas où la fonction retourne un résultat, il est nécessaire d’utiliser le mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code> suivi de l’objet à retourner.</p></li>
-</ol>
-<p>Ces quatre éléments constituent la définition de la fonction.
-<strong>Une fois une fonction ainsi définie, on peut l’utiliser (l’appeler) autant de fois que l’on désire dans un programme</strong> 🤩</p>
-<p>Voici la syntaxe générale pour définir une fonction :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nom_de_votre_fonction</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
-	<span class="o">...</span>
-	<span class="c1"># bloc d'instruction</span>
-	<span class="o">...</span>
-	<span class="c1"># return resultat (optionnel)</span>
+<p>Les structures de contrôle sont un élément central de la programmation.
+<strong>Elles permettent de moduler l’exécution d’un programme selon la valeur de ses variables</strong>.<br/>
+Grâce aux structures conditionnelles, la complexité de vos programmes va pouvoir être décuplée ! 🤯<br/>
+Les structures de contrôle se retrouvent de façon presque identique dans tous les autres langages de programmation.</p>
+<section id="linstruction-if">
+<h2>L’instruction if<a class="headerlink" href="#linstruction-if" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’instruction <code class="docutils literal notranslate"><span class="pre">if</span></code> (si, en anglais) permet d’<strong>effectuer une liste d’instructions uniquement si une valeur booléenne (appelée la condition) est True (vraie)</strong>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="b2sgPSBUcnVlCmlmIG9rOgoJcHJpbnQoImxhIHZhcmlhYmxlIG9rIGVzdCB2cmFpZSIpCmVsc2U6CglwcmludCgibGEgdmFyaWFibGUgb2sgZXN0IGZhdXNzZSIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans l’exemple ci-dessus, on définit la variable booléenne <code class="docutils literal notranslate"><span class="pre">ok</span></code> à True (vrai).
+L’instruction <code class="docutils literal notranslate"><span class="pre">if</span></code> teste cette variable.</p>
+<ul class="simple">
+<li><p>Si elle est vraie, le bloc d’instructions (décalé à droite) qui vient après les deux points est exécuté.</p></li>
+<li><p>Sinon, le bloc <code class="docutils literal notranslate"><span class="pre">else</span></code> (sinon, en français) est exécuté à la place.</p></li>
+</ul>
+<p>⚠️ Notez que le bloc <code class="docutils literal notranslate"><span class="pre">else</span></code> n’est pas obligatoire. ⚠️</p>
+<p><strong>L’indentation du texte (le décalage à droite) est importante</strong>.
+Elle permet à l’ordinateur de savoir quelles sont les instructions qui appartiennent au bloc du <code class="docutils literal notranslate"><span class="pre">if</span></code> et quelles sont celles qui appartiennent au bloc du <code class="docutils literal notranslate"><span class="pre">else</span></code>.<br/>
+(L’indentation se fait de préférence avec la touche tabulation (<strong>TAB</strong>) du clavier.)</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ecrivez un programme qui demande son âge à l’utilisateur.
+Si l’utilisateur donne un nombre inférieur à 20, le programme écrit “Comme vous êtes jeune !”, sinon il écrit “Comme vous êtes vieux !”.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YWdlID0gaW50KGlucHV0KCJFbnRyZXogdm90cmUgYWdlOiAiKSkKCmlmIGFnZSA8IDIwOgogICAgcHJpbnQoIkNvbW1lIHZvdXMgw6p0ZXMgamV1bmUgISIpCmVsc2U6CiAgICBwcmludCgiQ29tbWUgdm91cyDDqnRlcyB2aWV1eCAhIik=" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Ici nous utilisons la fonction <code class="docutils literal notranslate"><span class="pre">int</span></code> car nous supposons que l’utilisateur entrera un nombre entier.
+Cependant le programme fonctionnerait de la même manière en utilisant la fonction <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
+</div>
+</details></div>
+<div class="note admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ecrivez la fonction maximum(a, b) qui prend 2 nombres en argument et retourne le plus grand.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIG1heGltdW0oYSwgYik6CiAgICBpZiBhID4gYjoKICAgICAgICByZXR1cm4gYQogICAgZWxzZToKICAgICAgICByZXR1cm4gYgoKcHJpbnQobWF4aW11bSgzLCA0KSkgIyBBZmZpY2hlIDQ=" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Cette fonction ne permet de comparer que 2 nombres mais nous verrons plus tard comment trouver le maximum dans une liste avec beaucoup de nombres 😉</p>
+</div>
+</details></div>
+<p>Le bloc <code class="docutils literal notranslate"><span class="pre">elif</span></code> peut être ajouté après le bloc <code class="docutils literal notranslate"><span class="pre">if</span></code> pour <strong>tester des conditions supplémentaires</strong>.
+Notez que <code class="docutils literal notranslate"><span class="pre">elif</span></code> est la contraction de <em>else if</em> (sinon si, en français).
+L’exemple suivant démontre son utilité quand on a 4 situations possibles:</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aWxfZXN0X3RhcmQgPSBGYWxzZQpqZV9zdWlzX2ZhdGlndWUgPSBGYWxzZQoKaWYgaWxfZXN0X3RhcmQgYW5kIGplX3N1aXNfZmF0aWd1ZToKCXByaW50KCJKZSB2YWlzIGRvcm1pciIpCmVsaWYgaWxfZXN0X3RhcmQgYW5kIG5vdCBqZV9zdWlzX2ZhdGlndWU6CglwcmludCgiSmUgam91ZSDDoCBsYSBjb25zb2xlIikKZWxpZiBub3QgaWxfZXN0X3RhcmQgYW5kIGplX3N1aXNfZmF0aWd1ZToKCXByaW50KCJKZSBmYWlzIHVuZSBzaWVzdGUiKQplbHNlOgoJIyBJbCBuZSByZXN0ZSBwbHVzIHF1J3VuZSBzZXVsZSBwb3NzaWJpbGl0w6kKCXByaW50KCJKZSB2YWlzIGNvdXJpciBkZWhvcnMiKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ecrivez un programme qui demande à l’utilisateur d’entrer les buts de l’équipe domicile et de l’équipe extérieur.
+Le programme affiche ensuite quelle équipe a gagné le match (ou match nul en cas d’égalité).
+<strong>Exemples d’exécution :</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Buts marqués par l'équipe domicile : 1
+Buts marqués par l'équipe extérieur : 2
+L'équipe extérieur a gagné !!
 
-<span class="n">nom_de_votre_fonction</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c1"># Appel de la fonction</span>
+Buts marqués par l'équipe domicile : 0
+Buts marqués par l'équipe extérieur : 0
+Match nul !
 </pre></div>
 </div>
-<p>⚠️ Rappelez-vous de ceci ⚠️ :</p>
-<ol class="simple">
-<li><p>On définit une fonction qu’une seule fois.</p></li>
-<li><p>On appelle une fonction autant de fois que l’on veut.</p></li>
-<li><p>Si on ne l’appelle pas, la fonction n’est pas exécutée.</p></li>
-</ol>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGF1X2N1YmUobik6CgljdWJlID0gbioqMwoJcmV0dXJuIGN1YmUKCQphID0gYXVfY3ViZSgyKQpiID0gYXVfY3ViZSg1KQpwcmludChmIkxlcyBjdWJlcyBkZSAyIGV0IDUgc29udCB7YX0gZXQge2J9Iik=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple ci-dessus montre la définition d’une fonction nommée <code class="docutils literal notranslate"><span class="pre">au_cube</span></code> prenant 1 argument et retournant le cube de cet argument.</p>
-<div class="note admonition">
-<p class="admonition-title">Exercice</p>
-<p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">au_carre(n)</span></code> qui calcule le carré d’un nombre et le retourne.<br/>
-Utilisez cette fonction pour calculer et afficher le carré des nombres 6, -5 et 573.28.</p>
 </div>
 <div class="hint admonition">
 <p class="admonition-title">Solution</p>
@@ -307,65 +340,20 @@ Utilisez cette fonction pour calculer et afficher le carré des nombres 6, -5 et
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGF1X2NhcnJlKG4pOgogICAgY2FycmUgPSBuKioyCiAgICByZXR1cm4gY2FycmUKCmEgPSBhdV9jYXJyZSg2KQpiID0gYXVfY2FycmUoLTUpCmMgPSBhdV9jYXJyZSg1NzMuMjgpCgpwcmludChmIkxlcyBjYXJyw6lzIGRlIDYsIC01IGV0IDU3My4yOCBzb250IHthfSwge2J9IGV0IHtjfSIp" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Evidemment, cette fonction n’est pas très utile car elle reproduit simplement l’opération <code class="docutils literal notranslate"><span class="pre">n**2</span></code>😅</p>
-</div>
-</details></div>
-<p>L’exemple suivant montre la définition d’une fonction qui ne <strong>retourne aucune valeur</strong>: la fonction ne se termine pas par le mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code>.
-La fonction s’exécute (ici elle affiche des choses) mais ne retourne rien.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHNhbHVlcihwcmVub20sIG5vbSk6CglwcmludChmIkJvbmpvdXIge3ByZW5vbX0ge25vbX0iKQoJcHJpbnQoIkJpZW52ZW51ZSAhIikKCnNhbHVlcigiUGllcnJlIiwgIlNjaG11dHoiKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Notez que les arguments doivent être donnés <strong>dans le même ordre que dans la définition</strong> de la fonction afin que le programme sache quelle entrée correspond à quel argument.</p>
-<div class="note admonition">
-<p class="admonition-title">Exercice</p>
-<p>Modifiez l’exemple ci-dessus pour ajouter un troisième argument de votre choix à la fonction <code class="docutils literal notranslate"><span class="pre">saluer()</span></code>.<br/>
-Faites en sorte que la fonction utilise ce nouvel argument dans son message de bienvenue puis appelez la fonction.</p>
-</div>
-<div class="hint admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHNhbHVlcihwcmVub20sIG5vbSwgYWdlKToKICAgIHByaW50KGYiQm9uam91ciB7cHJlbm9tfSB7bm9tfSBxdWkgYSB7YWdlfSBhbnMgISIpCiAgICBwcmludCgiQmllbnZlbnVlICEiKQoKc2FsdWVyKCJQaWVycmUiLCAiU2NobXV0eiIsIDM0KQ==" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</details></div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHZvbHVtZV9jeWxpbmRyZShyYXlvbiwgaGF1dGV1cik6Cgl2b2wgPSAzLjE0ICogcmF5b24qKjIgKiBoYXV0ZXVyCglyZXR1cm4gdm9sCgp2MSA9IHZvbHVtZV9jeWxpbmRyZSgyLjMsIDEwKQp2MiA9IHZvbHVtZV9jeWxpbmRyZSgxLjIsIDUpCnByaW50KGYiTGUgdm9sdW1lIGRlcyBjeWxpbmRyZXMgZXN0IGRlIHt2MX0gZXQge3YyfSIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple ci-dessus montre une fonction prenant en arguments le rayon et la hauteur d’un cylindre afin d’en retourner le volume 🤓</p>
-<div class="note admonition">
-<p class="admonition-title">Exercice</p>
-<p>L’indice de masse corporelle (IMC) d’une personne est donné par son poids (en kg) divisé par le carré de sa taille (en mètres).
-Ecrivez une fonction qui prend le poids et la taille en argument et retourne l’IMC.<br/>
-Utilisez cette fonction dans un programme qui demande son poids et sa taille à l’utilisateur et affiche son IMC dans le terminal.</p>
-<p><strong>Exemple d’exécution :</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Entrez</span> <span class="n">votre</span> <span class="n">poids</span> <span class="p">(</span><span class="n">kg</span><span class="p">)</span> <span class="p">:</span> <span class="mi">84</span>
-<span class="n">Entrez</span> <span class="n">votre</span> <span class="n">taille</span> <span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="p">:</span> <span class="mf">1.84</span>
-<span class="n">Votre</span> <span class="n">IMC</span> <span class="n">est</span> <span class="n">de</span> <span class="mf">24.810964083175</span>
-</pre></div>
-</div>
-<p>L’IMC n’est q’un indicateur et ne permet absolument pas, à lui seul, de déterminer l’état de santé d’une personne.</p>
-</div>
-<div class="hint admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVfaW1jKHBvaWRzLCB0YWlsbGUpOgogICAgaW1jID0gcG9pZHMgLyB0YWlsbGUqKjIKICAgIHJldHVybiBpbWMKCnBvaWRzID0gZmxvYXQoaW5wdXQoIkVudHJleiB2b3RyZSBwb2lkcyAoa2cpOiAiKSkKdGFpbGxlID0gZmxvYXQoaW5wdXQoIkVudHJleiB2b3RyZSB0YWlsbGUgKG0pOiAiKSkKaW1jID0gY2FsY3VsZV9pbWMocG9pZHMsIHRhaWxsZSkKCnByaW50KGYiVm90cmUgSU1DIGVzdCBkZSB7aW1jfSIp" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Gardez à l’esprit qu’une fois que vous avez choisi un nom pour une fonction ou une variable, vous ne pouvez pas utiliser ce nom pour une autre fonction ou variable.</p>
-</div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnV0c19kb21pY2lsZSA9IGludChpbnB1dCgiQnV0cyBtYXJxdcOpcyBwYXIgbCfDqXF1aXBlIGRvbWljaWxlOiAiKSkKYnV0c19leHRlcmlldXIgPSBpbnQoaW5wdXQoIkJ1dHMgbWFycXXDqXMgcGFyIGwnw6lxdWlwZSBleHTDqXJpZXVyOiAiKSkKCmlmIGJ1dHNfZG9taWNpbGUgPiBidXRzX2V4dGVyaWV1cjoKICAgIHByaW50KCJMJ8OpcXVpcGUgZG9taWNpbGUgYSBnYWduw6kgISEiKQplbGlmIGJ1dHNfZXh0ZXJpZXVyID4gYnV0c19kb21pY2lsZToKICAgIHByaW50KCJMJ8OpcXVpcGUgZXh0w6lyaWV1ciBhIGdhZ27DqSAhISIpCmVsc2U6CiAgICBwcmludCgiTWF0Y2ggbnVsICEiKQ==" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
 </section>
-<section id="exercices-turtle-facultatif">
-<h2>Exercices Turtle 🐢 (facultatif)<a class="headerlink" href="#exercices-turtle-facultatif" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="linstruction-while">
+<h2>L’instruction while<a class="headerlink" href="#linstruction-while" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’instruction <code class="docutils literal notranslate"><span class="pre">while</span></code> (qui signifie “tant que” en anglais) permet de <strong>répéter un bloc d’instructions tant qu’une condition est remplie</strong>.<br/>
+C’est extrêmement pratique pour réduire le nombre de lignes de code 😜</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEKd2hpbGUgYSA8IDEwMDoKCXByaW50KGEpCglhID0gYSoyCnByaW50KGYiTWFpbnRlbmFudCBhIHZhdXQge2F9ICEiKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans cet exemple, on initialise la variable <code class="docutils literal notranslate"><span class="pre">a</span></code> à 1.
+Puis, tant qu’elle est inférieure à 100, on l’affiche à l’écran et on la double.
+Ainsi, <code class="docutils literal notranslate"><span class="pre">a</span></code> passera de 1 à 2 à 4 à 8, etc.
+<strong>Le programme imprime donc toute les puissances de deux inférieures à 100</strong>.</p>
 <div class="note admonition">
 <p class="admonition-title">Exercice</p>
-<p>Il est temps d’améliorer notre code permettant de dessiner une maison grâce aux fonctions ! 🤩</p>
-<ol class="simple">
-<li><p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">carre(taille)</span></code> qui dessine un carré de la taille passée en argument.</p></li>
-<li><p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">triangle(taille)</span></code> qui dessine un triangle équilatéral avec la taille passée en argument.</p></li>
-<li><p>Enfin, écrivez une fonction <code class="docutils literal notranslate"><span class="pre">maison(taille)</span></code> qui appelle les 2 fonctions précédentes pour dessiner une maison de la taille passée en argument.</p></li>
-</ol>
+<p>Modifier le programme ci-dessus pour qu’il imprime toutes les puissances de 10 inférieures ou égales à 10000.</p>
 </div>
 <div class="hint admonition">
 <p class="admonition-title">Solution</p>
@@ -376,8 +364,58 @@ Utilisez cette fonction dans un programme qui demande son poids et sa taille à 
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAjIEltcG9ydGUgbGUgbW9kdWxlCgojIEZvbmN0aW9uIHF1aSBkZXNzaW5lIHVuIGNhcnLDqSBkZSB0YWlsbGUgZApkZWYgZGVzc2luZV9jYXJyZShkKToKICAgIHR1cnRsZS5mb3J3YXJkKGQpICMgQXZhbmNlIGRlIDEwMCBwaXhlbHMKICAgIHR1cnRsZS5sZWZ0KDkwKSAjIFRvdXJuZSBhIGdhdWNoZSBkZSA5MCBkZWdyZXMKICAgIHR1cnRsZS5mb3J3YXJkKGQpCiAgICB0dXJ0bGUubGVmdCg5MCkKICAgIHR1cnRsZS5mb3J3YXJkKGQpCiAgICB0dXJ0bGUubGVmdCg5MCkKICAgIHR1cnRsZS5mb3J3YXJkKGQpCiAgICB0dXJ0bGUubGVmdCg5MCkKCiMgRm9uY3Rpb24gcXVpIGRlc3NpbmUgdW4gdHJpYW5nbGUgZGUgdGFpbGxlIGQKZGVmIGRlc3NpbmVfdHJpYW5nbGUoZCk6CiAgICB0dXJ0bGUuZm9yd2FyZChkKSAjIEF2YW5jZSBkZSAxMDAgcGl4ZWxzCiAgICB0dXJ0bGUubGVmdCgxMjApICMgVG91cm5lIGEgZ2F1Y2hlIGRlIDEyMCBkZWdyZXMgKDE4MC02MCkKICAgIHR1cnRsZS5mb3J3YXJkKGQpCiAgICB0dXJ0bGUubGVmdCgxMjApCiAgICB0dXJ0bGUuZm9yd2FyZChkKQogICAgdHVydGxlLmxlZnQoMTIwKQoKIyBGb25jdGlvbiBxdWkgZGVzc2luZSB1bmUgbWFpc29uIGRlIHRhaWxsZSBkCmRlZiBkZXNzaW5lX21haXNvbihkKToKICAgICMgT24gZGVzc2luZSBsZSBjYXJyw6kKICAgIGRlc3NpbmVfY2FycmUoZCkKCiAgICAjIE9uIHNlIGTDqXBsYWNlIGF1IHNvbW1ldCBkdSBjYXJyw6kKICAgIHR1cnRsZS5sZWZ0KDkwKQogICAgdHVydGxlLmZvcndhcmQoZCkKICAgIHR1cnRsZS5yaWdodCg5MCkKCiAgICAjIE9uIGRlc3NpbmUgbGUgdHJpYW5nbGUKICAgIGRlc3NpbmVfdHJpYW5nbGUoZCkKCmQgPSBpbnQoaW5wdXQoIkVudHJleiBsYSB0YWlsbGUgZGUgbGEgbWFpc29uOiAiKSkgIyBPbiBkZW1hbmRlIMOgIGwndXRpbGlzYXRldXIgbGEgdGFpbGxlIGRlIGxhIG1haXNvbgoKIyBPbiBkZXNzaW5lIGxhIG1haXNvbiBkZSB0YWlsbGUgZApkZXNzaW5lX21haXNvbihkKQoKIyBJbCBlc3QgZW5zdWl0ZSB0csOocyBmYWNpbGUgZGUgZGVzc2luZXIgZCdhdXRyZXMgbWFpc29ucyBkZSB0YWlsbGVzIHZhcmlhYmxlcwp0dXJ0bGUudXAoKSAjIFBlcm1ldCBkZSBsZXZlciBsZSBzdHlsbwp0dXJ0bGUuZ290bygxMjUsIDEyNSkgIyBTZSBkw6lwbGFjZSDDoCBjZXMgY29vcmRvbm7DqWVzCnR1cnRsZS5kb3duKCkgIyBQZXJtZXQgZGUgcmVjb21tZW5jZXIgw6AgZGVzc2luZXIKZGVzc2luZV9tYWlzb24oZC8yKQoKdHVydGxlLnVwKCkKdHVydGxlLmdvdG8oLTI1MCwgLTI1MCkKdHVydGxlLmRvd24oKQpkZXNzaW5lX21haXNvbihkKjIpCgp0dXJ0bGUuZG9uZSgpICMgVGVybWluZSBsZSBkZXNzaW4=" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEwCndoaWxlIGEgPD0gMTAwMDA6CiAgICBwcmludChhKQogICAgYSA9IGEqMTAKcHJpbnQoZiJNYWludGVuYW50IGEgdmF1dCB7YX0gISIp" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Il est tout à fait possible d’arriver au même résultat en calculant la puissance de 10 à chaque tour de boucle en utilisant l’opérateur de puissance: <code class="docutils literal notranslate"><span class="pre">**</span></code>.
+Voici un exemple:</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YSA9IDEwCm4gPSAxCndoaWxlIG4gPD0gNDoKICAgIHByaW50KGEqKm4pCiAgICBuID0gbiArIDE=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
+<div class="note admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ecrivez un programme qui demande en boucle à l’utilisateur comment il va tant qu’il ne répond pas “Bien merci et toi ?”.<br/>
+Rappel: la fonction <code class="docutils literal notranslate"><span class="pre">input</span></code> permet de demander à l’utilisateur d’entrer du texte.</p>
+<p><strong>Exemple d’exécution :</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Comment tu vas ? Bien
+Comment tu vas ? Bof
+Comment tu vas ? Nickel !
+Comment tu vas ? Bien merci et toi ?
+Très bien, merci de demander !
+</pre></div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cmVwb25zZSA9IGlucHV0KCJDb21tZW50IHR1IHZhcyA/ICIpCgp3aGlsZSByZXBvbnNlICE9ICJCaWVuIG1lcmNpIGV0IHRvaSA/IjoKICAgIHJlcG9uc2UgPSBpbnB1dCgiQ29tbWVudCB0dSB2YXMgPyAiKQoKcHJpbnQoIlRyw6hzIGJpZW4sIG1lcmNpIGRlIGRlbWFuZGVyICEiKQ==" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">⚠️ Notez que Python est sensible à la casse (majuscule/minuscule) ⚠️<br/>
+Cela signifie que “Salut” et “salut” ne sont pas égaux lors d’une comparaison (<code class="docutils literal notranslate"><span class="pre">==</span></code>).</p>
+</div>
+</details></div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">randint(min,</span> <span class="pre">max)</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet de <strong>tirer un nombre entier aléatoire</strong> entre <code class="docutils literal notranslate"><span class="pre">min</span></code> et <code class="docutils literal notranslate"><span class="pre">max</span></code> (compris).<br/>
+Voici un exemple où le programme tire un nombre aléatoire entre 1 et 99.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHJhbmRvbQoKbiA9IHJhbmRvbS5yYW5kaW50KDEsIDk5KQpwcmludChuKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ecrivez un programme qui permet de jouer à “Devine mon nombre”:</p>
+<ol class="simple">
+<li><p>Laissez le programme tirer un nombre aléatoire entre 1 et 50.</p></li>
+<li><p>Demandez à l’utilisateur de proposer un nombre tant qu’il n’a pas trouvé le bon.</p></li>
+<li><p>A chaque proposition de nombre, le programme affiche “Plus grand” ou “Plus petit” pour aider le joueur.</p></li>
+<li><p>Ajoutez un compteur de coups nécessaires pour trouver le bon nombre.</p></li>
+</ol>
+<p><strong>Exemple d’exécution :</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Devine</span> <span class="n">mon</span> <span class="n">nombre</span><span class="p">:</span> <span class="mi">32</span>
+<span class="n">Plus</span> <span class="n">grand</span>
+<span class="n">Devine</span> <span class="n">mon</span> <span class="n">nombre</span><span class="p">:</span> <span class="mi">43</span>
+<span class="n">Plus</span> <span class="n">petit</span>
+<span class="o">...</span>
+<span class="n">Devine</span> <span class="n">mon</span> <span class="n">nombre</span><span class="p">:</span> <span class="mi">38</span>
+<span class="n">Gagné</span><span class="p">,</span> <span class="n">c</span><span class="s1">'était bien 38 ! (Il vous a fallu 6 coups)</span>
+</pre></div>
+</div>
+</div>
 </section>
 </section>
 
@@ -386,30 +424,30 @@ Utilisez cette fonction dans un programme qui demande son poids et sa taille à 
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="conditions.html">
+          <a class="next-page" href="sequences.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Les structures conditionnelles</div>
+                <div class="title">Les types séquentiels</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="fonctions.html">
+          <a class="prev-page" href="definitions.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Les fonctions</div>
+                <div class="title">Définition de fonctions</div>
                 
               </div>
             </a>
         </div>
 
         <div class="related-information">
-            <a class="muted-link" href="../_sources/prog1/definitions.md.txt"
+            <a class="muted-link" href="../_sources/prog1/conditions.md.txt"
                rel="nofollow">
               Montrer le code source
             </a>
@@ -429,9 +467,9 @@ Utilisez cette fonction dans un programme qui demande son poids et sa taille à 
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Définition de fonctions</a><ul>
-<li><a class="reference internal" href="#definir-ses-propres-fonctions">Définir ses propres fonctions</a></li>
-<li><a class="reference internal" href="#exercices-turtle-facultatif">Exercices Turtle 🐢 (facultatif)</a></li>
+<li><a class="reference internal" href="#">Les structures conditionnelles</a><ul>
+<li><a class="reference internal" href="#linstruction-if">L’instruction if</a></li>
+<li><a class="reference internal" href="#linstruction-while">L’instruction while</a></li>
 </ul>
 </li>
 </ul>

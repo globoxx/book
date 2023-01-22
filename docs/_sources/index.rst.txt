@@ -16,6 +16,8 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog1/variables
    prog1/fonctions
    prog1/definitions
+   prog1/conditions
+   prog1/sequences
 
 .. toctree::
    :name: Outils
