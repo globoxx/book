@@ -5,11 +5,11 @@
 
 # Les types séquentiels
 
-Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable. Comme d'autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables séquentielles.
+Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d'autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables de type séquentiel.
 
 ## Le type liste
 
-Une liste est une variable séquentielle.  
+Une liste est une variable de type séquentiel. C'est une séquence ordonnée d'objets quelconques.  
 Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets `[]` séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le numéro de l'élément que l'on souhaite. **Attention, le numérotation commence à 0 !**
 
 Il est aussi possible d'accéder aux éléments en partant de la fin en commençant par l'index -1 pour le dernier élément, puis -2, -3, etc.
@@ -28,9 +28,18 @@ print(f"Le {jours[6]}, il y a eu {visiteurs[6]} visiteurs")
 print(f"Le {jours[-1]}, il y a eu {visiteurs[-1]} visiteurs") 
 ```
 
+```{question}
+En informatique, une liste est
+
+{v}`ordonnée`  
+{f}`jamais vide`  
+{f}`toujours hétérogène`  
+{f}`un ensemble mathématique`
+```
+
 ```{admonition} Exercice
 :class: note
-Faites une liste `branches` et une liste `moyennes` qui contiennent respectivement les noms de 3 branches du gymnase et les moyennes que vous y avez.  
+Créez une liste `branches` et une liste `moyennes` qui contiennent respectivement les noms de 3 branches du gymnase et les moyennes que vous y avez.  
 Affichez ensuite la moyenne pour chaque branche.  
 Que se passe-t-il si vous essayer d'accéder à un index en dehors de la liste (par exemple à l'index 3) ?
 ```
@@ -48,12 +57,12 @@ print(f'Moyenne de {branches[0]}: {moyennes[0]}')
 print(f'Moyenne de {branches[1]}: {moyennes[1]}')
 print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 ```
-Si vous dépassez les limites de la liste en voulant accéder à l'index 3 (4ème élément) alors que la liste ne contient que 3 éléments, vous aurez une erreur.
+Si vous dépassez les limites de la liste en voulant accéder à l'index 3 (4ème élément) alors que la liste ne contient que 3 éléments, vous aurez une erreur de type `index out of range` qui signifie que l'index n'est pas atteignable.
 ````
 `````
 
-Pour modifier un élément d'une liste, il suffit d'utiliser le signe `=` pour mettre une nouvelle valeur à l'index voulu.
-Pour ajouter un élément à une liste, on utilise la fonction `append()` ("ajouter" en français) en donnant en argument la valeur à ajouter.
+Pour modifier un élément d'une liste, il suffit d'utiliser le signe `=` pour mettre une nouvelle valeur à l'index voulu.  
+Pour ajouter un élément à une liste, on utilise la **méthode** `append()` ("ajouter" en français) en donnant en argument la valeur à ajouter.  
 
 ```{codeplay}
 nombres = [5, 2, 6, 3, 8]
@@ -64,11 +73,17 @@ nombres.append(1000)  # On ajoute un élément à la liste
 print(nombres)
 ```
 
+```{caution}
+**Pour aller plus loin**
+Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée que via l'intermédiaire d'un objet (ici une liste) avec un `.`. Plus de détails là-dessus l'année prochaine avec la programmation orientée objet !
+```
+
 ```{admonition} Exercice
 :class: note
-Reprenez l'exercice 21.
+Reprenez l'exercice précédent (l'exercice 21).
 1. Modifier la moyenne de l'une de vos branches
 2. Ajoutez une nouvelle branche avec sa moyenne.
+3. Affichez les nouvelles données.
 ```
 
 `````{admonition} Solution
@@ -93,9 +108,48 @@ print(moyennes)
 ````
 `````
 
+Les chaînes de caractères (`str`) peuvent aussi être indexées.
+
+```{codeplay}
+:file: list5.py
+noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
+print(noms[0][0])  # Accès à la première lettre de Tim
+print(noms[2][1])  # Accès àa la 2ème lettre de Kim
+print(noms[-1][2])  # Accès à la 3ème lettre de Léa
+```
+
+La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une sous-liste de la liste. Cette sous-liste, aussi appelée **tranche**, est une partie de la liste identifiée par les deux index `i` et `j`. La sous-liste contiendra donc les éléments se trouvant entre `i` et `j-1`.
+
+```{codeplay}
+:file: list6.py
+noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
+
+print(noms[:2])    # élément 0 et 1 (les 2 premiers éléments)
+print(noms[2:4])   # élément 2 et 3
+print(noms[4:])    # élément 4 et 5 (tous les éléments à partir de l'index 4)
+```
+
+```{question}
+Quel est le résultat de l'expression `'python'[:2]` ?
+
+{f}`thon`
+{f}`y`
+{f}`p`
+{v}`py`
+```
+
+```{question}
+Quel est le résultat de l'expression `'pikachu'[-3:]` ?
+
+{f}`pik`
+{v}`chu`
+{f}`p`
+{f}`pika`
+```
+
 ## La boucle for
 
-L'instruction `for` permet d'itérer sur une variable séquentielle (par exemple une liste) et de répéter un bloc d'instructions pour chaque valeur de la séquence.
+L'instruction `for` permet d'itérer sur une variable de type séquentiel (par exemple une liste) et de répéter un bloc d'instructions pour chaque valeur de la séquence.
 
 ```{codeplay}
 presidents = ["Bush", "Clinton", "Bush", "Obama", "Trump"]
@@ -107,7 +161,7 @@ Dans l'exemple ci-dessus, la variable `name` prendra successivement les valeurs 
 
 ```{admonition} Exercice
 :class: note
-Ecrivez une fonction `calcule_moyenne()` qui prend une liste de nombres en argument et qui retourne la moyenne des nombres.
+Ecrivez une fonction `calcule_moyenne()` qui prend une liste de nombres en argument et qui retourne la moyenne de ces nombres.  
 Indice: la fonction `len()` permet de calculer la longueur d'une liste.
 ```
 
@@ -120,7 +174,7 @@ Indice: la fonction `len()` permet de calculer la longueur d'une liste.
 def calcule_moyenne(liste):
     somme = 0
     for n in liste:
-        somme += n
+        somme = somme + n
 
     longueur_liste = len(liste)
     moyenne = somme / longueur_liste
@@ -135,8 +189,8 @@ print(moyenne)
 
 ## Le type range
 
-Une `range` ("intervale" en français) est un autre exemple de variable séquentielle.  
-Les ranges sont utilisés pour stocker des intervales de nombres de manière plus efficace qu'une liste. Une variable de type `range`  peut être créée avec la fonction `range(a,b)` qui retourne un range contenant tous les entiers de `a` à `b-1`.
+Une `range` ("intervale" en français) est un autre exemple de variable de type séquentiel.  
+Les ranges sont utilisés pour stocker des intervales de nombres de manière plus efficace qu'une liste. Une variable de type `range` peut être créée avec la fonction `range(a,b)` qui retourne un range contenant tous les entiers de `a` à `b-1`. Une `range` peut être convertie en liste avec la fonction `liste()`.
 
 L'exemple suivant affiche le carré des nombres 1 à 19.
 
@@ -144,6 +198,22 @@ L'exemple suivant affiche le carré des nombres 1 à 19.
 nombres = range(1, 20)  # Contient les nombres 1 jusqu'à 19
 for nombre in nombres:
     print(f'{nombre}^2 = {nombre ** 2}')
+```
+
+L'exemple suivant dessine un polygone en utilisant une boucle `for` et une `range`.
+
+```{codeplay}
+:file: range2.py
+from turtle import *
+
+n = 9       # nombre de sommets
+a = 50      # longueur du côté
+up()
+
+for i in range(n):
+    forward(a)
+    left(360/n)
+    write(i)
 ```
 
 ```{admonition} Exercice
@@ -170,3 +240,76 @@ print(est_premier(8))  # False
 ```
 ````
 `````
+
+```{codeplay}
+:output_lines: 5
+from turtle import *
+
+a = 40
+def potence():
+    forward(100)
+    backward(50)
+    left(90)
+    forward(180)
+    right(90)
+    forward(40)
+    left(45)
+    backward(56)
+    forward(56)
+    right(45)
+    forward(50)
+    right(90)
+    forward(40)
+
+def tete():
+    dot(20)
+    forward(20)
+
+def bras1():
+    right(45)
+    forward(a)
+    backward(a)
+
+def bras2():
+    left(90)
+    forward(a)
+    backward(a)
+
+def torse():
+    right(45)
+    forward(a)
+
+def jambe1():
+    right(45)
+    forward(a)
+    backward(a)
+
+def jambe2():
+    left(90)
+    forward(a)
+    backward(a)
+    hideturtle()
+
+potence()
+
+dessin = [tete, bras1, bras2, torse, jambe1, jambe2]  # Une liste qui contient des fonctions !
+
+mot_a_trouver = 'potiron'
+lettres_trouvees = ''
+n = 0
+
+for i in range(10):
+    mot_affiche = ''
+    for lettre in mot_a_trouver:
+        si lettre in lettres_trouvees:
+            mot_affiche += lettre
+        else:
+            mot_affiche += '_'
+
+    lettre_proposee = input(mot_affiche + '  lettre: ')
+    if lettre_propose in mot_a_trouver:
+        lettres += letre_proposee
+    else:
+        dessin[n]()
+        n = n + 1
+```
