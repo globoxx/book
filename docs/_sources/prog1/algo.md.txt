@@ -149,6 +149,8 @@ hints: |
     ===
     Toujours pas?
 ---
+from contextlib import redirect_stdout
+
 def test(condition, msg_correct, msg_erreur):
     print('Test ---------------------------------------')
     if condition:
@@ -160,5 +162,6 @@ def test(condition, msg_correct, msg_erreur):
 def puissance(n, m):
     ...
 ===
-test(puissance(2, 3) == 8, "Yes tout à fait correct !", "Oups, ton implémentation est incorrecte.")
+with redirect_stdout(None):
+    test(puissance(2, 3) == 8, "Yes tout à fait correct !", "Oups, ton implémentation est incorrecte.")
 ```
