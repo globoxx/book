@@ -149,12 +149,16 @@ hints: |
     ===
     Toujours pas?
 ---
-def test(condition, erreur):
-     if not condition:
-        print(erreur)
+def test(condition, msg_correct, msg_erreur):
+    print('Test ---------------------------------------')
+    if condition:
+        print(msg_correct)
+    else:
+        print(msg_erreur)
+    print('--------------------------------------------')
 ===
 def puissance(n, m):
-    pass
+    ...
 ===
-test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.", "Yes tout à fait correct !")
+test(puissance(2, 3) == 8, "Yes tout à fait correct !", "Oups, ton implémentation est incorrecte.")
 ```
