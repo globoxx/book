@@ -241,6 +241,51 @@ Devine mon nombre: 43
 Plus petit
 ...
 Devine mon nombre: 38
-Gagné, c'était bien 38 ! (Il vous a fallu 6 coups)
+Gagné ! (Il vous a fallu 6 coups)
 ```
 ````
+
+`````{admonition} Aide
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: devine_mon_nombre.py
+import random
+
+nombre_mystere = ...
+nombre_propose = ...
+coups = 1
+while ...:
+    if ...:
+        print('Plus petit')
+    else:
+        print('Plus grand')
+    ...
+print(f'Gagné ! (Il vous a fallu {coups} coups)')
+```
+````
+`````
+
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: devine_mon_nombre.py
+import random
+
+nombre_mystere = np.randint(1, 50)
+nombre_propose = int(input('Devine mon nombre: '))
+coups = 1
+while nombre_propose != nombre_mystere:
+    if nombre_propose > nombre_mystere:
+        print('Plus petit')
+    else:
+        print('Plus grand')
+    nombre_propose = int(input('Devine mon nombre: '))
+    coups = coups + 1
+print(f'Gagné ! (Il vous a fallu {coups} coups)')
+```
+````
+`````
