@@ -68,7 +68,7 @@ for i in range(1, n):
         minimum = liste[i]
         index_minimum = i
         
-print(f'Le minimum est {minimum} et se trouve à l'index {index_minimum})
+print(f"Le minimum est {minimum} et se trouve à l'index {index_minimum}")
 ```
 
 ```{admonition} Exercice
@@ -136,13 +136,12 @@ def bubble_sort(liste):
                 echange(liste, i, i+1)
     return liste
 
-y = [3, 4, 1, 2, 6, 5]
-print(y)
+liste = [3, 4, 1, 2, 6, 5]
+print(liste)
 liste = bubble_sort(liste)
 print(liste)
 ```
 
-`````{tabbed} Aperçu
 ```{codeplay}
 ---
 hints: |
@@ -157,6 +156,5 @@ def test(condition, erreur):
 def puissance(n, m):
     pass
 ===
-test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.")
+test(puissance(2, 3) == 8, "Oups, ton implémentation est incorrecte.", "Yes tout à fait correct !")
 ```
-`````
