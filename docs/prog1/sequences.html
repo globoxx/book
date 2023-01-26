@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Glossaire" href="../glossaire.html" /><link rel="prev" title="Les structures conditionnelles" href="conditions.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Les algorithmes" href="algo.html" /><link rel="prev" title="Les structures conditionnelles" href="conditions.html" />
 
     <link rel="shortcut icon" href="../_static/modulo-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>Les types séquentiels - Travaux pratiques</title>
@@ -228,6 +228,7 @@
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Définition de fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditions.html">Les structures conditionnelles</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algo.html">Les algorithmes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
@@ -265,17 +266,17 @@
 <p>Certains programmes nécessitent l’utilisation d’un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d’autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables de type séquentiel.</p>
 <section id="le-type-liste">
 <h2>Le type liste<a class="headerlink" href="#le-type-liste" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une liste est une variable de type séquentiel. C’est une séquence ordonnée d’objets quelconques.<br/>
+<p>Une liste est une variable de type séquentiel. C’est une séquence ordonnée d’objets quelconques (nombres, textes, fonctions, etc…).<br/>
 Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code> séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le numéro de l’élément que l’on souhaite. <strong>Attention, le numérotation commence à 0 !</strong></p>
 <p>Il est aussi possible d’accéder aux éléments en partant de la fin en commençant par l’index -1 pour le dernier élément, puis -2, -3, etc.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="am91cnMgPSBbImx1bmRpIiwgIm1hcmRpIiwgIm1lcmNyZWRpIiwgImpldWRpIiwgInZlbmRyZWRpIiwgInNhbWVkaSIsICJkaW1hbmNoZSJdCnZpc2l0ZXVycyA9IFsyMDAsIDEyMCwgMzQ1LCAyNTYsIDEyMywgNzY1LCA2NDRdCgojIE9uIGFjY8OoZGUgYXV4IGRvbm7DqWVzIGR1IDFlciBqb3VyIChpbmRleCAwKQpwcmludChmIkxlIHtqb3Vyc1swXX0sIGlsIHkgYSBldSB7dmlzaXRldXJzWzBdfSB2aXNpdGV1cnMiKQojIC4uLgojIE9uIGFjY8OoZGUgYXV4IGRvbm7DqWVzIGR1IGRlcm5pZXIgam91ciAoaW5kZXggMDYpCnByaW50KGYiTGUge2pvdXJzWzZdfSwgaWwgeSBhIGV1IHt2aXNpdGV1cnNbNl19IHZpc2l0ZXVycyIpIAoKIyBJbCBlc3QgYXVzc2kgcG9zc2libGUgZCdhY2PDqWRlciBhdSBkZXJuaWVyIMOpbMOpbWVudCBhdmVjIGwnaW5kZXggLTEKcHJpbnQoZiJMZSB7am91cnNbLTFdfSwgaWwgeSBhIGV1IHt2aXNpdGV1cnNbLTFdfSB2aXNpdGV1cnMiKSA=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
-<p>En informatique, une liste est</p>
-<p><label class="answer correct"><input type="checkbox"/>ordonnée</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>jamais vide</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>toujours hétérogène</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>un ensemble mathématique</label></p>
+<p>En informatique, une liste …</p>
+<p><label class="answer correct"><input type="checkbox"/>est ordonnée</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>n’est jamais vide</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>ne contient que des éléments du même type</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>est un ensemble mathématique</label></p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
 </form></div><div class="note admonition">
@@ -300,8 +301,8 @@ Que se passe-t-il si vous essayer d’accéder à un index en dehors de la liste
 Pour ajouter un élément à une liste, on utilise la <strong>méthode</strong> <code class="docutils literal notranslate"><span class="pre">append()</span></code> (“ajouter” en français) en donnant en argument la valeur à ajouter.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IFs1LCAyLCA2LCAzLCA4XQpwcmludChub21icmVzKQpub21icmVzWzJdID0gLTUgICMgT24gbW9kaWZpZSBsZSAzw6htZSDDqWzDqW1lbnQgZGUgbGEgbGlzdGUKcHJpbnQobm9tYnJlcykKbm9tYnJlcy5hcHBlbmQoMTAwMCkgICMgT24gYWpvdXRlIHVuIMOpbMOpbWVudCDDoCBsYSBsaXN0ZQpwcmludChub21icmVzKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="admonition caution">
 <p class="admonition-title">Prudence</p>
-<p><strong>Pour aller plus loin</strong>
-Une méthode (ex: <code class="docutils literal notranslate"><span class="pre">append()</span></code>) est différente d’une fonction dans le sens où elle ne peut être appelée que via l’intermédiaire d’un objet (ici une liste) avec un <code class="docutils literal notranslate"><span class="pre">.</span></code>. Plus de détails là-dessus l’année prochaine avec la programmation orientée objet !</p>
+<p><strong>Pour aller plus loin</strong><br/>
+Une méthode (ex: <code class="docutils literal notranslate"><span class="pre">append()</span></code>) est différente d’une fonction dans le sens où elle ne peut être appelée qu’avec un <code class="docutils literal notranslate"><span class="pre">.</span></code> via l’intermédiaire d’un objet (ici une liste). Plus de détails là-dessus l’année prochaine avec la programmation orientée objet !</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Exercice</p>
@@ -324,14 +325,14 @@ Une méthode (ex: <code class="docutils literal notranslate"><span class="pre">a
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnJhbmNoZXMgPSBbJ21hdGgnLCAnZnJhbsOnYWlzJywgJ2luZm8nXQptb3llbm5lcyA9IFs1LCA0LCA2XQoKcHJpbnQoZidNb3llbm5lIGRlIHticmFuY2hlc1swXX06IHttb3llbm5lc1swXX0nKQpwcmludChmJ01veWVubmUgZGUge2JyYW5jaGVzWzFdfToge21veWVubmVzWzFdfScpCnByaW50KGYnTW95ZW5uZSBkZSB7YnJhbmNoZXNbMl19OiB7bW95ZW5uZXNbMl19JykKCm1veWVubmVzWzBdID0gNS41ICAjIE1vZGlmaWNhdGlvbiBkZSBtYSBtb3llbm5lIGRlIG1hdGgKYnJhbmNoZXMuYXBwZW5kKCdoaXN0b2lyZScpICAjIEFqb3V0IGRlIGxhIGJyYW5jaGUgaGlzdG9pcmUKbW95ZW5uZXMuYXBwZW5kKDQuNSkgICMgQWpvdXQgZGUgbWEgbW95ZW5uZSBkJ2hpc3RvaXJlCnByaW50KGJyYW5jaGVzKQpwcmludChtb3llbm5lcyk=" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
 <p>Les chaînes de caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>) peuvent aussi être indexées.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ01pYScsICdLaW0nLCAnQW5uYScsICdDaW5keScsICdMw6lhJ10KcHJpbnQobm9tc1swXVswXSkgICMgQWNjw6hzIMOgIGxhIHByZW1pw6hyZSBsZXR0cmUgZGUgVGltCnByaW50KG5vbXNbMl1bMV0pICAjIEFjY8OocyDDoGEgbGEgMsOobWUgbGV0dHJlIGRlIEtpbQpwcmludChub21zWy0xXVsyXSkgICMgQWNjw6hzIMOgIGxhIDPDqG1lIGxldHRyZSBkZSBMw6lh" data-file="bGlzdDUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La notation <code class="docutils literal notranslate"><span class="pre">[i:j]</span></code>, après le nom d’une variable qui contient une liste, permet d’extraire une sous-liste de la liste. Cette sous-liste, aussi appelée <strong>tranche</strong>, est une partie de la liste identifiée par les deux index <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code>. La sous-liste contiendra donc les éléments se trouvant entre <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j-1</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ01pYScsICdLaW0nLCAnQW5uYScsICdDaW5keScsICdMw6lhJ10KcHJpbnQobm9tc1swXVswXSkgICMgQWNjw6hzIMOgIGxhIHByZW1pw6hyZSBsZXR0cmUgZGUgVGltCnByaW50KG5vbXNbMl1bMV0pICAjIEFjY8OocyDDoCBsYSAyw6htZSBsZXR0cmUgZGUgS2ltCnByaW50KG5vbXNbLTFdWzJdKSAgIyBBY2PDqHMgw6AgbGEgM8OobWUgbGV0dHJlIGRlIEzDqWE=" data-file="bGlzdDUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La notation <code class="docutils literal notranslate"><span class="pre">[i:j]</span></code>, après le nom d’une variable qui contient une liste, permet d’extraire une sous-liste de la liste. Cette sous-liste, aussi appelée <strong>tranche</strong>, est une partie de la liste identifiée par les deux index <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code>. La sous-liste contiendra donc les éléments se trouvant entre <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j-1</span></code>.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ01pYScsICdLaW0nLCAnQW5uYScsICdDaW5keScsICdMw6lhJ10KCnByaW50KG5vbXNbOjJdKSAgICAjIMOpbMOpbWVudCAwIGV0IDEgKGxlcyAyIHByZW1pZXJzIMOpbMOpbWVudHMpCnByaW50KG5vbXNbMjo0XSkgICAjIMOpbMOpbWVudCAyIGV0IDMKcHJpbnQobm9tc1s0Ol0pICAgICMgw6lsw6ltZW50IDQgZXQgNSAodG91cyBsZXMgw6lsw6ltZW50cyDDoCBwYXJ0aXIgZGUgbCdpbmRleCA0KQ==" data-file="bGlzdDYucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p>Quel est le résultat de l’expression <code class="docutils literal notranslate"><span class="pre">'python'[:2]</span></code> ?</p>
-<p><label class="answer incorrect"><input type="checkbox"/>thon</label>
-<label class="answer incorrect"><input type="checkbox"/>y</label>
-<label class="answer incorrect"><input type="checkbox"/>p</label>
+<p><label class="answer incorrect"><input type="checkbox"/>thon</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>y</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>p</label><br/>
 <label class="answer correct"><input type="checkbox"/>py</label></p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
@@ -339,16 +340,17 @@ Une méthode (ex: <code class="docutils literal notranslate"><span class="pre">a
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p>Quel est le résultat de l’expression <code class="docutils literal notranslate"><span class="pre">'pikachu'[-3:]</span></code> ?</p>
-<p><label class="answer incorrect"><input type="checkbox"/>pik</label>
-<label class="answer correct"><input type="checkbox"/>chu</label>
-<label class="answer incorrect"><input type="checkbox"/>p</label>
+<p><label class="answer incorrect"><input type="checkbox"/>pik</label><br/>
+<label class="answer correct"><input type="checkbox"/>chu</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>p</label><br/>
 <label class="answer incorrect"><input type="checkbox"/>pika</label></p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
 </form></div></section>
 <section id="la-boucle-for">
 <h2>La boucle for<a class="headerlink" href="#la-boucle-for" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L’instruction <code class="docutils literal notranslate"><span class="pre">for</span></code> permet d’itérer sur une variable de type séquentiel (par exemple une liste) et de répéter un bloc d’instructions pour chaque valeur de la séquence.</p>
+<p>L’instruction <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> <span class="pre">...</span></code> permet <strong>d’itérer</strong> sur une variable de type séquentiel (par exemple une liste) et de répéter un bloc d’instructions pour chaque valeur de la séquence.<br/>
+<code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">valeur</span> <span class="pre">in</span> <span class="pre">liste</span></code> peut être traduit en français par <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">chaque</span> <span class="pre">valeur</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">liste</span></code> et permet donc <strong>d’itérer</strong> sur chaque valeur.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJlc2lkZW50cyA9IFsiQnVzaCIsICJDbGludG9uIiwgIkJ1c2giLCAiT2JhbWEiLCAiVHJ1bXAiXQpmb3IgbmFtZSBpbiBwcmVzaWRlbnRzOgogICAgcHJpbnQobmFtZSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans l’exemple ci-dessus, la variable <code class="docutils literal notranslate"><span class="pre">name</span></code> prendra successivement les valeurs de la liste <code class="docutils literal notranslate"><span class="pre">presidents</span></code> et la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> sera à chaque fois exécutée.</p>
 <div class="note admonition">
 <p class="admonition-title">Exercice</p>
@@ -373,11 +375,14 @@ Indice: la fonction <code class="docutils literal notranslate"><span class="pre"
 Les ranges sont utilisés pour stocker des intervales de nombres de manière plus efficace qu’une liste. Une variable de type <code class="docutils literal notranslate"><span class="pre">range</span></code> peut être créée avec la fonction <code class="docutils literal notranslate"><span class="pre">range(a,b)</span></code> qui retourne un range contenant tous les entiers de <code class="docutils literal notranslate"><span class="pre">a</span></code> à <code class="docutils literal notranslate"><span class="pre">b-1</span></code>. Une <code class="docutils literal notranslate"><span class="pre">range</span></code> peut être convertie en liste avec la fonction <code class="docutils literal notranslate"><span class="pre">liste()</span></code>.</p>
 <p>L’exemple suivant affiche le carré des nombres 1 à 19.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IHJhbmdlKDEsIDIwKSAgIyBDb250aWVudCBsZXMgbm9tYnJlcyAxIGp1c3F1J8OgIDE5CmZvciBub21icmUgaW4gbm9tYnJlczoKICAgIHByaW50KGYne25vbWJyZX1eMiA9IHtub21icmUgKiogMn0nKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple suivant dessine un polygone en utilisant une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> et une <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCm4gPSA5ICAgICAgICMgbm9tYnJlIGRlIHNvbW1ldHMKYSA9IDUwICAgICAgIyBsb25ndWV1ciBkdSBjw7R0w6kKdXAoKQoKZm9yIGkgaW4gcmFuZ2Uobik6CiAgICBmb3J3YXJkKGEpCiAgICBsZWZ0KDM2MC9uKQogICAgd3JpdGUoaSk=" data-file="cmFuZ2UyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShhLCBuKToKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIHdyaXRlKGkpCiAgICAgICAgZm9yd2FyZChhKQogICAgICAgIGxlZnQoMzYwL24pCgphID0gNTAgIyBsb25ndWV1ciBkdSBwb2x5Z29uZQpuID0gMyAjIG5vbWJyZSBkZSBzb21tZXRzCgpwb2x5Z29uZShhLCBuKQ==" data-file="cmFuZ2UyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
 <p class="admonition-title">Exercice</p>
-<p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">est_premier()</span></code> qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.<br/>
-Pour rappel, un nombre est premier quand il n’est divisible que par lui-même ou par 1.<br/>
-Les plus petits sont: 1, 2, 3, 5, 7, 11, 13, etc…</p>
+<ol class="simple">
+<li><p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">est_premier()</span></code> qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.<br/>
+Pour rappel, un nombre est premier quand il n’est divisible par aucun autre nombre (à part 1 et lui-même).<br/>
+Les plus petits sont: 2, 3, 5, 7, 11, 13, etc…</p></li>
+<li><p>Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.</p></li>
+</ol>
 </div>
 <div class="hint admonition">
 <p class="admonition-title">Solution</p>
@@ -388,9 +393,13 @@ Les plus petits sont: 1, 2, 3, 5, 7, 11, 13, etc…</p>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGVzdF9wcmVtaWVyKG4pOgogICAgZm9yIGkgaW4gcmFuZ2UoMiwgbik6ICAjIE9uIGl0w6hyZSBzdXIgY2hhcXVlIG5vbWJyZSBlbnRyZSAyIGV0IG4tMQogICAgICAgIGlmIG4gJSBpID09IDA6ICAjIFNpIG5vdHJlIGFyZ3VtZW50IGVzdCBkaXZpc2libGUgcGFyIHVuIG5vbWJyZQogICAgICAgICAgICByZXR1cm4gRmFsc2UgICMgQWxvcnMgaWwgbidlc3QgcGFzIHByZW1pZXIKICAgIHJldHVybiBUcnVlICAjIFMnaWwgbidlc3QgZGl2aXNpYmxlIHBhciBhdWN1biBub21icmUgZW50cmUgMiBldCBuLTEsIGFsb3JzIGlsIGVzdCBwcmVtaWVyCgpwcmludChlc3RfcHJlbWllcigxMykpICAjIFRydWUKcHJpbnQoZXN0X3ByZW1pZXIoOCkpICAjIEZhbHNl" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGVzdF9wcmVtaWVyKG4pOgogICAgaWYgbiA8IDI6ICAjIE5vdXMgc2F2b25zIHF1ZSB0b3V0IG5vbWJyZSBwbHVzIHBldGl0IHF1ZSAyIG5lIHBldXQgcGFzIMOqdHJlIHByZW1pZXIKICAgICAgICByZXR1cm4gRmFsc2UKICAgIGZvciBpIGluIHJhbmdlKDIsIG4pOiAgIyBPbiBpdMOocmUgc3VyIGNoYXF1ZSBub21icmUgZW50cmUgMiBldCBuLTEKICAgICAgICBpZiBuICUgaSA9PSAwOiAgIyBTaSBub3RyZSBhcmd1bWVudCBlc3QgZGl2aXNpYmxlIHBhciB1biBub21icmUKICAgICAgICAgICAgcmV0dXJuIEZhbHNlICAjIEFsb3JzIGlsIG4nZXN0IHBhcyBwcmVtaWVyCiAgICByZXR1cm4gVHJ1ZSAgIyBTJ2lsIG4nZXN0IGRpdmlzaWJsZSBwYXIgYXVjdW4gbm9tYnJlIGVudHJlIDIgZXQgbi0xLCBhbG9ycyBpbCBlc3QgcHJlbWllcgoKZm9yIG4gaW4gcmFuZ2UoMTAwMCk6CiAgICBpZiBlc3RfcHJlbWllcihuKToKICAgICAgICBwcmludChuKQ==" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmEgPSA0MApkZWYgcG90ZW5jZSgpOgogICAgZm9yd2FyZCgxMDApCiAgICBiYWNrd2FyZCg1MCkKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKDE4MCkKICAgIHJpZ2h0KDkwKQogICAgZm9yd2FyZCg0MCkKICAgIGxlZnQoNDUpCiAgICBiYWNrd2FyZCg1NikKICAgIGZvcndhcmQoNTYpCiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoNTApCiAgICByaWdodCg5MCkKICAgIGZvcndhcmQoNDApCgpkZWYgdGV0ZSgpOgogICAgZG90KDIwKQogICAgZm9yd2FyZCgyMCkKCmRlZiBicmFzMSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCiAgICBiYWNrd2FyZChhKQoKZGVmIGJyYXMyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKCmRlZiB0b3JzZSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCgpkZWYgamFtYmUxKCk6CiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoYSkKICAgIGJhY2t3YXJkKGEpCgpkZWYgamFtYmUyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKICAgIGhpZGV0dXJ0bGUoKQoKcG90ZW5jZSgpCgpkZXNzaW4gPSBbdGV0ZSwgYnJhczEsIGJyYXMyLCB0b3JzZSwgamFtYmUxLCBqYW1iZTJdICAjIFVuZSBsaXN0ZSBxdWkgY29udGllbnQgZGVzIGZvbmN0aW9ucyAhCgptb3RfYV90cm91dmVyID0gJ3BvdGlyb24nCmxldHRyZXNfdHJvdXZlZXMgPSAnJwpuID0gMAoKZm9yIGkgaW4gcmFuZ2UoMTApOgogICAgbW90X2FmZmljaGUgPSAnJwogICAgZm9yIGxldHRyZSBpbiBtb3RfYV90cm91dmVyOgogICAgICAgIHNpIGxldHRyZSBpbiBsZXR0cmVzX3Ryb3V2ZWVzOgogICAgICAgICAgICBtb3RfYWZmaWNoZSArPSBsZXR0cmUKICAgICAgICBlbHNlOgogICAgICAgICAgICBtb3RfYWZmaWNoZSArPSAnXycKCiAgICBsZXR0cmVfcHJvcG9zZWUgPSBpbnB1dChtb3RfYWZmaWNoZSArICcgIGxldHRyZTogJykKICAgIGlmIGxldHRyZV9wcm9wb3NlIGluIG1vdF9hX3Ryb3V2ZXI6CiAgICAgICAgbGV0dHJlcyArPSBsZXRyZV9wcm9wb3NlZQogICAgZWxzZToKICAgICAgICBkZXNzaW5bbl0oKQogICAgICAgIG4gPSBuICsgMQ==" data-file="Y29kZS5weQ==" data-output-max-lines="5" data-output-min-lines="5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+</section>
+<section id="le-jeu-du-pendu-optionnel">
+<h2>Le jeu du pendu (optionnel)<a class="headerlink" href="#le-jeu-du-pendu-optionnel" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le jeu du pendu consiste à trouver un mot en devinant les lettres qui le composent. Le jeu se joue traditionnellement à deux, avec un papier et un crayon, avec le dessin d’une potence, dans lequel, pour chaque erreur, un trait du bonhomme allumette est ajouté.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmEgPSA0MApkZWYgcG90ZW5jZSgpOgogICAgZm9yd2FyZCgxMDApCiAgICBiYWNrd2FyZCg1MCkKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKDE4MCkKICAgIHJpZ2h0KDkwKQogICAgZm9yd2FyZCg0MCkKICAgIGxlZnQoNDUpCiAgICBiYWNrd2FyZCg1NikKICAgIGZvcndhcmQoNTYpCiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoNTApCiAgICByaWdodCg5MCkKICAgIGZvcndhcmQoNDApCgpkZWYgdGV0ZSgpOgogICAgZG90KDIwKQogICAgZm9yd2FyZCgyMCkKCmRlZiBicmFzMSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCiAgICBiYWNrd2FyZChhKQoKZGVmIGJyYXMyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKCmRlZiB0b3JzZSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCgpkZWYgamFtYmUxKCk6CiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoYSkKICAgIGJhY2t3YXJkKGEpCgpkZWYgamFtYmUyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKICAgIGhpZGV0dXJ0bGUoKQoKIyBPbiBjb21tZW5jZSBwYXIgZGVzc2luZXIgbGEgcG90ZW5jZQpwb3RlbmNlKCkKCiMgT24gZMOpZmluaXQgbGEgbGlzdGUgcXVpIGNvbnRpZW50IGxlcyBmb25jdGlvbnMgZGUgZGVzc2luIMOgIGFwcGVsZXIgZGFucyBsJ29yZHJlCmRlc3NpbnMgPSBbdGV0ZSwgYnJhczEsIGJyYXMyLCB0b3JzZSwgamFtYmUxLCBqYW1iZTJdCgptb3RfYV90cm91dmVyID0gJ3BvdGlyb24nCmxldHRyZXNfdHJvdXZlZXMgPSAnJwpuID0gMAoKZm9yIGkgaW4gcmFuZ2UoMTApOgogICAgbW90X2FmZmljaGUgPSAnJwogICAgZm9yIGxldHRyZSBpbiBtb3RfYV90cm91dmVyOgogICAgICAgIGlmIGxldHRyZSBpbiBsZXR0cmVzX3Ryb3V2ZWVzOgogICAgICAgICAgICBtb3RfYWZmaWNoZSArPSBsZXR0cmUKICAgICAgICBlbHNlOgogICAgICAgICAgICBtb3RfYWZmaWNoZSArPSAnXycKCiAgICBsZXR0cmVfcHJvcG9zZWUgPSBpbnB1dChtb3RfYWZmaWNoZSArICcgIGxldHRyZTogJykKICAgIGlmIGxldHRyZV9wcm9wb3NlIGluIG1vdF9hX3Ryb3V2ZXI6CiAgICAgICAgbGV0dHJlcyArPSBsZXRyZV9wcm9wb3NlZQogICAgZWxzZToKICAgICAgICBkZXNzaW5zW25dKCkKICAgICAgICBuID0gbiArIDE=" data-file="Y29kZS5weQ==" data-output-max-lines="5" data-output-min-lines="5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>
 
         </article>
@@ -398,12 +407,12 @@ Les plus petits sont: 1, 2, 3, 5, 7, 11, 13, etc…</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../glossaire.html">
+          <a class="next-page" href="algo.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Glossaire</div>
+                <div class="title">Les algorithmes</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -445,6 +454,7 @@ Les plus petits sont: 1, 2, 3, 5, 7, 11, 13, etc…</p>
 <li><a class="reference internal" href="#le-type-liste">Le type liste</a></li>
 <li><a class="reference internal" href="#la-boucle-for">La boucle for</a></li>
 <li><a class="reference internal" href="#le-type-range">Le type range</a></li>
+<li><a class="reference internal" href="#le-jeu-du-pendu-optionnel">Le jeu du pendu (optionnel)</a></li>
 </ul>
 </li>
 </ul>

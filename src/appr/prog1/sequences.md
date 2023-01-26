@@ -9,7 +9,7 @@ Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il
 
 ## Le type liste
 
-Une liste est une variable de type séquentiel. C'est une séquence ordonnée d'objets quelconques.  
+Une liste est une variable de type séquentiel. C'est une séquence ordonnée d'objets quelconques (nombres, textes, fonctions, etc...).  
 Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets `[]` séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le numéro de l'élément que l'on souhaite. **Attention, le numérotation commence à 0 !**
 
 Il est aussi possible d'accéder aux éléments en partant de la fin en commençant par l'index -1 pour le dernier élément, puis -2, -3, etc.
@@ -29,12 +29,12 @@ print(f"Le {jours[-1]}, il y a eu {visiteurs[-1]} visiteurs")
 ```
 
 ```{question}
-En informatique, une liste est
+En informatique, une liste ...
 
-{v}`ordonnée`  
-{f}`jamais vide`  
-{f}`toujours hétérogène`  
-{f}`un ensemble mathématique`
+{v}`est ordonnée`  
+{f}`n'est jamais vide`  
+{f}`ne contient que des éléments du même type`  
+{f}`est un ensemble mathématique`
 ```
 
 ```{admonition} Exercice
@@ -74,8 +74,8 @@ print(nombres)
 ```
 
 ```{caution}
-**Pour aller plus loin**
-Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée que via l'intermédiaire d'un objet (ici une liste) avec un `.`. Plus de détails là-dessus l'année prochaine avec la programmation orientée objet !
+**Pour aller plus loin**  
+Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée qu'avec un `.` via l'intermédiaire d'un objet (ici une liste). Plus de détails là-dessus l'année prochaine avec la programmation orientée objet !
 ```
 
 ```{admonition} Exercice
@@ -114,7 +114,7 @@ Les chaînes de caractères (`str`) peuvent aussi être indexées.
 :file: list5.py
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 print(noms[0][0])  # Accès à la première lettre de Tim
-print(noms[2][1])  # Accès àa la 2ème lettre de Kim
+print(noms[2][1])  # Accès à la 2ème lettre de Kim
 print(noms[-1][2])  # Accès à la 3ème lettre de Léa
 ```
 
@@ -132,24 +132,25 @@ print(noms[4:])    # élément 4 et 5 (tous les éléments à partir de l'index 
 ```{question}
 Quel est le résultat de l'expression `'python'[:2]` ?
 
-{f}`thon`
-{f}`y`
-{f}`p`
-{v}`py`
+{f}`thon`  
+{f}`y`  
+{f}`p`  
+{v}`py`  
 ```
 
 ```{question}
 Quel est le résultat de l'expression `'pikachu'[-3:]` ?
 
-{f}`pik`
-{v}`chu`
-{f}`p`
-{f}`pika`
+{f}`pik`  
+{v}`chu`  
+{f}`p`  
+{f}`pika`  
 ```
 
 ## La boucle for
 
-L'instruction `for` permet d'itérer sur une variable de type séquentiel (par exemple une liste) et de répéter un bloc d'instructions pour chaque valeur de la séquence.
+L'instruction `for ... in ...` permet **d'itérer** sur une variable de type séquentiel (par exemple une liste) et de répéter un bloc d'instructions pour chaque valeur de la séquence.  
+`for valeur in liste` peut être traduit en français par `pour chaque valeur de la liste` et permet donc **d'itérer** sur chaque valeur.
 
 ```{codeplay}
 presidents = ["Bush", "Clinton", "Bush", "Obama", "Trump"]
@@ -206,21 +207,25 @@ L'exemple suivant dessine un polygone en utilisant une boucle `for` et une `rang
 :file: range2.py
 from turtle import *
 
-n = 9       # nombre de sommets
-a = 50      # longueur du côté
-up()
+def polygone(a, n):
+    for i in range(n):
+        write(i)
+        forward(a)
+        left(360/n)
 
-for i in range(n):
-    forward(a)
-    left(360/n)
-    write(i)
+a = 50 # longueur du polygone
+n = 3 # nombre de sommets
+
+polygone(a, n)
 ```
 
 ```{admonition} Exercice
 :class: note
-Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
-Pour rappel, un nombre est premier quand il n'est divisible que par lui-même ou par 1.  
-Les plus petits sont: 1, 2, 3, 5, 7, 11, 13, etc...
+1. Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
+Pour rappel, un nombre est premier quand il n'est divisible par aucun autre nombre (à part 1 et lui-même).  
+Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
+
+2. Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.
 ```
 
 `````{admonition} Solution
@@ -230,16 +235,23 @@ Les plus petits sont: 1, 2, 3, 5, 7, 11, 13, etc...
 ```{codeplay}
 :file: au_revoir.py
 def est_premier(n):
+    if n < 2:  # Nous savons que tout nombre plus petit que 2 ne peut pas être premier
+        return False
     for i in range(2, n):  # On itère sur chaque nombre entre 2 et n-1
         if n % i == 0:  # Si notre argument est divisible par un nombre
             return False  # Alors il n'est pas premier
     return True  # S'il n'est divisible par aucun nombre entre 2 et n-1, alors il est premier
 
-print(est_premier(13))  # True
-print(est_premier(8))  # False
+for n in range(1000):
+    if est_premier(n):
+        print(n)
 ```
 ````
 `````
+
+## Le jeu du pendu (optionnel)
+
+Le jeu du pendu consiste à trouver un mot en devinant les lettres qui le composent. Le jeu se joue traditionnellement à deux, avec un papier et un crayon, avec le dessin d’une potence, dans lequel, pour chaque erreur, un trait du bonhomme allumette est ajouté.
 
 ```{codeplay}
 :output_lines: 5
@@ -290,9 +302,11 @@ def jambe2():
     backward(a)
     hideturtle()
 
+# On commence par dessiner la potence
 potence()
 
-dessin = [tete, bras1, bras2, torse, jambe1, jambe2]  # Une liste qui contient des fonctions !
+# On définit la liste qui contient les fonctions de dessin à appeler dans l'ordre
+dessins = [tete, bras1, bras2, torse, jambe1, jambe2]
 
 mot_a_trouver = 'potiron'
 lettres_trouvees = ''
@@ -301,7 +315,7 @@ n = 0
 for i in range(10):
     mot_affiche = ''
     for lettre in mot_a_trouver:
-        si lettre in lettres_trouvees:
+        if lettre in lettres_trouvees:
             mot_affiche += lettre
         else:
             mot_affiche += '_'
@@ -310,6 +324,6 @@ for i in range(10):
     if lettre_propose in mot_a_trouver:
         lettres += letre_proposee
     else:
-        dessin[n]()
+        dessins[n]()
         n = n + 1
 ```
