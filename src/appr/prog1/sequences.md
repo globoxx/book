@@ -41,7 +41,7 @@ En informatique, une liste ...
 :class: note
 Créez une liste `branches` et une liste `moyennes` qui contiennent respectivement les noms de 3 branches du gymnase et les moyennes que vous y avez.  
 Affichez ensuite la moyenne pour chaque branche.  
-Que se passe-t-il si vous essayer d'accéder à un index en dehors de la liste (par exemple à l'index 3) ?
+Que se passe-t-il si vous essayez d'accéder à un index en dehors de la liste (par exemple à l'index 3) ?
 ```
 
 `````{admonition} Solution
