@@ -247,9 +247,8 @@ def polygone(a, n):
         forward(a)
         left(360/n)
 
-a = 50 # longueur du polygone
+a = 50 # longueur des arrêtes
 n = 3 # nombre de sommets
-
 polygone(a, n)
 ```
 
@@ -262,7 +261,6 @@ Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
 2. Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.
 
 ```{codeplay}
-:file: ex_24.py
 ---
 hints: |
     Rappelle toi du modulo `%` pour contrôler si un nombre est divisible par un autre !
@@ -380,7 +378,7 @@ for i in range(10):
 
 ```{admonition} Exercice du pendu
 :class: note
-Modifie le programme du pendu pour que l'ordinateur choisisse aléatoirement un mot à trouver parmi une liste de mots de ton choix.
+Modifie le programme du pendu pour que l'ordinateur choisisse aléatoirement un mot à trouver parmi une liste de mots de ton choix.  
 Plusieurs pistes de solution:
 1. Sélectionne un mot de la liste à un index aléatoire avec la fonction `randint()` du module `random`.
 2. Sélectionne un mot de la liste aléatoirement avec la fonction `choice()` du module `random`.
