@@ -259,32 +259,9 @@ while ...:
     ...
 print(f'Gagné ! (Il vous a fallu {coups} coups)')
 ```
-
 ````
 
-`````{admonition} Aide
-:class: hint
-````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
-:animate: fade-in-slide-down
-```{codeplay}
-:file: devine_mon_nombre.py
-import random
-
-nombre_mystere = ...
-nombre_propose = ...
-coups = 1
-while ...:
-    if ...:
-        print('Plus petit')
-    else:
-        print('Plus grand')
-    ...
-print(f'Gagné ! (Il vous a fallu {coups} coups)')
-```
-````
-`````
-
-`````{admonition} Solution
+<!-- `````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -305,4 +282,4 @@ while nombre_propose != nombre_mystere:
 print(f'Gagné ! (Il vous a fallu {coups} coups)')
 ```
 ````
-`````
+````` -->

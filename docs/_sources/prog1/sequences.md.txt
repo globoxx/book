@@ -37,14 +37,23 @@ En informatique, une liste ...
 {f}`est un ensemble mathématique`
 ```
 
-```{admonition} Exercice
+````{admonition} Exercice 21
 :class: note
 Créez une liste `branches` et une liste `moyennes` qui contiennent respectivement les noms de 3 branches du gymnase et les moyennes que vous y avez.  
 Affichez ensuite la moyenne pour chaque branche.  
-Que se passe-t-il si vous essayez d'accéder à un index en dehors de la liste (par exemple à l'index 3) ?
-```
 
-`````{admonition} Solution
+```{codeplay}
+:file: ex_21.py
+branches = ...
+moyennes = ...
+
+print(...)
+print(...)
+print(...)
+```
+````
+
+<!-- `````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -57,9 +66,17 @@ print(f'Moyenne de {branches[0]}: {moyennes[0]}')
 print(f'Moyenne de {branches[1]}: {moyennes[1]}')
 print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 ```
-Si vous dépassez les limites de la liste en voulant accéder à l'index 3 (4ème élément) alors que la liste ne contient que 3 éléments, vous aurez une erreur de type `index out of range` qui signifie que l'index n'est pas atteignable.
 ````
-`````
+````` -->
+
+```{question}
+Que se passe-t-il si vous essayez d'accéder à un index en dehors de la liste (par exemple à l'index 3 dans l'exercice précédent) ?
+
+{f}`ça fonctionne sans problème`  
+{v}`vous avez une erreur de type `index out of range``  
+{f}`vous avez une erreur de type `invalid literal``  
+{f}`la valeur accédée dans ce cas vaut toujours 0`
+```
 
 Pour modifier un élément d'une liste, il suffit d'utiliser le signe `=` pour mettre une nouvelle valeur à l'index voulu.  
 Pour ajouter un élément à une liste, on utilise la **méthode** `append()` ("ajouter" en français) en donnant en argument la valeur à ajouter.  
@@ -78,20 +95,30 @@ print(nombres)
 Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée qu'avec un `.` via l'intermédiaire d'un objet (ici une liste). Plus de détails là-dessus l'année prochaine avec la programmation orientée objet !
 ```
 
-```{admonition} Exercice
+````{admonition} Exercice 22
 :class: note
 Reprenez l'exercice précédent (l'exercice 21).
 1. Modifier la moyenne de l'une de vos branches
 2. Ajoutez une nouvelle branche avec sa moyenne.
 3. Affichez les nouvelles données.
-```
 
-`````{admonition} Solution
+```{codeplay}
+:file: ex_22.py
+...  # Copiez l'exercice 21 ici
+
+...  # Faites les modifications demandées
+
+print(branches)
+print(moyennes)
+```
+````
+
+<!-- `````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_25.py
 branches = ['math', 'français', 'info']
 moyennes = [5, 4, 6]
 
@@ -106,12 +133,11 @@ print(branches)
 print(moyennes)
 ```
 ````
-`````
+````` -->
 
-Les chaînes de caractères (`str`) peuvent aussi être indexées.
+Les chaînes de caractères (`str`) peuvent aussi être indexées (chaque élément correspond alors à un caractère).
 
 ```{codeplay}
-:file: list5.py
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 print(noms[0][0])  # Accès à la première lettre de Tim
 print(noms[2][1])  # Accès à la 2ème lettre de Kim
@@ -121,7 +147,6 @@ print(noms[-1][2])  # Accès à la 3ème lettre de Léa
 La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet d'extraire une sous-liste de la liste. Cette sous-liste, aussi appelée **tranche**, est une partie de la liste identifiée par les deux index `i` et `j`. La sous-liste contiendra donc les éléments se trouvant entre `i` et `j-1`.
 
 ```{codeplay}
-:file: list6.py
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 
 print(noms[:2])    # élément 0 et 1 (les 2 premiers éléments)
@@ -160,18 +185,28 @@ for name in presidents:
 
 Dans l'exemple ci-dessus, la variable `name` prendra successivement les valeurs de la liste `presidents` et la fonction `print()` sera à chaque fois exécutée.
 
-```{admonition} Exercice
+````{admonition} Exercice 23
 :class: note
 Ecrivez une fonction `calcule_moyenne()` qui prend une liste de nombres en argument et qui retourne la moyenne de ces nombres.  
 Indice: la fonction `len()` permet de calculer la longueur d'une liste.
-```
 
-`````{admonition} Solution
+```{codeplay}
+:file: ex_23.py
+def calcule_moyenne(liste):
+    ...
+
+notes = [4.5, 3, 5, 2, 6, 5.5]
+moyenne = calcule_moyenne(notes)
+print(moyenne)
+```
+````
+
+<!-- `````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_23.py
 def calcule_moyenne(liste):
     somme = 0
     for n in liste:
@@ -186,7 +221,7 @@ moyenne = calcule_moyenne(notes)
 print(moyenne)
 ```
 ````
-`````
+````` -->
 
 ## Le type range
 
@@ -204,7 +239,6 @@ for nombre in nombres:
 L'exemple suivant dessine un polygone en utilisant une boucle `for` et une `range`.
 
 ```{codeplay}
-:file: range2.py
 from turtle import *
 
 def polygone(a, n):
@@ -219,16 +253,32 @@ n = 3 # nombre de sommets
 polygone(a, n)
 ```
 
-```{admonition} Exercice
+````{admonition} Exercice 24
 :class: note
 1. Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
 Pour rappel, un nombre est premier quand il n'est divisible par aucun autre nombre (à part 1 et lui-même).  
 Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
 
 2. Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.
-```
 
-`````{admonition} Solution
+```{codeplay}
+:file: ex_24.py
+---
+hints: |
+    Rappelle toi du modulo `%` pour contrôler si un nombre est divisible par un autre !
+    ===
+    Parcours les nombres un à un et check qu'aucun d'entre-eux ne soit diviseur du nombre à tester !
+    ===
+    Si tu trouves un diviseur, return False, sinon return True !
+---
+def est_premier(n):
+    ...
+
+...  # Affichage des nombres premiers plus petits que 1000
+```
+````
+
+<!-- `````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -247,7 +297,7 @@ for n in range(1000):
         print(n)
 ```
 ````
-`````
+````` -->
 
 ## Le jeu du pendu (optionnel)
 
@@ -321,9 +371,19 @@ for i in range(10):
             mot_affiche += '_'
 
     lettre_proposee = input(mot_affiche + '  lettre: ')
-    if lettre_propose in mot_a_trouver:
+    if lettre_proposee in mot_a_trouver:
         lettres += letre_proposee
     else:
         dessins[n]()
         n = n + 1
 ```
+
+````{admonition} Exercice du pendu
+:class: note
+Modifie le programme du pendu pour que l'ordinateur choisisse aléatoirement un mot à trouver parmi une liste de mots de ton choix.
+Plusieurs pistes de solution:
+1. Sélectionne un mot de la liste à un index aléatoire avec la fonction `randint()` du module `random`.
+2. Sélectionne un mot de la liste aléatoirement avec la fonction `choice()` du module `random`.
+```
+
+Vous avez tout terminé ? Allez faire un tour sur [Modulo](https://apprendre.modulo-info.ch/prog1/grouper.html) !

@@ -280,24 +280,35 @@ Pour définir une liste, on met simplement la liste des objets que contient la l
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
 </form></div><div class="note admonition">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 21</p>
 <p>Créez une liste <code class="docutils literal notranslate"><span class="pre">branches</span></code> et une liste <code class="docutils literal notranslate"><span class="pre">moyennes</span></code> qui contiennent respectivement les noms de 3 branches du gymnase et les moyennes que vous y avez.<br/>
-Affichez ensuite la moyenne pour chaque branche.<br/>
-Que se passe-t-il si vous essayez d’accéder à un index en dehors de la liste (par exemple à l’index 3) ?</p>
+Affichez ensuite la moyenne pour chaque branche.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnJhbmNoZXMgPSAuLi4KbW95ZW5uZXMgPSAuLi4KCnByaW50KC4uLikKcHJpbnQoLi4uKQpwcmludCguLi4p" data-file="ZXhfMjEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<!-- `````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: au_revoir.py
+branches = ['math', 'français', 'info']
+moyennes = [5, 4, 6]
+
+print(f'Moyenne de {branches[0]}: {moyennes[0]}')
+print(f'Moyenne de {branches[1]}: {moyennes[1]}')
+print(f'Moyenne de {branches[2]}: {moyennes[2]}')
+```
+````
+````` -->
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Que se passe-t-il si vous essayez d’accéder à un index en dehors de la liste (par exemple à l’index 3 dans l’exercice précédent) ?</p>
+<p><label class="answer incorrect"><input type="checkbox"/>ça fonctionne sans problème</label><br/>
+<label class="answer correct"><input type="checkbox"/>vous avez une erreur de type </label>index out of range<code class="docutils literal notranslate">   <span class="pre">{f}`vous</span> <span class="pre">avez</span> <span class="pre">une</span> <span class="pre">erreur</span> <span class="pre">de</span> <span class="pre">type</span> <span class="pre">`invalid</span> <span class="pre">literal</span></code><br/>
+<label class="answer incorrect"><input type="checkbox"/>la valeur accédée dans ce cas vaut toujours 0</label></p>
 </div>
-<div class="hint admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnJhbmNoZXMgPSBbJ21hdGgnLCAnZnJhbsOnYWlzJywgJ2luZm8nXQptb3llbm5lcyA9IFs1LCA0LCA2XQoKcHJpbnQoZidNb3llbm5lIGRlIHticmFuY2hlc1swXX06IHttb3llbm5lc1swXX0nKQpwcmludChmJ01veWVubmUgZGUge2JyYW5jaGVzWzFdfToge21veWVubmVzWzFdfScpCnByaW50KGYnTW95ZW5uZSBkZSB7YnJhbmNoZXNbMl19OiB7bW95ZW5uZXNbMl19Jyk=" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Si vous dépassez les limites de la liste en voulant accéder à l’index 3 (4ème élément) alors que la liste ne contient que 3 éléments, vous aurez une erreur de type <code class="docutils literal notranslate"><span class="pre">index</span> <span class="pre">out</span> <span class="pre">of</span> <span class="pre">range</span></code> qui signifie que l’index n’est pas atteignable.</p>
-</div>
-</details></div>
-<p>Pour modifier un élément d’une liste, il suffit d’utiliser le signe <code class="docutils literal notranslate"><span class="pre">=</span></code> pour mettre une nouvelle valeur à l’index voulu.<br/>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div><p>Pour modifier un élément d’une liste, il suffit d’utiliser le signe <code class="docutils literal notranslate"><span class="pre">=</span></code> pour mettre une nouvelle valeur à l’index voulu.<br/>
 Pour ajouter un élément à une liste, on utilise la <strong>méthode</strong> <code class="docutils literal notranslate"><span class="pre">append()</span></code> (“ajouter” en français) en donnant en argument la valeur à ajouter.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IFs1LCAyLCA2LCAzLCA4XQpwcmludChub21icmVzKQpub21icmVzWzJdID0gLTUgICMgT24gbW9kaWZpZSBsZSAzw6htZSDDqWzDqW1lbnQgZGUgbGEgbGlzdGUKcHJpbnQobm9tYnJlcykKbm9tYnJlcy5hcHBlbmQoMTAwMCkgICMgT24gYWpvdXRlIHVuIMOpbMOpbWVudCDDoCBsYSBsaXN0ZQpwcmludChub21icmVzKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="admonition caution">
 <p class="admonition-title">Prudence</p>
@@ -305,28 +316,38 @@ Pour ajouter un élément à une liste, on utilise la <strong>méthode</strong> 
 Une méthode (ex: <code class="docutils literal notranslate"><span class="pre">append()</span></code>) est différente d’une fonction dans le sens où elle ne peut être appelée qu’avec un <code class="docutils literal notranslate"><span class="pre">.</span></code> via l’intermédiaire d’un objet (ici une liste). Plus de détails là-dessus l’année prochaine avec la programmation orientée objet !</p>
 </div>
 <div class="note admonition">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 22</p>
 <p>Reprenez l’exercice précédent (l’exercice 21).</p>
 <ol class="simple">
 <li><p>Modifier la moyenne de l’une de vos branches</p></li>
 <li><p>Ajoutez une nouvelle branche avec sa moyenne.</p></li>
 <li><p>Affichez les nouvelles données.</p></li>
 </ol>
-</div>
-<div class="hint admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnJhbmNoZXMgPSBbJ21hdGgnLCAnZnJhbsOnYWlzJywgJ2luZm8nXQptb3llbm5lcyA9IFs1LCA0LCA2XQoKcHJpbnQoZidNb3llbm5lIGRlIHticmFuY2hlc1swXX06IHttb3llbm5lc1swXX0nKQpwcmludChmJ01veWVubmUgZGUge2JyYW5jaGVzWzFdfToge21veWVubmVzWzFdfScpCnByaW50KGYnTW95ZW5uZSBkZSB7YnJhbmNoZXNbMl19OiB7bW95ZW5uZXNbMl19JykKCm1veWVubmVzWzBdID0gNS41ICAjIE1vZGlmaWNhdGlvbiBkZSBtYSBtb3llbm5lIGRlIG1hdGgKYnJhbmNoZXMuYXBwZW5kKCdoaXN0b2lyZScpICAjIEFqb3V0IGRlIGxhIGJyYW5jaGUgaGlzdG9pcmUKbW95ZW5uZXMuYXBwZW5kKDQuNSkgICMgQWpvdXQgZGUgbWEgbW95ZW5uZSBkJ2hpc3RvaXJlCnByaW50KGJyYW5jaGVzKQpwcmludChtb3llbm5lcyk=" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</details></div>
-<p>Les chaînes de caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>) peuvent aussi être indexées.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ01pYScsICdLaW0nLCAnQW5uYScsICdDaW5keScsICdMw6lhJ10KcHJpbnQobm9tc1swXVswXSkgICMgQWNjw6hzIMOgIGxhIHByZW1pw6hyZSBsZXR0cmUgZGUgVGltCnByaW50KG5vbXNbMl1bMV0pICAjIEFjY8OocyDDoCBsYSAyw6htZSBsZXR0cmUgZGUgS2ltCnByaW50KG5vbXNbLTFdWzJdKSAgIyBBY2PDqHMgw6AgbGEgM8OobWUgbGV0dHJlIGRlIEzDqWE=" data-file="bGlzdDUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La notation <code class="docutils literal notranslate"><span class="pre">[i:j]</span></code>, après le nom d’une variable qui contient une liste, permet d’extraire une sous-liste de la liste. Cette sous-liste, aussi appelée <strong>tranche</strong>, est une partie de la liste identifiée par les deux index <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code>. La sous-liste contiendra donc les éléments se trouvant entre <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j-1</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ01pYScsICdLaW0nLCAnQW5uYScsICdDaW5keScsICdMw6lhJ10KCnByaW50KG5vbXNbOjJdKSAgICAjIMOpbMOpbWVudCAwIGV0IDEgKGxlcyAyIHByZW1pZXJzIMOpbMOpbWVudHMpCnByaW50KG5vbXNbMjo0XSkgICAjIMOpbMOpbWVudCAyIGV0IDMKcHJpbnQobm9tc1s0Ol0pICAgICMgw6lsw6ltZW50IDQgZXQgNSAodG91cyBsZXMgw6lsw6ltZW50cyDDoCBwYXJ0aXIgZGUgbCdpbmRleCA0KQ==" data-file="bGlzdDYucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Li4uICAjIENvcGlleiBsJ2V4ZXJjaWNlIDIxIGljaQoKLi4uICAjIEZhaXRlcyBsZXMgbW9kaWZpY2F0aW9ucyBkZW1hbmTDqWVzCgpwcmludChicmFuY2hlcykKcHJpbnQobW95ZW5uZXMp" data-file="ZXhfMjIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<!-- `````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: ex_25.py
+branches = ['math', 'français', 'info']
+moyennes = [5, 4, 6]
+
+print(f'Moyenne de {branches[0]}: {moyennes[0]}')
+print(f'Moyenne de {branches[1]}: {moyennes[1]}')
+print(f'Moyenne de {branches[2]}: {moyennes[2]}')
+
+moyennes[0] = 5.5  # Modification de ma moyenne de math
+branches.append('histoire')  # Ajout de la branche histoire
+moyennes.append(4.5)  # Ajout de ma moyenne d'histoire
+print(branches)
+print(moyennes)
+```
+````
+````` -->
+<p>Les chaînes de caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>) peuvent aussi être indexées (chaque élément correspond alors à un caractère).</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ01pYScsICdLaW0nLCAnQW5uYScsICdDaW5keScsICdMw6lhJ10KcHJpbnQobm9tc1swXVswXSkgICMgQWNjw6hzIMOgIGxhIHByZW1pw6hyZSBsZXR0cmUgZGUgVGltCnByaW50KG5vbXNbMl1bMV0pICAjIEFjY8OocyDDoCBsYSAyw6htZSBsZXR0cmUgZGUgS2ltCnByaW50KG5vbXNbLTFdWzJdKSAgIyBBY2PDqHMgw6AgbGEgM8OobWUgbGV0dHJlIGRlIEzDqWE=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La notation <code class="docutils literal notranslate"><span class="pre">[i:j]</span></code>, après le nom d’une variable qui contient une liste, permet d’extraire une sous-liste de la liste. Cette sous-liste, aussi appelée <strong>tranche</strong>, est une partie de la liste identifiée par les deux index <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code>. La sous-liste contiendra donc les éléments se trouvant entre <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j-1</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ01pYScsICdLaW0nLCAnQW5uYScsICdDaW5keScsICdMw6lhJ10KCnByaW50KG5vbXNbOjJdKSAgICAjIMOpbMOpbWVudCAwIGV0IDEgKGxlcyAyIHByZW1pZXJzIMOpbMOpbWVudHMpCnByaW50KG5vbXNbMjo0XSkgICAjIMOpbMOpbWVudCAyIGV0IDMKcHJpbnQobm9tc1s0Ol0pICAgICMgw6lsw6ltZW50IDQgZXQgNSAodG91cyBsZXMgw6lsw6ltZW50cyDDoCBwYXJ0aXIgZGUgbCdpbmRleCA0KQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p>Quel est le résultat de l’expression <code class="docutils literal notranslate"><span class="pre">'python'[:2]</span></code> ?</p>
@@ -353,21 +374,31 @@ Une méthode (ex: <code class="docutils literal notranslate"><span class="pre">a
 <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">valeur</span> <span class="pre">in</span> <span class="pre">liste</span></code> peut être traduit en français par <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">chaque</span> <span class="pre">valeur</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">liste</span></code> et permet donc <strong>d’itérer</strong> sur chaque valeur.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJlc2lkZW50cyA9IFsiQnVzaCIsICJDbGludG9uIiwgIkJ1c2giLCAiT2JhbWEiLCAiVHJ1bXAiXQpmb3IgbmFtZSBpbiBwcmVzaWRlbnRzOgogICAgcHJpbnQobmFtZSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Dans l’exemple ci-dessus, la variable <code class="docutils literal notranslate"><span class="pre">name</span></code> prendra successivement les valeurs de la liste <code class="docutils literal notranslate"><span class="pre">presidents</span></code> et la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> sera à chaque fois exécutée.</p>
 <div class="note admonition">
-<p class="admonition-title">Exercice</p>
+<p class="admonition-title">Exercice 23</p>
 <p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">calcule_moyenne()</span></code> qui prend une liste de nombres en argument et qui retourne la moyenne de ces nombres.<br/>
 Indice: la fonction <code class="docutils literal notranslate"><span class="pre">len()</span></code> permet de calculer la longueur d’une liste.</p>
-</div>
-<div class="hint admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVfbW95ZW5uZShsaXN0ZSk6CiAgICBzb21tZSA9IDAKICAgIGZvciBuIGluIGxpc3RlOgogICAgICAgIHNvbW1lID0gc29tbWUgKyBuCgogICAgbG9uZ3VldXJfbGlzdGUgPSBsZW4obGlzdGUpCiAgICBtb3llbm5lID0gc29tbWUgLyBsb25ndWV1cl9saXN0ZQogICAgcmV0dXJuIG1veWVubmUKCm5vdGVzID0gWzQuNSwgMywgNSwgMiwgNiwgNS41XQptb3llbm5lID0gY2FsY3VsZV9tb3llbm5lKG5vdGVzKQpwcmludChtb3llbm5lKQ==" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</details></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVfbW95ZW5uZShsaXN0ZSk6CiAgICAuLi4KCm5vdGVzID0gWzQuNSwgMywgNSwgMiwgNiwgNS41XQptb3llbm5lID0gY2FsY3VsZV9tb3llbm5lKG5vdGVzKQpwcmludChtb3llbm5lKQ==" data-file="ZXhfMjMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<!-- `````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: ex_23.py
+def calcule_moyenne(liste):
+    somme = 0
+    for n in liste:
+        somme = somme + n
+
+    longueur_liste = len(liste)
+    moyenne = somme / longueur_liste
+    return moyenne
+
+notes = [4.5, 3, 5, 2, 6, 5.5]
+moyenne = calcule_moyenne(notes)
+print(moyenne)
+```
+````
+````` -->
 </section>
 <section id="le-type-range">
 <h2>Le type range<a class="headerlink" href="#le-type-range" title="Lien permanent vers ce titre">¶</a></h2>
@@ -375,31 +406,53 @@ Indice: la fonction <code class="docutils literal notranslate"><span class="pre"
 Les ranges sont utilisés pour stocker des intervales de nombres de manière plus efficace qu’une liste. Une variable de type <code class="docutils literal notranslate"><span class="pre">range</span></code> peut être créée avec la fonction <code class="docutils literal notranslate"><span class="pre">range(a,b)</span></code> qui retourne un range contenant tous les entiers de <code class="docutils literal notranslate"><span class="pre">a</span></code> à <code class="docutils literal notranslate"><span class="pre">b-1</span></code>. Une <code class="docutils literal notranslate"><span class="pre">range</span></code> peut être convertie en liste avec la fonction <code class="docutils literal notranslate"><span class="pre">liste()</span></code>.</p>
 <p>L’exemple suivant affiche le carré des nombres 1 à 19.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IHJhbmdlKDEsIDIwKSAgIyBDb250aWVudCBsZXMgbm9tYnJlcyAxIGp1c3F1J8OgIDE5CmZvciBub21icmUgaW4gbm9tYnJlczoKICAgIHByaW50KGYne25vbWJyZX1eMiA9IHtub21icmUgKiogMn0nKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple suivant dessine un polygone en utilisant une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> et une <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShhLCBuKToKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIHdyaXRlKGkpCiAgICAgICAgZm9yd2FyZChhKQogICAgICAgIGxlZnQoMzYwL24pCgphID0gNTAgIyBsb25ndWV1ciBkdSBwb2x5Z29uZQpuID0gMyAjIG5vbWJyZSBkZSBzb21tZXRzCgpwb2x5Z29uZShhLCBuKQ==" data-file="cmFuZ2UyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
-<p class="admonition-title">Exercice</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShhLCBuKToKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIHdyaXRlKGkpCiAgICAgICAgZm9yd2FyZChhKQogICAgICAgIGxlZnQoMzYwL24pCgphID0gNTAgIyBsb25ndWV1ciBkdSBwb2x5Z29uZQpuID0gMyAjIG5vbWJyZSBkZSBzb21tZXRzCgpwb2x5Z29uZShhLCBuKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice 24</p>
 <ol class="simple">
 <li><p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">est_premier()</span></code> qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.<br/>
 Pour rappel, un nombre est premier quand il n’est divisible par aucun autre nombre (à part 1 et lui-même).<br/>
 Les plus petits sont: 2, 3, 5, 7, 11, 13, etc…</p></li>
 <li><p>Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.</p></li>
 </ol>
-</div>
-<div class="hint admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGVzdF9wcmVtaWVyKG4pOgogICAgaWYgbiA8IDI6ICAjIE5vdXMgc2F2b25zIHF1ZSB0b3V0IG5vbWJyZSBwbHVzIHBldGl0IHF1ZSAyIG5lIHBldXQgcGFzIMOqdHJlIHByZW1pZXIKICAgICAgICByZXR1cm4gRmFsc2UKICAgIGZvciBpIGluIHJhbmdlKDIsIG4pOiAgIyBPbiBpdMOocmUgc3VyIGNoYXF1ZSBub21icmUgZW50cmUgMiBldCBuLTEKICAgICAgICBpZiBuICUgaSA9PSAwOiAgIyBTaSBub3RyZSBhcmd1bWVudCBlc3QgZGl2aXNpYmxlIHBhciB1biBub21icmUKICAgICAgICAgICAgcmV0dXJuIEZhbHNlICAjIEFsb3JzIGlsIG4nZXN0IHBhcyBwcmVtaWVyCiAgICByZXR1cm4gVHJ1ZSAgIyBTJ2lsIG4nZXN0IGRpdmlzaWJsZSBwYXIgYXVjdW4gbm9tYnJlIGVudHJlIDIgZXQgbi0xLCBhbG9ycyBpbCBlc3QgcHJlbWllcgoKZm9yIG4gaW4gcmFuZ2UoMTAwMCk6CiAgICBpZiBlc3RfcHJlbWllcihuKToKICAgICAgICBwcmludChuKQ==" data-file="YXVfcmV2b2lyLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</details></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-afterword="ICAgIFNpIHR1IHRyb3V2ZXMgdW4gZGl2aXNldXIsIHJldHVybiBGYWxzZSwgc2lub24gcmV0dXJuIFRydWUgIQotLS0KZGVmIGVzdF9wcmVtaWVyKG4pOgogICAgLi4uCgouLi4gICMgQWZmaWNoYWdlIGRlcyBub21icmVzIHByZW1pZXJzIHBsdXMgcGV0aXRzIHF1ZSAxMDAw" data-code="ICAgIFBhcmNvdXJzIGxlcyBub21icmVzIHVuIMOgIHVuIGV0IGNoZWNrIHF1J2F1Y3VuIGQnZW50cmUtZXV4IG5lIHNvaXQgZGl2aXNldXIgZHUgbm9tYnJlIMOgIHRlc3RlciAh" data-file="ZXhfMjQucHk=" data-prelude="LS0tCmhpbnRzOiB8CiAgICBSYXBwZWxsZSB0b2kgZHUgbW9kdWxvIGAlYCBwb3VyIGNvbnRyw7RsZXIgc2kgdW4gbm9tYnJlIGVzdCBkaXZpc2libGUgcGFyIHVuIGF1dHJlICE=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<!-- `````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: au_revoir.py
+def est_premier(n):
+    if n < 2:  # Nous savons que tout nombre plus petit que 2 ne peut pas être premier
+        return False
+    for i in range(2, n):  # On itère sur chaque nombre entre 2 et n-1
+        if n % i == 0:  # Si notre argument est divisible par un nombre
+            return False  # Alors il n'est pas premier
+    return True  # S'il n'est divisible par aucun nombre entre 2 et n-1, alors il est premier
+
+for n in range(1000):
+    if est_premier(n):
+        print(n)
+```
+````
+````` -->
 </section>
 <section id="le-jeu-du-pendu-optionnel">
 <h2>Le jeu du pendu (optionnel)<a class="headerlink" href="#le-jeu-du-pendu-optionnel" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le jeu du pendu consiste à trouver un mot en devinant les lettres qui le composent. Le jeu se joue traditionnellement à deux, avec un papier et un crayon, avec le dessin d’une potence, dans lequel, pour chaque erreur, un trait du bonhomme allumette est ajouté.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmEgPSA0MApkZWYgcG90ZW5jZSgpOgogICAgZm9yd2FyZCgxMDApCiAgICBiYWNrd2FyZCg1MCkKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKDE4MCkKICAgIHJpZ2h0KDkwKQogICAgZm9yd2FyZCg0MCkKICAgIGxlZnQoNDUpCiAgICBiYWNrd2FyZCg1NikKICAgIGZvcndhcmQoNTYpCiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoNTApCiAgICByaWdodCg5MCkKICAgIGZvcndhcmQoNDApCgpkZWYgdGV0ZSgpOgogICAgZG90KDIwKQogICAgZm9yd2FyZCgyMCkKCmRlZiBicmFzMSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCiAgICBiYWNrd2FyZChhKQoKZGVmIGJyYXMyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKCmRlZiB0b3JzZSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCgpkZWYgamFtYmUxKCk6CiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoYSkKICAgIGJhY2t3YXJkKGEpCgpkZWYgamFtYmUyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKICAgIGhpZGV0dXJ0bGUoKQoKIyBPbiBjb21tZW5jZSBwYXIgZGVzc2luZXIgbGEgcG90ZW5jZQpwb3RlbmNlKCkKCiMgT24gZMOpZmluaXQgbGEgbGlzdGUgcXVpIGNvbnRpZW50IGxlcyBmb25jdGlvbnMgZGUgZGVzc2luIMOgIGFwcGVsZXIgZGFucyBsJ29yZHJlCmRlc3NpbnMgPSBbdGV0ZSwgYnJhczEsIGJyYXMyLCB0b3JzZSwgamFtYmUxLCBqYW1iZTJdCgptb3RfYV90cm91dmVyID0gJ3BvdGlyb24nCmxldHRyZXNfdHJvdXZlZXMgPSAnJwpuID0gMAoKZm9yIGkgaW4gcmFuZ2UoMTApOgogICAgbW90X2FmZmljaGUgPSAnJwogICAgZm9yIGxldHRyZSBpbiBtb3RfYV90cm91dmVyOgogICAgICAgIGlmIGxldHRyZSBpbiBsZXR0cmVzX3Ryb3V2ZWVzOgogICAgICAgICAgICBtb3RfYWZmaWNoZSArPSBsZXR0cmUKICAgICAgICBlbHNlOgogICAgICAgICAgICBtb3RfYWZmaWNoZSArPSAnXycKCiAgICBsZXR0cmVfcHJvcG9zZWUgPSBpbnB1dChtb3RfYWZmaWNoZSArICcgIGxldHRyZTogJykKICAgIGlmIGxldHRyZV9wcm9wb3NlIGluIG1vdF9hX3Ryb3V2ZXI6CiAgICAgICAgbGV0dHJlcyArPSBsZXRyZV9wcm9wb3NlZQogICAgZWxzZToKICAgICAgICBkZXNzaW5zW25dKCkKICAgICAgICBuID0gbiArIDE=" data-file="Y29kZS5weQ==" data-output-max-lines="5" data-output-min-lines="5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmEgPSA0MApkZWYgcG90ZW5jZSgpOgogICAgZm9yd2FyZCgxMDApCiAgICBiYWNrd2FyZCg1MCkKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKDE4MCkKICAgIHJpZ2h0KDkwKQogICAgZm9yd2FyZCg0MCkKICAgIGxlZnQoNDUpCiAgICBiYWNrd2FyZCg1NikKICAgIGZvcndhcmQoNTYpCiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoNTApCiAgICByaWdodCg5MCkKICAgIGZvcndhcmQoNDApCgpkZWYgdGV0ZSgpOgogICAgZG90KDIwKQogICAgZm9yd2FyZCgyMCkKCmRlZiBicmFzMSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCiAgICBiYWNrd2FyZChhKQoKZGVmIGJyYXMyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKCmRlZiB0b3JzZSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCgpkZWYgamFtYmUxKCk6CiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoYSkKICAgIGJhY2t3YXJkKGEpCgpkZWYgamFtYmUyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKICAgIGhpZGV0dXJ0bGUoKQoKIyBPbiBjb21tZW5jZSBwYXIgZGVzc2luZXIgbGEgcG90ZW5jZQpwb3RlbmNlKCkKCiMgT24gZMOpZmluaXQgbGEgbGlzdGUgcXVpIGNvbnRpZW50IGxlcyBmb25jdGlvbnMgZGUgZGVzc2luIMOgIGFwcGVsZXIgZGFucyBsJ29yZHJlCmRlc3NpbnMgPSBbdGV0ZSwgYnJhczEsIGJyYXMyLCB0b3JzZSwgamFtYmUxLCBqYW1iZTJdCgptb3RfYV90cm91dmVyID0gJ3BvdGlyb24nCmxldHRyZXNfdHJvdXZlZXMgPSAnJwpuID0gMAoKZm9yIGkgaW4gcmFuZ2UoMTApOgogICAgbW90X2FmZmljaGUgPSAnJwogICAgZm9yIGxldHRyZSBpbiBtb3RfYV90cm91dmVyOgogICAgICAgIGlmIGxldHRyZSBpbiBsZXR0cmVzX3Ryb3V2ZWVzOgogICAgICAgICAgICBtb3RfYWZmaWNoZSArPSBsZXR0cmUKICAgICAgICBlbHNlOgogICAgICAgICAgICBtb3RfYWZmaWNoZSArPSAnXycKCiAgICBsZXR0cmVfcHJvcG9zZWUgPSBpbnB1dChtb3RfYWZmaWNoZSArICcgIGxldHRyZTogJykKICAgIGlmIGxldHRyZV9wcm9wb3NlZSBpbiBtb3RfYV90cm91dmVyOgogICAgICAgIGxldHRyZXMgKz0gbGV0cmVfcHJvcG9zZWUKICAgIGVsc2U6CiAgICAgICAgZGVzc2luc1tuXSgpCiAgICAgICAgbiA9IG4gKyAx" data-file="Y29kZS5weQ==" data-output-max-lines="5" data-output-min-lines="5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice du pendu</p>
+<p>Modifie le programme du pendu pour que l’ordinateur choisisse aléatoirement un mot à trouver parmi une liste de mots de ton choix.
+Plusieurs pistes de solution:</p>
+<ol class="simple">
+<li><p>Sélectionne un mot de la liste à un index aléatoire avec la fonction <code class="docutils literal notranslate"><span class="pre">randint()</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>.</p></li>
+<li><p>Sélectionne un mot de la liste aléatoirement avec la fonction <code class="docutils literal notranslate"><span class="pre">choice()</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Vous avez tout terminé ? Allez faire un tour sur [Modulo](https://apprendre.modulo-info.ch/prog1/grouper.html) !
+</pre></div>
+</div>
+</div>
+</section>
 </section>
 
         </article>
