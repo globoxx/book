@@ -243,6 +243,23 @@ Plus petit
 Devine mon nombre: 38
 Gagné ! (Il vous a fallu 6 coups)
 ```
+
+```{codeplay}
+:file: devine_mon_nombre.py
+import random
+
+nombre_mystere = ...
+nombre_propose = ...
+coups = 1
+while ...:
+    if ...:
+        print('Plus petit')
+    else:
+        print('Plus grand')
+    ...
+print(f'Gagné ! (Il vous a fallu {coups} coups)')
+```
+
 ````
 
 `````{admonition} Aide
