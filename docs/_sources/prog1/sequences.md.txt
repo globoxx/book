@@ -37,7 +37,7 @@ En informatique, une liste ...
 {f}`est un ensemble mathématique`
 ```
 
-````{admonition} Exercice 21
+````{admonition} Exercice 21 - Listes de branches
 :class: note
 Créez une liste `branches` et une liste `moyennes` qui contiennent respectivement les noms de 3 branches du gymnase et les moyennes que vous y avez.  
 Affichez ensuite la moyenne pour chaque branche.  
@@ -95,7 +95,7 @@ print(nombres)
 Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée qu'avec un `.` via l'intermédiaire d'un objet (ici une liste). Plus de détails là-dessus l'année prochaine avec la programmation orientée objet !
 ```
 
-````{admonition} Exercice 22
+````{admonition} Exercice 22 - Modifications de listes
 :class: note
 Reprenez l'exercice précédent (l'exercice 21).
 1. Modifier la moyenne de l'une de vos branches
@@ -185,7 +185,7 @@ for name in presidents:
 
 Dans l'exemple ci-dessus, la variable `name` prendra successivement les valeurs de la liste `presidents` et la fonction `print()` sera à chaque fois exécutée.
 
-````{admonition} Exercice 23
+````{admonition} Exercice 23 - Calcul de moyenne
 :class: note
 Ecrivez une fonction `calcule_moyenne()` qui prend une liste de nombres en argument et qui retourne la moyenne de ces nombres.  
 Indice: la fonction `len()` permet de calculer la longueur d'une liste.
@@ -253,7 +253,7 @@ n = 3 # nombre de sommets
 polygone(a, n)
 ```
 
-````{admonition} Exercice 24
+````{admonition} Exercice 24 - Nombres premiers
 :class: note
 1. Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
 Pour rappel, un nombre est premier quand il n'est divisible par aucun autre nombre (à part 1 et lui-même).  
@@ -262,6 +262,7 @@ Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
 2. Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.
 
 ```{codeplay}
+:file: ex_24.py
 ---
 hints: |
     Rappelle toi du modulo `%` pour contrôler si un nombre est divisible par un autre !
@@ -274,36 +275,6 @@ def est_premier(n):
     ...
 
 ...  # Affichage des nombres premiers plus petits que 1000
-```
-````
-
-````{admonition} Exercice 24
-:class: note
-1. Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
-Pour rappel, un nombre est premier quand il n'est divisible par aucun autre nombre (à part 1 et lui-même).  
-Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
-
-2. Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.
-
-```{codeplay}
----
-hints: |
-    Rappelle toi de l'opérateur `**`!
-    ===
-    Toujours pas?
----
-def test(condition, msg_correct, msg_erreur):
-    print('Test ---------------------------------------')
-    if condition:
-        print(msg_correct)
-    else:
-        print(msg_erreur)
-    print('--------------------------------------------')
-===
-def puissance(n, m):
-    ...
-===
-test(puissance(2, 3) == 8, "Yes tout à fait correct !", "Oups, ton implémentation est incorrecte.")
 ```
 ````
 
