@@ -89,7 +89,7 @@ html_theme = 'furo'
 html_show_copyright = False
 html_show_sphinx = False
 html_show_copyright = False
-html_favicon = '../static/modulo-icon.ico'
+html_favicon = '../static/gymlab-icon.ico'
 html_title = 'Travaux pratiques'
 html_theme_options = {
     "light_logo": "modulo-logo-light.svg",
