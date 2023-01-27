@@ -268,12 +268,15 @@ hints: |
     Rappelle toi du modulo `%` pour contrôler si un nombre est divisible par un autre !
     ===
     Parcours les nombres un à un et check qu'aucun d'entre-eux ne soit diviseur du nombre à tester !
+    ===
     Si tu trouves un diviseur, return False, sinon return True !
 ---
+===
 def est_premier(n):
     ...
 
 ...  # Affichage des nombres premiers plus petits que 1000
+===
 ```
 ````
 
