@@ -32,7 +32,6 @@ h) rewr
 ```
 
 ````{admonition} Solution
-:class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 a) Chaîne de caractères (str)  
@@ -108,7 +107,6 @@ Lancez votre programme. Qu’observez-vous ?
 ```
 
 ````{admonition} Solution
-:class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 Tous ces noms de variables sont interdits et Python vous le fera savoir ! 😡  
@@ -150,7 +148,6 @@ Imprimez la nouvelle valeur de `a` à l’écran.
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -183,7 +180,6 @@ print(x, y)		print(x, y)		print(x, y)
 ````
 
 ````{admonition} Solution
-:class: hint
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 a) 3, 3  
@@ -225,7 +221,6 @@ Utilisez des variables pour éviter d’avoir à écrire plusieurs fois les mêm
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}

@@ -26,7 +26,6 @@ Sauvegardez le fichier exercice1.py dans votre dossier personnel.
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -57,7 +56,6 @@ Enlevez les guillemets autour de "bonjour". Qu’est-ce qui se passe ?
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 Le programme n’est plus compris par la machine car si "bonjour" était un texte pouvant être affiché sans problème, `bonjour` désigne une variable ayant pour nom bonjour.  
@@ -102,7 +100,6 @@ Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ay
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -123,13 +120,3 @@ Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordi
 ````
 `````
 
-```{question}
-Un programme informatique est
-
-{f}`une instruction de séquence`  
-{v}`une séquence d'instructions`  
-{f}`un algorithme`  
-{f}`une recette de cuisine`
-===
-Un algorithme est la description générale des étapes de résolution d'un problème. Il peut être traduit en un programme informatique. 
-```

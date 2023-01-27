@@ -63,7 +63,6 @@ Ecrivez la fonction maximum(a, b) qui prend 2 nombres en argument et retourne le
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -116,7 +115,6 @@ Match nul !
 ````
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -158,7 +156,6 @@ Modifier le programme ci-dessus pour qu’il imprime toutes les puissances de 10
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -197,7 +194,6 @@ Très bien, merci de demander !
 ````
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -292,7 +288,6 @@ print(f'Gagné ! (Il vous a fallu {coups} coups)')
 ````
 
 <!-- `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}

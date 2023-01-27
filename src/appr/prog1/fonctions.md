@@ -57,7 +57,6 @@ Ecrivez un programme qui calcule 3.5 à la puissance 5 et qui affiche le résult
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -89,7 +88,6 @@ Ecrivez un programme calculant le sinus de 1 radian et affichant le résultat à
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -122,7 +120,6 @@ Ecrivez un programme demandant d’abord le nom, puis le prénom de l’utilisat
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -150,7 +147,6 @@ Ecrivez un programme qui demande d’entrer un nombre et affiche le carré de ce
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -183,7 +179,6 @@ La surface d’un cercle est égale à pi fois son rayon au carré.)
 ````
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -203,7 +198,6 @@ Reprenez l’exercice Turtle du chapitre précédent mais permettez à l’utili
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}

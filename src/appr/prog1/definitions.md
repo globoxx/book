@@ -58,7 +58,6 @@ Utilisez cette fonction pour calculer et afficher le carré des nombres 6, -5 et
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -97,7 +96,6 @@ Faites en sorte que la fonction utilise ce nouvel argument dans son message de b
 ```
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -139,7 +137,6 @@ L'IMC n'est q'un indicateur et ne permet absolument pas, à lui seul, de déterm
 ````
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
@@ -169,7 +166,6 @@ Il est temps d’améliorer notre code permettant de dessiner une maison grâce 
 ````
 
 `````{admonition} Solution
-:class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
