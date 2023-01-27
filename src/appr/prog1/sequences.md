@@ -264,9 +264,11 @@ Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
 ```{codeplay}
 ---
 hints: |
-    Rappelle toi de l'opérateur `**`!
+    Rappelle toi du modulo `%` pour contrôler si un nombre est divisible par un autre !
     ===
-    Toujours pas?
+    Parcours les nombres un à un et vérifie qu'aucun ne soit diviseur du nombre à tester !
+    ===
+    Si tu trouves un diviseur, return False, sinon return True !
 ---
 def est_premier(n):
     ...
