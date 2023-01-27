@@ -215,14 +215,44 @@ Cela signifie que "Salut" et "salut" ne sont pas égaux lors d'une comparaison (
 ````
 `````
 
+## Le module random
+
+Le module `random` contient tout plein de fonctions permettant d'ajouter de l'aléatoire à nos programmes.  
 La fonction `randint(min, max)` du module `random` permet de **tirer un nombre entier aléatoire** entre `min` et `max` (compris).  
-Voici un exemple où le programme tire un nombre aléatoire entre 1 et 99.
+Voici un exemple où le programme tire un nombre aléatoire entre 1 et 100.
 
 ```{codeplay}
 import random
 
-n = random.randint(1, 99)
+n = random.randint(1, 100)
 print(n)
+```
+
+Il est aussi possible d'afficher des objets de taille aléatoire à des emplacements aléatoires.
+
+```{codeplay}
+from turtle import *
+from random import *
+up()
+
+i = 0
+while i < 20:
+    x = randint(-250, 250)  # Position aléatoire sur l'axe x
+    y = randint(-150, 150)  # Position aléatoire sur l'axe y
+    d = randint(1, 5)  # Diamètre aléatoire entre 1 et 5
+    goto(x, y)
+    dot(d*10, 'blue')
+    write(d, align='center')
+    i = i + 1
+```
+
+```{question}
+En Python, `random` est
+
+{v}`un module`  
+{f}`une condition`  
+{f}`une variable aléatoire`  
+{f}`un mot-clé`
 ```
 
 ````{admonition} Exercice 20 - Devine mon nombre !
@@ -269,7 +299,7 @@ print(f'Gagné ! (Il vous a fallu {coups} coups)')
 :file: ex_20.py
 import random
 
-nombre_mystere = np.randint(1, 50)
+nombre_mystere = random.randint(1, 50)
 nombre_propose = int(input('Devine mon nombre: '))
 coups = 1
 while nombre_propose != nombre_mystere:

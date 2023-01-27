@@ -177,13 +177,26 @@ Quel est le résultat de l'expression `'pikachu'[-3:]` ?
 L'instruction `for ... in ...` permet **d'itérer** sur une variable de type séquentiel (par exemple une liste) et de répéter un bloc d'instructions pour chaque valeur de la séquence.  
 `for valeur in liste` peut être traduit en français par `pour chaque valeur de la liste` et permet donc **d'itérer** sur chaque valeur.
 
+Dans l'exemple ci-dessous, la variable `name` prendra successivement les valeurs de la liste `presidents` et la fonction `print()` sera à chaque fois exécutée.
+
 ```{codeplay}
 presidents = ["Bush", "Clinton", "Bush", "Obama", "Trump"]
 for name in presidents:
     print(name)
 ```
 
-Dans l'exemple ci-dessus, la variable `name` prendra successivement les valeurs de la liste `presidents` et la fonction `print()` sera à chaque fois exécutée.
+L'exemple suivant montre comment **itérer** sur une liste de couleurs.
+
+```{codeplay}
+from turtle import *
+up()
+
+backward(200)
+for couleur in ['yellow', 'cyan', 'orange', 'pink', 'lime']:
+    dot(80, couleur)
+    write(couleur, align='center')
+    forward(80)
+```
 
 ````{admonition} Exercice 23 - Calcul de moyenne
 :class: note
@@ -226,7 +239,11 @@ print(moyenne)
 ## Le type range
 
 Une `range` ("intervale" en français) est un autre exemple de variable de type séquentiel.  
-Les ranges sont utilisés pour stocker des intervales de nombres de manière plus efficace qu'une liste. Une variable de type `range` peut être créée avec la fonction `range(a,b)` qui retourne un range contenant tous les entiers de `a` à `b-1`. Une `range` peut être convertie en liste avec la fonction `liste()`.
+Les ranges sont utilisés pour stocker des intervales de nombres entiers de manière plus efficace qu'une liste. Une variable de type `range` peut être créée avec la fonction `range(start, stop, step)` qui retourne un interval semi-fermé `[start, stop[` avec un incrément de `step`.
+
+- `start` est la valeur de départ (vaut 0 si pas indiqué),
+- `stop` est la valeur finale, mais sans l'inclure,
+- `step` est l'incrément (vaut 1 si pas indiqué).
 
 L'exemple suivant affiche le carré des nombres 1 à 19.
 
@@ -252,6 +269,31 @@ n = 3 # nombre de sommets
 polygone(a, n)
 ```
 
+En utilisant l'argument `step`, on peut avoir l'intervale [-50, 200[ avec un incrément de 25.
+
+```{codeplay}
+from turtle import *
+up()
+
+start = -250
+stop = 250
+step = 50
+
+for x in range(start, stop, step):
+    goto(x, 0)
+    write(x, align='center')
+```
+
+En imbriquant 2 boucles `for`, il est possible de construire toutes les tables de multiplications (jusqu'à 9 dans l'exemple).
+
+```{codeplay}
+for i in range(1, 9):
+    print(f'Table de {i}')
+    for j in range(1, 9):
+        print(f'{i}*{j} = {i*j}')
+    print()  # Ajout d'une ligne vide
+```
+
 ````{admonition} Exercice 24 - Nombres premiers
 :class: note
 1. Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
@@ -269,7 +311,6 @@ hints: |
     ===
     Si tu trouves un diviseur, return False, sinon return True !
 ---
-:file: ex_24.py
 def est_premier(n):
     ...
 

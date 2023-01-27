@@ -395,9 +395,24 @@ Très bien, merci de demander !
 Cela signifie que “Salut” et “salut” ne sont pas égaux lors d’une comparaison (<code class="docutils literal notranslate"><span class="pre">==</span></code>).</p>
 </div>
 </details></div>
-<p>La fonction <code class="docutils literal notranslate"><span class="pre">randint(min,</span> <span class="pre">max)</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet de <strong>tirer un nombre entier aléatoire</strong> entre <code class="docutils literal notranslate"><span class="pre">min</span></code> et <code class="docutils literal notranslate"><span class="pre">max</span></code> (compris).<br/>
-Voici un exemple où le programme tire un nombre aléatoire entre 1 et 99.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHJhbmRvbQoKbiA9IHJhbmRvbS5yYW5kaW50KDEsIDk5KQpwcmludChuKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+</section>
+<section id="le-module-random">
+<h2>Le module random<a class="headerlink" href="#le-module-random" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le module <code class="docutils literal notranslate"><span class="pre">random</span></code> contient tout plein de fonctions permettant d’ajouter de l’aléatoire à nos programmes.<br/>
+La fonction <code class="docutils literal notranslate"><span class="pre">randint(min,</span> <span class="pre">max)</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet de <strong>tirer un nombre entier aléatoire</strong> entre <code class="docutils literal notranslate"><span class="pre">min</span></code> et <code class="docutils literal notranslate"><span class="pre">max</span></code> (compris).<br/>
+Voici un exemple où le programme tire un nombre aléatoire entre 1 et 100.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHJhbmRvbQoKbiA9IHJhbmRvbS5yYW5kaW50KDEsIDEwMCkKcHJpbnQobik=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Il est aussi possible d’afficher des objets de taille aléatoire à des emplacements aléatoires.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKdXAoKQoKaSA9IDAKd2hpbGUgaSA8IDIwOgogICAgeCA9IHJhbmRpbnQoLTI1MCwgMjUwKSAgIyBQb3NpdGlvbiBhbMOpYXRvaXJlIHN1ciBsJ2F4ZSB4CiAgICB5ID0gcmFuZGludCgtMTUwLCAxNTApICAjIFBvc2l0aW9uIGFsw6lhdG9pcmUgc3VyIGwnYXhlIHkKICAgIGQgPSByYW5kaW50KDEsIDUpICAjIERpYW3DqHRyZSBhbMOpYXRvaXJlIGVudHJlIDEgZXQgNQogICAgZ290byh4LCB5KQogICAgZG90KGQqMTAsICdibHVlJykKICAgIHdyaXRlKGQsIGFsaWduPSdjZW50ZXInKQogICAgaSA9IGkgKyAx" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>En Python, <code class="docutils literal notranslate"><span class="pre">random</span></code> est</p>
+<p><label class="answer correct"><input type="checkbox"/>un module</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une condition</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une variable aléatoire</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>un mot-clé</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div><div class="note admonition">
 <p class="admonition-title">Exercice 20 - Devine mon nombre !</p>
 <p>Ecrivez un programme qui permet de jouer à “Devine mon nombre”:</p>
 <ol class="simple">
@@ -425,7 +440,7 @@ Gagné ! (Il vous a fallu 6 coups)
 :file: ex_20.py
 import random
 
-nombre_mystere = np.randint(1, 50)
+nombre_mystere = random.randint(1, 50)
 nombre_propose = int(input('Devine mon nombre: '))
 coups = 1
 while nombre_propose != nombre_mystere:
@@ -493,6 +508,7 @@ print(f'Gagné ! (Il vous a fallu {coups} coups)')
 <li><a class="reference internal" href="#">Les structures conditionnelles</a><ul>
 <li><a class="reference internal" href="#linstruction-if">L’instruction if</a></li>
 <li><a class="reference internal" href="#linstruction-while">L’instruction while</a></li>
+<li><a class="reference internal" href="#le-module-random">Le module random</a></li>
 </ul>
 </li>
 </ul>
