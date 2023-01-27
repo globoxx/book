@@ -90,10 +90,13 @@ nombres.append(1000)  # On ajoute un élément à la liste
 print(nombres)
 ```
 
-```{caution} dasd
-**Pour aller plus loin**  
+````{admonition} Pour aller plus loin
+:class: hint
+```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
 Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée qu'avec un `.` via l'intermédiaire d'un objet (ici une liste). Plus de détails là-dessus l'année prochaine avec la programmation orientée objet !
 ```
+````
 
 ````{admonition} Exercice 22 - Modifications de listes
 :class: note
