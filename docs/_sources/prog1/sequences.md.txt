@@ -73,8 +73,8 @@ print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 Que se passe-t-il si vous essayez d'accéder à un index en dehors de la liste (par exemple à l'index 3 dans l'exercice précédent) ?
 
 {f}`ça fonctionne sans problème`  
-{v}`vous avez une erreur de type `index out of range``  
-{f}`vous avez une erreur de type `invalid literal``  
+{v}`vous avez une erreur de type "index out of range"`  
+{f}`vous avez une erreur de type "invalid literal"`  
 {f}`la valeur accédée dans ce cas vaut toujours 0`
 ```
 
@@ -268,7 +268,6 @@ hints: |
     Rappelle toi du modulo `%` pour contrôler si un nombre est divisible par un autre !
     ===
     Parcours les nombres un à un et check qu'aucun d'entre-eux ne soit diviseur du nombre à tester !
-    ===
     Si tu trouves un diviseur, return False, sinon return True !
 ---
 def est_premier(n):
@@ -378,7 +377,7 @@ for i in range(10):
         n = n + 1
 ```
 
-````{admonition} Exercice du pendu
+```{admonition} Exercice du pendu
 :class: note
 Modifie le programme du pendu pour que l'ordinateur choisisse aléatoirement un mot à trouver parmi une liste de mots de ton choix.
 Plusieurs pistes de solution:

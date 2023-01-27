@@ -225,7 +225,7 @@ n = random.randint(1, 99)
 print(n)
 ```
 
-````{admonition} Exercice
+````{admonition} Exercice 20 - Devine mon nombre !
 :class: note
 Ecrivez un programme qui permet de jouer à "Devine mon nombre":
 1. Laissez le programme tirer un nombre aléatoire entre 1 et 50.
@@ -245,7 +245,7 @@ Gagné ! (Il vous a fallu 6 coups)
 ```
 
 ```{codeplay}
-:file: devine_mon_nombre.py
+:file: ex_20.py
 import random
 
 nombre_mystere = ...
@@ -266,7 +266,7 @@ print(f'Gagné ! (Il vous a fallu {coups} coups)')
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: devine_mon_nombre.py
+:file: ex_20.py
 import random
 
 nombre_mystere = np.randint(1, 50)
