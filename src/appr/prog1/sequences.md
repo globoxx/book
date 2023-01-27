@@ -277,6 +277,36 @@ def est_premier(n):
 ```
 ````
 
+````{admonition} Exercice 24
+:class: note
+1. Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
+Pour rappel, un nombre est premier quand il n'est divisible par aucun autre nombre (à part 1 et lui-même).  
+Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
+
+2. Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.
+
+```{codeplay}
+---
+hints: |
+    Rappelle toi de l'opérateur `**`!
+    ===
+    Toujours pas?
+---
+def test(condition, msg_correct, msg_erreur):
+    print('Test ---------------------------------------')
+    if condition:
+        print(msg_correct)
+    else:
+        print(msg_erreur)
+    print('--------------------------------------------')
+===
+def puissance(n, m):
+    ...
+===
+test(puissance(2, 3) == 8, "Yes tout à fait correct !", "Oups, ton implémentation est incorrecte.")
+```
+````
+
 <!-- `````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
