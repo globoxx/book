@@ -265,48 +265,16 @@ Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
 :file: ex_24.py
 ---
 hints: |
-    Rappelle toi du modulo `%` pour contrôler si un nombre est divisible par un autre !
+    Rappelle toi du modulo (%) pour contrôler si un nombre est divisible par un autre !
     ===
     Parcours les nombres un à un et check qu'aucun d'entre-eux ne soit diviseur du nombre à tester !
     ===
     Si tu trouves un diviseur, return False, sinon return True !
 ---
-===
 def est_premier(n):
     ...
 
 ...  # Affichage des nombres premiers plus petits que 1000
-===
-```
-````
-
-````{admonition} Exercice 24
-:class: note
-1. Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
-Pour rappel, un nombre est premier quand il n'est divisible par aucun autre nombre (à part 1 et lui-même).  
-Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
-
-2. Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.
-
-```{codeplay}
----
-hints: |
-    Rappelle toi de l'opérateur `**`!
-    ===
-    Toujours pas?
----
-def test(condition, msg_correct, msg_erreur):
-    print('Test ---------------------------------------')
-    if condition:
-        print(msg_correct)
-    else:
-        print(msg_erreur)
-    print('--------------------------------------------')
-===
-def puissance(n, m):
-    ...
-===
-test(puissance(2, 3) == 8, "Yes tout à fait correct !", "Oups, ton implémentation est incorrecte.")
 ```
 ````
 
