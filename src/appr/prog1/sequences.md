@@ -269,6 +269,7 @@ hints: |
     ===
     Si tu trouves un diviseur, return False, sinon return True !
 ---
+:file: ex_24.py
 def est_premier(n):
     ...
 
