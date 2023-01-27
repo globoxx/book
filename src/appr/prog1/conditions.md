@@ -217,8 +217,9 @@ Cela signifie que "Salut" et "salut" ne sont pas égaux lors d'une comparaison (
 
 ## Le module random
 
-Le module `random` contient tout plein de fonctions permettant d'ajouter de l'aléatoire à nos programmes.  
-La fonction `randint(min, max)` du module `random` permet de **tirer un nombre entier aléatoire** entre `min` et `max` (compris).  
+Le module `random` contient plein de fonctions permettant **d'ajouter de l'aléatoire à nos programmes**.  
+Par exmple, la fonction `randint(min, max)` du module `random` permet de **tirer un nombre entier aléatoire** entre `min` et `max` (compris).
+
 Voici un exemple où le programme tire un nombre aléatoire entre 1 et 100.
 
 ```{codeplay}
@@ -236,12 +237,12 @@ from random import *
 up()
 
 i = 0
-while i < 20:
+while i < 10:
     x = randint(-250, 250)  # Position aléatoire sur l'axe x
     y = randint(-150, 150)  # Position aléatoire sur l'axe y
     d = randint(1, 5)  # Diamètre aléatoire entre 1 et 5
     goto(x, y)
-    dot(d*10, 'blue')
+    dot(d*10, 'cyan')
     write(d, align='center')
     i = i + 1
 ```

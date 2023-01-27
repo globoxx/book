@@ -1,9 +1,9 @@
 (prog1.sequences)=
 
+# Les types séquentiels
+
 [Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
 [Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
-
-# Les types séquentiels
 
 Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d'autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables de type séquentiel.
 
@@ -90,7 +90,7 @@ nombres.append(1000)  # On ajoute un élément à la liste
 print(nombres)
 ```
 
-```{caution}
+```{caution} dasd
 **Pour aller plus loin**  
 Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée qu'avec un `.` via l'intermédiaire d'un objet (ici une liste). Plus de détails là-dessus l'année prochaine avec la programmation orientée objet !
 ```
@@ -239,16 +239,16 @@ print(moyenne)
 ## Le type range
 
 Une `range` ("intervale" en français) est un autre exemple de variable de type séquentiel.  
-Les ranges sont utilisés pour stocker des intervales de nombres entiers de manière plus efficace qu'une liste. Une variable de type `range` peut être créée avec la fonction `range(start, stop, step)` qui retourne un interval semi-fermé `[start, stop[` avec un incrément de `step`.
+Elles sont utilisées pour stocker des intervales de nombres entiers de manière plus efficace qu'une liste. Une variable de type `range` peut être créée avec la fonction `range(start, stop, step)` qui retourne un interval semi-fermé `[start, stop[` avec un incrément de `step`.
 
 - `start` est la valeur de départ (vaut 0 si pas indiqué),
 - `stop` est la valeur finale, mais sans l'inclure,
 - `step` est l'incrément (vaut 1 si pas indiqué).
 
-L'exemple suivant affiche le carré des nombres 1 à 19.
+L'exemple suivant affiche le carré des nombres 1 à 9.
 
 ```{codeplay}
-nombres = range(1, 20)  # Contient les nombres 1 jusqu'à 19
+nombres = range(1, 10)  # Contient les nombres 1 jusqu'à 9
 for nombre in nombres:
     print(f'{nombre}^2 = {nombre ** 2}')
 ```
@@ -265,11 +265,11 @@ def polygone(a, n):
         left(360/n)
 
 a = 50 # longueur des arrêtes
-n = 3 # nombre de sommets
+n = 5 # nombre de sommets
 polygone(a, n)
 ```
 
-En utilisant l'argument `step`, on peut avoir l'intervale [-50, 200[ avec un incrément de 25.
+En utilisant l'argument `step`, on peut visualiser l'intervale [-50, 250[ avec un incrément de 50.
 
 ```{codeplay}
 from turtle import *
@@ -287,9 +287,9 @@ for x in range(start, stop, step):
 En imbriquant 2 boucles `for`, il est possible de construire toutes les tables de multiplications (jusqu'à 9 dans l'exemple).
 
 ```{codeplay}
-for i in range(1, 9):
+for i in range(1, 10):
     print(f'Table de {i}')
-    for j in range(1, 9):
+    for j in range(1, 10):
         print(f'{i}*{j} = {i*j}')
     print()  # Ajout d'une ligne vide
 ```

@@ -259,10 +259,10 @@
           </label>
         </div>
         <article role="main">
-          <p id="prog1-sequences"><a class="reference external" href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf">Mémento Python</a><br/>
+          <section class="tex2jax_ignore mathjax_ignore" id="les-types-sequentiels">
+<span id="prog1-sequences"></span><h1>Les types séquentiels<a class="headerlink" href="#les-types-sequentiels" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a class="reference external" href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf">Mémento Python</a><br/>
 <a class="reference external" href="https://support.apple.com/fr-ch/HT201236">Raccourcis clavier</a></p>
-<section class="tex2jax_ignore mathjax_ignore" id="les-types-sequentiels">
-<h1>Les types séquentiels<a class="headerlink" href="#les-types-sequentiels" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Certains programmes nécessitent l’utilisation d’un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d’autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables de type séquentiel.</p>
 <section id="le-type-liste">
 <h2>Le type liste<a class="headerlink" href="#le-type-liste" title="Lien permanent vers ce titre">¶</a></h2>
@@ -313,7 +313,8 @@ print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 Pour ajouter un élément à une liste, on utilise la <strong>méthode</strong> <code class="docutils literal notranslate"><span class="pre">append()</span></code> (“ajouter” en français) en donnant en argument la valeur à ajouter.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IFs1LCAyLCA2LCAzLCA4XQpwcmludChub21icmVzKQpub21icmVzWzJdID0gLTUgICMgT24gbW9kaWZpZSBsZSAzw6htZSDDqWzDqW1lbnQgZGUgbGEgbGlzdGUKcHJpbnQobm9tYnJlcykKbm9tYnJlcy5hcHBlbmQoMTAwMCkgICMgT24gYWpvdXRlIHVuIMOpbMOpbWVudCDDoCBsYSBsaXN0ZQpwcmludChub21icmVzKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="admonition caution">
 <p class="admonition-title">Prudence</p>
-<p><strong>Pour aller plus loin</strong><br/>
+<p>dasd
+<strong>Pour aller plus loin</strong><br/>
 Une méthode (ex: <code class="docutils literal notranslate"><span class="pre">append()</span></code>) est différente d’une fonction dans le sens où elle ne peut être appelée qu’avec un <code class="docutils literal notranslate"><span class="pre">.</span></code> via l’intermédiaire d’un objet (ici une liste). Plus de détails là-dessus l’année prochaine avec la programmation orientée objet !</p>
 </div>
 <div class="note admonition">
@@ -405,17 +406,17 @@ print(moyenne)
 <section id="le-type-range">
 <h2>Le type range<a class="headerlink" href="#le-type-range" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une <code class="docutils literal notranslate"><span class="pre">range</span></code> (“intervale” en français) est un autre exemple de variable de type séquentiel.<br/>
-Les ranges sont utilisés pour stocker des intervales de nombres entiers de manière plus efficace qu’une liste. Une variable de type <code class="docutils literal notranslate"><span class="pre">range</span></code> peut être créée avec la fonction <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code> qui retourne un interval semi-fermé <code class="docutils literal notranslate"><span class="pre">[start,</span> <span class="pre">stop[</span></code> avec un incrément de <code class="docutils literal notranslate"><span class="pre">step</span></code>.</p>
+Elles sont utilisées pour stocker des intervales de nombres entiers de manière plus efficace qu’une liste. Une variable de type <code class="docutils literal notranslate"><span class="pre">range</span></code> peut être créée avec la fonction <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code> qui retourne un interval semi-fermé <code class="docutils literal notranslate"><span class="pre">[start,</span> <span class="pre">stop[</span></code> avec un incrément de <code class="docutils literal notranslate"><span class="pre">step</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> est la valeur de départ (vaut 0 si pas indiqué),</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code> est la valeur finale, mais sans l’inclure,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">step</span></code> est l’incrément (vaut 1 si pas indiqué).</p></li>
 </ul>
-<p>L’exemple suivant affiche le carré des nombres 1 à 19.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IHJhbmdlKDEsIDIwKSAgIyBDb250aWVudCBsZXMgbm9tYnJlcyAxIGp1c3F1J8OgIDE5CmZvciBub21icmUgaW4gbm9tYnJlczoKICAgIHByaW50KGYne25vbWJyZX1eMiA9IHtub21icmUgKiogMn0nKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple suivant dessine un polygone en utilisant une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> et une <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShhLCBuKToKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIHdyaXRlKGkpCiAgICAgICAgZm9yd2FyZChhKQogICAgICAgIGxlZnQoMzYwL24pCgphID0gNTAgIyBsb25ndWV1ciBkZXMgYXJyw6p0ZXMKbiA9IDMgIyBub21icmUgZGUgc29tbWV0cwpwb2x5Z29uZShhLCBuKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En utilisant l’argument <code class="docutils literal notranslate"><span class="pre">step</span></code>, on peut avoir l’intervale [-50, 200[ avec un incrément de 25.</p>
+<p>L’exemple suivant affiche le carré des nombres 1 à 9.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IHJhbmdlKDEsIDEwKSAgIyBDb250aWVudCBsZXMgbm9tYnJlcyAxIGp1c3F1J8OgIDkKZm9yIG5vbWJyZSBpbiBub21icmVzOgogICAgcHJpbnQoZid7bm9tYnJlfV4yID0ge25vbWJyZSAqKiAyfScp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple suivant dessine un polygone en utilisant une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> et une <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShhLCBuKToKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIHdyaXRlKGkpCiAgICAgICAgZm9yd2FyZChhKQogICAgICAgIGxlZnQoMzYwL24pCgphID0gNTAgIyBsb25ndWV1ciBkZXMgYXJyw6p0ZXMKbiA9IDUgIyBub21icmUgZGUgc29tbWV0cwpwb2x5Z29uZShhLCBuKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En utilisant l’argument <code class="docutils literal notranslate"><span class="pre">step</span></code>, on peut visualiser l’intervale [-50, 250[ avec un incrément de 50.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKc3RhcnQgPSAtMjUwCnN0b3AgPSAyNTAKc3RlcCA9IDUwCgpmb3IgeCBpbiByYW5nZShzdGFydCwgc3RvcCwgc3RlcCk6CiAgICBnb3RvKHgsIDApCiAgICB3cml0ZSh4LCBhbGlnbj0nY2VudGVyJyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En imbriquant 2 boucles <code class="docutils literal notranslate"><span class="pre">for</span></code>, il est possible de construire toutes les tables de multiplications (jusqu’à 9 dans l’exemple).</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Zm9yIGkgaW4gcmFuZ2UoMSwgOSk6CiAgICBwcmludChmJ1RhYmxlIGRlIHtpfScpCiAgICBmb3IgaiBpbiByYW5nZSgxLCA5KToKICAgICAgICBwcmludChmJ3tpfSp7an0gPSB7aSpqfScpCiAgICBwcmludCgpICAjIEFqb3V0IGQndW5lIGxpZ25lIHZpZGU=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Zm9yIGkgaW4gcmFuZ2UoMSwgMTApOgogICAgcHJpbnQoZidUYWJsZSBkZSB7aX0nKQogICAgZm9yIGogaW4gcmFuZ2UoMSwgMTApOgogICAgICAgIHByaW50KGYne2l9KntqfSA9IHtpKmp9JykKICAgIHByaW50KCkgICMgQWpvdXQgZCd1bmUgbGlnbmUgdmlkZQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
 <p class="admonition-title">Exercice 24 - Nombres premiers</p>
 <ol class="simple">
 <li><p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">est_premier()</span></code> qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.<br/>
