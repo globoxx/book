@@ -259,10 +259,10 @@
           </label>
         </div>
         <article role="main">
-          <p id="prog1-algo"><a class="reference external" href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf">Mémento Python</a><br/>
+          <section class="tex2jax_ignore mathjax_ignore" id="les-algorithmes">
+<span id="prog1-algo"></span><h1>Les algorithmes<a class="headerlink" href="#les-algorithmes" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a class="reference external" href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf">Mémento Python</a><br/>
 <a class="reference external" href="https://support.apple.com/fr-ch/HT201236">Raccourcis clavier</a></p>
-<section class="tex2jax_ignore mathjax_ignore" id="les-algorithmes">
-<h1>Les algorithmes<a class="headerlink" href="#les-algorithmes" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Dans ce chapitre, nous allons découvrir quelques algorithmes à appliquer sur des listes. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale dans l’informatique. Le succès énorme de Google est basé sur un tri efficace de l’information, car dans une liste triée on peut trouver un élément beaucoup plus vite. Nous allons voir que :</p>
 <ul class="simple">
 <li><p>la fonction <code class="docutils literal notranslate"><span class="pre">min(liste)</span></code> retourne le minimum,</p></li>
@@ -299,15 +299,22 @@ Contrairement au cas précédent, ici nous ne parcourons pas les valeurs, mais l
 <p>Pour échanger deux éléments d’une liste, nous pouvons utiliser une variable temporaire pour stocker une valeur.
 Ici nous échangeons les deux premiers éléments, donc les éléments avec les index 0 et 1.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bGlzdGUgPSBbMywgNCwgMSwgMiwgNiwgNV0KCnByaW50KGxpc3RlKQp0bXAgPSBsaXN0ZVswXSAgIyBPbiBzdG9ja2UgbGEgdmFsZXVyIGRlIGxpc3RlWzBdIGNhciBlbGxlIHNlcmEgw6ljcmFzw6llIHBhciBsaXN0ZVsxXQpsaXN0ZVswXSA9IGxpc3RlWzFdCmxpc3RlWzFdID0gdG1wCnByaW50KGxpc3RlKQ==" data-file="c29ydDcucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Le programme devient plus lisible si nous définissons une fonction <code class="docutils literal notranslate"><span class="pre">echange()</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bGlzdGUgPSBbMywgNCwgMSwgMiwgNiwgNV0KCmRlZiBlY2hhbmdlKGxpc3RlLCBpLCBqKToKICAgIHRtcCA9IGxpc3RlW2ldCiAgICBsaXN0ZVtpXSA9IGxpc3RlW2pdCiAgICBsaXN0ZVtqXSA9IHRtcAoKcHJpbnQobGlzdGUpCmVjaGFuZ2UobGlzdGUsIDAsIDIpCnByaW50KGxpc3RlKQ==" data-file="c29ydDgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="admonition caution">
-<p class="admonition-title">Prudence</p>
-<p><strong>Pour aller plus loin</strong><br/>
-Il est également possible d’échanger la valeur de 2 variables en utilisant une <strong>affectation multiple</strong>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bGlzdGUgPSBbMywgNCwgMSwgMiwgNiwgNV0KCmRlZiBlY2hhbmdlKGxpc3RlLCBpLCBqKToKICAgIHRtcCA9IGxpc3RlW2ldCiAgICBsaXN0ZVtpXSA9IGxpc3RlW2pdCiAgICBsaXN0ZVtqXSA9IHRtcAoKcHJpbnQobGlzdGUpCmVjaGFuZ2UobGlzdGUsIDAsIDIpCnByaW50KGxpc3RlKQ==" data-file="c29ydDgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="hint admonition">
+<p class="admonition-title">Pour aller plus loin</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Les affectations multiples</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Il est également possible d’échanger la valeur de 2 variables en utilisant une <strong>affectation multiple</strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">echange</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
     <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">liste</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
+</details></div>
 </section>
 <section id="tri-a-bulles">
 <h2>Tri à bulles<a class="headerlink" href="#tri-a-bulles" title="Lien permanent vers ce titre">¶</a></h2>

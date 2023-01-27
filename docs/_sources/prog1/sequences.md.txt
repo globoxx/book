@@ -92,7 +92,7 @@ print(nombres)
 
 ````{admonition} Pour aller plus loin
 :class: hint
-```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+```{dropdown} <span style="color:grey">Méthode vs fonction</span>
 :animate: fade-in-slide-down
 Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée qu'avec un `.` via l'intermédiaire d'un objet (ici une liste). Plus de détails là-dessus l'année prochaine avec la programmation orientée objet !
 ```

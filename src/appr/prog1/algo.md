@@ -1,9 +1,9 @@
 (prog1.algo)=
 
+# Les algorithmes
+
 [Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
 [Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
-
-# Les algorithmes
 
 Dans ce chapitre, nous allons découvrir quelques algorithmes à appliquer sur des listes. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale dans l’informatique. Le succès énorme de Google est basé sur un tri efficace de l’information, car dans une liste triée on peut trouver un élément beaucoup plus vite. Nous allons voir que :
 
@@ -108,14 +108,17 @@ echange(liste, 0, 2)
 print(liste)
 ```
 
-````{caution}
-**Pour aller plus loin**  
+`````{admonition} Pour aller plus loin
+:class: hint
+````{dropdown} <span style="color:grey">Les affectations multiples</span>
+:animate: fade-in-slide-down
 Il est également possible d'échanger la valeur de 2 variables en utilisant une **affectation multiple**.
 ```python
 def echange(liste, i, j):
     liste[i], liste[j] = liste[j], liste[i]
 ```
 ````
+`````
 
 ## Tri à bulles
 

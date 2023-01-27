@@ -41,7 +41,7 @@ Si l’utilisateur donne un nombre inférieur à 20, le programme écrit "Comme 
 ```
 
 `````{admonition} Solution
-:class: hint
+:class: note
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
