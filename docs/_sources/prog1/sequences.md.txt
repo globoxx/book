@@ -265,13 +265,14 @@ Indice: la fonction `len()` permet de calculer la longueur d'une liste.
 
 ```{codeplay}
 :file: ex_23.py
-def test(valeur, valeur_attendue, marge=None):
+def test(func, entree, valeur_attendue, marge=None):
+    valeur = func(entree)
     cond = (valeur == valeur_attendue) if marge is None else (valeur-marge < valeur_attendue < valeur+marge)
     if not cond:
         print("Oups, ta fonction est incorrecte.")
         print(f"Attendu: {valeur_attendue}, Reçu: {valeur})
-        exit()
-        print('----------------------------------------------------------')
+        return False
+    return True
 ===
 def calcule_moyenne(liste):
     ...
@@ -282,10 +283,14 @@ print(moyenne)
 ===
 print('\nTest automatique ---------------------------------------')
 eps = 1e-6
-test(calcule_moyenne([4.5, 3, 5, 2, 6, 5.5]), 26/6, eps)
-test(calcule_moyenne([1, 1, 1]), 1, eps)
-test(calcule_moyenne([-1, 0, 1]), 0, eps)
-print("Yes, tout à fait correct !")
+args = [([4.5, 3, 5, 2, 6, 5.5], 26/6), ([1, 1, 1], 1), ([-1, 0, 1], 0)]
+ok = True
+for entree, valeur_attendue in args:
+    ok = test(calcule_moyenne, entree, valeur_attendue, eps)
+    if not ok:
+        break
+if ok:
+    print("Yes, tout à fait correct !")
 print('----------------------------------------------------------')
 ```
 ````
