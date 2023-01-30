@@ -227,7 +227,7 @@ liste3 = liste1 + liste2
 print(liste3)
 
 texte1 = "Salut amigo, tu viens à la soirée ? - Non je peux pas, j'ai "
-texte2 = "piscine.
+texte2 = "piscine."
 texte3 = texte1 + texte2
 print(texte3)
 ```
@@ -265,12 +265,28 @@ Indice: la fonction `len()` permet de calculer la longueur d'une liste.
 
 ```{codeplay}
 :file: ex_23.py
+def test(valeur, valeur_attendue, marge=None):
+    cond = (valeur == valeur_attendue) if marge is None else (valeur-marge < valeur_attendue < valeur+marge)
+    if not cond:
+        print("Oups, ta fonction est incorrecte.")
+        print(f"Attendu: {valeur_attendue}, Reçu: {valeur})
+        exit()
+        print('----------------------------------------------------------')
+===
 def calcule_moyenne(liste):
     ...
 
 notes = [4.5, 3, 5, 2, 6, 5.5]
 moyenne = calcule_moyenne(notes)
 print(moyenne)
+===
+print('\nTest automatique ---------------------------------------')
+eps = 1e-6
+test(calcule_moyenne([4.5, 3, 5, 2, 6, 5.5]), 26/6, eps)
+test(calcule_moyenne([1, 1, 1]), 1, eps)
+test(calcule_moyenne([-1, 0, 1]), 0, eps)
+print("Yes, tout à fait correct !")
+print('----------------------------------------------------------')
 ```
 ````
 
