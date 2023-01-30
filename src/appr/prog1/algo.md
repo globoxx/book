@@ -1,6 +1,6 @@
 (prog1.algo)=
 
-# Les algorithmes
+# 7. Les algorithmes
 
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
