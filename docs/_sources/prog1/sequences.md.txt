@@ -462,6 +462,8 @@ while nb_erreurs < 6:
     else:
         dessins[nb_erreurs]()
         nb_erreurs += 1  # Raccourci pour nb_erreurs = nb_erreurs + 1
+
+print('Pendu !')
 ```
 
 ```{admonition} Exercice du pendu
@@ -471,7 +473,8 @@ Plusieurs pistes de solution:
 1. Sélectionnez un mot de la liste à un index aléatoire avec la fonction `randint()` du module `random`.
 2. Sélectionnez un mot de la liste aléatoirement avec la fonction `choice()` du module `random`.
 
-Faites-en sorte que le programme s'arrête dès que vous avez trouvé le mot mystère.
+Faites-en sorte que le programme s'arrête dès que vous avez trouvé le mot mystère et affiche 'Gagné !'.  
+Une possible manière de faire est d'utiliser l'instruction `break` qui permet de sortir immédiatement de la boucle courante (<a href="https://docs.python.org/fr/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops" target="_blank">plus d'infos ici</a>).
 ```
 
 Vous avez tout terminé ? Allez faire un tour sur <a href="https://apprendre.modulo-info.ch/prog1/grouper.html" target="_blank">Modulo</a> !
