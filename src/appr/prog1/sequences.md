@@ -267,10 +267,13 @@ Indice: la fonction `len()` permet de calculer la longueur d'une liste.
 :file: ex_23.py
 def test(func, entree, valeur_attendue, marge=None):
     valeur = func(entree)
+    if valeur is None:
+        print("Ta fonction ne retourne aucune valeur.")
+        return False
     cond = (valeur == valeur_attendue) if marge is None else (valeur-marge < valeur_attendue < valeur+marge)
     if not cond:
         print("Oups, ta fonction est incorrecte.")
-        print(f"Attendu: {valeur_attendue}, Reçu: {valeur})
+        print(f"Attendu: {valeur_attendue}, Reçu: {valeur}")
         return False
     return True
 ===
