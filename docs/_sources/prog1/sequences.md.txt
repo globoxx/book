@@ -2,6 +2,7 @@
 
 # Les types séquentiels
 
+<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>
 [Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
 [Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
 
@@ -176,7 +177,7 @@ Quel est le résultat de l'expression `'pikachu'[-3:]` ?
 ```
 
 Le mot-clé `in` permet de tester si une valeur se trouve dans une liste (ou n'importe quelle autre variable de type séquentiel).  
-A l'inverse, `not in` permet de tester l'abscence d'une valeur.
+A l'inverse, `not in` permet de tester l'absence d'une valeur.
 
 ```{codeplay}
 eleves_presents = ['Tiago', 'Marc', 'Simon', 'Julie', 'Maria', 'Inès']
@@ -211,7 +212,7 @@ Tranquille. Il a deux trous rouges au côté droit."""
 
 mot = "soldat"
 if mot in poeme:
-    print(f"'{mot}' se trouve bien dans 'Le dormeur du Val' d'Arthur Rimbaud")
+    print(f"Le mot '{mot}' se trouve bien dans 'Le dormeur du Val' d'Arthur Rimbaud")
 ```
 
 ## La boucle for
