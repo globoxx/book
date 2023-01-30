@@ -273,7 +273,9 @@ def test(func, entree, valeur_attendue, marge=None):
     cond = (valeur == valeur_attendue) if marge is None else (valeur-marge < valeur_attendue < valeur+marge)
     if not cond:
         print("Oups, ta fonction est incorrecte.")
-        print(f"Attendu: {valeur_attendue}, Reçu: {valeur}")
+        print(f"Quand l'argument vaut: {entree}")
+        print(f"Résultat attendu: {valeur_attendue}")
+        print(f"Ton résultat: {valeur}")
         return False
     return True
 ===
