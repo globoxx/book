@@ -319,6 +319,12 @@ notes = [4.5, 3, 5, 2, 6, 5.5]
 moyenne = calcule_moyenne(notes)
 print(moyenne)
 ```
+La fonction `sum()` permet très facilement d'obtenir la somme des éléments d'une liste, mais c'est pas drôle quand c'est trop facile 😉
+```python
+def calcule_moyenne(liste):
+    moyenne = sum(liste) / len(liste)
+    return moyenne
+```
 ````
 ````` -->
 
