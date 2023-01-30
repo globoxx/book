@@ -422,7 +422,7 @@ def est_premier(n):
 # Affichage des nombres premiers plus petits que 1000
 ...
 ===
-print('\nTest automatique ---------------------------------------')
+print('\nTest automatique de est_premier() ---------------------------------------')
 args = [(2, True), (17, True), (997, True), (500, False), (671, False), (1, False)]
 ok = True
 for entree, valeur_attendue in args:
@@ -431,7 +431,7 @@ for entree, valeur_attendue in args:
         break
 if ok:
     print("Yes, tout à fait correct !")
-print('----------------------------------------------------------')
+print('-------------------------------------------------------------------------')
 ```
 ````
 
