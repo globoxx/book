@@ -3,8 +3,7 @@
 # Les types séquentiels
 
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>
-[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
-[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
+<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d'autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables de type séquentiel.
 
@@ -469,4 +468,4 @@ Plusieurs pistes de solution:
 2. Sélectionne un mot de la liste aléatoirement avec la fonction `choice()` du module `random`.
 ```
 
-Vous avez tout terminé ? Allez faire un tour sur [Modulo](https://apprendre.modulo-info.ch/prog1/grouper.html) !
+Vous avez tout terminé ? Allez faire un tour sur <a href="https://apprendre.modulo-info.ch/prog1/grouper.html" target="_blank">Modulo</a> !

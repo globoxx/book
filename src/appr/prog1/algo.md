@@ -2,8 +2,8 @@
 
 # Les algorithmes
 
-[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
-[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
+<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>
+<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 Dans ce chapitre, nous allons découvrir quelques algorithmes à appliquer sur des listes. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale dans l’informatique. Le succès énorme de Google est basé sur un tri efficace de l’information, car dans une liste triée on peut trouver un élément beaucoup plus vite. Nous allons voir que :
 

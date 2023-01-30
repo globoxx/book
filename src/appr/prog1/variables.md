@@ -2,8 +2,8 @@
 
 # Les variables
 
-[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
-[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
+<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>
+<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 ## Les types de variables simples
 

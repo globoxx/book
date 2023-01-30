@@ -2,8 +2,8 @@
 
 # Définition de fonctions
 
-[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
-[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
+<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>
+<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 ## Définir ses propres fonctions
 
@@ -88,7 +88,7 @@ Evidemment, cette fonction n'est pas très utile car elle reproduit simplement l
 ````
 `````
 
-L’exemple suivant montre la définition d’une fonction qui ne **retourne aucune valeur**: la fonction ne se termine pas par le mot-clé `return`. 
+L’exemple suivant montre la définition d’une fonction qui ne **retourne aucune valeur**: la fonction ne se termine pas par le mot-clé `return`.  
 La fonction s’exécute (ici elle affiche des choses) mais ne retourne rien.
 
 ```{codeplay}

@@ -2,8 +2,8 @@
 
 # Les fonctions
 
-[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
-[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
+<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>
+<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 ## C'est quoi une fonction ? 🤨
 
@@ -85,7 +85,7 @@ a = math.sqrt(9) # calcule la racine carree
 
 La première ligne de l’exemple ci-dessus indique que l’on va utiliser les fonctions du module `math`.
 La seconde ligne utilise la fonction `sqrt` pour calculer la racine carrée de 9.
-La description des fonctions du module `math` est disponible [ici](https://docs.python.org/fr/3/library/math.html){:target="_blank"}.
+La description des fonctions du module `math` est disponible <a href="https://docs.python.org/fr/3/library/math.html" target="ici">ici</a>.
 
 ````{admonition} Exercice 8
 :class: note

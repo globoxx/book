@@ -2,8 +2,8 @@
 
 # Les structures conditionnelles
 
-[Mémento Python](https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf)  
-[Raccourcis clavier](https://support.apple.com/fr-ch/HT201236)
+<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>
+<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 Les structures de contrôle sont un élément central de la programmation.
 **Elles permettent de moduler l’exécution d'un programme selon la valeur de ses variables**.  
