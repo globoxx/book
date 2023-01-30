@@ -17,10 +17,10 @@ En Python, les types de variables de base sont les suivants :
 
 Il est possible de vérifier le type d’une variable à l’aide de la fonction `type` 😉
 
-```{admonition} Exercice
+````{admonition} Exercice 3
 :class: note
 Quel est le type des valeurs suivantes ?  
-Vous pouvez utiliser la fonction `type` pour vérifier vos réponses (par exemple : `print(type("rewr")`).  
+Vous pouvez utiliser la fonction `type()` pour vérifier vos réponses.  
 a) "rewr"  
 b) 34  
 c) 5.0  
@@ -29,7 +29,12 @@ e) "65.5"
 f) True  
 g) "False"  
 h) rewr
+
+```{codeplay}
+:file: ex_3.py
+print(type(...))
 ```
+````
 
 ````{admonition} Solution
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -92,9 +97,9 @@ print(a)
 Dans l’exemple ci-dessus, on donne le nom `a` à la chaîne de caractère "bonjour".
 On peut dire que la variable `a` contient la chaîne de caractère "bonjour".
 **Une fois une variable nommée, on peut la manipuler en l’appelant par son nom**.
-Dans cet exemple, on demande à l’ordinateur d’écrire le contenu de `a` dans le terminal, c’est-à-dire "bonjour".
+On demande ensuite à l’ordinateur d’écrire le contenu de `a` dans le terminal, c’est-à-dire "bonjour".
 
-```{admonition} Exercice
+````{admonition} Exercice 4
 :class: note
 ⚠️ Python ne permet pas d’utiliser n’importe quel nom de variable. ⚠️  
 Essayez d’utiliser les noms suivants pour nommer vos variables:  
@@ -104,7 +109,12 @@ c) mon age
 d) def  
 Par exemple, écrivez `38b = 5`.  
 Lancez votre programme. Qu’observez-vous ?
+
+```{codeplay}
+:file: ex_4.py
+38b = 5  # Ca fonctionne ça ??
 ```
+````
 
 ````{admonition} Solution
 ```{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -141,17 +151,22 @@ print(b)
 Dans cet exemple, la première instruction assigne 5 à la variable `b`.
 La seconde instruction multiplie `b` par 2 (ce qui donne 10), puis le résultat est assigné à `b` qui contient maintenant le nombre 10.
 
-```{admonition} Exercice
+````{admonition} Exercice 5
 :class: note
 Mettez la valeur 6 dans une variable appelée `a`, affichez-la à l’écran puis divisez-la par trois et remettez-la dans `a`. 
 Imprimez la nouvelle valeur de `a` à l’écran.
-```
+
+```{codeplay}
+:file: ex_5.py
+# Ecrivez votre code ici
+``` 
+````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_5.py
 a = 6
 print(a)
 a = a / 3
@@ -160,7 +175,7 @@ print(a)
 ````
 `````
 
-````{admonition} Exercice
+````{admonition} Exercice 6
 :class: note
 Qu’impriment les petits programmes suivants ? 
 Vérifiez vos réponses.
@@ -193,7 +208,7 @@ f) True, False
 
 Dans un programme écrit correctement, **les noms des variables doivent toujours représenter au mieux l’utilité de la variable**.
 
-```{codeplay}
+```python
 # Bon exemple
 prenom = 'Jules'
 nom = 'Vernes'
@@ -213,18 +228,34 @@ Ces conventions et bonnes pratiques sont écrites par la communauté dans des [P
 
 ## Exercices Turtle 🐢 (facultatif)
 
-```{admonition} Exercice
+````{admonition} Exercice - La maison
 :class: note
 Ecrivez un programme qui dessine une maison 🏠 (un carré avec un triangle sur la tête).
 Vous êtes conseillés de reprendre les exemples et exercices Turtle du 1er chapitre et de les combiner.  
 Utilisez des variables pour éviter d’avoir à écrire plusieurs fois les mêmes chiffres (ex : `forward(d)` au lieu de `forward(100)`).
+
+```{codeplay}
+:file: maison.py
+import turtle # Importe le module
+
+# Reprenez le code permettant de dessiner un carré
+...
+
+# Placez-vous sur le sommet du carré
+... 
+
+# Reprenez le code permettant de dessiner un triangle
+...
+
+turtle.done() # Termine le dessin
 ```
+````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: maison.py
 import turtle # Importe le module
 
 d = 100 # On utilise une variable pour mémoriser la taille

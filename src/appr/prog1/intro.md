@@ -12,24 +12,28 @@ Lors de ces travaux pratiques, vous allez écrire des petits programmes Python s
 Voici un exemple d’un tout petit programme en Python qui ne contient qu’une seule instruction:
 
 ```{codeplay}
-:file: bonjour.py
 print("bonjour")
 ```
 
 En anglais, "print" signifie “imprime". En Python, l’instruction `print` demande à l’ordinateur **d’afficher à l’écran le contenu de la parenthèse qui vient après**.
 
-```{admonition} Exercice
+````{admonition} Exercice 1
 :class: note
 Ecrivez et exécutez le programme ci-dessus sur `Thonny`.  
 Changez le texte pour que l’ordinateur écrive autre chose, par exemple "au revoir !".  
 Sauvegardez le fichier exercice1.py dans votre dossier personnel.
+
+```{codeplay}
+:file: ex_1.py
+print("bonjour")
 ```
+````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_1.py
 print('au revoir !')
 ``` 
 Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
@@ -45,12 +49,11 @@ En Python, un commentaire est introduit par le caractère `#`.
 Cela sert uniquement à l’humain qui va lire le programme 🤓
 
 ```{codeplay}
-:file: commentaire.py
 # un tout petit programme
-print("bonjour") # salutations
+print("bonjour")  # salutations
 ```
 
-```{admonition} Exercice
+```{admonition} Exercice 2
 :class: note
 Enlevez les guillemets autour de "bonjour". Qu’est-ce qui se passe ?
 ```
@@ -76,11 +79,10 @@ Cette variable n’existant pas au moment de son appel, l’ordinateur ne sait p
 Ce code permet de dessiner un carré, testez-le !
 
 ```{codeplay}
-:file: carre.py
-import turtle # Importe le module
+import turtle  # Importe le module
 
-turtle.forward(100) # Avance de 100 pixels
-turtle.left(90) # Tourne a gauche de 90 degres
+turtle.forward(100)  # Avance de 100 pixels
+turtle.left(90)  # Tourne a gauche de 90 degres
 turtle.forward(100)
 turtle.left(90)
 turtle.forward(100)
@@ -88,16 +90,25 @@ turtle.left(90)
 turtle.forward(100)
 turtle.left(90)
 
-turtle.done() # Termine le dessin
+turtle.done()  # Termine le dessin
 ```
 
 Si vous êtes curieux, la plateforme [Modulo](https://apprendre.modulo-info.ch/prog1/dessiner.html) propose beaucoup d’autres exemples et exercices dans son chapitre **Programmation**.
 
-```{admonition} Exercice
+````{admonition} Exercice - Le triangle
 :class: note
 Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ayant une longueur de 100 pixels.  
 (Rappel : chaque angle d’un triangle équilatéral fait 60 degrés).
+
+```{codeplay}
+:file: triangle.py
+import turtle  # Importe le module
+
+...
+
+turtle.done()  # Termine le dessin
 ```
+````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -119,4 +130,3 @@ Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !
 Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
 ````
 `````
-

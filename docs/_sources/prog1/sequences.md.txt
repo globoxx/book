@@ -402,9 +402,9 @@ potence()
 dessins = [tete, bras1, bras2, torse, jambe1, jambe2]
 
 mot_a_trouver = 'potiron'
-lettres_trouvees = ''
-n = 0
+lettres_trouvees = []  # Une liste vide qui contiendra les lettres trouvées par l'utilisateur
 
+n = 0
 for i in range(10):
     mot_affiche = ''
     for lettre in mot_a_trouver:
@@ -415,7 +415,7 @@ for i in range(10):
 
     lettre_proposee = input(mot_affiche + '  lettre: ')
     if lettre_proposee in mot_a_trouver:
-        lettres += letre_proposee
+        lettres_trouvees.append(lettre_proposee)
     else:
         dessins[n]()
         n = n + 1

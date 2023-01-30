@@ -34,17 +34,24 @@ L’instruction `if` teste cette variable.
 Elle permet à l’ordinateur de savoir quelles sont les instructions qui appartiennent au bloc du `if` et quelles sont celles qui appartiennent au bloc du `else`.  
 (L'indentation se fait de préférence avec la touche tabulation (**TAB**) du clavier.)
 
-```{admonition} Exercice
+````{admonition} Exercice 15
 :class: note
 Ecrivez un programme qui demande son âge à l’utilisateur. 
 Si l’utilisateur donne un nombre inférieur à 20, le programme écrit "Comme vous êtes jeune !", sinon il écrit "Comme vous êtes vieux !".
+
+```{codeplay}
+:file: ex_15.py
+age = ...
+
+...
 ```
+````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_15.py
 age = int(input("Entrez votre age: "))
 
 if age < 20:
@@ -57,16 +64,25 @@ Cependant le programme fonctionnerait de la même manière en utilisant la fonct
 ````
 `````
 
-```{admonition} Exercice
+````{admonition} Exercice 16
 :class: note
 Ecrivez la fonction maximum(a, b) qui prend 2 nombres en argument et retourne le plus grand.
+
+```{codeplay}
+:file: ex_16.py
+def maximum(a, b):
+    ...
+
+print(maximum(3, 4)) # Affiche 4
+print(maximum(-1, -5)) # Affiche -1
 ```
+````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_16.py
 def maximum(a, b):
     if a > b:
         return a
@@ -74,6 +90,7 @@ def maximum(a, b):
         return b
 
 print(maximum(3, 4)) # Affiche 4
+print(maximum(-1, -5)) # Affiche -1
 ```
 Cette fonction ne permet de comparer que 2 nombres mais nous verrons plus tard comment trouver le maximum dans une liste avec beaucoup de nombres 😉
 ````
@@ -98,7 +115,7 @@ else:
 	print("Je vais courir dehors")
 ```
 
-````{admonition} Exercice
+````{admonition} Exercice 17
 :class: note
 Ecrivez un programme qui demande à l'utilisateur d'entrer les buts de l'équipe domicile et de l'équipe extérieur.
 Le programme affiche ensuite quelle équipe a gagné le match (ou match nul en cas d'égalité).
@@ -112,13 +129,21 @@ Buts marqués par l'équipe domicile : 0
 Buts marqués par l'équipe extérieur : 0
 Match nul !
 ```
+
+```{codeplay}
+:file: ex_17.py
+buts_domicile = ...
+buts_exterieur = ...
+
+...
+```
 ````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_17.py
 buts_domicile = int(input("Buts marqués par l'équipe domicile: "))
 buts_exterieur = int(input("Buts marqués par l'équipe extérieur: "))
 
@@ -150,16 +175,25 @@ Puis, tant qu’elle est inférieure à 100, on l’affiche à l’écran et on 
 Ainsi, `a` passera de 1 à 2 à 4 à 8, etc. 
 **Le programme imprime donc toute les puissances de deux inférieures à 100**.
 
-```{admonition} Exercice
+````{admonition} Exercice 18
 :class: note
-Modifier le programme ci-dessus pour qu’il imprime toutes les puissances de 10 inférieures ou égales à 10000.
+Modifier ce programme pour qu’il imprime toutes les puissances de 10 inférieures ou égales à 10000.
+
+```{codeplay}
+:file: ex_18.py
+a = 1
+while a < 100:
+	print(a)
+	a = a*2
+print(f"Maintenant a vaut {a} !")
 ```
+````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_18.py
 a = 10
 while a <= 10000:
     print(a)
@@ -178,7 +212,7 @@ while n <= 4:
 ````
 `````
 
-````{admonition} Exercice
+````{admonition} Exercice 19
 :class: note
 Ecrivez un programme qui demande en boucle à l'utilisateur comment il va tant qu'il ne répond pas "Bien merci et toi ?".  
 Rappel: la fonction `input` permet de demander à l'utilisateur d'entrer du texte.
@@ -191,13 +225,22 @@ Comment tu vas ? Nickel !
 Comment tu vas ? Bien merci et toi ?
 Très bien, merci de demander !
 ```
+
+```{codeplay}
+:file: ex_19.py
+reponse = input("Comment tu vas ? ")
+
+...
+
+print("Très bien, merci de demander !")
+```
 ````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_19.py
 reponse = input("Comment tu vas ? ")
 
 while reponse != "Bien merci et toi ?":

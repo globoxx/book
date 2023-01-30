@@ -51,17 +51,29 @@ print(f"Les cubes de 2 et 5 sont {a} et {b}")
 
 L’exemple ci-dessus montre la définition d’une fonction nommée `au_cube` prenant 1 argument et retournant le cube de cet argument.
 
-```{admonition} Exercice
+````{admonition} Exercice 12
 :class: note
 Ecrivez une fonction `au_carre(n)` qui calcule le carré d’un nombre et le retourne.  
 Utilisez cette fonction pour calculer et afficher le carré des nombres 6, -5 et 573.28.
+
+```{codeplay}
+:file: ex_12.py
+def au_carre(n):
+    ...
+
+a = au_carre(6)
+b = au_carre(-5)
+c = au_carre(573.28)
+
+print(f"Les carrés de 6, -5 et 573.28 sont {a}, {b} et {c}")
 ```
+````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_12.py
 def au_carre(n):
     carre = n**2
     return carre
@@ -89,17 +101,25 @@ saluer("Pierre", "Schmutz")
 
 Notez que les arguments doivent être donnés **dans le même ordre que dans la définition** de la fonction afin que le programme sache quelle entrée correspond à quel argument.
 
-```{admonition} Exercice
+````{admonition} Exercice 13
 :class: note
 Modifiez l’exemple ci-dessus pour ajouter un troisième argument de votre choix à la fonction `saluer()`.  
 Faites en sorte que la fonction utilise ce nouvel argument dans son message de bienvenue puis appelez la fonction.
+
+```{codeplay}
+:file: ex_13.py
+def saluer(prenom, nom, ...):
+    ...
+
+saluer(...)
 ```
+````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_13.py
 def saluer(prenom, nom, age):
     print(f"Bonjour {prenom} {nom} qui a {age} ans !")
     print("Bienvenue !")
@@ -121,7 +141,7 @@ print(f"Le volume des cylindres est de {v1} et {v2}")
 
 L’exemple ci-dessus montre une fonction prenant en arguments le rayon et la hauteur d’un cylindre afin d’en retourner le volume 🤓
 
-````{admonition} Exercice
+````{admonition} Exercice 14
 :class: note
 L’indice de masse corporelle (IMC) d’une personne est donné par son poids (en kg) divisé par le carré de sa taille (en mètres).
 Ecrivez une fonction qui prend le poids et la taille en argument et retourne l’IMC.  
@@ -134,13 +154,25 @@ Entrez votre taille (m) : 1.84
 Votre IMC est de 24.810964083175
 ```
 L'IMC n'est q'un indicateur et ne permet absolument pas, à lui seul, de déterminer l'état de santé d'une personne.
+
+```{codeplay}
+:file: ex_14.py
+def calcule_imc(...):
+    ...
+
+poids = ...
+taille = ...
+imc = ...
+
+print(f"Votre IMC est de {imc}")
+```
 ````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_14.py
 def calcule_imc(poids, taille):
     imc = poids / taille**2
     return imc
@@ -157,19 +189,44 @@ Gardez à l'esprit qu'une fois que vous avez choisi un nom pour une fonction ou 
 
 ## Exercices Turtle 🐢 (facultatif)
 
-````{admonition} Exercice
+````{admonition} Exercice - Une maison fonctionnelle
 :class: note
 Il est temps d’améliorer notre code permettant de dessiner une maison grâce aux fonctions ! 🤩
 1. Ecrivez une fonction `carre(taille)` qui dessine un carré de la taille passée en argument.
 2. Ecrivez une fonction `triangle(taille)` qui dessine un triangle équilatéral avec la taille passée en argument.
 3. Enfin, écrivez une fonction `maison(taille)` qui appelle les 2 fonctions précédentes pour dessiner une maison de la taille passée en argument.
+
+```{codeplay}
+:file: maison_fonctionnelle.py
+import turtle # Importe le module
+
+# Fonction qui dessine un carré de taille d
+def dessine_carre(d):
+    ...
+
+# Fonction qui dessine un triangle de taille d
+def dessine_triangle(d):
+    ...
+
+# Fonction qui dessine une maison de taille d
+def dessine_maison(d):
+    ...
+
+# On demande à l'utilisateur la taille de la maison
+d = int(input("Entrez la taille de la maison: "))
+
+# Appelez la fonction dessine_maison() ici
+...
+
+turtle.done() # Termine le dessin
+```
 ````
 
 `````{admonition} Solution
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: maison_fonctionnelle.py
 import turtle # Importe le module
 
 # Fonction qui dessine un carré de taille d
