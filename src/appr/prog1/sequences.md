@@ -5,7 +5,7 @@
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
-Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d'autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables de type séquentiel.
+Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d'autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables de type séquentiel (ou itérable).
 
 ## Le type liste
 
@@ -94,7 +94,9 @@ print(nombres)
 :class: hint
 ```{dropdown} <span style="color:grey">Méthode vs fonction</span>
 :animate: fade-in-slide-down
-Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée qu'avec un `.` via l'intermédiaire d'un objet (ici une liste). Plus de détails là-dessus l'année prochaine avec la programmation orientée objet !
+Une méthode (ex: `append()`) est différente d'une fonction dans le sens où elle ne peut être appelée qu'avec un `.` via l'intermédiaire d'un objet (ici une liste). Plus de détails là-dessus l'année prochaine avec la **programmation orientée objet** !
+
+La liste des méthodes accessibles aux listes est disponible <a href="https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists" target="_blank">ici</a>.
 ```
 ````
 
@@ -443,29 +445,33 @@ dessins = [tete, bras1, bras2, torse, jambe1, jambe2]
 mot_a_trouver = 'potiron'
 lettres_trouvees = []  # Une liste vide qui contiendra les lettres trouvées par l'utilisateur
 
-n = 0
-for i in range(10):
+nb_erreurs = 0
+while nb_erreurs < 6:
     mot_affiche = ''
+    # On parcourt chaque lettre du mot à trouver et on l'affiche seulement si elle a été trouvée
     for lettre in mot_a_trouver:
         if lettre in lettres_trouvees:
             mot_affiche += lettre
         else:
             mot_affiche += '_'
+        mot_affiche += ' '
 
     lettre_proposee = input(mot_affiche + '  lettre: ')
     if lettre_proposee in mot_a_trouver:
         lettres_trouvees.append(lettre_proposee)
     else:
-        dessins[n]()
-        n = n + 1
+        dessins[nb_erreurs]()
+        nb_erreurs += 1  # Raccourci pour nb_erreurs = nb_erreurs + 1
 ```
 
 ```{admonition} Exercice du pendu
 :class: note
-Modifie le programme du pendu pour que l'ordinateur choisisse aléatoirement un mot à trouver parmi une liste de mots de ton choix.  
+Modifiez le programme du pendu pour que l'ordinateur choisisse aléatoirement un mot à trouver parmi une liste de mots de votre choix.  
 Plusieurs pistes de solution:
-1. Sélectionne un mot de la liste à un index aléatoire avec la fonction `randint()` du module `random`.
-2. Sélectionne un mot de la liste aléatoirement avec la fonction `choice()` du module `random`.
+1. Sélectionnez un mot de la liste à un index aléatoire avec la fonction `randint()` du module `random`.
+2. Sélectionnez un mot de la liste aléatoirement avec la fonction `choice()` du module `random`.
+
+Faites-en sorte que le programme s'arrête dès que vous avez trouvé le mot mystère.
 ```
 
 Vous avez tout terminé ? Allez faire un tour sur <a href="https://apprendre.modulo-info.ch/prog1/grouper.html" target="_blank">Modulo</a> !
