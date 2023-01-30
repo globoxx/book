@@ -228,8 +228,6 @@ Très bien, merci de demander !
 
 ```{codeplay}
 :file: ex_19.py
-reponse = input("Comment tu vas ? ")
-
 ...
 
 print("Très bien, merci de demander !")

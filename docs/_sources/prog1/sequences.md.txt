@@ -7,6 +7,8 @@
 
 Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d'autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables de type séquentiel (ou itérable).
 
+Le type `string` que nous connaissons déjà est un exemple de variable séquentiel car il s'agit s'implement d'une séquence de caractères !
+
 ## Le type liste
 
 Une liste est une variable de type séquentiel. C'est une séquence ordonnée d'objets quelconques (nombres, textes, fonctions, etc...).  
@@ -216,6 +218,20 @@ if mot in poeme:
     print(f"Le mot '{mot}' se trouve bien dans 'Le dormeur du Val' d'Arthur Rimbaud")
 ```
 
+L'opérateur `+` permet de **concaténer** (appondre) plusieurs listes ou plusieurs chaînes de caractères (sting) ensemble.
+
+```{codeplay}
+liste1 = [1, 2, 3, 4]
+liste2 = [5, 6, 7]
+liste3 = liste1 + liste2
+print(liste3)
+
+texte1 = "Salut amigo, tu viens à la soirée ? - Non je peux pas, j'ai "
+texte2 = "piscine.
+texte3 = texte1 + texte2
+print(texte3)
+```
+
 ## La boucle for
 
 L'instruction `for ... in ...` permet **d'itérer** sur une variable de type séquentiel (par exemple une liste) et de répéter un bloc d'instructions pour chaque valeur de la séquence.  
@@ -322,7 +338,6 @@ up()
 start = -250
 stop = 250
 step = 50
-
 for x in range(start, stop, step):
     goto(x, 0)
     write(x, align='center')
