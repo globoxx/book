@@ -375,7 +375,7 @@ for x in range(start, stop, step):
     write(x, align='center')
 ```
 
-En imbriquant 2 boucles `for`, il est possible de construire toutes les tables de multiplications (jusqu'à 9 dans l'exemple).
+En imbriquant 2 boucles `for`, il est possible de construire toutes les tables de multiplications (jusqu'à 9 dans cet exemple).
 
 ```{codeplay}
 for i in range(1, 10):
@@ -402,10 +402,36 @@ hints: |
     ===
     Si tu trouves un diviseur, return False, sinon return True !
 ---
+def test(func, entree, valeur_attendue, marge=None):
+    valeur = func(entree)
+    if valeur is None:
+        print("Ta fonction ne retourne aucune valeur.")
+        return False
+    cond = (valeur == valeur_attendue) if marge is None else (valeur-marge < valeur_attendue < valeur+marge)
+    if not cond:
+        print("Oups, ta fonction est incorrecte.")
+        print(f"Quand l'argument vaut: {entree}")
+        print(f"Résultat attendu: {valeur_attendue}")
+        print(f"Ton résultat: {valeur}")
+        return False
+    return True
+===
 def est_premier(n):
     ...
 
-...  # Affichage des nombres premiers plus petits que 1000
+# Affichage des nombres premiers plus petits que 1000
+...
+===
+print('\nTest automatique ---------------------------------------')
+args = [(2, True), (17, True), (997, True), (500, False), (671, False), (1, False)]
+ok = True
+for entree, valeur_attendue in args:
+    ok = test(est_premier, entree, valeur_attendue)
+    if not ok:
+        break
+if ok:
+    print("Yes, tout à fait correct !")
+print('----------------------------------------------------------')
 ```
 ````
 
