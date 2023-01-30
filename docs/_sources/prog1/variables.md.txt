@@ -2,7 +2,7 @@
 
 # Les variables
 
-<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>
+<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 ## Les types de variables simples
@@ -121,7 +121,7 @@ Lancez votre programme. Qu’observez-vous ?
 :animate: fade-in-slide-down
 Tous ces noms de variables sont interdits et Python vous le fera savoir ! 😡  
 Les règles expliquant le nommage de variables sont expliquées juste au dessous.  
-Plus d'informations [ici](https://python.sdv.univ-paris-diderot.fr/02_variables/#23-nommage) 😉
+Plus d'informations <a href="https://python.sdv.univ-paris-diderot.fr/02_variables/#23-nommage" target="_blank">ici</a> 😉
 ```
 ````
 
@@ -225,7 +225,7 @@ b = True
 
 Vous serez très heureux d’avoir correctement nommé vos variables quand votre programme deviendra plus complexe.
 Sans cela, il deviendrait rapidement illisible 🤯  
-Ces conventions et bonnes pratiques sont écrites par la communauté dans des [PEP](https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/).
+Ces conventions et bonnes pratiques sont écrites par la communauté dans des <a href="https://python.sdv.univ-paris-diderot.fr/15_bonnes_pratiques/" target="_blank">PEP</a>.
 
 ## Exercices Turtle 🐢 (facultatif)
 

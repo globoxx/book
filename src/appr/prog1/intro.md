@@ -2,7 +2,7 @@
 
 # Introduction
 
-<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>
+<a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
 ## Votre tout premier programme 🤩
@@ -93,7 +93,7 @@ turtle.left(90)
 turtle.done()  # Termine le dessin
 ```
 
-Si vous êtes curieux, la plateforme [Modulo](https://apprendre.modulo-info.ch/prog1/dessiner.html) propose beaucoup d’autres exemples et exercices dans son chapitre **Programmation**.
+Si vous êtes curieux, la plateforme <a href="https://apprendre.modulo-info.ch/prog1/dessiner.html" target="_blank">Modulo</a> propose beaucoup d’autres exemples et exercices dans son chapitre **Programmation**.
 
 ````{admonition} Exercice - Le triangle
 :class: note
