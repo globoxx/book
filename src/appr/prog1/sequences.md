@@ -185,13 +185,13 @@ if 'Marc' in eleves_presents:
     print('Marc est présent !')
 
 if 'Hugo' not in eleves_presents:
-    print('Hugo est abscent !')
+    print('Hugo est absent !')
 ```
 
 De la même manière, `in` permet de tester si un mot se trouve dans une phrase ou un texte.
 
 ```{codeplay}
-poeme = "C'est un trou de verdure où chante une rivière
+poeme = """C'est un trou de verdure où chante une rivière
 Accrochant follement aux herbes des haillons
 D'argent ; où le soleil, de la montagne fière,
 Luit : c'est un petit val qui mousse de rayons.
@@ -207,9 +207,9 @@ Nature, berce-le chaudement : il a froid.
 
 Les parfums ne font pas frissonner sa narine ;
 Il dort dans le soleil, la main sur sa poitrine
-Tranquille. Il a deux trous rouges au côté droit."
-mot = "soldat"
+Tranquille. Il a deux trous rouges au côté droit."""
 
+mot = "soldat"
 if mot in poeme:
     print(f'"{mot}" se trouve bien dans "Le dormeur du Val" d'Arthur Rimbaud')
 ```
