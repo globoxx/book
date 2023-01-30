@@ -21,7 +21,7 @@ En anglais, "print" signifie “imprime". En Python, l’instruction `print` dem
 :class: note
 Ecrivez et exécutez le programme ci-dessus sur `Thonny`.  
 Changez le texte pour que l’ordinateur écrive autre chose, par exemple "au revoir !".  
-Sauvegardez le fichier exercice1.py dans votre dossier personnel.
+Sauvegardez le fichier ex_1.py dans votre dossier personnel.
 
 ```{codeplay}
 :file: ex_1.py

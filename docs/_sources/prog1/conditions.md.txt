@@ -270,9 +270,9 @@ print(n)
 Il est aussi possible d'afficher des objets de taille aléatoire à des emplacements aléatoires.
 
 ```{codeplay}
-from turtle import *
-from random import *
-up()
+from turtle import *  # Importe toutes les fonctions du module turtle
+from random import *  # Importe toutes les fonctions du module random
+up()  # Lève le stylo
 
 i = 0
 while i < 10:
@@ -280,8 +280,8 @@ while i < 10:
     y = randint(-150, 150)  # Position aléatoire sur l'axe y
     d = randint(1, 5)  # Diamètre aléatoire entre 1 et 5
     goto(x, y)
-    dot(d*10, 'cyan')
-    write(d, align='center')
+    dot(d*10, 'cyan')  # Dessine un rond de diamètre d*10
+    write(d, align='center')  # Ecris la valeur donnée en argument
     i = i + 1
 ```
 

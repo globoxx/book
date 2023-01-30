@@ -21,7 +21,7 @@ Pour définir une fonction, il faut indiquer les éléments suivants :
 Ces quatre éléments constituent la définition de la fonction.
 **Une fois une fonction ainsi définie, on peut l’utiliser (l’appeler) autant de fois que l’on désire dans un programme** 🤩
 
-Voici la syntaxe générale pour définir une fonction :
+Voici la syntaxe générale pour définir une fonction et l'appeler :
 
 ```python
 def nom_de_votre_fonction(argument1, argument2, ...):
@@ -31,6 +31,8 @@ def nom_de_votre_fonction(argument1, argument2, ...):
 	# return resultat (optionnel)
 
 nom_de_votre_fonction(arg1, arg2, ...)  # Appel de la fonction
+...
+nom_de_votre_fonction(argx, argy, ...)  # Un autre appel de la fonction (avec des arguments différents)
 ```
 
 ⚠️ Rappelez-vous de ceci ⚠️ :
@@ -64,7 +66,6 @@ def au_carre(n):
 a = au_carre(6)
 b = au_carre(-5)
 c = au_carre(573.28)
-
 print(f"Les carrés de 6, -5 et 573.28 sont {a}, {b} et {c}")
 ```
 ````
@@ -81,7 +82,6 @@ def au_carre(n):
 a = au_carre(6)
 b = au_carre(-5)
 c = au_carre(573.28)
-
 print(f"Les carrés de 6, -5 et 573.28 sont {a}, {b} et {c}")
 ```
 Evidemment, cette fonction n'est pas très utile car elle reproduit simplement l'opération `n**2`😅
@@ -129,6 +129,8 @@ saluer("Pierre", "Schmutz", 34)
 ````
 `````
 
+L’exemple ci-dessous montre une fonction prenant en arguments le rayon et la hauteur d’un cylindre afin d’en retourner le volume 🤓
+
 ```{codeplay}
 def volume_cylindre(rayon, hauteur):
 	vol = 3.14 * rayon**2 * hauteur
@@ -138,8 +140,6 @@ v1 = volume_cylindre(2.3, 10)
 v2 = volume_cylindre(1.2, 5)
 print(f"Le volume des cylindres est de {v1} et {v2}")
 ```
-
-L’exemple ci-dessus montre une fonction prenant en arguments le rayon et la hauteur d’un cylindre afin d’en retourner le volume 🤓
 
 ````{admonition} Exercice 14
 :class: note

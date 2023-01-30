@@ -277,7 +277,7 @@ Il faut plutôt le voir comme un <strong>sous-programme auquel on fournit des ob
 </ol>
 <p>Ces quatre éléments constituent la définition de la fonction.
 <strong>Une fois une fonction ainsi définie, on peut l’utiliser (l’appeler) autant de fois que l’on désire dans un programme</strong> 🤩</p>
-<p>Voici la syntaxe générale pour définir une fonction :</p>
+<p>Voici la syntaxe générale pour définir une fonction et l’appeler :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nom_de_votre_fonction</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
 	<span class="o">...</span>
 	<span class="c1"># bloc d'instruction</span>
@@ -285,6 +285,8 @@ Il faut plutôt le voir comme un <strong>sous-programme auquel on fournit des ob
 	<span class="c1"># return resultat (optionnel)</span>
 
 <span class="n">nom_de_votre_fonction</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c1"># Appel de la fonction</span>
+<span class="o">...</span>
+<span class="n">nom_de_votre_fonction</span><span class="p">(</span><span class="n">argx</span><span class="p">,</span> <span class="n">argy</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c1"># Un autre appel de la fonction (avec des arguments différents)</span>
 </pre></div>
 </div>
 <p>⚠️ Rappelez-vous de ceci ⚠️ :</p>
@@ -298,7 +300,7 @@ Il faut plutôt le voir comme un <strong>sous-programme auquel on fournit des ob
 <p class="admonition-title">Exercice 12</p>
 <p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">au_carre(n)</span></code> qui calcule le carré d’un nombre et le retourne.<br/>
 Utilisez cette fonction pour calculer et afficher le carré des nombres 6, -5 et 573.28.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGF1X2NhcnJlKG4pOgogICAgLi4uCgphID0gYXVfY2FycmUoNikKYiA9IGF1X2NhcnJlKC01KQpjID0gYXVfY2FycmUoNTczLjI4KQoKcHJpbnQoZiJMZXMgY2FycsOpcyBkZSA2LCAtNSBldCA1NzMuMjggc29udCB7YX0sIHtifSBldCB7Y30iKQ==" data-file="ZXhfMTIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGF1X2NhcnJlKG4pOgogICAgLi4uCgphID0gYXVfY2FycmUoNikKYiA9IGF1X2NhcnJlKC01KQpjID0gYXVfY2FycmUoNTczLjI4KQpwcmludChmIkxlcyBjYXJyw6lzIGRlIDYsIC01IGV0IDU3My4yOCBzb250IHthfSwge2J9IGV0IHtjfSIp" data-file="ZXhfMTIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 <div class="admonition-solution admonition">
 <p class="admonition-title">Solution</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
@@ -308,7 +310,7 @@ Utilisez cette fonction pour calculer et afficher le carré des nombres 6, -5 et
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGF1X2NhcnJlKG4pOgogICAgY2FycmUgPSBuKioyCiAgICByZXR1cm4gY2FycmUKCmEgPSBhdV9jYXJyZSg2KQpiID0gYXVfY2FycmUoLTUpCmMgPSBhdV9jYXJyZSg1NzMuMjgpCgpwcmludChmIkxlcyBjYXJyw6lzIGRlIDYsIC01IGV0IDU3My4yOCBzb250IHthfSwge2J9IGV0IHtjfSIp" data-file="ZXhfMTIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Evidemment, cette fonction n’est pas très utile car elle reproduit simplement l’opération <code class="docutils literal notranslate"><span class="pre">n**2</span></code>😅</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGF1X2NhcnJlKG4pOgogICAgY2FycmUgPSBuKioyCiAgICByZXR1cm4gY2FycmUKCmEgPSBhdV9jYXJyZSg2KQpiID0gYXVfY2FycmUoLTUpCmMgPSBhdV9jYXJyZSg1NzMuMjgpCnByaW50KGYiTGVzIGNhcnLDqXMgZGUgNiwgLTUgZXQgNTczLjI4IHNvbnQge2F9LCB7Yn0gZXQge2N9Iik=" data-file="ZXhfMTIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Evidemment, cette fonction n’est pas très utile car elle reproduit simplement l’opération <code class="docutils literal notranslate"><span class="pre">n**2</span></code>😅</p>
 </div>
 </details></div>
 <p>L’exemple suivant montre la définition d’une fonction qui ne <strong>retourne aucune valeur</strong>: la fonction ne se termine pas par le mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code>.
@@ -330,8 +332,8 @@ Faites en sorte que la fonction utilise ce nouvel argument dans son message de b
 </summary><div class="summary-content card-body docutils">
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHNhbHVlcihwcmVub20sIG5vbSwgYWdlKToKICAgIHByaW50KGYiQm9uam91ciB7cHJlbm9tfSB7bm9tfSBxdWkgYSB7YWdlfSBhbnMgISIpCiAgICBwcmludCgiQmllbnZlbnVlICEiKQoKc2FsdWVyKCJQaWVycmUiLCAiU2NobXV0eiIsIDM0KQ==" data-file="ZXhfMTMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </details></div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHZvbHVtZV9jeWxpbmRyZShyYXlvbiwgaGF1dGV1cik6Cgl2b2wgPSAzLjE0ICogcmF5b24qKjIgKiBoYXV0ZXVyCglyZXR1cm4gdm9sCgp2MSA9IHZvbHVtZV9jeWxpbmRyZSgyLjMsIDEwKQp2MiA9IHZvbHVtZV9jeWxpbmRyZSgxLjIsIDUpCnByaW50KGYiTGUgdm9sdW1lIGRlcyBjeWxpbmRyZXMgZXN0IGRlIHt2MX0gZXQge3YyfSIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple ci-dessus montre une fonction prenant en arguments le rayon et la hauteur d’un cylindre afin d’en retourner le volume 🤓</p>
-<div class="note admonition">
+<p>L’exemple ci-dessous montre une fonction prenant en arguments le rayon et la hauteur d’un cylindre afin d’en retourner le volume 🤓</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHZvbHVtZV9jeWxpbmRyZShyYXlvbiwgaGF1dGV1cik6Cgl2b2wgPSAzLjE0ICogcmF5b24qKjIgKiBoYXV0ZXVyCglyZXR1cm4gdm9sCgp2MSA9IHZvbHVtZV9jeWxpbmRyZSgyLjMsIDEwKQp2MiA9IHZvbHVtZV9jeWxpbmRyZSgxLjIsIDUpCnByaW50KGYiTGUgdm9sdW1lIGRlcyBjeWxpbmRyZXMgZXN0IGRlIHt2MX0gZXQge3YyfSIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
 <p class="admonition-title">Exercice 14</p>
 <p>L’indice de masse corporelle (IMC) d’une personne est donné par son poids (en kg) divisé par le carré de sa taille (en mètres).
 Ecrivez une fonction qui prend le poids et la taille en argument et retourne l’IMC.<br/>
