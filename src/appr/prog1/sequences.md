@@ -152,9 +152,9 @@ La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet
 ```{codeplay}
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 
-print(noms[:2])    # élément 0 et 1 (les 2 premiers éléments)
-print(noms[2:4])   # élément 2 et 3
-print(noms[4:])    # élément 4 et 5 (tous les éléments à partir de l'index 4)
+print(noms[:2])  # élément 0 et 1 (les 2 premiers éléments)
+print(noms[2:4])  # élément 2 et 3
+print(noms[4:])  # élément 4 et 5 (tous les éléments à partir de l'index 4)
 ```
 
 ```{question}
@@ -173,6 +173,45 @@ Quel est le résultat de l'expression `'pikachu'[-3:]` ?
 {v}`chu`  
 {f}`p`  
 {f}`pika`  
+```
+
+Le mot-clé `in` permet de tester si une valeur se trouve dans une liste (ou n'importe quelle autre variable de type séquentiel).  
+A l'inverse, `not in` permet de tester l'abscence d'une valeur.
+
+```{codeplay}
+eleves_presents = ['Tiago', 'Marc', 'Simon', 'Julie', 'Maria', 'Inès']
+
+if 'Marc' in eleves_presents:
+    print('Marc est présent !')
+
+if 'Hugo' not in eleves_presents:
+    print('Hugo est abscent !')
+```
+
+De la même manière, `in` permet de tester si un mot se trouve dans une phrase ou un texte.
+
+```{codeplay}
+poeme = "C'est un trou de verdure où chante une rivière
+Accrochant follement aux herbes des haillons
+D'argent ; où le soleil, de la montagne fière,
+Luit : c'est un petit val qui mousse de rayons.
+
+Un soldat jeune, bouche ouverte, tête nue,
+Et la nuque baignant dans le frais cresson bleu,
+Dort ; il est étendu dans l'herbe sous la nue,
+Pâle dans son lit vert où la lumière pleut.
+
+Les pieds dans les glaïeuls, il dort. Souriant comme
+Sourirait un enfant malade, il fait un somme.
+Nature, berce-le chaudement : il a froid.
+
+Les parfums ne font pas frissonner sa narine ;
+Il dort dans le soleil, la main sur sa poitrine
+Tranquille. Il a deux trous rouges au côté droit."
+mot = "soldat"
+
+if mot in poeme:
+    print(f'"{mot}" se trouve bien dans "Le dormeur du Val" d'Arthur Rimbaud')
 ```
 
 ## La boucle for
