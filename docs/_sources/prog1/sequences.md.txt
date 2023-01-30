@@ -211,7 +211,7 @@ Tranquille. Il a deux trous rouges au côté droit."""
 
 mot = "soldat"
 if mot in poeme:
-    print(f'"{mot}" se trouve bien dans "Le dormeur du Val" d'Arthur Rimbaud')
+    print(f"'{mot}' se trouve bien dans 'Le dormeur du Val' d'Arthur Rimbaud")
 ```
 
 ## La boucle for
