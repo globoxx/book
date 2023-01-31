@@ -280,7 +280,12 @@ def test(func, entree, valeur_attendue, marge=None):
     return True
 ===
 def calcule_moyenne(liste):
-    ...
+    somme = 0
+    for ...
+        # Parcourez l'ensemble des notes de la liste et sommez les notes
+        ...
+    moyenne = ...
+    return moyenne
 
 notes = [4.5, 3, 5, 2, 6, 5.5]
 moyenne = calcule_moyenne(notes)
@@ -417,6 +422,10 @@ def test(func, entree, valeur_attendue, marge=None):
     return True
 ===
 def est_premier(n):
+    if n < 2:
+        return False  # On sait qu'un nombre plus petit que 2 ne peut pas être premier (1 ne l'est pas par convention)
+
+    # Itérez sur les nombres plus petits que n et testez s'ils sont diviseurs de n ou pas
     ...
 
 # Affichage des nombres premiers plus petits que 1000
