@@ -195,6 +195,7 @@ if 'Hugo' not in eleves_presents:
 De la même manière, `in` permet de tester si un mot se trouve dans une phrase ou un texte.
 
 ```{codeplay}
+# Détail: les triple guillements (""") permettent d'entrer des string de plusieurs lignes
 poeme = """C'est un trou de verdure où chante une rivière
 Accrochant follement aux herbes des haillons
 D'argent ; où le soleil, de la montagne fière,
@@ -237,7 +238,8 @@ print(texte3)
 L'instruction `for ... in ...` permet **d'itérer** sur une variable de type séquentiel (par exemple une liste) et de répéter un bloc d'instructions pour chaque valeur de la séquence.  
 `for valeur in liste` peut être traduit en français par `pour chaque valeur de la liste` et permet donc **d'itérer** sur chaque valeur.
 
-Dans l'exemple ci-dessous, la variable `name` prendra successivement les valeurs de la liste `presidents` et la fonction `print()` sera à chaque fois exécutée.
+Dans l'exemple ci-dessous, la variable `name` prendra successivement les valeurs de la liste `presidents` et la fonction `print()` sera à chaque fois exécutée.  
+Une variable qui change ainsi pour chaque élément d'une séquence est appelée une **variable d'itération**.
 
 ```{codeplay}
 presidents = ["Bush", "Clinton", "Bush", "Obama", "Trump"]
@@ -253,8 +255,8 @@ up()
 
 backward(200)
 for couleur in ['yellow', 'cyan', 'orange', 'pink', 'lime']:
-    dot(80, couleur)
-    write(couleur, align='center')
+    dot(80, couleur)  # Dessine un cercle de diamètre 80 de la couleur indiquée
+    write(couleur, align='center')  # Ecris le nom de la couleur dans le cercle
     forward(80)
 ```
 
@@ -380,7 +382,8 @@ for x in range(start, stop, step):
     write(x, align='center')
 ```
 
-En imbriquant 2 boucles `for`, il est possible de construire toutes les tables de multiplications (jusqu'à 9 dans cet exemple).
+En imbriquant 2 boucles `for`, il est possible de construire toutes les tables de multiplications (jusqu'à 9 dans cet exemple).  
+`i` et `j` sont des noms de variable très communément utilisés pour itérer sur des nombres.
 
 ```{codeplay}
 for i in range(1, 10):
