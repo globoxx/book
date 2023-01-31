@@ -304,6 +304,12 @@ document.addEventListener("DOMContentLoaded", function() {
   var clipboard = new ClipboardJS('#copy', {
       text: function(trigger) {
           let data = codeElem.getValue();
+          data = data.split('===\n')
+          if (data.length >= 2) {
+            data = data[1] + '\n'
+          } else {
+            data = data[0]
+          }
           if (includePreludeInDownload) {
             data = prelude + "\n" + data;
           }
@@ -327,6 +333,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Courtesy of https://stackoverflow.com/a/33542499
   function saveFile(filename, data) {
+    data = data.split('===\n')
+    if (data.length >= 2) {
+      data = data[1] + '\n'
+    } else {
+      data = data[0]
+    }
     const blob = new Blob([data], {type: 'text/x-python'});
     if(window.navigator.msSaveOrOpenBlob) {
       window.navigator.msSaveBlob(blob, filename);
