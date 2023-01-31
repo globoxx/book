@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
   var readOnly = false;
   var alwaysShowOutput = false;
   var alwaysHideOutput = false;
-  var includePreludeInDownload = true;
-  var includeAfterwordInDownload = true;
+  var includePreludeInDownload = false;
+  var includeAfterwordInDownload = false;
 
   var rejectInput = null;
 
