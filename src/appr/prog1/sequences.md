@@ -5,13 +5,13 @@
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
-Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d'autres langages de programmation, Python offre la possibilité de stocker des séquences de valeurs dans des variables de type séquentiel (ou itérable).
+Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d'autres langages de programmation, Python offre la possibilité de **stocker des séquences de valeurs** dans des variables de type séquentiel (ou itérable).
 
 Le type `string` que nous connaissons déjà est un exemple de variable séquentiel car il s'agit s'implement d'une séquence de caractères !
 
 ## Le type liste
 
-Une liste est une variable de type séquentiel. C'est une séquence ordonnée d'objets quelconques (nombres, textes, fonctions, etc...).  
+Une liste est une variable de type séquentiel. C'est une **séquence ordonnée d'objets quelconques** (nombres, textes, fonctions, etc...).  
 Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets `[]` séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le numéro de l'élément que l'on souhaite. **Attention, le numérotation commence à 0 !**
 
 Il est aussi possible d'accéder aux éléments en partant de la fin en commençant par l'index -1 pour le dernier élément, puis -2, -3, etc.
@@ -331,7 +331,7 @@ def calcule_moyenne(liste):
 ## Le type range
 
 Une `range` ("intervale" en français) est un autre exemple de variable de type séquentiel.  
-Elles sont utilisées pour stocker des intervales de nombres entiers de manière plus efficace qu'une liste. Une variable de type `range` peut être créée avec la fonction `range(start, stop, step)` qui retourne un interval semi-fermé `[start, stop[` avec un incrément de `step`.
+Elles sont utilisées pour stocker des **intervales de nombres entiers** de manière plus efficace qu'une liste. Une variable de type `range` peut être créée avec la fonction `range(start, stop, step)` qui retourne un interval semi-fermé `[start, stop[` avec un incrément de `step`.
 
 - `start` est la valeur de départ (vaut 0 si pas indiqué),
 - `stop` est la valeur finale, mais sans l'inclure,
