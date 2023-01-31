@@ -39,7 +39,7 @@ En informatique, une liste ...
 {f}`est un ensemble mathématique`
 ```
 
-````{admonition} Exercice 21 - Listes de branches
+````{admonition} Exercice 21 - Listes de branches (facile 😎)
 :class: note
 Créez une liste `branches` et une liste `moyennes` qui contiennent respectivement les noms de 3 branches du gymnase et les moyennes que vous y avez.  
 Affichez ensuite la moyenne pour chaque branche.  
@@ -102,7 +102,7 @@ La liste des méthodes accessibles aux listes est disponible <a href="https://do
 ```
 ````
 
-````{admonition} Exercice 22 - Modifications de listes
+````{admonition} Exercice 22 - Modifications de listes (facile 😎)
 :class: note
 Reprenez l'exercice précédent (l'exercice 21).
 1. Modifier la moyenne de l'une de vos branches
@@ -258,7 +258,7 @@ for couleur in ['yellow', 'cyan', 'orange', 'pink', 'lime']:
     forward(80)
 ```
 
-````{admonition} Exercice 23 - Calcul de moyenne
+````{admonition} Exercice 23 - Calcul de moyenne (moyen 🤓)
 :class: note
 Ecrivez une fonction `calcule_moyenne()` qui prend une liste de nombres en argument et qui retourne la moyenne de ces nombres.  
 Indice: la fonction `len()` permet de calculer la longueur d'une liste.
@@ -390,7 +390,7 @@ for i in range(1, 10):
     print()  # Ajout d'une ligne vide
 ```
 
-````{admonition} Exercice 24 - Nombres premiers
+````{admonition} Exercice 24 - Nombres premiers (difficile 🤯)
 :class: note
 1. Ecrivez une fonction `est_premier()` qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.  
 Pour rappel, un nombre est premier quand il n'est divisible par aucun autre nombre (à part 1 et lui-même).  
