@@ -406,8 +406,6 @@ Les plus petits sont: 2, 3, 5, 7, 11, 13, etc...
 hints: |
     Rappelle toi du modulo `%` pour contrôler si un nombre est divisible par un autre !
     ===
-    Parcours les nombres un à un et vérifie qu'aucun ne soit diviseur du nombre à tester !
-    ===
     Si tu trouves un diviseur, return False, sinon return True !
 ---
 def test(func, entree, valeur_attendue, marge=None):
@@ -428,8 +426,8 @@ def est_premier(n):
     if n < 2:
         return False  # On sait qu'un nombre plus petit que 2 ne peut pas être premier (1 ne l'est pas par convention)
 
-    # Itérez sur les nombres plus petits que n et testez s'ils sont diviseurs de n ou pas
-    ...
+    # Itérez sur tous les nombres entre 2 et n-1 et testez s'ils sont diviseurs de n ou pas
+    for ...
 
 # Affichage des nombres premiers plus petits que 1000
 ...
