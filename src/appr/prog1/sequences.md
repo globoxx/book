@@ -105,7 +105,7 @@ La liste des méthodes accessibles aux listes est disponible <a href="https://do
 ````{admonition} Exercice 22 - Modifications de listes (facile 😎)
 :class: note
 Reprenez l'exercice précédent (l'exercice 21).
-1. Modifier la moyenne de l'une de vos branches
+1. Modifiez la moyenne de l'une de vos branches
 2. Ajoutez une nouvelle branche avec sa moyenne.
 3. Affichez les nouvelles données.
 
@@ -284,7 +284,7 @@ def test(func, entree, valeur_attendue, marge=None):
 def calcule_moyenne(liste):
     somme = 0
     for ...
-        # Parcourez l'ensemble des notes de la liste et sommez les notes
+        # Parcourez l'ensemble des notes de la liste et ajoutez les à la somme
         ...
     moyenne = ...
     return moyenne
