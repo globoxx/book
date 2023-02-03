@@ -32,7 +32,7 @@ def create(size):
         t.pendown()
         t.color('blue')
         t.shape('circle')
-        t.turtlesize(d/20, d/20, 1)
+        #t.shapesize(d/20, d/20, 1)
     return turtles
 ===
 longueur_liste = 20
@@ -93,7 +93,7 @@ def create(size):
         t.pendown()
         t.color('blue')
         t.shape('circle')
-        t.shapesize(d/20, d/20, 1)
+        #t.shapesize(d/20, d/20, 1)
     return turtles
 
 def dessine_min_max(points):
@@ -284,7 +284,7 @@ def create(size):
         t.pendown()
         t.color('blue')
         t.shape('circle')
-        t.shapesize(d/20, d/20, 1)
+        #t.shapesize(d/20, d/20, 1)
     return turtles
 
 def echange(turtles, i, j):
@@ -353,7 +353,7 @@ def create(size):
         t.pendown()
         t.color('blue')
         t.shape('circle')
-        t.shapesize(d/20, d/20, 1)
+        #t.shapesize(d/20, d/20, 1)
     return turtles
     
 def move_simu(turtles, coordinates, nhops=10):
@@ -438,7 +438,7 @@ def create(size):
         t.pendown()
         t.color('blue')
         t.shape('circle')
-        t.shapesize(d/20, d/20, 1)
+        #t.shapesize(d/20, d/20, 1)
     return turtles
     
 def move_simu(turtles, coordinates, nhops=10):
@@ -527,7 +527,7 @@ def create(size):
         t.pendown()
         t.color('blue')
         t.shape('circle')
-        t.shapesize(d/20, d/20, 1)
+        #t.shapesize(d/20, d/20, 1)
     return turtles
     
 def move_simu(turtles, coordinates, nhops=10):
