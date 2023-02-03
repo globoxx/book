@@ -37,7 +37,6 @@ def create(size):
 ===
 longueur_liste = 20
 liste = create(longueur_liste)  # La fonction create (cachée) permet de créer une liste aléatoire de points
-
 done()
 ```
 
@@ -287,9 +286,20 @@ def create(size):
         #t.shapesize(d/20, d/20, 1)
     return turtles
 
+def move_simu(turtles, coordinates, nhops=10):
+    deltas = []
+    for t, coord in zip(turtles, coordinates):
+        current_coord = (t.xcor(), t.ycor())
+        diff = (coord[0]-current_coord[0], coord[1]-current_coord[1])
+        delta = (diff[0] * (1.0/nhops), diff[1] * (1.0/nhops))
+        deltas.append(delta)
+    for _ in range(1, nhops+1):
+        for t, delta in zip(turtles, deltas):
+            t.goto(t.xcor() + delta[0], t.ycor() + delta[1])
+    
 def echange(turtles, i, j):
     turtles_to_move = [turtles[i], turtles[j]]
-    coordinates = [Vec2D(turtles[j].xcor(), turtles[i].ycor()), Vec2D(turtles[i].xcor(), turtles[j].ycor())]
+    coordinates = [(turtles[j].xcor(), turtles[i].ycor()), (turtles[i].xcor(), turtles[j].ycor())]
     turtles[i].color('green')
     turtles[j].color('green')
     move_simu(turtles_to_move, coordinates)
@@ -359,17 +369,17 @@ def create(size):
 def move_simu(turtles, coordinates, nhops=10):
     deltas = []
     for t, coord in zip(turtles, coordinates):
-        current_coord = t.pos()
-        diff = (coord-current_coord)
-        delta = diff * (1.0/nhops)
+        current_coord = (t.xcor(), t.ycor())
+        diff = (coord[0]-current_coord[0], coord[1]-current_coord[1])
+        delta = (diff[0] * (1.0/nhops), diff[1] * (1.0/nhops))
         deltas.append(delta)
     for _ in range(1, nhops+1):
         for t, delta in zip(turtles, deltas):
-            t.goto(t.pos() + delta)
+            t.goto(t.xcor() + delta[0], t.ycor() + delta[1])
     
 def echange(turtles, i, j):
     turtles_to_move = [turtles[i], turtles[j]]
-    coordinates = [Vec2D(turtles[j].xcor(), turtles[i].ycor()), Vec2D(turtles[i].xcor(), turtles[j].ycor())]
+    coordinates = [(turtles[j].xcor(), turtles[i].ycor()), (turtles[i].xcor(), turtles[j].ycor())]
     turtles[i].color('green')
     turtles[j].color('green')
     move_simu(turtles_to_move, coordinates)
@@ -444,17 +454,17 @@ def create(size):
 def move_simu(turtles, coordinates, nhops=10):
     deltas = []
     for t, coord in zip(turtles, coordinates):
-        current_coord = t.pos()
-        diff = (coord-current_coord)
-        delta = diff * (1.0/nhops)
+        current_coord = (t.xcor(), t.ycor())
+        diff = (coord[0]-current_coord[0], coord[1]-current_coord[1])
+        delta = (diff[0] * (1.0/nhops), diff[1] * (1.0/nhops))
         deltas.append(delta)
     for _ in range(1, nhops+1):
         for t, delta in zip(turtles, deltas):
-            t.goto(t.pos() + delta)
+            t.goto(t.xcor() + delta[0], t.ycor() + delta[1])
     
 def echange(turtles, i, j):
     turtles_to_move = [turtles[i], turtles[j]]
-    coordinates = [Vec2D(turtles[j].xcor(), turtles[i].ycor()), Vec2D(turtles[i].xcor(), turtles[j].ycor())]
+    coordinates = [(turtles[j].xcor(), turtles[i].ycor()), (turtles[i].xcor(), turtles[j].ycor())]
     turtles[i].color('green')
     turtles[j].color('green')
     move_simu(turtles_to_move, coordinates)
@@ -533,17 +543,17 @@ def create(size):
 def move_simu(turtles, coordinates, nhops=10):
     deltas = []
     for t, coord in zip(turtles, coordinates):
-        current_coord = t.pos()
-        diff = (coord-current_coord)
-        delta = diff * (1.0/nhops)
+        current_coord = (t.xcor(), t.ycor())
+        diff = (coord[0]-current_coord[0], coord[1]-current_coord[1])
+        delta = (diff[0] * (1.0/nhops), diff[1] * (1.0/nhops))
         deltas.append(delta)
     for _ in range(1, nhops+1):
         for t, delta in zip(turtles, deltas):
-            t.goto(t.pos() + delta)
+            t.goto(t.xcor() + delta[0], t.ycor() + delta[1])
     
 def echange(turtles, i, j):
     turtles_to_move = [turtles[i], turtles[j]]
-    coordinates = [Vec2D(turtles[j].xcor(), turtles[i].ycor()), Vec2D(turtles[i].xcor(), turtles[j].ycor())]
+    coordinates = [(turtles[j].xcor(), turtles[i].ycor()), (turtles[i].xcor(), turtles[j].ycor())]
     turtles[i].color('green')
     turtles[j].color('green')
     move_simu(turtles_to_move, coordinates)
