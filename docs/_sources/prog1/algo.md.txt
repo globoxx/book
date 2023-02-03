@@ -32,7 +32,7 @@ def create(size):
         t.pendown()
         t.color('blue')
         t.shape('circle')
-        t.shapesize(d/20, d/20, 1)
+        t.turtlesize(d/20, d/20, 1)
     return turtles
 ===
 longueur_liste = 20
@@ -218,11 +218,12 @@ Ici nous échangeons les deux premiers éléments, donc les éléments avec les 
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
-
 print(liste)
+
 tmp = liste[0]  # On stocke la valeur de liste[0] car elle sera écrasée par liste[1] et donc perdue autrement
 liste[0] = liste[1]
 liste[1] = tmp
+
 print(liste)
 ```
 
@@ -230,13 +231,13 @@ Le programme devient plus lisible si nous définissons une fonction `echange()` 
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
+print(liste)
 
 def echange(liste, i, j):
     tmp = liste[i]
     liste[i] = liste[j]
     liste[j] = tmp
 
-print(liste)
 echange(liste, 0, 2)
 print(liste)
 ```
@@ -333,6 +334,9 @@ print(liste)
 Visualisons l'algorithme:
 
 ```{codeplay}
+from turtle import *
+from random import *
+
 def echange_elem(liste, i, j):
     liste[i], liste[j] = liste[j], liste[i]
 
@@ -415,6 +419,9 @@ print(liste)
 ```
 
 ```{codeplay}
+from turtle import *
+from random import *
+
 def echange_elem(liste, i, j):
     liste[i], liste[j] = liste[j], liste[i]
 
@@ -501,6 +508,9 @@ print(liste)
 ```
 
 ```{codeplay}
+from turtle import *
+from random import *
+
 def echange_elem(liste, i, j):
     liste[i], liste[j] = liste[j], liste[i]
 
@@ -567,7 +577,7 @@ L'algorithme du tri par sélection peut être simplifé à l'aide de la fonction
 La méthode `liste.index(x)` retourne l'index de l'élément `x` dans la liste.  
 
 Tentez de simplifier l'écriture de l'algorithme de tri par sélection.  
-Indice: toute la boucle interne ne sert qu'à une seule chose, trouver le minimum. Elle peut donc être réécrite avec `min()`.
+Indice: toute la boucle interne ne sert qu'à une seule chose, trouver le minimum et son index. Elle peut donc être réécrite plus simplement avec `min()` et `liste.index()`.
 
 ```{codeplay}
 def echange(liste, i, j):
