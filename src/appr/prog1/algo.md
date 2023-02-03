@@ -256,11 +256,8 @@ def echange(liste, i, j):
 ````{admonition} Exercice 27 - Echanges (moyen)
 :class: note
 Visualisons un peu ces échanges.
-1. Utilisez une boucle `for` et la fonction `echange(liste, i, j)` pour echanger chaque point avec son voisin.
-2. Utilisez une boucle `for`et la fonction `echange(liste, i, j)` pour échanger:
-- Le 1er élément de la liste avec le dernier
-- Le 2ème élément de la liste avec l'avant-dernier
-- etc...
+1. Utilisez une boucle `for` et la fonction `echange(liste, i, j)` pour echanger chaque point avec son voisin. Cela devrait faire remonter le 1er élément de la liste vers la fin de la liste.
+2. Utilisez une boucle `for`et la fonction `echange(liste, i, j)` pour échanger 5 points aléatoirement.
 
 ```{codeplay}
 :file: ex_27.py
@@ -307,6 +304,7 @@ def echange(turtles, i, j):
     turtles[j].color('black')
     echange_elem(turtles, i, j)
 ===
+import random
 longueur_liste = 20
 liste = create(longueur_liste)
 
@@ -596,12 +594,14 @@ def echange(liste, i, j):
 def selection_sort(liste):
     N = len(liste)
     for i in range(N-1):
+        # Partie à modifier ------------
         index_minimum = i
         minimum = liste[i]
         for j in range(i+1, N):
             if liste[j] < minimum:
                 index_minimum = j
                 minimum = liste[j]
+        # ------------------------------
         echange(liste, i, index_minimum)
         print(liste)
     return liste
