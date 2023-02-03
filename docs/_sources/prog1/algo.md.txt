@@ -69,7 +69,7 @@ def calcule_min(liste):
 
 liste = [3, 4, 1, 2, 6, 5]
 minimum = calcule_min(liste)  
-print(minimum)
+print(f'Le minimum est {minimum}')
 ```
 
 Le maximum peut être trouvé de manière similaire, en mettant à jour le plus grand nombre trouvé.  
