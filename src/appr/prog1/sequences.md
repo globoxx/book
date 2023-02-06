@@ -285,6 +285,24 @@ for couleur in ['yellow', 'cyan', 'orange', 'pink', 'lime']:
     forward(80)
 ```
 
+````{question}
+Que va afficher ce programme ?
+
+```python
+somme = 0
+for n in [2, 3, 5, 7, 11]:
+    somme = somme + n
+print(somme)
+```
+
+{f}`7`  
+{f}`14`  
+{v}`28`  
+{f}`11`  
+===
+Le programme calcule la somme des éléments de la liste et l'affiche (2+3+5+7+11 = 28).
+````
+
 ````{admonition} Exercice 23 - Calcul de moyenne (moyen 🤓)
 :class: note
 Ecrivez une fonction `calcule_moyenne()` qui prend une liste de nombres en argument et qui retourne la moyenne de ces nombres.  
@@ -379,19 +397,18 @@ for nombre in nombres:
 ````{question}
 Que va afficher ce programme ? (les `/` remplacent ici un retour à la ligne)
 ```python
-somme = 0
-for n in range(4):
-    somme = somme + n*n
-print(somme)
+mot_complique = 'anticonstitutionnellement'
+for i in range(0, 10, 2):
+    print(mot_complique[i:i+2])
 ```
 
-{v}`14`  
-{f}`6`  
-{f}`39`  
-{f}`0 / 1 / 4 / 9`  
-{f}`0 / 1 / 5 / 14`  
+{f}`a / n / t / i`  
+{f}`a / t / c / n`  
+{v}`an / ti / co / ns`  
+{f}`an / ti / co / ns / ti`  
 ===
-Le programme calcule et affiche la somme des carrés des nombres entre 0 et 3. Donc 0 + 1 + 4 + 9 = 14.
+Le programme itère sur tous les index pairs entre 0 et 8. Pour chaque index `i`, on affiche la tranche de caractères allant de `i` à `i+1`.  
+En résumé, on affiche les caractères aux index: 0-1, 2-3, 4-5, 6-7, 8-9.
 ````
 
 L'exemple suivant dessine un polygone en utilisant une boucle `for` et une `range`.
@@ -424,7 +441,7 @@ for x in range(start, stop, step):
     write(x, align='center')
 ```
 
-En imbriquant 2 boucles `for`, il est possible de construire toutes les tables de multiplications (jusqu'à 9 dans cet exemple).  
+En imbriquant 2 boucles `for`, il est possible de construire toutes les tables de multiplication (jusqu'à 9 dans cet exemple).  
 `i` et `j` sont des noms de variable très communément utilisés pour itérer sur des nombres.
 
 ```{codeplay}

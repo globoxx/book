@@ -417,7 +417,26 @@ A l’inverse, <code class="docutils literal notranslate"><span class="pre">not<
 <p>Dans l’exemple ci-dessous, la variable <code class="docutils literal notranslate"><span class="pre">name</span></code> prendra successivement les valeurs de la liste <code class="docutils literal notranslate"><span class="pre">presidents</span></code> et la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> sera à chaque fois exécutée.<br/>
 Une variable qui change ainsi pour chaque élément d’une séquence est appelée une <strong>variable d’itération</strong>.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJlc2lkZW50cyA9IFsiQnVzaCIsICJDbGludG9uIiwgIkJ1c2giLCAiT2JhbWEiLCAiVHJ1bXAiXQpmb3IgbmFtZSBpbiBwcmVzaWRlbnRzOgogICAgcHJpbnQobmFtZSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple suivant montre comment <strong>itérer</strong> sur une liste de couleurs.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKYmFja3dhcmQoMjAwKQpmb3IgY291bGV1ciBpbiBbJ3llbGxvdycsICdjeWFuJywgJ29yYW5nZScsICdwaW5rJywgJ2xpbWUnXToKICAgIGRvdCg4MCwgY291bGV1cikgICMgRGVzc2luZSB1biBjZXJjbGUgZGUgZGlhbcOodHJlIDgwIGRlIGxhIGNvdWxldXIgaW5kaXF1w6llCiAgICB3cml0ZShjb3VsZXVyLCBhbGlnbj0nY2VudGVyJykgICMgRWNyaXMgbGUgbm9tIGRlIGxhIGNvdWxldXIgZGFucyBsZSBjZXJjbGUKICAgIGZvcndhcmQoODAp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKYmFja3dhcmQoMjAwKQpmb3IgY291bGV1ciBpbiBbJ3llbGxvdycsICdjeWFuJywgJ29yYW5nZScsICdwaW5rJywgJ2xpbWUnXToKICAgIGRvdCg4MCwgY291bGV1cikgICMgRGVzc2luZSB1biBjZXJjbGUgZGUgZGlhbcOodHJlIDgwIGRlIGxhIGNvdWxldXIgaW5kaXF1w6llCiAgICB3cml0ZShjb3VsZXVyLCBhbGlnbj0nY2VudGVyJykgICMgRWNyaXMgbGUgbm9tIGRlIGxhIGNvdWxldXIgZGFucyBsZSBjZXJjbGUKICAgIGZvcndhcmQoODAp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Que va afficher ce programme ?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]:</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">n</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><label class="answer incorrect"><input type="checkbox"/>7</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>14</label><br/>
+<label class="answer correct"><input type="checkbox"/>28</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>11</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Le programme calcule la somme des éléments de la liste et l’affiche (2+3+5+7+11 = 28).</p>
+</div>
+</div>
+</form></div><div class="note admonition">
 <p class="admonition-title">Exercice 23 - Calcul de moyenne (moyen 🤓)</p>
 <p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">calcule_moyenne()</span></code> qui prend une liste de nombres en argument et qui retourne la moyenne de ces nombres.<br/>
 Indice: la fonction <code class="docutils literal notranslate"><span class="pre">len()</span></code> permet de calculer la longueur d’une liste.</p>
@@ -464,25 +483,24 @@ Elles sont utilisées pour stocker des <strong>intervales de nombres entiers</st
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p>Que va afficher ce programme ? (les <code class="docutils literal notranslate"><span class="pre">/</span></code> remplacent ici un retour à la ligne)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mot_complique</span> <span class="o">=</span> <span class="s1">'anticonstitutionnellement'</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mot_complique</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span>
 </pre></div>
 </div>
-<p><label class="answer correct"><input type="checkbox"/>14</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>6</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>39</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>0 / 1 / 4 / 9</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>0 / 1 / 5 / 14</label></p>
+<p><label class="answer incorrect"><input type="checkbox"/>a / n / t / i</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>a / t / c / n</label><br/>
+<label class="answer correct"><input type="checkbox"/>an / ti / co / ns</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>an / ti / co / ns / ti</label></p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
-<p>Le programme calcule et affiche la somme des carrés des nombres entre 0 et 3. Donc 0 + 1 + 4 + 9 = 14.</p>
+<p>Le programme itère sur tous les index pairs entre 0 et 8. Pour chaque index <code class="docutils literal notranslate"><span class="pre">i</span></code>, on affiche la tranche de caractères allant de <code class="docutils literal notranslate"><span class="pre">i</span></code> à <code class="docutils literal notranslate"><span class="pre">i+1</span></code>.<br/>
+En résumé, on affiche les caractères aux index: 0-1, 2-3, 4-5, 6-7, 8-9.</p>
 </div>
 </div>
 </form></div><p>L’exemple suivant dessine un polygone en utilisant une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> et une <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShhLCBuKToKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIHdyaXRlKGkpCiAgICAgICAgZm9yd2FyZChhKQogICAgICAgIGxlZnQoMzYwL24pCgphID0gNTAgIyBsb25ndWV1ciBkZXMgYXJyw6p0ZXMKbiA9IDUgIyBub21icmUgZGUgc29tbWV0cwpwb2x5Z29uZShhLCBuKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En utilisant l’argument <code class="docutils literal notranslate"><span class="pre">step</span></code>, on peut visualiser l’intervale [-50, 250[ avec un incrément de 50.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKc3RhcnQgPSAtMjUwCnN0b3AgPSAyNTAKc3RlcCA9IDUwCmZvciB4IGluIHJhbmdlKHN0YXJ0LCBzdG9wLCBzdGVwKToKICAgIGdvdG8oeCwgMCkKICAgIHdyaXRlKHgsIGFsaWduPSdjZW50ZXInKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En imbriquant 2 boucles <code class="docutils literal notranslate"><span class="pre">for</span></code>, il est possible de construire toutes les tables de multiplications (jusqu’à 9 dans cet exemple).<br/>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKc3RhcnQgPSAtMjUwCnN0b3AgPSAyNTAKc3RlcCA9IDUwCmZvciB4IGluIHJhbmdlKHN0YXJ0LCBzdG9wLCBzdGVwKToKICAgIGdvdG8oeCwgMCkKICAgIHdyaXRlKHgsIGFsaWduPSdjZW50ZXInKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En imbriquant 2 boucles <code class="docutils literal notranslate"><span class="pre">for</span></code>, il est possible de construire toutes les tables de multiplication (jusqu’à 9 dans cet exemple).<br/>
 <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code> sont des noms de variable très communément utilisés pour itérer sur des nombres.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Zm9yIGkgaW4gcmFuZ2UoMSwgMTApOgogICAgcHJpbnQoZidUYWJsZSBkZSB7aX0nKQogICAgZm9yIGogaW4gcmFuZ2UoMSwgMTApOgogICAgICAgIHByaW50KGYne2l9KntqfSA9IHtpKmp9JykKICAgIHByaW50KCkgICMgQWpvdXQgZCd1bmUgbGlnbmUgdmlkZQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
 <p class="admonition-title">Exercice 24 - Nombres premiers (difficile 🤯)</p>

@@ -290,6 +290,8 @@ En Python, `random` est
 {f}`une condition`  
 {f}`une variable aléatoire`  
 {f}`un mot-clé`
+===
+Un module est un recueil de fonctions prêtes à l'emploi que l'on peut importer dans notre code.
 ```
 
 ````{admonition} Exercice 20 - Devine mon nombre !

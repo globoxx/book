@@ -581,7 +581,7 @@ done()
 
 ````{admonition} Exercice 28 - Amélioration (difficile)
 :class: note
-L'algorithme du tri par sélection peut être simplifé à l'aide de la fonctions `min()` et de la méthode `index()`.  
+L'algorithme du tri par sélection peut être simplifé à l'aide de la fonction `min()` et de la méthode `index()`.  
 La méthode `liste.index(x)` retourne l'index de l'élément `x` dans la liste.  
 
 Tentez de simplifier l'écriture de l'algorithme de tri par sélection.  
