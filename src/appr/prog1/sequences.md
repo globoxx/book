@@ -22,6 +22,8 @@ visiteurs = [200, 120, 345, 256, 123, 765, 644]
 
 # On accède aux données du 1er jour (index 0)
 print(f"Le {jours[0]}, il y a eu {visiteurs[0]} visiteurs")
+# On accède aux données du 2ème jour (index 1)
+print(f"Le {jours[1]}, il y a eu {visiteurs[1]} visiteurs")
 # ...
 # On accède aux données du dernier jour (index 06)
 print(f"Le {jours[6]}, il y a eu {visiteurs[6]} visiteurs") 
@@ -37,6 +39,8 @@ En informatique, une liste ...
 {f}`n'est jamais vide`  
 {f}`ne contient que des éléments du même type`  
 {f}`est un ensemble mathématique`
+===
+Une liste est une séquence **ordonnée** d'objets quelconques (nombres, strings, fonctions, etc). Une liste peut même contenir d'autres listes.
 ```
 
 ````{admonition} Exercice 21 - Listes de branches (facile 😎)
@@ -78,6 +82,8 @@ Que se passe-t-il si vous essayez d'accéder à un index en dehors de la liste (
 {v}`vous avez une erreur de type "index out of range"`  
 {f}`vous avez une erreur de type "invalid literal"`  
 {f}`la valeur accédée dans ce cas vaut toujours 0`
+===
+Le plus grand index possible d'une liste de longueur n est n-1. Si vous dépassez cet index, vous êtes "out of range" (hors des limites) et le programme plante.
 ```
 
 Pour modifier un élément d'une liste, il suffit d'utiliser le signe `=` pour mettre une nouvelle valeur à l'index voulu.  
@@ -142,11 +148,26 @@ print(moyennes)
 ````
 ````` -->
 
-Les chaînes de caractères (`str`) peuvent aussi être indexées (chaque élément correspond alors à un caractère).
+````{question}
+Que va afficher ce programme ?
+```python
+grille= [[1,2,3],[4,5,6],[7,8,9]]
+print(grille[2][1])
+```
+
+{f}`4`  
+{v}`8`  
+{f}`2`  
+{f}`6`
+===
+On affiche le 2ème élément (index 1) de la 3ème liste (index 2).
+````
+
+Les caractères d'une chaînes de caractères (`str`) peuvent aussi être indexés (numérotés). Chaque élément d'un string correspond alors à un caractère.
 
 ```{codeplay}
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
-print(noms[0][0])  # Accès à la première lettre de Tim
+print(noms[0][0])  # Accès à la 1ère lettre de Tim
 print(noms[2][1])  # Accès à la 2ème lettre de Kim
 print(noms[-1][2])  # Accès à la 3ème lettre de Léa
 ```
@@ -156,9 +177,9 @@ La notation `[i:j]`, après le nom d'une variable qui contient une liste, permet
 ```{codeplay}
 noms = ['Tim', 'Mia', 'Kim', 'Anna', 'Cindy', 'Léa']
 
-print(noms[:2])  # élément 0 et 1 (les 2 premiers éléments)
-print(noms[2:4])  # élément 2 et 3
-print(noms[4:])  # élément 4 et 5 (tous les éléments à partir de l'index 4)
+print(noms[:2])  # éléments 0 et 1 (les 2 premiers éléments)
+print(noms[2:4])  # éléments 2 et 3
+print(noms[4:])  # éléments 4 et 5 (tous les éléments à partir de l'index 4)
 ```
 
 ```{question}
@@ -168,6 +189,8 @@ Quel est le résultat de l'expression `'python'[:2]` ?
 {f}`y`  
 {f}`p`  
 {v}`py`  
+===
+La tranche [:2] récupère les 2 premiers éléments (0 et 1).
 ```
 
 ```{question}
@@ -177,6 +200,8 @@ Quel est le résultat de l'expression `'pikachu'[-3:]` ?
 {v}`chu`  
 {f}`p`  
 {f}`pika`  
+===
+La tranche [-3:] récupère les 3 derniers éléments (-3, -2, -1).
 ```
 
 Le mot-clé `in` permet de tester si une valeur se trouve dans une liste (ou n'importe quelle autre variable de type séquentiel).  
@@ -219,7 +244,7 @@ if mot in poeme:
     print(f"Le mot '{mot}' se trouve bien dans 'Le dormeur du Val' d'Arthur Rimbaud")
 ```
 
-L'opérateur `+` permet de **concaténer** (appondre) plusieurs listes ou plusieurs chaînes de caractères (sting) ensemble.
+L'opérateur `+` permet de **concaténer** (appondre) plusieurs listes ou plusieurs chaînes de caractères (string) ensemble.
 
 ```{codeplay}
 liste1 = [1, 2, 3, 4]
@@ -283,9 +308,8 @@ def test(func, entree, valeur_attendue, marge=None):
 ===
 def calcule_moyenne(liste):
     somme = 0
-    for ...
-        # Parcourez l'ensemble des notes de la liste et ajoutez les à la somme
-        ...
+    # Parcourez l'ensemble des notes de la liste et ajoutez-les à somme
+    ...
     moyenne = ...
     return moyenne
 
@@ -351,6 +375,24 @@ nombres = range(1, 10)  # Contient les nombres 1 jusqu'à 9
 for nombre in nombres:
     print(f'{nombre}^2 = {nombre ** 2}')
 ```
+
+````{question}
+Que va afficher ce programme ? (les `/` remplacent ici un retour à la ligne)
+```python
+somme = 0
+for n in range(4):
+    somme = somme + n*n
+print(somme)
+```
+
+{v}`14`  
+{f}`6`  
+{f}`39`  
+{f}`0 / 1 / 4 / 9`  
+{f}`0 / 1 / 5 / 14`  
+===
+Le programme calcule et affiche la somme des carrés des nombres entre 0 et 3. Donc 0 + 1 + 4 + 9 = 14.
+````
 
 L'exemple suivant dessine un polygone en utilisant une boucle `for` et une `range`.
 
@@ -427,7 +469,7 @@ def est_premier(n):
         return False  # On sait qu'un nombre plus petit que 2 ne peut pas être premier (1 ne l'est pas par convention)
 
     # Itérez sur tous les nombres entre 2 et n-1 et testez s'ils sont diviseurs de n ou pas
-    for ...
+    ...
 
 # Affichage des nombres premiers plus petits que 1000
 ...
