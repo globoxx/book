@@ -12,7 +12,9 @@ Le type `string` que nous connaissons déjà est un exemple de variable séquent
 ## Le type liste
 
 Une liste est une variable de type séquentiel. C'est une **séquence ordonnée d'objets quelconques** (nombres, textes, fonctions, etc...).  
-Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets `[]` séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le numéro de l'élément que l'on souhaite. **Attention, le numérotation commence à 0 !**
+Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets `[]` séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le **numéro de l'élément** que l'on souhaite. **Attention, le numérotation commence à 0 !**
+
+On appelle le numéro d'un élément **l'index**. Ainsi, par exemple, le 3ème élément d'une liste se trouve à l'index 4.
 
 Il est aussi possible d'accéder aux éléments en partant de la fin en commençant par l'index -1 pour le dernier élément, puis -2, -3, etc.
 
@@ -25,7 +27,7 @@ print(f"Le {jours[0]}, il y a eu {visiteurs[0]} visiteurs")
 # On accède aux données du 2ème jour (index 1)
 print(f"Le {jours[1]}, il y a eu {visiteurs[1]} visiteurs")
 # ...
-# On accède aux données du dernier jour (index 06)
+# On accède aux données du dernier jour (index 6)
 print(f"Le {jours[6]}, il y a eu {visiteurs[6]} visiteurs") 
 
 # Il est aussi possible d'accéder au dernier élément avec l'index -1
@@ -76,7 +78,7 @@ print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 ````` -->
 
 ```{question}
-Que se passe-t-il si vous essayez d'accéder à un index en dehors de la liste (par exemple à l'index 3 dans l'exercice précédent) ?
+Que se passe-t-il si vous essayez d'accéder à un index en dehors de la liste (par exemple à l'index 3 dans une liste de 3 éléments) ?
 
 {f}`ça fonctionne sans problème`  
 {v}`vous avez une erreur de type "index out of range"`  
@@ -86,15 +88,15 @@ Que se passe-t-il si vous essayez d'accéder à un index en dehors de la liste (
 Le plus grand index possible d'une liste de longueur n est n-1. Si vous dépassez cet index, vous êtes "out of range" (hors des limites) et le programme plante.
 ```
 
-Pour modifier un élément d'une liste, il suffit d'utiliser le signe `=` pour mettre une nouvelle valeur à l'index voulu.  
-Pour ajouter un élément à une liste, on utilise la **méthode** `append()` ("ajouter" en français) en donnant en argument la valeur à ajouter.  
+Pour modifier un élément d'une liste à un certain index, il suffit d'utiliser le signe `=` pour mettre une nouvelle valeur à l'index voulu.  
+Pour ajouter un élément à la fin d'une liste, on utilise la **méthode** `append()` ("ajouter" en français) en donnant en argument la valeur à ajouter.  
 
 ```{codeplay}
 nombres = [5, 2, 6, 3, 8]
 print(nombres)
-nombres[2] = -5  # On modifie le 3ème élément de la liste
+nombres[2] = -5  # On modifie le 3ème élément de la liste (il vaudra ainsi -5 au lieu de 6)
 print(nombres)
-nombres.append(1000)  # On ajoute un élément à la liste
+nombres.append(1000)  # On ajoute un élément à la liste (ici le chiffre 1000)
 print(nombres)
 ```
 
@@ -111,8 +113,8 @@ La liste des méthodes accessibles aux listes est disponible <a href="https://do
 ````{admonition} Exercice 22 - Modifications de listes (facile 😎)
 :class: note
 Reprenez l'exercice précédent (l'exercice 21).
-1. Modifiez la moyenne de l'une de vos branches
-2. Ajoutez une nouvelle branche avec sa moyenne.
+1. Modifiez la moyenne de l'une de vos branches.
+2. Ajoutez une nouvelle branche à votre liste de branches. Ajoutez également la moyenne correspondante dans la liste de moyennes.
 3. Affichez les nouvelles données.
 
 ```{codeplay}
@@ -160,7 +162,8 @@ print(grille[2][1])
 {f}`2`  
 {f}`6`
 ===
-On affiche le 2ème élément (index 1) de la 3ème liste (index 2).
+La variable `grille` est une liste contenant 3 listes de 3 nombres chacune.  
+Le programme affiche le 2ème élément (index 1) de la 3ème liste (index 2).
 ````
 
 Les caractères d'une chaînes de caractères (`str`) peuvent aussi être indexés (numérotés). Chaque élément d'un string correspond alors à un caractère.
@@ -300,7 +303,8 @@ print(somme)
 {v}`28`  
 {f}`11`  
 ===
-Le programme calcule la **somme** des éléments de la liste et l'affiche (2+3+5+7+11 = 28).
+Le programme calcule la **somme** des éléments de la liste et l'affiche (2+3+5+7+11 = 28).  
+Cela se fait en **itérant** sur chaque nombre de la liste (la variable d'itération `n` vaut donc successivement 2, 3, 5, 7 et 11).
 ````
 
 ````{admonition} Exercice 23 - Calcul de moyenne (moyen 🤓)

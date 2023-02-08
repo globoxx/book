@@ -267,9 +267,10 @@
 <section id="le-type-liste">
 <h2>Le type liste<a class="headerlink" href="#le-type-liste" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une liste est une variable de type séquentiel. C’est une <strong>séquence ordonnée d’objets quelconques</strong> (nombres, textes, fonctions, etc…).<br/>
-Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code> séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le numéro de l’élément que l’on souhaite. <strong>Attention, le numérotation commence à 0 !</strong></p>
+Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code> séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le <strong>numéro de l’élément</strong> que l’on souhaite. <strong>Attention, le numérotation commence à 0 !</strong></p>
+<p>On appelle le numéro d’un élément <strong>l’index</strong>. Ainsi, par exemple, le 3ème élément d’une liste se trouve à l’index 4.</p>
 <p>Il est aussi possible d’accéder aux éléments en partant de la fin en commençant par l’index -1 pour le dernier élément, puis -2, -3, etc.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="am91cnMgPSBbImx1bmRpIiwgIm1hcmRpIiwgIm1lcmNyZWRpIiwgImpldWRpIiwgInZlbmRyZWRpIiwgInNhbWVkaSIsICJkaW1hbmNoZSJdCnZpc2l0ZXVycyA9IFsyMDAsIDEyMCwgMzQ1LCAyNTYsIDEyMywgNzY1LCA2NDRdCgojIE9uIGFjY8OoZGUgYXV4IGRvbm7DqWVzIGR1IDFlciBqb3VyIChpbmRleCAwKQpwcmludChmIkxlIHtqb3Vyc1swXX0sIGlsIHkgYSBldSB7dmlzaXRldXJzWzBdfSB2aXNpdGV1cnMiKQojIE9uIGFjY8OoZGUgYXV4IGRvbm7DqWVzIGR1IDLDqG1lIGpvdXIgKGluZGV4IDEpCnByaW50KGYiTGUge2pvdXJzWzFdfSwgaWwgeSBhIGV1IHt2aXNpdGV1cnNbMV19IHZpc2l0ZXVycyIpCiMgLi4uCiMgT24gYWNjw6hkZSBhdXggZG9ubsOpZXMgZHUgZGVybmllciBqb3VyIChpbmRleCAwNikKcHJpbnQoZiJMZSB7am91cnNbNl19LCBpbCB5IGEgZXUge3Zpc2l0ZXVyc1s2XX0gdmlzaXRldXJzIikgCgojIElsIGVzdCBhdXNzaSBwb3NzaWJsZSBkJ2FjY8OpZGVyIGF1IGRlcm5pZXIgw6lsw6ltZW50IGF2ZWMgbCdpbmRleCAtMQpwcmludChmIkxlIHtqb3Vyc1stMV19LCBpbCB5IGEgZXUge3Zpc2l0ZXVyc1stMV19IHZpc2l0ZXVycyIpIA==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="am91cnMgPSBbImx1bmRpIiwgIm1hcmRpIiwgIm1lcmNyZWRpIiwgImpldWRpIiwgInZlbmRyZWRpIiwgInNhbWVkaSIsICJkaW1hbmNoZSJdCnZpc2l0ZXVycyA9IFsyMDAsIDEyMCwgMzQ1LCAyNTYsIDEyMywgNzY1LCA2NDRdCgojIE9uIGFjY8OoZGUgYXV4IGRvbm7DqWVzIGR1IDFlciBqb3VyIChpbmRleCAwKQpwcmludChmIkxlIHtqb3Vyc1swXX0sIGlsIHkgYSBldSB7dmlzaXRldXJzWzBdfSB2aXNpdGV1cnMiKQojIE9uIGFjY8OoZGUgYXV4IGRvbm7DqWVzIGR1IDLDqG1lIGpvdXIgKGluZGV4IDEpCnByaW50KGYiTGUge2pvdXJzWzFdfSwgaWwgeSBhIGV1IHt2aXNpdGV1cnNbMV19IHZpc2l0ZXVycyIpCiMgLi4uCiMgT24gYWNjw6hkZSBhdXggZG9ubsOpZXMgZHUgZGVybmllciBqb3VyIChpbmRleCA2KQpwcmludChmIkxlIHtqb3Vyc1s2XX0sIGlsIHkgYSBldSB7dmlzaXRldXJzWzZdfSB2aXNpdGV1cnMiKSAKCiMgSWwgZXN0IGF1c3NpIHBvc3NpYmxlIGQnYWNjw6lkZXIgYXUgZGVybmllciDDqWzDqW1lbnQgYXZlYyBsJ2luZGV4IC0xCnByaW50KGYiTGUge2pvdXJzWy0xXX0sIGlsIHkgYSBldSB7dmlzaXRldXJzWy0xXX0gdmlzaXRldXJzIikg" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p>En informatique, une liste …</p>
@@ -305,7 +306,7 @@ print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
-<p>Que se passe-t-il si vous essayez d’accéder à un index en dehors de la liste (par exemple à l’index 3 dans l’exercice précédent) ?</p>
+<p>Que se passe-t-il si vous essayez d’accéder à un index en dehors de la liste (par exemple à l’index 3 dans une liste de 3 éléments) ?</p>
 <p><label class="answer incorrect"><input type="checkbox"/>ça fonctionne sans problème</label><br/>
 <label class="answer correct"><input type="checkbox"/>vous avez une erreur de type « index out of range »</label><br/>
 <label class="answer incorrect"><input type="checkbox"/>vous avez une erreur de type « invalid literal »</label><br/>
@@ -315,9 +316,9 @@ print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 <p>Le plus grand index possible d’une liste de longueur n est n-1. Si vous dépassez cet index, vous êtes “out of range” (hors des limites) et le programme plante.</p>
 </div>
 </div>
-</form></div><p>Pour modifier un élément d’une liste, il suffit d’utiliser le signe <code class="docutils literal notranslate"><span class="pre">=</span></code> pour mettre une nouvelle valeur à l’index voulu.<br/>
-Pour ajouter un élément à une liste, on utilise la <strong>méthode</strong> <code class="docutils literal notranslate"><span class="pre">append()</span></code> (“ajouter” en français) en donnant en argument la valeur à ajouter.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IFs1LCAyLCA2LCAzLCA4XQpwcmludChub21icmVzKQpub21icmVzWzJdID0gLTUgICMgT24gbW9kaWZpZSBsZSAzw6htZSDDqWzDqW1lbnQgZGUgbGEgbGlzdGUKcHJpbnQobm9tYnJlcykKbm9tYnJlcy5hcHBlbmQoMTAwMCkgICMgT24gYWpvdXRlIHVuIMOpbMOpbWVudCDDoCBsYSBsaXN0ZQpwcmludChub21icmVzKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="hint admonition">
+</form></div><p>Pour modifier un élément d’une liste à un certain index, il suffit d’utiliser le signe <code class="docutils literal notranslate"><span class="pre">=</span></code> pour mettre une nouvelle valeur à l’index voulu.<br/>
+Pour ajouter un élément à la fin d’une liste, on utilise la <strong>méthode</strong> <code class="docutils literal notranslate"><span class="pre">append()</span></code> (“ajouter” en français) en donnant en argument la valeur à ajouter.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IFs1LCAyLCA2LCAzLCA4XQpwcmludChub21icmVzKQpub21icmVzWzJdID0gLTUgICMgT24gbW9kaWZpZSBsZSAzw6htZSDDqWzDqW1lbnQgZGUgbGEgbGlzdGUgKGlsIHZhdWRyYSBhaW5zaSAtNSBhdSBsaWV1IGRlIDYpCnByaW50KG5vbWJyZXMpCm5vbWJyZXMuYXBwZW5kKDEwMDApICAjIE9uIGFqb3V0ZSB1biDDqWzDqW1lbnQgw6AgbGEgbGlzdGUgKGljaSBsZSBjaGlmZnJlIDEwMDApCnByaW50KG5vbWJyZXMp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="hint admonition">
 <p class="admonition-title">Pour aller plus loin</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
 <summary class="summary-title card-header">
@@ -334,8 +335,8 @@ Pour ajouter un élément à une liste, on utilise la <strong>méthode</strong> 
 <p class="admonition-title">Exercice 22 - Modifications de listes (facile 😎)</p>
 <p>Reprenez l’exercice précédent (l’exercice 21).</p>
 <ol class="simple">
-<li><p>Modifiez la moyenne de l’une de vos branches</p></li>
-<li><p>Ajoutez une nouvelle branche avec sa moyenne.</p></li>
+<li><p>Modifiez la moyenne de l’une de vos branches.</p></li>
+<li><p>Ajoutez une nouvelle branche à votre liste de branches. Ajoutez également la moyenne correspondante dans la liste de moyennes.</p></li>
 <li><p>Affichez les nouvelles données.</p></li>
 </ol>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Li4uICAjIENvcGlleiBsJ2V4ZXJjaWNlIDIxIGljaQoKLi4uICAjIEZhaXRlcyBsZXMgbW9kaWZpY2F0aW9ucyBkZW1hbmTDqWVzCgpwcmludChicmFuY2hlcykKcHJpbnQobW95ZW5uZXMp" data-file="ZXhfMjIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
@@ -374,7 +375,8 @@ print(moyennes)
 <label class="answer incorrect"><input type="checkbox"/>6</label></p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
-<p>On affiche le 2ème élément (index 1) de la 3ème liste (index 2).</p>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">grille</span></code> est une liste contenant 3 listes de 3 nombres chacune.<br/>
+Le programme affiche le 2ème élément (index 1) de la 3ème liste (index 2).</p>
 </div>
 </div>
 </form></div><p>Les caractères d’une chaînes de caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>) peuvent aussi être indexés (numérotés). Chaque élément d’un string correspond alors à un caractère.</p>
@@ -433,7 +435,8 @@ Une variable qui change ainsi pour chaque élément d’une séquence est appel�
 <label class="answer incorrect"><input type="checkbox"/>11</label></p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
-<p>Le programme calcule la <strong>somme</strong> des éléments de la liste et l’affiche (2+3+5+7+11 = 28).</p>
+<p>Le programme calcule la <strong>somme</strong> des éléments de la liste et l’affiche (2+3+5+7+11 = 28).<br/>
+Cela se fait en <strong>itérant</strong> sur chaque nombre de la liste (la variable d’itération <code class="docutils literal notranslate"><span class="pre">n</span></code> vaut donc successivement 2, 3, 5, 7 et 11).</p>
 </div>
 </div>
 </form></div><div class="note admonition">
