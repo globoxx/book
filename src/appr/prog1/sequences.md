@@ -7,7 +7,7 @@
 
 Certains programmes nécessitent l'utilisation d'un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d'autres langages de programmation, Python offre la possibilité de **stocker des séquences de valeurs** dans des variables de type séquentiel (ou itérable).
 
-Le type `string` que nous connaissons déjà est un exemple de variable séquentiel car il s'agit s'implement d'une séquence de caractères !
+Le type `string` que nous connaissons déjà est un exemple de variable séquentiel car il s'agit simplement d'une séquence de caractères !
 
 ## Le type liste
 
@@ -300,7 +300,7 @@ print(somme)
 {v}`28`  
 {f}`11`  
 ===
-Le programme calcule la somme des éléments de la liste et l'affiche (2+3+5+7+11 = 28).
+Le programme calcule la **somme** des éléments de la liste et l'affiche (2+3+5+7+11 = 28).
 ````
 
 ````{admonition} Exercice 23 - Calcul de moyenne (moyen 🤓)
@@ -394,23 +394,6 @@ for nombre in nombres:
     print(f'{nombre}^2 = {nombre ** 2}')
 ```
 
-````{question}
-Que va afficher ce programme ? (les `/` remplacent ici un retour à la ligne)
-```python
-mot_complique = 'anticonstitutionnellement'
-for i in range(0, 10, 2):
-    print(mot_complique[i:i+2])
-```
-
-{f}`a / n / t / i`  
-{f}`a / t / c / n`  
-{v}`an / ti / co / ns`  
-{f}`an / ti / co / ns / ti`  
-===
-Le programme itère sur tous les index pairs entre 0 et 8. Pour chaque index `i`, on affiche la tranche de caractères allant de `i` à `i+1`.  
-En résumé, on affiche les caractères aux index: 0-1, 2-3, 4-5, 6-7, 8-9.
-````
-
 L'exemple suivant dessine un polygone en utilisant une boucle `for` et une `range`.
 
 ```{codeplay}
@@ -451,6 +434,23 @@ for i in range(1, 10):
         print(f'{i}*{j} = {i*j}')
     print()  # Ajout d'une ligne vide
 ```
+
+````{question}
+Que va afficher ce programme ? (les `/` remplacent ici un retour à la ligne)
+```python
+mot_complique = 'anticonstitutionnellement'
+for i in range(0, 10, 2):
+    print(mot_complique[i:i+2])
+```
+
+{f}`a / n / t / i`  
+{f}`a / t / c / n`  
+{v}`an / ti / co / ns`  
+{f}`an / ti / co / ns / ti`  
+===
+Le programme itère sur tous les index pairs dans l'intervale [0, 10[ (donc 0,2,4,6,8). Pour chaque index `i`, il affiche la tranche de caractères allant de `i` à `i+1`.  
+En résumé, on affiche les caractères aux index suivants: 0-1, 2-3, 4-5, 6-7, 8-9.
+````
 
 ````{admonition} Exercice 24 - Nombres premiers (difficile 🤯)
 :class: note

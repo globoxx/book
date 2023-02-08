@@ -55,7 +55,7 @@ def visit_check_buttons_html(self, node):
     tag = self.starttag(node, "div", CLASS="controls")
     self.body.append(tag.strip())
     self.body.append("<button type=\"button\" class=\"reset btn btn-secondary\"><i class=\"fa fa-repeat\"></i> Effacer</button>")
-    self.body.append("<button type=\"button\" class=\"show btn btn-secondary\"><i class=\"fa fa-eye\"></i> Montrer</button>")
+    self.body.append("<button type=\"button\" class=\"show btn btn-secondary\"><i class=\"fa fa-eye\"></i> Montrer l'explication</button>")
     self.body.append("<button type=\"button\" class=\"check btn btn-primary\"><i class=\"fa fa-question\"></i> Vérifier</button>")
 
 def depart_check_buttons_html(self, node):
