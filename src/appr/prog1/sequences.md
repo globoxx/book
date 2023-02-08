@@ -12,7 +12,19 @@ Le type `string` que nous connaissons déjà est un exemple de variable séquent
 ## Le type liste
 
 Une liste est une variable de type séquentiel. C'est une **séquence ordonnée d'objets quelconques** (nombres, textes, fonctions, etc...).  
-Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets `[]` séparés par des virgules. Ensuite on peut accéder au contenu de la liste en indiquant entre crochets le **numéro de l'élément** que l'on souhaite. **Attention, le numérotation commence à 0 !**
+Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets `[]` séparés par des virgules.
+
+```{codeplay}
+noms = ['Tim', 'Kim', 'Anna', 'Cindy']
+notes = [4, 5, 4, 5.5, 6, 3.5]
+couleurs = ['fuchsia', 'pink', 'orange']
+
+print(noms)
+print(notes)
+print(couleurs)
+```
+
+On peut accéder au contenu d'une liste en indiquant entre crochets `[]` le **numéro de l'élément** que l'on souhaite. **Attention, le numérotation commence à 0 !**
 
 On appelle le numéro d'un élément **l'index**. Ainsi, par exemple, le 3ème élément d'une liste se trouve à l'index 4.
 
