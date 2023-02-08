@@ -26,7 +26,7 @@ print(couleurs)
 
 On peut accéder au contenu d'une liste en indiquant entre crochets `[]` le **numéro de l'élément** que l'on souhaite. **Attention, le numérotation commence à 0 !**
 
-On appelle le numéro d'un élément **l'index**. Ainsi, par exemple, le 3ème élément d'une liste se trouve à l'index 4.
+On appelle le numéro d'un élément **l'index**. Ainsi, par exemple, le 3ème élément d'une liste se trouve à l'index 2.
 
 Il est aussi possible d'accéder aux éléments en partant de la fin en commençant par l'index -1 pour le dernier élément, puis -2, -3, etc.
 
