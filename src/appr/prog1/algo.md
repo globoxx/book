@@ -69,7 +69,7 @@ Pour trouver le minimum dans une liste, une manière courante de faire est de:
 
 ```{codeplay}
 def calcule_min(liste):
-    minimum = float('inf')
+    minimum = float('inf')  # Plus grand nombre possible (infini)
     for valeur in liste:
         if valeur < minimum:
             minimum = valeur
@@ -247,7 +247,7 @@ def echange(liste, i, j):
     liste[i] = liste[j]
     liste[j] = tmp
 
-echange(liste, 0, 2)
+echange(liste, 0, 1)  # Echange de l'élément à l'index 0 avec celui à l'index 1
 print(liste)
 ```
 
@@ -401,7 +401,6 @@ Les algorithmes suivants sont **à comprendre** (leur fonctionnement et leurs di
 L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre si nécessaire. Il recommence ensuite au début de la liste jusqu'à ce que toute la liste soit triée. Le mot 'bulles' fait référence aux bulles dans une boisson qui montent à la surface exactement comme les grands éléments remontent progressivement vers la fin de la liste.
 
 ```{image} media/tri_a_bulles.gif
-:width: 300px
 ```
 
 ```{codeplay}
