@@ -491,7 +491,6 @@ Il parcourt la liste d’éléments à trier du 2ème au dernier élément.
 Pour chaque élément considéré, il l’insère à l’emplacement correct à gauche dans la liste déjà parcourue en redescendant l'index.
 
 ```{image} media/tri_par_insertion.gif
-:width: 300px
 ```
 
 ```{codeplay}
@@ -582,10 +581,7 @@ Et ainsi de suite...
 Pour résumer, il met le plus petit élément en 1ère position (index 0), puis le 2ème plus petit élément à la 2ème position (index 1), puis le 3ème plus petit élément à la 3ème position (index 2), etc...
 
 ```{image} media/tri_par_selection.gif
-:width: 300px
 ```
-
-.. image:: media/tri_par_selection.gif
 
 ```{codeplay}
 def echange(liste, i, j):
