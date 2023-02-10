@@ -5,12 +5,19 @@
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
-Dans ce chapitre, nous allons découvrir quelques algorithmes à appliquer sur des listes. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale dans l’informatique. Le succès énorme de Google est basé sur un tri efficace de l’information, car dans une liste triée on peut trouver un élément beaucoup plus vite.  
+Dans ce chapitre, nous allons découvrir quelques algorithmes récurrents en informatique. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale. **L'énorme succès de Google est basé sur un tri efficace de l’information**, car dans une liste triée, on peut retrouver un élément beaucoup plus vite.  
+
+Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, vous utilisez sans le savoir un algorithme de tri.
+
+```{image} media/cartes.webp
+:width: 300px
+```
+
 Nous allons voir que :
 
-- la fonction `min(liste)` retourne le minimum,
-- la fonction `max(liste)` retourne le maximum,
-- la fontion `sorted(liste)` trie une liste dans l'ordre croissant.
+- la fonction `min(liste)` retourne le minimum de la liste en argument,
+- la fonction `max(liste)` retourne le maximum de la liste en argument,
+- la fontion `sorted(liste)` trie la liste en argument dans l'ordre croissant.
 
 Pour visualiser les listes de nombres, nous allons utiliser le module `turtle` pour dessiner des points representant chaque nombre.  
 **La hauteur du point représente sa valeur**.
@@ -36,14 +43,13 @@ def create(size):
     return turtles
 ===
 longueur_liste = 20
-liste = create(longueur_liste)  # La fonction create (cachée) permet de créer une liste aléatoire de points
+liste = create(longueur_liste)  # La fonction create (dont la définition est cachée) permet de créer une liste aléatoire de points
 done()
 ```
 
 ## Fonctions min et max
 
 Les fonctions `min()` et `max()` retournent le minimum et le maximum d'une liste à l'aide d'un algorithme.  
-Mais comment fonctionne cet algorithme ?
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
@@ -52,17 +58,19 @@ print(min(liste))
 print(max(liste))
 ```
 
-Ces fonctions sont très utiles mais nous allons voir comment les écrire nous-mêmes !
-Pour trouver le minimum dans une liste il faut :
+Mais comment fonctionne ces algorithmes ?
 
-- prendre la première valeur comme minimum courant,
-- parcourir le reste de la liste,
-- mettre à jour le minimum à chaque fois que l'on trouve un nombre plus petit.
+Ces fonctions sont très utiles et nous allons voir comment les écrire nous-mêmes !
+Pour trouver le minimum dans une liste, une manière courante de faire est de:
+
+- initialiser une variable `minimum` avec une très grande valeur (infini),
+- parcourir la liste de nombres,
+- mettre à jour `minimum` à chaque fois que l'on trouve un nombre plus petit.
 
 ```{codeplay}
 def calcule_min(liste):
-    minimum = liste[0]
-    for valeur in liste[1:]:
+    minimum = float('inf')
+    for valeur in liste:
         if valeur < minimum:
             minimum = valeur
     return minimum
@@ -72,7 +80,7 @@ minimum = calcule_min(liste)
 print(f'Le minimum est {minimum}')
 ```
 
-Le maximum peut être trouvé de manière similaire, en mettant à jour le plus grand nombre trouvé.  
+Le maximum peut être trouvé de manière similaire, **en mettant à jour le plus grand nombre trouvé**.  
 Voici une visualisation des algorithmes `min()` et `max()` où les points rouges représentent les plus petites et plus grandes valeurs trouvées dans la liste:
 
 ```{codeplay}
@@ -129,15 +137,15 @@ dessine_min_max(liste)
 done()
 ```
 
-````{admonition} Exercice 25 - Max (facile)
+````{admonition} Exercice 25 - Max (moyen 🤓)
 :class: note
 Ecrivez la fonction `calcule_max(liste)` qui retourne la valeur maximum d'une liste.
 
 ```{codeplay}
 :file: ex_25.py
 def calcule_min(liste):
-    minimum = liste[0]
-    for valeur in liste[1:]:
+    minimum = float('inf')
+    for valeur in liste:
         if valeur < minimum:
             minimum = valeur
     return minimum
@@ -155,17 +163,17 @@ print(f'Le maximum est {maximum}')
 
 ## L'index du minimum/maximum
 
-Souvent, on ne doit pas seulement trouver la valeur minimum, mais aussi sa position (son index) dans la liste.  
+Souvent, on ne doit pas seulement trouver la valeur minimum, **mais aussi sa position** (son index) dans la liste afin de pouvoir éventuellement le déplacer dans la liste.  
 Contrairement au cas précédent, ici nous ne parcourons pas les valeurs, mais les index grâce à une `range`.
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
 
-minimum = liste[0]
+minimum = float('inf')
 index_minimum = 0
 
 n = len(liste)
-for i in range(1, n):
+for i in range(n):
     if liste[i] < minimum:
         minimum = liste[i]
         index_minimum = i
@@ -173,7 +181,7 @@ for i in range(1, n):
 print(f"Le minimum est {minimum} et se trouve à l'index {index_minimum}")
 ```
 
-````{admonition} Exercice 26 - Indice max (facile)
+````{admonition} Exercice 26 - Indice max (moyen 🤓)
 :class: note
 Modifier l'exemple précédent pour **en plus** afficher le maximum et son index.
 
@@ -181,11 +189,11 @@ Modifier l'exemple précédent pour **en plus** afficher le maximum et son index
 :file: ex_26.py
 liste = [3, 4, 1, 2, 6, 5]
 
-minimum = liste[0]
+minimum = float('inf')
 index_minimum = 0
 
 n = len(liste)
-for i in range(1, n):
+for i in range(n):
     if liste[i] < minimum:
         minimum = liste[i]
         index_minimum = i
@@ -197,8 +205,8 @@ print(f"Le maximum est {maximum} et se trouve à l'index {index_maximum}")
 
 ## Algorithmes de tri
 
-La fonction `sorted(liste)` trie une liste dans l'ordre croissant. Cela fonctionne tant que la liste contient des éléments qui ont une relation d'ordre.  
-Par exemple, une liste de textes (string) sera triée alphabétiquement.
+La fonction `sorted(liste)` **trie une liste dans l'ordre croissant**. Cela fonctionne tant que la liste contient des éléments qui ont une relation d'ordre.  
+Par exemple, une liste de textes sera triée alphabétiquement.
 
 ```{codeplay}
 liste = [3, 4, 1, 2, 6, 5]
@@ -209,6 +217,8 @@ liste = ['banane', 'carotte', 'ananas', 'courgette', 'pomme']
 liste_triee = sorted(liste)
 print(liste_triee)
 ```
+
+La fonction `sorted()` de python est basée sur l'algorithme <a href="https://fr.wikipedia.org/wiki/Timsort#:~:text=Timsort%20est%20un%20algorithme%20de,le%20langage%20de%20programmation%20Python." target="_blank">Timsort</a> qui est plus efficace et complexe que ceux que nous allons voir ensemble.
 
 ### Échanger deux éléments
 
@@ -253,11 +263,71 @@ def echange(liste, i, j):
 ````
 `````
 
-````{admonition} Exercice 27 - Echanges (moyen)
+Voici un exemple permettant de visualiser l'échange de valeurs dans une liste.
+
+```{codeplay}
+from turtle import *
+from random import *
+
+def echange_elem(liste, i, j):
+    liste[i], liste[j] = liste[j], liste[i]
+
+def create(size):
+    getscreen().bgcolor('skyblue')
+    d = 600/size
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    turtles = [Turtle() for _ in range(size)]
+    for i, t in enumerate(turtles):
+        t.speed(50)
+        t.penup()
+        t.goto(-x0 + i*d, randint(-y0, y0))
+        t.pendown()
+        t.color('blue')
+        t.shape('circle')
+        #t.shapesize(d/20, d/20, 1)
+    return turtles
+
+def move_simu(turtles, coordinates, nhops=10):
+    deltas = []
+    for t, coord in zip(turtles, coordinates):
+        current_coord = (t.xcor(), t.ycor())
+        diff = (coord[0]-current_coord[0], coord[1]-current_coord[1])
+        delta = (diff[0] * (1.0/nhops), diff[1] * (1.0/nhops))
+        deltas.append(delta)
+    for _ in range(1, nhops+1):
+        for t, delta in zip(turtles, deltas):
+            t.goto(t.xcor() + delta[0], t.ycor() + delta[1])
+    
+def echange(turtles, i, j):
+    turtles_to_move = [turtles[i], turtles[j]]
+    coordinates = [(turtles[j].xcor(), turtles[i].ycor()), (turtles[i].xcor(), turtles[j].ycor())]
+    turtles[i].color('green')
+    turtles[j].color('green')
+    move_simu(turtles_to_move, coordinates)
+    turtles[i].color('black')
+    turtles[j].color('black')
+    echange_elem(turtles, i, j)
+===
+import random
+longueur_liste = 20
+liste = create(longueur_liste)
+
+echange(liste, 0, 1)  # Echange le 1er point avec le 2ème
+echange(liste, 1, 2)  # Echange le 2ème point avec le 3ème
+echange(liste, 2, 0)  # Echange le 3ème point avec le 1er
+echange(liste, 0, longueur_liste-1)  # Echange le 1er point avec le dernier
+
+done()
+```
+
+````{admonition} Exercice 27 - Echanges (moyen 🤓)
 :class: note
-Visualisons un peu ces échanges.
+Visualisons un peu plus ces échanges.
 1. Utilisez une boucle `for` et la fonction `echange(liste, i, j)` pour echanger chaque point avec son voisin. Cela devrait faire remonter le 1er élément de la liste vers la fin de la liste.
-2. Utilisez une boucle `for`et la fonction `echange(liste, i, j)` pour échanger 5 points aléatoirement.
+2. Utilisez une boucle `for` et la fonction `echange(liste, i, j)` pour échanger 5 points aléatoirement.
+
+Rappel: la fonction `randint(a, b)` du module `random` permet de tirer un nombre entier aléatoire entre `a` et `b`.
 
 ```{codeplay}
 :file: ex_27.py
@@ -308,15 +378,31 @@ import random
 longueur_liste = 20
 liste = create(longueur_liste)
 
-for ...
+...
 
 done()
 ```
 ````
 
+Les echanges sont à la base des algorithmes de tri que nous voyons dans ce cours.
+Il s'agit des 3 algorithmes les plus simples:
+
+- Le tri à bulles
+- Le tri par insertion
+- Le tri par sélection
+
+```{admonition} Important
+:class: attention
+Les algorithmes suivants sont **à comprendre** (leur fonctionnement et leurs différences). Vous devez être capable de lire leur code **mais pas de l'écrire vous-même** en partant de rien.
+```
+
 ### Tri à bulles
 
-L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre. Il recommence ensuite au début jusqu'à ce que toute la liste soit triée. Le mot 'bulles' fait référence aux bulles dans une boisson qui montent à la surface exactement comme les grands éléments remontent progressivement vers la fin de la liste.
+L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre si nécessaire. Il recommence ensuite au début de la liste jusqu'à ce que toute la liste soit triée. Le mot 'bulles' fait référence aux bulles dans une boisson qui montent à la surface exactement comme les grands éléments remontent progressivement vers la fin de la liste.
+
+```{image} media/tri_a_bulles.gif
+:width: 300px
+```
 
 ```{codeplay}
 def echange(liste, i, j):
@@ -326,8 +412,6 @@ def bubble_sort(liste):
     N = len(liste)
     for iteration in range(N - 1):
         for i in range(N - 1):
-            x = liste[i]
-            voisin = liste[i + 1]
             if liste[i] > liste[i+1]:
                 echange(liste, i, i+1)
                 print(liste)
@@ -403,9 +487,13 @@ done()
 
 ### Tri par insertion
 
-L’algorithme du **tri par insertion** est utilisé par la plupart des personnes pour trier des cartes à jouer.  
-Il parcourt la liste d’éléments à trier du deuxième au dernier élément.
-Pour chaque nouvel élément considéré, il l’insère à l’emplacement correct dans la liste déjà parcourue.
+L’algorithme du **tri par insertion** est utilisé instinctivement par la plupart des gens pour trier des cartes à jouer.  
+Il parcourt la liste d’éléments à trier du 2ème au dernier élément.
+Pour chaque élément considéré, il l’insère à l’emplacement correct à gauche dans la liste déjà parcourue en redescendant l'index.
+
+```{image} media/tri_par_insertion.gif
+:width: 300px
+```
 
 ```{codeplay}
 def echange(liste, i, j):
@@ -488,9 +576,15 @@ done()
 
 ### Tri par sélection
 
-L’algorithme du **tri par sélection** commence par rechercher le plus petit élément de la liste et l’échange avec le premier élément de la liste.  
-Il recherche ensuite le plus petit élément de la liste restante. Il sélectionne ainsi le deuxième plus petit élément de la liste et l’échange avec le deuxième élément de la liste.  
+L’algorithme du **tri par sélection** commence par rechercher le plus petit élément de la liste et l’échange avec le 1er élément de la liste.  
+Il recherche ensuite le plus petit élément de la liste restante. Il sélectionne ainsi le 2ème plus petit élément de la liste et l’échange avec le 2ème élément de la liste.  
 Et ainsi de suite...
+
+Pour résumer, il met le plus petit élément en 1ère position (index 0), puis le 2ème plus petit élément à la 2ème position (index 1), puis le 3ème plus petit élément à la 3ème position (index 2), etc...
+
+```{image} media/tri_par_selection.gif
+:width: 300px
+```
 
 ```{codeplay}
 def echange(liste, i, j):
@@ -579,7 +673,7 @@ liste = selection_sort(liste)
 done()
 ```
 
-````{admonition} Exercice 28 - Amélioration (difficile)
+````{admonition} Exercice 28 - Amélioration (difficile 🤯)
 :class: note
 L'algorithme du tri par sélection peut être simplifé à l'aide de la fonction `min()` et de la méthode `index()`.  
 La méthode `liste.index(x)` retourne l'index de l'élément `x` dans la liste.  
