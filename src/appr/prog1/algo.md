@@ -33,7 +33,7 @@ def create(size):
     y0 = 200 - d//2
     turtles = [Turtle() for _ in range(size)]
     for i, t in enumerate(turtles):
-        t.speed(50)
+        t.speed(0)
         t.penup()
         t.goto(-x0 + i*d, randint(-y0, y0))
         t.pendown()
@@ -58,7 +58,7 @@ print(min(liste))
 print(max(liste))
 ```
 
-Mais comment fonctionne ces algorithmes ?
+Mais comment fonctionnent ces algorithmes ?
 
 Ces fonctions sont très utiles et nous allons voir comment les écrire nous-mêmes !
 Pour trouver le minimum dans une liste, une manière courante de faire est de:
@@ -94,7 +94,7 @@ def create(size):
     y0 = 200 - d//2
     turtles = [Turtle() for _ in range(size)]
     for i, t in enumerate(turtles):
-        t.speed(50)
+        t.speed(0)
         t.penup()
         t.goto(-x0 + i*d, randint(-y0, y0))
         t.pendown()
@@ -115,9 +115,13 @@ def dessine_min_max(points):
     d = 600/len(points)
     for i in range(len(points)):
         if i == 0:
+            t_min.speed(0)
+            t_max.speed(0)
             min = points[i].ycor()
             max = points[i].ycor()
         else:
+            t_min.speed(6)
+            t_max.speed(6)
             t_min.down()
             t_max.down()
             if points[i].ycor() < min:
@@ -279,7 +283,7 @@ def create(size):
     y0 = 200 - d//2
     turtles = [Turtle() for _ in range(size)]
     for i, t in enumerate(turtles):
-        t.speed(50)
+        t.speed(0)
         t.penup()
         t.goto(-x0 + i*d, randint(-y0, y0))
         t.pendown()
@@ -344,7 +348,7 @@ def create(size):
     y0 = 200 - d//2
     turtles = [Turtle() for _ in range(size)]
     for i, t in enumerate(turtles):
-        t.speed(50)
+        t.speed(0)
         t.penup()
         t.goto(-x0 + i*d, randint(-y0, y0))
         t.pendown()
@@ -440,7 +444,7 @@ def create(size):
     y0 = 200 - d//2
     turtles = [Turtle() for _ in range(size)]
     for i, t in enumerate(turtles):
-        t.speed(50)
+        t.speed(0)
         t.penup()
         t.goto(-x0 + i*d, randint(-y0, y0))
         t.pendown()
@@ -528,7 +532,7 @@ def create(size):
     y0 = 200 - d//2
     turtles = [Turtle() for _ in range(size)]
     for i, t in enumerate(turtles):
-        t.speed(50)
+        t.speed(0)
         t.penup()
         t.goto(-x0 + i*d, randint(-y0, y0))
         t.pendown()
@@ -622,7 +626,7 @@ def create(size):
     y0 = 200 - d//2
     turtles = [Turtle() for _ in range(size)]
     for i, t in enumerate(turtles):
-        t.speed(50)
+        t.speed(0)
         t.penup()
         t.goto(-x0 + i*d, randint(-y0, y0))
         t.pendown()
