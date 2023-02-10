@@ -585,6 +585,8 @@ Pour résumer, il met le plus petit élément en 1ère position (index 0), puis 
 :width: 300px
 ```
 
+.. image:: media/tri_par_selection.gif
+
 ```{codeplay}
 def echange(liste, i, j):
     liste[i], liste[j] = liste[j], liste[i]
