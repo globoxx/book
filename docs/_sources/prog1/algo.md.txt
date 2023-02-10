@@ -393,12 +393,14 @@ Il s'agit des 3 algorithmes les plus simples:
 
 ```{admonition} Important
 :class: attention
-Les algorithmes suivants sont **à comprendre** (leur fonctionnement et leurs différences). Vous devez être capable de lire leur code **mais pas de l'écrire vous-même** en partant de rien.
+Les algorithmes suivants sont **à comprendre** (leur fonctionnement et leurs différences). Vous devez être capable de lire leur code **mais pas de l'écrire vous-même**.
 ```
 
 ### Tri à bulles
 
-L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre si nécessaire. Il recommence ensuite au début de la liste jusqu'à ce que toute la liste soit triée. Le mot 'bulles' fait référence aux bulles dans une boisson qui montent à la surface exactement comme les grands éléments remontent progressivement vers la fin de la liste.
+L’algorithme du **tri à bulles** compare les éléments voisins, deux par deux, et les met dans le bon ordre si nécessaire. Il recommence ensuite au début de la liste jusqu'à ce que toute la liste soit triée.
+
+Le mot 'bulles' fait référence aux bulles dans une boisson qui montent à la surface exactement comme les grands éléments remontent progressivement vers la fin de la liste.
 
 ```{image} media/tri_a_bulles.gif
 ```
