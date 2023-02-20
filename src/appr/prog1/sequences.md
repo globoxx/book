@@ -733,10 +733,10 @@ while nb_erreurs < 6 and not mot_a_ete_trouve:
 
 if nb_erreurs == 6:
     print('Pendu !')
-    print('Le mot était {mot_a_trouver} !')
+    print(f'Le mot était {mot_a_trouver} !')
 else:
     print('Gagné !')
-    print('Le mot était bien {mot_a_trouver} !')
+    print(f'Le mot était bien {mot_a_trouver} !')
 ```
 Ici la solution utilisant `random.choice()` est montrée.  
 Notez que la difficulté de cet exercice est dans l'ensemble bien au-dessus de ce qui est attendu en 1ère année.
