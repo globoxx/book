@@ -706,7 +706,7 @@ potence()
 dessins = [tete, bras1, bras2, torse, jambe1, jambe2]
 ===
 import random
-mot_a_trouver = random.choice(['potiron', 'osier', 'trottoir', 'meurtrier', 'palmier', 'chat', 'coussin', tableau', 'python'])  # Choisit un mot au hasard dans la liste
+mot_a_trouver = random.choice(['potiron', 'osier', 'trottoir', 'meurtrier', 'palmier', 'chat', 'coussin', 'tableau', 'python'])  # Choisit un mot au hasard dans la liste
 lettres_trouvees = []  # Une liste vide qui contiendra les lettres trouvées par l'utilisateur
 
 nb_erreurs = 0
