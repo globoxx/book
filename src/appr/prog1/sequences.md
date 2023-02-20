@@ -73,12 +73,12 @@ print(...)
 ```
 ````
 
-<!-- `````{admonition} Solution
+`````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_21.py
 branches = ['math', 'français', 'info']
 moyennes = [5, 4, 6]
 
@@ -87,7 +87,7 @@ print(f'Moyenne de {branches[1]}: {moyennes[1]}')
 print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 ```
 ````
-````` -->
+`````
 
 ```{question}
 Que se passe-t-il si vous essayez d'accéder à un index en dehors de la liste (par exemple à l'index 3 dans une liste de 3 éléments) ?
@@ -140,12 +140,12 @@ print(moyennes)
 ```
 ````
 
-<!-- `````{admonition} Solution
+`````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: ex_25.py
+:file: ex_22.py
 branches = ['math', 'français', 'info']
 moyennes = [5, 4, 6]
 
@@ -156,11 +156,12 @@ print(f'Moyenne de {branches[2]}: {moyennes[2]}')
 moyennes[0] = 5.5  # Modification de ma moyenne de math
 branches.append('histoire')  # Ajout de la branche histoire
 moyennes.append(4.5)  # Ajout de ma moyenne d'histoire
+
 print(branches)
 print(moyennes)
 ```
 ````
-````` -->
+`````
 
 ````{question}
 Que va afficher ce programme ?
@@ -365,7 +366,7 @@ print('----------------------------------------------------------')
 ```
 ````
 
-<!-- `````{admonition} Solution
+`````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
@@ -391,7 +392,7 @@ def calcule_moyenne(liste):
     return moyenne
 ```
 ````
-````` -->
+`````
 
 ## Le type range
 
@@ -520,26 +521,34 @@ print('-------------------------------------------------------------------------
 ```
 ````
 
-<!-- `````{admonition} Solution
+`````{admonition} Solution
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
 :animate: fade-in-slide-down
 ```{codeplay}
-:file: au_revoir.py
+:file: ex_24.py
 def est_premier(n):
     if n < 2:  # Nous savons que tout nombre plus petit que 2 ne peut pas être premier
         return False
+
     for i in range(2, n):  # On itère sur chaque nombre entre 2 et n-1
-        if n % i == 0:  # Si notre argument est divisible par un nombre
+        if n % i == 0:  # Si notre argument est divisible par un nombre (le reste de la division vaut 0)
             return False  # Alors il n'est pas premier
+
     return True  # S'il n'est divisible par aucun nombre entre 2 et n-1, alors il est premier
 
 for n in range(1000):
     if est_premier(n):
         print(n)
 ```
+Comme vous le voyez, une fonction peut tout à fait contenir plusieurs `return`. **Dès qu'un `return` est executé par le programme, la fonction se termine**.  
+C'est un peu comme une porte de sortie de la fonction.
+
+La vidéo suivante peut vous aider à comprendre le cheminement de pensée permettant de résoudre l'exercice: 
+```{youtube} t7hr8vHorp4
+```
 ````
-````` -->
+`````
 
 ## Le jeu du pendu (optionnel)
 
@@ -547,6 +556,7 @@ Le jeu du pendu consiste à trouver un mot en devinant les lettres qui le compos
 
 ```{codeplay}
 :output_lines: 5
+:file: ex_pendu.py
 from turtle import *
 
 a = 40
@@ -624,7 +634,7 @@ while nb_erreurs < 6:
 print('Pendu !')
 ```
 
-```{admonition} Exercice du pendu
+```{admonition} Exercice du pendu (difficile 🤯)
 :class: note
 Modifiez le programme du pendu pour que l'ordinateur choisisse aléatoirement un mot à trouver parmi une liste de mots de votre choix.  
 Plusieurs pistes de solution:
@@ -634,5 +644,103 @@ Plusieurs pistes de solution:
 Faites-en sorte que le programme s'arrête dès que vous avez trouvé le mot mystère et affiche 'Gagné !'.  
 Une possible manière de faire est d'utiliser l'instruction `break` qui permet de sortir immédiatement de la boucle courante (<a href="https://docs.python.org/fr/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops" target="_blank">plus d'infos ici</a>).
 ```
+
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:output_lines: 5
+:file: ex_pendu.py
+from turtle import *
+
+a = 40
+def potence():
+    forward(100)
+    backward(50)
+    left(90)
+    forward(180)
+    right(90)
+    forward(40)
+    left(45)
+    backward(56)
+    forward(56)
+    right(45)
+    forward(50)
+    right(90)
+    forward(40)
+
+def tete():
+    dot(20)
+    forward(20)
+
+def bras1():
+    right(45)
+    forward(a)
+    backward(a)
+
+def bras2():
+    left(90)
+    forward(a)
+    backward(a)
+
+def torse():
+    right(45)
+    forward(a)
+
+def jambe1():
+    right(45)
+    forward(a)
+    backward(a)
+
+def jambe2():
+    left(90)
+    forward(a)
+    backward(a)
+    hideturtle()
+
+# On commence par dessiner la potence
+potence()
+
+# On définit la liste qui contient les fonctions de dessin à appeler dans l'ordre
+dessins = [tete, bras1, bras2, torse, jambe1, jambe2]
+===
+import random
+mot_a_trouver = random.choice(['potiron', 'osier', 'trottoir', 'meurtrier', 'palmier', 'chat', 'coussin', tableau', 'python'])  # Choisit un mot au hasard dans la liste
+lettres_trouvees = []  # Une liste vide qui contiendra les lettres trouvées par l'utilisateur
+
+nb_erreurs = 0
+mot_a_ete_trouve = False
+while nb_erreurs < 6 and not mot_a_ete_trouve:
+    mot_affiche = ''
+    # On parcourt chaque lettre du mot à trouver et on l'affiche seulement si elle a été trouvée
+    for lettre in mot_a_trouver:
+        if lettre in lettres_trouvees:
+            mot_affiche += lettre
+        else:
+            mot_affiche += '_'
+        mot_affiche += ' '
+
+    lettre_proposee = input(mot_affiche + '  lettre: ')
+    if lettre_proposee in mot_a_trouver:
+        lettres_trouvees.append(lettre_proposee)
+        # On contrôle si l'ensemble des lettres trouvées est égal à l'ensemble des lettres dans le mot à trouver
+        if set(lettres_trouvees) == set(mot_a_trouver):
+            mot_a_ete_trouve = True
+    else:
+        dessins[nb_erreurs]()
+        nb_erreurs += 1  # Raccourci pour nb_erreurs = nb_erreurs + 1
+
+if nb_erreurs == 6:
+    print('Pendu !')
+    print('Le mot était {mot_a_trouver} !')
+else:
+    print('Gagné !')
+    print('Le mot était bien {mot_a_trouver} !')
+```
+Ici la solution utilisant `random.choice()` est montrée.  
+Notez que la difficulté de cet exercice est dans l'ensemble bien au-dessus de ce qui est attendu en 1ère année.
+````
+`````
 
 Vous avez tout terminé ? Allez faire un tour sur <a href="https://apprendre.modulo-info.ch/prog1/grouper.html" target="_blank">Modulo</a> !
