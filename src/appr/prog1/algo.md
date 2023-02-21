@@ -538,7 +538,7 @@ def echange(liste, i, j):
 ===
 def insertion_sort(liste):
     N = len(liste)
-    for i in range(2, N):
+    for i in range(1, N):
         for j in range(i, 0, -1):
             if liste[j] < liste[j-1]:
                 echange(liste, j, j-1)
@@ -599,7 +599,7 @@ def echange(turtles, i, j):
 ===
 def insertion_sort(liste):
     N = len(liste)
-    for i in range(2, N):
+    for i in range(1, N):
         for j in range(i, 0, -1):
             if liste[j].ycor() < liste[j-1].ycor():
                 echange(liste, j, j-1)
