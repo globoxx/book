@@ -1,11 +1,11 @@
 (prog1.algo)=
 
-# 7. Les algorithmes de tri
+# 7. Les algorithmes
 
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a>  
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a>
 
-Dans ce chapitre, nous allons découvrir quelques algorithmes récurrents en informatique. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale. **L'énorme succès de Google est basé sur un tri efficace de l’information**, car dans une liste triée, on peut retrouver un élément beaucoup plus vite.  
+Dans ce chapitre, nous allons découvrir quelques algorithmes récurrents en informatique. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale. **L'énorme succès de Google est basé sur un tri efficace de l’information**, car dans une liste triée, on peut retrouver un élément beaucoup plus vite ! 💡
 
 Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, vous utilisez sans le savoir un algorithme de tri.
 
@@ -15,12 +15,12 @@ Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, 
 
 Nous allons voir que :
 
-- la fonction `min(liste)` retourne le minimum de la liste en argument,
-- la fonction `max(liste)` retourne le maximum de la liste en argument,
-- la fontion `sorted(liste)` trie la liste en argument dans l'ordre croissant.
+- la fonction `min(liste)` retourne le **minimum de la liste** en argument,
+- la fonction `max(liste)` retourne le **maximum de la liste** en argument,
+- la fontion `sorted(liste)` **trie la liste** en argument dans l'ordre croissant.
 
 Pour visualiser les listes de nombres, nous allons utiliser le module `turtle` pour dessiner des points representant chaque nombre.  
-**La hauteur du point représente sa valeur**.
+**La hauteur du point représente sa valeur** alors que sa position (de gauche à droite) indique sa position dans la liste.
 
 ```{codeplay}
 from turtle import *
@@ -58,9 +58,9 @@ print(min(liste))
 print(max(liste))
 ```
 
-Mais comment fonctionnent ces algorithmes ?
+Mais comment fonctionnent ces algorithmes ? 🤔
 
-Ces fonctions sont très utiles et nous allons voir comment les écrire nous-mêmes !
+Eh bien nous allons voir comment les écrire nous-mêmes !  
 Pour trouver le minimum dans une liste, une manière courante de faire est de:
 
 - initialiser une variable `minimum` avec une très grande valeur (infini),
@@ -79,6 +79,16 @@ liste = [3, 4, 1, 2, 6, 5]
 minimum = calcule_min(liste)  
 print(f'Le minimum est {minimum}')
 ```
+
+`````{admonition} Vidéo explicative (facultative)
+:class: hint
+````{dropdown} <span style="color:grey">Clique ici</span>
+:animate: fade-in-slide-down
+Cette vidéo peut aider à comprendre l'algorithme du minimum (jusqu'à 1.55 min).
+```{youtube} N0dFeoCV_tg
+```
+````
+`````
 
 Le maximum peut être trouvé de manière similaire, **en mettant à jour le plus grand nombre trouvé**.  
 Voici une visualisation des algorithmes `min()` et `max()` où les points rouges représentent les plus petites et plus grandes valeurs trouvées dans la liste:
@@ -140,6 +150,16 @@ dessine_min_max(liste)
 
 done()
 ```
+
+`````{admonition} Logigramme de la fonction max()
+:class: hint
+````{dropdown} <span style="color:grey">Clique ici</span>
+:animate: fade-in-slide-down
+Cette vidéo peut aider à comprendre l'algorithme du minimum (jusqu'à 1.55 min).
+```{image} media/max.png
+```
+````
+`````
 
 ````{admonition} Exercice 25 - Max (moyen 🤓)
 :class: note

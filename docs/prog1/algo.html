@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Glossaire" href="../glossaire.html" /><link rel="prev" title="6. Les types séquentiels" href="sequences.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>7. Les algorithmes de tri - Travaux pratiques</title>
+        <title>7. Les algorithmes - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -228,7 +228,7 @@
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">4. Définition de fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conditions.html">5. Les structures conditionnelles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">6. Les types séquentiels</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">7. Les algorithmes de tri</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">7. Les algorithmes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
@@ -259,35 +259,60 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="les-algorithmes-de-tri">
-<span id="prog1-algo"></span><h1>7. Les algorithmes de tri<a class="headerlink" href="#les-algorithmes-de-tri" title="Lien permanent vers ce titre">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="les-algorithmes">
+<span id="prog1-algo"></span><h1>7. Les algorithmes<a class="headerlink" href="#les-algorithmes" title="Lien permanent vers ce titre">¶</a></h1>
 <p><a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a><br/>
 <a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a></p>
-<p>Dans ce chapitre, nous allons découvrir quelques algorithmes récurrents en informatique. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale. <strong>L’énorme succès de Google est basé sur un tri efficace de l’information</strong>, car dans une liste triée, on peut retrouver un élément beaucoup plus vite.</p>
+<p>Dans ce chapitre, nous allons découvrir quelques algorithmes récurrents en informatique. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale. <strong>L’énorme succès de Google est basé sur un tri efficace de l’information</strong>, car dans une liste triée, on peut retrouver un élément beaucoup plus vite ! 💡</p>
 <p>Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, vous utilisez sans le savoir un algorithme de tri.</p>
 <a class="reference internal image-reference" href="../_images/cartes.webp"><img alt="../_images/cartes.webp" src="../_images/cartes.webp" style="width: 300px;"/></a>
 <p>Nous allons voir que :</p>
 <ul class="simple">
-<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">min(liste)</span></code> retourne le minimum de la liste en argument,</p></li>
-<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">max(liste)</span></code> retourne le maximum de la liste en argument,</p></li>
-<li><p>la fontion <code class="docutils literal notranslate"><span class="pre">sorted(liste)</span></code> trie la liste en argument dans l’ordre croissant.</p></li>
+<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">min(liste)</span></code> retourne le <strong>minimum de la liste</strong> en argument,</p></li>
+<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">max(liste)</span></code> retourne le <strong>maximum de la liste</strong> en argument,</p></li>
+<li><p>la fontion <code class="docutils literal notranslate"><span class="pre">sorted(liste)</span></code> <strong>trie la liste</strong> en argument dans l’ordre croissant.</p></li>
 </ul>
 <p>Pour visualiser les listes de nombres, nous allons utiliser le module <code class="docutils literal notranslate"><span class="pre">turtle</span></code> pour dessiner des points representant chaque nombre.<br/>
-<strong>La hauteur du point représente sa valeur</strong>.</p>
+<strong>La hauteur du point représente sa valeur</strong> alors que sa position (de gauche à droite) indique sa position dans la liste.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bG9uZ3VldXJfbGlzdGUgPSAyMApsaXN0ZSA9IGNyZWF0ZShsb25ndWV1cl9saXN0ZSkgICMgTGEgZm9uY3Rpb24gY3JlYXRlIChkb250IGxhIGTDqWZpbml0aW9uIGVzdCBjYWNow6llKSBwZXJtZXQgZGUgY3LDqWVyIHVuZSBsaXN0ZSBhbMOpYXRvaXJlIGRlIHBvaW50cwpkb25lKCk=" data-file="Y29kZS5weQ==" data-prelude="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmRlZiBjcmVhdGUoc2l6ZSk6CiAgICBnZXRzY3JlZW4oKS5iZ2NvbG9yKCdza3libHVlJykKICAgIGQgPSA2MDAvc2l6ZQogICAgeDAgPSAzMDAgLSBkLy8yCiAgICB5MCA9IDIwMCAtIGQvLzIKICAgIHR1cnRsZXMgPSBbVHVydGxlKCkgZm9yIF8gaW4gcmFuZ2Uoc2l6ZSldCiAgICBmb3IgaSwgdCBpbiBlbnVtZXJhdGUodHVydGxlcyk6CiAgICAgICAgdC5zcGVlZCgwKQogICAgICAgIHQucGVudXAoKQogICAgICAgIHQuZ290bygteDAgKyBpKmQsIHJhbmRpbnQoLXkwLCB5MCkpCiAgICAgICAgdC5wZW5kb3duKCkKICAgICAgICB0LmNvbG9yKCdibHVlJykKICAgICAgICB0LnNoYXBlKCdjaXJjbGUnKQogICAgICAgICN0LnNoYXBlc2l6ZShkLzIwLCBkLzIwLCAxKQogICAgcmV0dXJuIHR1cnRsZXM=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><section id="fonctions-min-et-max">
 <h2>Fonctions min et max<a class="headerlink" href="#fonctions-min-et-max" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les fonctions <code class="docutils literal notranslate"><span class="pre">min()</span></code> et <code class="docutils literal notranslate"><span class="pre">max()</span></code> retournent le minimum et le maximum d’une liste à l’aide d’un algorithme.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bGlzdGUgPSBbMywgNCwgMSwgMiwgNiwgNV0KCnByaW50KG1pbihsaXN0ZSkpCnByaW50KG1heChsaXN0ZSkp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Mais comment fonctionnent ces algorithmes ?</p>
-<p>Ces fonctions sont très utiles et nous allons voir comment les écrire nous-mêmes !
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bGlzdGUgPSBbMywgNCwgMSwgMiwgNiwgNV0KCnByaW50KG1pbihsaXN0ZSkpCnByaW50KG1heChsaXN0ZSkp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Mais comment fonctionnent ces algorithmes ? 🤔</p>
+<p>Eh bien nous allons voir comment les écrire nous-mêmes !<br/>
 Pour trouver le minimum dans une liste, une manière courante de faire est de:</p>
 <ul class="simple">
 <li><p>initialiser une variable <code class="docutils literal notranslate"><span class="pre">minimum</span></code> avec une très grande valeur (infini),</p></li>
 <li><p>parcourir la liste de nombres,</p></li>
 <li><p>mettre à jour <code class="docutils literal notranslate"><span class="pre">minimum</span></code> à chaque fois que l’on trouve un nombre plus petit.</p></li>
 </ul>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVfbWluKGxpc3RlKToKICAgIG1pbmltdW0gPSBmbG9hdCgnaW5mJykgICMgUGx1cyBncmFuZCBub21icmUgcG9zc2libGUgKGluZmluaSkKICAgIGZvciB2YWxldXIgaW4gbGlzdGU6CiAgICAgICAgaWYgdmFsZXVyIDwgbWluaW11bToKICAgICAgICAgICAgbWluaW11bSA9IHZhbGV1cgogICAgcmV0dXJuIG1pbmltdW0KCmxpc3RlID0gWzMsIDQsIDEsIDIsIDYsIDVdCm1pbmltdW0gPSBjYWxjdWxlX21pbihsaXN0ZSkgIApwcmludChmJ0xlIG1pbmltdW0gZXN0IHttaW5pbXVtfScp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Le maximum peut être trouvé de manière similaire, <strong>en mettant à jour le plus grand nombre trouvé</strong>.<br/>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVfbWluKGxpc3RlKToKICAgIG1pbmltdW0gPSBmbG9hdCgnaW5mJykgICMgUGx1cyBncmFuZCBub21icmUgcG9zc2libGUgKGluZmluaSkKICAgIGZvciB2YWxldXIgaW4gbGlzdGU6CiAgICAgICAgaWYgdmFsZXVyIDwgbWluaW11bToKICAgICAgICAgICAgbWluaW11bSA9IHZhbGV1cgogICAgcmV0dXJuIG1pbmltdW0KCmxpc3RlID0gWzMsIDQsIDEsIDIsIDYsIDVdCm1pbmltdW0gPSBjYWxjdWxlX21pbihsaXN0ZSkgIApwcmludChmJ0xlIG1pbmltdW0gZXN0IHttaW5pbXVtfScp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="hint admonition">
+<p class="admonition-title">Vidéo explicative (facultative)</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Clique ici</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Cette vidéo peut aider à comprendre l’algorithme du minimum (jusqu’à 1.55 min).</p>
+<div class="video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://www.youtube-nocookie.com/embed/N0dFeoCV_tg" webkitallowfullscreen="" width="560">"</iframe></div></div>
+</details></div>
+<p>Le maximum peut être trouvé de manière similaire, <strong>en mettant à jour le plus grand nombre trouvé</strong>.<br/>
 Voici une visualisation des algorithmes <code class="docutils literal notranslate"><span class="pre">min()</span></code> et <code class="docutils literal notranslate"><span class="pre">max()</span></code> où les points rouges représentent les plus petites et plus grandes valeurs trouvées dans la liste:</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bG9uZ3VldXJfbGlzdGUgPSAyMApsaXN0ZSA9IGNyZWF0ZShsb25ndWV1cl9saXN0ZSkKCmRlc3NpbmVfbWluX21heChsaXN0ZSkKCmRvbmUoKQ==" data-file="Y29kZS5weQ==" data-prelude="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmRlZiBjcmVhdGUoc2l6ZSk6CiAgICBnZXRzY3JlZW4oKS5iZ2NvbG9yKCdza3libHVlJykKICAgIGQgPSA2MDAvc2l6ZQogICAgeDAgPSAzMDAgLSBkLy8yCiAgICB5MCA9IDIwMCAtIGQvLzIKICAgIHR1cnRsZXMgPSBbVHVydGxlKCkgZm9yIF8gaW4gcmFuZ2Uoc2l6ZSldCiAgICBmb3IgaSwgdCBpbiBlbnVtZXJhdGUodHVydGxlcyk6CiAgICAgICAgdC5zcGVlZCgwKQogICAgICAgIHQucGVudXAoKQogICAgICAgIHQuZ290bygteDAgKyBpKmQsIHJhbmRpbnQoLXkwLCB5MCkpCiAgICAgICAgdC5wZW5kb3duKCkKICAgICAgICB0LmNvbG9yKCdibHVlJykKICAgICAgICB0LnNoYXBlKCdjaXJjbGUnKQogICAgICAgICN0LnNoYXBlc2l6ZShkLzIwLCBkLzIwLCAxKQogICAgcmV0dXJuIHR1cnRsZXMKCmRlZiBkZXNzaW5lX21pbl9tYXgocG9pbnRzKToKICAgIHRfbWluID0gVHVydGxlKCkKICAgIHRfbWF4ID0gVHVydGxlKCkKICAgIHRfbWluLmhpZGV0dXJ0bGUoKQogICAgdF9tYXguaGlkZXR1cnRsZSgpCiAgICB0X21pbi51cCgpCiAgICB0X21heC51cCgpCiAgICB0X21pbi5jb2xvcigncmVkJykKICAgIHRfbWF4LmNvbG9yKCdyZWQnKQogICAgZCA9IDYwMC9sZW4ocG9pbnRzKQogICAgZm9yIGkgaW4gcmFuZ2UobGVuKHBvaW50cykpOgogICAgICAgIGlmIGkgPT0gMDoKICAgICAgICAgICAgdF9taW4uc3BlZWQoMCkKICAgICAgICAgICAgdF9tYXguc3BlZWQoMCkKICAgICAgICAgICAgbWluID0gcG9pbnRzW2ldLnljb3IoKQogICAgICAgICAgICBtYXggPSBwb2ludHNbaV0ueWNvcigpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgdF9taW4uc3BlZWQoNikKICAgICAgICAgICAgdF9tYXguc3BlZWQoNikKICAgICAgICAgICAgdF9taW4uZG93bigpCiAgICAgICAgICAgIHRfbWF4LmRvd24oKQogICAgICAgICAgICBpZiBwb2ludHNbaV0ueWNvcigpIDwgbWluOgogICAgICAgICAgICAgICAgbWluID0gcG9pbnRzW2ldLnljb3IoKQogICAgICAgICAgICBpZiBwb2ludHNbaV0ueWNvcigpID4gbWF4OgogICAgICAgICAgICAgICAgbWF4ID0gcG9pbnRzW2ldLnljb3IoKQogICAgICAgIHRfbWluLmdvdG8ocG9pbnRzW2ldLnhjb3IoKSwgbWluKQogICAgICAgIHRfbWluLmRvdChkLzIpCiAgICAgICAgdF9tYXguZ290byhwb2ludHNbaV0ueGNvcigpLCBtYXgpCiAgICAgICAgdF9tYXguZG90KGQvMik=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bG9uZ3VldXJfbGlzdGUgPSAyMApsaXN0ZSA9IGNyZWF0ZShsb25ndWV1cl9saXN0ZSkKCmRlc3NpbmVfbWluX21heChsaXN0ZSkKCmRvbmUoKQ==" data-file="Y29kZS5weQ==" data-prelude="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmRlZiBjcmVhdGUoc2l6ZSk6CiAgICBnZXRzY3JlZW4oKS5iZ2NvbG9yKCdza3libHVlJykKICAgIGQgPSA2MDAvc2l6ZQogICAgeDAgPSAzMDAgLSBkLy8yCiAgICB5MCA9IDIwMCAtIGQvLzIKICAgIHR1cnRsZXMgPSBbVHVydGxlKCkgZm9yIF8gaW4gcmFuZ2Uoc2l6ZSldCiAgICBmb3IgaSwgdCBpbiBlbnVtZXJhdGUodHVydGxlcyk6CiAgICAgICAgdC5zcGVlZCgwKQogICAgICAgIHQucGVudXAoKQogICAgICAgIHQuZ290bygteDAgKyBpKmQsIHJhbmRpbnQoLXkwLCB5MCkpCiAgICAgICAgdC5wZW5kb3duKCkKICAgICAgICB0LmNvbG9yKCdibHVlJykKICAgICAgICB0LnNoYXBlKCdjaXJjbGUnKQogICAgICAgICN0LnNoYXBlc2l6ZShkLzIwLCBkLzIwLCAxKQogICAgcmV0dXJuIHR1cnRsZXMKCmRlZiBkZXNzaW5lX21pbl9tYXgocG9pbnRzKToKICAgIHRfbWluID0gVHVydGxlKCkKICAgIHRfbWF4ID0gVHVydGxlKCkKICAgIHRfbWluLmhpZGV0dXJ0bGUoKQogICAgdF9tYXguaGlkZXR1cnRsZSgpCiAgICB0X21pbi51cCgpCiAgICB0X21heC51cCgpCiAgICB0X21pbi5jb2xvcigncmVkJykKICAgIHRfbWF4LmNvbG9yKCdyZWQnKQogICAgZCA9IDYwMC9sZW4ocG9pbnRzKQogICAgZm9yIGkgaW4gcmFuZ2UobGVuKHBvaW50cykpOgogICAgICAgIGlmIGkgPT0gMDoKICAgICAgICAgICAgdF9taW4uc3BlZWQoMCkKICAgICAgICAgICAgdF9tYXguc3BlZWQoMCkKICAgICAgICAgICAgbWluID0gcG9pbnRzW2ldLnljb3IoKQogICAgICAgICAgICBtYXggPSBwb2ludHNbaV0ueWNvcigpCiAgICAgICAgZWxzZToKICAgICAgICAgICAgdF9taW4uc3BlZWQoNikKICAgICAgICAgICAgdF9tYXguc3BlZWQoNikKICAgICAgICAgICAgdF9taW4uZG93bigpCiAgICAgICAgICAgIHRfbWF4LmRvd24oKQogICAgICAgICAgICBpZiBwb2ludHNbaV0ueWNvcigpIDwgbWluOgogICAgICAgICAgICAgICAgbWluID0gcG9pbnRzW2ldLnljb3IoKQogICAgICAgICAgICBpZiBwb2ludHNbaV0ueWNvcigpID4gbWF4OgogICAgICAgICAgICAgICAgbWF4ID0gcG9pbnRzW2ldLnljb3IoKQogICAgICAgIHRfbWluLmdvdG8ocG9pbnRzW2ldLnhjb3IoKSwgbWluKQogICAgICAgIHRfbWluLmRvdChkLzIpCiAgICAgICAgdF9tYXguZ290byhwb2ludHNbaV0ueGNvcigpLCBtYXgpCiAgICAgICAgdF9tYXguZG90KGQvMik=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="hint admonition">
+<p class="admonition-title">Logigramme de la fonction max()</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Clique ici</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Cette vidéo peut aider à comprendre l’algorithme du minimum (jusqu’à 1.55 min).</p>
+<img alt="../_images/max.png" src="../_images/max.png"/>
+</div>
+</details></div>
+<div class="note admonition">
 <p class="admonition-title">Exercice 25 - Max (moyen 🤓)</p>
 <p>Ecrivez la fonction <code class="docutils literal notranslate"><span class="pre">calcule_max(liste)</span></code> qui retourne la valeur maximum d’une liste.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVfbWluKGxpc3RlKToKICAgIG1pbmltdW0gPSBmbG9hdCgnaW5mJykKICAgIGZvciB2YWxldXIgaW4gbGlzdGU6CiAgICAgICAgaWYgdmFsZXVyIDwgbWluaW11bToKICAgICAgICAgICAgbWluaW11bSA9IHZhbGV1cgogICAgcmV0dXJuIG1pbmltdW0KCmRlZiBjYWxjdWxlX21heChsaXN0ZSk6CiAgICAuLi4KCmxpc3RlID0gWzMsIDQsIDEsIDIsIDYsIDVdCm1pbmltdW0gPSBjYWxjdWxlX21pbihsaXN0ZSkgIApwcmludChmJ0xlIG1pbmltdW0gZXN0IHttaW5pbXVtfScpCm1heGltdW0gPSAuLi4KcHJpbnQoZidMZSBtYXhpbXVtIGVzdCB7bWF4aW11bX0nKQ==" data-file="ZXhfMjUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
@@ -429,7 +454,7 @@ Indice: toute la boucle interne ne sert qu’à une seule chose, trouver le mini
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">7. Les algorithmes de tri</a><ul>
+<li><a class="reference internal" href="#">7. Les algorithmes</a><ul>
 <li><a class="reference internal" href="#fonctions-min-et-max">Fonctions min et max</a></li>
 <li><a class="reference internal" href="#lindex-du-minimum-maximum">L’index du minimum/maximum</a></li>
 <li><a class="reference internal" href="#algorithmes-de-tri">Algorithmes de tri</a><ul>
