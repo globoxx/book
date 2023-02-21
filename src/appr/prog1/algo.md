@@ -19,7 +19,7 @@ C'est déjà quoi un algorithme ?
 Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, vous utilisez sans le savoir un algorithme de tri.
 
 ```{image} media/cartes.webp
-:width: 500px
+:width: 300px
 ```
 
 Nous allons voir que :
@@ -167,7 +167,7 @@ done()
 Ce logigramme (que nous avons vus en cours) utilise une boucle `while` pour parcourir la liste.
 En python, il est possible d'utiliser une boucle `for` afin de ne pas avoir à se soucier des index.
 ```{image} media/max.png
-:width: 300px
+:width: 500px
 ```
 ````
 `````
