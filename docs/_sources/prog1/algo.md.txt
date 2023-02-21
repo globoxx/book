@@ -744,5 +744,6 @@ print(liste)
 ````
 
 Cette vidéo (un peu spéciale pour vos oreilles) montre tout une liste d'algorithmes de tri en musique !
-```{youtube} N0dFeoCV_tg
+
+```{youtube} kPRA0W1kECg
 ```
