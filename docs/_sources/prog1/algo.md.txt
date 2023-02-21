@@ -348,8 +348,8 @@ import random
 longueur_liste = 20
 liste = create(longueur_liste)
 
-echange(liste, 0, 1)  # Echange le 1er point avec le 2ème
-echange(liste, 1, 2)  # Echange le 2ème point avec le 3ème
+echange(liste, 0, 3)  # Echange le 1er point avec le 4ème
+echange(liste, 1, 5)  # Echange le 2ème point avec le 6ème
 echange(liste, 2, 0)  # Echange le 3ème point avec le 1er
 echange(liste, 0, longueur_liste-1)  # Echange le 1er point avec le dernier
 
