@@ -207,7 +207,7 @@ liste = [3, 4, 1, 2, 6, 5]
 minimum = float('inf')
 index_minimum = 0
 
-n = len(liste)
+n = len(liste)  # La fonction len() calcule la longueur de la liste
 for i in range(n):
     if liste[i] < minimum:
         minimum = liste[i]
