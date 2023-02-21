@@ -19,7 +19,7 @@ C'est déjà quoi un algorithme ?
 Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, vous utilisez sans le savoir un algorithme de tri.
 
 ```{image} media/cartes.webp
-:width: 300px
+:width: 500px
 ```
 
 Nous allons voir que :
