@@ -749,7 +749,7 @@ print(liste)
 ```
 ````
 
-Cette vidéo (un peu spéciale pour vos oreilles) montre tout une liste d'algorithmes de tri en musique !
+Cette vidéo (un peu spéciale pour vos oreilles) montre toute une liste d'algorithmes de tri en musique !
 
 ```{youtube} kPRA0W1kECg
 ```
