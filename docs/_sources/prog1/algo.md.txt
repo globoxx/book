@@ -7,6 +7,15 @@
 
 Dans ce chapitre, nous allons découvrir quelques algorithmes récurrents en informatique. Nous allons surtout nous pencher sur le tri qui est une fonctionnalité fondamentale. **L'énorme succès de Google est basé sur un tri efficace de l’information**, car dans une liste triée, on peut retrouver un élément beaucoup plus vite ! 💡
 
+```{question}
+C'est déjà quoi un algorithme ?
+
+{f}`une suite finie et non-ambigüe d'étapes menant à la résolution d'un problème en particulier`  
+{f}`une suite infinie et subjective d'étapes menant à la résolution d'une classe de problèmes`  
+{v}`une suite finie et non-ambigüe d'étapes menant à la résolution d'une classe de problèmes`  
+{f}`un truc compliqué qui fait des trucs compliqués mais efficacement`
+```
+
 Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, vous utilisez sans le savoir un algorithme de tri.
 
 ```{image} media/cartes.webp
@@ -155,8 +164,10 @@ done()
 :class: hint
 ````{dropdown} <span style="color:grey">Clique ici</span>
 :animate: fade-in-slide-down
-Cette vidéo peut aider à comprendre l'algorithme du minimum (jusqu'à 1.55 min).
+Ce logigramme (que nous avons vus en cours) utilise une boucle `while` pour parcourir la liste.
+En python, il est possible d'utiliser une boucle `for` afin de ne pas avoir à se soucier des index.
 ```{image} media/max.png
+:width: 300px
 ```
 ````
 `````
@@ -417,7 +428,7 @@ Il s'agit des 3 algorithmes les plus simples:
 
 ```{admonition} Important
 :class: attention
-Les algorithmes suivants sont **à comprendre** (leur fonctionnement et leurs différences). Vous devez être capable de lire leur code **mais pas de l'écrire vous-même**.
+Les algorithmes suivants sont **à comprendre** (leur fonctionnement et leurs différences). Leur code peut grandement vous aider à comprendre leur fonctionnement **mais vous n'avez pas à savoir l'écrire vous-même**.
 ```
 
 ### Tri à bulles
@@ -696,6 +707,8 @@ liste = selection_sort(liste)
 done()
 ```
 
+Le lien suivant vous permet de tester ces algorithmes et de les visualiser: <a href="http://lwh.free.fr/pages/algo/tri/tri.htm" target="_blank">Algo de tri</a>
+
 ````{admonition} Exercice 28 - Amélioration (difficile 🤯)
 :class: note
 L'algorithme du tri par sélection peut être simplifé à l'aide de la fonction `min()` et de la méthode `index()`.  
@@ -729,3 +742,7 @@ liste = selection_sort(liste)
 print(liste)
 ```
 ````
+
+Cette vidéo (un peu spéciale pour vos oreilles) montre tout une liste d'algorithmes de tri en musique !
+```{youtube} N0dFeoCV_tg
+```
