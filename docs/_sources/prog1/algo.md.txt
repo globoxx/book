@@ -455,7 +455,9 @@ def bubble_sort(liste):
 
 liste = [3, 4, 1, 2, 6, 5]
 print(liste)
+print('Début du tri ------')
 liste = bubble_sort(liste)
+print('Fin du tri --------')
 print(liste)
 ```
 
@@ -545,7 +547,9 @@ def insertion_sort(liste):
 
 liste = [3, 4, 1, 2, 6, 5]
 print(liste)
+print('Début du tri ------')
 liste = insertion_sort(liste)
+print('Fin du tri --------')
 print(liste)
 ```
 
@@ -639,7 +643,9 @@ def selection_sort(liste):
 
 liste = [3, 4, 1, 2, 6, 5]
 print(liste)
+print('Début du tri ------')
 liste = selection_sort(liste)
+print('Fin du tri --------')
 print(liste)
 ```
 
