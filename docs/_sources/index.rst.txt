@@ -18,6 +18,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog1/definitions
    prog1/conditions
    prog1/sequences
+   prog1/algo
 
 .. toctree::
    :name: Outils
