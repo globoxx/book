@@ -632,8 +632,8 @@ def selection_sort(liste):
     N = len(liste)
     for i in range(N-1):
         index_minimum = i
-        minimum = liste[i]
-        for j in range(i+1, N):
+        minimum = float('inf')
+        for j in range(i, N):
             if liste[j] < minimum:
                 index_minimum = j
                 minimum = liste[j]
@@ -697,8 +697,8 @@ def selection_sort(liste):
     N = len(liste)
     for i in range(N-1):
         index_minimum = i
-        minimum = liste[i].ycor()
-        for j in range(i+1, N):
+        minimum = float('inf')
+        for j in range(i, N):
             if liste[j].ycor() < minimum:
                 index_minimum = j
                 minimum = liste[j].ycor()
@@ -721,7 +721,7 @@ L'algorithme du tri par sélection peut être simplifé à l'aide de la fonction
 La méthode `liste.index(x)` retourne l'index de l'élément `x` dans la liste.  
 
 Tentez de simplifier l'écriture de l'algorithme de tri par sélection.  
-Indice: toute la boucle interne ne sert qu'à une seule chose, trouver le minimum et son index. Elle peut donc être réécrite plus simplement avec `min()` et `liste.index()`.
+Indice: toute la boucle interne ne sert qu'à une seule chose, trouver l'index du minimum dans la liste restante (revoyez le concept de tranche du chapitre précédent). Elle peut donc être réécrite plus simplement avec `min()` et `liste.index()`.
 
 ```{codeplay}
 def echange(liste, i, j):
@@ -732,8 +732,8 @@ def selection_sort(liste):
     for i in range(N-1):
         # Partie à modifier ------------
         index_minimum = i
-        minimum = liste[i]
-        for j in range(i+1, N):
+        minimum = float('inf')
+        for j in range(i, N):
             if liste[j] < minimum:
                 index_minimum = j
                 minimum = liste[j]
@@ -744,7 +744,9 @@ def selection_sort(liste):
 
 liste = [3, 4, 1, 2, 6, 5]
 print(liste)
+print('Début du tri ------')
 liste = selection_sort(liste)
+print('Fin du tri --------')
 print(liste)
 ```
 ````
