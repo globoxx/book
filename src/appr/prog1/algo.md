@@ -196,6 +196,35 @@ print(f'Le maximum est {maximum}')
 ```
 ````
 
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: ex_25.py
+def calcule_min(liste):
+    minimum = float('inf')
+    for valeur in liste:
+        if valeur < minimum:
+            minimum = valeur
+    return minimum
+
+def calcule_max(liste):
+    maximum = -float('inf')  # float('-inf') fonctionne aussi
+    for valeur in liste:
+        if valeur > maximum:
+            maximum = valeur
+    return maximum
+
+liste = [3, 4, 1, 2, 6, 5]
+minimum = calcule_min(liste)  
+print(f'Le minimum est {minimum}')
+maximum = calcule_max(liste)  
+print(f'Le maximum est {maximum}')
+```
+````
+`````
+
 ## L'index du minimum/maximum
 
 Souvent, on ne doit pas seulement trouver la valeur minimum, **mais aussi sa position** (son index) dans la liste afin de pouvoir éventuellement le déplacer dans la liste.  
@@ -237,6 +266,34 @@ print(f"Le minimum est {minimum} et se trouve à l'index {index_minimum}")
 print(f"Le maximum est {maximum} et se trouve à l'index {index_maximum}")
 ```
 ````
+
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: ex_26.py
+liste = [3, 4, 1, 2, 6, 5]
+
+minimum = float('inf')
+index_minimum = 0
+maximum = -float('inf')
+index_maximum = 0
+
+n = len(liste)
+for i in range(n):
+    if liste[i] < minimum:
+        minimum = liste[i]
+        index_minimum = i
+    if liste[i] > maximum:
+        maximum = list[i]
+        index_maximum = i
+        
+print(f"Le minimum est {minimum} et se trouve à l'index {index_minimum}")
+print(f"Le maximum est {maximum} et se trouve à l'index {index_maximum}")
+```
+````
+`````
 
 ## Algorithmes de tri
 
@@ -418,6 +475,72 @@ liste = create(longueur_liste)
 done()
 ```
 ````
+
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+:file: ex_27.py
+from turtle import *
+from random import *
+
+def echange_elem(liste, i, j):
+    liste[i], liste[j] = liste[j], liste[i]
+
+def create(size):
+    getscreen().bgcolor('skyblue')
+    d = 600/size
+    x0 = 300 - d//2
+    y0 = 200 - d//2
+    turtles = [Turtle() for _ in range(size)]
+    for i, t in enumerate(turtles):
+        t.speed(0)
+        t.penup()
+        t.goto(-x0 + i*d, randint(-y0, y0))
+        t.pendown()
+        t.color('blue')
+        t.shape('circle')
+        #t.shapesize(d/20, d/20, 1)
+    return turtles
+
+def move_simu(turtles, coordinates, nhops=10):
+    deltas = []
+    for t, coord in zip(turtles, coordinates):
+        current_coord = (t.xcor(), t.ycor())
+        diff = (coord[0]-current_coord[0], coord[1]-current_coord[1])
+        delta = (diff[0] * (1.0/nhops), diff[1] * (1.0/nhops))
+        deltas.append(delta)
+    for _ in range(1, nhops+1):
+        for t, delta in zip(turtles, deltas):
+            t.goto(t.xcor() + delta[0], t.ycor() + delta[1])
+    
+def echange(turtles, i, j):
+    turtles_to_move = [turtles[i], turtles[j]]
+    coordinates = [(turtles[j].xcor(), turtles[i].ycor()), (turtles[i].xcor(), turtles[j].ycor())]
+    turtles[i].color('green')
+    turtles[j].color('green')
+    move_simu(turtles_to_move, coordinates)
+    turtles[i].color('black')
+    turtles[j].color('black')
+    echange_elem(turtles, i, j)
+===
+import random
+longueur_liste = 20
+liste = create(longueur_liste)
+
+# Partie 1
+for i in range(longueur_liste - 1):
+    echange(liste, i, i+1)
+
+# Partie 2
+for i in range(5):
+    echange(liste, random.randint(0, 19), random.randint(0, 19))
+
+done()
+```
+````
+`````
 
 Les echanges sont à la base des algorithmes de tri que nous voyons dans ce cours.
 Il s'agit des 3 algorithmes les plus simples:
@@ -750,6 +873,34 @@ print('Fin du tri --------')
 print(liste)
 ```
 ````
+
+`````{admonition} Solution
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+```{codeplay}
+def echange(liste, i, j):
+    liste[i], liste[j] = liste[j], liste[i]
+===
+def selection_sort(liste):
+    N = len(liste)
+    for i in range(N-1):
+        # Partie à modifier ------------
+        index_minimum = liste.index(min(liste[i:]))
+        # ------------------------------
+        echange(liste, i, index_minimum)
+        print(liste)
+    return liste
+
+liste = [3, 4, 1, 2, 6, 5]
+print(liste)
+print('Début du tri ------')
+liste = selection_sort(liste)
+print('Fin du tri --------')
+print(liste)
+```
+````
+`````
 
 Cette vidéo (un peu spéciale pour vos oreilles) montre toute une liste d'algorithmes de tri en musique !
 
