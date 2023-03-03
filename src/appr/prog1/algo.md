@@ -286,7 +286,7 @@ for i in range(n):
         minimum = liste[i]
         index_minimum = i
     if liste[i] > maximum:
-        maximum = list[i]
+        maximum = liste[i]
         index_maximum = i
         
 print(f"Le minimum est {minimum} et se trouve à l'index {index_minimum}")
