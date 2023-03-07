@@ -21,6 +21,14 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog1/algo
 
 .. toctree::
+   :name: Autres activités
+   :caption: Autres activités
+   :maxdepth: 3
+   :hidden:
+
+   prog1/aventure
+
+.. toctree::
    :name: Outils
    :caption: Outils
    :maxdepth: 3
