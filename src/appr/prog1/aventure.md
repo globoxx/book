@@ -39,10 +39,10 @@ elif choix == "-50":
     print("Vous faites la rencontre de Jules César.")
     choix = poser_question("Voulez-vous rejoindre sa garde personnelle ?", ["oui", "non"])
     if choix == "oui":
-        print("Vous recevez une armure de romain")
+        print("Vous recevez une armure de romain.")
         inventaire.append("Armure")
     elif choix == "non":
-        print("Vous refusez poliment")
+        print("Vous refusez poliment.")
 elif choix == "1789":
     print("Vous vous faites couper la tête lors de la révolution française !")
     perdu = True
