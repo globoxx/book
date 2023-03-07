@@ -62,6 +62,23 @@ if not perdu:
 print("Fin de l'aventure")
 ```
 
+## A vous de jouer 🎮
+
+Créez votre propre histoire interactive et déposez le fichier `.py` sur Moodle !
+
+```{codeplay}
+# Vous pouvez utiliser cette fonction pour poser une question avec des choix possibles à l'utilisateur
+def poser_question(question, choix_possibles):
+    choix = input(f'{question} ({"/".join(choix_possibles)}): ')
+    while choix not in choix_possibles:
+        choix = input(f'{question} ({"/".join(choix_possibles)}): ')
+    return choix
+
+inventaire = []
+
+print("Début de votre histoire...")
+```
+
 `````{admonition} Exemple plus complexe
 :class: hint
 ````{dropdown} <span style="color:grey">Clique ici</span>
