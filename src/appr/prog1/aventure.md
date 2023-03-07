@@ -13,7 +13,7 @@ Pour cela, vous allez principalement utiliser les éléments suivants:
 - `while` si vous voulez créer des boucles dans l'histoire
 - éventuellement une `liste` pour stocker un inventaire
 
-Voici un exemple relativement simple:
+Voici un exemple pour vous aider:
 
 ```{codeplay}
 # Vous pouvez utiliser cette fonction pour poser une question avec des choix possibles à l'utilisateur
@@ -44,7 +44,7 @@ elif choix == "-50":
 elif choix == "1789":
     print("Vous vous faites couper la tête lors de la révolution française !")
 elif choix == "2100":
-    print("Dans le futur, un sérum d'immortalité est vendu en pharmacie. Vous en piquez un peu.)
+    print("Dans le futur, un sérum d'immortalité est vendu en pharmacie. Vous en piquez un peu.")
     inventaire.append("Sérum")
 
 print("Vous revenez dans le présent.")
