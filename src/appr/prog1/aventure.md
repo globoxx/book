@@ -45,7 +45,15 @@ elif choix == "-50":
 
 ```
 
-Et un autre plus complexe:
+`````{admonition} Exemple plus complexe
+:class: hint
+````{dropdown} <span style="color:grey">Clique ici</span>
+Voici le logigramme représentant une aventure plus complexe:
+
+```{image} media/aventure.png
+:width: 500px
+```
+Et son code:
 
 ```{codeplay}
 # Vous pouvez utiliser cette fonction pour poser une question avec des choix possibles à l'utilisateur
