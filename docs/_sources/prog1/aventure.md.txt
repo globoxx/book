@@ -51,9 +51,9 @@ print("Vous revenez dans le présent.")
 if "Sceptre" in inventaire:
     print("Votre aventure vous a rendu super riche !")
 elif "Armure" in inventaire:
-    print("Plus personne ne vous cherchera d'ennuis avec l'armure que vous avez ramenée !)
+    print("Plus personne ne vous cherchera d'ennuis avec l'armure que vous avez ramenée !")
 elif "Sérum" in inventaire:
-    print("Vous commercialisez votre sérum et rendez toute l'humanité immortelle (oups) !)
+    print("Vous commercialisez votre sérum et rendez toute l'humanité immortelle (oups) !")
 
 print("Fin de l'aventure")
 ```
