@@ -67,6 +67,7 @@ print("Fin de l'aventure")
 Créez votre propre histoire interactive et déposez le fichier `.py` sur Moodle !
 
 ```{codeplay}
+:file: mon_aventure.py
 # Vous pouvez utiliser cette fonction pour poser une question avec des choix possibles à l'utilisateur
 def poser_question(question, choix_possibles):
     choix = input(f'{question} ({"/".join(choix_possibles)}): ')
