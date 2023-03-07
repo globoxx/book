@@ -26,7 +26,7 @@ def poser_question(question, choix_possibles):
 inventaire = []
 
 print("Vous venez d'inventer une machine à voyager dans le temps.")
-choix = poser_question("En quelle année voulez-vous aller ?", ["-100'000'000", "-2580", "-50", "1490", "1789", "2100"])
+choix = poser_question("En quelle année voulez-vous aller ?", ["-100'000'000", "-2580", "-50", "1789", "2100"])
 if choix == "-100'000'000":
     print("A peine arrivé, vous êtes bouffé par un dinosaure !")
 elif choix == "-2580":
@@ -41,8 +41,21 @@ elif choix == "-50":
         inventaire.append("Armure")
     elif choix == "non":
         print("Vous refusez poliment")
+elif choix == "1789":
+    print("Vous vous faites couper la tête lors de la révolution française !")
+elif choix == "2100":
+    print("Dans le futur, un sérum d'immortalité est vendu en pharmacie. Vous en piquez un peu.)
+    inventaire.append("Sérum")
 
+print("Vous revenez dans le présent.")
+if "Sceptre" in inventaire:
+    print("Votre aventure vous a rendu super riche !")
+elif "Armure" in inventaire:
+    print("Plus personne ne vous cherchera d'ennuis avec l'armure que vous avez ramenée !)
+elif "Sérum" in inventaire:
+    print("Vous commercialisez votre sérum et rendez toute l'humanité immortelle (oups) !)
 
+print("Fin de l'aventure")
 ```
 
 `````{admonition} Exemple plus complexe
@@ -51,7 +64,7 @@ elif choix == "-50":
 Voici le logigramme représentant une aventure plus complexe:
 
 ```{image} media/aventure.png
-:width: 500px
+:width: 800px
 ```
 Et son code:
 
