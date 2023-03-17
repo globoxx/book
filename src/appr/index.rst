@@ -34,6 +34,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    :maxdepth: 3
    :hidden:
 
+   code_libre
    glossaire
 
 `TP de programmation <prog1/intro.html>`_
