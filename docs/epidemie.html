@@ -276,22 +276,24 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBOb21icmUgdG90YWwgZCdpbmRpdmlkdXM6IDEgMDAwIDAwMApzdXNjZXB0aWJsZXMgPSAuLi4KbWFsYWRlcyA9IC4uLgpndWVyaXMgPSAuLi4KbW9ydHMgPSAuLi4=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div></section>
 <section id="caracteristiques-de-la-maladie">
 <h2>2. Caractéristiques de la maladie<a class="headerlink" href="#caracteristiques-de-la-maladie" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous allons définir les caractéristiques de la maladie. Nous allons définir les variables suivantes:</p>
+<p>Nous allons maintenant définir les caractéristiques de la maladie. Pour cela, nous utiliserons les variables suivantes:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">taux_infection</span></code> qui représente la probabilité qu’un individu malade infecte un individu susceptible lors d’un contact.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">taux_guerison</span></code> qui représente la probabilité qu’un individu malade guérisse chaque jour.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">taux_mortalite</span></code> qui représente la probabilité qu’un individu malade meure chaque jour.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p_infection</span></code> qui représente la probabilité qu’un individu malade infecte un individu susceptible lors d’un contact.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p_guerison</span></code> qui représente la probabilité qu’un individu malade guérisse chaque jour.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p_deces</span></code> qui représente la probabilité qu’un individu malade meure chaque jour.</p></li>
 </ul>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="dGF1eF9pbmZlY3Rpb24gPSAuLi4KdGF1eF9ndWVyaXNvbiA9IC4uLgp0YXV4X21vcnRhbGl0ZSA9IC4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div></section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cF9pbmZlY3Rpb24gPSAuLi4KcF9ndWVyaXNvbiA9IC4uLgpwX2RlY2VzID0gLi4u" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div><p>Voici le diagramme représentant l’évolution d’un individu selon ce modèle:</p>
+<img alt="_images/epidemie.png" src="_images/epidemie.png"/>
+</section>
 <section id="simulation-du-jour-1">
 <h2>3. Simulation du jour 1<a class="headerlink" href="#simulation-du-jour-1" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous allons maintenant simuler le jour 1 de l’épidémie. C’est à dire que nous allons calculer nombre de personnes susceptibles, malades, guéris et morts au jour 1. Pour cela, nous allons calculer les variables suivantes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">nb_concacts</span></code> qui représente le nombre de contacts que font les malades au cours du jour 1. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">malades</span></code> et <code class="docutils literal notranslate"><span class="pre">contacts_par_jour</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nb_contacts_susceptibles</span></code> qui représente le nombre de contacts que font les malades <strong>avec des personnes susceptibles</strong> au cours du jour 1. Pour le calcul, multipliez <code class="docutils literal notranslate"><span class="pre">nb_contacts</span></code> avec la proportion de gens susceptibles dans la population (sans compter les morts car on ne rentre pas en contact avec eux).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nb_infections</span></code> qui représente le nombre de personnes infectées au cours du jour 1. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">nb_contacts_susceptibles</span></code> et <code class="docutils literal notranslate"><span class="pre">taux_infection</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nb_guerisons</span></code> qui représente le nombre de personnes guéries au cours du jour 1. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">taux_guerison</span></code> et <code class="docutils literal notranslate"><span class="pre">malades</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nb_deces</span></code> qui représente le nombre de personnes qui meurent au cours du jour 1. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">taux_mortalite</span></code> et <code class="docutils literal notranslate"><span class="pre">malades</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nb_infections</span></code> qui représente le nombre de personnes infectées au cours du jour 1. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">nb_contacts_susceptibles</span></code> et <code class="docutils literal notranslate"><span class="pre">p_infection</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nb_guerisons</span></code> qui représente le nombre de personnes guéries au cours du jour 1. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">p_guerison</span></code> et <code class="docutils literal notranslate"><span class="pre">malades</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nb_deces</span></code> qui représente le nombre de personnes qui meurent au cours du jour 1. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">p_deces</span></code> et <code class="docutils literal notranslate"><span class="pre">malades</span></code>.</p></li>
 </ul>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bmJfY29udGFjdHMgPSAuLi4KbmJfY29udGFjdHNfc3VzY2VwdGlibGVzID0gLi4uCm5iX2luZmVjdGlvbnMgPSAuLi4KbmJfZ3Vlcmlzb25zID0gLi4uCm5iX2RlY2VzID0gLi4u" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div><p>Combien y a-t-il de malades après le premier jour selon ce modèle ? Est-ce que cela vous semble cohérent? Sinon, quelle modification pouvez-vous apporter à votre modèle ?</p>
 <p>Nous allons maintenant pouvoir mettre à jour nos variables de population à la fin du jour 1. Calculez les nouvelles valeurs de <code class="docutils literal notranslate"><span class="pre">susceptibles</span></code>, <code class="docutils literal notranslate"><span class="pre">malades</span></code>, <code class="docutils literal notranslate"><span class="pre">gueris</span></code> et <code class="docutils literal notranslate"><span class="pre">morts</span></code> à la fin du jour 1.</p>
@@ -324,7 +326,7 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <p>Modifiez les paramètres de votre modèle pour voir comment cela impacte l’évolution de l’épidémie. Vous pouvez par exemple:</p>
 <ul class="simple">
 <li><p>Modifier le nombre de personnes dans la population.</p></li>
-<li><p>Modifier le nombre de contacts par jour.</p></li>
+<li><p>Modifier le nombre moyen de contacts par jour.</p></li>
 <li><p>Modifier le taux d’infection.</p></li>
 <li><p>Modifier le taux de guérison.</p></li>
 <li><p>Modifier le taux de mortalité.</p></li>

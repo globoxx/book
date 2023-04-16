@@ -19,16 +19,21 @@ morts = ...
 
 ## 2. Caractéristiques de la maladie
 
-Nous allons définir les caractéristiques de la maladie. Nous allons définir les variables suivantes:
+Nous allons maintenant définir les caractéristiques de la maladie. Pour cela, nous utiliserons les variables suivantes:
 
-- `taux_infection` qui représente la probabilité qu'un individu malade infecte un individu susceptible lors d'un contact.
-- `taux_guerison` qui représente la probabilité qu'un individu malade guérisse chaque jour.
-- `taux_mortalite` qui représente la probabilité qu'un individu malade meure chaque jour.
+- `p_infection` qui représente la probabilité qu'un individu malade infecte un individu susceptible lors d'un contact.
+- `p_guerison` qui représente la probabilité qu'un individu malade guérisse chaque jour.
+- `p_deces` qui représente la probabilité qu'un individu malade meure chaque jour.
 
 ```{codeplay}
-taux_infection = ...
-taux_guerison = ...
-taux_mortalite = ...
+p_infection = ...
+p_guerison = ...
+p_deces = ...
+```
+
+Voici le diagramme représentant l'évolution d'un individu selon ce modèle:
+
+```{image} prog1/media/epidemie.png
 ```
 
 ## 3. Simulation du jour 1
@@ -37,9 +42,9 @@ Nous allons maintenant simuler le jour 1 de l'épidémie. C'est à dire que nous
 
 - `nb_concacts` qui représente le nombre de contacts que font les malades au cours du jour 1. Pour le calcul, vous devrez utilier les variables `malades` et `contacts_par_jour`.
 - `nb_contacts_susceptibles` qui représente le nombre de contacts que font les malades **avec des personnes susceptibles** au cours du jour 1. Pour le calcul, multipliez `nb_contacts` avec la proportion de gens susceptibles dans la population (sans compter les morts car on ne rentre pas en contact avec eux).
-- `nb_infections` qui représente le nombre de personnes infectées au cours du jour 1. Pour le calcul, vous devrez utilier les variables `nb_contacts_susceptibles` et `taux_infection`.
-- `nb_guerisons` qui représente le nombre de personnes guéries au cours du jour 1. Pour le calcul, vous devrez utilier les variables `taux_guerison` et `malades`.
-- `nb_deces` qui représente le nombre de personnes qui meurent au cours du jour 1. Pour le calcul, vous devrez utilier les variables `taux_mortalite` et `malades`.
+- `nb_infections` qui représente le nombre de personnes infectées au cours du jour 1. Pour le calcul, vous devrez utilier les variables `nb_contacts_susceptibles` et `p_infection`.
+- `nb_guerisons` qui représente le nombre de personnes guéries au cours du jour 1. Pour le calcul, vous devrez utilier les variables `p_guerison` et `malades`.
+- `nb_deces` qui représente le nombre de personnes qui meurent au cours du jour 1. Pour le calcul, vous devrez utilier les variables `p_deces` et `malades`.
 
 ```{codeplay}
 nb_contacts = ...
@@ -93,7 +98,7 @@ plt.show()
 Modifiez les paramètres de votre modèle pour voir comment cela impacte l'évolution de l'épidémie. Vous pouvez par exemple:
 
 - Modifier le nombre de personnes dans la population.
-- Modifier le nombre de contacts par jour.
+- Modifier le nombre moyen de contacts par jour.
 - Modifier le taux d'infection.
 - Modifier le taux de guérison.
 - Modifier le taux de mortalité.
