@@ -26,7 +26,8 @@ Bienvenue sur la plateforme de TP d'informatique !
    :maxdepth: 3
    :hidden:
 
-   prog1/aventure
+   aventure
+   epidemie
 
 .. toctree::
    :name: Outils

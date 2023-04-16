@@ -2,9 +2,12 @@
 <html class="no-js" lang="fr">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Recherche" href="#" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Recherche" href="search.html" />
 
-    <link rel="shortcut icon" href="_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/><title>Recherche - Travaux pratiques</title><link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="shortcut icon" href="_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Flappy Bird - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="_static/codeplay.css" />
     <link rel="stylesheet" type="text/css" href="_static/glossary.css" />
@@ -193,7 +196,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -211,7 +214,7 @@
   
   <span class="sidebar-brand-text">Travaux pratiques</span>
   
-</a><form class="sidebar-search-container" method="get" action="#" role="search">
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
@@ -256,23 +259,77 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          
-<noscript>
-<div class="admonition error">
-  <p class="admonition-title">Erreur</p>
-  <p>
-    Please activate JavaScript to enable the search functionality.
-  </p>
+          <section class="tex2jax_ignore mathjax_ignore" id="flappy-bird">
+<h1>Flappy Bird<a class="headerlink" href="#flappy-bird" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Pygame Zero est un wrapper autour de Pygame, un moteur de jeu Python populaire. L’avantage de Pygame Zero est qu’il présente une interface très simple et rationalisée, ce qui signifie qu’il faut très peu de travail pour créer des jeux complets.</p>
+<p>Dans ce tutoriel, nous allons créer un clone de Flappy Bird.</p>
+<section id="installation-des-ressources">
+<h2>Installation des ressources<a class="headerlink" href="#installation-des-ressources" title="Lien permanent vers ce titre">¶</a></h2>
+<p>…</p>
+</section>
+<section id="mise-en-route">
+<h2>Mise en route<a class="headerlink" href="#mise-en-route" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Appuyez sur le bouton Nouveau dans Mu pour ouvrir un nouveau fichier et saisissez les lignes suivantes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Flappy Bird'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">708</span>
+</pre></div>
 </div>
-</noscript>
-
-<div id="search-results"></div>
+<p>Appuyez sur Enregistrer et enregistrez le fichier sous flappybird.py
+Appuyez sur Play pour voir ce que fait ce code.</p>
+<p>Vous devriez voir apparaître une nouvelle fenêtre vide.</p>
+</section>
+<section id="dessiner-un-arriere-plan">
+<h2>Dessiner un arrière-plan<a class="headerlink" href="#dessiner-un-arriere-plan" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ajoutez ces lignes à la fin de votre programme.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'cascade'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Vous devez avoir une fonction de dessin si vous voulez que Pygame Zero dessine quoi que ce soit. La ligne qui commence par screen.blit est la seule instruction de cette fonction. Il dit à Pygame Zero de dessiner quelque chose sur l’écran.</p>
+</section>
+<section id="ajouter-loiseau">
+<h2>Ajouter l’oiseau<a class="headerlink" href="#ajouter-loiseau" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ajoutez cette ligne à la fin de votre fichier.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bird</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'bird1'</span><span class="p">,</span> <span class="p">(</span><span class="mi">75</span><span class="p">,</span> <span class="mi">350</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Cette ligne crée un acteur appelé bird.</p>
+<p>Actor fait partie de Pygame Zero, mais bird est une nouvelle variable que vous créez en écrivant cette ligne. Vous pouvez l’appeler comme vous voulez. Si vous le vouliez, vous pourriez écrire:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">barry_the_bird</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'bird1'</span><span class="p">,</span> <span class="p">(</span><span class="mi">75</span><span class="p">,</span> <span class="mi">350</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Faisons ça en fait ! Je vais continuer avec barry_the_bird , mais si vous le souhaitez, vous pouvez choisir votre propre nom. N’oubliez pas de taper le nom que vous avez choisi au lieu de barry_the_bird chaque fois que nous utilisons la variable.</p>
+<p>Si nous voulons vraiment voir Barry (ou quel que soit le nom de votre oiseau), nous devrons l’ajouter à la fonction de tirage.</p>
+<p>Ajoutez la ligne suivante à votre fonction de dessin (n’oubliez pas d’utiliser le nom de votre oiseau):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">barry_the_bird</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="faire-bouger-loiseau">
+<h2>Faire bouger l’oiseau<a class="headerlink" href="#faire-bouger-loiseau" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Faisons en sorte que notre oiseau réponde à l’entrée de la souris. Ajoutons une nouvelle fonction. Les fonctions peuvent être dans n’importe quel ordre dans le fichier, mais un bon endroit est juste avant la fonction de dessin.</p>
+<p>Ajoutez le code suivant juste avant la fonction draw (n’oubliez pas d’utiliser le nom de votre oiseau):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_mouse_down</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">'The mouse was clicked'</span><span class="p">)</span>
+    <span class="n">barry_the_bird</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="mi">50</span>
+</pre></div>
+</div>
+<p>La fonction on_mouse_down est appelée à chaque fois que vous cliquez sur la souris. Appeler une fonction signifie exécuter les instructions qu’elle contient. Si nous voulons que l’oiseau se déplace en douceur, nous devons le déplacer en petites quantités et le faire si souvent qu’il semble lisse.</p>
+<p>Une fonction de mise à jour est une fonction qui est appelée encore et encore très rapidement. Normalement 60 fois par seconde.</p>
+<p>Ajoutez cette fonction à votre fichier (n’oubliez pas d’utiliser le nom de votre oiseau):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="n">barry_the_bird</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+</section>
 
         </article>
       </div>
@@ -284,12 +341,39 @@
         </div>
 
         <div class="related-information">
+            <a class="muted-link" href="_sources/flappy_bird.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
         </div>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Flappy Bird</a><ul>
+<li><a class="reference internal" href="#installation-des-ressources">Installation des ressources</a></li>
+<li><a class="reference internal" href="#mise-en-route">Mise en route</a></li>
+<li><a class="reference internal" href="#dessiner-un-arriere-plan">Dessiner un arrière-plan</a></li>
+<li><a class="reference internal" href="#ajouter-loiseau">Ajouter l’oiseau</a></li>
+<li><a class="reference internal" href="#faire-bouger-loiseau">Faire bouger l’oiseau</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
@@ -310,8 +394,5 @@
     <script src="_static/scripts/progress.js"></script>
     <script src="_static/scripts/dark.js"></script>
     <script src="_static/scripts/frames.js"></script>
-    
-<script src="_static/searchtools.js"></script>
-<script src="_static/language_data.js"></script>
-<script src="searchindex.js"></script></body>
+    </body>
 </html>
