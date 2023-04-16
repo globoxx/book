@@ -1,5 +1,3 @@
-(prog1.flappy_bird)=
-
 # Flappy Bird
 
 Pygame Zero est un wrapper autour de Pygame, un moteur de jeu Python populaire. L'avantage de Pygame Zero est qu'il présente une interface très simple et rationalisée, ce qui signifie qu'il faut très peu de travail pour créer des jeux complets.

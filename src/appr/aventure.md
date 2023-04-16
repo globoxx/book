@@ -1,5 +1,3 @@
-(prog1.aventure)=
-
 # Aventure textuelle
 
 Dans cette activité, vous allez programmer une **histoire interactive**.
