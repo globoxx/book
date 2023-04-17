@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Recherche" href="search.html" /><link rel="next" title="Simulation d’épidémie" href="epidemie.html" /><link rel="prev" title="7. Les algorithmes" href="prog1/algo.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Recherche" href="search.html" /><link rel="next" title="Zone de code libre" href="code_libre.html" /><link rel="prev" title="Simulation d’épidémie" href="epidemie.html" />
 
     <link rel="shortcut icon" href="_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Aventure textuelle - Travaux pratiques</title>
+        <title>Portes logiques - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="_static/codeplay.css" />
@@ -232,9 +232,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Aventure textuelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aventure.html">Aventure textuelle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="epidemie.html">Simulation d’épidémie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Portes logiques</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
@@ -266,36 +266,191 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="aventure-textuelle">
-<span id="aventure"></span><h1>Aventure textuelle<a class="headerlink" href="#aventure-textuelle" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Dans cette activité, vous allez programmer une <strong>histoire interactive</strong>.
-C’est-à-dire une <strong>histoire durant laquelle le lecteur peut faire des choix</strong>.</p>
-<p>Pour cela, vous allez principalement utiliser les éléments suivants:</p>
+          <section class="tex2jax_ignore mathjax_ignore" id="portes-logiques">
+<span id="id1"></span><h1>Portes logiques<a class="headerlink" href="#portes-logiques" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans cette activité, vous allez concevoir des circuits logiques à l’aide de portes logiques.</p>
+<section id="selecteur-de-chien">
+<h2>Sélecteur de chien<a class="headerlink" href="#selecteur-de-chien" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.</p>
+<section id="exercice-1">
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Concevez le circuit de manière à faire en sorte que la sortie «OK pour ce chien» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien précis et que ce chien est à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
+<p>Les caractéristiques <strong>petit</strong> et <strong>gentil</strong> sont sont les valeurs logiques d’entrée pouvant valoir 0 ou 1.</p>
+<div class="logic-container" style="height: 200px;"><logic-editor mode="design" showonly="and,or,xor">
+<script type="application/json">
+{
+  "v": 2,
+  "opts": {"showOnly": ["and", "or", "xor", "not"]},
+  "in": [
+    {"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0},
+    {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}
+],
+  "out": [{"pos": [360, 80], "id": 18, "name": "OK pour ce chien!"}]
+}
+</script></logic-editor></div><section id="solution">
+<h4>Solution<a class="headerlink" href="#solution" title="Lien permanent vers ce titre">¶</a></h4>
+<p>Il faut insérer une porte <strong>ET</strong>.</p>
+<div class="logic-container" style="height: 160px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [{"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0}, {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}],
+  "out": [{"pos": [360, 80], "id": 18, "name": "OK pour ce chien!"}],
+  "gates": [{"type": "AND", "pos": [240, 80], "in": [0, 1], "out": 2}],
+  "wires": [[2, 18], [14, 0], [16, 1]]
+}
+</script></logic-editor></div></section>
+</section>
+</section>
+<section id="deuxieme-partie-criteres-plus-compliques">
+<h2>Deuxième partie : critères plus compliqués<a class="headerlink" href="#deuxieme-partie-criteres-plus-compliques" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-2">
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
+<ol class="simple">
+<li><p>Les critères sont maintenant devenus plus complexes. Le chien doit remplir les conditions suivantes:</p></li>
+</ol>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code> pour afficher le texte de l’histoire</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">input()</span></code> pour récupérer les choix du lecteur</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> et <code class="docutils literal notranslate"><span class="pre">else</span></code> pour créer les embranchements de l’histoire</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> si vous voulez créer des boucles dans l’histoire</p></li>
-<li><p>éventuellement une <code class="docutils literal notranslate"><span class="pre">liste</span></code> pour stocker un inventaire</p></li>
+<li><p>Le chien doit être gentil;</p></li>
+<li><p>Le chien ne doit pas baver tout le temps;</p></li>
+<li><p>Il faut soit que ce soit un petit chien, soit que ce soit un labrador.</p></li>
 </ul>
-<p>Voici un exemple pour vous aider:</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICBjaG9peCA9IGlucHV0KGYne3F1ZXN0aW9ufSAoeyIvIi5qb2luKGNob2l4X3Bvc3NpYmxlcyl9KTogJykKICAgIHdoaWxlIGNob2l4IG5vdCBpbiBjaG9peF9wb3NzaWJsZXM6CiAgICAgICAgY2hvaXggPSBpbnB1dChmJ3txdWVzdGlvbn0gKHsiLyIuam9pbihjaG9peF9wb3NzaWJsZXMpfSk6ICcpCiAgICByZXR1cm4gY2hvaXgKCmludmVudGFpcmUgPSBbXQpwZXJkdSA9IEZhbHNlCgpwcmludCgiVm91cyB2ZW5leiBkJ2ludmVudGVyIHVuZSBtYWNoaW5lIMOgIHZveWFnZXIgZGFucyBsZSB0ZW1wcy4iKQpjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJFbiBxdWVsbGUgYW5uw6llIHZvdWxlei12b3VzIGFsbGVyID8iLCBbIi0xMDAnMDAwJzAwMCIsICItMjU4MCIsICItNTAiLCAiMTc4OSIsICIyMTAwIl0pCmlmIGNob2l4ID09ICItMTAwJzAwMCcwMDAiOgogICAgcHJpbnQoIkEgcGVpbmUgYXJyaXbDqSwgdm91cyDDqnRlcyBib3VmZsOpIHBhciB1biBkaW5vc2F1cmUgISIpCiAgICBwZXJkdSA9IFRydWUKZWxpZiBjaG9peCA9PSAiLTI1ODAiOgogICAgcHJpbnQoIlZvdXMgw6p0ZXMgdsOpbsOpcsOpIGNvbW1lIHVuIGRpZXUgZW4gRWd5cHRlIGFudGlxdWUuIikKICAgIHByaW50KCJMZSBwaHJhcmFvbiBLaMOpb3BzIHZvdXMgb2ZmcmUgc29uIHNjZXB0cmUgZW4gb3IuIikKICAgIGludmVudGFpcmUuYXBwZW5kKCJTY2VwdHJlIikKZWxpZiBjaG9peCA9PSAiLTUwIjoKICAgIHByaW50KCJWb3VzIGZhaXRlcyBsYSByZW5jb250cmUgZGUgSnVsZXMgQ8Opc2FyLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJWb3VsZXotdm91cyByZWpvaW5kcmUgc2EgZ2FyZGUgcGVyc29ubmVsbGUgPyIsIFsib3VpIiwgIm5vbiJdKQogICAgaWYgY2hvaXggPT0gIm91aSI6CiAgICAgICAgcHJpbnQoIlZvdXMgcmVjZXZleiB1bmUgYXJtdXJlIGRlIHJvbWFpbi4iKQogICAgICAgIGludmVudGFpcmUuYXBwZW5kKCJBcm11cmUiKQogICAgZWxpZiBjaG9peCA9PSAibm9uIjoKICAgICAgICBwcmludCgiVm91cyByZWZ1c2V6IHBvbGltZW50LiIpCmVsaWYgY2hvaXggPT0gIjE3ODkiOgogICAgcHJpbnQoIlZvdXMgdm91cyBmYWl0ZXMgY291cGVyIGxhIHTDqnRlIGxvcnMgZGUgbGEgcsOpdm9sdXRpb24gZnJhbsOnYWlzZSAhIikKICAgIHBlcmR1ID0gVHJ1ZQplbGlmIGNob2l4ID09ICIyMTAwIjoKICAgIHByaW50KCJEYW5zIGxlIGZ1dHVyLCB1biBzw6lydW0gZCdpbW1vcnRhbGl0w6kgZXN0IHZlbmR1IGVuIHBoYXJtYWNpZS4gVm91cyBlbiBwaXF1ZXogdW4gcGV1LiIpCiAgICBpbnZlbnRhaXJlLmFwcGVuZCgiU8OpcnVtIikKCmlmIG5vdCBwZXJkdToKICAgIHByaW50KCJWb3VzIHJldmVuZXogZGFucyBsZSBwcsOpc2VudC4iKQogICAgaWYgIlNjZXB0cmUiIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdHJlIGF2ZW50dXJlIHZvdXMgYSByZW5kdSBzdXBlciByaWNoZSAhIikKICAgIGVsaWYgIkFybXVyZSIgaW4gaW52ZW50YWlyZToKICAgICAgICBwcmludCgiUGx1cyBwZXJzb25uZSBuZSB2b3VzIGNoZXJjaGVyYSBkJ2VubnVpcyBhdmVjIGwnYXJtdXJlIHF1ZSB2b3VzIGF2ZXogcmFtZW7DqWUgISIpCiAgICBlbGlmICJTw6lydW0iIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdXMgY29tbWVyY2lhbGlzZXogdm90cmUgc8OpcnVtIGV0IHJlbmRleiB0b3V0ZSBsJ2h1bWFuaXTDqSBpbW1vcnRlbGxlIChvdXBzKSAhIikKCnByaW50KCJGaW4gZGUgbCdhdmVudHVyZSIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div><section id="a-vous-de-jouer">
-<h2>A vous de jouer 🎮<a class="headerlink" href="#a-vous-de-jouer" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Créez votre propre histoire interactive et déposez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> sur Moodle !</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICBjaG9peCA9IGlucHV0KGYne3F1ZXN0aW9ufSAoeyIvIi5qb2luKGNob2l4X3Bvc3NpYmxlcyl9KTogJykKICAgIHdoaWxlIGNob2l4IG5vdCBpbiBjaG9peF9wb3NzaWJsZXM6CiAgICAgICAgY2hvaXggPSBpbnB1dChmJ3txdWVzdGlvbn0gKHsiLyIuam9pbihjaG9peF9wb3NzaWJsZXMpfSk6ICcpCiAgICByZXR1cm4gY2hvaXgKCmludmVudGFpcmUgPSBbXQoKcHJpbnQoIkTDqWJ1dCBkZSB2b3RyZSBoaXN0b2lyZS4uLiIp" data-file="bW9uX2F2ZW50dXJlLnB5" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div><div class="hint admonition">
-<p class="admonition-title">Exemple plus complexe</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<span style="color:grey">Clique ici</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Voici le logigramme représentant une aventure plus complexe:</p>
-<a class="reference internal image-reference" href="_images/aventure.png"><img alt="_images/aventure.png" src="_images/aventure.png" style="width: 800px;"/></a>
-<p class="card-text">Et son code:</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICBjaG9peCA9IGlucHV0KGYne3F1ZXN0aW9ufSAoeyIvIi5qb2luKGNob2l4X3Bvc3NpYmxlcyl9KTogJykKICAgIHdoaWxlIGNob2l4IG5vdCBpbiBjaG9peF9wb3NzaWJsZXM6CiAgICAgICAgY2hvaXggPSBpbnB1dChmJ3txdWVzdGlvbn0gKHsiLyIuam9pbihjaG9peF9wb3NzaWJsZXMpfSk6ICcpCiAgICByZXR1cm4gY2hvaXgKCmRlZiBlbnRyZXJfZm9yZXQoKToKICAgIHByaW50KCJWb3VzIGFycml2ZXogZGFucyB1bmUgZ3JhbmRlIGZvcsOqdCBsdWd1YnJlLiIpCiAgICBwcmludCgiRGV2YW50IHZvdXMsIHZvdXMgcG91dmV6IHZvaXIgZGV1eCBjaGVtaW5zLiBMZSBjaGVtaW4gZGUgZ2F1Y2hlIG3DqG5lIMOgIHVuZSByaXZpw6hyZSBldCBsZSBjaGVtaW4gZGUgZHJvaXRlIG3DqG5lIMOgIHVuZSBncm90dGUgc29tYnJlLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJTdXIgcXVlbCBjaGVtaW4gdm91bGV6LXZvdXMgYWxsZXIgPyIsIFsiZ2F1Y2hlIiwgImRyb2l0ZSJdKQogICAgaWYgY2hvaXggPT0gImdhdWNoZSI6CiAgICAgICAgYXJyaXZlcl9yaXZpZXJlKCkKICAgIGVsaWYgY2hvaXggPT0gImRyb2l0ZSI6CiAgICAgICAgZW50cmVyX2dyb3R0ZSgpCgpkZWYgYXJyaXZlcl9yaXZpZXJlKCk6CiAgICBwcmludCgiVm91cyBhcnJpdmV6IMOgIGxhIHJpdmnDqHJlLiIpCiAgICBwcmludCgiVm91cyBwb3V2ZXogdm9pciB1bmUgY2FubmUgw6AgcMOqY2hlIHN1ciBsYSBiZXJnZS4iKQogICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiVm91bGV6LXZvdXMgcmFtYXNzZXIgbGEgY2FubmUgw6AgcMOqY2hlID8iLCBbIm91aSIsICJub24iXSkKICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgIGludmVudGFpcmUuYXBwZW5kKCJjYW5uZSDDoCBww6pjaGUiKQogICAgICAgIHByaW50KCJWb3VzIGF2ZXogcmFtYXNzw6kgbGEgY2FubmUgw6AgcMOqY2hlLiIpCiAgICBlbGlmIGNob2l4ID09ICJub24iOgogICAgICAgIHByaW50KCJWb3VzIGF2ZXogZMOpY2lkw6kgZGUgbmUgcGFzIHByZW5kcmUgbGEgY2FubmUgw6AgcMOqY2hlLiIpCiAgICBwcmludCgiVm91cyBkw6ljaWRleiBkZSBsb25nZXIgbGEgcml2acOocmUuIikKICAgIHByaW50KCJBcHLDqHMgdW4gY2VydGFpbiB0ZW1wcywgdm91cyB0cm91dmV6IHVuIHBvbnQgZW4gYm9pcyBxdWkgdHJhdmVyc2UgbGEgcml2acOocmUuIikKICAgIGNob2l4ID0gcG9zZXJfcXVlc3Rpb24oIlZvdWxlei12b3VzIHRyYXZlcnNlciBsZSBwb250ID8iLCBbIm91aSIsICJub24iXSkKICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgIHByaW50KCJWb3VzIHRyYXZlcnNleiBsZSBwb250IGV0IHZvdXMgdm91cyByZXRyb3V2ZXogc3VyIGwnYXV0cmUgcml2ZSBkZSBsYSByaXZpw6hyZS4iKQogICAgICAgIHByaW50KCJWb3VzIHRvbWJleiBuZXogw6AgbmV6IGF2ZWMgdW4gaG9ycmlibGUgb2dyZS4iKQogICAgICAgIGNob2l4ID0gcG9zZXJfcXVlc3Rpb24oIlZvdWxlei12b3VzIGwnYWZmcm9udGVyID8iLCBbIm91aSIsICJub24iXSkKICAgICAgICBpZiBjaG9peCA9PSAib3VpIjoKICAgICAgICAgICAgaWYgJ8OpcMOpZScgaW4gaW52ZW50YWlyZToKICAgICAgICAgICAgICAgIHByaW50KCJHcsOiY2Ugw6Agdm90cmUgw6lww6llLCB2b3VzIHRlcnJhc3NleiBsJ29ncmUgZW4gbHVpIGNvdXBhbnQgbGEgdMOqdGUuIikKICAgICAgICAgICAgICAgIHByaW50KCJWb3VzIHJlcHJlbmV6IGxhIHJvdXRlIGV0IHRyb3V2ZXogZmluYWxlbWVudCB2b3RyZSBtYWlzb24uIikKICAgICAgICAgICAgICAgIHByaW50KCJGw6lsaWNpdGF0aW9ucywgdm91cyBhdmV6IHRlcm1pbsOpIGwnYXZlbnR1cmUhIikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHByaW50KCJDb21tZSB2b3VzIG4nYXZleiBwYXMgZCdhcm1lLCBsJ29ncmUgdm91cyDDqWNyYWJvdWlsbGUuIikKICAgICAgICAgICAgICAgIHByaW50KCJWb3VzIMOqdGVzIG1vcnQuIikKICAgICAgICBlbGlmIGNob2l4ID09ICJub24iOgogICAgICAgICAgICBwcmludCgiVm91cyBkw6ljaWRleiBkZSByZWJyb3Vzc2VyIGNoZW1pbiBldCByZXRvdXJuZXogZGFucyBsYSBmb3LDqnQuIikKICAgICAgICAgICAgZW50cmVyX2ZvcmV0KCkKICAgIGVsaWYgY2hvaXggPT0gIm5vbiI6CiAgICAgICAgcHJpbnQoIlZvdXMgZMOpY2lkZXogZGUgbmUgcGFzIHRyYXZlcnNlciBsZSBwb250IGV0IHJldG91cm5leiBkYW5zIGxhIGZvcsOqdC4iKQogICAgICAgIGVudHJlcl9mb3JldCgpCgpkZWYgZW50cmVyX2dyb3R0ZSgpOgogICAgcHJpbnQoIlZvdXMgYXJyaXZleiBkZXZhbnQgdW5lIGdyb3R0ZS4iKQogICAgcHJpbnQoIlZvdXMgdm95ZXogdW5lIHRvcmNoZSDDqXRlaW50ZSBwcsOocyBkZSBsJ2VudHLDqWUgZGUgbGEgZ3JvdHRlLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJWb3VsZXotdm91cyBwcmVuZHJlIGxhIHRvcmNoZSA/IiwgWyJvdWkiLCAibm9uIl0pCiAgICBpZiBjaG9peCA9PSAib3VpIjoKICAgICAgICBpbnZlbnRhaXJlLmFwcGVuZCgidG9yY2hlIikKICAgICAgICBwcmludCgiVm91cyBhdmV6IHByaXMgbGEgdG9yY2hlLiIpCiAgICBlbGlmIGNob2l4ID09ICJub24iOgogICAgICAgIHByaW50KCJWb3VzIGTDqWNpZGV6IGRlIG5lIHBhcyBwcmVuZHJlIGxhIHRvcmNoZSBldCB2b3VzIGVudHJleiBkYW5zIGxhIGdyb3R0ZSBzYW5zIGx1bWnDqHJlLiIpCiAgICBwcmludCgiVm91cyBhdmFuY2V6IGRhbnMgbGEgZ3JvdHRlIGV0IHZvdXMgcmVuY29udHJleiB1biBkcmFnb24gcXVpIGJsb3F1ZSB2b3RyZSBjaGVtaW4uIikKICAgIGlmICJjYW5uZSDDoCBww6pjaGUiIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdXMgdXRpbGlzZXogdm90cmUgY2FubmUgw6AgcMOqY2hlIHBvdXIgY29tYmF0dHJlIGxlIGRyYWdvbiBldCB2b3VzIHLDqXVzc2lzc2V6IMOgIGxlIHZhaW5jcmUgKGluY3JveWFibGUpLiIpCiAgICAgICAgZW50cmVyX3NhbGxlX3NlY3JldGUoKQogICAgZWxpZiAidG9yY2hlIiBpbiBpbnZlbnRhaXJlOgogICAgICAgIHByaW50KCJWb3VzIHV0aWxpc2V6IHZvdHJlIHRvcmNoZSBwb3VyIGVmZnJheWVyIGxlIGRyYWdvbiBldCB2b3VzIHLDqXVzc2lzc2V6IMOgIHBhc3NlciBzYW5zIMOqdHJlIGF0dGFxdcOpIChpbmNyb3lhYmxlKS4iKQogICAgICAgIGVudHJlcl9zYWxsZV9zZWNyZXRlKCkKICAgIGVsc2U6CiAgICAgICAgcHJpbnQoIlZvdXMgbidhdmV6IHBhcyBkJ2FybWUgcG91ciBjb21iYXR0cmUgbGUgZHJhZ29uIGV0IHZvdXMgw6p0ZXMgZMOpdm9yw6kuIikKICAgICAgICBwcmludCgiVm91cyDDqnRlcyBtb3J0LiIpCgpkZWYgZW50cmVyX3NhbGxlX3NlY3JldGUoKToKICAgIHByaW50KCJWb3VzIGNvbnRpbnVleiB2b3RyZSBjaGVtaW4ganVzcXUnw6AgdHJvdXZlciB1bmUgc2FsbGUgc2VjcsOodGUuIikKICAgIHByaW50KCJWb3VzIHRyb3V2ZXogdW5lIG1hZ25pZmlxdWUgw6lww6llIHN1ciB1biBzb2NsZS4iKQogICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiVm91bGV6LXZvdXMgcmFtYXNzZXIgbCfDqXDDqWUgPyIsIFsib3VpIiwgIm5vbiJdKQogICAgaWYgY2hvaXggPT0gJ291aSc6CiAgICAgICAgcHJpbnQoIlZvdXMgcGFydmVuZXogw6AgbCdleHRyYWlyZSBkdSBzb2NsZSwgdm91cyDDqnRyZSBwcm9iYWJsZW1lbnQgbCfDqWx1LiIpCiAgICAgICAgaW52ZW50YWlyZS5hcHBlbmQoIsOpcMOpZSIpCiAgICBlbGlmIGNob2l4ID09ICdub24nOgogICAgICAgIHByaW50KCJWb3VzIGTDqWNpZGV6IGQnaWdub3JlciBsJ8OpcMOpZSAobWFpcyBwb3VycXVvaSA/Pz8pLiIpCiAgICBwcmludCgiQydlc3QgdW4gY3VsIGRlIHNhYywgdm91cyByZXRvdXJuZXogZGFucyBsYSBmb3LDqnQuIikKICAgIGVudHJlcl9mb3JldCgpCgojIETDqWJ1dCBkZSBsJ2F2ZW50dXJlCmludmVudGFpcmUgPSBbXQoKcHJpbnQoIkVuIHZvdXMgYmFsbGFkYW50IHVuIHBldSB0cm9wIGxvaW4gZGUgY2hleiB2b3VzLCB2b3VzIGF2ZXogZmluaSBwYXIgdm91cyBwZXJkcmUuIikKcHJpbnQoIlJldHJvdXZleiBsZSBjaGVtaW4gZGUgbGEgbWFpc29uLiIpCmVudHJlcl9mb3JldCgp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div></div>
-</details></div>
+<p>Pour tester, par exemple, si un gentil petit berger allemand qui ne bave pas tout le temps est un candidat à être récupéré, on règlera les entrées suivantes:</p>
+<ul class="simple">
+<li><p>Gentil: 1 (le chien est gentil)</p></li>
+<li><p>Bave tout le temps: 0 (le chien ne bave pas tout le temps)</p></li>
+<li><p>Petit: 1 (le chien est un petit chien)</p></li>
+<li><p>Labrador: 0 (le chien n’est pas un labrador)</p></li>
+</ul>
+<p>On s’attend dans ce cas à ce que la sortie «OK pour ce chien» vaille 1.</p>
+<div class="logic-container" style="height: 320px;"><logic-editor mode="design" showonly="and,or,xor,not">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [
+    {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 0},
+    {"pos": [190, 130], "id": 15, "name": "Bave tout le temps", "val": 0},
+    {"pos": [190, 190], "id": 16, "name": "Petit", "val": 0},
+    {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
+  ],
+  "out": [{"pos": [440, 160], "id": 18, "name": "OK pour ce chien!"}]
+}
+</script></logic-editor></div><section id="solution-ex-2">
+<h4>Solution Ex 2<a class="headerlink" href="#solution-ex-2" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="logic-container" style="height: 330px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [
+    {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 0},
+    {"pos": [190, 130], "id": 15, "name": "Bave tout le temps", "val": 0},
+    {"pos": [190, 190], "id": 16, "name": "Petit", "val": 0},
+    {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
+  ],
+  "out": [{"pos": [490, 210], "id": 18, "name": "OK pour ce chien!"}],
+  "gates": [
+    {"type": "AND", "pos": [420, 210], "in": [0, 1], "out": 2},
+    {"type": "OR", "pos": [310, 220], "in": [3, 4], "out": 5},
+    {"type": "AND", "pos": [340, 120], "in": [6, 7], "out": 8},
+    {"type": "NOT", "pos": [260, 130], "in": 9, "out": 10}
+  ],
+  "wires": [[2, 18], [8, 0], [14, 6], [15, 9], [10, 7], [16, 3], [17, 4], [5, 1]]
+}
+</script></logic-editor></div><p>D’autres solutions sont possibles.</p>
+</section>
+</section>
+</section>
+<section id="troisieme-partie-encodage-et-decodage-des-races">
+<h2>Troisième partie: encodage et décodage des races<a class="headerlink" href="#troisieme-partie-encodage-et-decodage-des-races" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-3">
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
+<ol class="simple">
+<li><p>Expliquer aux élèves que l’entrée «labrador» de la partie précédente n’est pas très intéressante, car elle ne permet de modéliser qu’une seule race de chiens. Dans cette deuxième partie, on va se permettre d’utiliser deux bits pour représenter plusieurs races. Faire réfléchir les élèves à ceci: combien de races pourra-t-on au maximum représenter si on se permet d’utiliser deux entrées ? La réponse est 4 et non pas 2.</p></li>
+<li><p>Dire aux élèves qu’on va donc s’intéresser, pour simplifier, à uniquement 4 races de chiens: border collie, berger allemand, husky et labrador. On décide de l’encodage suivant:</p></li>
+</ol>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Représentation binaire</p></th>
+<th class="text-align:left head"><p>Race</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>00</p></td>
+<td class="text-align:left"><p>border collie</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>01</p></td>
+<td class="text-align:left"><p>berger allemand</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>10</p></td>
+<td class="text-align:left"><p>husky</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>11</p></td>
+<td class="text-align:left"><p>labrador</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>On a donc maintenant besoin d’un décodeur: en utilisant les 2 bits d’entrées, il s’agit d’avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus.</p>
+<div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="and,or,xor,not">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [
+    {"pos": [120, 80], "orient": "s", "id": 0, "val": 0},
+    {"pos": [160, 80], "orient": "s", "id": 1, "name": "Code de la race du chien sur 2 bits", "val": 0}
+  ],
+  "out": [
+    {"pos": [460, 190], "id": 2, "name": "c’est un border collie"},
+    {"pos": [460, 310], "id": 3, "name": "c’est un labrador"},
+    {"pos": [460, 270], "id": 4, "name": "c’est un husky"},
+    {"pos": [460, 230], "id": 5, "name": "c’est un berger allemand"}
+  ]
+}
+</script></logic-editor></div><section id="solution-ex-3">
+<h4>Solution Ex 3<a class="headerlink" href="#solution-ex-3" title="Lien permanent vers ce titre">¶</a></h4>
+<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [
+    {"pos": [120, 80], "orient": "s", "id": 0, "val": 0},
+    {"pos": [160, 80], "orient": "s", "id": 1, "name": "Code de la race du chien sur 2 bits", "val": 0}
+  ],
+  "out": [
+    {"pos": [460, 190], "id": 2, "name": "c’est un border collie"},
+    {"pos": [460, 310], "id": 3, "name": "c’est un labrador"},
+    {"pos": [460, 270], "id": 4, "name": "c’est un husky"},
+    {"pos": [460, 230], "id": 5, "name": "c’est un berger allemand"}
+  ],
+  "gates": [
+    {"type": "AND", "pos": [210, 310], "in": [6, 7], "out": 8},
+    {"type": "AND", "pos": [360, 270], "in": [9, 10], "out": 11},
+    {"type": "NOT", "pos": [230, 110], "in": 12, "out": 13},
+    {"type": "NOT", "pos": [230, 160], "in": 14, "out": 15},
+    {"type": "AND", "pos": [390, 120], "in": [16, 17], "out": 18},
+    {"type": "AND", "pos": [360, 210], "in": [19, 20], "out": 21}
+  ],
+  "wires": [
+    [8, 3],
+    [1, 6],
+    [0, 7],
+    [11, 4],
+    [1, 12],
+    [0, 14],
+    [18, 2],
+    [13, 16],
+    [15, 17],
+    [21, 5],
+    [13, 9],
+    [0, 10, {"via": [[240, 280]]}],
+    [15, 19],
+    [1, 20, {"via": [[200, 220]]}]
+  ]
+}
+</script></logic-editor></div></section>
+</section>
+<section id="quatrieme-partie-conditions-avec-decodage">
+<h3>Quatrième partie: conditions avec décodage<a class="headerlink" href="#quatrieme-partie-conditions-avec-decodage" title="Lien permanent vers ce titre">¶</a></h3>
+<p>((TODO))</p>
+</section>
 </section>
 </section>
 
@@ -304,30 +459,30 @@ C’est-à-dire une <strong>histoire durant laquelle le lecteur peut faire des c
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="epidemie.html">
+          <a class="next-page" href="code_libre.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Simulation d’épidémie</div>
+                <div class="title">Zone de code libre</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="prog1/algo.html">
+          <a class="prev-page" href="epidemie.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">7. Les algorithmes</div>
+                <div class="title">Simulation d’épidémie</div>
                 
               </div>
             </a>
         </div>
 
         <div class="related-information">
-            <a class="muted-link" href="_sources/aventure.md.txt"
+            <a class="muted-link" href="_sources/portes_logiques.md.txt"
                rel="nofollow">
               Montrer le code source
             </a>
@@ -347,8 +502,29 @@ C’est-à-dire une <strong>histoire durant laquelle le lecteur peut faire des c
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Aventure textuelle</a><ul>
-<li><a class="reference internal" href="#a-vous-de-jouer">A vous de jouer 🎮</a></li>
+<li><a class="reference internal" href="#">Portes logiques</a><ul>
+<li><a class="reference internal" href="#selecteur-de-chien">Sélecteur de chien</a><ul>
+<li><a class="reference internal" href="#exercice-1">Exercice 1</a><ul>
+<li><a class="reference internal" href="#solution">Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#deuxieme-partie-criteres-plus-compliques">Deuxième partie : critères plus compliqués</a><ul>
+<li><a class="reference internal" href="#exercice-2">Exercice 2</a><ul>
+<li><a class="reference internal" href="#solution-ex-2">Solution Ex 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troisieme-partie-encodage-et-decodage-des-races">Troisième partie: encodage et décodage des races</a><ul>
+<li><a class="reference internal" href="#exercice-3">Exercice 3</a><ul>
+<li><a class="reference internal" href="#solution-ex-3">Solution Ex 3</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#quatrieme-partie-conditions-avec-decodage">Quatrième partie: conditions avec décodage</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

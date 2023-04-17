@@ -1,3 +1,5 @@
+(epidemie)=
+
 # Simulation d'épidémie
 
 Dans ce chapitre, nous allons simuler l'évolution d'une épidémie grâce à nos connaissances en python. Pour cela, nous allons écrire un **modèle** représentant les différentes caractéristiques de l'épidémie puis nous simulerons le temps qui passe afin de pouvoir mesurer les impacts de la maladie sur la population.
@@ -21,11 +23,14 @@ morts = ...
 
 Nous allons maintenant définir les caractéristiques de la maladie. Pour cela, nous utiliserons les variables suivantes:
 
+- `nom_maladie` qui représente le nom de la maladie.
 - `p_infection` qui représente la probabilité qu'un individu malade infecte un individu susceptible lors d'un contact.
 - `p_guerison` qui représente la probabilité qu'un individu malade guérisse chaque jour.
 - `p_deces` qui représente la probabilité qu'un individu malade meure chaque jour.
 
 ```{codeplay}
+nom_maladie = ...
+
 p_infection = ...
 p_guerison = ...
 p_deces = ...
@@ -35,6 +40,8 @@ Voici le diagramme représentant l'évolution d'un individu selon ce modèle:
 
 ```{image} prog1/media/epidemie.png
 ```
+
+Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutôt simple et ne prend pas en compte de nombreux facteurs. Par exemple, il ne prend pas en compte le fait que les personnes malades peuvent être hospitalisées et/ou isolés et que les personnes guéries peuvent retomber malades après un certain temps.
 
 ## 3. Simulation du jour 1
 
@@ -54,7 +61,7 @@ nb_guerisons = ...
 nb_deces = ...
 ```
 
-Combien y a-t-il de malades après le premier jour selon ce modèle ? Est-ce que cela vous semble cohérent? Sinon, quelle modification pouvez-vous apporter à votre modèle ?
+Combien y a-t-il de malades après le premier jour selon ce modèle ? Est-ce que cela vous semble cohérent ? Sinon, quelle modification pouvez-vous apporter à votre modèle ?
 
 Nous allons maintenant pouvoir mettre à jour nos variables de population à la fin du jour 1. Calculez les nouvelles valeurs de `susceptibles`, `malades`, `gueris` et `morts` à la fin du jour 1.
 
@@ -71,7 +78,7 @@ Que peut-on dire du nombre total de personnes (susceptibles, malades, guéries o
 
 Nous allons maintenant simuler l'évolution de l'épidémie sur plusieurs jours. Placer une boucle `for jour in range(10):` au bon endroit de votre code pour que chaque répétition de la boucle corresponde au passage d’un jour.
 
-Combien y a-t-il de malades après 10 jours? Et après 20 jours?
+Combien y a-t-il de malades après 10 jours? Et après 20 jours ?
 
 ## 5. Visualisation de l'évolution de l'épidémie
 
@@ -110,7 +117,8 @@ On souhaite comparer le modèle à l’épidémie de Covid-19 dans le canton de 
 ```python
 import csv
 
-cas = []
+cascumul = []
+ncas = []
 date = []
 
 with open ("covid_vd.csv") as covid_file:
@@ -122,6 +130,10 @@ with open ("covid_vd.csv") as covid_file:
             cas.append(0)
         else:
             cas.append(float(row[1]))
+
+# On affiche la vraie courbe
+plt.plot(cascumul)
+plt.show()
 ```
 
 Essayer de trouver les paramètre de votre modèle qui correspondent le mieux à la première vague, puis à la seconde vague.
