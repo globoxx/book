@@ -4,11 +4,11 @@
 
 Dans cette activité, vous allez concevoir des circuits logiques à l'aide de portes logiques.
 
-## Sélecteur de chien
+## 1. Sélecteur de chien
 
 Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.
 
-### Exercice 1
+### Exercice 1.1
 
 Concevez le circuit de manière à faire en sorte que la sortie «OK pour ce chien» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien précis et que ce chien est à la fois **petit** et **gentil**.
 
@@ -47,9 +47,7 @@ Il faut insérer une porte **ET**.
 }
 ```
 
-## Deuxième partie : critères plus compliqués
-
-### Exercice 2
+### Exercice 1.2 - critères plus compliqués
 
 1. Les critères sont maintenant devenus plus complexes. Le chien doit remplir les conditions suivantes:
 
@@ -110,13 +108,22 @@ On s'attend dans ce cas à ce que la sortie «OK pour ce chien» vaille 1.
 
 D'autres solutions sont possibles.
 
-## Troisième partie: encodage et décodage des races
+### Exercice 1.3 - encodage et décodage des races
 
-### Exercice 3
+L'entrée «labrador» de la partie précédente n'est pas très intéressante, car elle ne permet de modéliser qu'une seule race de chiens. Dans cette deuxième partie, on va se permettre d'utiliser **2 bits pour représenter plusieurs races**. Faire réfléchir les élèves à ceci: combien de races pourra-t-on au maximum représenter si on se permet d'utiliser deux entrées ? La réponse est 4 et non pas 2.
 
-1. Expliquer aux élèves que l'entrée «labrador» de la partie précédente n'est pas très intéressante, car elle ne permet de modéliser qu'une seule race de chiens. Dans cette deuxième partie, on va se permettre d'utiliser deux bits pour représenter plusieurs races. Faire réfléchir les élèves à ceci: combien de races pourra-t-on au maximum représenter si on se permet d'utiliser deux entrées ? La réponse est 4 et non pas 2.
+```{question}
+Combien de races pourra-t-on au maximum représenter si on se permet d'utiliser 2 entrées ?
 
-2. Dire aux élèves qu'on va donc s'intéresser, pour simplifier, à uniquement 4 races de chiens: border collie, berger allemand, husky et labrador. On décide de l'encodage suivant:
+{v}`1`  
+{f}`2`  
+{v}`4`  
+{f}`1 million`
+===
+Nous pourrons bien représenter 4 races car nous avons 4 possibilités: 00, 01, 10 et 11. De manière générale, avec `n` bits/entrées, on peut représenter `2^n` races.
+```
+
+On va donc s'intéresser à 4 races de chiens: border collie, berger allemand, husky et labrador. On décide de l'encodage suivant:
 
   | Représentation binaire | Race            |
   | :--------------------: | :---------------|
@@ -125,7 +132,7 @@ D'autres solutions sont possibles.
   | 10                     | husky           |
   | 11                     | labrador        |
 
-On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, il s'agit d'avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus.
+On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, il s'agit d'avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.
 
 ```{logic}
 :height: 390
@@ -192,6 +199,149 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
 }
 ```
 
-### Quatrième partie: conditions avec décodage
+<!-- ### Quatrième partie: conditions avec décodage
 
-((TODO))
+Dans cette partie, nous allons combiner les concepts de décodage des races de chiens avec les critères de sélection abordés dans la partie 3.  
+Réalisez un circuit logique qui prend en compte à la fois les critères et les races de chiens encodées sur 2 bits.
+
+### Exercice 4
+
+1. Concevez un circuit logique qui prend en compte les critères de sélection définis dans la partie 2:
+
+* Le chien doit être gentil;
+* Le chien ne doit pas baver tout le temps;
+* Il faut soit que ce soit un petit chien, soit que ce soit un labrador.
+
+De plus, prenez en compte l'encodage des races de chiens (border collie, berger allemand, husky et labrador) que nous avons défini dans la partie 3.
+
+Les entrées de votre circuit logique doivent inclure:
+
+* Gentil (1 bit)
+* Bave tout le temps (1 bit)
+* Petit (1 bit)
+* Race (2 bits)
+
+Utilisez le décodeur que vous avez créé dans l'exercice 3 pour convertir les 2 bits d'entrée de la race en 4 sorties correspondant à chaque race de chien. Ensuite, utilisez ces sorties pour vérifier si le chien est un labrador ou non.
+
+```{logic}
+:height: 390
+:mode: design
+:showonly: and,or,xor,not
+
+{
+  "v": 5,
+  "in": [
+    {"pos": [470, 115], "id": 14, "name": "Gentil"},
+    {"pos": [470, 175], "id": 15, "name": "Bave tout le temps"},
+    {"pos": [470, 235], "id": 16, "name": "Petit"},
+    {"bits": 2, "pos": [470, 300], "id": [4, 5], "name": "Race du chien"}
+  ],
+  "out": [
+    {"pos": [860, 215], "id": 18, "name": "OK pour ce chien!"}
+  ]
+}
+```
+
+#### Solution
+
+Pour résoudre cet exercice, vous devrez d'abord connecter les entrées de race au décodeur que vous avez conçu dans l'exercice 3. Ensuite, vous devrez combiner les résultats du décodeur avec les autres entrées (gentil, bave tout le temps et petit) à l'aide de portes logiques appropriées (comme les portes ET, OU, NON, etc.) pour respecter les critères de sélection.
+
+Une fois que vous avez réussi à concevoir le circuit logique, testez-le avec différentes combinaisons d'entrées pour vous assurer qu'il fonctionne correctement et répond aux critères de sélection.
+ -->
+
+## 2. Circuit à partir d'une table de vérité
+
+Dans cette partie, vous allez convevoir des circuits en vous basant sur la table de vérité associée.
+
+### Exercice 2.1 - Système d'alarmes pour animaux de compagnie
+
+Oublions un moment les chiens et concentrons-nous sur les systèmes d'alarme pour animaux de compagnie. Vous êtes mandaté par une entreprise pour développer un système capable de déclencher une alarme lorsque certaines conditions sont remplies.
+
+1. Analysez la table de vérité ci-dessous. Comprenez quelles sont les conditions qui doivent être remplies pour que l'alarme se déclenche.
+2. Concevez le circuit logique correspondant.
+
+| Chien | Chat | Porte ouverte | Propriétaire présent | Alarme |
+| :---: | :--: | :-----------: | :------------------: | :----: |
+|   0   |  0   |       0       |           0           |   0   |
+|   0   |  0   |       0       |           1           |   0   |
+|   0   |  0   |       1       |           0           |   0   |
+|   0   |  0   |       1       |           1           |   0   |
+|   0   |  1   |       0       |           0           |   0   |
+|   0   |  1   |       0       |           1           |   0   |
+|   0   |  1   |       1       |           0           |   1   |
+|   0   |  1   |       1       |           1           |   0   |
+|   1   |  0   |       0       |           0           |   0   |
+|   1   |  0   |       0       |           1           |   0   |
+|   1   |  0   |       1       |           0           |   1   |
+|   1   |  0   |       1       |           1           |   0   |
+|   1   |  1   |       0       |           0           |   0   |
+|   1   |  1   |       0       |           1           |   0   |
+|   1   |  1   |       1       |           0           |   1   |
+|   1   |  1   |       1       |           1           |   0   |
+
+Les entrées de votre circuit logique doivent inclure:
+
+* Chien (1 bit)
+* Chat (1 bit)
+* Porte ouverte (1 bit)
+* Propriétaire présent (1 bit)
+
+La sortie de votre circuit doit être l'alarme (1 bit).
+
+```{logic}
+:height: 390
+:mode: design
+:showonly: and,or,xor,not
+
+{
+  "v": 5,
+  "in": [
+    {"pos": [470, 115], "id": 14, "name": "Chien"},
+    {"pos": [470, 175], "id": 15, "name": "Chat"},
+    {"pos": [470, 235], "id": 16, "name": "Porte ouverte"},
+    {"pos": [470, 290], "id": 21, "name": "Propriétaire présent"}
+  ],
+  "out": [
+    {"pos": [830, 195], "id": 22, "name": "Alarme"}
+  ]
+}
+```
+
+## Exercice 2.2 - Table mystère
+
+Ecrivez le circuit logique correspondant à la table de vérité suivante:
+
+| A | B | C | S1 | S2 |
+|:-:|:-:|:---:|:----:|:---:|
+| 0 | 0 |  0  |  0   |  0  |
+| 0 | 0 |  1  |  0   |  1  |
+| 0 | 1 |  0  |  0   |  1  |
+| 0 | 1 |  1  |  1   |  0  |
+| 1 | 0 |  0  |  0   |  1  |
+| 1 | 0 |  1  |  1   |  0  |
+| 1 | 1 |  0  |  1   |  0  |
+| 1 | 1 |  1  |  1   |  1  |
+
+Les valeurs d'entrée sont A, B et C. Les valeurs de sortie sont S1 et S2.
+
+```{logic}
+:height: 390
+:mode: design
+:showonly: and,or,xor,not
+
+{
+  "v": 5,
+  "in": [
+    {"pos": [470, 115], "id": 14, "name": "A"},
+    {"pos": [470, 175], "id": 15, "name": "B"},
+    {"pos": [470, 235], "id": 16, "name": "C"}
+  ],
+  "out": [
+    {"pos": [770, 150], "id": 22, "name": "S1"},
+    {"pos": [770, 195], "id": 23, "name": "S2"}
+  ]
+}
+```
+
+Que fait ce circuit d'après vous ?
+

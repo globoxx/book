@@ -270,10 +270,10 @@
 <span id="id1"></span><h1>Portes logiques<a class="headerlink" href="#portes-logiques" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Dans cette activité, vous allez concevoir des circuits logiques à l’aide de portes logiques.</p>
 <section id="selecteur-de-chien">
-<h2>Sélecteur de chien<a class="headerlink" href="#selecteur-de-chien" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>1. Sélecteur de chien<a class="headerlink" href="#selecteur-de-chien" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.</p>
-<section id="exercice-1">
-<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-1-1">
+<h3>Exercice 1.1<a class="headerlink" href="#exercice-1-1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Concevez le circuit de manière à faire en sorte que la sortie «OK pour ce chien» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien précis et que ce chien est à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
 <p>Les caractéristiques <strong>petit</strong> et <strong>gentil</strong> sont sont les valeurs logiques d’entrée pouvant valoir 0 ou 1.</p>
 <div class="logic-container" style="height: 200px;"><logic-editor mode="design" showonly="and,or,xor">
@@ -301,11 +301,8 @@
 }
 </script></logic-editor></div></section>
 </section>
-</section>
-<section id="deuxieme-partie-criteres-plus-compliques">
-<h2>Deuxième partie : critères plus compliqués<a class="headerlink" href="#deuxieme-partie-criteres-plus-compliques" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="exercice-2">
-<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-1-2-criteres-plus-compliques">
+<h3>Exercice 1.2 - critères plus compliqués<a class="headerlink" href="#exercice-1-2-criteres-plus-compliques" title="Lien permanent vers ce titre">¶</a></h3>
 <ol class="simple">
 <li><p>Les critères sont maintenant devenus plus complexes. Le chien doit remplir les conditions suivantes:</p></li>
 </ol>
@@ -358,15 +355,23 @@
 </script></logic-editor></div><p>D’autres solutions sont possibles.</p>
 </section>
 </section>
-</section>
-<section id="troisieme-partie-encodage-et-decodage-des-races">
-<h2>Troisième partie: encodage et décodage des races<a class="headerlink" href="#troisieme-partie-encodage-et-decodage-des-races" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="exercice-3">
-<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
-<ol class="simple">
-<li><p>Expliquer aux élèves que l’entrée «labrador» de la partie précédente n’est pas très intéressante, car elle ne permet de modéliser qu’une seule race de chiens. Dans cette deuxième partie, on va se permettre d’utiliser deux bits pour représenter plusieurs races. Faire réfléchir les élèves à ceci: combien de races pourra-t-on au maximum représenter si on se permet d’utiliser deux entrées ? La réponse est 4 et non pas 2.</p></li>
-<li><p>Dire aux élèves qu’on va donc s’intéresser, pour simplifier, à uniquement 4 races de chiens: border collie, berger allemand, husky et labrador. On décide de l’encodage suivant:</p></li>
-</ol>
+<section id="exercice-1-3-encodage-et-decodage-des-races">
+<h3>Exercice 1.3 - encodage et décodage des races<a class="headerlink" href="#exercice-1-3-encodage-et-decodage-des-races" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’entrée «labrador» de la partie précédente n’est pas très intéressante, car elle ne permet de modéliser qu’une seule race de chiens. Dans cette deuxième partie, on va se permettre d’utiliser <strong>2 bits pour représenter plusieurs races</strong>. Faire réfléchir les élèves à ceci: combien de races pourra-t-on au maximum représenter si on se permet d’utiliser deux entrées ? La réponse est 4 et non pas 2.</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Combien de races pourra-t-on au maximum représenter si on se permet d’utiliser 2 entrées ?</p>
+<p><label class="answer correct"><input type="checkbox"/>1</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>2</label><br/>
+<label class="answer correct"><input type="checkbox"/>4</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>1 million</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Nous pourrons bien représenter 4 races car nous avons 4 possibilités: 00, 01, 10 et 11. De manière générale, avec <code class="docutils literal notranslate"><span class="pre">n</span></code> bits/entrées, on peut représenter <code class="docutils literal notranslate"><span class="pre">2^n</span></code> races.</p>
+</div>
+</div>
+</form></div><p>On va donc s’intéresser à 4 races de chiens: border collie, berger allemand, husky et labrador. On décide de l’encodage suivant:</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Représentation binaire</p></th>
@@ -388,7 +393,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>On a donc maintenant besoin d’un décodeur: en utilisant les 2 bits d’entrées, il s’agit d’avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus.</p>
+<p>On a donc maintenant besoin d’un décodeur: en utilisant les 2 bits d’entrées, il s’agit d’avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.</p>
 <div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="and,or,xor,not">
 <script type="application/json">
 {
@@ -445,12 +450,279 @@
     [1, 20, {"via": [[200, 220]]}]
   ]
 }
+</script></logic-editor></div><!-- ### Quatrième partie: conditions avec décodage
+
+Dans cette partie, nous allons combiner les concepts de décodage des races de chiens avec les critères de sélection abordés dans la partie 3.  
+Réalisez un circuit logique qui prend en compte à la fois les critères et les races de chiens encodées sur 2 bits.
+
+### Exercice 4
+
+1. Concevez un circuit logique qui prend en compte les critères de sélection définis dans la partie 2:
+
+* Le chien doit être gentil;
+* Le chien ne doit pas baver tout le temps;
+* Il faut soit que ce soit un petit chien, soit que ce soit un labrador.
+
+De plus, prenez en compte l'encodage des races de chiens (border collie, berger allemand, husky et labrador) que nous avons défini dans la partie 3.
+
+Les entrées de votre circuit logique doivent inclure:
+
+* Gentil (1 bit)
+* Bave tout le temps (1 bit)
+* Petit (1 bit)
+* Race (2 bits)
+
+Utilisez le décodeur que vous avez créé dans l'exercice 3 pour convertir les 2 bits d'entrée de la race en 4 sorties correspondant à chaque race de chien. Ensuite, utilisez ces sorties pour vérifier si le chien est un labrador ou non.
+
+```{logic}
+:height: 390
+:mode: design
+:showonly: and,or,xor,not
+
+{
+  "v": 5,
+  "in": [
+    {"pos": [470, 115], "id": 14, "name": "Gentil"},
+    {"pos": [470, 175], "id": 15, "name": "Bave tout le temps"},
+    {"pos": [470, 235], "id": 16, "name": "Petit"},
+    {"bits": 2, "pos": [470, 300], "id": [4, 5], "name": "Race du chien"}
+  ],
+  "out": [
+    {"pos": [860, 215], "id": 18, "name": "OK pour ce chien!"}
+  ]
+}
+```
+
+#### Solution
+
+Pour résoudre cet exercice, vous devrez d'abord connecter les entrées de race au décodeur que vous avez conçu dans l'exercice 3. Ensuite, vous devrez combiner les résultats du décodeur avec les autres entrées (gentil, bave tout le temps et petit) à l'aide de portes logiques appropriées (comme les portes ET, OU, NON, etc.) pour respecter les critères de sélection.
+
+Une fois que vous avez réussi à concevoir le circuit logique, testez-le avec différentes combinaisons d'entrées pour vous assurer qu'il fonctionne correctement et répond aux critères de sélection.
+ -->
+</section>
+</section>
+</section>
+<section id="circuit-a-partir-dune-table-de-verite">
+<h2>2. Circuit à partir d’une table de vérité<a class="headerlink" href="#circuit-a-partir-dune-table-de-verite" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans cette partie, vous allez convevoir des circuits en vous basant sur la table de vérité associée.</p>
+<section id="exercice-2-1-systeme-dalarmes-pour-animaux-de-compagnie">
+<h3>Exercice 2.1 - Système d’alarmes pour animaux de compagnie<a class="headerlink" href="#exercice-2-1-systeme-dalarmes-pour-animaux-de-compagnie" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Oublions un moment les chiens et concentrons-nous sur les systèmes d’alarme pour animaux de compagnie. Vous êtes mandaté par une entreprise pour développer un système capable de déclencher une alarme lorsque certaines conditions sont remplies.</p>
+<ol class="simple">
+<li><p>Analysez la table de vérité ci-dessous. Comprenez quelles sont les conditions qui doivent être remplies pour que l’alarme se déclenche.</p></li>
+<li><p>Concevez le circuit logique correspondant.</p></li>
+</ol>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Chien</p></th>
+<th class="text-align:center head"><p>Chat</p></th>
+<th class="text-align:center head"><p>Porte ouverte</p></th>
+<th class="text-align:center head"><p>Propriétaire présent</p></th>
+<th class="text-align:center head"><p>Alarme</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Les entrées de votre circuit logique doivent inclure:</p>
+<ul class="simple">
+<li><p>Chien (1 bit)</p></li>
+<li><p>Chat (1 bit)</p></li>
+<li><p>Porte ouverte (1 bit)</p></li>
+<li><p>Propriétaire présent (1 bit)</p></li>
+</ul>
+<p>La sortie de votre circuit doit être l’alarme (1 bit).</p>
+<div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="and,or,xor,not">
+<script type="application/json">
+{
+  "v": 5,
+  "in": [
+    {"pos": [470, 115], "id": 14, "name": "Chien"},
+    {"pos": [470, 175], "id": 15, "name": "Chat"},
+    {"pos": [470, 235], "id": 16, "name": "Porte ouverte"},
+    {"pos": [470, 290], "id": 21, "name": "Propriétaire présent"}
+  ],
+  "out": [
+    {"pos": [830, 195], "id": 22, "name": "Alarme"}
+  ]
+}
 </script></logic-editor></div></section>
 </section>
-<section id="quatrieme-partie-conditions-avec-decodage">
-<h3>Quatrième partie: conditions avec décodage<a class="headerlink" href="#quatrieme-partie-conditions-avec-decodage" title="Lien permanent vers ce titre">¶</a></h3>
-<p>((TODO))</p>
-</section>
+<section id="exercice-2-2-table-mystere">
+<h2>Exercice 2.2 - Table mystère<a class="headerlink" href="#exercice-2-2-table-mystere" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ecrivez le circuit logique correspondant à la table de vérité suivante:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>A</p></th>
+<th class="text-align:center head"><p>B</p></th>
+<th class="text-align:center head"><p>C</p></th>
+<th class="text-align:center head"><p>S1</p></th>
+<th class="text-align:center head"><p>S2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Les valeurs d’entrée sont A, B et C. Les valeurs de sortie sont S1 et S2.</p>
+<div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="and,or,xor,not">
+<script type="application/json">
+{
+  "v": 5,
+  "in": [
+    {"pos": [470, 115], "id": 14, "name": "A"},
+    {"pos": [470, 175], "id": 15, "name": "B"},
+    {"pos": [470, 235], "id": 16, "name": "C"}
+  ],
+  "out": [
+    {"pos": [770, 150], "id": 22, "name": "S1"},
+    {"pos": [770, 195], "id": 23, "name": "S2"}
+  ]
+}
+</script></logic-editor></div><p>Que fait ce circuit d’après vous ?</p>
 </section>
 </section>
 
@@ -503,28 +775,26 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Portes logiques</a><ul>
-<li><a class="reference internal" href="#selecteur-de-chien">Sélecteur de chien</a><ul>
-<li><a class="reference internal" href="#exercice-1">Exercice 1</a><ul>
+<li><a class="reference internal" href="#selecteur-de-chien">1. Sélecteur de chien</a><ul>
+<li><a class="reference internal" href="#exercice-1-1">Exercice 1.1</a><ul>
 <li><a class="reference internal" href="#solution">Solution</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#deuxieme-partie-criteres-plus-compliques">Deuxième partie : critères plus compliqués</a><ul>
-<li><a class="reference internal" href="#exercice-2">Exercice 2</a><ul>
+<li><a class="reference internal" href="#exercice-1-2-criteres-plus-compliques">Exercice 1.2 - critères plus compliqués</a><ul>
 <li><a class="reference internal" href="#solution-ex-2">Solution Ex 2</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#troisieme-partie-encodage-et-decodage-des-races">Troisième partie: encodage et décodage des races</a><ul>
-<li><a class="reference internal" href="#exercice-3">Exercice 3</a><ul>
+<li><a class="reference internal" href="#exercice-1-3-encodage-et-decodage-des-races">Exercice 1.3 - encodage et décodage des races</a><ul>
 <li><a class="reference internal" href="#solution-ex-3">Solution Ex 3</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#quatrieme-partie-conditions-avec-decodage">Quatrième partie: conditions avec décodage</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#circuit-a-partir-dune-table-de-verite">2. Circuit à partir d’une table de vérité</a><ul>
+<li><a class="reference internal" href="#exercice-2-1-systeme-dalarmes-pour-animaux-de-compagnie">Exercice 2.1 - Système d’alarmes pour animaux de compagnie</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#exercice-2-2-table-mystere">Exercice 2.2 - Table mystère</a></li>
 </ul>
 </li>
 </ul>
