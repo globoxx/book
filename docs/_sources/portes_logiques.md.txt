@@ -344,4 +344,3 @@ Les valeurs d'entrée sont A, B et C. Les valeurs de sortie sont S1 et S2.
 ```
 
 Que fait ce circuit d'après vous ?
-
