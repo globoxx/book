@@ -63,6 +63,8 @@ Dans une épidémie de zombies, il faudrait inclure dans notre modèle le fait q
 
 A partir d'ici, vous allez travailler directement sur un fichier python. Vous pouvez le télécharger {download}`ici<prog1/data/epidemie.py>`.
 
+### 3.1 Calcul des infections, guérisons et décès lors du jour 1
+
 Nous allons maintenant simuler le jour 1 de l'épidémie. C'est à dire que nous allons calculer le nombre de personnes susceptibles, malades, guéries et mortes à la fin du jour 1. Pour cela, nous allons calculer les variables suivantes:
 
 - `nb_concacts_du_jour` qui représente le nombre total de contacts que font tous les malades au cours du jour. Pour le calcul, vous devrez utilier les variables `malades` et `contacts_par_jour`.
@@ -72,6 +74,8 @@ Nous allons maintenant simuler le jour 1 de l'épidémie. C'est à dire que nous
 - `nb_deces` qui représente le nombre de personnes qui meurent au cours du jour. Pour le calcul, vous devrez utilier les variables `malades` et `p_deces`.
 
 Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuader, tentez de mettre des valeurs extrêmes comme par exemple `p_infection` à 1.0 , `p_guerison` à 0.0 ou `contacts_par_jour` à 1000.
+
+### 3.2 Mise à jour du nombre total de susceptibles, malades, guéris et morts à la fin du jour 1
 
 Nous allons maintenant pouvoir mettre à jour nos variables de population à la fin du jour 1. Calculez les nouvelles valeurs de `susceptibles`, `malades`, `gueris` et `morts` à la fin du jour 1.
 

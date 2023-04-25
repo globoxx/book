@@ -293,6 +293,8 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <section id="simulation-du-jour-1">
 <h2>3. Simulation du jour 1<a class="headerlink" href="#simulation-du-jour-1" title="Lien permanent vers ce titre">¶</a></h2>
 <p>A partir d’ici, vous allez travailler directement sur un fichier python. Vous pouvez le télécharger <a class="reference download internal" download="" href="_downloads/34efb34dccf622b777a38ce88ef27f93/epidemie.py"><code class="xref download docutils literal notranslate"><span class="pre">ici</span></code></a>.</p>
+<section id="calcul-des-infections-guerisons-et-deces-lors-du-jour-1">
+<h3>3.1 Calcul des infections, guérisons et décès lors du jour 1<a class="headerlink" href="#calcul-des-infections-guerisons-et-deces-lors-du-jour-1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Nous allons maintenant simuler le jour 1 de l’épidémie. C’est à dire que nous allons calculer le nombre de personnes susceptibles, malades, guéries et mortes à la fin du jour 1. Pour cela, nous allons calculer les variables suivantes:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">nb_concacts_du_jour</span></code> qui représente le nombre total de contacts que font tous les malades au cours du jour. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">malades</span></code> et <code class="docutils literal notranslate"><span class="pre">contacts_par_jour</span></code>.</p></li>
@@ -302,8 +304,12 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <li><p><code class="docutils literal notranslate"><span class="pre">nb_deces</span></code> qui représente le nombre de personnes qui meurent au cours du jour. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">malades</span></code> et <code class="docutils literal notranslate"><span class="pre">p_deces</span></code>.</p></li>
 </ul>
 <p>Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuader, tentez de mettre des valeurs extrêmes comme par exemple <code class="docutils literal notranslate"><span class="pre">p_infection</span></code> à 1.0 , <code class="docutils literal notranslate"><span class="pre">p_guerison</span></code> à 0.0 ou <code class="docutils literal notranslate"><span class="pre">contacts_par_jour</span></code> à 1000.</p>
+</section>
+<section id="mise-a-jour-du-nombre-total-de-susceptibles-malades-gueris-et-morts-a-la-fin-du-jour-1">
+<h3>3.2 Mise à jour du nombre total de susceptibles, malades, guéris et morts à la fin du jour 1<a class="headerlink" href="#mise-a-jour-du-nombre-total-de-susceptibles-malades-gueris-et-morts-a-la-fin-du-jour-1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Nous allons maintenant pouvoir mettre à jour nos variables de population à la fin du jour 1. Calculez les nouvelles valeurs de <code class="docutils literal notranslate"><span class="pre">susceptibles</span></code>, <code class="docutils literal notranslate"><span class="pre">malades</span></code>, <code class="docutils literal notranslate"><span class="pre">gueris</span></code> et <code class="docutils literal notranslate"><span class="pre">morts</span></code> à la fin du jour 1.</p>
 <p>Encore une fois, les valeurs obtenues vous semblent-elles logiques ?</p>
+</section>
 </section>
 <section id="simulation-sur-plusieurs-jours">
 <h2>4. Simulation sur plusieurs jours<a class="headerlink" href="#simulation-sur-plusieurs-jours" title="Lien permanent vers ce titre">¶</a></h2>
@@ -437,7 +443,11 @@ Que faudrait-il modifier dans notre modèle pour le rendre plus proche de ce qui
 <li><a class="reference internal" href="#">Simulation d’épidémie</a><ul>
 <li><a class="reference internal" href="#caracteristiques-de-la-population">1. Caractéristiques de la population</a></li>
 <li><a class="reference internal" href="#caracteristiques-de-la-maladie">2. Caractéristiques de la maladie</a></li>
-<li><a class="reference internal" href="#simulation-du-jour-1">3. Simulation du jour 1</a></li>
+<li><a class="reference internal" href="#simulation-du-jour-1">3. Simulation du jour 1</a><ul>
+<li><a class="reference internal" href="#calcul-des-infections-guerisons-et-deces-lors-du-jour-1">3.1 Calcul des infections, guérisons et décès lors du jour 1</a></li>
+<li><a class="reference internal" href="#mise-a-jour-du-nombre-total-de-susceptibles-malades-gueris-et-morts-a-la-fin-du-jour-1">3.2 Mise à jour du nombre total de susceptibles, malades, guéris et morts à la fin du jour 1</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#simulation-sur-plusieurs-jours">4. Simulation sur plusieurs jours</a></li>
 <li><a class="reference internal" href="#visualisation-de-levolution-de-lepidemie">5. Visualisation de l’évolution de l’épidémie</a></li>
 <li><a class="reference internal" href="#experimentations">6. Expérimentations</a></li>
