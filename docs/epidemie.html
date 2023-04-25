@@ -300,9 +300,9 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <li><p><code class="docutils literal notranslate"><span class="pre">nb_guerisons</span></code> qui représente le nombre de personnes guéries au cours du jour 1. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">p_guerison</span></code> et <code class="docutils literal notranslate"><span class="pre">malades</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nb_deces</span></code> qui représente le nombre de personnes qui meurent au cours du jour 1. Pour le calcul, vous devrez utilier les variables <code class="docutils literal notranslate"><span class="pre">p_deces</span></code> et <code class="docutils literal notranslate"><span class="pre">malades</span></code>.</p></li>
 </ul>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bmJfY29udGFjdHNfZHVfam91ciA9IC4uLgpuYl9jb250YWN0c19zdXNjZXB0aWJsZXNfZHVfam91ciA9IC4uLgpuYl9pbmZlY3Rpb25zID0gLi4uCm5iX2d1ZXJpc29ucyA9IC4uLgpuYl9kZWNlcyA9IC4uLgoKcHJpbnQoIkF1IGNvdXJzIGR1IGpvdXIgMToiKQpwcmludChmIlx0e25iX2luZmVjdGlvbnN9IG5vdXZlbGxlcyBpbmZlY3Rpb25zIikKcHJpbnQoZiJcdHtuYl9ndWVyaXNvbnN9IG5vdXZlbGxlcyBndcOpcmlzb25zIikKcHJpbnQoZiJcdHtuYl9kZWNlc30gbm91dmVhdXggZMOpY8OocyIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div><p>Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuader, tentez par exemple de mettre <code class="docutils literal notranslate"><span class="pre">p_infection</span></code> à 1.0 ou <code class="docutils literal notranslate"><span class="pre">p_guerison</span></code> à 0.0. Que se passe-t-il ?</p>
+<p>Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuader, tentez par exemple de mettre <code class="docutils literal notranslate"><span class="pre">p_infection</span></code> à 1.0 ou <code class="docutils literal notranslate"><span class="pre">p_guerison</span></code> à 0.0. Que se passe-t-il ?</p>
 <p>Nous allons maintenant pouvoir mettre à jour nos variables de population à la fin du jour 1. Calculez les nouvelles valeurs de <code class="docutils literal notranslate"><span class="pre">susceptibles</span></code>, <code class="docutils literal notranslate"><span class="pre">malades</span></code>, <code class="docutils literal notranslate"><span class="pre">gueris</span></code> et <code class="docutils literal notranslate"><span class="pre">morts</span></code> à la fin du jour 1.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="c3VzY2VwdGlibGVzID0gLi4uCm1hbGFkZXMgPSAuLi4KZ3VlcmlzID0gLi4uCm1vcnRzID0gLi4uCgpwcmludCgiQSBsYSBmaW4gZHUgam91ciAxIGRlIGwnw6lwaWTDqW1pZToiKQpwcmludChmIlx0U3VzY2VwdGlibGVzOiB7c3VzY2VwdGlibGVzfSIpCnByaW50KGYiXHRNYWxhZGVzOiB7bWFsYWRlc30iKQpwcmludChmIlx0R3XDqXJpczoge2d1ZXJpc30iKQpwcmludChmIlx0TW9ydHM6IHttb3J0c30iKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div><p>Encore une fois, les valeurs vous semblent-elles logiques ?</p>
+<p>Encore une fois, les valeurs obtenues vous semblent-elles logiques ?</p>
 </section>
 <section id="simulation-sur-plusieurs-jours">
 <h2>4. Simulation sur plusieurs jours<a class="headerlink" href="#simulation-sur-plusieurs-jours" title="Lien permanent vers ce titre">¶</a></h2>
@@ -315,7 +315,8 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <p>Commençons par afficher le nombre de nouvelles infections les 10 premiers jours avec <code class="docutils literal notranslate"><span class="pre">print(courbe_infection)</span></code>. Est-ce que cela vous semble cohérent ?</p>
 <p>Pour visualiser la courbe des nouvelles infections, nous allons utiliser la librairie <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. Ajouter l’instruction permettant de l’importer au début de votre programme: <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code>. (Si vous rencontrez une erreur d’import ici, appelez votre enseignant).</p>
 <p>Ajoutez ensuite les instructions suivantes à la fin de votre programme pour tracer la courbe des nouvelles infections:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">courbe_infection</span><span class="p">,</span><span class="s1">'-'</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Epidémie de </span><span class="si">{</span><span class="n">nom_maladie</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">courbe_infection</span><span class="p">,</span><span class="s1">'-'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'jours'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"nombre d'infections"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -325,7 +326,7 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <li><p>Modifier le programme pour tracer le graphique du nombre d’infections les 50 premiers jours.</p></li>
 </ol>
 <p>Le code suivant permet d’afficher l’état de la population après chaque jour:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">nom_maladie</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Epidémie de </span><span class="si">{</span><span class="n">nom_maladie</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">courbe_susceptibles</span><span class="p">,</span><span class="s1">'-'</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">courbe_malades</span><span class="p">,</span><span class="s1">'-'</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">'red'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">courbe_gueris</span><span class="p">,</span><span class="s1">'-'</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">'green'</span><span class="p">)</span>
@@ -351,9 +352,8 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 </section>
 <section id="covid-19">
 <h2>7. Covid-19<a class="headerlink" href="#covid-19" title="Lien permanent vers ce titre">¶</a></h2>
-<p>On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier <a class="reference download internal" download="" href="_downloads/e161b5af13df8d4ff408b69d16a1bf81/covid_vd.csv"><code class="xref download docutils literal notranslate"><span class="pre">covid_vd.csv</span></code></a> et d’obtenir une liste contenant le nombre de cas journaliers en Suisse.</p>
+<p>On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier <a class="reference download internal" download="" href="_downloads/e161b5af13df8d4ff408b69d16a1bf81/covid_vd.csv"><code class="xref download docutils literal notranslate"><span class="pre">covid_vd.csv</span></code></a> et d’obtenir une liste contenant le nombre de cas journaliers en Suisse (<a href="https://www.coronavirus-statistiques.com/stats-pays/coronavirus-nombre-de-cas-suisse/" target="_blank">source</a>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
-
 
 <span class="n">ncas</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"covid.csv"</span><span class="p">)</span> <span class="k">as</span> <span class="n">covid_file</span><span class="p">:</span>
@@ -372,6 +372,17 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 </div>
 <p>Comparez vos courbes avec celles du Covid-19. Quelles sont les différences ? Quelles sont les similitudes ?<br/>
 Que faudrait-il modifier dans notre modèle pour le rendre plus proche de ce qui s’est passé avec le Covid-19 ? En particulier, comment pourrions-nous simuler plusieurs vagues d’infection ?</p>
+</section>
+<section id="pour-les-plus-rapides-ameliorations-de-votre-modele">
+<h2>(8. Pour les plus rapides) Améliorations de votre modèle<a class="headerlink" href="#pour-les-plus-rapides-ameliorations-de-votre-modele" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Tentez d’améliorer votre modèle pour qu’il soit plus proche de la réalité. Vous pouvez par exemple:</p>
+<ul class="simple">
+<li><p>Permettre aux personnes guéries de redevenir susceptibles.</p></li>
+<li><p>Ajouter des états intermédiaires (par exemple, “hospitalisé”, “en quarantaine”, “asymptomatique”, etc).</p></li>
+<li><p>Ajouter des paramètres pour simuler des mesures de confinement ou de gestes barrières.</p></li>
+<li><p>Ajouter des paramètres pour simuler des mesures de vaccination.</p></li>
+<li><p>Permettre une épidémie de zombies.</p></li>
+</ul>
 </section>
 </section>
 
@@ -431,6 +442,7 @@ Que faudrait-il modifier dans notre modèle pour le rendre plus proche de ce qui
 <li><a class="reference internal" href="#visualisation-de-levolution-de-lepidemie">5. Visualisation de l’évolution de l’épidémie</a></li>
 <li><a class="reference internal" href="#experimentations">6. Expérimentations</a></li>
 <li><a class="reference internal" href="#covid-19">7. Covid-19</a></li>
+<li><a class="reference internal" href="#pour-les-plus-rapides-ameliorations-de-votre-modele">(8. Pour les plus rapides) Améliorations de votre modèle</a></li>
 </ul>
 </li>
 </ul>

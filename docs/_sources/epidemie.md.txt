@@ -67,37 +67,11 @@ Nous allons maintenant simuler le jour 1 de l'épidémie. C'est à dire que nous
 - `nb_guerisons` qui représente le nombre de personnes guéries au cours du jour 1. Pour le calcul, vous devrez utilier les variables `p_guerison` et `malades`.
 - `nb_deces` qui représente le nombre de personnes qui meurent au cours du jour 1. Pour le calcul, vous devrez utilier les variables `p_deces` et `malades`.
 
-```{codeplay}
-nb_contacts_du_jour = ...
-nb_contacts_susceptibles_du_jour = ...
-nb_infections = ...
-nb_guerisons = ...
-nb_deces = ...
-
-print("Au cours du jour 1:")
-print(f"\t{nb_infections} nouvelles infections")
-print(f"\t{nb_guerisons} nouvelles guérisons")
-print(f"\t{nb_deces} nouveaux décès")
-```
-
 Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuader, tentez par exemple de mettre `p_infection` à 1.0 ou `p_guerison` à 0.0. Que se passe-t-il ?
 
 Nous allons maintenant pouvoir mettre à jour nos variables de population à la fin du jour 1. Calculez les nouvelles valeurs de `susceptibles`, `malades`, `gueris` et `morts` à la fin du jour 1.
 
-```{codeplay}
-susceptibles = ...
-malades = ...
-gueris = ...
-morts = ...
-
-print("A la fin du jour 1 de l'épidémie:")
-print(f"\tSusceptibles: {susceptibles}")
-print(f"\tMalades: {malades}")
-print(f"\tGuéris: {gueris}")
-print(f"\tMorts: {morts}")
-```
-
-Encore une fois, les valeurs vous semblent-elles logiques ?
+Encore une fois, les valeurs obtenues vous semblent-elles logiques ?
 
 ## 4. Simulation sur plusieurs jours
 
@@ -116,6 +90,7 @@ Pour visualiser la courbe des nouvelles infections, nous allons utiliser la libr
 Ajoutez ensuite les instructions suivantes à la fin de votre programme pour tracer la courbe des nouvelles infections:
 
 ```python
+plt.title(f'Epidémie de {nom_maladie}')
 plt.plot(courbe_infection,'-')
 plt.xlabel('jours')
 plt.ylabel("nombre d'infections")
@@ -127,7 +102,7 @@ plt.show()
 Le code suivant permet d'afficher l'état de la population après chaque jour:
 
 ```python
-plt.title(nom_maladie)
+plt.title(f'Epidémie de {nom_maladie}')
 plt.plot(courbe_susceptibles,'-', c='blue')
 plt.plot(courbe_malades,'-', c='red')
 plt.plot(courbe_gueris,'-', c='green')
@@ -152,11 +127,10 @@ Modifiez les paramètres de votre modèle pour voir comment cela impacte l'évol
 
 ## 7. Covid-19
 
-On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier {download}`covid_vd.csv<prog1/data/covid_vd.csv>` et d’obtenir une liste contenant le nombre de cas journaliers en Suisse.
+On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier {download}`covid_vd.csv<prog1/data/covid_vd.csv>` et d’obtenir une liste contenant le nombre de cas journaliers en Suisse (<a href="https://www.coronavirus-statistiques.com/stats-pays/coronavirus-nombre-de-cas-suisse/" target="_blank">source</a>).
 
 ```python
 import csv
-
 
 ncas = []
 with open("covid.csv") as covid_file:
@@ -175,3 +149,13 @@ plt.show()
 
 Comparez vos courbes avec celles du Covid-19. Quelles sont les différences ? Quelles sont les similitudes ?  
 Que faudrait-il modifier dans notre modèle pour le rendre plus proche de ce qui s'est passé avec le Covid-19 ? En particulier, comment pourrions-nous simuler plusieurs vagues d'infection ?
+
+## (8. Pour les plus rapides) Améliorations de votre modèle
+
+Tentez d'améliorer votre modèle pour qu'il soit plus proche de la réalité. Vous pouvez par exemple:
+
+- Permettre aux personnes guéries de redevenir susceptibles.
+- Ajouter des états intermédiaires (par exemple, "hospitalisé", "en quarantaine", "asymptomatique", etc).
+- Ajouter des paramètres pour simuler des mesures de confinement ou de gestes barrières.
+- Ajouter des paramètres pour simuler des mesures de vaccination.
+- Permettre une épidémie de zombies.
