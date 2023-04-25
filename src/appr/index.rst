@@ -28,7 +28,6 @@ Bienvenue sur la plateforme de TP d'informatique !
 
    aventure
    epidemie
-   portes_logiques
 
 .. toctree::
    :name: Outils

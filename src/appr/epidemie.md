@@ -51,11 +51,13 @@ Voici le diagramme représentant l'évolution d'un individu selon ce modèle:
 ```{image} prog1/media/epidemie.png
 ```
 
-Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutôt simple et ne prend pas en compte de nombreux facteurs. Par exemple, il ne prend pas en compte le fait que les personnes malades peuvent être hospitalisées et/ou isolés ni que les personnes guéries peuvent retomber malades après un certain temps.
+Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutôt simple et ne prend pas en compte de nombreux facteurs. Par exemple, il ne prend pas en compte le fait que les personnes malades puissent être hospitalisées et/ou isolés ni les cas de réinfection.
 
-Dans une épidémie de zombie, il faudrait inclure dans notre modèle le fait que les morts puissent également infecter les vivants.
+Dans une épidémie de zombies, il faudrait inclure dans notre modèle le fait que les morts puissent également infecter les vivants.
 
 ## 3. Simulation du jour 1
+
+A partir d'ici, vous allez travailler directement sur un fichier python. Vous pouvez le télécharger {download}`ici<prog1/data/epidemie.py>`.
 
 Nous allons maintenant simuler le jour 1 de l'épidémie. C'est à dire que nous allons calculer le nombre de personnes susceptibles, malades, guéries et mortes à la fin du jour 1. Pour cela, nous allons calculer les variables suivantes:
 
@@ -72,18 +74,13 @@ nb_infections = ...
 nb_guerisons = ...
 nb_deces = ...
 
-# pour éviter les nombres négatifs dus à la méthode d'Euler
-    nb_infections = min(nb_infections, susceptibles)
-    nb_guerisons = min(nb_guerisons, malades)
-    nb_deces = min(nb_deces, malades)
-
 print("Au cours du jour 1:")
 print(f"\t{nb_infections} nouvelles infections")
 print(f"\t{nb_guerisons} nouvelles guérisons")
 print(f"\t{nb_deces} nouveaux décès")
 ```
 
-Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuadez, tentez par exemple de mettre `p_infection` à 1.0 et `p_guerison` à 0.0. Que se passe-t-il ?
+Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuader, tentez par exemple de mettre `p_infection` à 1.0 ou `p_guerison` à 0.0. Que se passe-t-il ?
 
 Nous allons maintenant pouvoir mettre à jour nos variables de population à la fin du jour 1. Calculez les nouvelles valeurs de `susceptibles`, `malades`, `gueris` et `morts` à la fin du jour 1.
 
@@ -104,7 +101,7 @@ Encore une fois, les valeurs vous semblent-elles logiques ?
 
 ## 4. Simulation sur plusieurs jours
 
-Nous allons maintenant simuler l'évolution de l'épidémie sur plusieurs jours. Placer une boucle `for jour in range(10):` au bon endroit de votre code pour que chaque répétition de la boucle corresponde au passage d’un jour. Cette boucle permettra donc de faire s'écouler 10 jours.
+Nous allons maintenant simuler l'évolution de l'épidémie sur plusieurs jours. Placer une boucle `for jour in range(1, 11):` au bon endroit de votre code pour que chaque répétition de la boucle corresponde au passage d’un jour (en commençant par le jour 1). Cette boucle permettra donc de faire s'écouler 10 jours.
 
 Combien y a-t-il de malades après 10 jours? Et après 20 jours ?
 
@@ -126,7 +123,22 @@ plt.show()
 ```
 
 1. Modifier le programme pour tracer le graphique du nombre d’infections les 50 premiers jours.
-2. Modifier le programme pour tracer également la courbe des décès sur les 50 premiers jours.
+
+Le code suivant permet d'afficher l'état de la population après chaque jour:
+
+```python
+plt.title(nom_maladie)
+plt.plot(courbe_susceptibles,'-', c='blue')
+plt.plot(courbe_malades,'-', c='red')
+plt.plot(courbe_gueris,'-', c='green')
+plt.plot(courbe_morts,'-', c='black')
+plt.xlabel('jours')
+plt.ylabel("nombre de personnes")
+plt.legend(['susceptibles', 'malades', 'guéris', 'morts'])
+plt.show()
+```
+
+Pour que cela fonctionne, il faut au préalable définir et remplir les listes `courbe_susceptibles`, `courbe_malades`, `courbe_gueris` et `courbe_morts` de manière similaire à ce que vous avez fait pour `courbe_infection`.
 
 ## 6. Expérimentations
 
@@ -140,29 +152,26 @@ Modifiez les paramètres de votre modèle pour voir comment cela impacte l'évol
 
 ## 7. Covid-19
 
-On souhaite comparer le modèle à l’épidémie de Covid-19 dans le canton de Vaud. Le code suivant vous permet de lire le fichier `covid_vd.csv` et d’obtenir une liste contenant le nombre de cas journaliers.
+On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier {download}`covid_vd.csv<prog1/data/covid_vd.csv>` et d’obtenir une liste contenant le nombre de cas journaliers en Suisse.
 
 ```python
 import csv
 
-cascumul = []
-ncas = []
-date = []
 
-with open ("covid_vd.csv") as covid_file:
-    reader = csv.reader(covid_file)
+ncas = []
+with open("covid.csv") as covid_file:
+    reader = csv.reader(covid_file, delimiter=';')
     entete = next(reader)
     for row in reader:
-        date.append(row[0])
-        if row[1]== '':
-            cas.append(0)
+        if row[2]== '':
+            ncas.append(0)
         else:
-            cas.append(float(row[1]))
+            ncas.append(int(row[2]))
 
 # On affiche la vraie courbe
-plt.plot(cascumul)
+plt.plot(ncas)
 plt.show()
 ```
 
-Essayez de trouver les paramètre de votre modèle qui correspondent le mieux à la première vague, puis à la seconde vague.
-Quelle vague reflète selon vous le mieux la réelle propagation du virus ?
+Comparez vos courbes avec celles du Covid-19. Quelles sont les différences ? Quelles sont les similitudes ?  
+Que faudrait-il modifier dans notre modèle pour le rendre plus proche de ce qui s'est passé avec le Covid-19 ? En particulier, comment pourrions-nous simuler plusieurs vagues d'infection ?
