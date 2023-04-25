@@ -61,11 +61,11 @@ A partir d'ici, vous allez travailler directement sur un fichier python. Vous po
 
 Nous allons maintenant simuler le jour 1 de l'épidémie. C'est à dire que nous allons calculer le nombre de personnes susceptibles, malades, guéries et mortes à la fin du jour 1. Pour cela, nous allons calculer les variables suivantes:
 
-- `nb_concacts_du_jour` qui représente le nombre total de contacts que font tous les malades au cours du jour 1. Pour le calcul, vous devrez utilier les variables `malades` et `contacts_par_jour`.
-- `nb_contacts_susceptibles_du_jour` qui représente le nombre de contacts que font tous les malades **avec des personnes susceptibles** au cours du jour 1. Ce nombre sera donc plus petit que `nb_contacts_du_jour`. Pour le calcul, multipliez `nb_contacts_par_jour` avec la proportion de gens susceptibles dans la population (sans compter les morts car on ne rentre pas en contact avec eux).
-- `nb_infections` qui représente le nombre de personnes infectées au cours du jour 1. Pour le calcul, vous devrez utilier les variables `nb_contacts_susceptibles` et `p_infection`.
-- `nb_guerisons` qui représente le nombre de personnes guéries au cours du jour 1. Pour le calcul, vous devrez utilier les variables `p_guerison` et `malades`.
-- `nb_deces` qui représente le nombre de personnes qui meurent au cours du jour 1. Pour le calcul, vous devrez utilier les variables `p_deces` et `malades`.
+- `nb_concacts_du_jour` qui représente le nombre total de contacts que font tous les malades au cours du jour. Pour le calcul, vous devrez utilier les variables `malades` et `contacts_par_jour`.
+- `nb_contacts_susceptibles_du_jour` qui représente le nombre de contacts que font tous les malades **avec des personnes susceptibles** au cours du jour. Ce nombre sera donc plus petit que `nb_contacts_du_jour`. Pour le calcul, multipliez `nb_contacts_du_jour` avec la proportion de gens susceptibles dans la population (sans compter les morts car on ne rentre pas en contact avec eux).
+- `nb_infections` qui représente le nombre de personnes infectées au cours du jour. Pour le calcul, vous devrez utilier les variables `nb_contacts_susceptibles_du_jour` et `p_infection`.
+- `nb_guerisons` qui représente le nombre de personnes guéries au cours du jour. Pour le calcul, vous devrez utilier les variables `malades` et `p_guerison`.
+- `nb_deces` qui représente le nombre de personnes qui meurent au cours du jour. Pour le calcul, vous devrez utilier les variables `malades` et `p_deces`.
 
 Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuader, tentez de mettre des valeurs extrêmes comme par exemple `p_infection` à 1.0 , `p_guerison` à 0.0 ou `contacts_par_jour` à 1000.
 
