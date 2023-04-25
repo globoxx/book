@@ -38,10 +38,10 @@ print(f"\t{nb_deces} nouveaux décès")
 
 # Enlever les ''' quand vous avez terminé la partie juste au dessus
 '''
-susceptibles = susceptibles - nb_infections
-malades = malades + nb_infections - nb_guerisons - nb_deces
-gueris = gueris + nb_guerisons
-morts = morts + nb_deces
+susceptibles = 
+malades = 
+gueris = 
+morts = 
 
 print(f"A la fin du jour 1 de l'épidémie:")
 print(f"\tSusceptibles: {susceptibles}")
