@@ -46,7 +46,7 @@ p_guerison = ...
 p_deces = ...
 ```
 
-Voici le diagramme représentant l'évolution d'un individu selon ce modèle:
+Voici le diagramme représentant l'évolution d'un individu selon le modèle que nous allons utiliser:
 
 ```{image} prog1/media/epidemie.png
 ```
@@ -67,7 +67,7 @@ Nous allons maintenant simuler le jour 1 de l'épidémie. C'est à dire que nous
 - `nb_guerisons` qui représente le nombre de personnes guéries au cours du jour 1. Pour le calcul, vous devrez utilier les variables `p_guerison` et `malades`.
 - `nb_deces` qui représente le nombre de personnes qui meurent au cours du jour 1. Pour le calcul, vous devrez utilier les variables `p_deces` et `malades`.
 
-Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuader, tentez par exemple de mettre `p_infection` à 1.0 ou `p_guerison` à 0.0. Que se passe-t-il ?
+Est-ce que les valeurs vous semblent cohérentes ? Pour vous en persuader, tentez de mettre des valeurs extrêmes comme par exemple `p_infection` à 1.0 , `p_guerison` à 0.0 ou `contacts_par_jour` à 1000.
 
 Nous allons maintenant pouvoir mettre à jour nos variables de population à la fin du jour 1. Calculez les nouvelles valeurs de `susceptibles`, `malades`, `gueris` et `morts` à la fin du jour 1.
 
@@ -83,7 +83,7 @@ Combien y a-t-il de malades après 10 jours? Et après 20 jours ?
 
 On souhaite tracer la courbe des nouvelles infections. Pour cela, définissez (avant la boucle `for`) une liste vide (`[]`) appelée `courbe_infection`. Cette liste contiendra le nombre de nouvelles infections quotidiennes (`nb_infections`). Pour remplir cette liste, placer l’instruction `courbe_infection.append(nb_infections)` à la fin de la boucle `for` (à l'intérieur de la boucle).
 
-Commençons par afficher le nombre de nouvelles infections les 10 premiers jours avec `print(courbe_infection)`. Est-ce que cela vous semble cohérent ?
+Commençons par afficher le nombre de nouvelles infections les 10 premiers jours en ajoutant `print(courbe_infection)` après la boucle `for`. Est-ce que cela vous semble cohérent ?
 
 Pour visualiser la courbe des nouvelles infections, nous allons utiliser la librairie `matplotlib`. Ajouter l'instruction permettant de l'importer au début de votre programme: `import matplotlib.pyplot as plt`. (Si vous rencontrez une erreur d'import ici, appelez votre enseignant).
 
@@ -97,9 +97,9 @@ plt.ylabel("nombre d'infections")
 plt.show()
 ```
 
-1. Modifier le programme pour tracer le graphique du nombre d’infections les 50 premiers jours.
+Modifiez le programme pour tracer le graphique du nombre d’infections les 50 premiers jours.
 
-Le code suivant permet d'afficher l'état de la population après chaque jour:
+Ajoutez à la suite le code suivant qui permet d'afficher l'état de la population après chaque jour:
 
 ```python
 plt.title(f'Epidémie de {nom_maladie}')
@@ -108,7 +108,7 @@ plt.plot(courbe_malades,'-', c='red')
 plt.plot(courbe_gueris,'-', c='green')
 plt.plot(courbe_morts,'-', c='black')
 plt.xlabel('jours')
-plt.ylabel("nombre de personnes")
+plt.ylabel("population")
 plt.legend(['susceptibles', 'malades', 'guéris', 'morts'])
 plt.show()
 ```
