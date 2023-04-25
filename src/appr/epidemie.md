@@ -154,7 +154,7 @@ Que faudrait-il modifier dans notre modèle pour le rendre plus proche de ce qui
 
 Tentez d'améliorer votre modèle pour qu'il soit plus proche de la réalité. Vous pouvez par exemple:
 
-- Permettre aux personnes guéries de redevenir susceptibles.
+- **Permettre aux personnes guéries de redevenir susceptibles.**
 - Ajouter des états intermédiaires (par exemple, "hospitalisé", "en quarantaine", "asymptomatique", etc).
 - Ajouter des paramètres pour simuler des mesures de confinement ou de gestes barrières.
 - Ajouter des paramètres pour simuler des mesures de vaccination.
