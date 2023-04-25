@@ -81,11 +81,11 @@ Combien y a-t-il de malades après 10 jours? Et après 20 jours ?
 
 ## 5. Visualisation de l'évolution de l'épidémie
 
-On souhaite tracer la courbe des nouvelles infections. Pour cela, définissez (avant la boucle `for`) une liste vide (`[]`) appelée `courbe_infection`. Cette liste contiendra le nombre de nouvelles infections quotidiennes (`nb_infections`). Pour remplir cette liste, placer l’instruction `courbe_infection.append(nb_infections)` à la fin de la boucle `for` (à l'intérieur de la boucle).
+On souhaite tracer la courbe des nouvelles infections. Pour cela, définissez (avant la boucle `for`) une variable `courbe_infection` qui contient une liste vide (`[]`). Cette liste contiendra le nombre de nouvelles infections quotidiennes (`nb_infections`). Pour remplir cette liste, placez l’instruction `courbe_infection.append(nb_infections)` à la fin de la boucle `for` (à l'intérieur de la boucle).
 
 Commençons par afficher le nombre de nouvelles infections les 10 premiers jours en ajoutant `print(courbe_infection)` après la boucle `for`. Est-ce que cela vous semble cohérent ?
 
-Pour visualiser la courbe des nouvelles infections, nous allons utiliser la librairie `matplotlib`. Ajouter l'instruction permettant de l'importer au début de votre programme: `import matplotlib.pyplot as plt`. (Si vous rencontrez une erreur d'import ici, appelez votre enseignant).
+Pour visualiser la courbe des nouvelles infections, nous aurons besoin de la librairie `matplotlib`. Ajoutez l'instruction permettant de l'importer au début de votre programme: `import matplotlib.pyplot as plt`. (Si vous rencontrez une erreur d'import ici, appelez votre enseignant).
 
 Ajoutez ensuite les instructions suivantes à la fin de votre programme pour tracer la courbe des nouvelles infections:
 
@@ -97,7 +97,7 @@ plt.ylabel("nombre d'infections")
 plt.show()
 ```
 
-Modifiez le programme pour tracer le graphique du nombre d’infections les 50 premiers jours.
+Modifiez le programme pour tracer le graphique du nombre d’infections sur les **50 premiers jours**.
 
 Ajoutez à la suite le code suivant qui permet d'afficher l'état de la population après chaque jour:
 
