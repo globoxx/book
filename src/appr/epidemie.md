@@ -127,7 +127,7 @@ Modifiez les paramètres de votre modèle pour voir comment cela impacte l'évol
 
 ## 7. Covid-19
 
-On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier {download}`covid_vd.csv<prog1/data/covid_vd.csv>` et d’obtenir une liste contenant le nombre de cas journaliers en Suisse (<a href="https://www.coronavirus-statistiques.com/stats-pays/coronavirus-nombre-de-cas-suisse/" target="_blank">source</a>).
+On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier {download}`covid.csv<prog1/data/covid.csv>` et d’obtenir une liste contenant le nombre de cas journaliers en Suisse (<a href="https://www.coronavirus-statistiques.com/stats-pays/coronavirus-nombre-de-cas-suisse/" target="_blank">source</a>).
 
 ```python
 import csv
