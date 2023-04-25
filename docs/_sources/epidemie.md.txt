@@ -4,6 +4,10 @@
 
 Dans cette séquence, nous allons simuler l'évolution d'une épidémie grâce à nos connaissances en python. Pour cela, nous allons écrire un **modèle** représentant les différentes caractéristiques de l'épidémie puis nous simulerons le temps qui passe afin de pouvoir mesurer les impacts de la maladie sur une population fictive.
 
+```{image} prog1/media/virus.gif
+:width: 300px
+```
+
 L'épidémiologie est une science se trouvant à la frontière entre la biologie, les mathématiques, l'informatique et les sciences sociales. Elle consiste à étudier la propagation d'une maladie dans une population donnée.
 
 ## 1. Caractéristiques de la population
