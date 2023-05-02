@@ -12,8 +12,8 @@ L'épidémiologie est une science se trouvant à la frontière entre la biologie
 
 ## 1. Caractéristiques de la population
 
-Disons que nous allons jouer avec **une population d'un million de personnes**. Vous allez définir les variables `susceptibles`, `malades`, `gueris` et `morts` qui représentent respectivement le nombres de personnes susceptibles d’attraper la maladie, le nombre de malades, le nombre de guéris et le nombre de morts.
-Définissez les valeurs de ces variables **au jour 0** de l'épidémie, c'est à dire le jour où le *patient 0* tombe malade.
+Disons que nous allons jouer avec **une population d'un million de personnes**. Vous allez définir les variables `susceptibles`, `malades`, `gueris` et `morts` qui représentent respectivement le nombre total de personnes susceptibles d’attraper la maladie, le nombre de malades, le nombre de guéris et le nombre de morts.
+Définissez les valeurs de ces variables **au jour 0** de l'épidémie, c'est à dire le jour où le **patient 0** tombe malade.
 
 Dans un second temps, vous allez définir une variable `contacts_par_jour` qui représente le nombre de contacts que fait chaque individu par jour. Par exemple, si `contacts_par_jour` vaut 10, cela signifie que chaque personne rencontre en moyenne 10 autres personnes par jour.
 
@@ -63,7 +63,7 @@ Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutô
 ```{question}
 Quelles sont les hypothèses sous-entendues par notre modèle ? (plusieurs réponses possibles)
 
-{v}`Brassage homogène de la population`  
+{v}`Brassage homogène de la population (pas de quartiers)`  
 {f}`Présence d'immigration/émigration`  
 {v}`Absence de période d'incubation`  
 {v}`Absence de réinfection`  
