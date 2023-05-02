@@ -75,33 +75,33 @@ Imaginons que la population ne reste pas impassible face à l'épidémie et pren
 ```{question}
 Quel serait l'effet d'un confinement sur notre modèle ?
 
-{f}`Diminution de *p_infection*`  
-{v}`Diminution de *contacts_par_jour*`  
-{f}`Augmentation de *p_guerison*`
+{f}`Diminution de p_infection`  
+{v}`Diminution de contacts_par_jour`  
+{f}`Augmentation de p_guerison`
 ```
 
 ```{question}
 Quel serait l'effet d'un système d'hospitalisation ?
 
-{f}`Diminution de `p_infection``  
-{f}`Augmentation de `contacts_par_jour``  
-{v}`Augmentation de `p_guerison` et diminution de `p_deces``
+{f}`Diminution de p_infection`  
+{f}`Augmentation de contacts_par_jour`  
+{v}`Augmentation de p_guerison et diminution de p_deces`
 ```
 
 ```{question}
 Quel serait l'effet de masques et de gestes barrières ?
 
-{v}`Diminution de `p_infection` et `contacts_par_jour``  
-{f}`Augmentation de `p_guerison``  
-{f}`Diminution de `p_deces``
+{v}`Diminution de p_infection` et `contacts_par_jour`  
+{f}`Augmentation de p_guerison`  
+{f}`Diminution de p_deces`
 ```
 
 ```{question}
 Quel serait l'effet de vaccins ?
 
-{f}`Augmentation de `p_deces``  
-{f}`Diminution de `contacts_par_jour``   
-{v}`Diminution de `p_infection` et `p_deces``
+{f}`Augmentation de p_deces`  
+{f}`Diminution de contacts_par_jour`   
+{v}`Diminution de p_infection` et `p_deces`
 ```
 ````
 
