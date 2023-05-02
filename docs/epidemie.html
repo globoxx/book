@@ -288,66 +288,58 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tX21hbGFkaWUgPSAuLi4KCnBfaW5mZWN0aW9uID0gLi4uCnBfZ3Vlcmlzb24gPSAuLi4KcF9kZWNlcyA9IC4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div><p>Voici le diagramme représentant l’évolution d’un individu selon le modèle que nous allons utiliser:</p>
 <img alt="_images/epidemie.png" src="_images/epidemie.png"/>
 <p>Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutôt simple et ne prend pas en compte de nombreux facteurs.</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Quelques questions à se poser</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="question"><form><div class="admonition">
-<p class="admonition-title">Question</p>
-<div class="question-content docutils">
-<p class="card-text">Quelles sont les hypothèses sous-entendues par notre modèle ? (plusieurs réponses possibles)</p>
-<p class="card-text"><label class="answer correct"><input type="checkbox"/>Brassage homogène de la population</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>Présence d’immigration/émigration</label><br/>
-<label class="answer correct"><input type="checkbox"/>Absence de période d’incubation</label><br/>
-<label class="answer correct"><input type="checkbox"/>Absence de réinfection</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>Population hétérogène (prise en compte de l’age, du sexe, etc)</label></p>
+<div class="highlight-{dropdown}Quelques notranslate"><div class="highlight"><pre><span></span>:animate: fade-in-slide-down
+
+```{question}
+Quelles sont les hypothèses sous-entendues par notre modèle ? (plusieurs réponses possibles)
+
+{v}`Brassage homogène de la population`  
+{f}`Présence d'immigration/émigration`  
+{v}`Absence de période d'incubation`  
+{v}`Absence de réinfection`  
+{f}`Population hétérogène (prise en compte de l'age, du sexe, etc)`
+```
+
+Imaginons que la population ne reste pas impassible face à l'épidémie et prenne des décisions politiques pour l'enrayer. Quelles seraient les variables affectées par ces différentes mesures ?
+
+```{question}
+Quel serait l'effet d'un confinement sur notre modèle ?
+
+{f}`Diminution de p_infection`  
+{v}`Diminution de contacts_par_jour`  
+{f}`Augmentation de p_guerison`
+```
+
+```{question}
+Quel serait l'effet d'un système d'hospitalisation ?
+
+{f}`Diminution de p_infection`  
+{f}`Augmentation de contacts_par_jour`  
+{v}`Augmentation de p_guerison et diminution de p_deces`
+```
+
+```{question}
+Quel serait l'effet de masques et de gestes barrières ?
+
+{v}`Diminution de p_infection et contacts_par_jour`  
+{f}`Augmentation de p_guerison`  
+{f}`Diminution de p_deces`
+```
+
+```{question}
+Quel serait l'effet de vaccins ?
+
+{f}`Augmentation de p_deces`  
+{f}`Diminution de contacts_par_jour`   
+{v}`Diminution de p_infection et p_deces`
+```
+</pre></div>
 </div>
-<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
-</form></div><p class="card-text">Imaginons que la population ne reste pas impassible face à l’épidémie et prenne des décisions politiques pour l’enrayer. Quelles seraient les variables affectées par ces différentes mesures ?</p>
-<div class="question"><form><div class="admonition">
-<p class="admonition-title">Question</p>
-<div class="question-content docutils">
-<p class="card-text">Quel serait l’effet d’un confinement sur notre modèle ?</p>
-<p class="card-text"><label class="answer incorrect"><input type="checkbox"/>Diminution de p_infection</label><br/>
-<label class="answer correct"><input type="checkbox"/>Diminution de contacts_par_jour</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>Augmentation de p_guerison</label></p>
-</div>
-<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
-</form></div><div class="question"><form><div class="admonition">
-<p class="admonition-title">Question</p>
-<div class="question-content docutils">
-<p class="card-text">Quel serait l’effet d’un système d’hospitalisation ?</p>
-<p class="card-text"><label class="answer incorrect"><input type="checkbox"/>Diminution de p_infection</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>Augmentation de contacts_par_jour</label><br/>
-<label class="answer correct"><input type="checkbox"/>Augmentation de p_guerison et diminution de p_deces</label></p>
-</div>
-<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
-</form></div><div class="question"><form><div class="admonition">
-<p class="admonition-title">Question</p>
-<div class="question-content docutils">
-<p class="card-text">Quel serait l’effet de masques et de gestes barrières ?</p>
-<p class="card-text"><label class="answer correct"><input type="checkbox"/>Diminution de </label>p_infection<code class="docutils literal notranslate"><span class="pre">et</span></code>contacts_par_jour<code class="docutils literal notranslate">   <span class="pre">{f}</span></code>Augmentation de <code class="docutils literal notranslate"><span class="pre">p_guerison</span></code><br/>
-<label class="answer incorrect"><input type="checkbox"/>Diminution de </label>p_deces`</p>
-</div>
-<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
-</form></div><div class="question"><form><div class="admonition">
-<p class="admonition-title">Question</p>
-<div class="question-content docutils">
-<p class="card-text">Quel serait l’effet de vaccins ?</p>
-<p class="card-text"><label class="answer incorrect"><input type="checkbox"/>Augmentation de p_deces</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>Diminution de contacts_par_jour</label><br/>
-<label class="answer correct"><input type="checkbox"/>Diminution de p_infection</label> et <code class="docutils literal notranslate"><span class="pre">p_deces</span></code></p>
-</div>
-<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
-</form></div></div>
-</details><p>Dans une épidémie de zombies, il faudrait inclure dans notre modèle le fait que les morts puissent également infecter les vivants.</p>
+<p>Dans une épidémie de zombies, il faudrait inclure dans notre modèle le fait que les morts puissent également infecter les vivants.</p>
 </section>
 <section id="simulation-du-jour-1">
 <h2>3. Simulation du jour 1<a class="headerlink" href="#simulation-du-jour-1" title="Lien permanent vers ce titre">¶</a></h2>
-<p>A partir d’ici, vous allez travailler directement sur un fichier python. Vous pouvez le télécharger <a class="reference download internal" download="" href="_downloads/34efb34dccf622b777a38ce88ef27f93/epidemie.py"><code class="xref download docutils literal notranslate"><span class="pre">ici</span></code></a>.</p>
+<p>A partir d’ici, vous allez travailler directement sur un fichier python. Vous pouvez le télécharger <a class="reference download internal" download="" href="_downloads/34efb34dccf622b777a38ce88ef27f93/epidemie.py"><code class="xref download docutils literal notranslate"><span class="pre">ici</span></code></a> et l’ouvrir sur Thonny. Remplacez les <code class="docutils literal notranslate"><span class="pre">...</span></code> par les valeurs que vous avez calculées dans les parties 1 et 2.</p>
 <section id="calcul-des-infections-guerisons-et-deces-lors-du-jour-1">
 <h3>3.1 Calcul des infections, guérisons et décès lors du jour 1<a class="headerlink" href="#calcul-des-infections-guerisons-et-deces-lors-du-jour-1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Nous allons maintenant simuler le jour 1 de l’épidémie. C’est à dire que nous allons calculer le nombre de personnes susceptibles, malades, guéries et mortes à la fin du jour 1. Pour cela, nous allons calculer les variables suivantes:</p>

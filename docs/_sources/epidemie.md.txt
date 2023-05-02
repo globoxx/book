@@ -57,7 +57,7 @@ Voici le diagramme représentant l'évolution d'un individu selon le modèle que
 
 Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutôt simple et ne prend pas en compte de nombreux facteurs.
 
-````{dropdown} <span style="color:grey">Quelques questions à se poser</span>
+````{dropdown}Quelques questions à se poser
 :animate: fade-in-slide-down
 
 ```{question}
@@ -91,9 +91,9 @@ Quel serait l'effet d'un système d'hospitalisation ?
 ```{question}
 Quel serait l'effet de masques et de gestes barrières ?
 
-{v}`Diminution de `p_infection` et `contacts_par_jour`  
-{f}`Augmentation de `p_guerison`  
-{f}`Diminution de `p_deces`
+{v}`Diminution de p_infection et contacts_par_jour`  
+{f}`Augmentation de p_guerison`  
+{f}`Diminution de p_deces`
 ```
 
 ```{question}
@@ -101,7 +101,7 @@ Quel serait l'effet de vaccins ?
 
 {f}`Augmentation de p_deces`  
 {f}`Diminution de contacts_par_jour`   
-{v}`Diminution de p_infection` et `p_deces`
+{v}`Diminution de p_infection et p_deces`
 ```
 ````
 
@@ -109,7 +109,7 @@ Dans une épidémie de zombies, il faudrait inclure dans notre modèle le fait q
 
 ## 3. Simulation du jour 1
 
-A partir d'ici, vous allez travailler directement sur un fichier python. Vous pouvez le télécharger {download}`ici<prog1/data/epidemie.py>`.
+A partir d'ici, vous allez travailler directement sur un fichier python. Vous pouvez le télécharger {download}`ici<prog1/data/epidemie.py>` et l'ouvrir sur Thonny. Remplacez les `...` par les valeurs que vous avez calculées dans les parties 1 et 2.
 
 ### 3.1 Calcul des infections, guérisons et décès lors du jour 1
 
