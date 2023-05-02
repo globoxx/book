@@ -57,7 +57,7 @@ Voici le diagramme représentant l'évolution d'un individu selon le modèle que
 
 Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutôt simple et ne prend pas en compte de nombreux facteurs.
 
-````{dropdown}Quelques questions à se poser
+````{dropdown} <span style="color:grey">Quelques questions à se poser</span>
 :animate: fade-in-slide-down
 
 ```{question}
