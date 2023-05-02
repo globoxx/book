@@ -304,7 +304,7 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <p class="card-text"><label class="answer correct"><input type="checkbox"/>Brassage homogène de la population</label><br/>
 <label class="answer incorrect"><input type="checkbox"/>Présence d’immigration/émigration</label><br/>
 <label class="answer correct"><input type="checkbox"/>Absence de période d’incubation</label><br/>
-<label class="answer correct"><input type="checkbox"/>Absence de réinfection</label>
+<label class="answer correct"><input type="checkbox"/>Absence de réinfection</label><br/>
 <label class="answer incorrect"><input type="checkbox"/>Population hétérogène (prise en compte de l’age, du sexe, etc)</label></p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
@@ -313,28 +313,31 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p class="card-text">Quel serait l’effet d’un confinement sur notre modèle ?</p>
-<p class="card-text"><label class="answer incorrect"><input type="checkbox"/>Diminution de </label>p_infection<code class="docutils literal notranslate">   <span class="pre">{v}`Diminution</span> <span class="pre">de</span> <span class="pre">`contacts_par_jour`</span>   <span class="pre">{f}`Augmentation</span> <span class="pre">de</span> <span class="pre">`p_guerison</span></code></p>
+<p class="card-text">{f}<code class="docutils literal notranslate"><span class="pre">Diminution</span> <span class="pre">de</span> <span class="pre">p_infection``</span>   <span class="pre">{v}</span></code>Diminution de <code class="docutils literal notranslate"><span class="pre">contacts_par_jour``</span>   <span class="pre">{f}</span></code>Augmentation de `p_guerison``</p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
 </form></div><div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p class="card-text">Quel serait l’effet d’un système d’hospitalisation ?</p>
-<p class="card-text"><label class="answer incorrect"><input type="checkbox"/>Diminution de </label>p_infection<code class="docutils literal notranslate">   <span class="pre">{f}`Augmentation</span> <span class="pre">de</span> <span class="pre">`contacts_par_jour`</span>   <span class="pre">{v}`Augmentation</span> <span class="pre">de</span> <span class="pre">`p_guerison`</span> <span class="pre">et</span> <span class="pre">diminution</span> <span class="pre">de</span> <span class="pre">`p_deces</span></code></p>
+<p class="card-text"><label class="answer incorrect"><input type="checkbox"/>Diminution de </label>p_infection<code class="docutils literal notranslate">   <span class="pre">{f}`Augmentation</span> <span class="pre">de</span> <span class="pre">`contacts_par_jour</span></code><br/>
+<label class="answer correct"><input type="checkbox"/>Augmentation de </label>p_guerison<code class="docutils literal notranslate"><span class="pre">et</span> <span class="pre">diminution</span> <span class="pre">de</span></code>p_deces``</p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
 </form></div><div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p class="card-text">Quel serait l’effet de masques et de gestes barrières ?</p>
-<p class="card-text"><label class="answer correct"><input type="checkbox"/>Diminution de </label>p_infection<code class="docutils literal notranslate"><span class="pre">et</span></code>contacts_par_jour<code class="docutils literal notranslate">   <span class="pre">{f}`Augmentation</span> <span class="pre">de</span> <span class="pre">`p_guerison`</span>   <span class="pre">{f}`Diminution</span> <span class="pre">de</span> <span class="pre">`p_deces</span></code></p>
+<p class="card-text"><label class="answer correct"><input type="checkbox"/>Diminution de </label>p_infection<code class="docutils literal notranslate"><span class="pre">et</span></code>contacts_par_jour<code class="docutils literal notranslate">   <span class="pre">{f}`Augmentation</span> <span class="pre">de</span> <span class="pre">`p_guerison</span></code><br/>
+<label class="answer incorrect"><input type="checkbox"/>Diminution de </label>p_deces``</p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
 </form></div><div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p class="card-text">Quel serait l’effet de vaccins ?</p>
-<p class="card-text"><label class="answer incorrect"><input type="checkbox"/>Augmentation de </label>p_deces<code class="docutils literal notranslate">   <span class="pre">{f}`Diminution</span> <span class="pre">de</span> <span class="pre">`contacts_par_jour`</span>    <span class="pre">{v}`Diminution</span> <span class="pre">de</span> <span class="pre">`p_infection`</span> <span class="pre">et</span> <span class="pre">`p_deces</span></code></p>
+<p class="card-text"><label class="answer incorrect"><input type="checkbox"/>Augmentation de </label>p_deces<code class="docutils literal notranslate">   <span class="pre">{f}`Diminution</span> <span class="pre">de</span> <span class="pre">`contacts_par_jour</span></code><br/>
+<label class="answer correct"><input type="checkbox"/>Diminution de </label>p_infection<code class="docutils literal notranslate"><span class="pre">et</span></code>p_deces``</p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
 </form></div></div>

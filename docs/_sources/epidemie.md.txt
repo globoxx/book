@@ -68,7 +68,7 @@ Quelles sont les hypothèses sous-entendues par notre modèle ? (plusieurs répo
 {v}`Brassage homogène de la population`  
 {f}`Présence d'immigration/émigration`  
 {v}`Absence de période d'incubation`  
-{v}`Absence de réinfection`
+{v}`Absence de réinfection`  
 {f}`Population hétérogène (prise en compte de l'age, du sexe, etc)`
 ```
 
@@ -77,8 +77,8 @@ Imaginons que la population ne reste pas impassible face à l'épidémie et pren
 ```{question}
 Quel serait l'effet d'un confinement sur notre modèle ?
 
-{f}`Diminution de `p_infection``  
-{v}`Diminution de `contacts_par_jour`  
+{f}`Diminution de p_infection``  
+{v}`Diminution de `contacts_par_jour``  
 {f}`Augmentation de `p_guerison``
 ```
 
@@ -86,7 +86,7 @@ Quel serait l'effet d'un confinement sur notre modèle ?
 Quel serait l'effet d'un système d'hospitalisation ?
 
 {f}`Diminution de `p_infection``  
-{f}`Augmentation de `contacts_par_jour`  
+{f}`Augmentation de `contacts_par_jour``  
 {v}`Augmentation de `p_guerison` et diminution de `p_deces``
 ```
 
@@ -94,7 +94,7 @@ Quel serait l'effet d'un système d'hospitalisation ?
 Quel serait l'effet de masques et de gestes barrières ?
 
 {v}`Diminution de `p_infection` et `contacts_par_jour``  
-{f}`Augmentation de `p_guerison`  
+{f}`Augmentation de `p_guerison``  
 {f}`Diminution de `p_deces``
 ```
 
@@ -102,7 +102,7 @@ Quel serait l'effet de masques et de gestes barrières ?
 Quel serait l'effet de vaccins ?
 
 {f}`Augmentation de `p_deces``  
-{f}`Diminution de `contacts_par_jour`   
+{f}`Diminution de `contacts_par_jour``   
 {v}`Diminution de `p_infection` et `p_deces``
 ```
 
