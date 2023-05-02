@@ -30,6 +30,9 @@ nb_infections =
 nb_guerisons = 
 nb_deces = 
 
+# On ne peut pas avoir plus d'infections que de susceptibles à infecter, cette ligne permet de s'en assurer
+nb_infections = min(nb_infections, susceptibles)
+
 print(f"Au cours du jour 1:")
 print(f"\t{nb_infections} nouvelles infections")
 print(f"\t{nb_guerisons} nouvelles guérisons")

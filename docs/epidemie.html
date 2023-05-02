@@ -318,10 +318,9 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 </section>
 <section id="visualisation-de-levolution-de-lepidemie">
 <h2>5. Visualisation de l’évolution de l’épidémie<a class="headerlink" href="#visualisation-de-levolution-de-lepidemie" title="Lien permanent vers ce titre">¶</a></h2>
-<p>On souhaite tracer la courbe des nouvelles infections. Pour cela, définissez (avant la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>) une variable <code class="docutils literal notranslate"><span class="pre">courbe_infection</span></code> qui contient une liste vide (<code class="docutils literal notranslate"><span class="pre">[]</span></code>). Cette liste contiendra le nombre de nouvelles infections quotidiennes (<code class="docutils literal notranslate"><span class="pre">nb_infections</span></code>). Pour remplir cette liste, placez l’instruction <code class="docutils literal notranslate"><span class="pre">courbe_infection.append(nb_infections)</span></code> à la fin de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> (à l’intérieur de la boucle).</p>
-<p>Commençons par afficher le nombre de nouvelles infections les 10 premiers jours en ajoutant <code class="docutils literal notranslate"><span class="pre">print(courbe_infection)</span></code> après la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>. Est-ce que cela vous semble cohérent ?</p>
+<p>On souhaite tracer la courbe des nouvelles infections. Pour cela, ajoutez <code class="docutils literal notranslate"><span class="pre">courbe_infection</span> <span class="pre">=</span> <span class="pre">[]</span></code> juste avant la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>. Cette liste contiendra les nombre d’infections quotidiennes. Pour remplir cette liste, placez l’instruction <code class="docutils literal notranslate"><span class="pre">courbe_infection.append(nb_infections)</span></code> à la fin de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> (à l’intérieur de la boucle).</p>
 <p>Pour visualiser la courbe des nouvelles infections, nous aurons besoin de la librairie <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. Ajoutez l’instruction permettant de l’importer au début de votre programme: <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code>. (Si vous rencontrez une erreur d’import ici, appelez votre enseignant).</p>
-<p>Ajoutez ensuite les instructions suivantes à la fin de votre programme pour tracer la courbe des nouvelles infections:</p>
+<p>Ajoutez ensuite les instructions suivantes à la fin de votre programme (en dehors de la boucle) pour tracer la courbe des nouvelles infections:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Epidémie de </span><span class="si">{</span><span class="n">nom_maladie</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">courbe_infection</span><span class="p">,</span><span class="s1">'-'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'jours'</span><span class="p">)</span>
@@ -355,8 +354,8 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <li><p>Modifier le taux de mortalité.</p></li>
 </ul>
 </section>
-<section id="covid-19">
-<h2>7. Covid-19<a class="headerlink" href="#covid-19" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="pour-les-plus-rapides-covid-19">
+<h2>(7. Pour les plus rapides) Covid-19<a class="headerlink" href="#pour-les-plus-rapides-covid-19" title="Lien permanent vers ce titre">¶</a></h2>
 <p>On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier <a class="reference download internal" download="" href="_downloads/25dba90540a378f75847e345d5e2323d/covid.csv"><code class="xref download docutils literal notranslate"><span class="pre">covid.csv</span></code></a> et d’obtenir une liste contenant le nombre de cas journaliers en Suisse (<a href="https://www.coronavirus-statistiques.com/stats-pays/coronavirus-nombre-de-cas-suisse/" target="_blank">source</a>).<br/>
 Placez le fichier <code class="docutils literal notranslate"><span class="pre">covid.csv</span></code> dans le même répertoire/dossier que votre fichier python.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
@@ -451,7 +450,7 @@ Que faudrait-il modifier dans notre modèle pour le rendre plus proche de ce qui
 <li><a class="reference internal" href="#simulation-sur-plusieurs-jours">4. Simulation sur plusieurs jours</a></li>
 <li><a class="reference internal" href="#visualisation-de-levolution-de-lepidemie">5. Visualisation de l’évolution de l’épidémie</a></li>
 <li><a class="reference internal" href="#experimentations">6. Expérimentations</a></li>
-<li><a class="reference internal" href="#covid-19">7. Covid-19</a></li>
+<li><a class="reference internal" href="#pour-les-plus-rapides-covid-19">(7. Pour les plus rapides) Covid-19</a></li>
 <li><a class="reference internal" href="#pour-les-plus-rapides-ameliorations-de-votre-modele">(8. Pour les plus rapides) Améliorations de votre modèle</a></li>
 </ul>
 </li>

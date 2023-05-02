@@ -89,13 +89,11 @@ Combien y a-t-il de malades après 10 jours? Et après 20 jours ?
 
 ## 5. Visualisation de l'évolution de l'épidémie
 
-On souhaite tracer la courbe des nouvelles infections. Pour cela, définissez (avant la boucle `for`) une variable `courbe_infection` qui contient une liste vide (`[]`). Cette liste contiendra le nombre de nouvelles infections quotidiennes (`nb_infections`). Pour remplir cette liste, placez l’instruction `courbe_infection.append(nb_infections)` à la fin de la boucle `for` (à l'intérieur de la boucle).
-
-Commençons par afficher le nombre de nouvelles infections les 10 premiers jours en ajoutant `print(courbe_infection)` après la boucle `for`. Est-ce que cela vous semble cohérent ?
+On souhaite tracer la courbe des nouvelles infections. Pour cela, ajoutez `courbe_infection = []` juste avant la boucle `for`. Cette liste contiendra les nombre d'infections quotidiennes. Pour remplir cette liste, placez l’instruction `courbe_infection.append(nb_infections)` à la fin de la boucle `for` (à l'intérieur de la boucle).
 
 Pour visualiser la courbe des nouvelles infections, nous aurons besoin de la librairie `matplotlib`. Ajoutez l'instruction permettant de l'importer au début de votre programme: `import matplotlib.pyplot as plt`. (Si vous rencontrez une erreur d'import ici, appelez votre enseignant).
 
-Ajoutez ensuite les instructions suivantes à la fin de votre programme pour tracer la courbe des nouvelles infections:
+Ajoutez ensuite les instructions suivantes à la fin de votre programme (en dehors de la boucle) pour tracer la courbe des nouvelles infections:
 
 ```python
 plt.title(f'Epidémie de {nom_maladie}')
@@ -133,7 +131,7 @@ Modifiez les paramètres de votre modèle pour voir comment cela impacte l'évol
 - Modifier le taux de guérison.
 - Modifier le taux de mortalité.
 
-## 7. Covid-19
+## (7. Pour les plus rapides) Covid-19
 
 On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier {download}`covid.csv<prog1/data/covid.csv>` et d’obtenir une liste contenant le nombre de cas journaliers en Suisse (<a href="https://www.coronavirus-statistiques.com/stats-pays/coronavirus-nombre-de-cas-suisse/" target="_blank">source</a>).  
 Placez le fichier `covid.csv` dans le même répertoire/dossier que votre fichier python.
