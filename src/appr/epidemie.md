@@ -77,7 +77,7 @@ Imaginons que la population ne reste pas impassible face à l'épidémie et pren
 ```{question}
 Quel serait l'effet d'un confinement sur notre modèle ?
 
-{f}`Diminution de p_infection``  
+{f}`Diminution de `p_infection``  
 {v}`Diminution de `contacts_par_jour``  
 {f}`Augmentation de `p_guerison``
 ```
