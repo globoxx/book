@@ -91,9 +91,9 @@ Quel serait l'effet d'un système d'hospitalisation ?
 ```{question}
 Quel serait l'effet de masques et de gestes barrières ?
 
-{v}Diminution de `p_infection` et `contacts_par_jour`  
-{f}Augmentation de `p_guerison`  
-{f}Diminution de `p_deces`
+{v}`Diminution de `p_infection` et `contacts_par_jour`  
+{f}`Augmentation de `p_guerison`  
+{f}`Diminution de `p_deces`
 ```
 
 ```{question}
