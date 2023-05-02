@@ -65,6 +65,7 @@ Quelles sont les hypothèses sous-entendues par notre modèle ? (plusieurs répo
 
 {v}`Brassage homogène de la population (pas de quartiers)`  
 {f}`Présence d'immigration/émigration`  
+{f}`Présence de saisons (virus plus actifs en hiver)`  
 {v}`Absence de période d'incubation`  
 {v}`Absence de réinfection`  
 {f}`Population hétérogène (prise en compte de l'age, du sexe, etc)`
