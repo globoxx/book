@@ -369,12 +369,12 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 </section>
 <section id="simulation-sur-plusieurs-jours">
 <h2>4. Simulation sur plusieurs jours<a class="headerlink" href="#simulation-sur-plusieurs-jours" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous allons maintenant simuler l’évolution de l’épidémie sur plusieurs jours. Placer une boucle <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">jour</span> <span class="pre">in</span> <span class="pre">range(1,</span> <span class="pre">11):</span></code> au bon endroit de votre code pour que chaque répétition de la boucle corresponde au passage d’un jour (en commençant par le jour 1). Cette boucle permettra donc de faire s’écouler 10 jours.</p>
-<p>Combien y a-t-il de malades après 10 jours? Et après 20 jours ?</p>
+<p>Nous allons maintenant simuler l’évolution de l’épidémie sur plusieurs jours. Placer une boucle <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">jour</span> <span class="pre">in</span> <span class="pre">range(1,</span> <span class="pre">11):</span></code> au bon endroit de votre code pour que chaque tour de la boucle corresponde au passage d’un jour (en commençant par le jour 1). Cette boucle permettra donc de faire s’écouler 10 jours.</p>
+<p>Combien y a-t-il de malades après 10 jours ? Et après 20 jours ?</p>
 </section>
 <section id="visualisation-de-levolution-de-lepidemie">
 <h2>5. Visualisation de l’évolution de l’épidémie<a class="headerlink" href="#visualisation-de-levolution-de-lepidemie" title="Lien permanent vers ce titre">¶</a></h2>
-<p>On souhaite tracer la courbe des nouvelles infections. Pour cela, ajoutez <code class="docutils literal notranslate"><span class="pre">courbe_infection</span> <span class="pre">=</span> <span class="pre">[]</span></code> juste avant la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>. Cette liste contiendra les nombre d’infections quotidiennes. Pour remplir cette liste, placez l’instruction <code class="docutils literal notranslate"><span class="pre">courbe_infection.append(nb_infections)</span></code> à la fin de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> (à l’intérieur de la boucle).</p>
+<p>On souhaite tracer la courbe des nouvelles infections. Pour cela, ajoutez <code class="docutils literal notranslate"><span class="pre">courbe_infection</span> <span class="pre">=</span> <span class="pre">[]</span></code> juste avant la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>. Cette liste contiendra les nombres d’infections quotidiennes. Pour remplir cette liste, placez l’instruction <code class="docutils literal notranslate"><span class="pre">courbe_infection.append(nb_infections)</span></code> à la fin de la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> (à l’intérieur de la boucle).</p>
 <p>Pour visualiser la courbe des nouvelles infections, nous aurons besoin de la librairie <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. Ajoutez l’instruction permettant de l’importer au début de votre programme: <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code>. (Si vous rencontrez une erreur d’import ici, appelez votre enseignant).</p>
 <p>Ajoutez ensuite les instructions suivantes à la fin de votre programme (en dehors de la boucle) pour tracer la courbe des nouvelles infections:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Epidémie de </span><span class="si">{</span><span class="n">nom_maladie</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
@@ -403,11 +403,11 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <h2>6. Expérimentations<a class="headerlink" href="#experimentations" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Modifiez les paramètres de votre modèle pour voir comment cela impacte l’évolution de l’épidémie. Vous pouvez par exemple:</p>
 <ul class="simple">
-<li><p>Modifier le nombre de personnes dans la population.</p></li>
 <li><p>Modifier le nombre moyen de contacts par jour.</p></li>
 <li><p>Modifier le taux d’infection.</p></li>
 <li><p>Modifier le taux de guérison.</p></li>
 <li><p>Modifier le taux de mortalité.</p></li>
+<li><p>Modifier l’état initial de la population au jour 0 de l’épidémie.</p></li>
 </ul>
 </section>
 <section id="pour-les-plus-rapides-covid-19">

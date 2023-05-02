@@ -131,13 +131,13 @@ Encore une fois, les valeurs obtenues vous semblent-elles logiques ?
 
 ## 4. Simulation sur plusieurs jours
 
-Nous allons maintenant simuler l'évolution de l'épidémie sur plusieurs jours. Placer une boucle `for jour in range(1, 11):` au bon endroit de votre code pour que chaque répétition de la boucle corresponde au passage d’un jour (en commençant par le jour 1). Cette boucle permettra donc de faire s'écouler 10 jours.
+Nous allons maintenant simuler l'évolution de l'épidémie sur plusieurs jours. Placer une boucle `for jour in range(1, 11):` au bon endroit de votre code pour que chaque tour de la boucle corresponde au passage d’un jour (en commençant par le jour 1). Cette boucle permettra donc de faire s'écouler 10 jours.
 
-Combien y a-t-il de malades après 10 jours? Et après 20 jours ?
+Combien y a-t-il de malades après 10 jours ? Et après 20 jours ?
 
 ## 5. Visualisation de l'évolution de l'épidémie
 
-On souhaite tracer la courbe des nouvelles infections. Pour cela, ajoutez `courbe_infection = []` juste avant la boucle `for`. Cette liste contiendra les nombre d'infections quotidiennes. Pour remplir cette liste, placez l’instruction `courbe_infection.append(nb_infections)` à la fin de la boucle `for` (à l'intérieur de la boucle).
+On souhaite tracer la courbe des nouvelles infections. Pour cela, ajoutez `courbe_infection = []` juste avant la boucle `for`. Cette liste contiendra les nombres d'infections quotidiennes. Pour remplir cette liste, placez l’instruction `courbe_infection.append(nb_infections)` à la fin de la boucle `for` (à l'intérieur de la boucle).
 
 Pour visualiser la courbe des nouvelles infections, nous aurons besoin de la librairie `matplotlib`. Ajoutez l'instruction permettant de l'importer au début de votre programme: `import matplotlib.pyplot as plt`. (Si vous rencontrez une erreur d'import ici, appelez votre enseignant).
 
@@ -173,11 +173,11 @@ Pour que cela fonctionne, il faut au préalable définir et remplir les listes `
 
 Modifiez les paramètres de votre modèle pour voir comment cela impacte l'évolution de l'épidémie. Vous pouvez par exemple:
 
-- Modifier le nombre de personnes dans la population.
 - Modifier le nombre moyen de contacts par jour.
 - Modifier le taux d'infection.
 - Modifier le taux de guérison.
 - Modifier le taux de mortalité.
+- Modifier l'état initial de la population au jour 0 de l'épidémie.
 
 ## (7. Pour les plus rapides) Covid-19
 
