@@ -32,6 +32,8 @@ courbe_malades = []
 courbe_gueris = []
 courbe_morts = []
 for jour in range(1, 51):
+    # 3.1 Calcul des cas quotidiens -------------------------------------------
+
     nb_contacts_du_jour = malades*contacts_par_jour
     nb_contacts_susceptibles_du_jour = nb_contacts_du_jour*susceptibles/(susceptibles+malades+gueris)
     nb_infections = nb_contacts_susceptibles_du_jour*p_infection
@@ -46,6 +48,8 @@ for jour in range(1, 51):
     print(f"\t{nb_guerisons} nouvelles guérisons")
     print(f"\t{nb_deces} nouveaux décès")
 
+    # 3.2 Mise à jour de la population -----------------------------------------
+
     susceptibles = susceptibles - nb_infections
     malades = malades + nb_infections - nb_guerisons - nb_deces
     gueris = gueris + nb_guerisons
@@ -56,6 +60,8 @@ for jour in range(1, 51):
     print(f"\tMalades: {malades}")
     print(f"\tGuéris: {gueris}")
     print(f"\tMorts: {morts}")
+
+    # 4 Remplissage des listes pour les graphiques --------------------------------
 
     courbe_infection.append(nb_infections)
     
