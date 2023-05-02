@@ -55,7 +55,59 @@ Voici le diagramme représentant l'évolution d'un individu selon le modèle que
 ```{image} prog1/media/epidemie.png
 ```
 
-Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutôt simple et ne prend pas en compte de nombreux facteurs. Par exemple, il ne prend pas en compte le fait que les personnes malades puissent être hospitalisées et/ou isolés ni les cas de réinfection.
+Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutôt simple et ne prend pas en compte de nombreux facteurs.
+
+`````{admonition} Quelques questions à se poser
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+```{question}
+Quelles sont les hypothèses sous-entendues par notre modèle ? (plusieurs réponses possibles)
+
+{v}`Brassage homogène de la population`  
+{f}`Présence d'immigration/émigration`  
+{v}`Absence de période d'incubation`  
+{v}`Absence de réinfection`
+{f}`Population hétérogène (prise en compte de l'age, du sexe, etc)`
+```
+
+Imaginons que la population ne reste pas impassible face à l'épidémie et prenne des décisions politiques pour l'enrayer. Quelles seraient les variables affectées par ces différentes mesures ?
+
+```{question}
+Quel serait l'effet d'un confinement sur notre modèle ?
+
+{f}`Diminution de `p_infection``  
+{v}`Diminution de `contacts_par_jour`  
+{f}`Augmentation de `p_guerison``
+```
+
+```{question}
+Quel serait l'effet d'un système d'hospitalisation ?
+
+{f}`Diminution de `p_infection``  
+{f}`Augmentation de `contacts_par_jour`  
+{v}`Augmentation de `p_guerison` et diminution de `p_deces``
+```
+
+```{question}
+Quel serait l'effet de masques et de gestes barrières ?
+
+{v}`Diminution de `p_infection` et `contacts_par_jour``  
+{f}`Augmentation de `p_guerison`  
+{f}`Diminution de `p_deces``
+```
+
+```{question}
+Quel serait l'effet de vaccins ?
+
+{f}`Augmentation de `p_deces``  
+{f}`Diminution de `contacts_par_jour`   
+{v}`Diminution de `p_infection` et `p_deces``
+```
+
+````
+`````
 
 Dans une épidémie de zombies, il faudrait inclure dans notre modèle le fait que les morts puissent également infecter les vivants.
 
