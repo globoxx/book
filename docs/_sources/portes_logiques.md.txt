@@ -10,9 +10,9 @@ Dans cette première partie, vous allez concevoir un circuit logique qui permet 
 
 ### Exercice 1.1
 
-Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien précis et que ce chien est à la fois **petit** et **gentil**.
+Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien à la fois **petit** et **gentil**.
 
-Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entrée pouvant valoir 0 ou 1.  
+Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entrée pouvant valoir 0 ou 1.
 
 ```{logic}
 :height: 200
@@ -41,7 +41,7 @@ Il faut insérer une porte **ET**.
 {
   "v": 2,
   "in": [{"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0}, {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}],
-  "out": [{"pos": [360, 80], "id": 18, "name": "OK"}],
+  "out": [{"pos": [460, 80], "id": 18, "name": "OK"}],
   "gates": [{"type": "AND", "pos": [240, 80], "in": [0, 1], "out": 2}],
   "wires": [[2, 18], [14, 0], [16, 1]]
 }
@@ -72,9 +72,9 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
 {
   "v": 2,
   "in": [
-    {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 0},
+    {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 1},
     {"pos": [190, 130], "id": 15, "name": "Bave tout le temps", "val": 0},
-    {"pos": [190, 190], "id": 16, "name": "Petit", "val": 0},
+    {"pos": [190, 190], "id": 16, "name": "Petit", "val": 1},
     {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
   ],
   "out": [{"pos": [440, 160], "id": 18, "name": "OK"}]
@@ -229,7 +229,7 @@ Oublions un moment les chiens et concentrons-nous sur les systèmes d'alarme pou
 |   1   |  1   |       1       |           0           |   1   |
 |   1   |  1   |       1       |           1           |   0   |
 
-Déterminez d'abord la fonction logique associée à la table de vérité. Ensuite, utilisez cette fonction logique pour concevoir le circuit logique correspondant.  
+Déterminez d'abord en français les conditions qui doivent être remplies pour que l'alarme se déclenche. Ensuite, concevez le circuit logique correspondant.
 
 ```{logic}
 :height: 390
@@ -239,18 +239,18 @@ Déterminez d'abord la fonction logique associée à la table de vérité. Ensui
 {
   "v": 5,
   "in": [
-    {"pos": [120, 115], "id": 14, "name": "Chien"},
-    {"pos": [120, 175], "id": 15, "name": "Chat"},
-    {"pos": [120, 235], "id": 16, "name": "Porte ouverte"},
-    {"pos": [120, 290], "id": 21, "name": "Propriétaire présent"}
+    {"pos": [150, 115], "id": 14, "name": "Chien"},
+    {"pos": [150, 175], "id": 15, "name": "Chat"},
+    {"pos": [150, 235], "id": 16, "name": "Porte ouverte"},
+    {"pos": [150, 290], "id": 21, "name": "Propriétaire présent"}
   ],
   "out": [
-    {"pos": [560, 195], "id": 22, "name": "Alarme"}
+    {"pos": [660, 195], "id": 22, "name": "Alarme"}
   ]
 }
 ```
 
-## Exercice 2.2 - Table mystère
+## (Challenge) Exercice 2.2 - Table mystère
 
 Ecrivez le circuit logique correspondant à la table de vérité suivante:
 
@@ -280,8 +280,8 @@ Les valeurs d'entrée sont A, B et C. Les valeurs de sortie sont S1 et S2.
     {"pos": [100, 235], "id": 16, "name": "C"}
   ],
   "out": [
-    {"pos": [560, 150], "id": 22, "name": "S1"},
-    {"pos": [560, 195], "id": 23, "name": "S2"}
+    {"pos": [660, 150], "id": 22, "name": "S1"},
+    {"pos": [660, 195], "id": 23, "name": "S2"}
   ]
 }
 ```

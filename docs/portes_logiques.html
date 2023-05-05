@@ -274,7 +274,7 @@
 <p>Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.</p>
 <section id="exercice-1-1">
 <h3>Exercice 1.1<a class="headerlink" href="#exercice-1-1" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien précis et que ce chien est à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
+<p>Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
 <p>Les caractéristiques <strong>petit</strong> et <strong>gentil</strong> sont les valeurs logiques d’entrée pouvant valoir 0 ou 1.</p>
 <div class="logic-container" style="height: 200px;"><logic-editor mode="design" showonly="and,or,xor">
 <script type="application/json">
@@ -295,7 +295,7 @@
 {
   "v": 2,
   "in": [{"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0}, {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}],
-  "out": [{"pos": [360, 80], "id": 18, "name": "OK"}],
+  "out": [{"pos": [460, 80], "id": 18, "name": "OK"}],
   "gates": [{"type": "AND", "pos": [240, 80], "in": [0, 1], "out": 2}],
   "wires": [[2, 18], [14, 0], [16, 1]]
 }
@@ -324,9 +324,9 @@
 {
   "v": 2,
   "in": [
-    {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 0},
+    {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 1},
     {"pos": [190, 130], "id": 15, "name": "Bave tout le temps", "val": 0},
-    {"pos": [190, 190], "id": 16, "name": "Petit", "val": 0},
+    {"pos": [190, 190], "id": 16, "name": "Petit", "val": 1},
     {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
   ],
   "out": [{"pos": [440, 160], "id": 18, "name": "OK"}]
@@ -571,25 +571,25 @@
 </tr>
 </tbody>
 </table></div>
-<p>Déterminez d’abord la fonction logique associée à la table de vérité. Ensuite, utilisez cette fonction logique pour concevoir le circuit logique correspondant.</p>
+<p>Déterminez d’abord en français les conditions qui doivent être remplies pour que l’alarme se déclenche. Ensuite, concevez le circuit logique correspondant.</p>
 <div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="and,or,xor,not">
 <script type="application/json">
 {
   "v": 5,
   "in": [
-    {"pos": [120, 115], "id": 14, "name": "Chien"},
-    {"pos": [120, 175], "id": 15, "name": "Chat"},
-    {"pos": [120, 235], "id": 16, "name": "Porte ouverte"},
-    {"pos": [120, 290], "id": 21, "name": "Propriétaire présent"}
+    {"pos": [150, 115], "id": 14, "name": "Chien"},
+    {"pos": [150, 175], "id": 15, "name": "Chat"},
+    {"pos": [150, 235], "id": 16, "name": "Porte ouverte"},
+    {"pos": [150, 290], "id": 21, "name": "Propriétaire présent"}
   ],
   "out": [
-    {"pos": [560, 195], "id": 22, "name": "Alarme"}
+    {"pos": [660, 195], "id": 22, "name": "Alarme"}
   ]
 }
 </script></logic-editor></div></section>
 </section>
-<section id="exercice-2-2-table-mystere">
-<h2>Exercice 2.2 - Table mystère<a class="headerlink" href="#exercice-2-2-table-mystere" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="challenge-exercice-2-2-table-mystere">
+<h2>(Challenge) Exercice 2.2 - Table mystère<a class="headerlink" href="#challenge-exercice-2-2-table-mystere" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ecrivez le circuit logique correspondant à la table de vérité suivante:</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
@@ -662,8 +662,8 @@
     {"pos": [100, 235], "id": 16, "name": "C"}
   ],
   "out": [
-    {"pos": [560, 150], "id": 22, "name": "S1"},
-    {"pos": [560, 195], "id": 23, "name": "S2"}
+    {"pos": [660, 150], "id": 22, "name": "S1"},
+    {"pos": [660, 195], "id": 23, "name": "S2"}
   ]
 }
 </script></logic-editor></div><p>Que fait ce circuit d’après vous ?</p>
@@ -738,7 +738,7 @@
 <li><a class="reference internal" href="#exercice-2-1-systeme-dalarmes-pour-animaux-de-compagnie">Exercice 2.1 - Système d’alarmes pour animaux de compagnie</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#exercice-2-2-table-mystere">Exercice 2.2 - Table mystère</a></li>
+<li><a class="reference internal" href="#challenge-exercice-2-2-table-mystere">(Challenge) Exercice 2.2 - Table mystère</a></li>
 </ul>
 </li>
 </ul>
