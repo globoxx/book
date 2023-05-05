@@ -7,29 +7,24 @@ Dans cette activité, vous allez concevoir des circuits logiques à l'aide de po
 Voici par exemple un circuit logique qui permet de calculer la valeur de sortie d'une porte **OU-EXCLUSIF** (XOR) en fonction de ses deux entrées.
 
 ```{logic}
-:height: 400
+:height: 160
 :mode: tryout
 {
   "v": 4,
   "in": [
-    {"pos": [40, 60], "id": 7, "val": 0},
-    {"pos": [40, 80], "id": 8, "val": 0},
-    {"pos": [270, 50], "id": 16, "val": 0},
-    {"pos": [270, 90], "id": 17, "val": 0},
-    {"pos": [270, 130], "id": 18, "val": 0}
+    {"pos": [40, 30], "id": 0, "val": 0},
+    {"pos": [40, 110], "id": 47, "val": 0}
   ],
   "out": [
-    {"pos": [180, 70], "id": 9},
-    {"pos": [510, 90], "id": 19}
+    {"pos": [430, 50], "id": 59}
   ],
   "gates": [
-    {"type": "XOR", "pos": [110, 70], "in": [4, 5], "out": 6}
+    {"type": "OR", "pos": [170, 40], "in": [48, 49], "out": 50},
+    {"type": "AND", "pos": [170, 100], "in": [51, 52], "out": 53},
+    {"type": "NOT", "pos": [250, 100], "in": 54, "out": 55},
+    {"type": "AND", "pos": [360, 50], "in": [56, 57], "out": 58}
   ],
-  "labels": [
-    {"pos": [110, 20], "text": "table de vérité"},
-    {"pos": [390, 20], "text": "porte OU-X avec 3 entrées"}
-  ],
-  "wires": [[7, 4], [8, 5], [6, 9]]
+  "wires": [[0, 48], [47, 49], [0, 51], [47, 52], [53, 54], [50, 56], [55, 57], [58, 59]]
 }
 ```
 
