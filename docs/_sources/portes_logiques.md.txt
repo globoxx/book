@@ -55,7 +55,6 @@ Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entré
 ```
 
 <!--
-
 #### Solution
 
 Il faut insérer une porte **ET**.
@@ -72,7 +71,6 @@ Il faut insérer une porte **ET**.
   "wires": [[2, 18], [14, 0], [16, 1]]
 }
 ```
-
 -->
 
 ### Exercice 1.2 - Critères plus compliqués
@@ -109,7 +107,7 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
 }
 ```
 
-<!-->
+<!--
 #### Solution Ex 2
 
 ```{logic}
@@ -136,7 +134,6 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
 ```
 
 D'autres solutions sont possibles.
-
 -->
 
 ### Exercice 1.3 - Encodage et décodage des races
