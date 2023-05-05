@@ -41,7 +41,7 @@ Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entré
 ```{logic}
 :height: 200
 :mode: design
-:showonly: and,or,xor
+:showonly: in,out,and,or,xor
 
 {
   "v": 2,
@@ -95,7 +95,7 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
 ```{logic}
 :height: 320
 :mode: design
-:showonly: and,or,xor,not
+:showonly: in,out,and,or,xor,not
 
 {
   "v": 2,
@@ -168,7 +168,7 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
 ```{logic}
 :height: 390
 :mode: design
-:showonly: and,or,xor,not
+:showonly: in,out,and,or,xor,not
 
 {
   "v": 2,
@@ -372,7 +372,7 @@ Ecrivez le circuit logique correspondant à la table de vérité suivante:
 ```{logic}
 :height: 390
 :mode: design
-:showonly: and,or,xor,not
+:showonly: in,out,and,or,xor,not
 
 {
   "v": 5,

@@ -296,7 +296,7 @@
 <h3>Exercice 1.1<a class="headerlink" href="#exercice-1-1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
 <p>Les caractéristiques <strong>petit</strong> et <strong>gentil</strong> sont les valeurs logiques d’entrée pouvant valoir 0 ou 1.</p>
-<div class="logic-container" style="height: 200px;"><logic-editor mode="design" showonly="and,or,xor">
+<div class="logic-container" style="height: 200px;"><logic-editor mode="design" showonly="in,out,and,or,xor">
 <script type="application/json">
 {
   "v": 2,
@@ -346,7 +346,7 @@ Il faut insérer une porte **ET**.
 <li><p>Labrador: 0 (le chien n’est pas un labrador)</p></li>
 </ul>
 <p>On s’attend dans ce cas à ce que la sortie «OK» vaille 1.</p>
-<div class="logic-container" style="height: 320px;"><logic-editor mode="design" showonly="and,or,xor,not">
+<div class="logic-container" style="height: 320px;"><logic-editor mode="design" showonly="in,out,and,or,xor,not">
 <script type="application/json">
 {
   "v": 2,
@@ -423,7 +423,7 @@ Il faut insérer une porte **ET**.
 </tbody>
 </table>
 <p>On a donc maintenant besoin d’un décodeur: en utilisant les 2 bits d’entrées, il s’agit d’avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.</p>
-<div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="and,or,xor,not">
+<div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="in,out,and,or,xor,not">
 <script type="application/json">
 {
   "v": 2,
@@ -738,7 +738,7 @@ Déterminez d'abord en français les conditions qui doivent être remplies pour 
 </tr>
 </tbody>
 </table></div>
-<div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="and,or,xor,not">
+<div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="in,out,and,or,xor,not">
 <script type="application/json">
 {
   "v": 5,
