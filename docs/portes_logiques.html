@@ -269,7 +269,32 @@
           <section class="tex2jax_ignore mathjax_ignore" id="portes-logiques">
 <span id="id1"></span><h1>Portes logiques<a class="headerlink" href="#portes-logiques" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Dans cette activité, vous allez concevoir des circuits logiques à l’aide de portes logiques.</p>
-<section id="selecteur-de-chien">
+<p>Voici par exemple un circuit logique qui permet de calculer la valeur de sortie d’une porte <strong>OU-EXCLUSIF</strong> (XOR) en fonction de ses deux entrées.</p>
+<div class="logic-container" style="height: 400px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  "v": 4,
+  "in": [
+    {"pos": [40, 60], "id": 7, "val": 0},
+    {"pos": [40, 80], "id": 8, "val": 0},
+    {"pos": [270, 50], "id": 16, "val": 0},
+    {"pos": [270, 90], "id": 17, "val": 0},
+    {"pos": [270, 130], "id": 18, "val": 0}
+  ],
+  "out": [
+    {"pos": [180, 70], "id": 9},
+    {"pos": [510, 90], "id": 19}
+  ],
+  "gates": [
+    {"type": "XOR", "pos": [110, 70], "in": [4, 5], "out": 6}
+  ],
+  "labels": [
+    {"pos": [110, 20], "text": "table de vérité"},
+    {"pos": [390, 20], "text": "porte OU-X avec 3 entrées"}
+  ],
+  "wires": [[7, 4], [8, 5], [6, 9]]
+}
+</script></logic-editor></div><section id="selecteur-de-chien">
 <h2>1. Sélecteur de chien<a class="headerlink" href="#selecteur-de-chien" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.</p>
 <section id="exercice-1-1">
@@ -287,11 +312,16 @@
 ],
   "out": [{"pos": [360, 80], "id": 18, "name": "OK"}]
 }
-</script></logic-editor></div><section id="solution">
-<h4>Solution<a class="headerlink" href="#solution" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Il faut insérer une porte <strong>ET</strong>.</p>
-<div class="logic-container" style="height: 160px;"><logic-editor mode="tryout">
-<script type="application/json">
+</script></logic-editor></div><!--
+
+#### Solution
+
+Il faut insérer une porte **ET**.
+
+```{logic}
+:height: 160
+:mode: tryout
+
 {
   "v": 2,
   "in": [{"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0}, {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}],
@@ -299,7 +329,9 @@
   "gates": [{"type": "AND", "pos": [240, 80], "in": [0, 1], "out": 2}],
   "wires": [[2, 18], [14, 0], [16, 1]]
 }
-</script></logic-editor></div></section>
+```
+
+-->
 </section>
 <section id="exercice-1-2-criteres-plus-compliques">
 <h3>Exercice 1.2 - critères plus compliqués<a class="headerlink" href="#exercice-1-2-criteres-plus-compliques" title="Lien permanent vers ce titre">¶</a></h3>
@@ -331,7 +363,8 @@
   ],
   "out": [{"pos": [440, 160], "id": 18, "name": "OK"}]
 }
-</script></logic-editor></div><section id="solution-ex-2">
+</script></logic-editor></div><!-->
+<section id="solution-ex-2">
 <h4>Solution Ex 2<a class="headerlink" href="#solution-ex-2" title="Lien permanent vers ce titre">¶</a></h4>
 <div class="logic-container" style="height: 330px;"><logic-editor mode="tryout">
 <script type="application/json">
@@ -353,6 +386,7 @@
   "wires": [[2, 18], [8, 0], [14, 6], [15, 9], [10, 7], [16, 3], [17, 4], [5, 1]]
 }
 </script></logic-editor></div><p>D’autres solutions sont possibles.</p>
+<p>–&gt;</p>
 </section>
 </section>
 <section id="exercice-1-3-encodage-et-decodage-des-races">
@@ -362,17 +396,17 @@
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p>Combien de races pourra-t-on au maximum représenter si on se permet d’utiliser 2 entrées ?</p>
-<p><label class="answer correct"><input type="checkbox"/>1</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>2</label><br/>
-<label class="answer correct"><input type="checkbox"/>4</label><br/>
-<label class="answer incorrect"><input type="checkbox"/>1 million</label></p>
+<p><label class="answer correct"><input type="checkbox" />1</label><br />
+<label class="answer incorrect"><input type="checkbox" />2</label><br />
+<label class="answer correct"><input type="checkbox" />4</label><br />
+<label class="answer incorrect"><input type="checkbox" />1 million</label></p>
 </div>
-<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<div class="controls"><button type="button" class="reset btn btn-secondary"><i class="fa fa-repeat"></i> Effacer</button><button type="button" class="show btn btn-secondary"><i class="fa fa-eye"></i> Montrer l'explication</button><button type="button" class="check btn btn-primary"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
 <p>Nous pourrons bien représenter 4 races car nous avons 4 possibilités: 00, 01, 10 et 11. De manière générale, avec <code class="docutils literal notranslate"><span class="pre">n</span></code> bits/entrées, on peut représenter <code class="docutils literal notranslate"><span class="pre">2^n</span></code> races.</p>
 </div>
 </div>
 </form></div><p>On va donc s’intéresser à 4 races de chiens: border collie, berger allemand, husky et labrador. On décide de l’encodage suivant:</p>
-<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>Représentation binaire</p></th>
 <th class="text-align:left head"><p>Race</p></th>
@@ -392,7 +426,7 @@
 <td class="text-align:left"><p>labrador</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
 <p>On a donc maintenant besoin d’un décodeur: en utilisant les 2 bits d’entrées, il s’agit d’avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.</p>
 <div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="and,or,xor,not">
 <script type="application/json">
@@ -409,10 +443,13 @@
     {"pos": [460, 230], "id": 5, "name": "c’est un berger allemand"}
   ]
 }
-</script></logic-editor></div><section id="solution-ex-3">
-<h4>Solution Ex 3<a class="headerlink" href="#solution-ex-3" title="Lien permanent vers ce titre">¶</a></h4>
-<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
-<script type="application/json">
+</script></logic-editor></div><!--
+#### Solution Ex 3
+
+```{logic}
+:height: 390
+:mode: tryout
+
 {
   "v": 2,
   "in": [
@@ -450,14 +487,16 @@
     [1, 20, {"via": [[200, 220]]}]
   ]
 }
-</script></logic-editor></div></section>
+```
+-->
 </section>
 </section>
 <section id="binaire-et-decimal">
 <h2>2. Binaire et décimal<a class="headerlink" href="#binaire-et-decimal" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans cette partie, vous allez concevoir des circuits traduisant des nombres décimaux en nombres binaires.</p>
 <section id="exercice-2-1-decodeur-de-clavier">
 <h3>Exercice 2.1 - Décodeur de clavier<a class="headerlink" href="#exercice-2-1-decodeur-de-clavier" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Complétez le circuit pour un décodeur qui a le comportement suivant :</p>
+<p>Complétez le circuit pour un décodeur de touches de clavier qui a le comportement suivant :</p>
 <ul class="simple">
 <li><p>Touche 1 appuyée produit la sortie binaire 01</p></li>
 <li><p>Touche 2 appuyée produit la sortie binaire 10</p></li>
@@ -476,7 +515,8 @@
   "out": [{"pos": [300, 150], "orient": "s", "id": 10}, {"pos": [350, 150], "orient": "s", "id": 11}],
   "wires": [[0, 6], [2, 7], [8, 11]]
 }
-</script></logic-editor></div></section>
+</script></logic-editor></div><p>Ajouter les touches 5, 6, 7, etc suit la même logique mais devient vite fastidieux.</p>
+</section>
 <section id="exercice-2-2-decodeur-de-de">
 <h3>Exercice 2.2 - Décodeur de dé<a class="headerlink" href="#exercice-2-2-decodeur-de-de" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Un dé de jeu peut afficher les nombres 1 à 6 à l’aide de 7 lampes.<br/>
@@ -568,7 +608,7 @@ Plusieurs lampes s’allument par paire. Voici la table de vérité.</p>
 </tr>
 </tbody>
 </table></div>
-<p>Utilisez des portes logiques OU et ET pour créer le circuit de décodage pour afficher les lampes qui correspondent aux nombres 1 à 6.</p>
+<p>Utilisez les portes logiques OU et ET pour créer le circuit de décodage affichant les lampes qui correspondent aux nombres 1 à 6.</p>
 <p>Le nombre binaire <span class="math notranslate nohighlight">\(b_2 b_1 b_0\)</span> doit allumer les lampes a-g pour afficher ce nombre dans la façon d’un dé à jeu standard.</p>
 <div class="logic-container" style="height: 300px;"><logic-editor showonly="in and or out.bar">
 <script type="application/json">
@@ -772,18 +812,12 @@ Déterminez d'abord en français les conditions qui doivent être remplies pour 
             <ul>
 <li><a class="reference internal" href="#">Portes logiques</a><ul>
 <li><a class="reference internal" href="#selecteur-de-chien">1. Sélecteur de chien</a><ul>
-<li><a class="reference internal" href="#exercice-1-1">Exercice 1.1</a><ul>
-<li><a class="reference internal" href="#solution">Solution</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#exercice-1-1">Exercice 1.1</a></li>
 <li><a class="reference internal" href="#exercice-1-2-criteres-plus-compliques">Exercice 1.2 - critères plus compliqués</a><ul>
 <li><a class="reference internal" href="#solution-ex-2">Solution Ex 2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#exercice-1-3-encodage-et-decodage-des-races">Exercice 1.3 - encodage et décodage des races</a><ul>
-<li><a class="reference internal" href="#solution-ex-3">Solution Ex 3</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#exercice-1-3-encodage-et-decodage-des-races">Exercice 1.3 - encodage et décodage des races</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#binaire-et-decimal">2. Binaire et décimal</a><ul>

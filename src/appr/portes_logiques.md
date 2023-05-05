@@ -4,6 +4,35 @@
 
 Dans cette activité, vous allez concevoir des circuits logiques à l'aide de portes logiques.
 
+Voici par exemple un circuit logique qui permet de calculer la valeur de sortie d'une porte **OU-EXCLUSIF** (XOR) en fonction de ses deux entrées.
+
+```{logic}
+:height: 400
+:mode: tryout
+{
+  "v": 4,
+  "in": [
+    {"pos": [40, 60], "id": 7, "val": 0},
+    {"pos": [40, 80], "id": 8, "val": 0},
+    {"pos": [270, 50], "id": 16, "val": 0},
+    {"pos": [270, 90], "id": 17, "val": 0},
+    {"pos": [270, 130], "id": 18, "val": 0}
+  ],
+  "out": [
+    {"pos": [180, 70], "id": 9},
+    {"pos": [510, 90], "id": 19}
+  ],
+  "gates": [
+    {"type": "XOR", "pos": [110, 70], "in": [4, 5], "out": 6}
+  ],
+  "labels": [
+    {"pos": [110, 20], "text": "table de vérité"},
+    {"pos": [390, 20], "text": "porte OU-X avec 3 entrées"}
+  ],
+  "wires": [[7, 4], [8, 5], [6, 9]]
+}
+```
+
 ## 1. Sélecteur de chien
 
 Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.
@@ -30,6 +59,8 @@ Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entré
 }
 ```
 
+<!--
+
 #### Solution
 
 Il faut insérer une porte **ET**.
@@ -46,6 +77,8 @@ Il faut insérer une porte **ET**.
   "wires": [[2, 18], [14, 0], [16, 1]]
 }
 ```
+
+-->
 
 ### Exercice 1.2 - critères plus compliqués
 
@@ -81,6 +114,7 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
 }
 ```
 
+<!-->
 #### Solution Ex 2
 
 ```{logic}
@@ -107,6 +141,8 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
 ```
 
 D'autres solutions sont possibles.
+
+-->
 
 ### Exercice 1.3 - encodage et décodage des races
 
@@ -154,6 +190,7 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
 }
 ```
 
+<!--
 #### Solution Ex 3
 
 ```{logic}
@@ -198,12 +235,15 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
   ]
 }
 ```
+-->
 
 ## 2. Binaire et décimal
 
+Dans cette partie, vous allez concevoir des circuits traduisant des nombres décimaux en nombres binaires.
+
 ### Exercice 2.1 - Décodeur de clavier
 
-Complétez le circuit pour un décodeur qui a le comportement suivant :
+Complétez le circuit pour un décodeur de touches de clavier qui a le comportement suivant :
 
 * Touche 1 appuyée produit la sortie binaire 01
 * Touche 2 appuyée produit la sortie binaire 10
@@ -225,6 +265,8 @@ Complétez le circuit pour un décodeur qui a le comportement suivant :
 }
 ```
 
+Ajouter les touches 5, 6, 7, etc suit la même logique mais devient vite fastidieux.
+
 ### Exercice 2.2 - Décodeur de dé
 
 Un dé de jeu peut afficher les nombres 1 à 6 à l'aide de 7 lampes.  
@@ -241,7 +283,7 @@ Plusieurs lampes s'allument par paire. Voici la table de vérité.
 | 1  | 1  | 0  | 6    |  1  |  1  |  1  | 0 |
 | 1  | 1  | 1  |      |  1  |  1  |  1  | 1 |
 
-Utilisez des portes logiques OU et ET pour créer le circuit de décodage pour afficher les lampes qui correspondent aux nombres 1 à 6.
+Utilisez les portes logiques OU et ET pour créer le circuit de décodage affichant les lampes qui correspondent aux nombres 1 à 6.
 
 Le nombre binaire $b_2 b_1 b_0$ doit allumer les lampes a-g pour afficher ce nombre dans la façon d'un dé à jeu standard.
 
