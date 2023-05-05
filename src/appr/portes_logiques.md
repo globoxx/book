@@ -32,7 +32,7 @@ Voici par exemple un circuit logique qui permet de calculer la valeur de sortie 
 
 Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.
 
-### Exercice 1.1
+### Exercice 1.1 - Critères simples
 
 Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien à la fois **petit** et **gentil**.
 
@@ -75,7 +75,7 @@ Il faut insérer une porte **ET**.
 
 -->
 
-### Exercice 1.2 - critères plus compliqués
+### Exercice 1.2 - Critères plus compliqués
 
 1. Les critères sont maintenant devenus plus complexes. Le chien doit remplir les conditions suivantes:
 
@@ -139,7 +139,7 @@ D'autres solutions sont possibles.
 
 -->
 
-### Exercice 1.3 - encodage et décodage des races
+### Exercice 1.3 - Encodage et décodage des races
 
 L'entrée «labrador» de la partie précédente n'est pas très intéressante, car elle ne permet de modéliser qu'une seule race de chiens. Dans cette deuxième partie, on va se permettre d'utiliser **2 bits pour représenter plusieurs races**.
 
