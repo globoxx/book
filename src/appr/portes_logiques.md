@@ -205,9 +205,9 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
 
 Complétez le circuit pour un décodeur qui a le comportement suivant :
 
--Touche 1 appuyée produit la sortie binaire 01
--Touche 2 appuyée produit la sortie binaire 10
--Touche 3 appuyée produit la sortie binaire 11
+* Touche 1 appuyée produit la sortie binaire 01
+* Touche 2 appuyée produit la sortie binaire 10
+* Touche 3 appuyée produit la sortie binaire 11
 
 ```{logic}
 :height: 400
@@ -332,8 +332,6 @@ Ecrivez le circuit logique correspondant à la table de vérité suivante:
 | 1 | 1 |  0  |  1   |  0  |
 | 1 | 1 |  1  |  1   |  1  |
 
-Les valeurs d'entrée sont A, B et C. Les valeurs de sortie sont S1 et S2.
-
 ```{logic}
 :height: 390
 :mode: design
@@ -354,3 +352,5 @@ Les valeurs d'entrée sont A, B et C. Les valeurs de sortie sont S1 et S2.
 ```
 
 Que fait ce circuit d'après vous ?
+
+Si vous avez tout terminé, allez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours.
