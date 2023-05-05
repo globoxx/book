@@ -199,56 +199,6 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
 }
 ```
 
-<!-- ### Quatrième partie: conditions avec décodage
-
-Dans cette partie, nous allons combiner les concepts de décodage des races de chiens avec les critères de sélection abordés dans la partie 3.  
-Réalisez un circuit logique qui prend en compte à la fois les critères et les races de chiens encodées sur 2 bits.
-
-### Exercice 4
-
-1. Concevez un circuit logique qui prend en compte les critères de sélection définis dans la partie 2:
-
-* Le chien doit être gentil;
-* Le chien ne doit pas baver tout le temps;
-* Il faut soit que ce soit un petit chien, soit que ce soit un labrador.
-
-De plus, prenez en compte l'encodage des races de chiens (border collie, berger allemand, husky et labrador) que nous avons défini dans la partie 3.
-
-Les entrées de votre circuit logique doivent inclure:
-
-* Gentil (1 bit)
-* Bave tout le temps (1 bit)
-* Petit (1 bit)
-* Race (2 bits)
-
-Utilisez le décodeur que vous avez créé dans l'exercice 3 pour convertir les 2 bits d'entrée de la race en 4 sorties correspondant à chaque race de chien. Ensuite, utilisez ces sorties pour vérifier si le chien est un labrador ou non.
-
-```{logic}
-:height: 390
-:mode: design
-:showonly: and,or,xor,not
-
-{
-  "v": 5,
-  "in": [
-    {"pos": [470, 115], "id": 14, "name": "Gentil"},
-    {"pos": [470, 175], "id": 15, "name": "Bave tout le temps"},
-    {"pos": [470, 235], "id": 16, "name": "Petit"},
-    {"bits": 2, "pos": [470, 300], "id": [4, 5], "name": "Race du chien"}
-  ],
-  "out": [
-    {"pos": [860, 215], "id": 18, "name": "OK pour ce chien!"}
-  ]
-}
-```
-
-#### Solution
-
-Pour résoudre cet exercice, vous devrez d'abord connecter les entrées de race au décodeur que vous avez conçu dans l'exercice 3. Ensuite, vous devrez combiner les résultats du décodeur avec les autres entrées (gentil, bave tout le temps et petit) à l'aide de portes logiques appropriées (comme les portes ET, OU, NON, etc.) pour respecter les critères de sélection.
-
-Une fois que vous avez réussi à concevoir le circuit logique, testez-le avec différentes combinaisons d'entrées pour vous assurer qu'il fonctionne correctement et répond aux critères de sélection.
- -->
-
 ## 2. Circuit à partir d'une table de vérité
 
 Dans cette partie, vous allez convevoir des circuits en vous basant sur la table de vérité associée.
@@ -260,7 +210,7 @@ Oublions un moment les chiens et concentrons-nous sur les systèmes d'alarme pou
 1. Analysez la table de vérité ci-dessous. Comprenez quelles sont les conditions qui doivent être remplies pour que l'alarme se déclenche.
 2. Concevez le circuit logique correspondant.
 
-| Chien | Chat | Porte ouverte | Propriétaire présent | Alarme |
+| Chien | Chat | Porte ouverte | Propriétaire présent | **Alarme** |
 | :---: | :--: | :-----------: | :------------------: | :----: |
 |   0   |  0   |       0       |           0           |   0   |
 |   0   |  0   |       0       |           1           |   0   |
@@ -279,14 +229,7 @@ Oublions un moment les chiens et concentrons-nous sur les systèmes d'alarme pou
 |   1   |  1   |       1       |           0           |   1   |
 |   1   |  1   |       1       |           1           |   0   |
 
-Les entrées de votre circuit logique doivent inclure:
-
-* Chien (1 bit)
-* Chat (1 bit)
-* Porte ouverte (1 bit)
-* Propriétaire présent (1 bit)
-
-La sortie de votre circuit doit être l'alarme (1 bit).
+Déterminez d'abord la fonction logique associée à la table de vérité. Ensuite, utilisez cette fonction logique pour concevoir le circuit logique correspondant.  
 
 ```{logic}
 :height: 390
@@ -296,13 +239,13 @@ La sortie de votre circuit doit être l'alarme (1 bit).
 {
   "v": 5,
   "in": [
-    {"pos": [100, 115], "id": 14, "name": "Chien"},
-    {"pos": [100, 175], "id": 15, "name": "Chat"},
-    {"pos": [100, 235], "id": 16, "name": "Porte ouverte"},
-    {"pos": [100, 290], "id": 21, "name": "Propriétaire présent"}
+    {"pos": [120, 115], "id": 14, "name": "Chien"},
+    {"pos": [120, 175], "id": 15, "name": "Chat"},
+    {"pos": [120, 235], "id": 16, "name": "Porte ouverte"},
+    {"pos": [120, 290], "id": 21, "name": "Propriétaire présent"}
   ],
   "out": [
-    {"pos": [460, 195], "id": 22, "name": "Alarme"}
+    {"pos": [560, 195], "id": 22, "name": "Alarme"}
   ]
 }
 ```
@@ -337,8 +280,8 @@ Les valeurs d'entrée sont A, B et C. Les valeurs de sortie sont S1 et S2.
     {"pos": [100, 235], "id": 16, "name": "C"}
   ],
   "out": [
-    {"pos": [460, 150], "id": 22, "name": "S1"},
-    {"pos": [460, 195], "id": 23, "name": "S2"}
+    {"pos": [560, 150], "id": 22, "name": "S1"},
+    {"pos": [560, 195], "id": 23, "name": "S2"}
   ]
 }
 ```
