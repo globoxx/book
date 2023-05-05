@@ -199,10 +199,76 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
 }
 ```
 
-## 2. Circuit à partir d'une table de vérité
+## 2. Binaire et décimal
 
-Dans cette partie, vous allez convevoir des circuits en vous basant sur la table de vérité associée.
+### Exercice 2.1 - Décodeur de clavier
 
+Complétez le circuit pour un décodeur qui a le comportement suivant :
+
+-Touche 1 appuyée produit la sortie binaire 01
+-Touche 2 appuyée produit la sortie binaire 10
+-Touche 3 appuyée produit la sortie binaire 11
+
+```{logic}
+:height: 400
+:showonly: in out or
+{
+  "v": 3,
+  "in": [
+    {"pos": [50, 30], "id": 0, "name": "1", "val": 0, "isPushButton": true},
+    {"pos": [50, 80], "id": 1, "name": "2", "val": 0, "isPushButton": true},
+    {"pos": [50, 130], "id": 2, "name": "3", "val": 0, "isPushButton": true}
+  ],
+  "gates": [{"type": "OR", "pos": [220, 40], "in": [6, 7], "out": 8}],
+  "out": [{"pos": [300, 150], "orient": "s", "id": 10}, {"pos": [350, 150], "orient": "s", "id": 11}],
+  "wires": [[0, 6], [2, 7], [8, 11]]
+}
+```
+
+### Exercice 2.2 - Décodeur de dé
+
+Un dé de jeu peut afficher les nombres 1 à 6 à l'aide de 7 lampes.  
+Plusieurs lampes s'allument par paire. Voici la table de vérité.
+
+| b2 | b1 | b0 |valeur| a,g | b,f | c,e | d |
+|----|----|:--:|:----:|:---:|:---:|:---:|---|
+| 0  | 0  | 0  |      |  0  |  0  |  0  | 0 |
+| 0  | 0  | 1  | 1    |  0  |  0  |  0  | 1 |
+| 0  | 1  | 0  | 2    |  1  |  0  |  0  | 0 |
+| 0  | 1  | 1  | 3    |  1  |  0  |  0  | 1 |
+| 1  | 0  | 0  | 4    |  1  |  0  |  1  | 0 |
+| 1  | 0  | 1  | 5    |  1  |  0  |  1  | 1 |
+| 1  | 1  | 0  | 6    |  1  |  1  |  1  | 0 |
+| 1  | 1  | 1  |      |  1  |  1  |  1  | 1 |
+
+Utilisez des portes logiques OU et ET pour créer le circuit de décodage pour afficher les lampes qui correspondent aux nombres 1 à 6.
+
+Le nombre binaire $b_2 b_1 b_0$ doit allumer les lampes a-g pour afficher ce nombre dans la façon d'un dé à jeu standard.
+
+```{logic}
+:height: 300
+:showonly: in and or out.bar
+{
+  "v": 4,
+  "opts": {"propagationDelay": 10},
+  "in": [
+    {"pos": [60, 40], "id": 7, "name": "b0", "val": 1},
+    {"pos": [60, 80], "id": 8, "name": "b1", "val": 0},
+    {"pos": [60, 120], "id": 26, "name": "b2", "val": 1}
+  ],
+  "out": [
+    {"type": "bar", "pos": [380, 30], "id": 0, "display": "px", "name": "a"},
+    {"type": "bar", "pos": [380, 70], "id": 1, "display": "px", "name": "b"},
+    {"type": "bar", "pos": [430, 70], "orient": "s", "id": 2, "display": "px", "name": "d"},
+    {"type": "bar", "pos": [380, 120], "id": 3, "display": "px", "name": "c"},
+    {"type": "bar", "pos": [480, 70], "id": 4, "display": "px", "name": "f"},
+    {"type": "bar", "pos": [480, 30], "id": 5, "display": "px", "name": "e"},
+    {"type": "bar", "pos": [480, 120], "id": 6, "display": "px", "name": "g"}
+  ]
+}
+```
+
+<!--
 ### Exercice 2.1 - Système d'alarmes pour animaux de compagnie
 
 Oublions un moment les chiens et concentrons-nous sur les systèmes d'alarme pour animaux de compagnie. Vous êtes mandaté par une entreprise pour développer un système capable de déclencher une alarme lorsque certaines conditions sont remplies.
@@ -239,18 +305,19 @@ Déterminez d'abord en français les conditions qui doivent être remplies pour 
 {
   "v": 5,
   "in": [
-    {"pos": [150, 115], "id": 14, "name": "Chien"},
-    {"pos": [150, 175], "id": 15, "name": "Chat"},
-    {"pos": [150, 235], "id": 16, "name": "Porte ouverte"},
-    {"pos": [150, 290], "id": 21, "name": "Propriétaire présent"}
+    {"pos": [180, 115], "id": 14, "name": "Chien"},
+    {"pos": [180, 175], "id": 15, "name": "Chat"},
+    {"pos": [180, 235], "id": 16, "name": "Porte ouverte"},
+    {"pos": [180, 290], "id": 21, "name": "Propriétaire présent"}
   ],
   "out": [
     {"pos": [660, 195], "id": 22, "name": "Alarme"}
   ]
 }
 ```
+-->
 
-## (Challenge) Exercice 2.2 - Table mystère
+## (Challenge) Exercice 3 - Table mystère
 
 Ecrivez le circuit logique correspondant à la table de vérité suivante:
 
