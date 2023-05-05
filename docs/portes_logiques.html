@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Recherche" href="search.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Recherche" href="search.html" /><link rel="next" title="Zone de code libre" href="code_libre.html" /><link rel="prev" title="Simulation d’épidémie" href="epidemie.html" />
 
     <link rel="shortcut icon" href="_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>Portes logiques - Travaux pratiques</title>
@@ -231,9 +231,10 @@
 <li class="toctree-l1"><a class="reference internal" href="prog1/algo.html">7. Les algorithmes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="aventure.html">Aventure textuelle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Portes logiques</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
@@ -273,8 +274,8 @@
 <p>Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.</p>
 <section id="exercice-1-1">
 <h3>Exercice 1.1<a class="headerlink" href="#exercice-1-1" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Concevez le circuit de manière à faire en sorte que la sortie «OK pour ce chien» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien précis et que ce chien est à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
-<p>Les caractéristiques <strong>petit</strong> et <strong>gentil</strong> sont sont les valeurs logiques d’entrée pouvant valoir 0 ou 1.</p>
+<p>Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien précis et que ce chien est à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
+<p>Les caractéristiques <strong>petit</strong> et <strong>gentil</strong> sont les valeurs logiques d’entrée pouvant valoir 0 ou 1.</p>
 <div class="logic-container" style="height: 200px;"><logic-editor mode="design" showonly="and,or,xor">
 <script type="application/json">
 {
@@ -284,7 +285,7 @@
     {"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0},
     {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}
 ],
-  "out": [{"pos": [360, 80], "id": 18, "name": "OK pour ce chien!"}]
+  "out": [{"pos": [360, 80], "id": 18, "name": "OK"}]
 }
 </script></logic-editor></div><section id="solution">
 <h4>Solution<a class="headerlink" href="#solution" title="Lien permanent vers ce titre">¶</a></h4>
@@ -294,7 +295,7 @@
 {
   "v": 2,
   "in": [{"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0}, {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}],
-  "out": [{"pos": [360, 80], "id": 18, "name": "OK pour ce chien!"}],
+  "out": [{"pos": [360, 80], "id": 18, "name": "OK"}],
   "gates": [{"type": "AND", "pos": [240, 80], "in": [0, 1], "out": 2}],
   "wires": [[2, 18], [14, 0], [16, 1]]
 }
@@ -317,7 +318,7 @@
 <li><p>Petit: 1 (le chien est un petit chien)</p></li>
 <li><p>Labrador: 0 (le chien n’est pas un labrador)</p></li>
 </ul>
-<p>On s’attend dans ce cas à ce que la sortie «OK pour ce chien» vaille 1.</p>
+<p>On s’attend dans ce cas à ce que la sortie «OK» vaille 1.</p>
 <div class="logic-container" style="height: 320px;"><logic-editor mode="design" showonly="and,or,xor,not">
 <script type="application/json">
 {
@@ -328,7 +329,7 @@
     {"pos": [190, 190], "id": 16, "name": "Petit", "val": 0},
     {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
   ],
-  "out": [{"pos": [440, 160], "id": 18, "name": "OK pour ce chien!"}]
+  "out": [{"pos": [440, 160], "id": 18, "name": "OK"}]
 }
 </script></logic-editor></div><section id="solution-ex-2">
 <h4>Solution Ex 2<a class="headerlink" href="#solution-ex-2" title="Lien permanent vers ce titre">¶</a></h4>
@@ -356,7 +357,7 @@
 </section>
 <section id="exercice-1-3-encodage-et-decodage-des-races">
 <h3>Exercice 1.3 - encodage et décodage des races<a class="headerlink" href="#exercice-1-3-encodage-et-decodage-des-races" title="Lien permanent vers ce titre">¶</a></h3>
-<p>L’entrée «labrador» de la partie précédente n’est pas très intéressante, car elle ne permet de modéliser qu’une seule race de chiens. Dans cette deuxième partie, on va se permettre d’utiliser <strong>2 bits pour représenter plusieurs races</strong>. Faire réfléchir les élèves à ceci: combien de races pourra-t-on au maximum représenter si on se permet d’utiliser deux entrées ? La réponse est 4 et non pas 2.</p>
+<p>L’entrée «labrador» de la partie précédente n’est pas très intéressante, car elle ne permet de modéliser qu’une seule race de chiens. Dans cette deuxième partie, on va se permettre d’utiliser <strong>2 bits pour représenter plusieurs races</strong>.</p>
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
@@ -632,13 +633,13 @@ Une fois que vous avez réussi à concevoir le circuit logique, testez-le avec d
 {
   "v": 5,
   "in": [
-    {"pos": [470, 115], "id": 14, "name": "Chien"},
-    {"pos": [470, 175], "id": 15, "name": "Chat"},
-    {"pos": [470, 235], "id": 16, "name": "Porte ouverte"},
-    {"pos": [470, 290], "id": 21, "name": "Propriétaire présent"}
+    {"pos": [100, 115], "id": 14, "name": "Chien"},
+    {"pos": [100, 175], "id": 15, "name": "Chat"},
+    {"pos": [100, 235], "id": 16, "name": "Porte ouverte"},
+    {"pos": [100, 290], "id": 21, "name": "Propriétaire présent"}
   ],
   "out": [
-    {"pos": [830, 195], "id": 22, "name": "Alarme"}
+    {"pos": [460, 195], "id": 22, "name": "Alarme"}
   ]
 }
 </script></logic-editor></div></section>
@@ -712,13 +713,13 @@ Une fois que vous avez réussi à concevoir le circuit logique, testez-le avec d
 {
   "v": 5,
   "in": [
-    {"pos": [470, 115], "id": 14, "name": "A"},
-    {"pos": [470, 175], "id": 15, "name": "B"},
-    {"pos": [470, 235], "id": 16, "name": "C"}
+    {"pos": [100, 115], "id": 14, "name": "A"},
+    {"pos": [100, 175], "id": 15, "name": "B"},
+    {"pos": [100, 235], "id": 16, "name": "C"}
   ],
   "out": [
-    {"pos": [770, 150], "id": 22, "name": "S1"},
-    {"pos": [770, 195], "id": 23, "name": "S2"}
+    {"pos": [460, 150], "id": 22, "name": "S1"},
+    {"pos": [460, 195], "id": 23, "name": "S2"}
   ]
 }
 </script></logic-editor></div><p>Que fait ce circuit d’après vous ?</p>
@@ -730,8 +731,26 @@ Une fois que vous avez réussi à concevoir le circuit logique, testez-le avec d
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="code_libre.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Zone de code libre</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="epidemie.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Simulation d’épidémie</div>
+                
+              </div>
+            </a>
         </div>
 
         <div class="related-information">

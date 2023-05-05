@@ -10,9 +10,9 @@ Dans cette première partie, vous allez concevoir un circuit logique qui permet 
 
 ### Exercice 1.1
 
-Concevez le circuit de manière à faire en sorte que la sortie «OK pour ce chien» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien précis et que ce chien est à la fois **petit** et **gentil**.
+Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien précis et que ce chien est à la fois **petit** et **gentil**.
 
-Les caractéristiques **petit** et **gentil** sont sont les valeurs logiques d'entrée pouvant valoir 0 ou 1.
+Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entrée pouvant valoir 0 ou 1.  
 
 ```{logic}
 :height: 200
@@ -26,7 +26,7 @@ Les caractéristiques **petit** et **gentil** sont sont les valeurs logiques d'e
     {"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0},
     {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}
 ],
-  "out": [{"pos": [360, 80], "id": 18, "name": "OK pour ce chien!"}]
+  "out": [{"pos": [360, 80], "id": 18, "name": "OK"}]
 }
 ```
 
@@ -41,7 +41,7 @@ Il faut insérer une porte **ET**.
 {
   "v": 2,
   "in": [{"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0}, {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}],
-  "out": [{"pos": [360, 80], "id": 18, "name": "OK pour ce chien!"}],
+  "out": [{"pos": [360, 80], "id": 18, "name": "OK"}],
   "gates": [{"type": "AND", "pos": [240, 80], "in": [0, 1], "out": 2}],
   "wires": [[2, 18], [14, 0], [16, 1]]
 }
@@ -62,7 +62,7 @@ Pour tester, par exemple, si un gentil petit berger allemand qui ne bave pas tou
 * Petit: 1 (le chien est un petit chien)
 * Labrador: 0 (le chien n'est pas un labrador)
 
-On s'attend dans ce cas à ce que la sortie «OK pour ce chien» vaille 1.
+On s'attend dans ce cas à ce que la sortie «OK» vaille 1.  
 
 ```{logic}
 :height: 320
@@ -77,7 +77,7 @@ On s'attend dans ce cas à ce que la sortie «OK pour ce chien» vaille 1.
     {"pos": [190, 190], "id": 16, "name": "Petit", "val": 0},
     {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
   ],
-  "out": [{"pos": [440, 160], "id": 18, "name": "OK pour ce chien!"}]
+  "out": [{"pos": [440, 160], "id": 18, "name": "OK"}]
 }
 ```
 
@@ -110,7 +110,7 @@ D'autres solutions sont possibles.
 
 ### Exercice 1.3 - encodage et décodage des races
 
-L'entrée «labrador» de la partie précédente n'est pas très intéressante, car elle ne permet de modéliser qu'une seule race de chiens. Dans cette deuxième partie, on va se permettre d'utiliser **2 bits pour représenter plusieurs races**. Faire réfléchir les élèves à ceci: combien de races pourra-t-on au maximum représenter si on se permet d'utiliser deux entrées ? La réponse est 4 et non pas 2.
+L'entrée «labrador» de la partie précédente n'est pas très intéressante, car elle ne permet de modéliser qu'une seule race de chiens. Dans cette deuxième partie, on va se permettre d'utiliser **2 bits pour représenter plusieurs races**.
 
 ```{question}
 Combien de races pourra-t-on au maximum représenter si on se permet d'utiliser 2 entrées ?
@@ -132,7 +132,7 @@ On va donc s'intéresser à 4 races de chiens: border collie, berger allemand, h
   | 10                     | husky           |
   | 11                     | labrador        |
 
-On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, il s'agit d'avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.
+On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, il s'agit d'avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.  
 
 ```{logic}
 :height: 390
@@ -296,13 +296,13 @@ La sortie de votre circuit doit être l'alarme (1 bit).
 {
   "v": 5,
   "in": [
-    {"pos": [470, 115], "id": 14, "name": "Chien"},
-    {"pos": [470, 175], "id": 15, "name": "Chat"},
-    {"pos": [470, 235], "id": 16, "name": "Porte ouverte"},
-    {"pos": [470, 290], "id": 21, "name": "Propriétaire présent"}
+    {"pos": [100, 115], "id": 14, "name": "Chien"},
+    {"pos": [100, 175], "id": 15, "name": "Chat"},
+    {"pos": [100, 235], "id": 16, "name": "Porte ouverte"},
+    {"pos": [100, 290], "id": 21, "name": "Propriétaire présent"}
   ],
   "out": [
-    {"pos": [830, 195], "id": 22, "name": "Alarme"}
+    {"pos": [460, 195], "id": 22, "name": "Alarme"}
   ]
 }
 ```
@@ -332,13 +332,13 @@ Les valeurs d'entrée sont A, B et C. Les valeurs de sortie sont S1 et S2.
 {
   "v": 5,
   "in": [
-    {"pos": [470, 115], "id": 14, "name": "A"},
-    {"pos": [470, 175], "id": 15, "name": "B"},
-    {"pos": [470, 235], "id": 16, "name": "C"}
+    {"pos": [100, 115], "id": 14, "name": "A"},
+    {"pos": [100, 175], "id": 15, "name": "B"},
+    {"pos": [100, 235], "id": 16, "name": "C"}
   ],
   "out": [
-    {"pos": [770, 150], "id": 22, "name": "S1"},
-    {"pos": [770, 195], "id": 23, "name": "S2"}
+    {"pos": [460, 150], "id": 22, "name": "S1"},
+    {"pos": [460, 195], "id": 23, "name": "S2"}
   ]
 }
 ```
