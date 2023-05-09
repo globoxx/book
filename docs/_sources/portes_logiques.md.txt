@@ -146,7 +146,7 @@ Combien de races pourra-t-on au maximum représenter si on se permet d'utiliser 
 {f}`1`  
 {f}`2`  
 {v}`4`  
-{v}`8`  
+{f}`8`  
 {f}`1 million`
 ===
 Nous pourrons représenter 4 races car nous avons 4 possibilités: 00, 01, 10 et 11. De manière générale, avec `n` bits/entrées, on pourra représenter `2^n` races.
