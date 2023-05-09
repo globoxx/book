@@ -28,7 +28,7 @@ Voici par exemple un circuit logique qui permet de calculer la valeur de sortie 
 }
 ```
 
-## 1. Sélecteur de chien
+## 1. Sélecteur de chien 🐶
 
 Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.
 
@@ -143,12 +143,13 @@ L'entrée «labrador» de la partie précédente n'est pas très intéressante, 
 ```{question}
 Combien de races pourra-t-on au maximum représenter si on se permet d'utiliser 2 entrées ?
 
-{v}`1`  
+{f}`1`  
 {f}`2`  
 {v}`4`  
+{v}`8`  
 {f}`1 million`
 ===
-Nous pourrons bien représenter 4 races car nous avons 4 possibilités: 00, 01, 10 et 11. De manière générale, avec `n` bits/entrées, on peut représenter `2^n` races.
+Nous pourrons représenter 4 races car nous avons 4 possibilités: 00, 01, 10 et 11. De manière générale, avec `n` bits/entrées, on pourra représenter `2^n` races.
 ```
 
 On va donc s'intéresser à 4 races de chiens: border collie, berger allemand, husky et labrador. On décide de l'encodage suivant:
