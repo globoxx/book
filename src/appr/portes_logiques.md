@@ -75,7 +75,7 @@ Il faut insérer une porte **ET**.
 
 ### Exercice 1.2 - Critères plus compliqués
 
-1. Les critères sont maintenant devenus plus complexes. Le chien doit remplir les conditions suivantes:
+Les critères sont maintenant devenus plus complexes. Le chien doit remplir les conditions suivantes:
 
 * Le chien doit être gentil;
 * Le chien ne doit pas baver tout le temps;
@@ -103,7 +103,7 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
     {"pos": [190, 190], "id": 16, "name": "Petit", "val": 1},
     {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
   ],
-  "out": [{"pos": [440, 160], "id": 18, "name": "OK"}]
+  "out": [{"pos": [540, 160], "id": 18, "name": "OK"}]
 }
 ```
 
@@ -138,7 +138,7 @@ D'autres solutions sont possibles.
 
 ### Exercice 1.3 - Encodage et décodage des races
 
-L'entrée «labrador» de la partie précédente n'est pas très intéressante, car elle ne permet de modéliser qu'une seule race de chiens. Dans cette deuxième partie, on va se permettre d'utiliser **2 bits pour représenter plusieurs races**.
+L'entrée «labrador» de la partie précédente n'est pas très intéressante, car elle ne permet de modéliser qu'une seule race de chiens. Dans cette deuxième partie, on va tenter **d'encoder différentes races de chien avec seulement 2 bits**.
 
 ```{question}
 Combien de races pourra-t-on au maximum représenter si on se permet d'utiliser 2 entrées ?
@@ -354,7 +354,7 @@ Déterminez d'abord en français les conditions qui doivent être remplies pour 
 
 ## (Challenge) Exercice 3 - Table mystère
 
-Ecrivez le circuit logique correspondant à la table de vérité suivante:
+Créez le circuit logique correspondant à la table de vérité suivante:
 
 | A | B | C | S1 | S2 |
 |:-:|:-:|:---:|:----:|:---:|
@@ -388,4 +388,4 @@ Ecrivez le circuit logique correspondant à la table de vérité suivante:
 
 Que fait ce circuit d'après vous ?
 
-Si vous avez tout terminé, allez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours.
+Si vous avez tout terminé, allez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp2.html" target="_blank">logic modulo</a> qui contient des exercices plus avancés sur les additionneurs.
