@@ -352,7 +352,45 @@ Déterminez d'abord en français les conditions qui doivent être remplies pour 
 ```
 -->
 
-## (Challenge) Exercice 3 - Table mystère
+## 3. Commutateurs
+
+La porte XOR (OU-X) peut permetre d'allumer et éteindre une lampe avec des commutateurs multiples.
+
+Dans le schéma ci-dessous, on peut allumer ou éteindre la lumière dans une pièce à partir de la porte d'entrée ou de la cuisine.  
+Ajoutez un circuit pour qu'on puisse également l'allumer ou l'éteindre depuis la chambre.
+
+```{logic}
+:ref: xor
+:height: 500
+:showonly: in out not and or xor label.rect
+{
+  "v": 3,
+  "labels": [{"type": "rect", "pos": [290, 120], "w": 300, "h": 200, "color": "yellow", "strokeWidth": 2}],
+  "in": [
+    {"pos": [100, 150], "id": 9, "name": "entrée", "val": 0},
+    {"pos": [290, 250], "orient": "n", "id": 14, "name": "chambre", "val": 0},
+    {"pos": [470, 120], "orient": "w", "id": 15, "name": "cuisine", "val": 0}
+  ],
+  "out": [{"type": "bar", "pos": [300, 40], "id": 10, "display": "px", "color": "yellow"}],
+  "gates": [{"type": "XOR", "pos": [220, 90], "orient": "n", "in": [11, 12], "out": 13}],
+  "wires": [[13, 10], [9, 11], [15, 12]]
+}
+```
+
+```{question}
+Comment se comporte une porte XOR prenant 3 entrées ? (A XOR B XOR C)  
+Dans quel cas la valeur de sortie sera 1 ?
+
+{f}`Seulement quand une seule entrée vaut 1`  
+{f}`Seulement quand toutes les entrées valent 1`  
+{v}`Seulement quand un nombre impair d'entrées valent 1`  
+{f}`Seulement quand un nombre pair d'entrées valent 1`  
+{f}`Jamais`
+===
+De manière générale, la porte XOR est un détecteur de parité (pair/impair). La sortie vaut 1 seuelement si un nombre impair d'entrées valent 1 (ce qui est une propriété extrêmement utile).
+```
+
+## (Challenge) Exercice 4 - Table mystère
 
 Créez le circuit logique correspondant à la table de vérité suivante:
 
@@ -388,4 +426,4 @@ Créez le circuit logique correspondant à la table de vérité suivante:
 
 Que fait ce circuit d'après vous ?
 
-Si vous avez tout terminé, allez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp2.html" target="_blank">logic modulo</a> qui contient des exercices plus avancés sur les additionneurs.
+Si vous avez tout terminé, vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp2.html#addition-binaire" target="_blank">cette page modulo</a> qui contient des exercices plus avancés sur les additionneurs (à partir de l'exercice 10.6).
