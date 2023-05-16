@@ -54,10 +54,12 @@ Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entré
 }
 ```
 
-<!--
-#### Solution
+`````{admonition} Solution 1.1
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
 
-Il faut insérer une porte **ET**.
+Il suffit d'insérer une porte **ET**.
 
 ```{logic}
 :height: 160
@@ -71,7 +73,8 @@ Il faut insérer une porte **ET**.
   "wires": [[2, 18], [14, 0], [16, 1]]
 }
 ```
--->
+````
+`````
 
 ### Exercice 1.2 - Critères plus compliqués
 
@@ -107,8 +110,12 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
 }
 ```
 
-<!--
-#### Solution Ex 2
+`````{admonition} Solution 1.2
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+Il existe de multiples solutions, en voici une.
 
 ```{logic}
 :height: 330
@@ -132,9 +139,8 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
   "wires": [[2, 18], [8, 0], [14, 6], [15, 9], [10, 7], [16, 3], [17, 4], [5, 1]]
 }
 ```
-
-D'autres solutions sont possibles.
--->
+````
+`````
 
 ### Exercice 1.3 - Encodage et décodage des races
 
@@ -183,8 +189,10 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
 }
 ```
 
-<!--
-#### Solution Ex 3
+`````{admonition} Solution 1.3
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
 
 ```{logic}
 :height: 390
@@ -228,7 +236,8 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
   ]
 }
 ```
--->
+````
+`````
 
 ## 2. Binaire et décimal
 
@@ -258,7 +267,33 @@ Complétez le circuit pour un décodeur de touches de clavier qui a le comportem
 }
 ```
 
-Ajouter les touches 5, 6, 7, etc suit la même logique mais devient vite fastidieux.
+Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (mais vous auriez besoin d'augmenter le nombre de bits de sortie).
+
+`````{admonition} Solution 2.1
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+```{logic}
+:height: 390
+:mode: tryout
+
+{
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [50, 30], id: 0, name: '1', isPushButton: true},
+    in1: {type: 'in', pos: [50, 80], id: 1, name: '2', isPushButton: true},
+    in2: {type: 'in', pos: [50, 130], id: 2, name: '3', isPushButton: true},
+    out0: {type: 'out', pos: [300, 150], orient: 's', id: 10},
+    out1: {type: 'out', pos: [350, 150], orient: 's', id: 11},
+    or0: {type: 'or', pos: [220, 40], in: [6, 7], out: 8},
+    or1: {type: 'or', pos: [200, 110], in: [3, 4], out: 5},
+  },
+  wires: [[0, 6], [2, 7], [8, 11], [1, 3], [2, 4], [5, 10]]
+}
+```
+````
+`````
 
 ### Exercice 2.2 - Décodeur de dé
 
@@ -302,6 +337,38 @@ Le nombre binaire $b_2 b_1 b_0$ doit allumer les lampes a-g pour afficher ce nom
   ]
 }
 ```
+
+`````{admonition} Solution 2.2
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+```{logic}
+:height: 390
+:mode: tryout
+
+{
+  v: 6,
+  opts: {propagationDelay: 10},
+  components: {
+    in0: {type: 'in', pos: [60, 40], id: 7, name: 'b0', val: 1},
+    in1: {type: 'in', pos: [60, 80], id: 8, name: 'b1'},
+    in2: {type: 'in', pos: [60, 120], id: 26, name: 'b2', val: 1},
+    bar0: {type: 'bar', pos: [535, 45], id: 0, name: 'a', display: 'px'},
+    bar1: {type: 'bar', pos: [535, 85], id: 1, name: 'b', display: 'px'},
+    bar2: {type: 'bar', pos: [585, 85], orient: 's', id: 2, name: 'd', display: 'px'},
+    bar3: {type: 'bar', pos: [535, 135], id: 3, name: 'c', display: 'px'},
+    bar4: {type: 'bar', pos: [635, 85], id: 4, name: 'f', display: 'px'},
+    bar5: {type: 'bar', pos: [635, 45], id: 5, name: 'e', display: 'px'},
+    bar6: {type: 'bar', pos: [635, 135], id: 6, name: 'g', display: 'px'},
+    or0: {type: 'or', pos: [295, 130], in: [9, 10], out: 11},
+    and0: {type: 'and', pos: [295, 210], in: [12, 13], out: 14},
+  },
+  wires: [[8, 9], [26, 10], [8, 12], [26, 13], [11, 0], [11, 6], [14, 1], [14, 4], [26, 3], [26, 5], [7, 2]]
+}
+```
+````
+`````
 
 <!--
 ### Exercice 2.1 - Système d'alarmes pour animaux de compagnie
@@ -377,6 +444,32 @@ Ajoutez un circuit pour qu'on puisse également l'allumer ou l'éteindre depuis 
 }
 ```
 
+`````{admonition} Solution 3
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+```{logic}
+:height: 390
+:mode: tryout
+
+{
+  v: 6,
+  components: {
+    rect0: {type: 'rect', pos: [290, 120], w: 300, h: 200, color: 'yellow', strokeWidth: 2},
+    in0: {type: 'in', pos: [100, 150], id: 9, name: 'entrée'},
+    in1: {type: 'in', pos: [290, 250], orient: 'n', id: 14, name: 'chambre'},
+    in2: {type: 'in', pos: [470, 120], orient: 'w', id: 15, name: 'cuisine'},
+    bar0: {type: 'bar', pos: [300, 40], id: 10, color: 'yellow', display: 'px'},
+    xor0: {type: 'xor', pos: [190, 140], orient: 'n', in: [11, 12], out: 13},
+    xor1: {type: 'xor', pos: [245, 70], orient: 'n', in: [0, 1], out: 2},
+  },
+  wires: [[9, 11], [15, 12], [14, 1], [13, 0], [2, 10]]
+}
+```
+````
+`````
+
 ```{question}
 Comment se comporte une porte XOR prenant 3 entrées ? (A XOR B XOR C)  
 Dans quel cas la valeur de sortie sera 1 ?
@@ -425,5 +518,35 @@ Créez le circuit logique correspondant à la table de vérité suivante:
 ```
 
 Que fait ce circuit d'après vous ?
+
+`````{admonition} Solution 4
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+```{logic}
+:height: 390
+:mode: tryout
+
+{
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [100, 115], id: 14, name: 'A'},
+    in1: {type: 'in', pos: [100, 175], id: 15, name: 'B'},
+    in2: {type: 'in', pos: [100, 235], id: 16, name: 'C'},
+    out0: {type: 'out', pos: [660, 150], id: 22, name: 'S1'},
+    out1: {type: 'out', pos: [660, 195], id: 23, name: 'S2'},
+    and0: {type: 'and', pos: [370, 50], in: [0, 1], out: 2},
+    and1: {type: 'and', pos: [370, 110], in: [3, 4], out: 5},
+    and2: {type: 'and', pos: [370, 170], in: [6, 7], out: 8},
+    or0: {type: 'or', pos: [540, 110], in: [12, 13, 17], out: 18, bits: 3},
+    xor0: {type: 'xor', pos: [385, 280], in: '24-26', out: 27, bits: 3},
+  },
+  wires: [[14, 0], [15, 1], [14, 3], [16, 4], [15, 6], [16, 7], [2, 12], [5, 13], [8, 17], [14, 24], [15, 25], [16, 26], [27, 23], [18, 22]]
+}
+```
+Ce circuit représente un additionneur 3 bits (full adder). Il permet d'additionner 3 bits A, B et C et de récupérer le résultat sur 2 bits S1 et S2.
+````
+`````
 
 Si vous avez tout terminé, vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp2.html#addition-binaire" target="_blank">cette page modulo</a> qui contient des exercices plus avancés sur les additionneurs (à partir de l'exercice 10.6).
