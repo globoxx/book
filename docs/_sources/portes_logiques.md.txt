@@ -39,7 +39,7 @@ Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allu
 Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entrée pouvant valoir 0 ou 1.
 
 ```{logic}
-:height: 200
+:height: 160
 :mode: design
 :showonly: in,out,and,or,xor
 
@@ -118,7 +118,7 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
 Il existe de multiples solutions, en voici une.
 
 ```{logic}
-:height: 330
+:height: 320
 :mode: tryout
 
 {
@@ -252,7 +252,7 @@ Complétez le circuit pour un décodeur de touches de clavier qui a le comportem
 * Touche 3 appuyée produit la sortie binaire 11
 
 ```{logic}
-:height: 400
+:height: 300
 :showonly: in out or
 {
   "v": 3,
@@ -275,7 +275,7 @@ Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (m
 :animate: fade-in-slide-down
 
 ```{logic}
-:height: 390
+:height: 300
 :mode: tryout
 
 {
@@ -344,7 +344,7 @@ Le nombre binaire $b_2 b_1 b_0$ doit allumer les lampes a-g pour afficher ce nom
 :animate: fade-in-slide-down
 
 ```{logic}
-:height: 390
+:height: 300
 :mode: tryout
 
 {
@@ -367,6 +367,8 @@ Le nombre binaire $b_2 b_1 b_0$ doit allumer les lampes a-g pour afficher ce nom
   wires: [[8, 9], [26, 10], [8, 12], [26, 13], [11, 0], [11, 6], [14, 1], [14, 4], [26, 3], [26, 5], [7, 2]]
 }
 ```
+Pour résoudre l'exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie 'a-g' vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte **OU** pour cette sortie. On procède ensuite de la même manière pour les autres sorties.
+````
 ````
 `````
 
@@ -428,7 +430,7 @@ Ajoutez un circuit pour qu'on puisse également l'allumer ou l'éteindre depuis 
 
 ```{logic}
 :ref: xor
-:height: 500
+:height: 300
 :showonly: in out not and or xor label.rect
 {
   "v": 3,
@@ -450,7 +452,7 @@ Ajoutez un circuit pour qu'on puisse également l'allumer ou l'éteindre depuis 
 :animate: fade-in-slide-down
 
 ```{logic}
-:height: 390
+:height: 300
 :mode: tryout
 
 {
@@ -467,6 +469,7 @@ Ajoutez un circuit pour qu'on puisse également l'allumer ou l'éteindre depuis 
   wires: [[9, 11], [15, 12], [14, 1], [13, 0], [2, 10]]
 }
 ```
+La porte **XOR** est très utile pour créer des commutateurs. Elle permet de créer un circuit qui ne s'active que si un nombre impair d'entrées sont activées.
 ````
 `````
 

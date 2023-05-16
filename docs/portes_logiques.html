@@ -296,7 +296,7 @@
 <h3>Exercice 1.1 - Critères simples<a class="headerlink" href="#exercice-1-1-criteres-simples" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
 <p>Les caractéristiques <strong>petit</strong> et <strong>gentil</strong> sont les valeurs logiques d’entrée pouvant valoir 0 ou 1.</p>
-<div class="logic-container" style="height: 200px;"><logic-editor mode="design" showonly="in,out,and,or,xor">
+<div class="logic-container" style="height: 160px;"><logic-editor mode="design" showonly="in,out,and,or,xor">
 <script type="application/json">
 {
   "v": 2,
@@ -367,7 +367,7 @@
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Il existe de multiples solutions, en voici une.</p>
-<div class="logic-container" style="height: 330px;"><logic-editor mode="tryout">
+<div class="logic-container" style="height: 320px;"><logic-editor mode="tryout">
 <script type="application/json">
 {
   "v": 2,
@@ -507,7 +507,7 @@
 <li><p>Touche 2 appuyée produit la sortie binaire 10</p></li>
 <li><p>Touche 3 appuyée produit la sortie binaire 11</p></li>
 </ul>
-<div class="logic-container" style="height: 400px;"><logic-editor showonly="in out or">
+<div class="logic-container" style="height: 300px;"><logic-editor showonly="in out or">
 <script type="application/json">
 {
   "v": 3,
@@ -530,7 +530,7 @@
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
+<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
 <script type="application/json">
 {
   v: 6,
@@ -670,7 +670,7 @@ Plusieurs lampes s’allument par paire. Voici la table de vérité.</p>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
+<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
 <script type="application/json">
 {
   v: 6,
@@ -691,8 +691,12 @@ Plusieurs lampes s’allument par paire. Voici la table de vérité.</p>
   },
   wires: [[8, 9], [26, 10], [8, 12], [26, 13], [11, 0], [11, 6], [14, 1], [14, 4], [26, 3], [26, 5], [7, 2]]
 }
-</script></logic-editor></div></div>
-</details></div>
+</script></logic-editor></div><p class="card-text">Pour résoudre l’exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie ‘a-g’ vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte <strong>OU</strong> pour cette sortie. On procède ensuite de la même manière pour les autres sorties.</p>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 <!--
 ### Exercice 2.1 - Système d'alarmes pour animaux de compagnie
 
@@ -748,7 +752,7 @@ Déterminez d'abord en français les conditions qui doivent être remplies pour 
 <p>La porte XOR (OU-X) peut permetre d’allumer et éteindre une lampe avec des commutateurs multiples.</p>
 <p>Dans le schéma ci-dessous, on peut allumer ou éteindre la lumière dans une pièce à partir de la porte d’entrée ou de la cuisine.<br/>
 Ajoutez un circuit pour qu’on puisse également l’allumer ou l’éteindre depuis la chambre.</p>
-<div class="logic-container" style="height: 500px;"><logic-editor id="logic_xor" showonly="in out not and or xor label.rect">
+<div class="logic-container" style="height: 300px;"><logic-editor id="logic_xor" showonly="in out not and or xor label.rect">
 <script type="application/json">
 {
   "v": 3,
@@ -771,7 +775,7 @@ Ajoutez un circuit pour qu’on puisse également l’allumer ou l’éteindre d
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
+<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
 <script type="application/json">
 {
   v: 6,
@@ -786,7 +790,8 @@ Ajoutez un circuit pour qu’on puisse également l’allumer ou l’éteindre d
   },
   wires: [[9, 11], [15, 12], [14, 1], [13, 0], [2, 10]]
 }
-</script></logic-editor></div></div>
+</script></logic-editor></div><p class="card-text">La porte <strong>XOR</strong> est très utile pour créer des commutateurs. Elle permet de créer un circuit qui ne s’active que si un nombre impair d’entrées sont activées.</p>
+</div>
 </details></div>
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
