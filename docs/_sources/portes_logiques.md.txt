@@ -39,7 +39,7 @@ Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allu
 Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entrée pouvant valoir 0 ou 1.
 
 ```{logic}
-:height: 160
+:height: 200
 :mode: design
 :showonly: in,out,and,or,xor
 
@@ -62,7 +62,7 @@ Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entré
 Il suffit d'insérer une porte **ET**.
 
 ```{logic}
-:height: 160
+:height: 200
 :mode: tryout
 
 {
@@ -236,6 +236,7 @@ On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, 
   ]
 }
 ```
+La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer toutes les portes **ET** par des portes **OU** et inversement. Le même circuit peut donc être réalisé avec des portes **OU**.
 ````
 `````
 
