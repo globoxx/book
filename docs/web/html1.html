@@ -370,6 +370,96 @@ Exemple de solution<div class="summary-down docutils">
 </div>
 </details></div>
 </section>
+<section id="parametrer-ses-balises-avec-des-attributs">
+<h2>Paramètrer ses balises avec des attributs<a class="headerlink" href="#parametrer-ses-balises-avec-des-attributs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans la section précédente, nous avons vu la balise <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">...&gt;</span></code> qui permet d’insérer une image dans la page. Il s’agit d’une balise orpheline.<br/>
+Mais alors… comment spécifier l’image que nous voulons ? Cela passe par un <strong>attribut</strong>.</p>
+<p>Les attributs sont un peu les options des balises. Ils viennent les compléter pour donner des informations supplémentaires.</p>
+<p>Un attribut est situé dans la balise ouvrante d’une balise en paire, ou directement dans une balise orpheline, comme c’est le cas ci dessous avec la balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code>:</p>
+<img alt="../_images/balise_img.jpg" src="../_images/balise_img.jpg"/>
+<p>L’attribut <code class="docutils literal notranslate"><span class="pre">src</span></code> correspond à la source de l’image. Dans l’exemple ci-dessus, l’image se trouve dans le même dossier que le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> donc il suffit de donner le nom de l’image.<br/>
+Il est également possible de fournir une URL en ligne. Pour cela, faites un clic droit puis cliquez sur “Copier l’adresse de l’image”.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 4</p>
+<p>Reprenez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> de l’exercice précédent et ajoutez une image de votre choix dans la page.<br/>
+Testez les 2 types de source différentes:</p>
+<ol class="simple">
+<li><p>Image locale: téléchargez une image en ligne et placez là dans le même dossier que votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code>.</p></li>
+<li><p>Image en ligne: copiez l’adresse de l’image en ligne.</p></li>
+</ol>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Exemple de solution (en ligne)<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est mon premier paragraphe !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Et en voilà un autre...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtwMFGdWzPi18CbXe1mmp2vPoxMZPbaObUX5LqrX6Ezcai5nAlNp6cnpv4HWtWUsueuw&amp;usqp=CAU"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hop encore un paragraphe après l'image !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+<div class="hint admonition">
+<p class="admonition-title">Pour aller plus loin</p>
+<p>Evidemment, il existe une multitude d’autres attributs associés à la balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code>, telle que la taille de l’image par exemple.<br/>
+Vous trouverez la liste des attributs disponibles <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">ici</a>.</p>
+</div>
+</section>
+<section id="structure-dune-page-html">
+<h2>Structure d’une page HTML<a class="headerlink" href="#structure-dune-page-html" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Je peux vous l’avouer, jusqu’ici nous avons un peu triché… En réalité, tout fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> doit contenir la structure de base suivante:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Le titre de ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Voyons à quoi servent toutes ces balises.</p>
+<ul class="simple">
+<li><p>La première ligne <code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code> est une balise orpheline indispensable : elle indique qu’il s’agit d’une page HTML.</p></li>
+<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/html&gt;</span></code> englobe tout le contenu de la page web. A l’intérieur, il ya les balises en paire <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/head&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/body&gt;</span></code>.</p></li>
+<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/head&gt;</span></code> contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.</p></li>
+<li><p>La balise orpheline <code class="docutils literal notranslate"><span class="pre">&lt;meta</span> <span class="pre">charset="utf-8"&gt;</span></code> indique l’encodage utilisé dans le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> : cela détermine comment les caractères spéciaux s’affichent (accents, idéogrammes chinois et japonais, etc.).</p></li>
+<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code> indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu’elle contient, il s’affichera dans l’onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !</p></li>
+<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/body&gt;</span></code> contient tout ce qui sera affiché à l’écran sur la page web (c’est ici que vous passerez 99% de votre temps).</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Exercice 5</p>
+<p>Modifiez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> des exercices précédents pour inclure cette structure de base.<br/>
+Pour rappel, tout le contenu de votre page doit se trouver entre les balises <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/body&gt;</span></code>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Le titre de ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est mon premier paragraphe !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Et en voilà un autre...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtwMFGdWzPi18CbXe1mmp2vPoxMZPbaObUX5LqrX6Ezcai5nAlNp6cnpv4HWtWUsueuw&amp;usqp=CAU"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hop encore un paragraphe après l'image !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
 </section>
 
         </article>
@@ -424,6 +514,8 @@ Exemple de solution<div class="summary-down docutils">
 <li><a class="reference internal" href="#le-web-nest-quhtml-et-quelques-autres-trucs">Le Web n’est qu’HTML (et quelques autres trucs)</a></li>
 <li><a class="reference internal" href="#premier-contact-avec-un-code-html">Premier contact avec un code HTML</a></li>
 <li><a class="reference internal" href="#un-langage-de-balises">Un langage de balises</a></li>
+<li><a class="reference internal" href="#parametrer-ses-balises-avec-des-attributs">Paramètrer ses balises avec des attributs</a></li>
+<li><a class="reference internal" href="#structure-dune-page-html">Structure d’une page HTML</a></li>
 </ul>
 </li>
 </ul>

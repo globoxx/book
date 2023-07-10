@@ -101,3 +101,89 @@ Chaque portion de texte entouré de ces balises sera considéré comme un paragr
 ```
 ````
 `````
+
+## Paramètrer ses balises avec des attributs
+
+Dans la section précédente, nous avons vu la balise `<img ...>` qui permet d'insérer une image dans la page. Il s'agit d'une balise orpheline.  
+Mais alors... comment spécifier l'image que nous voulons ? Cela passe par un **attribut**.
+
+Les attributs sont un peu les options des balises. Ils viennent les compléter pour donner des informations supplémentaires.
+
+Un attribut est situé dans la balise ouvrante d'une balise en paire, ou directement dans une balise orpheline, comme c'est le cas ci dessous avec la balise `<img>`:
+
+```{image} ../media/balise_img.jpg
+```
+
+L'attribut `src` correspond à la source de l'image. Dans l'exemple ci-dessus, l'image se trouve dans le même dossier que le fichier `.html` donc il suffit de donner le nom de l'image.  
+Il est également possible de fournir une URL en ligne. Pour cela, faites un clic droit puis cliquez sur "Copier l'adresse de l'image".
+
+`````{admonition} Exercice 4
+:class: note
+Reprenez votre fichier `.html` de l'exercice précédent et ajoutez une image de votre choix dans la page.  
+Testez les 2 types de source différentes:
+1. Image locale: téléchargez une image en ligne et placez là dans le même dossier que votre fichier `.html`.
+2. Image en ligne: copiez l'adresse de l'image en ligne.
+
+````{dropdown} Exemple de solution (en ligne)
+```{code-block} html
+<p>Ceci est mon premier paragraphe !</p>
+<p>Et en voilà un autre...</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtwMFGdWzPi18CbXe1mmp2vPoxMZPbaObUX5LqrX6Ezcai5nAlNp6cnpv4HWtWUsueuw&usqp=CAU">
+<p>Hop encore un paragraphe après l'image !</p>
+```
+````
+`````
+
+```{admonition} Pour aller plus loin
+:class: hint
+Evidemment, il existe une multitude d'autres attributs associés à la balise `<img>`, telle que la taille de l'image par exemple.  
+Vous trouverez la liste des attributs disponibles <a href="https://www.w3schools.com/tags/tag_img.asp" target="_blank">ici</a>.
+```
+
+## Structure d'une page HTML
+
+Je peux vous l'avouer, jusqu'ici nous avons un peu triché... En réalité, tout fichier `.html` doit contenir la structure de base suivante:
+
+```{code-block} html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Le titre de ma page</title>
+    </head>
+    <body>
+    </body>
+</html>
+```
+
+Voyons à quoi servent toutes ces balises.
+
+- La première ligne `<!DOCTYPE html>` est une balise orpheline indispensable : elle indique qu'il s'agit d'une page HTML.
+- La balise en paire `<html> ... </html>` englobe tout le contenu de la page web. A l'intérieur, il ya les balises en paire `<head> ... </head>` et `<body> ... </body>`.
+- La balise en paire `<head> ... </head>` contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.
+- La balise orpheline `<meta charset="utf-8">` indique l'encodage utilisé dans le fichier `.html` : cela détermine comment les caractères spéciaux s'affichent (accents, idéogrammes chinois et japonais, etc.).
+- La balise en paire `<title> ... </title>` indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu'elle contient, il s'affichera dans l'onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !
+- La balise en paire `<body> ... </body>` contient tout ce qui sera affiché à l'écran sur la page web (c'est ici que vous passerez 99% de votre temps).
+
+`````{admonition} Exercice 5
+:class: note
+Modifiez votre fichier `.html` des exercices précédents pour inclure cette structure de base.  
+Pour rappel, tout le contenu de votre page doit se trouver entre les balises `<body> ... </body>`.
+
+````{dropdown} Solution
+```{code-block} html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Le titre de ma page</title>
+    </head>
+    <body>
+        <p>Ceci est mon premier paragraphe !</p>
+        <p>Et en voilà un autre...</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtwMFGdWzPi18CbXe1mmp2vPoxMZPbaObUX5LqrX6Ezcai5nAlNp6cnpv4HWtWUsueuw&usqp=CAU">
+        <p>Hop encore un paragraphe après l'image !</p>
+    </body>
+</html>
+```
+````
