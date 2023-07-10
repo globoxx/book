@@ -151,3 +151,157 @@ width(10)
 forward(200)
 ```
 ````
+
+## Maison avec toit
+
+Nous dessinons une maison et marquons le toit par une ligne plus épaisse.
+
+````{exercise}
+Doublez l'épaisseur du toit. Ensuite, doublez la hauteur de la maison.
+
+```{codeplay}
+:file: forward6.py
+from turtle import *
+
+forward(100)
+left(90)
+forward(60)
+left(45)
+width(5)
+forward(71)
+left(90)
+forward(71)
+width(1)
+left(45)
+forward(60)
+left(90)
+```
+````
+
+## Raquette de ping-pong
+
+L'épaisseur de ligne est très utile dans le dessin.
+
+````{exercise}
+Transformez la raquette de ping-pong en haltères de musculation.
+
+```{codeplay}
+:file: forward7.py
+from turtle import *
+
+width(20)
+forward(100)
+width(80)
+forward(20)
+```
+````
+
+## Lunettes de soleil
+
+Voici encore un exemple où, avec un simple changement d'épaisseur, vous obtenez un effet très intéressant.
+
+````{exercise}
+Ajoutez la première branche qui manque aux lunettes.
+
+```{codeplay}
+:file: forward8.py
+from turtle import *
+
+width(50)
+forward(20)
+width(10)
+forward(60)
+width(50)
+forward(20)
+width(10)
+forward(40)
+left(45)
+forward(60)
+```
+````
+
+## Commentaire
+
+Le symbole `#` indique un commentaire. Sur Mac, vous pouvez l'insérer avec **opt+3** ou **alt+3**.
+Un commentaire permet d'ajouter une explication pour le lecteur humain. Il n'a aucune influence sur le programme. Python l'ignore tout simplement.
+
+````{exercise}
+Ajoutez un commentaire pour chaque ligne du programme suivant.
+
+```{codeplay}
+from turtle import *
+
+width(50)       # mettre l'épaisseur du trait à 50
+forward(20)     # avancer de 20 pas
+left(90)
+backward(60)
+```
+````
+
+L'exercice précédent servait à expliciter pour un débutant en programmation la signification des commandes écrites en anglais. Normalement, on ne fait pas ça, car un programmeur est censé connaitre la signification des commandes.
+
+Les commentaires servent à expliciter la signification d'une partie du programme.
+
+```{exercise}
+Expliquez cette fois ce que dessine chaque partie du programme (verre, pont, verre, charnière, branche).
+```
+
+```{codeplay}
+from turtle import *
+
+width(50)       # dessiner le premier verre
+forward(20)
+width(10)       # dessiner le pont (nez)
+forward(60)
+width(50)
+forward(20)
+width(10)
+forward(40)
+left(45)
+forward(60)
+```
+
+## Équivalence
+
+La tortue possède 4 fonctions de déplacement, mais à strictement parler, on pourrait s'en sortir avec seulement deux fonctions, `forward()` et `left()`, car:
+
+- `backward(d)` est équivalent à `forward(-d)`
+- `right(a)` est équivalent à `left(-a)`
+
+Dans le programme ci-dessous, les 4 lignes du deuxième bloc sont équivalentes aux 4 instructions du premier bloc et donnent un résultat identique.
+
+```{codeplay}
+:file: forward4.py
+from turtle import *
+
+forward(160)
+left(90)
+forward(100)
+left(90)
+
+backward(-160)  # équivalent à forward(160)
+right(-90)      # équivalent à left(90)
+backward(-100)
+right(-90)
+```
+
+```{question}
+L'expression `left(90)` est équivalent à
+
+{v}`right(-90)`  
+{f}`right(180)`  
+{f}`left(180)`  
+{f}`left(-90)`  
+```
+
+## Exercice récapitulatif
+
+```{exercise}
+Dessinez une chaise en partant de rien
+```
+
+```{codeplay}
+from turtle import *
+
+
+```
