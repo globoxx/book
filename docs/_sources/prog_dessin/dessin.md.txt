@@ -305,14 +305,10 @@ from turtle import *
 
 ````
 
-## Et à part du dessin ?
+## Et à part le dessin ?
 
 Python ne sert évidemment pas qu'à faire du dessin, c'est juste une façon d'apprendre à l'utiliser.  
 L'instruction la plus couramment utilisée est probablement `print()` (imprime en français) qui permet d'afficher du texte.
-
-```{codeplay}
-print("Hello world !")
-```
 
 ````{exercise}
 Voici un exemple affichant "Hello world !".  
