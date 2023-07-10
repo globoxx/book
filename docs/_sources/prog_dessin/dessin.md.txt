@@ -231,8 +231,8 @@ Ajoutez un commentaire pour chaque ligne du programme suivant.
 ```{codeplay}
 from turtle import *
 
-width(50)       # mettre l'épaisseur du trait à 50
-forward(20)     # avancer de 20 pas
+width(10)       # mettre l'épaisseur du trait à 10
+forward(20)     # avancer de 20 pixels
 left(90)
 backward(60)
 ```
@@ -296,12 +296,29 @@ L'expression `left(90)` est équivalent à
 
 ## Exercice récapitulatif
 
-```{exercise}
-Dessinez une chaise en partant de rien
-```
+````{exercise}
+Dessinez une chaise en partant de rien.
 
 ```{codeplay}
 from turtle import *
 
 
+````
+
+## Et à part du dessin ?
+
+Python ne sert évidemment pas qu'à faire du dessin, c'est juste une façon d'apprendre à l'utiliser.  
+L'instruction la plus couramment utilisée est probablement `print()` (imprime en français) qui permet d'afficher du texte.
+
+```{codeplay}
+print("Hello world !")
 ```
+
+````{exercise}
+Voici un exemple affichant "Hello world !".  
+Modifiez le texte à afficher. Ensuite, ajoutez d'autres commandes `print` pour écrire du texte sur plusieurs lignes.
+
+```{codeplay}
+print("Hello world !")
+```
+````
