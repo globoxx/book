@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="1. Introduction à l’HTML" href="../web/html1.html" /><link rel="prev" title="7. Les algorithmes" href="../prog_formel/algo.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>1. Introduction - Travaux pratiques</title>
+        <title>1. Dessin - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -232,7 +232,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin)</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">1. Introduction</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">1. Dessin</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
 <ul>
@@ -274,89 +274,122 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<span id="prog-dessin-intro"></span><h1>1. Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h1>
-<p><a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a><br/>
-<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a></p>
-<section id="votre-tout-premier-programme">
-<h2>Votre tout premier programme 🤩<a class="headerlink" href="#votre-tout-premier-programme" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Lors de ces travaux pratiques, vous allez écrire des petits programmes Python sur l’IDE <strong>Thonny</strong> qui est déjà installé sur les machines de l’école.</p>
-<p>Voici un exemple d’un tout petit programme en Python qui ne contient qu’une seule instruction:</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoImJvbmpvdXIiKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En anglais, “print” signifie “imprime ». En Python, l’instruction <code class="docutils literal notranslate"><span class="pre">print</span></code> demande à l’ordinateur <strong>d’afficher à l’écran le contenu de la parenthèse qui vient après</strong>.</p>
-<div class="note admonition">
-<p class="admonition-title">Exercice 1</p>
-<p>Ecrivez et exécutez le programme ci-dessus sur <code class="docutils literal notranslate"><span class="pre">Thonny</span></code>.<br/>
-Changez le texte pour que l’ordinateur écrive autre chose, par exemple “au revoir !”.<br/>
-Sauvegardez le fichier ex_1.py dans votre dossier personnel.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoImJvbmpvdXIiKQ==" data-file="ZXhfMS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<div class="admonition-solution admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoJ2F1IHJldm9pciAhJyk=" data-file="ZXhfMS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !<br/>
-Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉</p>
+          <section class="tex2jax_ignore mathjax_ignore" id="dessin">
+<span id="prog-dessin-dessin"></span><h1>1. Dessin<a class="headerlink" href="#dessin" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans ce chapitre, nous allons explorer la programmation par le dessin. Dans ce contexte, un programme est une séquence d’instructions permettant de générer un image.<br/>
+Nous allons voir que:</p>
+<ul class="simple">
+<li><p>l’expression <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">turtle</span> <span class="pre">import</span> <span class="pre">*</span></code> met à disposition les fonctions de dessin,</p></li>
+<li><p>les instructions <code class="docutils literal notranslate"><span class="pre">forward()</span></code>, <code class="docutils literal notranslate"><span class="pre">backward()</span></code> permettent de tracer une ligne,</p></li>
+<li><p>les instructions <code class="docutils literal notranslate"><span class="pre">left()</span></code>, <code class="docutils literal notranslate"><span class="pre">right()</span></code> permettent de changer de direction.</p></li>
+</ul>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Un programme informatique est</p>
+<p><label class="answer incorrect"><input type="checkbox"/>une instruction de séquence</label><br/>
+<label class="answer correct"><input type="checkbox"/>une séquence d’instructions</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>un algorithme</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une recette de cuisine</label></p>
 </div>
-</details></div>
-</section>
-<section id="les-commentaires">
-<h2>Les commentaires<a class="headerlink" href="#les-commentaires" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il est souvent utile de mettre des commentaires dans un programme, pour expliquer ce qu’il fait.
-En Python, un commentaire est introduit par le caractère <code class="docutils literal notranslate"><span class="pre">#</span></code>.<br/>
-<strong>Tout ce qui vient après et jusqu’à la fin de la ligne n’est pas lu par l’ordinateur</strong>.<br/>
-Cela sert uniquement à l’humain qui va lire le programme 🤓</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyB1biB0b3V0IHBldGl0IHByb2dyYW1tZQpwcmludCgiYm9uam91ciIpICAjIHNhbHV0YXRpb25z" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
-<p class="admonition-title">Exercice 2</p>
-<p>Enlevez les guillemets autour de “bonjour”. Qu’est-ce qui se passe ?</p>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Tout programme n’est qu’une séquence d’instructions.<br/>
+Un algorithme par contre est la description générale des étapes de résolution d’un problème. Il <strong>peut</strong> être traduit en un programme informatique.</p>
 </div>
-<div class="admonition-solution admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Le programme n’est plus compris par la machine car si “bonjour” était un texte pouvant être affiché sans problème, <code class="docutils literal notranslate"><span class="pre">bonjour</span></code> désigne une variable ayant pour nom bonjour.<br/>
-Cette variable n’existant pas au moment de son appel, l’ordinateur ne sait pas quoi afficher 🤔<br/>
-⚠️ Du texte s’écrit toujours entre guillemets ou apostrophes (<code class="docutils literal notranslate"><span class="pre">""</span></code> ou <code class="docutils literal notranslate"><span class="pre">''</span></code>). ⚠️</p>
 </div>
-</details></div>
-</section>
-<section id="exercices-turtle-facultatif">
-<h2>Exercices Turtle 🐢 (facultatif)<a class="headerlink" href="#exercices-turtle-facultatif" title="Lien permanent vers ce titre">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">turtle</span></code> est un module Python permettant de faire du <strong>dessin en codant</strong>. La tortue peut se déplacer et dessiner une trace avec les 4 fonctions:</p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">forward(d)</span></code> pour avancer d’une distance <code class="docutils literal notranslate"><span class="pre">d</span></code> (en pixels).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backward(d)</span></code> pour reculer.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">left(a)</span></code> pour tourner à gauche d’un angle <code class="docutils literal notranslate"><span class="pre">a</span></code> (en degrés).</p></li>
+</form></div><section id="le-module-turtle">
+<h2>Le module <code class="docutils literal notranslate"><span class="pre">turtle</span></code><a class="headerlink" href="#le-module-turtle" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans le langage de programmation Python, le module <code class="docutils literal notranslate"><span class="pre">turtle</span></code> (tortue en anglais) présente une façon sympathique pour faire des dessins. C’est pour cela que nous commençons notre aventure de programmation avec cet animal qui avance tout doucement à son propre rythme.</p>
+<p>On s’imagine une tortue qui se déplace sur un canevas et laisse une trace.</p>
+<p>Ci-dessous, vous trouvez notre premier programme de trois lignes:</p>
+<ul class="simple">
+<li><p>dans la première ligne, nous importons toutes (<code class="docutils literal notranslate"><span class="pre">*</span></code>) les fonctions du module <code class="docutils literal notranslate"><span class="pre">turtle</span></code>,</p></li>
+<li><p>avec <code class="docutils literal notranslate"><span class="pre">shape('turtle')</span></code>, nous affichons une tortue (au lieu de la flèche),</p></li>
+<li><p>avec <code class="docutils literal notranslate"><span class="pre">forward(150)</span></code>, nous faisons avancer la tortue de 150 pixels.</p></li>
+</ul>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Ajoutez d’autres instructions telles que <code class="docutils literal notranslate"><span class="pre">backward()</span></code>, <code class="docutils literal notranslate"><span class="pre">left()</span></code> et <code class="docutils literal notranslate"><span class="pre">right()</span></code> pour faire un dessin.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCnNoYXBlKCd0dXJ0bGUnKQpmb3J3YXJkKDE1MCk=" data-file="Zm9yd2FyZDEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>En Python, <code class="docutils literal notranslate"><span class="pre">turtle</span></code> est</p>
+<p><label class="answer correct"><input type="checkbox"/>un module</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>un éditeur de dessin</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une tortue</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une commande</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Le module <code class="docutils literal notranslate"><span class="pre">turtle</span></code> fait partie de la distribution standard de Python. Nous le trouvons donc inclus de base avec Python sur toutes les plateformes.</p>
+</div>
+</div>
+</form></div><p>La tortue peut se déplacer et dessiner une trace avec les 4 fonctions suivantes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">forward(d)</span></code> pour avancer d’une distance <code class="docutils literal notranslate"><span class="pre">d</span></code> (en pixels)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backward(d)</span></code> pour reculer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">left(a)</span></code> pour tourner à gauche d’un angle <code class="docutils literal notranslate"><span class="pre">a</span></code> (en degrés)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">right(a)</span></code> pour tourner à droite</p></li>
-</ol>
-<p>Ce code permet de dessiner un carré, testez-le !</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAgIyBJbXBvcnRlIGxlIG1vZHVsZQoKdHVydGxlLmZvcndhcmQoMTAwKSAgIyBBdmFuY2UgZGUgMTAwIHBpeGVscwp0dXJ0bGUubGVmdCg5MCkgICMgVG91cm5lIGEgZ2F1Y2hlIGRlIDkwIGRlZ3Jlcwp0dXJ0bGUuZm9yd2FyZCgxMDApCnR1cnRsZS5sZWZ0KDkwKQp0dXJ0bGUuZm9yd2FyZCgxMDApCnR1cnRsZS5sZWZ0KDkwKQp0dXJ0bGUuZm9yd2FyZCgxMDApCnR1cnRsZS5sZWZ0KDkwKQoKdHVydGxlLmRvbmUoKSAgIyBUZXJtaW5lIGxlIGRlc3Npbg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Si vous êtes curieux, la plateforme <a href="https://apprendre.modulo-info.ch/prog1/dessiner.html" target="_blank">Modulo</a> propose beaucoup d’autres exemples et exercices dans son chapitre <strong>Programmation</strong>.</p>
-<div class="note admonition">
-<p class="admonition-title">Exercice - Le triangle</p>
-<p>Ecrivez un programme qui dessine un triangle équilatéral avec chaque côté ayant une longueur de 100 pixels.<br/>
-(Rappel : chaque angle d’un triangle équilatéral fait 60 degrés).</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAgIyBJbXBvcnRlIGxlIG1vZHVsZQoKLi4uCgp0dXJ0bGUuZG9uZSgpICAjIFRlcm1pbmUgbGUgZGVzc2lu" data-file="dHJpYW5nbGUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-<div class="admonition-solution admonition">
-<p class="admonition-title">Solution</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHR1cnRsZSAjIEltcG9ydGUgbGUgbW9kdWxlCgp0dXJ0bGUuZm9yd2FyZCgxMDApICMgQXZhbmNlIGRlIDEwMCBwaXhlbHMKdHVydGxlLmxlZnQoMTIwKSAjIFRvdXJuZSBhIGdhdWNoZSBkZSAxMjAgZGVncmVzICgxODAtNjApCnR1cnRsZS5mb3J3YXJkKDEwMCkKdHVydGxlLmxlZnQoMTIwKQp0dXJ0bGUuZm9yd2FyZCgxMDApCnR1cnRsZS5sZWZ0KDEyMCkKCnR1cnRsZS5kb25lKCkgIyBUZXJtaW5lIGxlIGRlc3Npbg==" data-file="dHJpYW5nbGUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !<br/>
-Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉</p>
+</ul>
+</section>
+<section id="le-canevas">
+<h2>Le canevas<a class="headerlink" href="#le-canevas" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Au départ, la tortue se trouve au centre d’une zone rectangulaire appelée <strong>canevas</strong>.<br/>
+Ce rectangle a les propriétés suivantes :</p>
+<ul class="simple">
+<li><p>l’origine (0, 0) se trouve au centre,</p></li>
+<li><p>l’axe horizontal x, s’étend de -300 à +300 (à droite),</p></li>
+<li><p>l’axe vertical y, s’étend de -200 à +200 (en haut).</p></li>
+</ul>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Ajoutez une instruction dans le code ci-dessous pour mener la tortue tout en bas du canevas. Ensuite, ajoutez une diagonale.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCnNoYXBlKCd0dXJ0bGUnKQpmb3J3YXJkKDMwMCkKYmFja3dhcmQoNjAwKQpmb3J3YXJkKDMwMCkKCmxlZnQoOTApCmZvcndhcmQoMjAwKQ==" data-file="Zm9yd2FyZDIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </div>
-</details></div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>La largeur de la zone de dessin de la tortue est de</p>
+<p><label class="answer incorrect"><input type="checkbox"/>200 pixels</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>400 pixels</label><br/>
+<label class="answer correct"><input type="checkbox"/>600 pixels</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>800 pixels</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div></section>
+<section id="une-sequence">
+<h2>Une séquence<a class="headerlink" href="#une-sequence" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un programme est une séquence d’instructions. Le bloc de 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner, etc.</p>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Modifiez ce code pour en faire un rectangle, au lieu d’un carré.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvcndhcmQoMTAwKQpsZWZ0KDkwKQpmb3J3YXJkKDEwMCkKbGVmdCg5MCkKZm9yd2FyZCgxMDApCmxlZnQoOTApCmZvcndhcmQoMTAwKQpsZWZ0KDkwKQ==" data-file="Zm9yd2FyZDMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Une séquence d’instructions d’un bloc est exécutée</p>
+<p><label class="answer incorrect"><input type="checkbox"/>selon la priorité</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>simultanément</label><br/>
+<label class="answer correct"><input type="checkbox"/>dans l’ordre</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>aléatoirement</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div></section>
+<section id="epaisseur-de-ligne">
+<h2>Épaisseur de ligne<a class="headerlink" href="#epaisseur-de-ligne" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">width(d)</span></code> (épaisseur en anglais) permet de définir l’épaisseur de la ligne.</p>
+<div class="admonition">
+<p class="admonition-title">Exercice</p>
+<div class="question-content docutils">
+<p>Voici un triangle où chaque côté a une épaisseur différente.<br/>
+Explorez différentes épaisseurs de ligne.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvcndhcmQoMjAwKQpsZWZ0KDEyMCkKCndpZHRoKDUpCmZvcndhcmQoMjAwKQpsZWZ0KDEyMCkKCndpZHRoKDEwKQpmb3J3YXJkKDIwMCk=" data-file="Zm9yd2FyZDUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</div>
 </section>
 </section>
 
@@ -388,7 +421,7 @@ Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordi
         </div>
 
         <div class="related-information">
-            <a class="muted-link" href="../_sources/prog_dessin/intro.md.txt"
+            <a class="muted-link" href="../_sources/prog_dessin/dessin.md.txt"
                rel="nofollow">
               Montrer le code source
             </a>
@@ -408,10 +441,11 @@ Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordi
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">1. Introduction</a><ul>
-<li><a class="reference internal" href="#votre-tout-premier-programme">Votre tout premier programme 🤩</a></li>
-<li><a class="reference internal" href="#les-commentaires">Les commentaires</a></li>
-<li><a class="reference internal" href="#exercices-turtle-facultatif">Exercices Turtle 🐢 (facultatif)</a></li>
+<li><a class="reference internal" href="#">1. Dessin</a><ul>
+<li><a class="reference internal" href="#le-module-turtle">Le module <code class="docutils literal notranslate"><span class="pre">turtle</span></code></a></li>
+<li><a class="reference internal" href="#le-canevas">Le canevas</a></li>
+<li><a class="reference internal" href="#une-sequence">Une séquence</a></li>
+<li><a class="reference internal" href="#epaisseur-de-ligne">Épaisseur de ligne</a></li>
 </ul>
 </li>
 </ul>

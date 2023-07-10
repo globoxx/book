@@ -26,7 +26,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    :maxdepth: 3
    :hidden:
 
-   prog_dessin/intro
+   prog_dessin/dessin
 
 .. toctree::
    :name: Web
