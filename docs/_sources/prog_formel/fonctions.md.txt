@@ -1,4 +1,4 @@
-(prog1.fonctions)=
+(prog_formel.fonctions)=
 
 # 3. Les fonctions
 

@@ -1,4 +1,4 @@
-(prog1.variables)=
+(prog_formel.variables)=
 
 # 2. Les variables
 

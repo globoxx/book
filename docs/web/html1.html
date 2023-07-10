@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Aventure textuelle" href="../divers/aventure.html" /><link rel="prev" title="7. Les algorithmes" href="../prog_formel/algo.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Introduction à l’HTML - Travaux pratiques</title>
+        <title>1. Introduction à l’HTML - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -232,7 +232,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Introduction à l’HTML</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">1. Introduction à l’HTML</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -271,7 +271,7 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="introduction-a-lhtml">
-<span id="web-html1"></span><h1>Introduction à l’HTML<a class="headerlink" href="#introduction-a-lhtml" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="web-html1"></span><h1>1. Introduction à l’HTML<a class="headerlink" href="#introduction-a-lhtml" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Le HTML (HyperText Markup Language) a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et d’organiser le contenu d’un site web.<br/>
 Il permet d’ajouter du texte, des liens, des images, des tableaux, etc.</p>
 <img alt="../_images/html.png" src="../_images/html.png"/>
@@ -301,7 +301,32 @@ Pour trouver le code HTML, cherchez les symboles <code class="docutils literal n
 </div>
 <p>L’HTML tout seul décrit simplement le contenu, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.<br/>
 Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l’exception des images).</p>
-<p>Comme évoqué plus haut, le langage HTML utilise ce qu’on appelle des balises. On les écrit entre chevrons <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>  et <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>:</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>Vous allez écrire votre tout premier (simplissime) fichier HTML.<br/>
+Créez un nouveau fichier texte (<code class="docutils literal notranslate"><span class="pre">.txt</span></code>) et changez l’extension du fichier en <code class="docutils literal notranslate"><span class="pre">.html</span></code> (ainsi vous pourrez l’ouvrir dans le navigateur).<br/>
+Ouvrez votre fichier avec un éditeur de texte, écrivez quelques mots, sauvegardez, puis ouvrez votre fichier avec un navigateur.<br/>
+Vous devriez voir votre texte s’afficher !</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 2</p>
+<p>Modifiez le texte de votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code>pour ajouter des sauts de lignes (touche <code class="docutils literal notranslate"><span class="pre">enter</span></code>) afin de faire des paragraphes séparés.<br/>
+Est-ce que cela fonctionne ? Les paragraphes sont-ils bien visibles dans le navigateur ?</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Réponse<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Non, les paragraphes ne seront pas visibles dans le navigateur car il faut utiliser des balises bien spécifiques pour dire que l’on veut faire un paragraphe.<br/>
+C’est ce que nous allons voir dans la prochaine section.</p>
+</div>
+</details></div>
+</section>
+<section id="un-langage-de-balises">
+<h2>Un langage de balises<a class="headerlink" href="#un-langage-de-balises" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Comme évoqué précédemment, le langage HTML utilise ce qu’on appelle des balises. On les écrit entre chevrons <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>  et <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>:</p>
 <img alt="../_images/balises_html.jpg" src="../_images/balises_html.jpg"/>
 <div class="hint admonition">
 <p class="admonition-title">Touches pour les chevrons</p>
@@ -311,7 +336,39 @@ Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l’exceptio
 <li><p>et <code class="docutils literal notranslate"><span class="pre">⇧</span></code>  + <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> pour le chevron fermant.</p></li>
 </ul>
 </div>
-<p>Les balises indiquent la nature du texte qu’elles encadrent. Elles permettent au navigateur de comprendre ce qu’il faut afficher à l’écran.</p>
+<p>Les balises indiquent la nature du texte qu’elles encadrent. Elles permettent au navigateur de comprendre ce qu’il faut afficher à l’écran.<br/>
+Voici quelques exemples:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code>: Titre de la page (s’affiche dans l’onglet)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">...&gt;</span></code>: Image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code>: Paragraphe</p></li>
+</ul>
+<div class="hint admonition">
+<p class="admonition-title">Remarque</p>
+<p>Vous l’aurez remarqué, certaines balises sont doublées et prennent un <code class="docutils literal notranslate"><span class="pre">/</span></code> dans leur syntaxe.</p>
+<p>On distingue 2 types de balises:</p>
+<ol class="simple">
+<li><p>Les balises <strong>en paires</strong> (une balise ouvrante et une balise fermante)</p></li>
+<li><p>Et les <strong>balises orphelines</strong> (une seule balise).</p></li>
+</ol>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 3</p>
+<p>Reprenez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> de l’exercice précédent et utlisez les balises <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code> pour créer des paragraphes.<br/>
+Chaque portion de texte entouré de ces balises sera considéré comme un paragraphe séparé.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Exemple de solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est mon premier paragraphe !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Et en voilà un autre...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 </section>
 </section>
 
@@ -363,9 +420,10 @@ Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l’exceptio
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Introduction à l’HTML</a><ul>
+<li><a class="reference internal" href="#">1. Introduction à l’HTML</a><ul>
 <li><a class="reference internal" href="#le-web-nest-quhtml-et-quelques-autres-trucs">Le Web n’est qu’HTML (et quelques autres trucs)</a></li>
 <li><a class="reference internal" href="#premier-contact-avec-un-code-html">Premier contact avec un code HTML</a></li>
+<li><a class="reference internal" href="#un-langage-de-balises">Un langage de balises</a></li>
 </ul>
 </li>
 </ul>

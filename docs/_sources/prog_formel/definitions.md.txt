@@ -1,4 +1,4 @@
-(prog1.definitions)=
+(prog_formel.definitions)=
 
 # 4. Définition de fonctions
 
