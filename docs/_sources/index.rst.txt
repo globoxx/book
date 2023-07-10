@@ -21,6 +21,14 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog_formel/algo
 
 .. toctree::
+   :name: Web
+   :caption: Web
+   :maxdepth: 3
+   :hidden:
+
+   web/html1
+
+.. toctree::
    :name: Autres activités
    :caption: Autres activités
    :maxdepth: 3
@@ -39,5 +47,8 @@ Bienvenue sur la plateforme de TP d'informatique !
    outils/code_libre
    outils/glossaire
 
-`TP de programmation <prog_formel/intro.html>`_
+`Programmation (parcours formel) <prog_formel/intro.html>`_
 : ce chapitre contient le parcours d'apprentissage du langage python avec une approche formelle.
+
+`Web <web/html1.html>`_
+: ce chapitre contient le parcours d'apprentissage du HTML et CSS pour concevoir des sites web.

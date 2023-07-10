@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Simulation d’épidémie" href="epidemie.html" /><link rel="prev" title="Introduction à l’HTML" href="../web/html1.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Aventure textuelle" href="../divers/aventure.html" /><link rel="prev" title="7. Les algorithmes" href="../prog_formel/algo.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Aventure textuelle - Travaux pratiques</title>
+        <title>Introduction à l’HTML - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -231,14 +231,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../web/html1.html">Introduction à l’HTML</a></li>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Introduction à l’HTML</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Aventure textuelle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="epidemie.html">Simulation d’épidémie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="portes_logiques.html">Portes logiques</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../divers/aventure.html">Aventure textuelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
@@ -270,36 +270,48 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="aventure-textuelle">
-<span id="divers-aventure"></span><h1>Aventure textuelle<a class="headerlink" href="#aventure-textuelle" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Dans cette activité, vous allez programmer une <strong>histoire interactive</strong>.
-C’est-à-dire une <strong>histoire durant laquelle le lecteur peut faire des choix</strong>.</p>
-<p>Pour cela, vous allez principalement utiliser les éléments suivants:</p>
+          <section class="tex2jax_ignore mathjax_ignore" id="introduction-a-lhtml">
+<span id="web-html1"></span><h1>Introduction à l’HTML<a class="headerlink" href="#introduction-a-lhtml" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Le HTML (HyperText Markup Language) a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et d’organiser le contenu d’un site web.<br/>
+Il permet d’ajouter du texte, des liens, des images, des tableaux, etc.</p>
+<img alt="../_images/html.png" src="../_images/html.png"/>
+<div class="attention admonition">
+<p class="admonition-title">À retenir</p>
+<p>HTML est un langage de description, pas de programmation ! Il n’est pas possible de faire de logique en HTML.</p>
+</div>
+<section id="le-web-nest-quhtml-et-quelques-autres-trucs">
+<h2>Le Web n’est qu’HTML (et quelques autres trucs)<a class="headerlink" href="#le-web-nest-quhtml-et-quelques-autres-trucs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Quand vous visitez un site web, le serveur du site vous transmet en réalité un fichier HTML qui sera lu et interprété par votre navigateur.</p>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur “Enregistrez sous…”.<br/>
+Vous observerez que votre navigateur télécharge un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> que vous pouvez ouvrir à nouveau dans votre navigateur.<br/>
+La page est-elle identique à tout à l’heure ? A quoi ressemble l’url de la page ?</p>
+</div>
+</section>
+<section id="premier-contact-avec-un-code-html">
+<h2>Premier contact avec un code HTML<a class="headerlink" href="#premier-contact-avec-un-code-html" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Tout comme n’importe quel autre langage informatique, HTML peut être lu et édité avec n’importe quel éditeur de texte.</p>
+<div class="note admonition">
+<p class="admonition-title">Micro-activité</p>
+<p>Ouvrez le fichier .html de l’activité précédente avec un éditeur de texte.<br/>
+Il est probable que le fichier ne contienne pas que du code HTML mais également du code Javascript et CSS (nous verrons cela plus tard).<br/>
+Pour trouver le code HTML, cherchez les symboles <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>. HTML est un langage basé sur des balises représentées par des chevrons <code class="docutils literal notranslate"><span class="pre">&lt;...&gt;</span></code>.</p>
+<p>Voyez-vous des similitudes avec le langage python ?</p>
+</div>
+<p>L’HTML tout seul décrit simplement le contenu, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.<br/>
+Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l’exception des images).</p>
+<p>Comme évoqué plus haut, le langage HTML utilise ce qu’on appelle des balises. On les écrit entre chevrons <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>  et <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>:</p>
+<img alt="../_images/balises_html.jpg" src="../_images/balises_html.jpg"/>
+<div class="hint admonition">
+<p class="admonition-title">Touches pour les chevrons</p>
+<p>Sur mac, vous utilisez :</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code> pour afficher le texte de l’histoire</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">input()</span></code> pour récupérer les choix du lecteur</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> et <code class="docutils literal notranslate"><span class="pre">else</span></code> pour créer les embranchements de l’histoire</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> si vous voulez créer des boucles dans l’histoire</p></li>
-<li><p>éventuellement une <code class="docutils literal notranslate"><span class="pre">liste</span></code> pour stocker un inventaire</p></li>
+<li><p>la touche <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> pour faire le chevron ouvrant</p></li>
+<li><p>et <code class="docutils literal notranslate"><span class="pre">⇧</span></code>  + <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> pour le chevron fermant.</p></li>
 </ul>
-<p>Voici un exemple pour vous aider:</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICBjaG9peCA9IGlucHV0KGYne3F1ZXN0aW9ufSAoeyIvIi5qb2luKGNob2l4X3Bvc3NpYmxlcyl9KTogJykKICAgIHdoaWxlIGNob2l4IG5vdCBpbiBjaG9peF9wb3NzaWJsZXM6CiAgICAgICAgY2hvaXggPSBpbnB1dChmJ3txdWVzdGlvbn0gKHsiLyIuam9pbihjaG9peF9wb3NzaWJsZXMpfSk6ICcpCiAgICByZXR1cm4gY2hvaXgKCmludmVudGFpcmUgPSBbXQpwZXJkdSA9IEZhbHNlCgpwcmludCgiVm91cyB2ZW5leiBkJ2ludmVudGVyIHVuZSBtYWNoaW5lIMOgIHZveWFnZXIgZGFucyBsZSB0ZW1wcy4iKQpjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJFbiBxdWVsbGUgYW5uw6llIHZvdWxlei12b3VzIGFsbGVyID8iLCBbIi0xMDAnMDAwJzAwMCIsICItMjU4MCIsICItNTAiLCAiMTc4OSIsICIyMTAwIl0pCmlmIGNob2l4ID09ICItMTAwJzAwMCcwMDAiOgogICAgcHJpbnQoIkEgcGVpbmUgYXJyaXbDqSwgdm91cyDDqnRlcyBib3VmZsOpIHBhciB1biBkaW5vc2F1cmUgISIpCiAgICBwZXJkdSA9IFRydWUKZWxpZiBjaG9peCA9PSAiLTI1ODAiOgogICAgcHJpbnQoIlZvdXMgw6p0ZXMgdsOpbsOpcsOpIGNvbW1lIHVuIGRpZXUgZW4gRWd5cHRlIGFudGlxdWUuIikKICAgIHByaW50KCJMZSBwaHJhcmFvbiBLaMOpb3BzIHZvdXMgb2ZmcmUgc29uIHNjZXB0cmUgZW4gb3IuIikKICAgIGludmVudGFpcmUuYXBwZW5kKCJTY2VwdHJlIikKZWxpZiBjaG9peCA9PSAiLTUwIjoKICAgIHByaW50KCJWb3VzIGZhaXRlcyBsYSByZW5jb250cmUgZGUgSnVsZXMgQ8Opc2FyLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJWb3VsZXotdm91cyByZWpvaW5kcmUgc2EgZ2FyZGUgcGVyc29ubmVsbGUgPyIsIFsib3VpIiwgIm5vbiJdKQogICAgaWYgY2hvaXggPT0gIm91aSI6CiAgICAgICAgcHJpbnQoIlZvdXMgcmVjZXZleiB1bmUgYXJtdXJlIGRlIHJvbWFpbi4iKQogICAgICAgIGludmVudGFpcmUuYXBwZW5kKCJBcm11cmUiKQogICAgZWxpZiBjaG9peCA9PSAibm9uIjoKICAgICAgICBwcmludCgiVm91cyByZWZ1c2V6IHBvbGltZW50LiIpCmVsaWYgY2hvaXggPT0gIjE3ODkiOgogICAgcHJpbnQoIlZvdXMgdm91cyBmYWl0ZXMgY291cGVyIGxhIHTDqnRlIGxvcnMgZGUgbGEgcsOpdm9sdXRpb24gZnJhbsOnYWlzZSAhIikKICAgIHBlcmR1ID0gVHJ1ZQplbGlmIGNob2l4ID09ICIyMTAwIjoKICAgIHByaW50KCJEYW5zIGxlIGZ1dHVyLCB1biBzw6lydW0gZCdpbW1vcnRhbGl0w6kgZXN0IHZlbmR1IGVuIHBoYXJtYWNpZS4gVm91cyBlbiBwaXF1ZXogdW4gcGV1LiIpCiAgICBpbnZlbnRhaXJlLmFwcGVuZCgiU8OpcnVtIikKCmlmIG5vdCBwZXJkdToKICAgIHByaW50KCJWb3VzIHJldmVuZXogZGFucyBsZSBwcsOpc2VudC4iKQogICAgaWYgIlNjZXB0cmUiIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdHJlIGF2ZW50dXJlIHZvdXMgYSByZW5kdSBzdXBlciByaWNoZSAhIikKICAgIGVsaWYgIkFybXVyZSIgaW4gaW52ZW50YWlyZToKICAgICAgICBwcmludCgiUGx1cyBwZXJzb25uZSBuZSB2b3VzIGNoZXJjaGVyYSBkJ2VubnVpcyBhdmVjIGwnYXJtdXJlIHF1ZSB2b3VzIGF2ZXogcmFtZW7DqWUgISIpCiAgICBlbGlmICJTw6lydW0iIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdXMgY29tbWVyY2lhbGlzZXogdm90cmUgc8OpcnVtIGV0IHJlbmRleiB0b3V0ZSBsJ2h1bWFuaXTDqSBpbW1vcnRlbGxlIChvdXBzKSAhIikKCnByaW50KCJGaW4gZGUgbCdhdmVudHVyZSIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><section id="a-vous-de-jouer">
-<h2>A vous de jouer 🎮<a class="headerlink" href="#a-vous-de-jouer" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Créez votre propre histoire interactive et déposez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> sur Moodle !</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICBjaG9peCA9IGlucHV0KGYne3F1ZXN0aW9ufSAoeyIvIi5qb2luKGNob2l4X3Bvc3NpYmxlcyl9KTogJykKICAgIHdoaWxlIGNob2l4IG5vdCBpbiBjaG9peF9wb3NzaWJsZXM6CiAgICAgICAgY2hvaXggPSBpbnB1dChmJ3txdWVzdGlvbn0gKHsiLyIuam9pbihjaG9peF9wb3NzaWJsZXMpfSk6ICcpCiAgICByZXR1cm4gY2hvaXgKCmludmVudGFpcmUgPSBbXQoKcHJpbnQoIkTDqWJ1dCBkZSB2b3RyZSBoaXN0b2lyZS4uLiIp" data-file="bW9uX2F2ZW50dXJlLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="hint admonition">
-<p class="admonition-title">Exemple plus complexe</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<span style="color:grey">Clique ici</span><div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Voici le logigramme représentant une aventure plus complexe:</p>
-<a class="reference internal image-reference" href="../_images/aventure.png"><img alt="../_images/aventure.png" src="../_images/aventure.png" style="width: 800px;"/></a>
-<p class="card-text">Et son code:</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICBjaG9peCA9IGlucHV0KGYne3F1ZXN0aW9ufSAoeyIvIi5qb2luKGNob2l4X3Bvc3NpYmxlcyl9KTogJykKICAgIHdoaWxlIGNob2l4IG5vdCBpbiBjaG9peF9wb3NzaWJsZXM6CiAgICAgICAgY2hvaXggPSBpbnB1dChmJ3txdWVzdGlvbn0gKHsiLyIuam9pbihjaG9peF9wb3NzaWJsZXMpfSk6ICcpCiAgICByZXR1cm4gY2hvaXgKCmRlZiBlbnRyZXJfZm9yZXQoKToKICAgIHByaW50KCJWb3VzIGFycml2ZXogZGFucyB1bmUgZ3JhbmRlIGZvcsOqdCBsdWd1YnJlLiIpCiAgICBwcmludCgiRGV2YW50IHZvdXMsIHZvdXMgcG91dmV6IHZvaXIgZGV1eCBjaGVtaW5zLiBMZSBjaGVtaW4gZGUgZ2F1Y2hlIG3DqG5lIMOgIHVuZSByaXZpw6hyZSBldCBsZSBjaGVtaW4gZGUgZHJvaXRlIG3DqG5lIMOgIHVuZSBncm90dGUgc29tYnJlLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJTdXIgcXVlbCBjaGVtaW4gdm91bGV6LXZvdXMgYWxsZXIgPyIsIFsiZ2F1Y2hlIiwgImRyb2l0ZSJdKQogICAgaWYgY2hvaXggPT0gImdhdWNoZSI6CiAgICAgICAgYXJyaXZlcl9yaXZpZXJlKCkKICAgIGVsaWYgY2hvaXggPT0gImRyb2l0ZSI6CiAgICAgICAgZW50cmVyX2dyb3R0ZSgpCgpkZWYgYXJyaXZlcl9yaXZpZXJlKCk6CiAgICBwcmludCgiVm91cyBhcnJpdmV6IMOgIGxhIHJpdmnDqHJlLiIpCiAgICBwcmludCgiVm91cyBwb3V2ZXogdm9pciB1bmUgY2FubmUgw6AgcMOqY2hlIHN1ciBsYSBiZXJnZS4iKQogICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiVm91bGV6LXZvdXMgcmFtYXNzZXIgbGEgY2FubmUgw6AgcMOqY2hlID8iLCBbIm91aSIsICJub24iXSkKICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgIGludmVudGFpcmUuYXBwZW5kKCJjYW5uZSDDoCBww6pjaGUiKQogICAgICAgIHByaW50KCJWb3VzIGF2ZXogcmFtYXNzw6kgbGEgY2FubmUgw6AgcMOqY2hlLiIpCiAgICBlbGlmIGNob2l4ID09ICJub24iOgogICAgICAgIHByaW50KCJWb3VzIGF2ZXogZMOpY2lkw6kgZGUgbmUgcGFzIHByZW5kcmUgbGEgY2FubmUgw6AgcMOqY2hlLiIpCiAgICBwcmludCgiVm91cyBkw6ljaWRleiBkZSBsb25nZXIgbGEgcml2acOocmUuIikKICAgIHByaW50KCJBcHLDqHMgdW4gY2VydGFpbiB0ZW1wcywgdm91cyB0cm91dmV6IHVuIHBvbnQgZW4gYm9pcyBxdWkgdHJhdmVyc2UgbGEgcml2acOocmUuIikKICAgIGNob2l4ID0gcG9zZXJfcXVlc3Rpb24oIlZvdWxlei12b3VzIHRyYXZlcnNlciBsZSBwb250ID8iLCBbIm91aSIsICJub24iXSkKICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgIHByaW50KCJWb3VzIHRyYXZlcnNleiBsZSBwb250IGV0IHZvdXMgdm91cyByZXRyb3V2ZXogc3VyIGwnYXV0cmUgcml2ZSBkZSBsYSByaXZpw6hyZS4iKQogICAgICAgIHByaW50KCJWb3VzIHRvbWJleiBuZXogw6AgbmV6IGF2ZWMgdW4gaG9ycmlibGUgb2dyZS4iKQogICAgICAgIGNob2l4ID0gcG9zZXJfcXVlc3Rpb24oIlZvdWxlei12b3VzIGwnYWZmcm9udGVyID8iLCBbIm91aSIsICJub24iXSkKICAgICAgICBpZiBjaG9peCA9PSAib3VpIjoKICAgICAgICAgICAgaWYgJ8OpcMOpZScgaW4gaW52ZW50YWlyZToKICAgICAgICAgICAgICAgIHByaW50KCJHcsOiY2Ugw6Agdm90cmUgw6lww6llLCB2b3VzIHRlcnJhc3NleiBsJ29ncmUgZW4gbHVpIGNvdXBhbnQgbGEgdMOqdGUuIikKICAgICAgICAgICAgICAgIHByaW50KCJWb3VzIHJlcHJlbmV6IGxhIHJvdXRlIGV0IHRyb3V2ZXogZmluYWxlbWVudCB2b3RyZSBtYWlzb24uIikKICAgICAgICAgICAgICAgIHByaW50KCJGw6lsaWNpdGF0aW9ucywgdm91cyBhdmV6IHRlcm1pbsOpIGwnYXZlbnR1cmUhIikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHByaW50KCJDb21tZSB2b3VzIG4nYXZleiBwYXMgZCdhcm1lLCBsJ29ncmUgdm91cyDDqWNyYWJvdWlsbGUuIikKICAgICAgICAgICAgICAgIHByaW50KCJWb3VzIMOqdGVzIG1vcnQuIikKICAgICAgICBlbGlmIGNob2l4ID09ICJub24iOgogICAgICAgICAgICBwcmludCgiVm91cyBkw6ljaWRleiBkZSByZWJyb3Vzc2VyIGNoZW1pbiBldCByZXRvdXJuZXogZGFucyBsYSBmb3LDqnQuIikKICAgICAgICAgICAgZW50cmVyX2ZvcmV0KCkKICAgIGVsaWYgY2hvaXggPT0gIm5vbiI6CiAgICAgICAgcHJpbnQoIlZvdXMgZMOpY2lkZXogZGUgbmUgcGFzIHRyYXZlcnNlciBsZSBwb250IGV0IHJldG91cm5leiBkYW5zIGxhIGZvcsOqdC4iKQogICAgICAgIGVudHJlcl9mb3JldCgpCgpkZWYgZW50cmVyX2dyb3R0ZSgpOgogICAgcHJpbnQoIlZvdXMgYXJyaXZleiBkZXZhbnQgdW5lIGdyb3R0ZS4iKQogICAgcHJpbnQoIlZvdXMgdm95ZXogdW5lIHRvcmNoZSDDqXRlaW50ZSBwcsOocyBkZSBsJ2VudHLDqWUgZGUgbGEgZ3JvdHRlLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJWb3VsZXotdm91cyBwcmVuZHJlIGxhIHRvcmNoZSA/IiwgWyJvdWkiLCAibm9uIl0pCiAgICBpZiBjaG9peCA9PSAib3VpIjoKICAgICAgICBpbnZlbnRhaXJlLmFwcGVuZCgidG9yY2hlIikKICAgICAgICBwcmludCgiVm91cyBhdmV6IHByaXMgbGEgdG9yY2hlLiIpCiAgICBlbGlmIGNob2l4ID09ICJub24iOgogICAgICAgIHByaW50KCJWb3VzIGTDqWNpZGV6IGRlIG5lIHBhcyBwcmVuZHJlIGxhIHRvcmNoZSBldCB2b3VzIGVudHJleiBkYW5zIGxhIGdyb3R0ZSBzYW5zIGx1bWnDqHJlLiIpCiAgICBwcmludCgiVm91cyBhdmFuY2V6IGRhbnMgbGEgZ3JvdHRlIGV0IHZvdXMgcmVuY29udHJleiB1biBkcmFnb24gcXVpIGJsb3F1ZSB2b3RyZSBjaGVtaW4uIikKICAgIGlmICJjYW5uZSDDoCBww6pjaGUiIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdXMgdXRpbGlzZXogdm90cmUgY2FubmUgw6AgcMOqY2hlIHBvdXIgY29tYmF0dHJlIGxlIGRyYWdvbiBldCB2b3VzIHLDqXVzc2lzc2V6IMOgIGxlIHZhaW5jcmUgKGluY3JveWFibGUpLiIpCiAgICAgICAgZW50cmVyX3NhbGxlX3NlY3JldGUoKQogICAgZWxpZiAidG9yY2hlIiBpbiBpbnZlbnRhaXJlOgogICAgICAgIHByaW50KCJWb3VzIHV0aWxpc2V6IHZvdHJlIHRvcmNoZSBwb3VyIGVmZnJheWVyIGxlIGRyYWdvbiBldCB2b3VzIHLDqXVzc2lzc2V6IMOgIHBhc3NlciBzYW5zIMOqdHJlIGF0dGFxdcOpIChpbmNyb3lhYmxlKS4iKQogICAgICAgIGVudHJlcl9zYWxsZV9zZWNyZXRlKCkKICAgIGVsc2U6CiAgICAgICAgcHJpbnQoIlZvdXMgbidhdmV6IHBhcyBkJ2FybWUgcG91ciBjb21iYXR0cmUgbGUgZHJhZ29uIGV0IHZvdXMgw6p0ZXMgZMOpdm9yw6kuIikKICAgICAgICBwcmludCgiVm91cyDDqnRlcyBtb3J0LiIpCgpkZWYgZW50cmVyX3NhbGxlX3NlY3JldGUoKToKICAgIHByaW50KCJWb3VzIGNvbnRpbnVleiB2b3RyZSBjaGVtaW4ganVzcXUnw6AgdHJvdXZlciB1bmUgc2FsbGUgc2VjcsOodGUuIikKICAgIHByaW50KCJWb3VzIHRyb3V2ZXogdW5lIG1hZ25pZmlxdWUgw6lww6llIHN1ciB1biBzb2NsZS4iKQogICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiVm91bGV6LXZvdXMgcmFtYXNzZXIgbCfDqXDDqWUgPyIsIFsib3VpIiwgIm5vbiJdKQogICAgaWYgY2hvaXggPT0gJ291aSc6CiAgICAgICAgcHJpbnQoIlZvdXMgcGFydmVuZXogw6AgbCdleHRyYWlyZSBkdSBzb2NsZSwgdm91cyDDqnRyZSBwcm9iYWJsZW1lbnQgbCfDqWx1LiIpCiAgICAgICAgaW52ZW50YWlyZS5hcHBlbmQoIsOpcMOpZSIpCiAgICBlbGlmIGNob2l4ID09ICdub24nOgogICAgICAgIHByaW50KCJWb3VzIGTDqWNpZGV6IGQnaWdub3JlciBsJ8OpcMOpZSAobWFpcyBwb3VycXVvaSA/Pz8pLiIpCiAgICBwcmludCgiQydlc3QgdW4gY3VsIGRlIHNhYywgdm91cyByZXRvdXJuZXogZGFucyBsYSBmb3LDqnQuIikKICAgIGVudHJlcl9mb3JldCgpCgojIETDqWJ1dCBkZSBsJ2F2ZW50dXJlCmludmVudGFpcmUgPSBbXQoKcHJpbnQoIkVuIHZvdXMgYmFsbGFkYW50IHVuIHBldSB0cm9wIGxvaW4gZGUgY2hleiB2b3VzLCB2b3VzIGF2ZXogZmluaSBwYXIgdm91cyBwZXJkcmUuIikKcHJpbnQoIlJldHJvdXZleiBsZSBjaGVtaW4gZGUgbGEgbWFpc29uLiIpCmVudHJlcl9mb3JldCgp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</details></div>
+</div>
+<p>Les balises indiquent la nature du texte qu’elles encadrent. Elles permettent au navigateur de comprendre ce qu’il faut afficher à l’écran.</p>
 </section>
 </section>
 
@@ -308,30 +320,30 @@ C’est-à-dire une <strong>histoire durant laquelle le lecteur peut faire des c
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="epidemie.html">
+          <a class="next-page" href="../divers/aventure.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Simulation d’épidémie</div>
+                <div class="title">Aventure textuelle</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../web/html1.html">
+          <a class="prev-page" href="../prog_formel/algo.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Introduction à l’HTML</div>
+                <div class="title">7. Les algorithmes</div>
                 
               </div>
             </a>
         </div>
 
         <div class="related-information">
-            <a class="muted-link" href="../_sources/divers/aventure.md.txt"
+            <a class="muted-link" href="../_sources/web/html1.md.txt"
                rel="nofollow">
               Montrer le code source
             </a>
@@ -351,8 +363,9 @@ C’est-à-dire une <strong>histoire durant laquelle le lecteur peut faire des c
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Aventure textuelle</a><ul>
-<li><a class="reference internal" href="#a-vous-de-jouer">A vous de jouer 🎮</a></li>
+<li><a class="reference internal" href="#">Introduction à l’HTML</a><ul>
+<li><a class="reference internal" href="#le-web-nest-quhtml-et-quelques-autres-trucs">Le Web n’est qu’HTML (et quelques autres trucs)</a></li>
+<li><a class="reference internal" href="#premier-contact-avec-un-code-html">Premier contact avec un code HTML</a></li>
 </ul>
 </li>
 </ul>
