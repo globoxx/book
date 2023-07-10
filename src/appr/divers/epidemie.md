@@ -1,10 +1,10 @@
-(epidemie)=
+(divers.epidemie)=
 
 # Simulation d'épidémie
 
 Dans cette séquence, nous allons simuler l'évolution d'une épidémie grâce à nos connaissances en python. Pour cela, nous allons écrire un **modèle** représentant les différentes caractéristiques de l'épidémie puis nous simulerons le temps qui passe afin de pouvoir mesurer les impacts de la maladie sur une population fictive.
 
-```{image} prog1/media/virus.gif
+```{image} ../media/virus.gif
 :width: 300px
 ```
 
@@ -52,7 +52,7 @@ p_deces = ...
 
 Voici le diagramme représentant l'évolution d'un individu selon le modèle que nous allons utiliser:
 
-```{image} prog1/media/epidemie.png
+```{image} ../media/epidemie.png
 ```
 
 Vous remarquerez que le modèle utilisé pour définir la maladie ici est plutôt simple et ne prend pas en compte de nombreux facteurs.
@@ -110,7 +110,7 @@ Dans une épidémie de zombies, il faudrait inclure dans notre modèle le fait q
 
 ## 3. Simulation du jour 1
 
-A partir d'ici, vous allez travailler directement sur un fichier python. Vous pouvez le télécharger {download}`ici<prog1/data/epidemie.py>` et l'ouvrir sur Thonny. Remplacez les `...` par les valeurs que vous avez calculées dans les parties 1 et 2.
+A partir d'ici, vous allez travailler directement sur un fichier python. Vous pouvez le télécharger {download}`ici<../data/epidemie.py>` et l'ouvrir sur Thonny. Remplacez les `...` par les valeurs que vous avez calculées dans les parties 1 et 2.
 
 ### 3.1 Calcul des infections, guérisons et décès lors du jour 1
 
@@ -182,7 +182,7 @@ Modifiez les paramètres de votre modèle pour voir comment cela impacte l'évol
 
 ## (7. Pour les plus rapides) Covid-19
 
-On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier {download}`covid.csv<prog1/data/covid.csv>` et d’obtenir une liste contenant le nombre de cas journaliers en Suisse (<a href="https://www.coronavirus-statistiques.com/stats-pays/coronavirus-nombre-de-cas-suisse/" target="_blank">source</a>).  
+On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier {download}`covid.csv<../data/covid.csv>` et d’obtenir une liste contenant le nombre de cas journaliers en Suisse (<a href="https://www.coronavirus-statistiques.com/stats-pays/coronavirus-nombre-de-cas-suisse/" target="_blank">source</a>).  
 Placez le fichier `covid.csv` dans le même répertoire/dossier que votre fichier python.
 
 ```python

@@ -1,4 +1,4 @@
-(prog1.algo)=
+(prog_formel.algo)=
 
 # 7. Les algorithmes
 
@@ -18,7 +18,7 @@ C'est déjà quoi un algorithme ?
 
 Lorsque vous jouez aux cartes, vous triez vos cartes par valeur et dans ce cas, vous utilisez sans le savoir un algorithme de tri.
 
-```{image} media/cartes.webp
+```{image} ../media/cartes.webp
 :width: 300px
 ```
 
@@ -166,7 +166,7 @@ done()
 :animate: fade-in-slide-down
 Ce logigramme (que nous avons vus en cours) utilise une boucle `while` pour parcourir la liste.
 En python, il est possible d'utiliser une boucle `for` afin de ne pas avoir à se soucier des index.
-```{image} media/max.png
+```{image} ../media/max.png
 :width: 500px
 ```
 ````
@@ -560,7 +560,7 @@ L’algorithme du **tri à bulles** compare les éléments voisins, deux par deu
 
 Le mot 'bulles' fait référence aux bulles dans une boisson qui montent à la surface exactement comme les grands éléments remontent progressivement vers la fin de la liste.
 
-```{image} media/tri_a_bulles.gif
+```{image} ../media/tri_a_bulles.gif
 ```
 
 ```{codeplay}
@@ -652,7 +652,7 @@ L’algorithme du **tri par insertion** est utilisé instinctivement par la plup
 Il parcourt la liste d’éléments à trier du 2ème au dernier élément.
 Pour chaque élément considéré, il l’insère à l’emplacement correct à gauche dans la liste déjà parcourue en redescendant l'index.
 
-```{image} media/tri_par_insertion.gif
+```{image} ../media/tri_par_insertion.gif
 ```
 
 ```{codeplay}
@@ -744,7 +744,7 @@ Et ainsi de suite...
 
 Pour résumer, il met le plus petit élément en 1ère position (index 0), puis le 2ème plus petit élément à la 2ème position (index 1), puis le 3ème plus petit élément à la 3ème position (index 2), etc...
 
-```{image} media/tri_par_selection.gif
+```{image} ../media/tri_par_selection.gif
 ```
 
 ```{codeplay}

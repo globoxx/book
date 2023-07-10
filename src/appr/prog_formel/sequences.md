@@ -1,4 +1,4 @@
-(prog1.sequences)=
+(prog_formel.sequences)=
 
 # 6. Les types séquentiels
 

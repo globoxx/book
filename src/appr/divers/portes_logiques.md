@@ -1,4 +1,4 @@
-(portes_logiques)=
+(divers.portes_logiques)=
 
 # Portes logiques
 

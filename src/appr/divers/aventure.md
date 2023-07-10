@@ -1,4 +1,4 @@
-(aventure)=
+(divers.aventure)=
 
 # Aventure textuelle
 
@@ -85,7 +85,7 @@ print("Début de votre histoire...")
 ````{dropdown} <span style="color:grey">Clique ici</span>
 Voici le logigramme représentant une aventure plus complexe:
 
-```{image} prog1/media/aventure.png
+```{image} ../media/aventure.png
 :width: 800px
 ```
 Et son code:
