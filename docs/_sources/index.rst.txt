@@ -21,6 +21,14 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog_formel/algo
 
 .. toctree::
+   :name: Programmation (parcours dessin)
+   :caption: Programmation (parcours dessin)
+   :maxdepth: 3
+   :hidden:
+
+   prog_dessin/intro
+
+.. toctree::
    :name: Web
    :caption: Web
    :maxdepth: 3
@@ -49,6 +57,9 @@ Bienvenue sur la plateforme de TP d'informatique !
 
 `Programmation (parcours formel) <prog_formel/intro.html>`_
 : ce chapitre contient le parcours d'apprentissage du langage python avec une approche formelle.
+
+`Programmation (parcours dessin) <prog_dessin/intro.html>`_
+: ce chapitre contient le parcours d'apprentissage du langage python avec une approche par le dessin.
 
 `Web <web/html1.html>`_
 : ce chapitre contient le parcours d'apprentissage du HTML et CSS pour concevoir des sites web.
