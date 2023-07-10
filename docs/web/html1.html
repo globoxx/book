@@ -276,8 +276,24 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="introduction-a-lhtml">
 <span id="web-html1"></span><h1>1. Introduction à l’HTML<a class="headerlink" href="#introduction-a-lhtml" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Le HTML (HyperText Markup Language) a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de <strong>structurer</strong> le contenu d’une page web.<br/>
+<p>Le HTML (HyperText Markup Language) a fait son apparition dès 1991 au lancement du Web par Tim Berners-Lee. Son rôle est de <strong>structurer</strong> le contenu d’une page web.<br/>
 Il permet d’ajouter du texte, des liens, des images, des tableaux, etc.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<img alt="img-top" class="card-img-top" src="../_images/berners.jpg"/>
+<div class="card-header docutils">
+<p class="card-text">Tim Berners-Lee 🇬🇧</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><em><strong>Né en 1955</strong></em></p>
+<p class="card-text">L’informaticien britannique <a class="reference external" href="https://fr.wikipedia.org/wiki/Tim_Berners-Lee"><strong>Tim Berners-Lee</strong></a> est le principal inventeur du Web alors qu’il travaillait au CERN à Genève dans les années 90. Il a inventé les adresses URL, le protocole HTTP et le langage HTML.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <img alt="../_images/html.png" src="../_images/html.png"/>
 <div class="attention admonition">
 <p class="admonition-title">À retenir</p>
@@ -288,8 +304,8 @@ Il permet d’ajouter du texte, des liens, des images, des tableaux, etc.</p>
 <p>Quand vous visitez un site web, le serveur du site vous transmet en réalité un fichier HTML qui sera lu et interprété par votre navigateur.</p>
 <div class="note admonition">
 <p class="admonition-title">Micro-activité</p>
-<p>Rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur “Enregistrez sous…”.<br/>
-Vous observerez que votre navigateur télécharge un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> que vous pouvez ouvrir à nouveau dans votre navigateur.<br/>
+<p>Rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur “Enregistrez sous…” pour sauver le fichier.<br/>
+Vous observez que votre navigateur télécharge un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).<br/>
 La page est-elle identique à tout à l’heure ? A quoi ressemble l’url de la page ?</p>
 </div>
 </section>
@@ -358,7 +374,7 @@ Voici quelques exemples:</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Exercice 3</p>
-<p>Reprenez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> de l’exercice précédent et utlisez les balises <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code> pour créer des paragraphes.<br/>
+<p>Reprenez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> de l’exercice précédent et utlisez les balises <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">&lt;/p&gt;</span></code> pour créer des paragraphes.<br/>
 Chaque portion de texte entouré de ces balises sera considéré comme un paragraphe séparé.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -376,7 +392,7 @@ Exemple de solution<div class="summary-down docutils">
 </section>
 <section id="parametrer-ses-balises-avec-des-attributs">
 <h2>Paramètrer ses balises avec des attributs<a class="headerlink" href="#parametrer-ses-balises-avec-des-attributs" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Dans la section précédente, nous avons vu la balise <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">...&gt;</span></code> qui permet d’insérer une image dans la page. Il s’agit d’une balise orpheline.<br/>
+<p>Dans la section précédente, nous avons vu la balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> qui permet d’insérer une image dans la page. Il s’agit d’une balise orpheline.<br/>
 Mais alors… comment spécifier l’image que nous voulons ? Cela passe par un <strong>attribut</strong>.</p>
 <p>Les attributs sont un peu les options des balises. Ils viennent les compléter pour donner des informations supplémentaires.</p>
 <p>Un attribut est situé dans la balise ouvrante d’une balise en paire, ou directement dans une balise orpheline, comme c’est le cas ci dessous avec la balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code>:</p>
@@ -429,16 +445,16 @@ Vous trouverez la liste des attributs disponibles <a href="https://www.w3schools
 <p>Voyons à quoi servent toutes ces balises.</p>
 <ul class="simple">
 <li><p>La première ligne <code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code> est une balise orpheline indispensable : elle indique qu’il s’agit d’une page HTML.</p></li>
-<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/html&gt;</span></code> englobe tout le contenu de la page web. A l’intérieur, il ya les balises en paire <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/head&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/body&gt;</span></code>.</p></li>
-<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/head&gt;</span></code> contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.</p></li>
+<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span> <span class="pre">&lt;/html&gt;</span></code> englobe tout le contenu de la page web. A l’intérieur, il ya les balises en paire <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">&lt;/body&gt;</span></code>.</p></li>
+<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code> contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.</p></li>
 <li><p>La balise orpheline <code class="docutils literal notranslate"><span class="pre">&lt;meta</span> <span class="pre">charset="utf-8"&gt;</span></code> indique l’encodage utilisé dans le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> : cela détermine comment les caractères spéciaux s’affichent (accents, idéogrammes chinois et japonais, etc.).</p></li>
-<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code> indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu’elle contient, il s’affichera dans l’onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !</p></li>
-<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/body&gt;</span></code> contient tout ce qui sera affiché à l’écran sur la page web (c’est ici que vous passerez 99% de votre temps).</p></li>
+<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">&lt;/title&gt;</span></code> indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu’elle contient, il s’affichera dans l’onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !</p></li>
+<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">&lt;/body&gt;</span></code> contient tout ce qui sera affiché à l’écran sur la page web (c’est ici que vous passerez 99% de votre temps).</p></li>
 </ul>
 <div class="note admonition">
 <p class="admonition-title">Exercice 5</p>
 <p>Modifiez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> des exercices précédents pour inclure cette structure de base.<br/>
-Pour rappel, tout le contenu de votre page doit se trouver entre les balises <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/body&gt;</span></code>.</p>
+Pour rappel, tout le contenu de votre page doit se trouver entre les balises <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">&lt;/body&gt;</span></code>.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Solution<div class="summary-down docutils">
@@ -465,7 +481,7 @@ Solution<div class="summary-down docutils">
 </details></div>
 <div class="attention admonition">
 <p class="admonition-title">Attention</p>
-<p>L’ordre des balises est <strong>important</strong>. Elles doivent s’emboiter les unes dans les autres, un peu comme des poupées russes.</p>
+<p>L’ordre des balises est super <strong>important</strong> ! Elles doivent s’emboiter les unes dans les autres, un peu comme des poupées russes.</p>
 </div>
 <img alt="../_images/structure_html.jpg" src="../_images/structure_html.jpg"/>
 <div class="question multi"><form><div class="admonition">
@@ -500,8 +516,8 @@ En HTML, la syntaxe est la suivante:</p>
 <div class="question-content docutils">
 <p>Si vous mettez en ligne un site web avec des commentaires dans le code, pensez-vous que les visiteurs de votre site pourront les lires ?</p>
 <ul class="simple">
-<li><p><label class="answer incorrect"><input type="checkbox"/>Oui</label></p></li>
-<li><p><label class="answer correct"><input type="checkbox"/>Non</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>Oui</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Non</label></p></li>
 </ul>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
@@ -514,11 +530,11 @@ Faites donc attention à ne jamais mettre d’informations sensibles tel qu’un
 <p>Ecrivez la page web principale du site <code class="docutils literal notranslate"><span class="pre">champignons.ch</span></code>.<br/>
 Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:</p>
 <ul class="simple">
-<li><p>Le titre “Champignons” qui doit apparaître dans l’onglet</p></li>
+<li><p>Le titre “Champignons” qui doit apparaître dans l’onglet du navigateur.</p></li>
 <li><p>Au moins 3 paragraphes de texte.</p></li>
 <li><p>Une image de champignon entre 2 paragraphes.</p></li>
-<li><p>Un commentaire</p></li>
-<li><p>Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web)</p></li>
+<li><p>Un commentaire.</p></li>
+<li><p>Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web).</p></li>
 </ul>
 </div>
 </section>

@@ -2,8 +2,19 @@
 
 # 1. Introduction à l'HTML
 
-Le HTML (HyperText Markup Language) a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de **structurer** le contenu d'une page web.  
+Le HTML (HyperText Markup Language) a fait son apparition dès 1991 au lancement du Web par Tim Berners-Lee. Son rôle est de **structurer** le contenu d'une page web.  
 Il permet d'ajouter du texte, des liens, des images, des tableaux, etc.
+
+```{panels}
+
+:img-top: ../media/berners.jpg
+
+Tim Berners-Lee 🇬🇧
+^^^^^
+***Né en 1955***
+
+L'informaticien britannique [**Tim Berners-Lee**](https://fr.wikipedia.org/wiki/Tim_Berners-Lee) est le principal inventeur du Web alors qu'il travaillait au CERN à Genève dans les années 90. Il a inventé les adresses URL, le protocole HTTP et le langage HTML.
+```
 
 ```{image} ../media/html.png
 ```
@@ -19,8 +30,8 @@ Quand vous visitez un site web, le serveur du site vous transmet en réalité un
 
 ```{admonition} Micro-activité
 :class: note
-Rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous...".  
-Vous observerez que votre navigateur télécharge un fichier `.html` que vous pouvez ouvrir à nouveau dans votre navigateur.  
+Rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous..." pour sauver le fichier.  
+Vous observez que votre navigateur télécharge un fichier `.html` que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).  
 La page est-elle identique à tout à l'heure ? A quoi ressemble l'url de la page ?
 ```
 
@@ -91,7 +102,7 @@ On distingue 2 types de balises:
 
 `````{admonition} Exercice 3
 :class: note
-Reprenez votre fichier `.html` de l'exercice précédent et utlisez les balises `<p> ... </p>` pour créer des paragraphes.  
+Reprenez votre fichier `.html` de l'exercice précédent et utlisez les balises `<p> </p>` pour créer des paragraphes.  
 Chaque portion de texte entouré de ces balises sera considéré comme un paragraphe séparé.
 
 ````{dropdown} Exemple de solution
@@ -104,7 +115,7 @@ Chaque portion de texte entouré de ces balises sera considéré comme un paragr
 
 ## Paramètrer ses balises avec des attributs
 
-Dans la section précédente, nous avons vu la balise `<img ...>` qui permet d'insérer une image dans la page. Il s'agit d'une balise orpheline.  
+Dans la section précédente, nous avons vu la balise `<img>` qui permet d'insérer une image dans la page. Il s'agit d'une balise orpheline.  
 Mais alors... comment spécifier l'image que nous voulons ? Cela passe par un **attribut**.
 
 Les attributs sont un peu les options des balises. Ils viennent les compléter pour donner des informations supplémentaires.
@@ -159,16 +170,16 @@ Je peux vous l'avouer, jusqu'ici nous avons un peu triché... En réalité, tout
 Voyons à quoi servent toutes ces balises.
 
 - La première ligne `<!DOCTYPE html>` est une balise orpheline indispensable : elle indique qu'il s'agit d'une page HTML.
-- La balise en paire `<html> ... </html>` englobe tout le contenu de la page web. A l'intérieur, il ya les balises en paire `<head> ... </head>` et `<body> ... </body>`.
-- La balise en paire `<head> ... </head>` contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.
+- La balise en paire `<html> </html>` englobe tout le contenu de la page web. A l'intérieur, il ya les balises en paire `<head> </head>` et `<body> </body>`.
+- La balise en paire `<head> </head>` contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.
 - La balise orpheline `<meta charset="utf-8">` indique l'encodage utilisé dans le fichier `.html` : cela détermine comment les caractères spéciaux s'affichent (accents, idéogrammes chinois et japonais, etc.).
-- La balise en paire `<title> ... </title>` indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu'elle contient, il s'affichera dans l'onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !
-- La balise en paire `<body> ... </body>` contient tout ce qui sera affiché à l'écran sur la page web (c'est ici que vous passerez 99% de votre temps).
+- La balise en paire `<title> </title>` indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu'elle contient, il s'affichera dans l'onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !
+- La balise en paire `<body> </body>` contient tout ce qui sera affiché à l'écran sur la page web (c'est ici que vous passerez 99% de votre temps).
 
 `````{admonition} Exercice 5
 :class: note
 Modifiez votre fichier `.html` des exercices précédents pour inclure cette structure de base.  
-Pour rappel, tout le contenu de votre page doit se trouver entre les balises `<body> ... </body>`.
+Pour rappel, tout le contenu de votre page doit se trouver entre les balises `<body> </body>`.
 
 ````{dropdown} Solution
 ```{code-block} html
@@ -191,7 +202,7 @@ Pour rappel, tout le contenu de votre page doit se trouver entre les balises `<b
 
 ```{admonition} Attention
 :class: attention
-L'ordre des balises est **important**. Elles doivent s'emboiter les unes dans les autres, un peu comme des poupées russes.  
+L'ordre des balises est super **important** ! Elles doivent s'emboiter les unes dans les autres, un peu comme des poupées russes.  
 ```
 
 ```{image} ../media/structure_html.jpg
@@ -225,8 +236,8 @@ En HTML, la syntaxe est la suivante:
 
 ```{question} Confidendialité
 Si vous mettez en ligne un site web avec des commentaires dans le code, pensez-vous que les visiteurs de votre site pourront les lires ?
-* {f}`Oui`
-* {v}`Non`
+* {v}`Oui`
+* {f}`Non`
 ===
 Oui ! Rappelez-vous, le fichier `.html` est envoyé au visiteur et il a donc tout le loisir de le lire, y compris vos commentaires.  
 Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot de passe dans les commentaires de votre page !
@@ -236,9 +247,9 @@ Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot
 :class: note
 Ecrivez la page web principale du site `champignons.ch`.  
 Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:
-- Le titre "Champignons" qui doit apparaître dans l'onglet
+- Le titre "Champignons" qui doit apparaître dans l'onglet du navigateur.
 - Au moins 3 paragraphes de texte.
 - Une image de champignon entre 2 paragraphes.
-- Un commentaire
-- Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web)
+- Un commentaire.
+- Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web).
 ```
