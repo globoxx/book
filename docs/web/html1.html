@@ -276,7 +276,7 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="introduction-a-lhtml">
 <span id="web-html1"></span><h1>1. Introduction à l’HTML<a class="headerlink" href="#introduction-a-lhtml" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Le HTML (HyperText Markup Language) a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et d’organiser le contenu d’un site web.<br/>
+<p>Le HTML (HyperText Markup Language) a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de <strong>structurer</strong> le contenu d’une page web.<br/>
 Il permet d’ajouter du texte, des liens, des images, des tableaux, etc.</p>
 <img alt="../_images/html.png" src="../_images/html.png"/>
 <div class="attention admonition">
@@ -463,6 +463,64 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details></div>
+<div class="attention admonition">
+<p class="admonition-title">Attention</p>
+<p>L’ordre des balises est <strong>important</strong>. Elles doivent s’emboiter les unes dans les autres, un peu comme des poupées russes.</p>
+</div>
+<img alt="../_images/structure_html.jpg" src="../_images/structure_html.jpg"/>
+<div class="question multi"><form><div class="admonition">
+<p class="admonition-title">Ordre des balises</p>
+<div class="question-content docutils">
+<p>Parmi les emboîtements suivants, lesquels sont corrects ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;html&gt;&lt;body&gt;&lt;/html&gt;&lt;/body&gt;</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>&lt;p&gt;&lt;img&gt;&lt;/p&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;body&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/body&gt;&lt;/p&gt;</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>&lt;body&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/body&gt;</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div></section>
+<section id="les-commentaires">
+<h2>Les commentaires<a class="headerlink" href="#les-commentaires" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="hint admonition">
+<p class="admonition-title">À retenir</p>
+<p>Tout code informatique se doit d’être suffisamment commenté pour faciliter sa compréhension par un autre humain.<br/>
+Même vous, vous pouvez oublier ce que fait votre code avec le temps… Les commentaires sont là pour vous aider !</p>
+</div>
+<p>Un commentaire en HTML est donc un texte qui sert simplement de mémo. Il n’est pas affiché, il n’est pas lu par l’ordinateur, cela ne change rien à l’affichage de la page.<br/>
+Souvenez-vous, en python, nous ajoutons un commentaire grâce au symbole <code class="docutils literal notranslate"><span class="pre">#</span></code>.<br/>
+En HTML, la syntaxe est la suivante:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Ceci est un commentaire --&gt;</span>
+</pre></div>
+</div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Confidendialité</p>
+<div class="question-content docutils">
+<p>Si vous mettez en ligne un site web avec des commentaires dans le code, pensez-vous que les visiteurs de votre site pourront les lires ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>Oui</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>Non</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Oui ! Rappelez-vous, le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> est envoyé au visiteur et il a donc tout le loisir de le lire, y compris vos commentaires.<br/>
+Faites donc attention à ne jamais mettre d’informations sensibles tel qu’un mot de passe dans les commentaires de votre page !</p>
+</div>
+</div>
+</form></div><div class="note admonition">
+<p class="admonition-title">Exercice 6 (récapitulatif)</p>
+<p>Ecrivez la page web principale du site <code class="docutils literal notranslate"><span class="pre">champignons.ch</span></code>.<br/>
+Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:</p>
+<ul class="simple">
+<li><p>Le titre “Champignons” qui doit apparaître dans l’onglet</p></li>
+<li><p>Au moins 3 paragraphes de texte.</p></li>
+<li><p>Une image de champignon entre 2 paragraphes.</p></li>
+<li><p>Un commentaire</p></li>
+<li><p>Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web)</p></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -520,6 +578,7 @@ Solution<div class="summary-down docutils">
 <li><a class="reference internal" href="#un-langage-de-balises">Un langage de balises</a></li>
 <li><a class="reference internal" href="#parametrer-ses-balises-avec-des-attributs">Paramètrer ses balises avec des attributs</a></li>
 <li><a class="reference internal" href="#structure-dune-page-html">Structure d’une page HTML</a></li>
+<li><a class="reference internal" href="#les-commentaires">Les commentaires</a></li>
 </ul>
 </li>
 </ul>

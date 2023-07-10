@@ -2,7 +2,7 @@
 
 # 1. Introduction à l'HTML
 
-Le HTML (HyperText Markup Language) a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et d’organiser le contenu d'un site web.  
+Le HTML (HyperText Markup Language) a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de **structurer** le contenu d'une page web.  
 Il permet d'ajouter du texte, des liens, des images, des tableaux, etc.
 
 ```{image} ../media/html.png
@@ -187,3 +187,58 @@ Pour rappel, tout le contenu de votre page doit se trouver entre les balises `<b
 </html>
 ```
 ````
+`````
+
+```{admonition} Attention
+:class: attention
+L'ordre des balises est **important**. Elles doivent s'emboiter les unes dans les autres, un peu comme des poupées russes.  
+```
+
+```{image} ../media/structure_html.jpg
+```
+
+```{question} Ordre des balises
+:multi: 
+Parmi les emboîtements suivants, lesquels sont corrects ?
+* {f}`<html><body></html></body>`
+* {v}`<html><body></body></html>`
+* {v}`<p><img></p>`
+* {f}`<body><p></p><p></body></p>`
+* {v}`<body><p></p><p></p></body>`
+```
+
+## Les commentaires
+
+```{admonition} À retenir
+:class: hint
+Tout code informatique se doit d'être suffisamment commenté pour faciliter sa compréhension par un autre humain.  
+Même vous, vous pouvez oublier ce que fait votre code avec le temps... Les commentaires sont là pour vous aider !
+```
+
+Un commentaire en HTML est donc un texte qui sert simplement de mémo. Il n'est pas affiché, il n'est pas lu par l'ordinateur, cela ne change rien à l'affichage de la page.  
+Souvenez-vous, en python, nous ajoutons un commentaire grâce au symbole `#`.  
+En HTML, la syntaxe est la suivante:
+
+```{code-block} html
+<!-- Ceci est un commentaire -->
+```
+
+```{question} Confidendialité
+Si vous mettez en ligne un site web avec des commentaires dans le code, pensez-vous que les visiteurs de votre site pourront les lires ?
+* {f}`Oui`
+* {v}`Non`
+===
+Oui ! Rappelez-vous, le fichier `.html` est envoyé au visiteur et il a donc tout le loisir de le lire, y compris vos commentaires.  
+Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot de passe dans les commentaires de votre page !
+```
+
+```{admonition} Exercice 6 (récapitulatif)
+:class: note
+Ecrivez la page web principale du site `champignons.ch`.  
+Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:
+- Le titre "Champignons" qui doit apparaître dans l'onglet
+- Au moins 3 paragraphes de texte.
+- Une image de champignon entre 2 paragraphes.
+- Un commentaire
+- Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web)
+```
