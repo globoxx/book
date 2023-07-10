@@ -7,18 +7,18 @@ Informatique au gymnase : Travaux pratiques
 Bienvenue sur la plateforme de TP d'informatique !
 
 .. toctree::
-   :name: TP de programmation
-   :caption: TP de programmation
+   :name: Programmation (parcours formel)
+   :caption: Programmation (parcours formel)
    :maxdepth: 3
    :hidden:
 
-   prog1/intro
-   prog1/variables
-   prog1/fonctions
-   prog1/definitions
-   prog1/conditions
-   prog1/sequences
-   prog1/algo
+   prog_formel/intro
+   prog_formel/variables
+   prog_formel/fonctions
+   prog_formel/definitions
+   prog_formel/conditions
+   prog_formel/sequences
+   prog_formel/algo
 
 .. toctree::
    :name: Autres activités
@@ -26,9 +26,9 @@ Bienvenue sur la plateforme de TP d'informatique !
    :maxdepth: 3
    :hidden:
 
-   aventure
-   epidemie
-   portes_logiques
+   divers/aventure
+   divers/epidemie
+   divers/portes_logiques
 
 .. toctree::
    :name: Outils
@@ -36,8 +36,8 @@ Bienvenue sur la plateforme de TP d'informatique !
    :maxdepth: 3
    :hidden:
 
-   code_libre
-   glossaire
+   outils/code_libre
+   outils/glossaire
 
-`TP de programmation <prog1/intro.html>`_
-: ce chapitre contient tous les TP de programmation.
+`TP de programmation <prog_formel/intro.html>`_
+: ce chapitre contient le parcours d'apprentissage du langage python avec une approche formelle.
