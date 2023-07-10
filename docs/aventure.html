@@ -1,0 +1,380 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Recherche" href="search.html" /><link rel="next" title="Simulation d’épidémie" href="epidemie.html" /><link rel="prev" title="7. Les algorithmes" href="prog1/algo.html" />
+
+    <link rel="shortcut icon" href="_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Aventure textuelle - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">TP de programmation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prog1/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prog1/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prog1/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prog1/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prog1/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prog1/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prog1/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Aventure textuelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portes_logiques.html">Portes logiques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="aventure-textuelle">
+<span id="aventure"></span><h1>Aventure textuelle<a class="headerlink" href="#aventure-textuelle" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans cette activité, vous allez programmer une <strong>histoire interactive</strong>.
+C’est-à-dire une <strong>histoire durant laquelle le lecteur peut faire des choix</strong>.</p>
+<p>Pour cela, vous allez principalement utiliser les éléments suivants:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code> pour afficher le texte de l’histoire</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">input()</span></code> pour récupérer les choix du lecteur</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> et <code class="docutils literal notranslate"><span class="pre">else</span></code> pour créer les embranchements de l’histoire</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> si vous voulez créer des boucles dans l’histoire</p></li>
+<li><p>éventuellement une <code class="docutils literal notranslate"><span class="pre">liste</span></code> pour stocker un inventaire</p></li>
+</ul>
+<p>Voici un exemple pour vous aider:</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICBjaG9peCA9IGlucHV0KGYne3F1ZXN0aW9ufSAoeyIvIi5qb2luKGNob2l4X3Bvc3NpYmxlcyl9KTogJykKICAgIHdoaWxlIGNob2l4IG5vdCBpbiBjaG9peF9wb3NzaWJsZXM6CiAgICAgICAgY2hvaXggPSBpbnB1dChmJ3txdWVzdGlvbn0gKHsiLyIuam9pbihjaG9peF9wb3NzaWJsZXMpfSk6ICcpCiAgICByZXR1cm4gY2hvaXgKCmludmVudGFpcmUgPSBbXQpwZXJkdSA9IEZhbHNlCgpwcmludCgiVm91cyB2ZW5leiBkJ2ludmVudGVyIHVuZSBtYWNoaW5lIMOgIHZveWFnZXIgZGFucyBsZSB0ZW1wcy4iKQpjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJFbiBxdWVsbGUgYW5uw6llIHZvdWxlei12b3VzIGFsbGVyID8iLCBbIi0xMDAnMDAwJzAwMCIsICItMjU4MCIsICItNTAiLCAiMTc4OSIsICIyMTAwIl0pCmlmIGNob2l4ID09ICItMTAwJzAwMCcwMDAiOgogICAgcHJpbnQoIkEgcGVpbmUgYXJyaXbDqSwgdm91cyDDqnRlcyBib3VmZsOpIHBhciB1biBkaW5vc2F1cmUgISIpCiAgICBwZXJkdSA9IFRydWUKZWxpZiBjaG9peCA9PSAiLTI1ODAiOgogICAgcHJpbnQoIlZvdXMgw6p0ZXMgdsOpbsOpcsOpIGNvbW1lIHVuIGRpZXUgZW4gRWd5cHRlIGFudGlxdWUuIikKICAgIHByaW50KCJMZSBwaHJhcmFvbiBLaMOpb3BzIHZvdXMgb2ZmcmUgc29uIHNjZXB0cmUgZW4gb3IuIikKICAgIGludmVudGFpcmUuYXBwZW5kKCJTY2VwdHJlIikKZWxpZiBjaG9peCA9PSAiLTUwIjoKICAgIHByaW50KCJWb3VzIGZhaXRlcyBsYSByZW5jb250cmUgZGUgSnVsZXMgQ8Opc2FyLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJWb3VsZXotdm91cyByZWpvaW5kcmUgc2EgZ2FyZGUgcGVyc29ubmVsbGUgPyIsIFsib3VpIiwgIm5vbiJdKQogICAgaWYgY2hvaXggPT0gIm91aSI6CiAgICAgICAgcHJpbnQoIlZvdXMgcmVjZXZleiB1bmUgYXJtdXJlIGRlIHJvbWFpbi4iKQogICAgICAgIGludmVudGFpcmUuYXBwZW5kKCJBcm11cmUiKQogICAgZWxpZiBjaG9peCA9PSAibm9uIjoKICAgICAgICBwcmludCgiVm91cyByZWZ1c2V6IHBvbGltZW50LiIpCmVsaWYgY2hvaXggPT0gIjE3ODkiOgogICAgcHJpbnQoIlZvdXMgdm91cyBmYWl0ZXMgY291cGVyIGxhIHTDqnRlIGxvcnMgZGUgbGEgcsOpdm9sdXRpb24gZnJhbsOnYWlzZSAhIikKICAgIHBlcmR1ID0gVHJ1ZQplbGlmIGNob2l4ID09ICIyMTAwIjoKICAgIHByaW50KCJEYW5zIGxlIGZ1dHVyLCB1biBzw6lydW0gZCdpbW1vcnRhbGl0w6kgZXN0IHZlbmR1IGVuIHBoYXJtYWNpZS4gVm91cyBlbiBwaXF1ZXogdW4gcGV1LiIpCiAgICBpbnZlbnRhaXJlLmFwcGVuZCgiU8OpcnVtIikKCmlmIG5vdCBwZXJkdToKICAgIHByaW50KCJWb3VzIHJldmVuZXogZGFucyBsZSBwcsOpc2VudC4iKQogICAgaWYgIlNjZXB0cmUiIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdHJlIGF2ZW50dXJlIHZvdXMgYSByZW5kdSBzdXBlciByaWNoZSAhIikKICAgIGVsaWYgIkFybXVyZSIgaW4gaW52ZW50YWlyZToKICAgICAgICBwcmludCgiUGx1cyBwZXJzb25uZSBuZSB2b3VzIGNoZXJjaGVyYSBkJ2VubnVpcyBhdmVjIGwnYXJtdXJlIHF1ZSB2b3VzIGF2ZXogcmFtZW7DqWUgISIpCiAgICBlbGlmICJTw6lydW0iIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdXMgY29tbWVyY2lhbGlzZXogdm90cmUgc8OpcnVtIGV0IHJlbmRleiB0b3V0ZSBsJ2h1bWFuaXTDqSBpbW1vcnRlbGxlIChvdXBzKSAhIikKCnByaW50KCJGaW4gZGUgbCdhdmVudHVyZSIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div><section id="a-vous-de-jouer">
+<h2>A vous de jouer 🎮<a class="headerlink" href="#a-vous-de-jouer" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Créez votre propre histoire interactive et déposez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> sur Moodle !</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICBjaG9peCA9IGlucHV0KGYne3F1ZXN0aW9ufSAoeyIvIi5qb2luKGNob2l4X3Bvc3NpYmxlcyl9KTogJykKICAgIHdoaWxlIGNob2l4IG5vdCBpbiBjaG9peF9wb3NzaWJsZXM6CiAgICAgICAgY2hvaXggPSBpbnB1dChmJ3txdWVzdGlvbn0gKHsiLyIuam9pbihjaG9peF9wb3NzaWJsZXMpfSk6ICcpCiAgICByZXR1cm4gY2hvaXgKCmludmVudGFpcmUgPSBbXQoKcHJpbnQoIkTDqWJ1dCBkZSB2b3RyZSBoaXN0b2lyZS4uLiIp" data-file="bW9uX2F2ZW50dXJlLnB5" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div><div class="hint admonition">
+<p class="admonition-title">Exemple plus complexe</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<span style="color:grey">Clique ici</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici le logigramme représentant une aventure plus complexe:</p>
+<a class="reference internal image-reference" href="_images/aventure.png"><img alt="_images/aventure.png" src="_images/aventure.png" style="width: 800px;"/></a>
+<p class="card-text">Et son code:</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICBjaG9peCA9IGlucHV0KGYne3F1ZXN0aW9ufSAoeyIvIi5qb2luKGNob2l4X3Bvc3NpYmxlcyl9KTogJykKICAgIHdoaWxlIGNob2l4IG5vdCBpbiBjaG9peF9wb3NzaWJsZXM6CiAgICAgICAgY2hvaXggPSBpbnB1dChmJ3txdWVzdGlvbn0gKHsiLyIuam9pbihjaG9peF9wb3NzaWJsZXMpfSk6ICcpCiAgICByZXR1cm4gY2hvaXgKCmRlZiBlbnRyZXJfZm9yZXQoKToKICAgIHByaW50KCJWb3VzIGFycml2ZXogZGFucyB1bmUgZ3JhbmRlIGZvcsOqdCBsdWd1YnJlLiIpCiAgICBwcmludCgiRGV2YW50IHZvdXMsIHZvdXMgcG91dmV6IHZvaXIgZGV1eCBjaGVtaW5zLiBMZSBjaGVtaW4gZGUgZ2F1Y2hlIG3DqG5lIMOgIHVuZSByaXZpw6hyZSBldCBsZSBjaGVtaW4gZGUgZHJvaXRlIG3DqG5lIMOgIHVuZSBncm90dGUgc29tYnJlLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJTdXIgcXVlbCBjaGVtaW4gdm91bGV6LXZvdXMgYWxsZXIgPyIsIFsiZ2F1Y2hlIiwgImRyb2l0ZSJdKQogICAgaWYgY2hvaXggPT0gImdhdWNoZSI6CiAgICAgICAgYXJyaXZlcl9yaXZpZXJlKCkKICAgIGVsaWYgY2hvaXggPT0gImRyb2l0ZSI6CiAgICAgICAgZW50cmVyX2dyb3R0ZSgpCgpkZWYgYXJyaXZlcl9yaXZpZXJlKCk6CiAgICBwcmludCgiVm91cyBhcnJpdmV6IMOgIGxhIHJpdmnDqHJlLiIpCiAgICBwcmludCgiVm91cyBwb3V2ZXogdm9pciB1bmUgY2FubmUgw6AgcMOqY2hlIHN1ciBsYSBiZXJnZS4iKQogICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiVm91bGV6LXZvdXMgcmFtYXNzZXIgbGEgY2FubmUgw6AgcMOqY2hlID8iLCBbIm91aSIsICJub24iXSkKICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgIGludmVudGFpcmUuYXBwZW5kKCJjYW5uZSDDoCBww6pjaGUiKQogICAgICAgIHByaW50KCJWb3VzIGF2ZXogcmFtYXNzw6kgbGEgY2FubmUgw6AgcMOqY2hlLiIpCiAgICBlbGlmIGNob2l4ID09ICJub24iOgogICAgICAgIHByaW50KCJWb3VzIGF2ZXogZMOpY2lkw6kgZGUgbmUgcGFzIHByZW5kcmUgbGEgY2FubmUgw6AgcMOqY2hlLiIpCiAgICBwcmludCgiVm91cyBkw6ljaWRleiBkZSBsb25nZXIgbGEgcml2acOocmUuIikKICAgIHByaW50KCJBcHLDqHMgdW4gY2VydGFpbiB0ZW1wcywgdm91cyB0cm91dmV6IHVuIHBvbnQgZW4gYm9pcyBxdWkgdHJhdmVyc2UgbGEgcml2acOocmUuIikKICAgIGNob2l4ID0gcG9zZXJfcXVlc3Rpb24oIlZvdWxlei12b3VzIHRyYXZlcnNlciBsZSBwb250ID8iLCBbIm91aSIsICJub24iXSkKICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgIHByaW50KCJWb3VzIHRyYXZlcnNleiBsZSBwb250IGV0IHZvdXMgdm91cyByZXRyb3V2ZXogc3VyIGwnYXV0cmUgcml2ZSBkZSBsYSByaXZpw6hyZS4iKQogICAgICAgIHByaW50KCJWb3VzIHRvbWJleiBuZXogw6AgbmV6IGF2ZWMgdW4gaG9ycmlibGUgb2dyZS4iKQogICAgICAgIGNob2l4ID0gcG9zZXJfcXVlc3Rpb24oIlZvdWxlei12b3VzIGwnYWZmcm9udGVyID8iLCBbIm91aSIsICJub24iXSkKICAgICAgICBpZiBjaG9peCA9PSAib3VpIjoKICAgICAgICAgICAgaWYgJ8OpcMOpZScgaW4gaW52ZW50YWlyZToKICAgICAgICAgICAgICAgIHByaW50KCJHcsOiY2Ugw6Agdm90cmUgw6lww6llLCB2b3VzIHRlcnJhc3NleiBsJ29ncmUgZW4gbHVpIGNvdXBhbnQgbGEgdMOqdGUuIikKICAgICAgICAgICAgICAgIHByaW50KCJWb3VzIHJlcHJlbmV6IGxhIHJvdXRlIGV0IHRyb3V2ZXogZmluYWxlbWVudCB2b3RyZSBtYWlzb24uIikKICAgICAgICAgICAgICAgIHByaW50KCJGw6lsaWNpdGF0aW9ucywgdm91cyBhdmV6IHRlcm1pbsOpIGwnYXZlbnR1cmUhIikKICAgICAgICAgICAgZWxzZToKICAgICAgICAgICAgICAgIHByaW50KCJDb21tZSB2b3VzIG4nYXZleiBwYXMgZCdhcm1lLCBsJ29ncmUgdm91cyDDqWNyYWJvdWlsbGUuIikKICAgICAgICAgICAgICAgIHByaW50KCJWb3VzIMOqdGVzIG1vcnQuIikKICAgICAgICBlbGlmIGNob2l4ID09ICJub24iOgogICAgICAgICAgICBwcmludCgiVm91cyBkw6ljaWRleiBkZSByZWJyb3Vzc2VyIGNoZW1pbiBldCByZXRvdXJuZXogZGFucyBsYSBmb3LDqnQuIikKICAgICAgICAgICAgZW50cmVyX2ZvcmV0KCkKICAgIGVsaWYgY2hvaXggPT0gIm5vbiI6CiAgICAgICAgcHJpbnQoIlZvdXMgZMOpY2lkZXogZGUgbmUgcGFzIHRyYXZlcnNlciBsZSBwb250IGV0IHJldG91cm5leiBkYW5zIGxhIGZvcsOqdC4iKQogICAgICAgIGVudHJlcl9mb3JldCgpCgpkZWYgZW50cmVyX2dyb3R0ZSgpOgogICAgcHJpbnQoIlZvdXMgYXJyaXZleiBkZXZhbnQgdW5lIGdyb3R0ZS4iKQogICAgcHJpbnQoIlZvdXMgdm95ZXogdW5lIHRvcmNoZSDDqXRlaW50ZSBwcsOocyBkZSBsJ2VudHLDqWUgZGUgbGEgZ3JvdHRlLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJWb3VsZXotdm91cyBwcmVuZHJlIGxhIHRvcmNoZSA/IiwgWyJvdWkiLCAibm9uIl0pCiAgICBpZiBjaG9peCA9PSAib3VpIjoKICAgICAgICBpbnZlbnRhaXJlLmFwcGVuZCgidG9yY2hlIikKICAgICAgICBwcmludCgiVm91cyBhdmV6IHByaXMgbGEgdG9yY2hlLiIpCiAgICBlbGlmIGNob2l4ID09ICJub24iOgogICAgICAgIHByaW50KCJWb3VzIGTDqWNpZGV6IGRlIG5lIHBhcyBwcmVuZHJlIGxhIHRvcmNoZSBldCB2b3VzIGVudHJleiBkYW5zIGxhIGdyb3R0ZSBzYW5zIGx1bWnDqHJlLiIpCiAgICBwcmludCgiVm91cyBhdmFuY2V6IGRhbnMgbGEgZ3JvdHRlIGV0IHZvdXMgcmVuY29udHJleiB1biBkcmFnb24gcXVpIGJsb3F1ZSB2b3RyZSBjaGVtaW4uIikKICAgIGlmICJjYW5uZSDDoCBww6pjaGUiIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdXMgdXRpbGlzZXogdm90cmUgY2FubmUgw6AgcMOqY2hlIHBvdXIgY29tYmF0dHJlIGxlIGRyYWdvbiBldCB2b3VzIHLDqXVzc2lzc2V6IMOgIGxlIHZhaW5jcmUgKGluY3JveWFibGUpLiIpCiAgICAgICAgZW50cmVyX3NhbGxlX3NlY3JldGUoKQogICAgZWxpZiAidG9yY2hlIiBpbiBpbnZlbnRhaXJlOgogICAgICAgIHByaW50KCJWb3VzIHV0aWxpc2V6IHZvdHJlIHRvcmNoZSBwb3VyIGVmZnJheWVyIGxlIGRyYWdvbiBldCB2b3VzIHLDqXVzc2lzc2V6IMOgIHBhc3NlciBzYW5zIMOqdHJlIGF0dGFxdcOpIChpbmNyb3lhYmxlKS4iKQogICAgICAgIGVudHJlcl9zYWxsZV9zZWNyZXRlKCkKICAgIGVsc2U6CiAgICAgICAgcHJpbnQoIlZvdXMgbidhdmV6IHBhcyBkJ2FybWUgcG91ciBjb21iYXR0cmUgbGUgZHJhZ29uIGV0IHZvdXMgw6p0ZXMgZMOpdm9yw6kuIikKICAgICAgICBwcmludCgiVm91cyDDqnRlcyBtb3J0LiIpCgpkZWYgZW50cmVyX3NhbGxlX3NlY3JldGUoKToKICAgIHByaW50KCJWb3VzIGNvbnRpbnVleiB2b3RyZSBjaGVtaW4ganVzcXUnw6AgdHJvdXZlciB1bmUgc2FsbGUgc2VjcsOodGUuIikKICAgIHByaW50KCJWb3VzIHRyb3V2ZXogdW5lIG1hZ25pZmlxdWUgw6lww6llIHN1ciB1biBzb2NsZS4iKQogICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiVm91bGV6LXZvdXMgcmFtYXNzZXIgbCfDqXDDqWUgPyIsIFsib3VpIiwgIm5vbiJdKQogICAgaWYgY2hvaXggPT0gJ291aSc6CiAgICAgICAgcHJpbnQoIlZvdXMgcGFydmVuZXogw6AgbCdleHRyYWlyZSBkdSBzb2NsZSwgdm91cyDDqnRyZSBwcm9iYWJsZW1lbnQgbCfDqWx1LiIpCiAgICAgICAgaW52ZW50YWlyZS5hcHBlbmQoIsOpcMOpZSIpCiAgICBlbGlmIGNob2l4ID09ICdub24nOgogICAgICAgIHByaW50KCJWb3VzIGTDqWNpZGV6IGQnaWdub3JlciBsJ8OpcMOpZSAobWFpcyBwb3VycXVvaSA/Pz8pLiIpCiAgICBwcmludCgiQydlc3QgdW4gY3VsIGRlIHNhYywgdm91cyByZXRvdXJuZXogZGFucyBsYSBmb3LDqnQuIikKICAgIGVudHJlcl9mb3JldCgpCgojIETDqWJ1dCBkZSBsJ2F2ZW50dXJlCmludmVudGFpcmUgPSBbXQoKcHJpbnQoIkVuIHZvdXMgYmFsbGFkYW50IHVuIHBldSB0cm9wIGxvaW4gZGUgY2hleiB2b3VzLCB2b3VzIGF2ZXogZmluaSBwYXIgdm91cyBwZXJkcmUuIikKcHJpbnQoIlJldHJvdXZleiBsZSBjaGVtaW4gZGUgbGEgbWFpc29uLiIpCmVudHJlcl9mb3JldCgp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="codeplay/frame.html"></iframe></div></div>
+</details></div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="epidemie.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Simulation d’épidémie</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="prog1/algo.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">7. Les algorithmes</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="_sources/aventure.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Aventure textuelle</a><ul>
+<li><a class="reference internal" href="#a-vous-de-jouer">A vous de jouer 🎮</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/main.js"></script>
+    <script src="_static/glossary.js"></script>
+    <script src="_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="_static/blanks.js"></script>
+    <script src="_static/timeline.js"></script>
+    <script src="_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="_static/scripts/reactions.js"></script>
+    <script src="_static/scripts/progress.js"></script>
+    <script src="_static/scripts/dark.js"></script>
+    <script src="_static/scripts/frames.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1017 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Zone de code libre" href="../outils/code_libre.html" /><link rel="prev" title="Simulation d’épidémie" href="epidemie.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Portes logiques - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="aventure.html">Aventure textuelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Portes logiques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="portes-logiques">
+<span id="divers-portes-logiques"></span><h1>Portes logiques<a class="headerlink" href="#portes-logiques" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans cette activité, vous allez concevoir des circuits logiques à l’aide de portes logiques.</p>
+<p>Voici par exemple un circuit logique qui permet de calculer la valeur de sortie d’une porte <strong>OU-EXCLUSIF</strong> (XOR) en fonction de ses deux entrées.</p>
+<div class="logic-container" style="height: 160px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  "v": 4,
+  "in": [
+    {"pos": [40, 30], "id": 0, "val": 0},
+    {"pos": [40, 110], "id": 47, "val": 0}
+  ],
+  "out": [
+    {"pos": [430, 50], "id": 59}
+  ],
+  "gates": [
+    {"type": "OR", "pos": [170, 40], "in": [48, 49], "out": 50},
+    {"type": "AND", "pos": [170, 100], "in": [51, 52], "out": 53},
+    {"type": "NOT", "pos": [250, 100], "in": 54, "out": 55},
+    {"type": "AND", "pos": [360, 50], "in": [56, 57], "out": 58}
+  ],
+  "wires": [[0, 48], [47, 49], [0, 51], [47, 52], [53, 54], [50, 56], [55, 57], [58, 59]]
+}
+</script></logic-editor></div><section id="selecteur-de-chien">
+<h2>1. Sélecteur de chien 🐶<a class="headerlink" href="#selecteur-de-chien" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.</p>
+<section id="exercice-1-1-criteres-simples">
+<h3>Exercice 1.1 - Critères simples<a class="headerlink" href="#exercice-1-1-criteres-simples" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
+<p>Les caractéristiques <strong>petit</strong> et <strong>gentil</strong> sont les valeurs logiques d’entrée pouvant valoir 0 ou 1.</p>
+<div class="logic-container" style="height: 200px;"><logic-editor mode="design" showonly="in,out,and,or,xor">
+<script type="application/json">
+{
+  "v": 2,
+  "opts": {"showOnly": ["and", "or", "xor", "not"]},
+  "in": [
+    {"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0},
+    {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}
+],
+  "out": [{"pos": [360, 80], "id": 18, "name": "OK"}]
+}
+</script></logic-editor></div><div class="hint admonition">
+<p class="admonition-title">Solution 1.1</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Il suffit d’insérer une porte <strong>ET</strong>.</p>
+<div class="logic-container" style="height: 200px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [{"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0}, {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}],
+  "out": [{"pos": [460, 80], "id": 18, "name": "OK"}],
+  "gates": [{"type": "AND", "pos": [240, 80], "in": [0, 1], "out": 2}],
+  "wires": [[2, 18], [14, 0], [16, 1]]
+}
+</script></logic-editor></div></div>
+</details></div>
+</section>
+<section id="exercice-1-2-criteres-plus-compliques">
+<h3>Exercice 1.2 - Critères plus compliqués<a class="headerlink" href="#exercice-1-2-criteres-plus-compliques" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les critères sont maintenant devenus plus complexes. Le chien doit remplir les conditions suivantes:</p>
+<ul class="simple">
+<li><p>Le chien doit être gentil;</p></li>
+<li><p>Le chien ne doit pas baver tout le temps;</p></li>
+<li><p>Il faut soit que ce soit un petit chien, soit que ce soit un labrador.</p></li>
+</ul>
+<p>Pour tester, par exemple, si un gentil petit berger allemand qui ne bave pas tout le temps est un candidat à être récupéré, on règlera les entrées suivantes:</p>
+<ul class="simple">
+<li><p>Gentil: 1 (le chien est gentil)</p></li>
+<li><p>Bave tout le temps: 0 (le chien ne bave pas tout le temps)</p></li>
+<li><p>Petit: 1 (le chien est un petit chien)</p></li>
+<li><p>Labrador: 0 (le chien n’est pas un labrador)</p></li>
+</ul>
+<p>On s’attend dans ce cas à ce que la sortie «OK» vaille 1.</p>
+<div class="logic-container" style="height: 320px;"><logic-editor mode="design" showonly="in,out,and,or,xor,not">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [
+    {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 1},
+    {"pos": [190, 130], "id": 15, "name": "Bave tout le temps", "val": 0},
+    {"pos": [190, 190], "id": 16, "name": "Petit", "val": 1},
+    {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
+  ],
+  "out": [{"pos": [540, 160], "id": 18, "name": "OK"}]
+}
+</script></logic-editor></div><div class="hint admonition">
+<p class="admonition-title">Solution 1.2</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Il existe de multiples solutions, en voici une.</p>
+<div class="logic-container" style="height: 320px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [
+    {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 0},
+    {"pos": [190, 130], "id": 15, "name": "Bave tout le temps", "val": 0},
+    {"pos": [190, 190], "id": 16, "name": "Petit", "val": 0},
+    {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
+  ],
+  "out": [{"pos": [490, 210], "id": 18, "name": "OK pour ce chien!"}],
+  "gates": [
+    {"type": "AND", "pos": [420, 210], "in": [0, 1], "out": 2},
+    {"type": "OR", "pos": [310, 220], "in": [3, 4], "out": 5},
+    {"type": "AND", "pos": [340, 120], "in": [6, 7], "out": 8},
+    {"type": "NOT", "pos": [260, 130], "in": 9, "out": 10}
+  ],
+  "wires": [[2, 18], [8, 0], [14, 6], [15, 9], [10, 7], [16, 3], [17, 4], [5, 1]]
+}
+</script></logic-editor></div></div>
+</details></div>
+</section>
+<section id="exercice-1-3-encodage-et-decodage-des-races">
+<h3>Exercice 1.3 - Encodage et décodage des races<a class="headerlink" href="#exercice-1-3-encodage-et-decodage-des-races" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’entrée «labrador» de la partie précédente n’est pas très intéressante, car elle ne permet de modéliser qu’une seule race de chiens. Dans cette deuxième partie, on va tenter <strong>d’encoder différentes races de chien avec seulement 2 bits</strong>.</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Combien de races pourra-t-on au maximum représenter si on se permet d’utiliser 2 entrées ?</p>
+<p><label class="answer incorrect"><input type="checkbox"/>1</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>2</label><br/>
+<label class="answer correct"><input type="checkbox"/>4</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>8</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>1 million</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Nous pourrons représenter 4 races car nous avons 4 possibilités: 00, 01, 10 et 11. De manière générale, avec <code class="docutils literal notranslate"><span class="pre">n</span></code> bits/entrées, on pourra représenter <code class="docutils literal notranslate"><span class="pre">2^n</span></code> races.</p>
+</div>
+</div>
+</form></div><p>On va donc s’intéresser à 4 races de chiens: border collie, berger allemand, husky et labrador. On décide de l’encodage suivant:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Représentation binaire</p></th>
+<th class="text-align:left head"><p>Race</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>00</p></td>
+<td class="text-align:left"><p>border collie</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>01</p></td>
+<td class="text-align:left"><p>berger allemand</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>10</p></td>
+<td class="text-align:left"><p>husky</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>11</p></td>
+<td class="text-align:left"><p>labrador</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>On a donc maintenant besoin d’un décodeur: en utilisant les 2 bits d’entrées, il s’agit d’avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.</p>
+<div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="in,out,and,or,xor,not">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [
+    {"pos": [120, 80], "orient": "s", "id": 0, "val": 0},
+    {"pos": [160, 80], "orient": "s", "id": 1, "name": "Code de la race du chien sur 2 bits", "val": 0}
+  ],
+  "out": [
+    {"pos": [460, 190], "id": 2, "name": "c’est un border collie"},
+    {"pos": [460, 310], "id": 3, "name": "c’est un labrador"},
+    {"pos": [460, 270], "id": 4, "name": "c’est un husky"},
+    {"pos": [460, 230], "id": 5, "name": "c’est un berger allemand"}
+  ]
+}
+</script></logic-editor></div><div class="hint admonition">
+<p class="admonition-title">Solution 1.3</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  "v": 2,
+  "in": [
+    {"pos": [120, 80], "orient": "s", "id": 0, "val": 0},
+    {"pos": [160, 80], "orient": "s", "id": 1, "name": "Code de la race du chien sur 2 bits", "val": 0}
+  ],
+  "out": [
+    {"pos": [460, 190], "id": 2, "name": "c’est un border collie"},
+    {"pos": [460, 310], "id": 3, "name": "c’est un labrador"},
+    {"pos": [460, 270], "id": 4, "name": "c’est un husky"},
+    {"pos": [460, 230], "id": 5, "name": "c’est un berger allemand"}
+  ],
+  "gates": [
+    {"type": "AND", "pos": [210, 310], "in": [6, 7], "out": 8},
+    {"type": "AND", "pos": [360, 270], "in": [9, 10], "out": 11},
+    {"type": "NOT", "pos": [230, 110], "in": 12, "out": 13},
+    {"type": "NOT", "pos": [230, 160], "in": 14, "out": 15},
+    {"type": "AND", "pos": [390, 120], "in": [16, 17], "out": 18},
+    {"type": "AND", "pos": [360, 210], "in": [19, 20], "out": 21}
+  ],
+  "wires": [
+    [8, 3],
+    [1, 6],
+    [0, 7],
+    [11, 4],
+    [1, 12],
+    [0, 14],
+    [18, 2],
+    [13, 16],
+    [15, 17],
+    [21, 5],
+    [13, 9],
+    [0, 10, {"via": [[240, 280]]}],
+    [15, 19],
+    [1, 20, {"via": [[200, 220]]}]
+  ]
+}
+</script></logic-editor></div><p class="card-text">La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer toutes les portes <strong>ET</strong> par des portes <strong>OU</strong> et inversement. Le même circuit peut donc être réalisé avec des portes <strong>OU</strong>.</p>
+</div>
+</details></div>
+</section>
+</section>
+<section id="binaire-et-decimal">
+<h2>2. Binaire et décimal<a class="headerlink" href="#binaire-et-decimal" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans cette partie, vous allez concevoir des circuits traduisant des nombres décimaux en nombres binaires.</p>
+<section id="exercice-2-1-decodeur-de-clavier">
+<h3>Exercice 2.1 - Décodeur de clavier<a class="headerlink" href="#exercice-2-1-decodeur-de-clavier" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Complétez le circuit pour un décodeur de touches de clavier qui a le comportement suivant :</p>
+<ul class="simple">
+<li><p>Touche 1 appuyée produit la sortie binaire 01</p></li>
+<li><p>Touche 2 appuyée produit la sortie binaire 10</p></li>
+<li><p>Touche 3 appuyée produit la sortie binaire 11</p></li>
+</ul>
+<div class="logic-container" style="height: 300px;"><logic-editor showonly="in out or">
+<script type="application/json">
+{
+  "v": 3,
+  "in": [
+    {"pos": [50, 30], "id": 0, "name": "1", "val": 0, "isPushButton": true},
+    {"pos": [50, 80], "id": 1, "name": "2", "val": 0, "isPushButton": true},
+    {"pos": [50, 130], "id": 2, "name": "3", "val": 0, "isPushButton": true}
+  ],
+  "gates": [{"type": "OR", "pos": [220, 40], "in": [6, 7], "out": 8}],
+  "out": [{"pos": [300, 150], "orient": "s", "id": 10}, {"pos": [350, 150], "orient": "s", "id": 11}],
+  "wires": [[0, 6], [2, 7], [8, 11]]
+}
+</script></logic-editor></div><p>Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (mais vous auriez besoin d’augmenter le nombre de bits de sortie).</p>
+<div class="hint admonition">
+<p class="admonition-title">Solution 2.1</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [50, 30], id: 0, name: '1', isPushButton: true},
+    in1: {type: 'in', pos: [50, 80], id: 1, name: '2', isPushButton: true},
+    in2: {type: 'in', pos: [50, 130], id: 2, name: '3', isPushButton: true},
+    out0: {type: 'out', pos: [300, 150], orient: 's', id: 10},
+    out1: {type: 'out', pos: [350, 150], orient: 's', id: 11},
+    or0: {type: 'or', pos: [220, 40], in: [6, 7], out: 8},
+    or1: {type: 'or', pos: [200, 110], in: [3, 4], out: 5},
+  },
+  wires: [[0, 6], [2, 7], [8, 11], [1, 3], [2, 4], [5, 10]]
+}
+</script></logic-editor></div></div>
+</details></div>
+</section>
+<section id="exercice-2-2-decodeur-de-de">
+<h3>Exercice 2.2 - Décodeur de dé<a class="headerlink" href="#exercice-2-2-decodeur-de-de" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Un dé de jeu peut afficher les nombres 1 à 6 à l’aide de 7 lampes.<br/>
+Plusieurs lampes s’allument par paire. Voici la table de vérité.</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>b2</p></th>
+<th class="head"><p>b1</p></th>
+<th class="text-align:center head"><p>b0</p></th>
+<th class="text-align:center head"><p>valeur</p></th>
+<th class="text-align:center head"><p>a,g</p></th>
+<th class="text-align:center head"><p>b,f</p></th>
+<th class="text-align:center head"><p>c,e</p></th>
+<th class="head"><p>d</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>3</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p></p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Utilisez les portes logiques OU et ET pour créer le circuit de décodage affichant les lampes qui correspondent aux nombres 1 à 6.</p>
+<p>Le nombre binaire <span class="math notranslate nohighlight">\(b_2 b_1 b_0\)</span> doit allumer les lampes a-g pour afficher ce nombre dans la façon d’un dé à jeu standard.</p>
+<div class="logic-container" style="height: 300px;"><logic-editor showonly="in and or out.bar">
+<script type="application/json">
+{
+  "v": 4,
+  "opts": {"propagationDelay": 10},
+  "in": [
+    {"pos": [60, 40], "id": 7, "name": "b0", "val": 1},
+    {"pos": [60, 80], "id": 8, "name": "b1", "val": 0},
+    {"pos": [60, 120], "id": 26, "name": "b2", "val": 1}
+  ],
+  "out": [
+    {"type": "bar", "pos": [380, 30], "id": 0, "display": "px", "name": "a"},
+    {"type": "bar", "pos": [380, 70], "id": 1, "display": "px", "name": "b"},
+    {"type": "bar", "pos": [430, 70], "orient": "s", "id": 2, "display": "px", "name": "d"},
+    {"type": "bar", "pos": [380, 120], "id": 3, "display": "px", "name": "c"},
+    {"type": "bar", "pos": [480, 70], "id": 4, "display": "px", "name": "f"},
+    {"type": "bar", "pos": [480, 30], "id": 5, "display": "px", "name": "e"},
+    {"type": "bar", "pos": [480, 120], "id": 6, "display": "px", "name": "g"}
+  ]
+}
+</script></logic-editor></div><div class="hint admonition">
+<p class="admonition-title">Solution 2.2</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  v: 6,
+  opts: {propagationDelay: 10},
+  components: {
+    in0: {type: 'in', pos: [60, 40], id: 7, name: 'b0', val: 1},
+    in1: {type: 'in', pos: [60, 80], id: 8, name: 'b1'},
+    in2: {type: 'in', pos: [60, 120], id: 26, name: 'b2', val: 1},
+    bar0: {type: 'bar', pos: [535, 45], id: 0, name: 'a', display: 'px'},
+    bar1: {type: 'bar', pos: [535, 85], id: 1, name: 'b', display: 'px'},
+    bar2: {type: 'bar', pos: [585, 85], orient: 's', id: 2, name: 'd', display: 'px'},
+    bar3: {type: 'bar', pos: [535, 135], id: 3, name: 'c', display: 'px'},
+    bar4: {type: 'bar', pos: [635, 85], id: 4, name: 'f', display: 'px'},
+    bar5: {type: 'bar', pos: [635, 45], id: 5, name: 'e', display: 'px'},
+    bar6: {type: 'bar', pos: [635, 135], id: 6, name: 'g', display: 'px'},
+    or0: {type: 'or', pos: [295, 130], in: [9, 10], out: 11},
+    and0: {type: 'and', pos: [295, 210], in: [12, 13], out: 14},
+  },
+  wires: [[8, 9], [26, 10], [8, 12], [26, 13], [11, 0], [11, 6], [14, 1], [14, 4], [26, 3], [26, 5], [7, 2]]
+}
+</script></logic-editor></div><p class="card-text">Pour résoudre l’exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie ‘a-g’ vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte <strong>OU</strong> pour cette sortie. On procède ensuite de la même manière pour les autres sorties.</p>
+</div>
+</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<!--
+### Exercice 2.1 - Système d'alarmes pour animaux de compagnie
+
+Oublions un moment les chiens et concentrons-nous sur les systèmes d'alarme pour animaux de compagnie. Vous êtes mandaté par une entreprise pour développer un système capable de déclencher une alarme lorsque certaines conditions sont remplies.
+
+1. Analysez la table de vérité ci-dessous. Comprenez quelles sont les conditions qui doivent être remplies pour que l'alarme se déclenche.
+2. Concevez le circuit logique correspondant.
+
+| Chien | Chat | Porte ouverte | Propriétaire présent | **Alarme** |
+| :---: | :--: | :-----------: | :------------------: | :----: |
+|   0   |  0   |       0       |           0           |   0   |
+|   0   |  0   |       0       |           1           |   0   |
+|   0   |  0   |       1       |           0           |   0   |
+|   0   |  0   |       1       |           1           |   0   |
+|   0   |  1   |       0       |           0           |   0   |
+|   0   |  1   |       0       |           1           |   0   |
+|   0   |  1   |       1       |           0           |   1   |
+|   0   |  1   |       1       |           1           |   0   |
+|   1   |  0   |       0       |           0           |   0   |
+|   1   |  0   |       0       |           1           |   0   |
+|   1   |  0   |       1       |           0           |   1   |
+|   1   |  0   |       1       |           1           |   0   |
+|   1   |  1   |       0       |           0           |   0   |
+|   1   |  1   |       0       |           1           |   0   |
+|   1   |  1   |       1       |           0           |   1   |
+|   1   |  1   |       1       |           1           |   0   |
+
+Déterminez d'abord en français les conditions qui doivent être remplies pour que l'alarme se déclenche. Ensuite, concevez le circuit logique correspondant.
+
+```{logic}
+:height: 390
+:mode: design
+:showonly: and,or,xor,not
+
+{
+  "v": 5,
+  "in": [
+    {"pos": [180, 115], "id": 14, "name": "Chien"},
+    {"pos": [180, 175], "id": 15, "name": "Chat"},
+    {"pos": [180, 235], "id": 16, "name": "Porte ouverte"},
+    {"pos": [180, 290], "id": 21, "name": "Propriétaire présent"}
+  ],
+  "out": [
+    {"pos": [660, 195], "id": 22, "name": "Alarme"}
+  ]
+}
+```
+-->
+</section>
+</section>
+<section id="commutateurs">
+<h2>3. Commutateurs<a class="headerlink" href="#commutateurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La porte XOR (OU-X) peut permetre d’allumer et éteindre une lampe avec des commutateurs multiples.</p>
+<p>Dans le schéma ci-dessous, on peut allumer ou éteindre la lumière dans une pièce à partir de la porte d’entrée ou de la cuisine.<br/>
+Ajoutez un circuit pour qu’on puisse également l’allumer ou l’éteindre depuis la chambre.</p>
+<div class="logic-container" style="height: 300px;"><logic-editor id="logic_xor" showonly="in out not and or xor label.rect">
+<script type="application/json">
+{
+  "v": 3,
+  "labels": [{"type": "rect", "pos": [290, 120], "w": 300, "h": 200, "color": "yellow", "strokeWidth": 2}],
+  "in": [
+    {"pos": [100, 150], "id": 9, "name": "entrée", "val": 0},
+    {"pos": [290, 250], "orient": "n", "id": 14, "name": "chambre", "val": 0},
+    {"pos": [470, 120], "orient": "w", "id": 15, "name": "cuisine", "val": 0}
+  ],
+  "out": [{"type": "bar", "pos": [300, 40], "id": 10, "display": "px", "color": "yellow"}],
+  "gates": [{"type": "XOR", "pos": [220, 90], "orient": "n", "in": [11, 12], "out": 13}],
+  "wires": [[13, 10], [9, 11], [15, 12]]
+}
+</script></logic-editor></div><div class="hint admonition">
+<p class="admonition-title">Solution 3</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  v: 6,
+  components: {
+    rect0: {type: 'rect', pos: [290, 120], w: 300, h: 200, color: 'yellow', strokeWidth: 2},
+    in0: {type: 'in', pos: [100, 150], id: 9, name: 'entrée'},
+    in1: {type: 'in', pos: [290, 250], orient: 'n', id: 14, name: 'chambre'},
+    in2: {type: 'in', pos: [470, 120], orient: 'w', id: 15, name: 'cuisine'},
+    bar0: {type: 'bar', pos: [300, 40], id: 10, color: 'yellow', display: 'px'},
+    xor0: {type: 'xor', pos: [190, 140], orient: 'n', in: [11, 12], out: 13},
+    xor1: {type: 'xor', pos: [245, 70], orient: 'n', in: [0, 1], out: 2},
+  },
+  wires: [[9, 11], [15, 12], [14, 1], [13, 0], [2, 10]]
+}
+</script></logic-editor></div><p class="card-text">La porte <strong>XOR</strong> est très utile pour créer des commutateurs. Elle permet de créer un circuit qui ne s’active que si un nombre impair d’entrées sont activées.</p>
+</div>
+</details></div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Comment se comporte une porte XOR prenant 3 entrées ? (A XOR B XOR C)<br/>
+Dans quel cas la valeur de sortie sera 1 ?</p>
+<p><label class="answer incorrect"><input type="checkbox"/>Seulement quand une seule entrée vaut 1</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>Seulement quand toutes les entrées valent 1</label><br/>
+<label class="answer correct"><input type="checkbox"/>Seulement quand un nombre impair d’entrées valent 1</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>Seulement quand un nombre pair d’entrées valent 1</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>Jamais</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>De manière générale, la porte XOR est un détecteur de parité (pair/impair). La sortie vaut 1 seuelement si un nombre impair d’entrées valent 1 (ce qui est une propriété extrêmement utile).</p>
+</div>
+</div>
+</form></div></section>
+<section id="challenge-exercice-4-table-mystere">
+<h2>(Challenge) Exercice 4 - Table mystère<a class="headerlink" href="#challenge-exercice-4-table-mystere" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Créez le circuit logique correspondant à la table de vérité suivante:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>A</p></th>
+<th class="text-align:center head"><p>B</p></th>
+<th class="text-align:center head"><p>C</p></th>
+<th class="text-align:center head"><p>S1</p></th>
+<th class="text-align:center head"><p>S2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
+<div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="in,out,and,or,xor,not">
+<script type="application/json">
+{
+  "v": 5,
+  "in": [
+    {"pos": [100, 115], "id": 14, "name": "A"},
+    {"pos": [100, 175], "id": 15, "name": "B"},
+    {"pos": [100, 235], "id": 16, "name": "C"}
+  ],
+  "out": [
+    {"pos": [660, 150], "id": 22, "name": "S1"},
+    {"pos": [660, 195], "id": 23, "name": "S2"}
+  ]
+}
+</script></logic-editor></div><p>Que fait ce circuit d’après vous ?</p>
+<div class="hint admonition">
+<p class="admonition-title">Solution 4</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [100, 115], id: 14, name: 'A'},
+    in1: {type: 'in', pos: [100, 175], id: 15, name: 'B'},
+    in2: {type: 'in', pos: [100, 235], id: 16, name: 'C'},
+    out0: {type: 'out', pos: [660, 150], id: 22, name: 'S1'},
+    out1: {type: 'out', pos: [660, 195], id: 23, name: 'S2'},
+    and0: {type: 'and', pos: [370, 50], in: [0, 1], out: 2},
+    and1: {type: 'and', pos: [370, 110], in: [3, 4], out: 5},
+    and2: {type: 'and', pos: [370, 170], in: [6, 7], out: 8},
+    or0: {type: 'or', pos: [540, 110], in: [12, 13, 17], out: 18, bits: 3},
+    xor0: {type: 'xor', pos: [385, 280], in: '24-26', out: 27, bits: 3},
+  },
+  wires: [[14, 0], [15, 1], [14, 3], [16, 4], [15, 6], [16, 7], [2, 12], [5, 13], [8, 17], [14, 24], [15, 25], [16, 26], [27, 23], [18, 22]]
+}
+</script></logic-editor></div><p class="card-text">Ce circuit représente un additionneur 3 bits (full adder). Il permet d’additionner 3 bits A, B et C et de récupérer le résultat sur 2 bits S1 et S2.</p>
+</div>
+</details></div>
+<p>Si vous avez tout terminé, vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp2.html#addition-binaire" target="_blank">cette page modulo</a> qui contient des exercices plus avancés sur les additionneurs (à partir de l’exercice 10.6).</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../outils/code_libre.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Zone de code libre</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="epidemie.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Simulation d’épidémie</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/divers/portes_logiques.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Portes logiques</a><ul>
+<li><a class="reference internal" href="#selecteur-de-chien">1. Sélecteur de chien 🐶</a><ul>
+<li><a class="reference internal" href="#exercice-1-1-criteres-simples">Exercice 1.1 - Critères simples</a></li>
+<li><a class="reference internal" href="#exercice-1-2-criteres-plus-compliques">Exercice 1.2 - Critères plus compliqués</a></li>
+<li><a class="reference internal" href="#exercice-1-3-encodage-et-decodage-des-races">Exercice 1.3 - Encodage et décodage des races</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#binaire-et-decimal">2. Binaire et décimal</a><ul>
+<li><a class="reference internal" href="#exercice-2-1-decodeur-de-clavier">Exercice 2.1 - Décodeur de clavier</a></li>
+<li><a class="reference internal" href="#exercice-2-2-decodeur-de-de">Exercice 2.2 - Décodeur de dé</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#commutateurs">3. Commutateurs</a></li>
+<li><a class="reference internal" href="#challenge-exercice-4-table-mystere">(Challenge) Exercice 4 - Table mystère</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

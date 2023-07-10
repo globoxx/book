@@ -1,0 +1,629 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="7. Les algorithmes" href="algo.html" /><link rel="prev" title="5. Les structures conditionnelles" href="conditions.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>6. Les types séquentiels - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../divers/aventure.html">Aventure textuelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="les-types-sequentiels">
+<span id="prog-formel-sequences"></span><h1>6. Les types séquentiels<a class="headerlink" href="#les-types-sequentiels" title="Lien permanent vers ce titre">¶</a></h1>
+<p><a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3.pdf" target="_blank">Mémento Python</a><br/>
+<a href="https://support.apple.com/fr-ch/HT201236" target="_blank">Raccourcis clavier</a></p>
+<p>Certains programmes nécessitent l’utilisation d’un grand nombres de valeurs. Il serait impraticable de les mettre chacune dans une variable différente. Comme d’autres langages de programmation, Python offre la possibilité de <strong>stocker des séquences de valeurs</strong> dans des variables de type séquentiel (ou itérable).</p>
+<p>Le type <code class="docutils literal notranslate"><span class="pre">string</span></code> que nous connaissons déjà est un exemple de variable séquentiel car il s’agit simplement d’une séquence de caractères !</p>
+<section id="le-type-liste">
+<h2>Le type liste<a class="headerlink" href="#le-type-liste" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une liste est une variable de type séquentiel. C’est une <strong>séquence ordonnée d’objets quelconques</strong> (nombres, textes, fonctions, etc…).<br/>
+Pour définir une liste, on met simplement la liste des objets que contient la liste dans des crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code> séparés par des virgules.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ0tpbScsICdBbm5hJywgJ0NpbmR5J10Kbm90ZXMgPSBbNCwgNSwgNCwgNS41LCA2LCAzLjVdCmNvdWxldXJzID0gWydmdWNoc2lhJywgJ3BpbmsnLCAnb3JhbmdlJ10KCnByaW50KG5vbXMpCnByaW50KG5vdGVzKQpwcmludChjb3VsZXVycyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>On peut accéder au contenu d’une liste en indiquant entre crochets <code class="docutils literal notranslate"><span class="pre">[]</span></code> le <strong>numéro de l’élément</strong> que l’on souhaite. <strong>Attention, le numérotation commence à 0 !</strong></p>
+<p>On appelle le numéro d’un élément <strong>l’index</strong>. Ainsi, par exemple, le 3ème élément d’une liste se trouve à l’index 2.</p>
+<p>Il est aussi possible d’accéder aux éléments en partant de la fin en commençant par l’index -1 pour le dernier élément, puis -2, -3, etc.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="am91cnMgPSBbImx1bmRpIiwgIm1hcmRpIiwgIm1lcmNyZWRpIiwgImpldWRpIiwgInZlbmRyZWRpIiwgInNhbWVkaSIsICJkaW1hbmNoZSJdCnZpc2l0ZXVycyA9IFsyMDAsIDEyMCwgMzQ1LCAyNTYsIDEyMywgNzY1LCA2NDRdCgojIE9uIGFjY8OoZGUgYXV4IGRvbm7DqWVzIGR1IDFlciBqb3VyIChpbmRleCAwKQpwcmludChmIkxlIHtqb3Vyc1swXX0sIGlsIHkgYSBldSB7dmlzaXRldXJzWzBdfSB2aXNpdGV1cnMiKQojIE9uIGFjY8OoZGUgYXV4IGRvbm7DqWVzIGR1IDLDqG1lIGpvdXIgKGluZGV4IDEpCnByaW50KGYiTGUge2pvdXJzWzFdfSwgaWwgeSBhIGV1IHt2aXNpdGV1cnNbMV19IHZpc2l0ZXVycyIpCiMgLi4uCiMgT24gYWNjw6hkZSBhdXggZG9ubsOpZXMgZHUgZGVybmllciBqb3VyIChpbmRleCA2KQpwcmludChmIkxlIHtqb3Vyc1s2XX0sIGlsIHkgYSBldSB7dmlzaXRldXJzWzZdfSB2aXNpdGV1cnMiKSAKCiMgSWwgZXN0IGF1c3NpIHBvc3NpYmxlIGQnYWNjw6lkZXIgYXUgZGVybmllciDDqWzDqW1lbnQgYXZlYyBsJ2luZGV4IC0xCnByaW50KGYiTGUge2pvdXJzWy0xXX0sIGlsIHkgYSBldSB7dmlzaXRldXJzWy0xXX0gdmlzaXRldXJzIikg" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>En informatique, une liste …</p>
+<p><label class="answer correct"><input type="checkbox"/>est ordonnée</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>n’est jamais vide</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>ne contient que des éléments du même type</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>est un ensemble mathématique</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Une liste est une séquence <strong>ordonnée</strong> d’objets quelconques (nombres, strings, fonctions, etc). Une liste peut même contenir d’autres listes.</p>
+</div>
+</div>
+</form></div><div class="note admonition">
+<p class="admonition-title">Exercice 21 - Listes de branches (facile 😎)</p>
+<p>Créez une liste <code class="docutils literal notranslate"><span class="pre">branches</span></code> et une liste <code class="docutils literal notranslate"><span class="pre">moyennes</span></code> qui contiennent respectivement les noms de 3 branches du gymnase et les moyennes que vous y avez.<br/>
+Affichez ensuite la moyenne pour chaque branche.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnJhbmNoZXMgPSAuLi4KbW95ZW5uZXMgPSAuLi4KCnByaW50KC4uLikKcHJpbnQoLi4uKQpwcmludCguLi4p" data-file="ZXhfMjEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnJhbmNoZXMgPSBbJ21hdGgnLCAnZnJhbsOnYWlzJywgJ2luZm8nXQptb3llbm5lcyA9IFs1LCA0LCA2XQoKcHJpbnQoZidNb3llbm5lIGRlIHticmFuY2hlc1swXX06IHttb3llbm5lc1swXX0nKQpwcmludChmJ01veWVubmUgZGUge2JyYW5jaGVzWzFdfToge21veWVubmVzWzFdfScpCnByaW50KGYnTW95ZW5uZSBkZSB7YnJhbmNoZXNbMl19OiB7bW95ZW5uZXNbMl19Jyk=" data-file="ZXhfMjEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Que se passe-t-il si vous essayez d’accéder à un index en dehors de la liste (par exemple à l’index 3 dans une liste de 3 éléments) ?</p>
+<p><label class="answer incorrect"><input type="checkbox"/>ça fonctionne sans problème</label><br/>
+<label class="answer correct"><input type="checkbox"/>vous avez une erreur de type « index out of range »</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>vous avez une erreur de type « invalid literal »</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>la valeur accédée dans ce cas vaut toujours 0</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Le plus grand index possible d’une liste de longueur n est n-1. Si vous dépassez cet index, vous êtes “out of range” (hors des limites) et le programme plante.</p>
+</div>
+</div>
+</form></div><p>Pour modifier un élément d’une liste à un certain index, il suffit d’utiliser le signe <code class="docutils literal notranslate"><span class="pre">=</span></code> pour mettre une nouvelle valeur à l’index voulu.<br/>
+Pour ajouter un élément à la fin d’une liste, on utilise la <strong>méthode</strong> <code class="docutils literal notranslate"><span class="pre">append()</span></code> (“ajouter” en français) en donnant en argument la valeur à ajouter.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IFs1LCAyLCA2LCAzLCA4XQpwcmludChub21icmVzKQpub21icmVzWzJdID0gLTUgICMgT24gbW9kaWZpZSBsZSAzw6htZSDDqWzDqW1lbnQgZGUgbGEgbGlzdGUgKGlsIHZhdWRyYSBhaW5zaSAtNSBhdSBsaWV1IGRlIDYpCnByaW50KG5vbWJyZXMpCm5vbWJyZXMuYXBwZW5kKDEwMDApICAjIE9uIGFqb3V0ZSB1biDDqWzDqW1lbnQgw6AgbGEgbGlzdGUgKGljaSBsZSBjaGlmZnJlIDEwMDApCnByaW50KG5vbWJyZXMp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="hint admonition">
+<p class="admonition-title">Pour aller plus loin</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Méthode vs fonction</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Une méthode (ex: <code class="docutils literal notranslate"><span class="pre">append()</span></code>) est différente d’une fonction dans le sens où elle ne peut être appelée qu’avec un <code class="docutils literal notranslate"><span class="pre">.</span></code> via l’intermédiaire d’un objet (ici une liste). Plus de détails là-dessus l’année prochaine avec la <strong>programmation orientée objet</strong> !</p>
+<p class="card-text">La liste des méthodes accessibles aux listes est disponible <a href="https://docs.python.org/fr/3/tutorial/datastructures.html#more-on-lists" target="_blank">ici</a>.</p>
+</div>
+</details></div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 22 - Modifications de listes (facile 😎)</p>
+<p>Reprenez l’exercice précédent (l’exercice 21).</p>
+<ol class="simple">
+<li><p>Modifiez la moyenne de l’une de vos branches.</p></li>
+<li><p>Ajoutez une nouvelle branche à votre liste de branches. Ajoutez également la moyenne correspondante dans la liste de moyennes.</p></li>
+<li><p>Affichez les nouvelles données.</p></li>
+</ol>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Li4uICAjIENvcGlleiBsJ2V4ZXJjaWNlIDIxIGljaQoKLi4uICAjIEZhaXRlcyBsZXMgbW9kaWZpY2F0aW9ucyBkZW1hbmTDqWVzCgpwcmludChicmFuY2hlcykKcHJpbnQobW95ZW5uZXMp" data-file="ZXhfMjIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YnJhbmNoZXMgPSBbJ21hdGgnLCAnZnJhbsOnYWlzJywgJ2luZm8nXQptb3llbm5lcyA9IFs1LCA0LCA2XQoKcHJpbnQoZidNb3llbm5lIGRlIHticmFuY2hlc1swXX06IHttb3llbm5lc1swXX0nKQpwcmludChmJ01veWVubmUgZGUge2JyYW5jaGVzWzFdfToge21veWVubmVzWzFdfScpCnByaW50KGYnTW95ZW5uZSBkZSB7YnJhbmNoZXNbMl19OiB7bW95ZW5uZXNbMl19JykKCm1veWVubmVzWzBdID0gNS41ICAjIE1vZGlmaWNhdGlvbiBkZSBtYSBtb3llbm5lIGRlIG1hdGgKYnJhbmNoZXMuYXBwZW5kKCdoaXN0b2lyZScpICAjIEFqb3V0IGRlIGxhIGJyYW5jaGUgaGlzdG9pcmUKbW95ZW5uZXMuYXBwZW5kKDQuNSkgICMgQWpvdXQgZGUgbWEgbW95ZW5uZSBkJ2hpc3RvaXJlCgpwcmludChicmFuY2hlcykKcHJpbnQobW95ZW5uZXMp" data-file="ZXhfMjIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></div>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Que va afficher ce programme ?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grille</span><span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grille</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><label class="answer incorrect"><input type="checkbox"/>4</label><br/>
+<label class="answer correct"><input type="checkbox"/>8</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>2</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>6</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>La variable <code class="docutils literal notranslate"><span class="pre">grille</span></code> est une liste contenant 3 listes de 3 nombres chacune.<br/>
+Le programme affiche le 2ème élément (index 1) de la 3ème liste (index 2).</p>
+</div>
+</div>
+</form></div><p>Les caractères d’une chaînes de caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>) peuvent aussi être indexés (numérotés). Chaque élément d’un string correspond alors à un caractère.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ01pYScsICdLaW0nLCAnQW5uYScsICdDaW5keScsICdMw6lhJ10KcHJpbnQobm9tc1swXVswXSkgICMgQWNjw6hzIMOgIGxhIDHDqHJlIGxldHRyZSBkZSBUaW0KcHJpbnQobm9tc1syXVsxXSkgICMgQWNjw6hzIMOgIGxhIDLDqG1lIGxldHRyZSBkZSBLaW0KcHJpbnQobm9tc1stMV1bMl0pICAjIEFjY8OocyDDoCBsYSAzw6htZSBsZXR0cmUgZGUgTMOpYQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La notation <code class="docutils literal notranslate"><span class="pre">[i:j]</span></code>, après le nom d’une variable qui contient une liste, permet d’extraire une sous-liste de la liste. Cette sous-liste, aussi appelée <strong>tranche</strong>, est une partie de la liste identifiée par les deux index <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code>. La sous-liste contiendra donc les éléments se trouvant entre <code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j-1</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tcyA9IFsnVGltJywgJ01pYScsICdLaW0nLCAnQW5uYScsICdDaW5keScsICdMw6lhJ10KCnByaW50KG5vbXNbOjJdKSAgIyDDqWzDqW1lbnRzIDAgZXQgMSAobGVzIDIgcHJlbWllcnMgw6lsw6ltZW50cykKcHJpbnQobm9tc1syOjRdKSAgIyDDqWzDqW1lbnRzIDIgZXQgMwpwcmludChub21zWzQ6XSkgICMgw6lsw6ltZW50cyA0IGV0IDUgKHRvdXMgbGVzIMOpbMOpbWVudHMgw6AgcGFydGlyIGRlIGwnaW5kZXggNCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Quel est le résultat de l’expression <code class="docutils literal notranslate"><span class="pre">'python'[:2]</span></code> ?</p>
+<p><label class="answer incorrect"><input type="checkbox"/>thon</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>y</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>p</label><br/>
+<label class="answer correct"><input type="checkbox"/>py</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>La tranche [:2] récupère les 2 premiers éléments (0 et 1).</p>
+</div>
+</div>
+</form></div><div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Quel est le résultat de l’expression <code class="docutils literal notranslate"><span class="pre">'pikachu'[-3:]</span></code> ?</p>
+<p><label class="answer incorrect"><input type="checkbox"/>pik</label><br/>
+<label class="answer correct"><input type="checkbox"/>chu</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>p</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>pika</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>La tranche [-3:] récupère les 3 derniers éléments (-3, -2, -1).</p>
+</div>
+</div>
+</form></div><p>Le mot-clé <code class="docutils literal notranslate"><span class="pre">in</span></code> permet de tester si une valeur se trouve dans une liste (ou n’importe quelle autre variable de type séquentiel).<br/>
+A l’inverse, <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> permet de tester l’absence d’une valeur.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZWxldmVzX3ByZXNlbnRzID0gWydUaWFnbycsICdNYXJjJywgJ1NpbW9uJywgJ0p1bGllJywgJ01hcmlhJywgJ0luw6hzJ10KCmlmICdNYXJjJyBpbiBlbGV2ZXNfcHJlc2VudHM6CiAgICBwcmludCgnTWFyYyBlc3QgcHLDqXNlbnQgIScpCgppZiAnSHVnbycgbm90IGluIGVsZXZlc19wcmVzZW50czoKICAgIHByaW50KCdIdWdvIGVzdCBhYnNlbnQgIScp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>De la même manière, <code class="docutils literal notranslate"><span class="pre">in</span></code> permet de tester si un mot se trouve dans une phrase ou un texte.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBEw6l0YWlsOiBsZXMgdHJpcGxlIGd1aWxsZW1lbnRzICgiIiIpIHBlcm1ldHRlbnQgZCdlbnRyZXIgZGVzIHN0cmluZyBkZSBwbHVzaWV1cnMgbGlnbmVzCnBvZW1lID0gIiIiQydlc3QgdW4gdHJvdSBkZSB2ZXJkdXJlIG/DuSBjaGFudGUgdW5lIHJpdmnDqHJlCkFjY3JvY2hhbnQgZm9sbGVtZW50IGF1eCBoZXJiZXMgZGVzIGhhaWxsb25zCkQnYXJnZW50IDsgb8O5IGxlIHNvbGVpbCwgZGUgbGEgbW9udGFnbmUgZmnDqHJlLApMdWl0IDogYydlc3QgdW4gcGV0aXQgdmFsIHF1aSBtb3Vzc2UgZGUgcmF5b25zLgoKVW4gc29sZGF0IGpldW5lLCBib3VjaGUgb3V2ZXJ0ZSwgdMOqdGUgbnVlLApFdCBsYSBudXF1ZSBiYWlnbmFudCBkYW5zIGxlIGZyYWlzIGNyZXNzb24gYmxldSwKRG9ydCA7IGlsIGVzdCDDqXRlbmR1IGRhbnMgbCdoZXJiZSBzb3VzIGxhIG51ZSwKUMOibGUgZGFucyBzb24gbGl0IHZlcnQgb8O5IGxhIGx1bWnDqHJlIHBsZXV0LgoKTGVzIHBpZWRzIGRhbnMgbGVzIGdsYcOvZXVscywgaWwgZG9ydC4gU291cmlhbnQgY29tbWUKU291cmlyYWl0IHVuIGVuZmFudCBtYWxhZGUsIGlsIGZhaXQgdW4gc29tbWUuCk5hdHVyZSwgYmVyY2UtbGUgY2hhdWRlbWVudCA6IGlsIGEgZnJvaWQuCgpMZXMgcGFyZnVtcyBuZSBmb250IHBhcyBmcmlzc29ubmVyIHNhIG5hcmluZSA7CklsIGRvcnQgZGFucyBsZSBzb2xlaWwsIGxhIG1haW4gc3VyIHNhIHBvaXRyaW5lClRyYW5xdWlsbGUuIElsIGEgZGV1eCB0cm91cyByb3VnZXMgYXUgY8O0dMOpIGRyb2l0LiIiIgoKbW90ID0gInNvbGRhdCIKaWYgbW90IGluIHBvZW1lOgogICAgcHJpbnQoZiJMZSBtb3QgJ3ttb3R9JyBzZSB0cm91dmUgYmllbiBkYW5zICdMZSBkb3JtZXVyIGR1IFZhbCcgZCdBcnRodXIgUmltYmF1ZCIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’opérateur <code class="docutils literal notranslate"><span class="pre">+</span></code> permet de <strong>concaténer</strong> (appondre) plusieurs listes ou plusieurs chaînes de caractères (string) ensemble.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bGlzdGUxID0gWzEsIDIsIDMsIDRdCmxpc3RlMiA9IFs1LCA2LCA3XQpsaXN0ZTMgPSBsaXN0ZTEgKyBsaXN0ZTIKcHJpbnQobGlzdGUzKQoKdGV4dGUxID0gIlNhbHV0IGFtaWdvLCB0dSB2aWVucyDDoCBsYSBzb2lyw6llID8gLSBOb24gamUgcGV1eCBwYXMsIGonYWkgIgp0ZXh0ZTIgPSAicGlzY2luZS4iCnRleHRlMyA9IHRleHRlMSArIHRleHRlMgpwcmludCh0ZXh0ZTMp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="la-boucle-for">
+<h2>La boucle for<a class="headerlink" href="#la-boucle-for" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L’instruction <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">...</span> <span class="pre">in</span> <span class="pre">...</span></code> permet <strong>d’itérer</strong> sur une variable de type séquentiel (par exemple une liste) et de répéter un bloc d’instructions pour chaque valeur de la séquence.<br/>
+<code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">valeur</span> <span class="pre">in</span> <span class="pre">liste</span></code> peut être traduit en français par <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">chaque</span> <span class="pre">valeur</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">liste</span></code> et permet donc <strong>d’itérer</strong> sur chaque valeur.</p>
+<p>Dans l’exemple ci-dessous, la variable <code class="docutils literal notranslate"><span class="pre">name</span></code> prendra successivement les valeurs de la liste <code class="docutils literal notranslate"><span class="pre">presidents</span></code> et la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> sera à chaque fois exécutée.<br/>
+Une variable qui change ainsi pour chaque élément d’une séquence est appelée une <strong>variable d’itération</strong>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJlc2lkZW50cyA9IFsiQnVzaCIsICJDbGludG9uIiwgIkJ1c2giLCAiT2JhbWEiLCAiVHJ1bXAiXQpmb3IgbmFtZSBpbiBwcmVzaWRlbnRzOgogICAgcHJpbnQobmFtZSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple suivant montre comment <strong>itérer</strong> sur une liste de couleurs.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKYmFja3dhcmQoMjAwKQpmb3IgY291bGV1ciBpbiBbJ3llbGxvdycsICdjeWFuJywgJ29yYW5nZScsICdwaW5rJywgJ2xpbWUnXToKICAgIGRvdCg4MCwgY291bGV1cikgICMgRGVzc2luZSB1biBjZXJjbGUgZGUgZGlhbcOodHJlIDgwIGRlIGxhIGNvdWxldXIgaW5kaXF1w6llCiAgICB3cml0ZShjb3VsZXVyLCBhbGlnbj0nY2VudGVyJykgICMgRWNyaXMgbGUgbm9tIGRlIGxhIGNvdWxldXIgZGFucyBsZSBjZXJjbGUKICAgIGZvcndhcmQoODAp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Que va afficher ce programme ?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]:</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">n</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><label class="answer incorrect"><input type="checkbox"/>7</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>14</label><br/>
+<label class="answer correct"><input type="checkbox"/>28</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>11</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Le programme calcule la <strong>somme</strong> des éléments de la liste et l’affiche (2+3+5+7+11 = 28).<br/>
+Cela se fait en <strong>itérant</strong> sur chaque nombre de la liste (la variable d’itération <code class="docutils literal notranslate"><span class="pre">n</span></code> vaut donc successivement 2, 3, 5, 7 et 11).</p>
+</div>
+</div>
+</form></div><div class="note admonition">
+<p class="admonition-title">Exercice 23 - Calcul de moyenne (moyen 🤓)</p>
+<p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">calcule_moyenne()</span></code> qui prend une liste de nombres en argument et qui retourne la moyenne de ces nombres.<br/>
+Indice: la fonction <code class="docutils literal notranslate"><span class="pre">len()</span></code> permet de calculer la longueur d’une liste.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-afterword="cHJpbnQoJ1xuVGVzdCBhdXRvbWF0aXF1ZSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0nKQplcHMgPSAxZS02CmFyZ3MgPSBbKFs0LjUsIDMsIDUsIDIsIDYsIDUuNV0sIDI2LzYpLCAoWzEsIDEsIDFdLCAxKSwgKFstMSwgMCwgMV0sIDApXQpvayA9IFRydWUKZm9yIGVudHJlZSwgdmFsZXVyX2F0dGVuZHVlIGluIGFyZ3M6CiAgICBvayA9IHRlc3QoY2FsY3VsZV9tb3llbm5lLCBlbnRyZWUsIHZhbGV1cl9hdHRlbmR1ZSwgZXBzKQogICAgaWYgbm90IG9rOgogICAgICAgIGJyZWFrCmlmIG9rOgogICAgcHJpbnQoIlllcywgdG91dCDDoCBmYWl0IGNvcnJlY3QgISIpCnByaW50KCctLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tJyk=" data-code="ZGVmIGNhbGN1bGVfbW95ZW5uZShsaXN0ZSk6CiAgICBzb21tZSA9IDAKICAgICMgUGFyY291cmV6IGwnZW5zZW1ibGUgZGVzIG5vdGVzIGRlIGxhIGxpc3RlIGV0IGFqb3V0ZXotbGVzIMOgIHNvbW1lCiAgICAuLi4KICAgIG1veWVubmUgPSAuLi4KICAgIHJldHVybiBtb3llbm5lCgpub3RlcyA9IFs0LjUsIDMsIDUsIDIsIDYsIDUuNV0KbW95ZW5uZSA9IGNhbGN1bGVfbW95ZW5uZShub3RlcykKcHJpbnQobW95ZW5uZSk=" data-file="ZXhfMjMucHk=" data-prelude="ZGVmIHRlc3QoZnVuYywgZW50cmVlLCB2YWxldXJfYXR0ZW5kdWUsIG1hcmdlPU5vbmUpOgogICAgdmFsZXVyID0gZnVuYyhlbnRyZWUpCiAgICBpZiB2YWxldXIgaXMgTm9uZToKICAgICAgICBwcmludCgiVGEgZm9uY3Rpb24gbmUgcmV0b3VybmUgYXVjdW5lIHZhbGV1ci4iKQogICAgICAgIHJldHVybiBGYWxzZQogICAgY29uZCA9ICh2YWxldXIgPT0gdmFsZXVyX2F0dGVuZHVlKSBpZiBtYXJnZSBpcyBOb25lIGVsc2UgKHZhbGV1ci1tYXJnZSA8IHZhbGV1cl9hdHRlbmR1ZSA8IHZhbGV1cittYXJnZSkKICAgIGlmIG5vdCBjb25kOgogICAgICAgIHByaW50KCJPdXBzLCB0YSBmb25jdGlvbiBlc3QgaW5jb3JyZWN0ZS4iKQogICAgICAgIHByaW50KGYiUXVhbmQgbCdhcmd1bWVudCB2YXV0OiB7ZW50cmVlfSIpCiAgICAgICAgcHJpbnQoZiJSw6lzdWx0YXQgYXR0ZW5kdToge3ZhbGV1cl9hdHRlbmR1ZX0iKQogICAgICAgIHByaW50KGYiVG9uIHLDqXN1bHRhdDoge3ZhbGV1cn0iKQogICAgICAgIHJldHVybiBGYWxzZQogICAgcmV0dXJuIFRydWU=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhbGN1bGVfbW95ZW5uZShsaXN0ZSk6CiAgICBzb21tZSA9IDAKICAgIGZvciBuIGluIGxpc3RlOgogICAgICAgIHNvbW1lID0gc29tbWUgKyBuCgogICAgbG9uZ3VldXJfbGlzdGUgPSBsZW4obGlzdGUpCiAgICBtb3llbm5lID0gc29tbWUgLyBsb25ndWV1cl9saXN0ZQogICAgcmV0dXJuIG1veWVubmUKCm5vdGVzID0gWzQuNSwgMywgNSwgMiwgNiwgNS41XQptb3llbm5lID0gY2FsY3VsZV9tb3llbm5lKG5vdGVzKQpwcmludChtb3llbm5lKQ==" data-file="ZXhfMjMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">La fonction <code class="docutils literal notranslate"><span class="pre">sum()</span></code> permet très facilement d’obtenir la somme des éléments d’une liste, mais c’est pas drôle quand c’est trop facile 😉</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcule_moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="n">moyenne</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">moyenne</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section id="le-type-range">
+<h2>Le type range<a class="headerlink" href="#le-type-range" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une <code class="docutils literal notranslate"><span class="pre">range</span></code> (“intervale” en français) est un autre exemple de variable de type séquentiel.<br/>
+Elles sont utilisées pour stocker des <strong>intervales de nombres entiers</strong> de manière plus efficace qu’une liste. Une variable de type <code class="docutils literal notranslate"><span class="pre">range</span></code> peut être créée avec la fonction <code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code> qui retourne un interval semi-fermé <code class="docutils literal notranslate"><span class="pre">[start,</span> <span class="pre">stop[</span></code> avec un incrément de <code class="docutils literal notranslate"><span class="pre">step</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> est la valeur de départ (vaut 0 si pas indiqué),</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stop</span></code> est la valeur finale, mais sans l’inclure,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step</span></code> est l’incrément (vaut 1 si pas indiqué).</p></li>
+</ul>
+<p>L’exemple suivant affiche le carré des nombres 1 à 9.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bm9tYnJlcyA9IHJhbmdlKDEsIDEwKSAgIyBDb250aWVudCBsZXMgbm9tYnJlcyAxIGp1c3F1J8OgIDkKZm9yIG5vbWJyZSBpbiBub21icmVzOgogICAgcHJpbnQoZid7bm9tYnJlfV4yID0ge25vbWJyZSAqKiAyfScp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>L’exemple suivant dessine un polygone en utilisant une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> et une <code class="docutils literal notranslate"><span class="pre">range</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShhLCBuKToKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIHdyaXRlKGkpCiAgICAgICAgZm9yd2FyZChhKQogICAgICAgIGxlZnQoMzYwL24pCgphID0gNTAgIyBsb25ndWV1ciBkZXMgYXJyw6p0ZXMKbiA9IDUgIyBub21icmUgZGUgc29tbWV0cwpwb2x5Z29uZShhLCBuKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En utilisant l’argument <code class="docutils literal notranslate"><span class="pre">step</span></code>, on peut visualiser l’intervale [-50, 250[ avec un incrément de 50.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKdXAoKQoKc3RhcnQgPSAtMjUwCnN0b3AgPSAyNTAKc3RlcCA9IDUwCmZvciB4IGluIHJhbmdlKHN0YXJ0LCBzdG9wLCBzdGVwKToKICAgIGdvdG8oeCwgMCkKICAgIHdyaXRlKHgsIGFsaWduPSdjZW50ZXInKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>En imbriquant 2 boucles <code class="docutils literal notranslate"><span class="pre">for</span></code>, il est possible de construire toutes les tables de multiplication (jusqu’à 9 dans cet exemple).<br/>
+<code class="docutils literal notranslate"><span class="pre">i</span></code> et <code class="docutils literal notranslate"><span class="pre">j</span></code> sont des noms de variable très communément utilisés pour itérer sur des nombres.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Zm9yIGkgaW4gcmFuZ2UoMSwgMTApOgogICAgcHJpbnQoZidUYWJsZSBkZSB7aX0nKQogICAgZm9yIGogaW4gcmFuZ2UoMSwgMTApOgogICAgICAgIHByaW50KGYne2l9KntqfSA9IHtpKmp9JykKICAgIHByaW50KCkgICMgQWpvdXQgZCd1bmUgbGlnbmUgdmlkZQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Que va afficher ce programme ? (les <code class="docutils literal notranslate"><span class="pre">/</span></code> remplacent ici un retour à la ligne)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mot_complique</span> <span class="o">=</span> <span class="s1">'anticonstitutionnellement'</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mot_complique</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><label class="answer incorrect"><input type="checkbox"/>a / n / t / i</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>a / t / c / n</label><br/>
+<label class="answer correct"><input type="checkbox"/>an / ti / co / ns</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>an / ti / co / ns / ti</label></p>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>Le programme itère sur tous les index pairs dans l’intervale [0, 10[ (donc 0,2,4,6,8). Pour chaque index <code class="docutils literal notranslate"><span class="pre">i</span></code>, il affiche la tranche de caractères allant de <code class="docutils literal notranslate"><span class="pre">i</span></code> à <code class="docutils literal notranslate"><span class="pre">i+1</span></code>.<br/>
+En résumé, on affiche les caractères aux index suivants: 0-1, 2-3, 4-5, 6-7, 8-9.</p>
+</div>
+</div>
+</form></div><div class="note admonition">
+<p class="admonition-title">Exercice 24 - Nombres premiers (difficile 🤯)</p>
+<ol class="simple">
+<li><p>Ecrivez une fonction <code class="docutils literal notranslate"><span class="pre">est_premier()</span></code> qui contrôle si un nombre donné en argument est premier ou non et retourne la valeur logique associée.<br/>
+Pour rappel, un nombre est premier quand il n’est divisible par aucun autre nombre (à part 1 et lui-même).<br/>
+Les plus petits sont: 2, 3, 5, 7, 11, 13, etc…</p></li>
+<li><p>Utilisez cette fonction pour afficher tous les nombres premiers plus petits que 1000.</p></li>
+</ol>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-afterword="cHJpbnQoJ1xuVGVzdCBhdXRvbWF0aXF1ZSBkZSBlc3RfcHJlbWllcigpIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLScpCmFyZ3MgPSBbKDIsIFRydWUpLCAoMTcsIFRydWUpLCAoOTk3LCBUcnVlKSwgKDUwMCwgRmFsc2UpLCAoNjcxLCBGYWxzZSksICgxLCBGYWxzZSldCm9rID0gVHJ1ZQpmb3IgZW50cmVlLCB2YWxldXJfYXR0ZW5kdWUgaW4gYXJnczoKICAgIG9rID0gdGVzdChlc3RfcHJlbWllciwgZW50cmVlLCB2YWxldXJfYXR0ZW5kdWUpCiAgICBpZiBub3Qgb2s6CiAgICAgICAgYnJlYWsKaWYgb2s6CiAgICBwcmludCgiWWVzLCB0b3V0IMOgIGZhaXQgY29ycmVjdCAhIikKcHJpbnQoJy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0nKQ==" data-code="ZGVmIGVzdF9wcmVtaWVyKG4pOgogICAgaWYgbiA8IDI6CiAgICAgICAgcmV0dXJuIEZhbHNlICAjIE9uIHNhaXQgcXUndW4gbm9tYnJlIHBsdXMgcGV0aXQgcXVlIDIgbmUgcGV1dCBwYXMgw6p0cmUgcHJlbWllciAoMSBuZSBsJ2VzdCBwYXMgcGFyIGNvbnZlbnRpb24pCgogICAgIyBJdMOpcmV6IHN1ciB0b3VzIGxlcyBub21icmVzIGVudHJlIDIgZXQgbi0xIGV0IHRlc3RleiBzJ2lscyBzb250IGRpdmlzZXVycyBkZSBuIG91IHBhcwogICAgLi4uCgojIEFmZmljaGFnZSBkZXMgbm9tYnJlcyBwcmVtaWVycyBwbHVzIHBldGl0cyBxdWUgMTAwMAouLi4=" data-file="Y29kZS5weQ==" data-hints="UmFwcGVsbGUgdG9pIGR1IG1vZHVsbyBgJWAgcG91ciBjb250csO0bGVyIHNpIHVuIG5vbWJyZSBlc3QgZGl2aXNpYmxlIHBhciB1biBhdXRyZSAh U2kgdHUgdHJvdXZlcyB1biBkaXZpc2V1ciwgcmV0dXJuIEZhbHNlLCBzaW5vbiByZXR1cm4gVHJ1ZSAh" data-prelude="ZGVmIHRlc3QoZnVuYywgZW50cmVlLCB2YWxldXJfYXR0ZW5kdWUsIG1hcmdlPU5vbmUpOgogICAgdmFsZXVyID0gZnVuYyhlbnRyZWUpCiAgICBpZiB2YWxldXIgaXMgTm9uZToKICAgICAgICBwcmludCgiVGEgZm9uY3Rpb24gbmUgcmV0b3VybmUgYXVjdW5lIHZhbGV1ci4iKQogICAgICAgIHJldHVybiBGYWxzZQogICAgY29uZCA9ICh2YWxldXIgPT0gdmFsZXVyX2F0dGVuZHVlKSBpZiBtYXJnZSBpcyBOb25lIGVsc2UgKHZhbGV1ci1tYXJnZSA8IHZhbGV1cl9hdHRlbmR1ZSA8IHZhbGV1cittYXJnZSkKICAgIGlmIG5vdCBjb25kOgogICAgICAgIHByaW50KCJPdXBzLCB0YSBmb25jdGlvbiBlc3QgaW5jb3JyZWN0ZS4iKQogICAgICAgIHByaW50KGYiUXVhbmQgbCdhcmd1bWVudCB2YXV0OiB7ZW50cmVlfSIpCiAgICAgICAgcHJpbnQoZiJSw6lzdWx0YXQgYXR0ZW5kdToge3ZhbGV1cl9hdHRlbmR1ZX0iKQogICAgICAgIHByaW50KGYiVG9uIHLDqXN1bHRhdDoge3ZhbGV1cn0iKQogICAgICAgIHJldHVybiBGYWxzZQogICAgcmV0dXJuIFRydWU=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGVzdF9wcmVtaWVyKG4pOgogICAgaWYgbiA8IDI6ICAjIE5vdXMgc2F2b25zIHF1ZSB0b3V0IG5vbWJyZSBwbHVzIHBldGl0IHF1ZSAyIG5lIHBldXQgcGFzIMOqdHJlIHByZW1pZXIKICAgICAgICByZXR1cm4gRmFsc2UKCiAgICBmb3IgaSBpbiByYW5nZSgyLCBuKTogICMgT24gaXTDqHJlIHN1ciBjaGFxdWUgbm9tYnJlIGVudHJlIDIgZXQgbi0xCiAgICAgICAgaWYgbiAlIGkgPT0gMDogICMgU2kgbm90cmUgYXJndW1lbnQgZXN0IGRpdmlzaWJsZSBwYXIgdW4gbm9tYnJlIChsZSByZXN0ZSBkZSBsYSBkaXZpc2lvbiB2YXV0IDApCiAgICAgICAgICAgIHJldHVybiBGYWxzZSAgIyBBbG9ycyBpbCBuJ2VzdCBwYXMgcHJlbWllcgoKICAgIHJldHVybiBUcnVlICAjIFMnaWwgbidlc3QgZGl2aXNpYmxlIHBhciBhdWN1biBub21icmUgZW50cmUgMiBldCBuLTEsIGFsb3JzIGlsIGVzdCBwcmVtaWVyCgpmb3IgbiBpbiByYW5nZSgxMDAwKToKICAgIGlmIGVzdF9wcmVtaWVyKG4pOgogICAgICAgIHByaW50KG4p" data-file="ZXhfMjQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Comme vous le voyez, une fonction peut tout à fait contenir plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code>. <strong>Dès qu’un <code class="docutils literal notranslate"><span class="pre">return</span></code> est executé par le programme, la fonction se termine</strong>.<br/>
+C’est un peu comme une porte de sortie de la fonction.</p>
+<p class="card-text">La vidéo suivante peut vous aider à comprendre le cheminement de pensée permettant de résoudre l’exercice:</p>
+<div class="video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://www.youtube-nocookie.com/embed/t7hr8vHorp4" webkitallowfullscreen="" width="560">"</iframe></div></div>
+</details></div>
+</section>
+<section id="le-jeu-du-pendu-optionnel">
+<h2>Le jeu du pendu (optionnel)<a class="headerlink" href="#le-jeu-du-pendu-optionnel" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le jeu du pendu consiste à trouver un mot en devinant les lettres qui le composent. Le jeu se joue traditionnellement à deux, avec un papier et un crayon, avec le dessin d’une potence, dans lequel, pour chaque erreur, un trait du bonhomme allumette est ajouté.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmEgPSA0MApkZWYgcG90ZW5jZSgpOgogICAgZm9yd2FyZCgxMDApCiAgICBiYWNrd2FyZCg1MCkKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKDE4MCkKICAgIHJpZ2h0KDkwKQogICAgZm9yd2FyZCg0MCkKICAgIGxlZnQoNDUpCiAgICBiYWNrd2FyZCg1NikKICAgIGZvcndhcmQoNTYpCiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoNTApCiAgICByaWdodCg5MCkKICAgIGZvcndhcmQoNDApCgpkZWYgdGV0ZSgpOgogICAgZG90KDIwKQogICAgZm9yd2FyZCgyMCkKCmRlZiBicmFzMSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCiAgICBiYWNrd2FyZChhKQoKZGVmIGJyYXMyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKCmRlZiB0b3JzZSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCgpkZWYgamFtYmUxKCk6CiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoYSkKICAgIGJhY2t3YXJkKGEpCgpkZWYgamFtYmUyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKICAgIGhpZGV0dXJ0bGUoKQoKIyBPbiBjb21tZW5jZSBwYXIgZGVzc2luZXIgbGEgcG90ZW5jZQpwb3RlbmNlKCkKCiMgT24gZMOpZmluaXQgbGEgbGlzdGUgcXVpIGNvbnRpZW50IGxlcyBmb25jdGlvbnMgZGUgZGVzc2luIMOgIGFwcGVsZXIgZGFucyBsJ29yZHJlCmRlc3NpbnMgPSBbdGV0ZSwgYnJhczEsIGJyYXMyLCB0b3JzZSwgamFtYmUxLCBqYW1iZTJdCgptb3RfYV90cm91dmVyID0gJ3BvdGlyb24nCmxldHRyZXNfdHJvdXZlZXMgPSBbXSAgIyBVbmUgbGlzdGUgdmlkZSBxdWkgY29udGllbmRyYSBsZXMgbGV0dHJlcyB0cm91dsOpZXMgcGFyIGwndXRpbGlzYXRldXIKCm5iX2VycmV1cnMgPSAwCndoaWxlIG5iX2VycmV1cnMgPCA2OgogICAgbW90X2FmZmljaGUgPSAnJwogICAgIyBPbiBwYXJjb3VydCBjaGFxdWUgbGV0dHJlIGR1IG1vdCDDoCB0cm91dmVyIGV0IG9uIGwnYWZmaWNoZSBzZXVsZW1lbnQgc2kgZWxsZSBhIMOpdMOpIHRyb3V2w6llCiAgICBmb3IgbGV0dHJlIGluIG1vdF9hX3Ryb3V2ZXI6CiAgICAgICAgaWYgbGV0dHJlIGluIGxldHRyZXNfdHJvdXZlZXM6CiAgICAgICAgICAgIG1vdF9hZmZpY2hlICs9IGxldHRyZQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIG1vdF9hZmZpY2hlICs9ICdfJwogICAgICAgIG1vdF9hZmZpY2hlICs9ICcgJwoKICAgIGxldHRyZV9wcm9wb3NlZSA9IGlucHV0KG1vdF9hZmZpY2hlICsgJyAgbGV0dHJlOiAnKQogICAgaWYgbGV0dHJlX3Byb3Bvc2VlIGluIG1vdF9hX3Ryb3V2ZXI6CiAgICAgICAgbGV0dHJlc190cm91dmVlcy5hcHBlbmQobGV0dHJlX3Byb3Bvc2VlKQogICAgZWxzZToKICAgICAgICBkZXNzaW5zW25iX2VycmV1cnNdKCkKICAgICAgICBuYl9lcnJldXJzICs9IDEgICMgUmFjY291cmNpIHBvdXIgbmJfZXJyZXVycyA9IG5iX2VycmV1cnMgKyAxCgpwcmludCgnUGVuZHUgIScp" data-file="ZXhfcGVuZHUucHk=" data-output-max-lines="5" data-output-min-lines="5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
+<p class="admonition-title">Exercice du pendu (difficile 🤯)</p>
+<p>Modifiez le programme du pendu pour que l’ordinateur choisisse aléatoirement un mot à trouver parmi une liste de mots de votre choix.<br/>
+Plusieurs pistes de solution:</p>
+<ol class="simple">
+<li><p>Sélectionnez un mot de la liste à un index aléatoire avec la fonction <code class="docutils literal notranslate"><span class="pre">randint()</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>.</p></li>
+<li><p>Sélectionnez un mot de la liste aléatoirement avec la fonction <code class="docutils literal notranslate"><span class="pre">choice()</span></code> du module <code class="docutils literal notranslate"><span class="pre">random</span></code>.</p></li>
+</ol>
+<p>Faites-en sorte que le programme s’arrête dès que vous avez trouvé le mot mystère et affiche ‘Gagné !’.<br/>
+Une possible manière de faire est d’utiliser l’instruction <code class="docutils literal notranslate"><span class="pre">break</span></code> qui permet de sortir immédiatement de la boucle courante (<a href="https://docs.python.org/fr/3/tutorial/controlflow.html#break-and-continue-statements-and-else-clauses-on-loops" target="_blank">plus d’infos ici</a>).</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Solution</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW1wb3J0IHJhbmRvbQptb3RfYV90cm91dmVyID0gcmFuZG9tLmNob2ljZShbJ3BvdGlyb24nLCAnb3NpZXInLCAndHJvdHRvaXInLCAnbWV1cnRyaWVyJywgJ3BhbG1pZXInLCAnY2hhdCcsICdjb3Vzc2luJywgJ3RhYmxlYXUnLCAncHl0aG9uJ10pICAjIENob2lzaXQgdW4gbW90IGF1IGhhc2FyZCBkYW5zIGxhIGxpc3RlCmxldHRyZXNfdHJvdXZlZXMgPSBbXSAgIyBVbmUgbGlzdGUgdmlkZSBxdWkgY29udGllbmRyYSBsZXMgbGV0dHJlcyB0cm91dsOpZXMgcGFyIGwndXRpbGlzYXRldXIKCm5iX2VycmV1cnMgPSAwCm1vdF9hX2V0ZV90cm91dmUgPSBGYWxzZQp3aGlsZSBuYl9lcnJldXJzIDwgNiBhbmQgbm90IG1vdF9hX2V0ZV90cm91dmU6CiAgICBtb3RfYWZmaWNoZSA9ICcnCiAgICAjIE9uIHBhcmNvdXJ0IGNoYXF1ZSBsZXR0cmUgZHUgbW90IMOgIHRyb3V2ZXIgZXQgb24gbCdhZmZpY2hlIHNldWxlbWVudCBzaSBlbGxlIGEgw6l0w6kgdHJvdXbDqWUKICAgIGZvciBsZXR0cmUgaW4gbW90X2FfdHJvdXZlcjoKICAgICAgICBpZiBsZXR0cmUgaW4gbGV0dHJlc190cm91dmVlczoKICAgICAgICAgICAgbW90X2FmZmljaGUgKz0gbGV0dHJlCiAgICAgICAgZWxzZToKICAgICAgICAgICAgbW90X2FmZmljaGUgKz0gJ18nCiAgICAgICAgbW90X2FmZmljaGUgKz0gJyAnCgogICAgbGV0dHJlX3Byb3Bvc2VlID0gaW5wdXQobW90X2FmZmljaGUgKyAnICBsZXR0cmU6ICcpCiAgICBpZiBsZXR0cmVfcHJvcG9zZWUgaW4gbW90X2FfdHJvdXZlcjoKICAgICAgICBsZXR0cmVzX3Ryb3V2ZWVzLmFwcGVuZChsZXR0cmVfcHJvcG9zZWUpCiAgICAgICAgIyBPbiBjb250csO0bGUgc2kgbCdlbnNlbWJsZSBkZXMgbGV0dHJlcyB0cm91dsOpZXMgZXN0IMOpZ2FsIMOgIGwnZW5zZW1ibGUgZGVzIGxldHRyZXMgZGFucyBsZSBtb3Qgw6AgdHJvdXZlcgogICAgICAgIGlmIHNldChsZXR0cmVzX3Ryb3V2ZWVzKSA9PSBzZXQobW90X2FfdHJvdXZlcik6CiAgICAgICAgICAgIG1vdF9hX2V0ZV90cm91dmUgPSBUcnVlCiAgICBlbHNlOgogICAgICAgIGRlc3NpbnNbbmJfZXJyZXVyc10oKQogICAgICAgIG5iX2VycmV1cnMgKz0gMSAgIyBSYWNjb3VyY2kgcG91ciBuYl9lcnJldXJzID0gbmJfZXJyZXVycyArIDEKCmlmIG5iX2VycmV1cnMgPT0gNjoKICAgIHByaW50KCdQZW5kdSAhJykKICAgIHByaW50KGYnTGUgbW90IMOpdGFpdCB7bW90X2FfdHJvdXZlcn0gIScpCmVsc2U6CiAgICBwcmludCgnR2FnbsOpICEnKQogICAgcHJpbnQoZidMZSBtb3Qgw6l0YWl0IGJpZW4ge21vdF9hX3Ryb3V2ZXJ9ICEnKQ==" data-file="ZXhfcGVuZHUucHk=" data-output-max-lines="5" data-output-min-lines="5" data-prelude="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmEgPSA0MApkZWYgcG90ZW5jZSgpOgogICAgZm9yd2FyZCgxMDApCiAgICBiYWNrd2FyZCg1MCkKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKDE4MCkKICAgIHJpZ2h0KDkwKQogICAgZm9yd2FyZCg0MCkKICAgIGxlZnQoNDUpCiAgICBiYWNrd2FyZCg1NikKICAgIGZvcndhcmQoNTYpCiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoNTApCiAgICByaWdodCg5MCkKICAgIGZvcndhcmQoNDApCgpkZWYgdGV0ZSgpOgogICAgZG90KDIwKQogICAgZm9yd2FyZCgyMCkKCmRlZiBicmFzMSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCiAgICBiYWNrd2FyZChhKQoKZGVmIGJyYXMyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKCmRlZiB0b3JzZSgpOgogICAgcmlnaHQoNDUpCiAgICBmb3J3YXJkKGEpCgpkZWYgamFtYmUxKCk6CiAgICByaWdodCg0NSkKICAgIGZvcndhcmQoYSkKICAgIGJhY2t3YXJkKGEpCgpkZWYgamFtYmUyKCk6CiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZChhKQogICAgYmFja3dhcmQoYSkKICAgIGhpZGV0dXJ0bGUoKQoKIyBPbiBjb21tZW5jZSBwYXIgZGVzc2luZXIgbGEgcG90ZW5jZQpwb3RlbmNlKCkKCiMgT24gZMOpZmluaXQgbGEgbGlzdGUgcXVpIGNvbnRpZW50IGxlcyBmb25jdGlvbnMgZGUgZGVzc2luIMOgIGFwcGVsZXIgZGFucyBsJ29yZHJlCmRlc3NpbnMgPSBbdGV0ZSwgYnJhczEsIGJyYXMyLCB0b3JzZSwgamFtYmUxLCBqYW1iZTJd" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p class="card-text">Ici la solution utilisant <code class="docutils literal notranslate"><span class="pre">random.choice()</span></code> est montrée.<br/>
+Notez que la difficulté de cet exercice est dans l’ensemble bien au-dessus de ce qui est attendu en 1ère année.</p>
+</div>
+</details></div>
+<p>Vous avez tout terminé ? Allez faire un tour sur <a href="https://apprendre.modulo-info.ch/prog1/grouper.html" target="_blank">Modulo</a> !</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="algo.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">7. Les algorithmes</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="conditions.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">5. Les structures conditionnelles</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/prog_formel/sequences.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">6. Les types séquentiels</a><ul>
+<li><a class="reference internal" href="#le-type-liste">Le type liste</a></li>
+<li><a class="reference internal" href="#la-boucle-for">La boucle for</a></li>
+<li><a class="reference internal" href="#le-type-range">Le type range</a></li>
+<li><a class="reference internal" href="#le-jeu-du-pendu-optionnel">Le jeu du pendu (optionnel)</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>
