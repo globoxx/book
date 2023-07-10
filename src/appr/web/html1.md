@@ -14,9 +14,15 @@ Tim Berners-Lee 🇬🇧
 ***Né en 1955***
 
 L'informaticien britannique [**Tim Berners-Lee**](https://fr.wikipedia.org/wiki/Tim_Berners-Lee) est le principal inventeur du Web alors qu'il travaillait au CERN à Genève dans les années 90. Il a inventé les adresses URL, le protocole HTTP et le langage HTML.
-```
 
-```{image} ../media/html.png
+----
+
+:img-top: ../media/html.jpg
+
+HTML5
+^^^^^
+
+HTML5 (HyperText Markup Language 5) est la dernière révision majeure du [**HTML**](https://fr.wikipedia.org/wiki/HTML5) (format de données conçu pour représenter les pages web). Cette version a été finalisée le 28 octobre 2014.
 ```
 
 ```{admonition} À retenir
