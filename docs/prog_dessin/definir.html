@@ -307,9 +307,20 @@
 </pre></div>
 </div>
 <p>Serait-il possible de nommer cette séquence d’instructions afin qu’on puisse la réutiliser autant que l’on veut ?</p>
-<p>Oui ! Avec le mot-clé <code class="docutils literal notranslate"><span class="pre">def</span></code>, nous pouvons <strong>définir</strong> une nouvelle fonction que nous pouvons par exemple appeler <code class="docutils literal notranslate"><span class="pre">rectangle()</span></code>.<br/>
+<p>Oui ! Avec le mot-clé <code class="docutils literal notranslate"><span class="pre">def</span></code>, nous pouvons <strong>définir</strong> une nouvelle fonction que nous pouvons par exemple appeler <code class="docutils literal notranslate"><span class="pre">rectangle()</span></code>.
 C’est une espèce de raccourci pour ne pas avoir à réécrire tout le temps des séquences identiques.
 Le code à exécuter se trouve après l’expression <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">rectangle():</span></code> et se trouve en <strong>indentation</strong> (décalé vers la droite).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rectangle</span><span class="p">():</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">160</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">160</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Une fois que la fonction a été définie, il suffit d’écrire <code class="docutils literal notranslate"><span class="pre">rectangle()</span></code> pour dessiner un rectangle. On appelle ceci <strong>appeler</strong> une fonction.
 Rappelez-vous ceci:</p>
 <ul class="simple">
@@ -356,7 +367,7 @@ En regardant ces 3 lignes de code, on comprend immédiatement le sens du program
 <div class="admonition">
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
-<p>Ajoutez une deuxième porte au bâtiment. Ensuite, faites-en une porte double.</p>
+<p>Ajoutez une deuxième porte au bâtiment.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBiYXRpbWVudCgpOgogICAgZm9yd2FyZCgyMDApCiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZCgxMDApCiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZCgyMDApCiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZCgxMDApCiAgICBsZWZ0KDkwKQoKZGVmIHBvcnRlKCk6CiAgICBmb3J3YXJkKDMwKQogICAgbGVmdCg5MCkKICAgIGZvcndhcmQoNTApCiAgICBsZWZ0KDkwKQogICAgZm9yd2FyZCgzMCkKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKDUwKQogICAgbGVmdCg5MCkKCmJhdGltZW50KCkKZm9yd2FyZCgzMCkKcG9ydGUoKQ==" data-file="ZGVmMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </div>
 <div class="question"><form><div class="admonition">
@@ -382,7 +393,7 @@ En regardant ces 3 lignes de code, on comprend immédiatement le sens du program
 </ol>
 <div class="hint admonition">
 <p class="admonition-title">A retenir</p>
-<p>Qu’est-ce qu’un bloc en indentation ?
+<p>Qu’est-ce qu’un bloc en indentation ?<br/>
 C’est un bloc de texte qui comporte des espaces vides à gauche. En Python, ces espaces apparaissent en multiples de 4.</p>
 <p>L’indentation est très importante en Python. C’est l’indentation qui indique quelles sont les instructions qui font partie de la fonction.</p>
 </div>

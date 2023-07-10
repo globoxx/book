@@ -34,9 +34,21 @@ left(90)
 
 Serait-il possible de nommer cette séquence d'instructions afin qu'on puisse la réutiliser autant que l'on veut ?
 
-Oui ! Avec le mot-clé `def`, nous pouvons **définir** une nouvelle fonction que nous pouvons par exemple appeler `rectangle()`.  
+Oui ! Avec le mot-clé `def`, nous pouvons **définir** une nouvelle fonction que nous pouvons par exemple appeler `rectangle()`.
 C'est une espèce de raccourci pour ne pas avoir à réécrire tout le temps des séquences identiques.
 Le code à exécuter se trouve après l'expression `def rectangle():` et se trouve en **indentation** (décalé vers la droite).
+
+```python
+def rectangle():
+    forward(160)
+    left(90)
+    forward(100)
+    left(90)
+    forward(160)
+    left(90)
+    forward(100)
+    left(90)
+```
 
 Une fois que la fonction a été définie, il suffit d'écrire `rectangle()` pour dessiner un rectangle. On appelle ceci **appeler** une fonction.
 Rappelez-vous ceci:
@@ -127,7 +139,8 @@ Ecrivez les fonctions sans accents, sans circonflexes et sans espaces: `batime
 ```
 
 ````{exercise}
-Ajoutez une deuxième porte au bâtiment. Ensuite, faites-en une porte double.
+Ajoutez une deuxième porte au bâtiment.
+
 ```{codeplay}
 :file: def3.py
 from turtle import *
@@ -179,7 +192,7 @@ Le fait de donner un nom à une séquence d'instructions est appelé **définir 
 
 ```{admonition} A retenir
 :class: hint
-Qu'est-ce qu'un bloc en indentation ?
+Qu'est-ce qu'un bloc en indentation ?  
 C'est un bloc de texte qui comporte des espaces vides à gauche. En Python, ces espaces apparaissent en multiples de 4.
 
 L'indentation est très importante en Python. C'est l'indentation qui indique quelles sont les instructions qui font partie de la fonction.
