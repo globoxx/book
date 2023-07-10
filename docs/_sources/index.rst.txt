@@ -27,6 +27,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    :hidden:
 
    prog_dessin/dessin
+   prog_dessin/definir
 
 .. toctree::
    :name: Web
