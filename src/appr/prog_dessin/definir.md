@@ -421,7 +421,7 @@ Définissez une fonction `presentations()` qui affiche du texte vous présentant
 Exécutez la fonction.
 
 ```{codeplay}
-print('Salut je m'appelle Roger !')
+print("Salut je m'appelle Roger !")
 ...
 ```
 ````

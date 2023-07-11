@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Aventure textuelle" href="../divers/aventure.html" /><link rel="prev" title="2. Définir" href="../prog_dessin/definir.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="2. Structurer son texte" href="html2.html" /><link rel="prev" title="2. Définir" href="../prog_dessin/definir.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>1. Introduction à l’HTML - Travaux pratiques</title>
@@ -238,6 +238,8 @@
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html3.html">3. Faire des liens</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -317,9 +319,19 @@ Il permet d’ajouter du texte, des liens, des images, des tableaux, etc.</p>
 <div class="note admonition">
 <p class="admonition-title">Micro-activité</p>
 <p>Rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur “Enregistrez sous…” pour sauver le fichier.<br/>
-Vous observez que votre navigateur télécharge un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).<br/>
-La page est-elle identique à tout à l’heure ? A quoi ressemble l’url de la page ?</p>
+Vous observez que votre navigateur télécharge un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).</p>
+<p>La page est-elle identique à tout à l’heure ? A quoi ressemble l’url de la page ?</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Réponse<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Cela dépend de la page que vous avez téléchargée. S’il s’agit d’une page web <strong>statique</strong>, le contenu devrait être identique après l’avoir téléchargé localement. En revanche, si le site est <strong>dynamique</strong>, le contenu risque d’être très différent car le serveur n’est plus là pour personaliser le contenu de la page en temps réel pour vous.</p>
+<p class="card-text">Concernant l’url, vous pouvez voir qu’il ne pointe plus vers le serveur du site, mais bien vers le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> de votre ordinateur.</p>
 </div>
+</details></div>
 </section>
 <section id="premier-contact-avec-un-code-html">
 <h2>Premier contact avec un code HTML<a class="headerlink" href="#premier-contact-avec-un-code-html" title="Lien permanent vers ce titre">¶</a></h2>
@@ -330,7 +342,16 @@ La page est-elle identique à tout à l’heure ? A quoi ressemble l’url de la
 Il est probable que le fichier ne contienne pas que du code HTML mais également du code Javascript et CSS (nous verrons cela plus tard).<br/>
 Pour trouver le code HTML, cherchez les symboles <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>. HTML est un langage basé sur des balises représentées par des chevrons <code class="docutils literal notranslate"><span class="pre">&lt;...&gt;</span></code>.</p>
 <p>Voyez-vous des similitudes avec le langage python ?</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Réponse<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Vous ne devriez retrouver que très peu de similitudes avec python car HTML n’est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présents dans presque tous les langages informatiques.</p>
 </div>
+</details></div>
 <p>L’HTML tout seul décrit simplement le contenu, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.<br/>
 Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l’exception des images).</p>
 <div class="note admonition">
@@ -390,7 +411,7 @@ Voici quelques exemples:</p>
 Chaque portion de texte entouré de ces balises sera considéré comme un paragraphe séparé.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Exemple de solution<div class="summary-down docutils">
+Solution<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
@@ -421,11 +442,12 @@ Testez les 2 types de source différentes:</p>
 </ol>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Exemple de solution (en ligne)<div class="summary-down docutils">
+Solution<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici un exemple de solution possible avec une source en ligne.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est mon premier paragraphe !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Et en voilà un autre...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtwMFGdWzPi18CbXe1mmp2vPoxMZPbaObUX5LqrX6Ezcai5nAlNp6cnpv4HWtWUsueuw&amp;usqp=CAU"</span><span class="p">&gt;</span>
@@ -537,17 +559,21 @@ En HTML, la syntaxe est la suivante:</p>
 Faites donc attention à ne jamais mettre d’informations sensibles tel qu’un mot de passe dans les commentaires de votre page !</p>
 </div>
 </div>
-</form></div><div class="note admonition">
+</form></div></section>
+<section id="exercice-recapitulatif">
+<h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="note admonition">
 <p class="admonition-title">Exercice 6 (récapitulatif)</p>
-<p>Ecrivez la page web principale du site <code class="docutils literal notranslate"><span class="pre">champignons.ch</span></code>.<br/>
+<p>Ecrivez la page web principale du site <code class="docutils literal notranslate"><span class="pre">champignons.ch</span></code>. dans un fichier nommé <code class="docutils literal notranslate"><span class="pre">champignons.html</span></code>.<br/>
 Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:</p>
 <ul class="simple">
 <li><p>Le titre “Champignons” qui doit apparaître dans l’onglet du navigateur.</p></li>
 <li><p>Au moins 3 paragraphes de texte.</p></li>
 <li><p>Une image de champignon entre 2 paragraphes.</p></li>
-<li><p>Un commentaire.</p></li>
 <li><p>Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web).</p></li>
+<li><p>Un commentaire indiquant le site où vous avez trouvé la balise permettant de mettre un mot en gras.</p></li>
 </ul>
+<p>Déposez votre fichier sur Moodle à l’endroit prévu.</p>
 </div>
 </section>
 </section>
@@ -557,12 +583,12 @@ Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:</
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../divers/aventure.html">
+          <a class="next-page" href="html2.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Aventure textuelle</div>
+                <div class="title">2. Structurer son texte</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -607,6 +633,7 @@ Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:</
 <li><a class="reference internal" href="#parametrer-ses-balises-avec-des-attributs">Paramètrer ses balises avec des attributs</a></li>
 <li><a class="reference internal" href="#structure-dune-page-html">Structure d’une page HTML</a></li>
 <li><a class="reference internal" href="#les-commentaires">Les commentaires</a></li>
+<li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
 </ul>
 </li>
 </ul>

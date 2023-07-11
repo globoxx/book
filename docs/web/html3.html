@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Glossaire" href="glossaire.html" /><link rel="prev" title="Portes logiques" href="../divers/portes_logiques.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Aventure textuelle" href="../divers/aventure.html" /><link rel="prev" title="2. Structurer son texte" href="html2.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Zone de code libre - Travaux pratiques</title>
+        <title>3. Faire des liens - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -196,7 +196,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -236,10 +236,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../web/html1.html">1. Introduction à l’HTML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../web/html2.html">2. Structurer son texte</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../web/html3.html">3. Faire des liens</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">3. Faire des liens</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -248,9 +248,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Zone de code libre</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossaire.html">Glossaire</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
 </ul>
 
 </div>
@@ -271,45 +271,99 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="zone-de-code-libre">
-<span id="outils-code-libre"></span><h1>Zone de code libre<a class="headerlink" href="#zone-de-code-libre" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBVdGlsaXNleiBjZXQgZXNwYWNlIHBvdXIgY29kZXIgbGlicmVtZW50CgoKCgoK" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+          <section class="tex2jax_ignore mathjax_ignore" id="faire-des-liens">
+<span id="web-html3"></span><h1>3. Faire des liens<a class="headerlink" href="#faire-des-liens" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Ne serait-ce pas chouette de pouvoir ajouter plusieurs pages à nos sites web ? Même si les sites monopages (qui ne contiennent qu’une seule longue page) sont de plus en plus courants (<a class="reference external" href="https://mort-modern.losttype.com/">exemple ici</a>), la majorité des sites web contiennent une multitude de pages liées entre elles par des liens.</p>
+<div class="note admonition">
+<p class="admonition-title">A retenir</p>
+<p>Un <strong>lien hypertexte</strong> (ou hyperlien) est une référence placée dans le contenu d’un document éléctronique permettant de passer automatiquement à un autre document.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>Ouvrez Firefox, rendez-vous sur le site de votre choix et cherchez un lien hypertexte. Faites un clic droit sur le lien puis cliquez sur “Inspecter”. Votre navigateur devrait alors ouvrir le code HTML du site et pointer directement sur le lien que vous aviez séléctionner.
+Lisez ce bout de code HTML pour découvrir quelle balise permet d’insérer un lien hypertexte.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Un lien hypertexte s’insert avec la balise <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span> <span class="pre">&lt;/a&gt;</span></code> (pour “anchor”, ancre en français).</p>
+<p class="card-text">L’attribut <code class="docutils literal notranslate"><span class="pre">href</span></code> suivi de <code class="docutils literal notranslate"><span class="pre">=</span></code> indique l’URL de redirection (par exemple l’url d’un autre site web). Il faut mettre des <code class="docutils literal notranslate"><span class="pre">"</span> <span class="pre">"</span></code> autour de l’URL.</p>
+<p class="card-text">Finalement, on écrit entre les 2 balises le texte du lien.</p>
+</div>
+</details></div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 2</p>
+<p>Modifiez le code HTML suivant pour ajouter des liens hypertextes vers les pages wikipédia des différentes destinations de la liste.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Un lien hypertexte s’insert avec la balise <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span> <span class="pre">&lt;/a&gt;</span></code> (pour “anchor”, ancre en français).<br/>
+L’attribut <code class="docutils literal notranslate"><span class="pre">href</span></code> suivi de <code class="docutils literal notranslate"><span class="pre">=</span></code> indique l’URL de redirection.<br/>
+Finalement, on écrit entre les 2 balises le texte du lien.</p>
+</div>
+</details></div>
+<section id="les-liens-absolus-vers-dautres-sites">
+<h2>Les liens absolus (vers d’autres sites)<a class="headerlink" href="#les-liens-absolus-vers-dautres-sites" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si vous voulez faire un lien vers un autre site existant en ligne, rien de plus simple, il suffit d’utiliser copier l’URL du site entre <code class="docutils literal notranslate"><span class="pre">"</span> <span class="pre">"</span></code> à la suite de l’attribut <code class="docutils literal notranslate"><span class="pre">href</span></code>, comme ceci :</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://mdlgb.ch/"</span><span class="p">&gt;</span>Accédez à Moodle<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">A retenir</p>
+<p>On appelle ça un <strong>lien absolu</strong> car il indique une adresse complète.</p>
+</div>
+</section>
+<section id="les-liens-relatifs-entre-vos-pages">
+<h2>Les liens relatifs (entre vos pages)<a class="headerlink" href="#les-liens-relatifs-entre-vos-pages" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">A retenir</p>
+<p>On appelle ça un <strong>lien relatif</strong> car il indique où trouver notre fichier HTML par rapport à l’emplacement de la page courante.</p>
+</div>
+</section>
+</section>
 
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="glossaire.html">
+          <a class="next-page" href="../divers/aventure.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Glossaire</div>
+                <div class="title">Aventure textuelle</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../divers/portes_logiques.html">
+          <a class="prev-page" href="html2.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Portes logiques</div>
+                <div class="title">2. Structurer son texte</div>
                 
               </div>
             </a>
         </div>
 
         <div class="related-information">
-            <a class="muted-link" href="../_sources/outils/code_libre.md.txt"
+            <a class="muted-link" href="../_sources/web/html3.md.txt"
                rel="nofollow">
               Montrer le code source
             </a>
@@ -317,8 +371,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">3. Faire des liens</a><ul>
+<li><a class="reference internal" href="#les-liens-absolus-vers-dautres-sites">Les liens absolus (vers d’autres sites)</a></li>
+<li><a class="reference internal" href="#les-liens-relatifs-entre-vos-pages">Les liens relatifs (entre vos pages)</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

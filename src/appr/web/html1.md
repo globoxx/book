@@ -33,25 +33,36 @@ HTML est un langage de description, pas de programmation ! Il n'est pas possible
 
 Quand vous visitez un site web, le serveur du site vous transmet en réalité un fichier HTML qui sera lu et interprété par votre navigateur.  
 
-```{admonition} Micro-activité
+````{admonition} Micro-activité
 :class: note
 Rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous..." pour sauver le fichier.  
-Vous observez que votre navigateur télécharge un fichier `.html` que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).  
+Vous observez que votre navigateur télécharge un fichier `.html` que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).
+
 La page est-elle identique à tout à l'heure ? A quoi ressemble l'url de la page ?
+
+```{dropdown} Réponse
+Cela dépend de la page que vous avez téléchargée. S'il s'agit d'une page web **statique**, le contenu devrait être identique après l'avoir téléchargé localement. En revanche, si le site est **dynamique**, le contenu risque d'être très différent car le serveur n'est plus là pour personaliser le contenu de la page en temps réel pour vous.
+
+Concernant l'url, vous pouvez voir qu'il ne pointe plus vers le serveur du site, mais bien vers le fichier `.html` de votre ordinateur.
 ```
+````
 
 ## Premier contact avec un code HTML
 
 Tout comme n'importe quel autre langage informatique, HTML peut être lu et édité avec n'importe quel éditeur de texte.
 
-```{admonition} Micro-activité
+````{admonition} Micro-activité
 :class: note
 Ouvrez le fichier .html de l'activité précédente avec un éditeur de texte.  
 Il est probable que le fichier ne contienne pas que du code HTML mais également du code Javascript et CSS (nous verrons cela plus tard).  
 Pour trouver le code HTML, cherchez les symboles `<` et `>`. HTML est un langage basé sur des balises représentées par des chevrons `<...>`.  
 
 Voyez-vous des similitudes avec le langage python ?
+
+```{dropdown} Réponse
+Vous ne devriez retrouver que très peu de similitudes avec python car HTML n'est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présents dans presque tous les langages informatiques.
 ```
+````
 
 L'HTML tout seul décrit simplement le contenu, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.  
 Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l'exception des images).
@@ -110,7 +121,7 @@ On distingue 2 types de balises:
 Reprenez votre fichier `.html` de l'exercice précédent et utlisez les balises `<p> </p>` pour créer des paragraphes.  
 Chaque portion de texte entouré de ces balises sera considéré comme un paragraphe séparé.
 
-````{dropdown} Exemple de solution
+````{dropdown} Solution
 ```{code-block} html
 <p>Ceci est mon premier paragraphe !</p>
 <p>Et en voilà un autre...</p>
@@ -140,7 +151,8 @@ Testez les 2 types de source différentes:
 1. Image locale: téléchargez une image en ligne et placez là dans le même dossier que votre fichier `.html`.
 2. Image en ligne: copiez l'adresse de l'image en ligne.
 
-````{dropdown} Exemple de solution (en ligne)
+````{dropdown} Solution
+Voici un exemple de solution possible avec une source en ligne.
 ```{code-block} html
 <p>Ceci est mon premier paragraphe !</p>
 <p>Et en voilà un autre...</p>
@@ -248,13 +260,17 @@ Oui ! Rappelez-vous, le fichier `.html` est envoyé au visiteur et il a donc tou
 Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot de passe dans les commentaires de votre page !
 ```
 
+## Exercice récapitulatif
+
 ```{admonition} Exercice 6 (récapitulatif)
 :class: note
-Ecrivez la page web principale du site `champignons.ch`.  
+Ecrivez la page web principale du site `champignons.ch`. dans un fichier nommé `champignons.html`.  
 Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:
 - Le titre "Champignons" qui doit apparaître dans l'onglet du navigateur.
 - Au moins 3 paragraphes de texte.
 - Une image de champignon entre 2 paragraphes.
-- Un commentaire.
 - Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web).
+- Un commentaire indiquant le site où vous avez trouvé la balise permettant de mettre un mot en gras.
+
+Déposez votre fichier sur Moodle à l'endroit prévu.
 ```

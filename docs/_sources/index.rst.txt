@@ -36,6 +36,8 @@ Bienvenue sur la plateforme de TP d'informatique !
    :hidden:
 
    web/html1
+   web/html2
+   web/html3
 
 .. toctree::
    :name: Autres activités
