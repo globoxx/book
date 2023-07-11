@@ -302,7 +302,9 @@ Dessinez une chaise en partant de rien.
 ```{codeplay}
 from turtle import *
 
+```
 
+Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu.
 ````
 
 ## Et à part le dessin ?

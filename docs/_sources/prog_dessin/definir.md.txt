@@ -405,6 +405,8 @@ maison()
 ...
 done()
 ```
+
+Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu.
 ````
 
 ## Et à part le dessin ?
