@@ -311,7 +311,7 @@ Si ! La balise orpheline <code class="docutils literal notranslate"><span class=
 <p>Vous voulez faire un grand espace entre 2 textes, est-ce une bonne idée selon vous d’empiler les <code class="docutils literal notranslate"><span class="pre">&lt;br&gt;</span></code> pour faire plein de sauts de ligne ?</p>
 <ul class="simple">
 <li><p><label class="answer incorrect"><input type="checkbox"/>Oui, pourquoi pas ?</label></p></li>
-<li><p><label class="answer correct"><input type="checkbox"/>Non, ça ne fonctionne pas</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Non, ça ne fonctionne pas</label></p></li>
 <li><p><label class="answer correct"><input type="checkbox"/>Non, ça fonctionne mais ce n’est pas la bonne manière</label></p></li>
 </ul>
 </div>
@@ -435,36 +435,36 @@ Solution<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<!DOCTYPE html>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ma liste de courses<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Pain<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Céréales<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Café<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Oranges<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 
-<html lang="fr">
-<head>
-<meta charset="utf-8"/>
-<title>Ma page</title>
-</head>
-<body>
-<h1>Ma liste de courses</h1>
-<ul>
-<li>Pain</li>
-<li>Céréales</li>
-<li><strong>Café</strong></li>
-<li>Oranges</li>
-</ul>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    &lt;h1&gt;Ma recette de pates&lt;/h1&gt;
-    &lt;ol&gt;
-        &lt;li&gt;Je fais chauffer de l'eau.&lt;/li&gt;
-        &lt;li&gt;Je mets les pates dans l'eau.&lt;/li&gt;
-        &lt;li&gt;J'attends.&lt;/li&gt;
-        &lt;li&gt;Je mets du sel parce que j'ai oublié avant.&lt;/li&gt;
-        &lt;li&gt;Je lance une pate contre le mur pour voir si elle est cuite.&lt;/li&gt;
-        &lt;li&gt;Je sors les pates.&lt;/li&gt;
-        &lt;li&gt;Je mets du beurre.&lt;/li&gt;
-        &lt;li&gt;Bon appétit !&lt;/li&gt;
-    &lt;/ol&gt;
-&lt;/body&gt;
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ma recette de pates<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Je fais chauffer de l'eau.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Je mets les pates dans l'eau.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>J'attends.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Je mets du sel parce que j'ai oublié avant.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Je lance une pate contre le mur pour voir si elle est cuite.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Je sors les pates.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Je mets du beurre.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Bon appétit !<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</body></html>
 </div>
 </details></div>
 </section>
@@ -472,7 +472,7 @@ Solution<div class="summary-down docutils">
 <h2>Insérer une autre page dans sa page ?<a class="headerlink" href="#inserer-une-autre-page-dans-sa-page" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vous vous demandez comment insérer une vidéo YouTube ou une carte Google Maps sur votre site ? La balise <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span> <span class="pre">&lt;/iframe&gt;</span></code> peut vous permettre de le faire !</p>
 <p>Les iframe permettent d’insérer une page web dans une autre page. Elles étaient très utilisées au début de l’HTML mais ont aujourd’hui un rôle plus secondaire et ne servent très souvent qu’à insérer des éléments provenant de sites tiers comme des modules de partage sociaux ou des cartes google maps.</p>
-<p>Le plus simple est encore d’obtenir le <strong>code d’intégration</strong> de la vidéo ou de la carte que vous voulez afficher. Il s’agit du code HTML contenant l’iframe et prêt à l’emploi.</p>
+<p>Le plus simple est encore d’obtenir le <strong>code d’intégration</strong> de la vidéo ou de la carte que vous voulez afficher. Il s’agit d’un code HTML contenant une iframe prête à l’emploi.</p>
 <div class="note admonition">
 <p class="admonition-title">Comment faire</p>
 <p>Pour YouTube, il suffit de faire un clic droit sur la vidéo et de choisir “Copier le code d’intégration”. Vous n’avez alors plus qu’à coller le code dans votre page web.</p>
@@ -488,11 +488,6 @@ Solution<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<ul class="simple">
-<li><p class="card-text">La balise <code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span> <span class="pre">&lt;/ul&gt;</span></code> (pour “unordered list”) sert à définir une liste non-ordonnée (ou liste à puces).</p></li>
-<li><p class="card-text">La balise <code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span> <span class="pre">&lt;/ol&gt;</span></code> (pour “ordered list”) sert à définir une liste ordonnée (ou liste numérotée).</p></li>
-<li><p class="card-text">La balise <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span> <span class="pre">&lt;/li&gt;</span></code> (pour “list item”) sert à définir un élément d’une liste.</p></li>
-</ul>
 </div>
 </details></div>
 </section>
@@ -501,8 +496,8 @@ Solution<div class="summary-down docutils">
 <div class="note admonition">
 <p class="admonition-title">Exercice 5 (récapitulatif)</p>
 <p>Vous êtes le gérant d’une agence de voyage et voulez faire une simple page listant les destinations que vous proposez.</p>
-<p>Ecrivez la page web principale du site <code class="docutils literal notranslate"><span class="pre">mesvoyages.ch</span></code>. dans un fichier nommé <code class="docutils literal notranslate"><span class="pre">voyages.html</span></code>.<br/>
-Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:</p>
+<p>Ecrivez la page web principale du site <code class="docutils literal notranslate"><span class="pre">mesvoyages.ch</span></code> dans un fichier nommé <code class="docutils literal notranslate"><span class="pre">voyages.html</span></code>.<br/>
+Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:</p>
 <ul class="simple">
 <li><p>Le titre “Mes voyages” qui doit apparaître dans l’onglet du navigateur.</p></li>
 <li><p>Le titre principal “Mes voyages” qui doit apparaître en haut de la page.</p></li>

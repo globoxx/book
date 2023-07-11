@@ -36,7 +36,7 @@ Si ! La balise orpheline `<br>` (pour _break_) permet d'insérer un saut de lign
 ```{question} Espace entre les textes
 Vous voulez faire un grand espace entre 2 textes, est-ce une bonne idée selon vous d'empiler les `<br>` pour faire plein de sauts de ligne ?
 * {f}`Oui, pourquoi pas ?`
-* {v}`Non, ça ne fonctionne pas`
+* {f}`Non, ça ne fonctionne pas`
 * {v}`Non, ça fonctionne mais ce n'est pas la bonne manière`
 ===
 Même si cela fonctionne, c'est une mauvaise pratique qui rend le code compliqué à maintenir. Pour décaler du texte correctement, nous utiliserons un langage de mise en forme: le CSS.
@@ -135,11 +135,12 @@ La balise la plus utilisée pour cela est `<strong>` mais HTML vous propose diff
 - `<em> </em>`: mets le texte en _italique_.
 - `<mark> </mark>`: mets le texte en surligné.
 
-````{admonition} Exercice 3
+`````{admonition} Exercice 3
 :class: note
 Reprenez le fichier `.html` contenant les listes et mettez le café de la liste de course en valeur.
 
-```{dropdown} Solution
+````{dropdown} Solution
+```{code-block} html
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -170,6 +171,7 @@ Reprenez le fichier `.html` contenant les listes et mettez le café de la liste 
 </html>
 ```
 ````
+`````
 
 ## Insérer une autre page dans sa page ?
 
@@ -177,7 +179,7 @@ Vous vous demandez comment insérer une vidéo YouTube ou une carte Google Maps 
 
 Les iframe permettent d'insérer une page web dans une autre page. Elles étaient très utilisées au début de l'HTML mais ont aujourd'hui un rôle plus secondaire et ne servent très souvent qu'à insérer des éléments provenant de sites tiers comme des modules de partage sociaux ou des cartes google maps.
 
-Le plus simple est encore d'obtenir le **code d'intégration** de la vidéo ou de la carte que vous voulez afficher. Il s'agit du code HTML contenant l'iframe et prêt à l'emploi.
+Le plus simple est encore d'obtenir le **code d'intégration** de la vidéo ou de la carte que vous voulez afficher. Il s'agit d'un code HTML contenant une iframe prête à l'emploi.
 
 ```{admonition} Comment faire
 :class: note
@@ -191,9 +193,7 @@ Pour Google Maps, ouvrez le menu en haut à gauche de la page et cliquez sur "Pa
 Reprenez votre page sur les champignons (`champignons.html`) et ajoutez 2 iframe. Une comportant une vidéo sur les champignons et une seconde affichant une carte afin de pouvoir partir à la chasse plus facilement.
 
 ```{dropdown} Solution
-- La balise `<ul> </ul>` (pour "unordered list") sert à définir une liste non-ordonnée (ou liste à puces).
-- La balise `<ol> </ol>` (pour "ordered list") sert à définir une liste ordonnée (ou liste numérotée).
-- La balise `<li> </li>` (pour "list item") sert à définir un élément d'une liste.
+
 ```
 ````
 
@@ -203,8 +203,8 @@ Reprenez votre page sur les champignons (`champignons.html`) et ajoutez 2 iframe
 :class: note
 Vous êtes le gérant d'une agence de voyage et voulez faire une simple page listant les destinations que vous proposez.
 
-Ecrivez la page web principale du site `mesvoyages.ch`. dans un fichier nommé `voyages.html`.  
-Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:
+Ecrivez la page web principale du site `mesvoyages.ch` dans un fichier nommé `voyages.html`.  
+Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:
 - Le titre "Mes voyages" qui doit apparaître dans l'onglet du navigateur.
 - Le titre principal "Mes voyages" qui doit apparaître en haut de la page.
 - Un petit paragraphe expliquant à quoi sert le site.

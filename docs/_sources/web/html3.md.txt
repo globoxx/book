@@ -27,10 +27,12 @@ Finalement, on écrit entre les 2 balises le texte du lien.
 :class: note
 Modifiez le code HTML suivant pour ajouter des liens hypertextes vers les pages wikipédia des différentes destinations de la liste.
 
+```{code-block} html
+
+```
+
 ```{dropdown} Solution
-Un lien hypertexte s'insert avec la balise `<a> </a>` (pour "anchor", ancre en français).  
-L'attribut `href` suivi de `=` indique l'URL de redirection.  
-Finalement, on écrit entre les 2 balises le texte du lien.
+
 ```
 ````
 
@@ -51,5 +53,5 @@ On appelle ça un **lien absolu** car il indique une adresse complète.
 
 ```{admonition} A retenir
 :class: note
-On appelle ça un **lien relatif** car il indique où trouver notre fichier HTML par rapport à l'emplacement de la page courante.
+On appelle ça un **lien relatif** car il indique où trouver un fichier HTML par rapport à l'emplacement de la page courante.
 ```

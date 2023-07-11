@@ -265,7 +265,7 @@ Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot
 ```{admonition} Exercice 6 (récapitulatif)
 :class: note
 Ecrivez la page web principale du site `champignons.ch`. dans un fichier nommé `champignons.html`.  
-Vous êtes libre sur le contenu mais il doit contenir les éléments suivants:
+Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:
 - Le titre "Champignons" qui doit apparaître dans l'onglet du navigateur.
 - Au moins 3 paragraphes de texte.
 - Une image de champignon entre 2 paragraphes.
