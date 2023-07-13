@@ -116,7 +116,7 @@ Copiez le code suivant dans le fichier `contact.html`:
     <body>
         <h1>Contact</h1>
         <p>Pour tout renseigment, vous pouvez prendre contact avec notre 
-        gence par les moyens suivants:</p>
+        agence par les moyens suivants:</p>
         <ul>
             <!-- Il est aussi possible de créer un lien vers une adresse mail avec "mailto" -->
             <li>Email: <a href="mailto:mesvoyages@gmail.com">mesvoyages@gmail.com</a></li>
@@ -141,7 +141,7 @@ Ajoutez un lien relatif depuis la page principale `voyages.html` vers la page `c
 
 ```{question} Absolu ou relatif ?
 Parmi les liens suivants, les quels sont relatifs ?
-* {v}`&lt;a href="chats.html"&gt;Chats&lt;/a&gt;`
+* {v}`<a href=`chats.html`>Chats</a>`
 * {f}`<a href="https://www.google.com">Google</a>`
 * {v}`<a href="mon_site/contenu/pages/page3.html">Page 3</a>`
 * {f}`<a href="https://www.codeur.com/page2/">Page 2</a>`
@@ -153,14 +153,14 @@ Vous avez des fichiers organisés de la manière suivante:
 ```{image} ../media/organisation_dossiers.png
 ```
 
-1. Vous êtes dans le fichier `index.html`, quel code permet de faire un lien vers la `page1.html` ?
+Vous êtes dans le fichier `index.html`, quel code permet de faire un lien vers la `page1.html` ?
 
 * {v}`<a href="page1.html">Page 1</a>`
 * {f}`<a href="dossier1/page1.html">Page 1</a>`
 * {v}`<a href="../dossier1/page1.html">Page 1</a>`
 * {f}`<a href="dossier2/page1.html">Page 1</a>`
 
-2. Vous êtes dans le fichier `page1.html`, quel code permet de faire un lien vers la `page2.html` ?
+Vous êtes dans le fichier `page1.html`, quel code permet de faire un lien vers la `page2.html` ?
 
 * {v}`<a href="page2.html">Page 2</a>`
 * {f}`<a href="dossier2/page2.html">Page 2</a>`
