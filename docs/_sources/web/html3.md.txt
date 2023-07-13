@@ -100,7 +100,7 @@ Attention, si votre 2ème page se trouve dans un dossier (par exemple un dossier
 
 `````{admonition} Exercice 3
 :class: note
-Nous allons ajouter une 2ème page à votre site `mesvoyages.ch` créé dans le chapitre précédent. Le but est d'ajouter une page permettant les visiteurs de contacter l'agence de voyage.
+Nous allons ajouter une 2ème page à votre site `mesvoyages.ch` créé dans le chapitre précédent. Le but est d'ajouter une page permettant aux visiteurs de contacter l'agence de voyage.
 
 Commencez par créer un nouveau fichier `.html` nommé `contact.html` et déposez le dans le même dossier que la page principale `voyages.html`.
 
@@ -120,7 +120,7 @@ Copiez le code suivant dans le fichier `contact.html`:
         <ul>
             <!-- Il est aussi possible de créer un lien vers une adresse mail avec "mailto" -->
             <li>Email: <a href="mailto:mesvoyages@gmail.com">mesvoyages@gmail.com</a></li>
-            <li>Telephone: 079 123 45 67
+            <li>Telephone: 0791234567
         </ul>
     </body>
 </html>
@@ -141,7 +141,7 @@ Ajoutez un lien relatif depuis la page principale `voyages.html` vers la page `c
 
 ```{question} Absolu ou relatif ?
 Parmi les liens suivants, les quels sont relatifs ?
-* {v}`<a href="chats.html">Chats</a>`
+* {v}````{code-block} html <a href="chats.html">Chats</a>````
 * {f}`<a href="https://www.google.com">Google</a>`
 * {v}`<a href="mon_site/contenu/pages/page3.html">Page 3</a>`
 * {f}`<a href="https://www.codeur.com/page2/">Page 2</a>`
