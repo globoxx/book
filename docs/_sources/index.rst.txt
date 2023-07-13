@@ -2,7 +2,7 @@
    :alt: "Bannière"
 
 Informatique au gymnase : Travaux pratiques
-====================================
+===========================================
 
 Bienvenue sur la plateforme de TP d'informatique !
 
@@ -40,6 +40,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    web/html1
    web/html2
    web/html3
+   web/html4
 
 .. toctree::
    :name: Autres activités

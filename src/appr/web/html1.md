@@ -71,7 +71,7 @@ Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l'exception 
 :class: note
 Vous allez écrire votre tout premier (simplissime) fichier HTML.  
 Créez un nouveau fichier texte (`.txt`) et changez l'extension du fichier en `.html` (ainsi vous pourrez l'ouvrir dans le navigateur).  
-Ouvrez votre fichier avec un éditeur de texte, écrivez quelques mots, sauvegardez, puis ouvrez votre fichier avec un navigateur.  
+Ouvrez votre fichier avec un éditeur de texte, écrivez quelques mots, sauvegardez, puis ouvrez votre fichier avec un navigateur en double-cliquant dessus.  
 Vous devriez voir votre texte s'afficher !
 ```
 
@@ -128,6 +128,11 @@ Chaque portion de texte entouré de ces balises sera considéré comme un paragr
 ```
 ````
 `````
+
+```{admonition} Tester facilement son code
+:class: hint
+Pour faire des tests rapides, vous pouvez vous rendre sur <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro"> w3schools</a> qui permet de rapidement voir ce que donne votre code HTML.
+```
 
 ## Paramètrer ses balises avec des attributs
 
