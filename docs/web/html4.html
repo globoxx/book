@@ -284,13 +284,57 @@
 <span id="web-html4"></span><h1>3. Plus sur les images<a class="headerlink" href="#plus-sur-les-images" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="note admonition">
 <p class="admonition-title">Rappel</p>
-<p>Un <strong>lien hypertexte</strong> (ou hyperlien) est une référence placée dans le contenu d’un document éléctronique permettant de passer automatiquement à un autre document.</p>
+<p>Une image s’insert avec la balise orpheline <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src="image.jpg"</span> <span class="pre">alt="Une</span> <span class="pre">image"&gt;</span></code>.<br/>
+Notez l’attribut <code class="docutils literal notranslate"><span class="pre">alt</span></code> (pour “alternative”) qui permet de donner une description de l’image qui sera affichée dans le cas où l’image n’apparaît pas correctement dans le navigateur. Cet attribut est obligatoire pour que les robots des moteurs de recherche considère votre code comme conforme et fassent un bon référencement de votre site.</p>
 </div>
+<p>Voici un exemple qui spécifie l’attribut <code class="docutils literal notranslate"><span class="pre">alt</span></code>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+Voici une très belle photo de mes dernières vacances.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/plage.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Photo de plage vue du dessus"</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Et les non-voyants sur le web ?</p>
+<p>Quand ils surfent sur le web, les personnes non-voyantes utilisent des logiciels qui leur lisent le contenu des pages. Dans cette situation, vous réalisez l’importance de donner une courte description de vos images avec l’attribut <code class="docutils literal notranslate"><span class="pre">alt</span></code>, afin que le synthétiseur vocal puisse décrire l’image à la personne.</p>
+</div>
+<section id="rassembler-ses-images">
+<h2>Rassembler ses images<a class="headerlink" href="#rassembler-ses-images" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est fortement conseillé de rassembler les images de votre site dans un dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> afin d’éviter de les mélanger avec les fichiers <code class="docutils literal notranslate"><span class="pre">.html</span></code>.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>Si ce n’est pas déjà fait, reprenez le dossier <code class="docutils literal notranslate"><span class="pre">photographie</span></code> de l’exercice récapitulatif du chapitre précédent et créez un dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> pour y placer toutes vos images. Bien entendu, il vous faut ensuite modifier les sources des images dans le code.<br/>
+Ajoutez également l’attribut <code class="docutils literal notranslate"><span class="pre">alt</span></code> pour chaque image.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Vos liens doivent maintenant ressembler à ça:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">href</span><span class="o">=</span><span class="s">"images/photo1.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Image montrant un gratte-ciel"</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+<div class="attention admonition">
+<p class="admonition-title">Attention</p>
+<p>Évitez à tout prix les accents, majuscules et espaces dans vos noms de fichiers et de dossiers. Par exemple, voici un chemin qui va poser problème: <code class="docutils literal notranslate"><span class="pre">Images</span> <span class="pre">du</span> <span class="pre">site/Image</span> <span class="pre">toute</span> <span class="pre">bête.jpg</span></code>.</p>
+<p>Il est courant de remplacer les espaces par des tirets bas (<em>underscore</em>) <code class="docutils literal notranslate"><span class="pre">_</span></code>. Idéalement, le chemin devrait donc plutôt ressembler à <code class="docutils literal notranslate"><span class="pre">images_du_site/image_toute_bete.jpg</span></code>.</p>
+</div>
+</section>
+<section id="changer-la-taille-des-images">
+<h2>Changer la taille des images<a class="headerlink" href="#changer-la-taille-des-images" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="ajouter-une-infobulle">
+<h2>Ajouter une infobulle<a class="headerlink" href="#ajouter-une-infobulle" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
 <section id="exercice-recapitulatif">
 <h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Exercice 4 (récapitulatif)</p>
-<p>Vous vous lancez dans la photographie. Vous avez besoin d’un site où les potentiels clients pourraient vous contacter pour vos services.</p>
+<p>Votre site de photographie attire de nombreux clients, mais certains se plaignent de ne pas pouvoir</p>
 <p>Créez un nouveau dossier de travail nommé <code class="docutils literal notranslate"><span class="pre">photographie</span></code>.<br/>
 Ecrivez la page d’accueil du site dans un fichier nommé <code class="docutils literal notranslate"><span class="pre">index.html</span></code>.<br/>
 Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:</p>
@@ -357,6 +401,9 @@ Vous êtes libre sur le contenu mais la page doit contenir les éléments suivan
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">3. Plus sur les images</a><ul>
+<li><a class="reference internal" href="#rassembler-ses-images">Rassembler ses images</a></li>
+<li><a class="reference internal" href="#changer-la-taille-des-images">Changer la taille des images</a></li>
+<li><a class="reference internal" href="#ajouter-une-infobulle">Ajouter une infobulle</a></li>
 <li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
 </ul>
 </li>

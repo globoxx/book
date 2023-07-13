@@ -184,6 +184,15 @@ L'attribut `target="_blank"` permet justement de le faire:
 <a href="https://mdlgb.ch/" target="_blank">Accédez à Moodle</a>
 ```
 
+## Une image cliquable
+
+Il est tout à fait possible de transformer une image en lien. Pour ceci, il suffit de mettre une image entre les balises `<a> </a>` au lieu d'un texte.
+Voici un exemple:
+
+```{code-block} html
+<a href="https://mdlgb.ch/"><img src="https://pbs.twimg.com/profile_images/1125713968637579265/L4HJ0qyd_400x400.png"></a>
+```
+
 ## Exercice récapitulatif
 
 ```{admonition} Exercice 4 (récapitulatif)
