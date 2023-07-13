@@ -1,6 +1,6 @@
 (web.html4)=
 
-# 3. Plus sur les images
+# 4. Plus sur les images
 
 ```{admonition} Rappel
 :class: note
@@ -12,8 +12,8 @@ Voici un exemple qui spécifie l'attribut `alt`:
 
 ```{code-block} html
 <p>
-Voici une très belle photo de mes dernières vacances.<br>
-<img src="images/plage.jpg" alt="Photo de plage vue du dessus" />
+    Voici une très belle photo de mes dernières vacances.<br>
+    <img src="images/plage.jpg" alt="Photo de plage vue du dessus" />
 </p>
 ```
 

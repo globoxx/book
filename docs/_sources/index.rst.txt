@@ -30,6 +30,8 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog_dessin/definir
    prog_dessin/repeter
    prog_dessin/parametrer
+   prog_dessin/parcourir
+   prog_dessin/randomiser
 
 .. toctree::
    :name: Web

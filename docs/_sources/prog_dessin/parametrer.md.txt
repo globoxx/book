@@ -374,6 +374,18 @@ Paramètrer une fonction permet en quelque sorte de la généraliser pour qu'ell
 ```
 
 ````{exercise}
+Ecrivez une fonction qui permet de calculer l'aire d'un triangle en vous basant sur la longueur de sa base et sa hauteur.
+
+La fonction prend donc 2 paramètres:
+- `base`
+- `hauteur`
+
+```{codeplay}
+# Votre code ici...
+```
+````
+
+````{exercise}
 Reprenez la solution de l'exercice final du chapitre 3 et écrivez une fonction permettant de calculer la somme des chiffres de 0 à n.
 
 La fonction prend donc un unique paramètre: `n`.
