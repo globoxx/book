@@ -177,6 +177,9 @@ Reprenez le fichier `.html` contenant les listes et mettez le café de la liste 
 
 Vous vous demandez comment insérer une vidéo YouTube ou une carte Google Maps sur votre site ? La balise `<iframe> </iframe>` peut vous permettre de le faire !
 
+```{youtube} uHKfrz65KSU
+```
+
 Les iframe permettent d'insérer une page web dans une autre page. Elles étaient très utilisées au début de l'HTML mais ont aujourd'hui un rôle plus secondaire et ne servent très souvent qu'à insérer des éléments provenant de sites tiers comme des modules de partage sociaux ou des cartes google maps.
 
 Le plus simple est encore d'obtenir le **code d'intégration** de la vidéo ou de la carte que vous voulez afficher. Il s'agit d'un code HTML contenant une iframe prête à l'emploi.

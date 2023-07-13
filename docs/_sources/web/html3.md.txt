@@ -141,7 +141,7 @@ Ajoutez un lien relatif depuis la page principale `voyages.html` vers la page `c
 
 ```{question} Absolu ou relatif ?
 Parmi les liens suivants, les quels sont relatifs ?
-* {v}````{code-block} html <a href="chats.html">Chats</a>````
+* {v}`&lt;a href="chats.html"&gt;Chats&lt;/a&gt;`
 * {f}`<a href="https://www.google.com">Google</a>`
 * {v}`<a href="mon_site/contenu/pages/page3.html">Page 3</a>`
 * {f}`<a href="https://www.codeur.com/page2/">Page 2</a>`
