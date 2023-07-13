@@ -116,7 +116,7 @@ Copiez le code suivant dans le fichier `contact.html`:
     <body>
         <h1>Contact</h1>
         <p>Pour tout renseigment, vous pouvez prendre contact avec notre 
-        gence par les moyens suivants:</p
+        gence par les moyens suivants:</p>
         <ul>
             <!-- Il est aussi possible de créer un lien vers une adresse mail avec "mailto" -->
             <li>Email: <a href="mailto:mesvoyages@gmail.com">mesvoyages@gmail.com</a></li>
@@ -143,8 +143,8 @@ Ajoutez un lien relatif depuis la page principale `voyages.html` vers la page `c
 Parmi les liens suivants, les quels sont relatifs ?
 * {v}`<a href="chats.html">Chats</a>`
 * {f}`<a href="https://www.google.com">Google</a>`
-* {v}`<a href="mon_site/contenu/pages/page3.html>Page 3</a>`
-* {f}`<a href="<a href="https://www.codeur.com/page2/">Page 2</a>`
+* {v}`<a href="mon_site/contenu/pages/page3.html">Page 3</a>`
+* {f}`<a href="https://www.codeur.com/page2/">Page 2</a>`
 ```
 
 ````{question} Chemin relatif

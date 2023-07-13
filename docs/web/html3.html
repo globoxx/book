@@ -379,23 +379,23 @@ Solution<div class="summary-down docutils">
 <p>Nous allons ajouter une 2ème page à votre site <code class="docutils literal notranslate"><span class="pre">mesvoyages.ch</span></code> créé dans le chapitre précédent. Le but est d’ajouter une page permettant les visiteurs de contacter l’agence de voyage.</p>
 <p>Commencez par créer un nouveau fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> nommé <code class="docutils literal notranslate"><span class="pre">contact.html</span></code> et déposez le dans le même dossier que la page principale <code class="docutils literal notranslate"><span class="pre">voyages.html</span></code>.</p>
 <p>Copiez le code suivant dans le fichier <code class="docutils literal notranslate"><span class="pre">contact.html</span></code>:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
-&lt;html lang="fr"&gt;
-    &lt;head&gt;
-        &lt;meta charset="utf-8"&gt;
-        &lt;title&gt;Contact&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Contact&lt;/h1&gt;
-        &lt;p&gt;Pour tout renseigment, vous pouvez prendre contact avec notre 
-        gence par les moyens suivants:&lt;/p
-        &lt;ul&gt;
-            &lt;!-- Il est aussi possible de créer un lien vers une adresse mail avec "mailto" --&gt;
-            &lt;li&gt;Email: &lt;a href="mailto:mesvoyages@gmail.com"&gt;mesvoyages@gmail.com&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;Telephone: 079 123 45 67
-        &lt;/ul&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Pour tout renseigment, vous pouvez prendre contact avec notre 
+        gence par les moyens suivants:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="c">&lt;!-- Il est aussi possible de créer un lien vers une adresse mail avec "mailto" --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Email: <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"mailto:mesvoyages@gmail.com"</span><span class="p">&gt;</span>mesvoyages@gmail.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Telephone: 079 123 45 67
+        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>Ajoutez un lien relatif depuis la page principale <code class="docutils literal notranslate"><span class="pre">voyages.html</span></code> vers la page <code class="docutils literal notranslate"><span class="pre">contact.html</span></code>. Ajoutez également un lien dans l’autre sens.</p>
@@ -422,8 +422,8 @@ Solution<div class="summary-down docutils">
 <ul class="simple">
 <li><p><label class="answer correct"><input type="checkbox"/>&lt;a href= »chats.html »&gt;Chats&lt;/a&gt;</label></p></li>
 <li><p><label class="answer incorrect"><input type="checkbox"/>&lt;a href= »https://www.google.com »&gt;Google&lt;/a&gt;</label></p></li>
-<li><p><label class="answer correct"><input type="checkbox"/>&lt;a href= »mon_site/contenu/pages/page3.html&gt;Page 3&lt;/a&gt;</label></p></li>
-<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;a href= »&lt;a href= »https://www.codeur.com/page2/ »&gt;Page 2&lt;/a&gt;</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>&lt;a href= »mon_site/contenu/pages/page3.html »&gt;Page 3&lt;/a&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;a href= »https://www.codeur.com/page2/ »&gt;Page 2&lt;/a&gt;</label></p></li>
 </ul>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
