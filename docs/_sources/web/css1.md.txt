@@ -3,7 +3,7 @@
 # 5. Introduction au CSS
 
 On ne va pas se mentir. Jusqu'ici, nos sites étaient plutôt moches.  
-A partir de ce chapitre, nous allons pouvoir styliser nos pages grâce à un second langage fondateur du Web: CSS.
+A partir de ce chapitre, nous allons pouvoir styliser nos pages grâce à un second langage fondateur du web: le CSS.
 
 ```{panels}
 
@@ -15,7 +15,7 @@ Mark Andreessen
 
 L'informaticien américain [**Mark Andreessen**](https://fr.wikipedia.org/wiki/Marc_Andreessen) est l'un des créateurs du premier navigateur web (Mosaic) en 1993 ainsi que le fondateur de Netscape, la 1ère entreprise entièrement tournée vers Internet. Il n'est pas à proprement parler le créateur du CSS mais ses nombreuses innovations vont pousser d'autres ingénieurs à travailler dessus, notamment [**Håkon Wium Lie**](https://fr.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie) qui sera le premier à proposer l'idée même du CSS.
 ----
-:img-top: ../media/css.png
+:img-top: ../media/css.svg
 CSS3
 ^^^^^
 ***Créé en 1996***
