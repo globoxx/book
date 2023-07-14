@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Aventure textuelle" href="../divers/aventure.html" /><link rel="prev" title="4. Plus sur les images" href="html4.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>4. Introduction au CSS - Travaux pratiques</title>
+        <title>5. Introduction au CSS - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -245,7 +245,7 @@
 <li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="html3.html">3. Faire des liens</a></li>
 <li class="toctree-l1"><a class="reference internal" href="html4.html">4. Plus sur les images</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">4. Introduction au CSS</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">5. Introduction au CSS</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -284,15 +284,139 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="introduction-au-css">
-<span id="web-css1"></span><h1>4. Introduction au CSS<a class="headerlink" href="#introduction-au-css" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="web-css1"></span><h1>5. Introduction au CSS<a class="headerlink" href="#introduction-au-css" title="Lien permanent vers ce titre">¶</a></h1>
+<p>On ne va pas se mentir. Jusqu’ici, nos sites étaient plutôt moches.<br/>
+A partir de ce chapitre, nous allons pouvoir styliser nos pages grâce à un second langage fondateur du Web: CSS.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<img alt="img-top" class="card-img-top" src="../_images/andreessen.jpg"/>
+<div class="card-header docutils">
+<p class="card-text">Mark Andreessen</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><em><strong>Né en 1971</strong></em></p>
+<p class="card-text">L’informaticien américain <a class="reference external" href="https://fr.wikipedia.org/wiki/Marc_Andreessen"><strong>Mark Andreessen</strong></a> est l’un des créateurs du premier navigateur web (Mosaic) en 1993 ainsi que le fondateur de Netscape, la 1ère entreprise entièrement tournée vers Internet. Il n’est pas à proprement parler le créateur du CSS mais ses nombreuses innovations vont pousser d’autres ingénieurs à travailler dessus, notamment <a class="reference external" href="https://fr.wikipedia.org/wiki/H%C3%A5kon_Wium_Lie"><strong>Håkon Wium Lie</strong></a> qui sera le premier à proposer l’idée même du CSS.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<img alt="img-top" class="card-img-top" src="../_images/css.png"/>
+<div class="card-header docutils">
+<p class="card-text">CSS3</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><em><strong>Créé en 1996</strong></em></p>
+<p class="card-text">Le <a class="reference external" href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade">CSS</a> (Cascading Style Sheets, aussi appelées feuilles de style) a pour rôle de gérer l’apparence de la page web (agencement, positionnement, décoration, couleurs, taille du texte…). Ce langage est venu compléter le HTML en 1996, et il est toujours au fondement même du style du Web de nos jours.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>TODO CSS art</p>
 <section id="ou-ecrire-le-css">
 <h2>Où écrire le CSS ?<a class="headerlink" href="#ou-ecrire-le-css" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est possible d’écrire du code CSS directement dans des fichiers <code class="docutils literal notranslate"><span class="pre">.html</span></code> grâce aux balises <code class="docutils literal notranslate"><span class="pre">&lt;style&gt;</span> <span class="pre">&lt;/style&gt;</span></code>. Cependant, cela rend le code difficile à lire et ce n’est pas la méthode que nous allons utiliser ici.</p>
+<p>Nous allons écrire tout notre code CSS dans un fichier <code class="docutils literal notranslate"><span class="pre">.css</span></code> puis le lier aux différentes pages <code class="docutils literal notranslate"><span class="pre">.html</span></code> de notre site.</p>
+<div class="admonition-comment-faire admonition">
+<p class="admonition-title">Comment faire ?</p>
+<p>Pour lier les fichiers <code class="docutils literal notranslate"><span class="pre">.css</span></code> et <code class="docutils literal notranslate"><span class="pre">.html</span></code>, vous allez rajouter une ligne dans le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> pour indiquer au navigateur d’aller chercher la feuille de style associée.</p>
+<p>Cette ligne s’ouvre avec la balise orpheline <code class="docutils literal notranslate"><span class="pre">&lt;link&gt;</span></code> et on la place à l’intérieur de la balise <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code>:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
 </section>
 <section id="appliquer-une-propriete-css-a-une-balise-html">
 <h2>Appliquer une propriété CSS à une balise HTML<a class="headerlink" href="#appliquer-une-propriete-css-a-une-balise-html" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici à quoi ressemble un bout de code CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>Créez un fichier <code class="docutils literal notranslate"><span class="pre">style.css</span></code> et copiez-y le code ci-dessus.</p>
+<p>Créez un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code>, copiez-y le code ci-dessous et ajoutez le lien vers la feuille de style <code class="docutils literal notranslate"><span class="pre">style.css</span></code> comme expliqué dans la section précédente.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Le titre de ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est mon premier paragraphe !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hop encore un paragraphe après l'image !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ouvrez le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> dans votre navigateur.
+Pouvez-vous dire ce que fait le code CSS du fichier <code class="docutils literal notranslate"><span class="pre">style.css</span></code> ?</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Le code CSS signifie en français: “Je veux que tous les paragraphes soient écrits en bleu”.</p>
+</div>
+</details></div>
+<p>Le CSS fonctionne avec 3 éléments différents:</p>
+<ol class="simple">
+<li><p><strong>Le sélecteur</strong>: ici on écrit les noms des balises HTML dont on veut modifier l’apparence. Par exemple, si je veux modifier l’apparence de tous les paragraphes  <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, je dois écrire <code class="docutils literal notranslate"><span class="pre">p</span></code> (sans les chevrons).</p></li>
+<li><p><strong>La ou les propriétés CSS</strong>: les effets de style sont listés via des propriétés. Par exemple, <code class="docutils literal notranslate"><span class="pre">color</span></code> permet d’indiquer la couleur du texte, <code class="docutils literal notranslate"><span class="pre">font-size</span></code>  permet d’indiquer la taille du texte, etc. Il existe <strong>BEAUCOUP</strong> de propriétés CSS ! Mais rassurez-vous, vous n’avez pas besoin de les connaître toutes par cœur.</p></li>
+<li><p><strong>…et leurs valeurs</strong>: pour chaque propriété CSS, on doit indiquer une valeur. Par exemple, pour la propriété <code class="docutils literal notranslate"><span class="pre">color</span></code>, il faut indiquer le nom de la couleur. Pour font-size, il faut indiquer quelle taille on veut, etc.</p></li>
+</ol>
+<img alt="../_images/structure_css.jpg" src="../_images/structure_css.jpg"/>
+<div class="admonition-accolades-sur-le-clavier admonition">
+<p class="admonition-title">Accolades sur le clavier</p>
+<p>Sur mac, vous utilisez:</p>
+<ul class="simple">
+<li><p>les touches <code class="docutils literal notranslate"><span class="pre">option</span> <span class="pre">⌥</span></code> + <code class="docutils literal notranslate"><span class="pre">(</span></code> pour faire l’accolade ouvrante;</p></li>
+<li><p>et les touches <code class="docutils literal notranslate"><span class="pre">option</span> <span class="pre">⌥</span></code> + <code class="docutils literal notranslate"><span class="pre">)</span></code> pour faire l’accolade fermante;</p></li>
+</ul>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 2</p>
+<p>Modifiez le fichier <code class="docutils literal notranslate"><span class="pre">.css</span></code> de l’exercice précédent pour changer tous les titres principaux (<code class="docutils literal notranslate"><span class="pre">h1</span></code>) en rouge.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 </section>
 <section id="appliquer-une-propriete-css-a-plusieurs-balises-html">
 <h2>Appliquer une propriété CSS à plusieurs balises HTML<a class="headerlink" href="#appliquer-une-propriete-css-a-plusieurs-balises-html" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="les-balises-universelles-span-et-div">
+<h2>Les balises universelles <code class="docutils literal notranslate"><span class="pre">span</span></code> et <code class="docutils literal notranslate"><span class="pre">div</span></code><a class="headerlink" href="#les-balises-universelles-span-et-div" title="Lien permanent vers ce titre">¶</a></h2>
 </section>
 <section id="exercice-recapitulatif">
 <h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
@@ -352,10 +476,11 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">4. Introduction au CSS</a><ul>
+<li><a class="reference internal" href="#">5. Introduction au CSS</a><ul>
 <li><a class="reference internal" href="#ou-ecrire-le-css">Où écrire le CSS ?</a></li>
 <li><a class="reference internal" href="#appliquer-une-propriete-css-a-une-balise-html">Appliquer une propriété CSS à une balise HTML</a></li>
 <li><a class="reference internal" href="#appliquer-une-propriete-css-a-plusieurs-balises-html">Appliquer une propriété CSS à plusieurs balises HTML</a></li>
+<li><a class="reference internal" href="#les-balises-universelles-span-et-div">Les balises universelles <code class="docutils literal notranslate"><span class="pre">span</span></code> et <code class="docutils literal notranslate"><span class="pre">div</span></code></a></li>
 <li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
 </ul>
 </li>
