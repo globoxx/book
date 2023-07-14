@@ -90,9 +90,10 @@ Idéalement, les images locales devraient être redimensionnées à l'avance afi
 
 Vous avez sûrement déjà vu des images sur lesquelles, quand vous laissez le curseur une seconde, un petit texte apparaît.
 
+![Alt text](../media/balises_html.jpg "Optional title")
 <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" title="Test">
 
-Afin d'afficher une bulle d'aide sur vos images, vous pouvez utiliser l'attribut `title`; (à ne pas confondre avec la balise `title` qui permet d'indiquer au navigateur le titre d'une page web).
+Afin d'afficher une bulle d'aide sur vos images, vous pouvez utiliser l'attribut `title` suivi d'un `=` et du texte que vous voulez afficher entre `" "`; (à ne pas confondre avec la balise `title` qui permet d'indiquer au navigateur le titre d'une page web).
 
 `````{admonition} Exercice 3
 :class: note
@@ -105,6 +106,11 @@ Reprenez le code de l'exercice précédent montrant une page d'ecublens et ajout
 ```
 ````
 `````
+
+```{admonition} Des infobulles partout
+:class: hint
+L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple également possible d'ajouter l'attribut `title` à des liens (`<a> </a>`) ou des paragraphes (<p> </p>).
+```
 
 ## Exercice récapitulatif
 
