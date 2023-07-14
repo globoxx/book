@@ -4,8 +4,9 @@
 
 ```{admonition} Rappel
 :class: note
-Une image s'insert avec la balise orpheline `<img src="image.jpg" alt="Une image">`.  
-Notez l'attribut `alt` (pour "alternative") qui permet de donner une description de l'image qui sera affichée dans le cas où l'image n'apparaît pas correctement dans le navigateur. Cet attribut est obligatoire pour que les robots des moteurs de recherche considère votre code comme conforme et fassent un bon référencement de votre site.
+Une image s'insert avec la balise orpheline `<img src="image.jpg" alt="Une image">`.
+
+Notez l'attribut `alt` (pour "alternative") qui permet de donner une description de l'image qui sera affichée dans le cas où l'image n'apparaît pas correctement dans le navigateur. Cet attribut est **obligatoire** pour que les robots des moteurs de recherche considère votre code comme conforme et fassent un bon référencement de votre site.
 ```
 
 Voici un exemple qui spécifie l'attribut `alt`:
@@ -55,13 +56,12 @@ Les 2 attributs permettant de modifier la taille d'une image sont `width` (pour 
 ```
 
 ```{admonition} Attention
-:class: attention
+:class: danger
 Si vous précisez une largeur et une hauteur qui ne correspondent pas aux proportions originales de l'image, elle s'en trouvera déformée. Pour éviter ça, vous pouvez donner uniquement l'une des deux dimensions, et l'autre sera calculée automatiquement pour garder les proportions originales.
 ```
 
 `````{admonition} Exercice 2
 :class: note
-
 Voici une photo en ligne de la place d'ecublens: <a href="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg">photo</a>.
 Ouvrez un fichier `.html` et intégrer cette image dans sa taille originale.
 
@@ -93,11 +93,10 @@ Vous avez sûrement déjà vu des images sur lesquelles, quand vous laissez le c
 ```{image} ../media/tooltip_title.gif
 ```
 
-Afin d'afficher une bulle d'aide sur vos images, vous pouvez utiliser l'attribut `title` suivi d'un `=` et du texte que vous voulez afficher entre `" "`; (à ne pas confondre avec la balise `title` qui permet d'indiquer au navigateur le titre d'une page web).
+Afin d'afficher une bulle d'aide (infobulle) sur vos images, vous pouvez utiliser l'attribut `title` suivi d'un `=` et du texte que vous voulez afficher entre `" "`; (à ne pas confondre avec la balise `title` qui permet d'indiquer au navigateur le titre d'une page web).
 
 `````{admonition} Exercice 3
 :class: note
-
 Reprenez le code de l'exercice précédent montrant une page d'ecublens et ajoutez une bulle d'aide.
 
 ````{dropdown} Solution
@@ -116,9 +115,13 @@ L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple 
 
 ```{admonition} Exercice 4 (récapitulatif)
 :class: note
-Votre site de photographie attire de nombreux clients, mais certains se plaignent de ne pas pouvoir 
+Votre site de photographie attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
+Reprenez votre dossier `photographie` du chapitre précédent et faites les améliorations suivantes:
 
-
+- Ajustez les tailles des photos de votre galerie pour une meilleure harmonie.
+- Ajoutez des infobulles sur vos photos.
+- Sur votre page contact, ajoutez les logos d'instagram et de twitter. (A télécharger {download}`ici<../media/instagram.png>` et {download}`ici<../media/twitter.png>`)
+- Faites en sorte que les logos redirigent directement vers le réseau social associé en cliquant dessus.
 
 Déposez votre dossier sur Moodle à l'endroit prévu.
 ```

@@ -205,10 +205,10 @@ Vous êtes libre sur le contenu mais la page doit contenir les éléments suivan
 - Un titre qui doit apparaître dans l'onglet du navigateur.
 - Un titre principal avec votre nom.
 - Un petit paragraphe auto-biographique.
-- Un lien vers une page `book.html`.
+- Un lien vers une page `galerie.html`.
 - Un lien vers une page `contact.html`.
 
-La page `book.html` contient quelques-unes de vos meilleures photographies (trouvées sur Internet) et un lien pour retourner à l'accueil.
+La page `galerie.html` contient quelques-unes de vos meilleures photographies (trouvées sur Internet) et un lien pour retourner à l'accueil.
 
 La page `contact.html` contient votre adresse mail (fausse) et un lien pour retourner à l'accueil.
 

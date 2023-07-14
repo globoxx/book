@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Aventure textuelle" href="../divers/aventure.html" /><link rel="prev" title="3. Faire des liens" href="html3.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="4. Introduction au CSS" href="css1.html" /><link rel="prev" title="3. Faire des liens" href="html3.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>4. Plus sur les images - Travaux pratiques</title>
@@ -245,6 +245,7 @@
 <li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="html3.html">3. Faire des liens</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css1.html">4. Introduction au CSS</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -286,8 +287,8 @@
 <span id="web-html4"></span><h1>4. Plus sur les images<a class="headerlink" href="#plus-sur-les-images" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="note admonition">
 <p class="admonition-title">Rappel</p>
-<p>Une image s’insert avec la balise orpheline <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src="image.jpg"</span> <span class="pre">alt="Une</span> <span class="pre">image"&gt;</span></code>.<br/>
-Notez l’attribut <code class="docutils literal notranslate"><span class="pre">alt</span></code> (pour “alternative”) qui permet de donner une description de l’image qui sera affichée dans le cas où l’image n’apparaît pas correctement dans le navigateur. Cet attribut est obligatoire pour que les robots des moteurs de recherche considère votre code comme conforme et fassent un bon référencement de votre site.</p>
+<p>Une image s’insert avec la balise orpheline <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src="image.jpg"</span> <span class="pre">alt="Une</span> <span class="pre">image"&gt;</span></code>.</p>
+<p>Notez l’attribut <code class="docutils literal notranslate"><span class="pre">alt</span></code> (pour “alternative”) qui permet de donner une description de l’image qui sera affichée dans le cas où l’image n’apparaît pas correctement dans le navigateur. Cet attribut est <strong>obligatoire</strong> pour que les robots des moteurs de recherche considère votre code comme conforme et fassent un bon référencement de votre site.</p>
 </div>
 <p>Voici un exemple qui spécifie l’attribut <code class="docutils literal notranslate"><span class="pre">alt</span></code>:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -332,7 +333,7 @@ Solution<div class="summary-down docutils">
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"images/photo1.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Image montrant un gratte-ciel"</span>  <span class="na">width</span><span class="o">=</span><span class="s">"500"</span> <span class="na">height</span><span class="o">=</span><span class="s">"600"</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<div class="attention admonition">
+<div class="danger admonition">
 <p class="admonition-title">Attention</p>
 <p>Si vous précisez une largeur et une hauteur qui ne correspondent pas aux proportions originales de l’image, elle s’en trouvera déformée. Pour éviter ça, vous pouvez donner uniquement l’une des deux dimensions, et l’autre sera calculée automatiquement pour garder les proportions originales.</p>
 </div>
@@ -369,7 +370,7 @@ Solution<div class="summary-down docutils">
 <h2>Ajouter une infobulle<a class="headerlink" href="#ajouter-une-infobulle" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vous avez sûrement déjà vu des images sur lesquelles, quand vous laissez le curseur une seconde, un petit texte apparaît.</p>
 <img alt="../_images/tooltip_title.gif" src="../_images/tooltip_title.gif"/>
-<p>Afin d’afficher une bulle d’aide sur vos images, vous pouvez utiliser l’attribut <code class="docutils literal notranslate"><span class="pre">title</span></code> suivi d’un <code class="docutils literal notranslate"><span class="pre">=</span></code> et du texte que vous voulez afficher entre <code class="docutils literal notranslate"><span class="pre">"</span> <span class="pre">"</span></code>; (à ne pas confondre avec la balise <code class="docutils literal notranslate"><span class="pre">title</span></code> qui permet d’indiquer au navigateur le titre d’une page web).</p>
+<p>Afin d’afficher une bulle d’aide (infobulle) sur vos images, vous pouvez utiliser l’attribut <code class="docutils literal notranslate"><span class="pre">title</span></code> suivi d’un <code class="docutils literal notranslate"><span class="pre">=</span></code> et du texte que vous voulez afficher entre <code class="docutils literal notranslate"><span class="pre">"</span> <span class="pre">"</span></code>; (à ne pas confondre avec la balise <code class="docutils literal notranslate"><span class="pre">title</span></code> qui permet d’indiquer au navigateur le titre d’une page web).</p>
 <div class="note admonition">
 <p class="admonition-title">Exercice 3</p>
 <p>Reprenez le code de l’exercice précédent montrant une page d’ecublens et ajoutez une bulle d’aide.</p>
@@ -394,7 +395,14 @@ Solution<div class="summary-down docutils">
 <h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Exercice 4 (récapitulatif)</p>
-<p>Votre site de photographie attire de nombreux clients, mais certains se plaignent de ne pas pouvoir</p>
+<p>Votre site de photographie attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
+Reprenez votre dossier <code class="docutils literal notranslate"><span class="pre">photographie</span></code> du chapitre précédent et faites les améliorations suivantes:</p>
+<ul class="simple">
+<li><p>Ajustez les tailles des photos de votre galerie pour une meilleure harmonie.</p></li>
+<li><p>Ajoutez des infobulles sur vos photos.</p></li>
+<li><p>Sur votre page contact, ajoutez les logos d’instagram et de twitter. (A télécharger <a class="reference download internal" download="" href="../_downloads/a86d50dc314d156951a8e12751af6292/instagram.png"><code class="xref download docutils literal notranslate"><span class="pre">ici</span></code></a> et <a class="reference download internal" download="" href="../_downloads/5d55bb6167d8e0f0f262030a8bd16ae4/twitter.png"><code class="xref download docutils literal notranslate"><span class="pre">ici</span></code></a>)</p></li>
+<li><p>Faites en sorte que les logos redirigent directement vers le réseau social associé en cliquant dessus.</p></li>
+</ul>
 <p>Déposez votre dossier sur Moodle à l’endroit prévu.</p>
 </div>
 </section>
@@ -405,12 +413,12 @@ Solution<div class="summary-down docutils">
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../divers/aventure.html">
+          <a class="next-page" href="css1.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Aventure textuelle</div>
+                <div class="title">4. Introduction au CSS</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
