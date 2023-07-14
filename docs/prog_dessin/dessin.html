@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="2. Définir" href="definir.html" /><link rel="prev" title="7. Les algorithmes" href="../prog_formel/algo.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>1. Dessin - Travaux pratiques</title>
+        <title>1. Dessiner - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -232,7 +232,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin)</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">1. Dessin</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">1. Dessiner</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definir.html">2. Définir</a></li>
 <li class="toctree-l1"><a class="reference internal" href="repeter.html">3. Répéter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parametrer.html">4. Paramétrer</a></li>
@@ -282,8 +282,8 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="dessin">
-<span id="prog-dessin-dessin"></span><h1>1. Dessin<a class="headerlink" href="#dessin" title="Lien permanent vers ce titre">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="dessiner">
+<span id="prog-dessin-dessin"></span><h1>1. Dessiner<a class="headerlink" href="#dessiner" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Dans ce chapitre, nous allons explorer la programmation par le dessin. Dans ce contexte, un programme est une séquence d’instructions permettant de générer un image.<br/>
 Nous allons voir que:</p>
 <ul class="simple">
@@ -399,6 +399,22 @@ Explorez différentes épaisseurs de ligne.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvcndhcmQoMjAwKQpsZWZ0KDEyMCkKCndpZHRoKDUpCmZvcndhcmQoMjAwKQpsZWZ0KDEyMCkKCndpZHRoKDEwKQpmb3J3YXJkKDIwMCk=" data-file="Zm9yd2FyZDUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </div>
 </section>
+<section id="couleurs">
+<h2>Couleurs<a class="headerlink" href="#couleurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">color(c)</span></code> permet de définir la couleur de ligne <code class="docutils literal notranslate"><span class="pre">c</span></code>.
+Entre les parenthèses de la fonction, vous devez écrire le nom d’une couleur en anglais, entouré d’apostrophes — par exemple <code class="docutils literal notranslate"><span class="pre">color('red')</span></code> pour dessiner une ligne rouge.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">dot(d,</span> <span class="pre">c)</span></code> dessine un cercle de diamètre <code class="docutils literal notranslate"><span class="pre">d</span></code> et de couleur <code class="docutils literal notranslate"><span class="pre">c</span></code>. En mettant un diamètre très grand, on peut l’utiliser pour mettre une couleur de fond.</p>
+<p>Voici un triangle avec 3 segments de couleurs différentes sur un fond jaune.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRvdCgxMDAwLCAneWVsbG93JykKd2lkdGgoMjApCgpjb2xvcigncmVkJykKZm9yd2FyZCgxNTApCmxlZnQoMTIwKQoKY29sb3IoJ2xpbWUnKQpmb3J3YXJkKDE1MCkKbGVmdCgxMjApCgpjb2xvcignYmx1ZScpCmZvcndhcmQoMTUwKQpsZWZ0KDEyMCk=" data-file="Y29sb3IxLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Couleurs disponibles<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<img alt="../_images/colors.png" src="../_images/colors.png"/>
+</div>
+</details></section>
 <section id="maison-avec-toit">
 <h2>Maison avec toit<a class="headerlink" href="#maison-avec-toit" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous dessinons une maison et marquons le toit par une ligne plus épaisse.</p>
@@ -539,11 +555,12 @@ Modifiez le texte à afficher. Ensuite, ajoutez d’autres commandes <code class
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">1. Dessin</a><ul>
+<li><a class="reference internal" href="#">1. Dessiner</a><ul>
 <li><a class="reference internal" href="#le-module-turtle">Le module <code class="docutils literal notranslate"><span class="pre">turtle</span></code></a></li>
 <li><a class="reference internal" href="#le-canevas">Le canevas</a></li>
 <li><a class="reference internal" href="#une-sequence">Une séquence</a></li>
 <li><a class="reference internal" href="#epaisseur-de-ligne">Épaisseur de ligne</a></li>
+<li><a class="reference internal" href="#couleurs">Couleurs</a></li>
 <li><a class="reference internal" href="#maison-avec-toit">Maison avec toit</a></li>
 <li><a class="reference internal" href="#raquette-de-ping-pong">Raquette de ping-pong</a></li>
 <li><a class="reference internal" href="#lunettes-de-soleil">Lunettes de soleil</a></li>

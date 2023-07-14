@@ -1,6 +1,6 @@
 (prog_dessin.dessin)=
 
-# 1. Dessin
+# 1. Dessiner
 
 Dans ce chapitre, nous allons explorer la programmation par le dessin. Dans ce contexte, un programme est une séquence d’instructions permettant de générer un image.  
 Nous allons voir que:
@@ -149,6 +149,40 @@ left(120)
 
 width(10)
 forward(200)
+```
+````
+
+## Couleurs
+
+La fonction `color(c)` permet de définir la couleur de ligne `c`.
+Entre les parenthèses de la fonction, vous devez écrire le nom d'une couleur en anglais, entouré d'apostrophes — par exemple `color('red')` pour dessiner une ligne rouge.
+
+La fonction `dot(d, c)` dessine un cercle de diamètre `d` et de couleur `c`. En mettant un diamètre très grand, on peut l'utiliser pour mettre une couleur de fond.
+
+Voici un triangle avec 3 segments de couleurs différentes sur un fond jaune.
+
+```{codeplay}
+:file: color1.py
+from turtle import *
+
+dot(1000, 'yellow')
+width(20)
+
+color('red')
+forward(150)
+left(120)
+
+color('lime')
+forward(150)
+left(120)
+
+color('blue')
+forward(150)
+left(120)
+```
+
+````{dropdown} Couleurs disponibles
+```{image} ../media/colors.png
 ```
 ````
 

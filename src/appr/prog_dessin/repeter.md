@@ -268,6 +268,10 @@ for i in range(6):
 ```
 ````
 
+```{note} Rappel
+La fonction `dot(d, c)` dessine un disque de diamètre `d` et de couleur `c`.
+```
+
 ### Vitesse
 
 Vous pouvez changer la vitesse de la tortue avec la fonction `speed(s)`.

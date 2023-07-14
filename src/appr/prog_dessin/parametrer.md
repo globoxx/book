@@ -65,8 +65,8 @@ def losange(d, a):      # paramètres (d=distance, a=angle)
         left(180-a)
         write(180-a)
 
-losange(100, 60)            # distance=100, angle=60
-losange(140, 100)           # distance=140, angle=100
+losange(100, 60)        # distance=100, angle=60
+losange(140, 100)       # distance=140, angle=100
 ```
 
 La fonction `polygone(d, n)` a comme paramètre la distance du côté et le nombre de sommets.
@@ -187,6 +187,13 @@ maison((0, 0), 70, 'lightblue')
 maison((150, 30), 50, 'yellow')
 ```
 ````
+
+```{note} Couleur de remplissage
+Avec la fonction `fillcolor(c)`, nous pouvons définir une couleur de remplissage `c` pour une forme quelconque que nous voulons dessiner. Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
+
+- `begin_fill()` au début de la forme,
+- `end_fill()` à la fin de la forme.
+```
 
 ## Arbre
 
