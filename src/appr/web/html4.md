@@ -34,7 +34,7 @@ Ajoutez également l'attribut `alt` pour chaque image.
 ````{dropdown} Solution
 Vos liens doivent maintenant ressembler à ça:
 ```{code-block} html
-<img href="images/photo1.jpg" alt="Image montrant un gratte-ciel">
+<img src="images/photo1.jpg" alt="Image montrant un gratte-ciel">
 ```
 ````
 `````
@@ -48,7 +48,63 @@ Il est courant de remplacer les espaces par des tirets bas (_underscore_) `_`. I
 
 ## Changer la taille des images
 
+Les 2 attributs permettant de modifier la taille d'une image sont `width` (pour largeur) et `height` (pour hauteur).
+
+```{code-block} html
+<img src="images/photo1.jpg" alt="Image montrant un gratte-ciel"  width="500" height="600">
+```
+
+```{admonition} Attention
+:class: attention
+Si vous précisez une largeur et une hauteur qui ne correspondent pas aux proportions originales de l'image, elle s'en trouvera déformée. Pour éviter ça, vous pouvez donner uniquement l'une des deux dimensions, et l'autre sera calculée automatiquement pour garder les proportions originales.
+```
+
+`````{admonition} Exercice 2
+:class: note
+
+Voici une photo en ligne de la place d'ecublens: <a href="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg">photo</a>.
+Ouvrez un fichier `.html` et intégrer cette image dans sa taille originale.
+
+Quelle est la taille de l'image originale ?
+
+Intégrez ensuite sur la même page des versions modifiées avec les tailles suivantes:
+1. largeur de 500 pixels
+2. hauteur de 300 pixels
+3. largeur de 150 pixels et hauteur de 200 pixels
+
+````{dropdown} Solution
+L'image originale a les dimensions suivantes: 2560 x 1707 (ce qui est bien trop grand pour être affichée telle quelle sur une page web).
+
+```{code-block} html
+<img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens">
+<img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens" width="500" height="300">
+<img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens" height="300">
+<img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens" width="150" height="200">
+```
+
+Idéalement, les images locales devraient être redimensionnées à l'avance afin que ça ne soit pas le travail du navigateur.
+````
+`````
+
 ## Ajouter une infobulle
+
+Vous avez sûrement déjà vu des images sur lesquelles, quand vous laissez le curseur une seconde, un petit texte apparaît.
+
+<img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" title="Test">
+
+Afin d'afficher une bulle d'aide sur vos images, vous pouvez utiliser l'attribut `title`; (à ne pas confondre avec la balise `title` qui permet d'indiquer au navigateur le titre d'une page web).
+
+`````{admonition} Exercice 3
+:class: note
+
+Reprenez le code de l'exercice précédent montrant une page d'ecublens et ajoutez une bulle d'aide.
+
+````{dropdown} Solution
+```{code-block} html
+<img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens" height="300" title="Un ptit verre après le boulot ?">
+```
+````
+`````
 
 ## Exercice récapitulatif
 
@@ -56,18 +112,7 @@ Il est courant de remplacer les espaces par des tirets bas (_underscore_) `_`. I
 :class: note
 Votre site de photographie attire de nombreux clients, mais certains se plaignent de ne pas pouvoir 
 
-Créez un nouveau dossier de travail nommé `photographie`.  
-Ecrivez la page d'accueil du site dans un fichier nommé `index.html`.  
-Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:
-- Un titre qui doit apparaître dans l'onglet du navigateur.
-- Un titre principal avec votre nom.
-- Un petit paragraphe auto-biographique.
-- Un lien vers une page `book.html`.
-- Un lien vers une page `contact.html`.
 
-La page `book.html` contient quelques-unes de vos meilleures photographies (trouvées sur Internet) et un lien pour retourner à l'accueil.
-
-La page `contact.html` contient votre adresse mail (fausse) et un lien pour retourner à l'accueil.
 
 Déposez votre dossier sur Moodle à l'endroit prévu.
 ```
