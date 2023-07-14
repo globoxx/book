@@ -56,7 +56,7 @@ Les 2 attributs permettant de modifier la taille d'une image sont `width` (pour 
 ```
 
 ```{admonition} Attention
-:class: danger
+:class: caution
 Si vous précisez une largeur et une hauteur qui ne correspondent pas aux proportions originales de l'image, elle s'en trouvera déformée. Pour éviter ça, vous pouvez donner uniquement l'une des deux dimensions, et l'autre sera calculée automatiquement pour garder les proportions originales.
 ```
 
@@ -108,7 +108,7 @@ Reprenez le code de l'exercice précédent montrant une page d'ecublens et ajout
 
 ```{admonition} Des infobulles partout
 :class: hint
-L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple également possible d'ajouter l'attribut `title` à des liens (`<a> </a>`) ou des paragraphes (<p> </p>).
+L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple également possible d'ajouter l'attribut `title` à des liens (`<a> </a>`) ou des paragraphes (`<p> </p>`).
 ```
 
 ## Exercice récapitulatif
