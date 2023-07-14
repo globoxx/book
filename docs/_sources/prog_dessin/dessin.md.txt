@@ -242,9 +242,8 @@ L'exercice précédent servait à expliciter pour un débutant en programmation 
 
 Les commentaires servent à expliciter la signification d'une partie du programme.
 
-```{exercise}
+````{exercise}
 Expliquez cette fois ce que dessine chaque partie du programme (verre, pont, verre, charnière, branche).
-```
 
 ```{codeplay}
 from turtle import *
@@ -260,6 +259,7 @@ forward(40)
 left(45)
 forward(60)
 ```
+````
 
 ## Équivalence
 

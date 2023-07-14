@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="1. Introduction à l’HTML" href="../web/html1.html" /><link rel="prev" title="5. Parcourir" href="parcourir.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>6. Randomiser - Travaux pratiques</title>
+        <title>6. Randomiser (exemples) - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -237,7 +237,7 @@
 <li class="toctree-l1"><a class="reference internal" href="repeter.html">3. Répéter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parametrer.html">4. Paramétrer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parcourir.html">5. Parcourir</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">6. Randomiser</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">6. Randomiser (exemples)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
 <ul>
@@ -282,37 +282,87 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="randomiser">
-<span id="prog-dessin-randomiser"></span><h1>6. Randomiser<a class="headerlink" href="#randomiser" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Blabla</p>
-<section id="exercice-recapitulatif">
-<h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="admonition">
-<p class="admonition-title">Exercice</p>
-<div class="question-content docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="VE9ETw==" data-file="cmFpbHMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et déposez le sur Moodle à l’endroit prévu.</p>
-</div>
-</div>
-</section>
-<section id="et-a-part-le-dessin">
-<h2>Et à part le dessin ?<a class="headerlink" href="#et-a-part-le-dessin" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les listes sont souvent un moyen de grouper des valeurs ensemble. Par exemple, le gymnase regroupe les notes d’un élève dans une branche pour en calculer la moyenne.</p>
-<div class="hint admonition">
-<p class="admonition-title">Rappel</p>
+          <section class="tex2jax_ignore mathjax_ignore" id="randomiser-exemples">
+<span id="prog-dessin-randomiser"></span><h1>6. Randomiser (exemples)<a class="headerlink" href="#randomiser-exemples" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Dans ce chapitre, nous verrons comment un programme peut introduire un élément aléatoire dans un calcul ou dans un raisonnement grâce au module <code class="docutils literal notranslate"><span class="pre">random</span></code>. Ceci est très important pour programmer certains jeux. Nous allons voir que :</p>
 <ul class="simple">
-<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> permet d’afficher du texte.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">0</span></code> est une instruction permettant de créer une variable <code class="docutils literal notranslate"><span class="pre">a</span></code> et lui donner la valeur <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">3</span></code> permet d’ajouter 3 à la variable <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">random()</span></code> renvoie un nombre réel aléatoire dans l’intervalle <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>,</p></li>
+<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">randint(a,</span> <span class="pre">b)</span></code> renvoie un entier aléatoire dans l’intervalle <code class="docutils literal notranslate"><span class="pre">[a,</span> <span class="pre">b]</span></code>,</p></li>
+<li><p>la fonction <code class="docutils literal notranslate"><span class="pre">shuffle(liste)</span></code> fait une permutation aléatoire des éléments d’une liste.</p></li>
 </ul>
-</div>
-<div class="admonition">
-<p class="admonition-title">Exercice</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
 <div class="question-content docutils">
-<p>Ecrivez une fonction qui prend une liste de notes en paramètre et affiche la moyenne.</p>
-<p>La fonction prend donc un paramètre <code class="docutils literal notranslate"><span class="pre">notes</span></code> qui est une liste de nombres entiers.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaS4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<p>En Python, <code class="docutils literal notranslate"><span class="pre">random</span></code> est</p>
+<p><label class="answer correct"><input type="checkbox"/>un module</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une condition</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>une variable aléatoire</label><br/>
+<label class="answer incorrect"><input type="checkbox"/>un mot-clé</label></p>
 </div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div></div>
+</form></div><section id="entier-aleatoire">
+<h2>Entier aléatoire<a class="headerlink" href="#entier-aleatoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">randint(a,</span> <span class="pre">b)</span></code> retourne un nombre aléatoire dans l’intervalle <code class="docutils literal notranslate"><span class="pre">[a,</span> <span class="pre">b]</span></code>.
+Avec <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">randint(-200,</span> <span class="pre">200)</span></code> nous choisissons une valeur <code class="docutils literal notranslate"><span class="pre">y</span></code> aléatoire.</p>
+<p>Pour éviter de dessiner une ligne depuis l’origine au premier point, nous levons le stylo au début, et nous le posons dès le premier point atteint avec <code class="docutils literal notranslate"><span class="pre">goto(x,</span> <span class="pre">y)</span></code></p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmQgPSAyMAp1cCgpCgpmb3IgeCBpbiByYW5nZSgtMzAwLCAzMDAsIGQpOgogICAgeSA9IHJhbmRpbnQoLTIwMCwgMjAwKQogICAgZ290byh4LCB5KQogICAgZG93bigpCiAgICBmb3J3YXJkKGQpCiAgICBkb3QoKQogICAgd3JpdGUoeSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="position-aleatoire">
+<h2>Position aléatoire<a class="headerlink" href="#position-aleatoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous pouvons également choisir les deux coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> de façon aléatoire.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmZvciBpIGluIHJhbmdlKDEwKToKICAgIHggPSByYW5kaW50KC0zMDAsIDMwMCkKICAgIHkgPSByYW5kaW50KC0yMDAsIDIwMCkKICAgIHAgPSAoeCwgeSkKICAgIGdvdG8ocCkKICAgIGRvdCgpCiAgICB3cml0ZShwKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="angle-aleatoire">
+<h2>Angle aléatoire<a class="headerlink" href="#angle-aleatoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">randint(-90,</span> <span class="pre">90)</span></code> retourne un angle aléatoire dans l’intervalle <code class="docutils literal notranslate"><span class="pre">[-90,</span> <span class="pre">90]</span></code>.
+Le programme produit un parcours aléatoire (<a href="https://fr.wikipedia.org/wiki/Marche_al%C3%A9atoire">marche aléatoire</a>).</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKICAgIApkID0gMjAgCgpmb3IgaSBpbiByYW5nZSgxMDApOgogICAgYSA9IHJhbmRpbnQoLTkwLCA5MCkKICAgIGRvdCgpCiAgICB3cml0ZShhKQogICAgbGVmdChhKQogICAgZm9yd2FyZChkKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="taille-aleatoire">
+<h2>Taille aléatoire<a class="headerlink" href="#taille-aleatoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">randint(1,</span> <span class="pre">3)</span></code> retourne un diamètre aléatoire dans l’intervalle <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3]</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCnVwKCkKCmZvciBpIGluIHJhbmdlKDIwKToKICAgIHggPSByYW5kaW50KC0zMDAsIDMwMCkKICAgIHkgPSByYW5kaW50KC0yMDAsIDIwMCkKICAgIGQgPSByYW5kaW50KDEsIDMpCiAgICBnb3RvKHgsIHkpCiAgICBkb3QoZCoxMCwgJ3BpbmsnKQogICAgd3JpdGUoZCwgYWxpZ249J2NlbnRlcicp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><section id="sous-la-belle-etoile">
+<h3>Sous la belle étoile<a class="headerlink" href="#sous-la-belle-etoile" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les étoiles dans le ciel apparaissent à des positions plus ou moins aléatoires.
+Nous calculons <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> comme des entiers aléatoires, choisis dans l’intervalle de la largeur et de la hauteur de la fenêtre.</p>
+<p>Le diamètre d’une étoile <code class="docutils literal notranslate"><span class="pre">d</span></code> est aléatoire dans l’intervalle <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">9]</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmdldHNjcmVlbigpLmJnY29sb3IoJ2JsYWNrJykKc3BlZWQoMCkKdXAoKQoKZm9yIGkgaW4gcmFuZ2UoMjAwKToKICAgIHggPSByYW5kaW50KC0zMDAsIDMwMCkKICAgIHkgPSByYW5kaW50KC0yMDAsIDMwMCkKICAgIGQgPSByYW5kaW50KDEsIDkpCiAgICBnb3RvKHgsIHkpCiAgICBkb3QoZCwgJ3doaXRlJyk=" data-file="cmFuZG9tNi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Pour faire un dessin, il est utile de pouvoir spécifier la région des étoiles.
+Nous choisissons ici des régions rectangulaires définies par une position <code class="docutils literal notranslate"><span class="pre">p</span></code> et une taille <code class="docutils literal notranslate"><span class="pre">size</span></code>.
+Les étoiles seront placées dans cette région.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCnNwZWVkKDApCnVwKCkKCmRlZiByZWN0YW5nbGUocCwgc2l6ZSwgYyk6CiAgICBjb2xvcihjKQogICAgYmVnaW5fZmlsbCgpCiAgICBnb3RvKHApICAgICAjIGxhIHRvcnR1ZSB2YSBhdSBwb2ludCBkZSBkw6lwYXJ0CiAgICBmb3IgZCBpbiBbc2l6ZVswXSwgc2l6ZVsxXSwgc2l6ZVswXSwgc2l6ZVsxXV06CiAgICAgICAgZm9yd2FyZChkKQogICAgICAgIGxlZnQoOTApIAogICAgZW5kX2ZpbGwoKQoKZGVmIGV0b2lsZXMocCwgc2l6ZSwgbiwgYyk6CiAgICBmb3IgaSBpbiByYW5nZShuKToKICAgICAgICB4ID0gcmFuZGludChwWzBdLCBwWzBdICsgc2l6ZVswXSkKICAgICAgICB5ID0gcmFuZGludChwWzFdLCBwWzFdICsgc2l6ZVsxXSkKICAgICAgICBkID0gcmFuZGludCgxLCA5KQogICAgICAgIGdvdG8oeCwgeSkKICAgICAgICBkb3QoZCwgYykKICAgIApyZWN0YW5nbGUoKC0zMDAsIC0yMDApLCAoNjAwLCAxNTApLCAnZGFya2dyZWVuJykKcmVjdGFuZ2xlKCgtMzAwLCAtNTApLCAoNjAwLCAyNTApLCAnYmxhY2snKQpldG9pbGVzKCgtMzAwLCAtNTApLCAoNjAwLCAyNTApLCAxMDAsICd3aGl0ZScp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>
+<section id="couleur-aleatoire">
+<h2>Couleur aléatoire<a class="headerlink" href="#couleur-aleatoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">choice()</span></code> retourne un élément aléatoire dans une séquence.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCnVwKCkKY291bGV1cnMgPSBbJ3BpbmsnLCAncmVkJywgJ29yYW5nZScsICdsaW1lJywgJ2N5YW4nLCAKICAgICAgICAgICAgJ2JlaWdlJywgJ3llbGxvdycsICdzaWx2ZXInLCAnZ29sZCcsICdza3libHVlJ10KCmZvciBpIGluIHJhbmdlKDIwKToKICAgIHggPSByYW5kaW50KC0zMDAsIDMwMCkKICAgIHkgPSByYW5kaW50KC0yMDAsIDIwMCkKICAgIGMgPSBjaG9pY2UoY291bGV1cnMpCiAgICBnb3RvKHgsIHkpCiAgICBkb3QoNjAsIGMpCiAgICB3cml0ZShjLCBhbGlnbj0nY2VudGVyJyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="emoji-aleatoire">
+<h2>Emoji aléatoire<a class="headerlink" href="#emoji-aleatoire" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCnVwKCkKZCA9IDQwCmVtb2ppcyA9IGxpc3QoJ/CfkLbwn5Cx8J+QrfCfkLnwn5Cw8J+mivCfkLvwn5C88J+QqPCfkK/wn6aB8J+QrvCfkLfwn5C48J+QtScpCgpmb3IgaSBpbiByYW5nZSgyMCk6CiAgICB4ID0gcmFuZGludCgtMzAwLCAzMDAtZCkKICAgIHkgPSByYW5kaW50KC0yMDAsIDIwMC1kKQogICAgZW1vamkgPSBjaG9pY2UoZW1vamlzKQogICAgZ290byh4LCB5KQogICAgd3JpdGUoZW1vamksIGZvbnQ9KCdDb3VyaWVyJywgZCkp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="fleurs-dans-un-champ">
+<h2>Fleurs dans un champ<a class="headerlink" href="#fleurs-dans-un-champ" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans l’exemple suivant, nous plaçons des fleurs à des positions aléatoires dans un champ.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmdldHNjcmVlbigpLmJnY29sb3IoJ2dyZWVuJykKc3BlZWQoMCkKdXAoKQoKZGVmIGZsZXVyKGQpOgogICAgZm9yIGkgaW4gcmFuZ2UoNSk6CiAgICAgICAgZG90KGQsICdsaWdodHllbGxvdycpCiAgICAgICAgZm9yd2FyZChkKjAuOCkKICAgICAgICBsZWZ0KDcyKQogICAgbGVmdCg2MCkKICAgIGZvcndhcmQoZCowLjcpCiAgICBkb3QoZCowLjcsICdnb2xkJykKCmZvciBpIGluIHJhbmdlKDEwKToKICAgIHggPSByYW5kaW50KC0zMDAsIDMwMCkKICAgIHkgPSByYW5kaW50KC0yMDAsIDIwMCkKICAgIGQgPSBnYXVzcygzMCwgMTApCiAgICBzZXRoKDApCiAgICBnb3RvKHgsIHkpCiAgICBmbGV1cihkKQ==" data-file="cmFuZG9tOC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="distribution-gaussienne">
+<h2>Distribution gaussienne<a class="headerlink" href="#distribution-gaussienne" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La distribution normale, ou <strong>distribution gaussienne</strong>, est la distribution qui apparait souvent dans la nature. La taille d’une population, le poids d’une population, suit souvent une distribution gaussienne.</p>
+<p>La distribution normale <code class="docutils literal notranslate"><span class="pre">gauss(mu,</span> <span class="pre">sigma)</span></code> est décrite par deux paramètres :</p>
+<ul class="simple">
+<li><p>sa moyenne <code class="docutils literal notranslate"><span class="pre">mu</span></code></p></li>
+<li><p>son écart-type <code class="docutils literal notranslate"><span class="pre">sigma</span></code></p></li>
+</ul>
+<p>La fonction `gauss(0, 5)’ avec un écart type de 5 va distribuer ses valeurs autour de 0, de sorte placer 67% des points dans l’intervalle [-5, 5]. Le programme suivant montre un histogramme visuel de classification de 400 points.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCnNwZWVkKDApCnVwKCkKCnNpZ21hID0gNQpkID0gMTAKeSA9IFstMTgwXSAqIDYwCgpmb3IgeCBpbiByYW5nZSgtMzAwLCAzMDAsIDUwKToKICAgIGdvdG8oeCwgLTIwMCkKICAgIHdyaXRlKHgvL2QpCmZvciBpIGluIHJhbmdlKDQwMCk6CiAgICBqID0gaW50KGdhdXNzKDAsIHNpZ21hKSkKICAgIGdvdG8oaipkLCB5W2orMzBdKQogICAgZG90KGQpCiAgICB5W2orMzBdICs9IGQ=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La distribution des tailles des animaux, ou des humains, est également gaussienne. Ci-dessous nous montrons une distribution avec un écart type de 2 et ensuite avec un écart type de 10.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmQgPSAxMDAKdXAoKQoKZm9yICh5LCBzaWdtYSkgaW4gKCg1MCwgMiksICgtMTUwLCAxMCkpOgogICAgZ290bygtMjgwLCB5KQogICAgd3JpdGUoc2lnbWEpCiAgICBmb3IgeCBpbiByYW5nZSgtMzAwLCAzMDAtZCwgZC8vMik6CiAgICAgICAgZ290byh4LCB5KQogICAgICAgIGQgPSBpbnQoZ2F1c3MoMTAwLCBzaWdtYSkpCiAgICAgICAgd3JpdGUoJ/Cfp43igI0nLCBmb250PShOb25lLCBkKSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="champs-de-fleurs">
+<h2>Champs de fleurs<a class="headerlink" href="#champs-de-fleurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour simuler la perspective, nous dessinons les fleurs proches plus grandes.
+Il est de nouveau utile de définir une fonction de répartition, qui permet de distribuer des listes d’objets dans une région rectangulaire.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmdldHNjcmVlbigpLmJnY29sb3IoJ2xpZ2h0Z3JlZW4nKQp1cCgpCgpkZWYgcmVwYXJ0aXRpb24ocCwgc2l6ZSwgbiwgZW1vamlzKToKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIHggPSByYW5kaW50KHBbMF0sIHBbMF0gKyBzaXplWzBdKQogICAgICAgIHkgPSByYW5kaW50KHBbMV0sIHBbMV0gKyBzaXplWzFdKQogICAgICAgIGQgPSBnYXVzcyg0MCwgNSkgKiAocFsxXStzaXplWzFdLXkpL3NpemVbMV0KICAgICAgICBnb3RvKHgsIHkpCiAgICAgICAgYyA9IGNob2ljZShlbW9qaXMpCiAgICAgICAgd3JpdGUoYywgZm9udD0oTm9uZSwgaW50KGQpKSkKICAgICAgICAKcmVwYXJ0aXRpb24oKC0zMDAsIC0yMDApLCAoMjUwLCA0MDApLCAyMCwgJ/CfjLjwn4y68J+Mt/CfjLvwn4y8JykKcmVwYXJ0aXRpb24oKDAsIC0yMDApLCAoMzAwLCA0MDApLCAyMCwgJ/CfjY/wn42O8J+NkPCfjYrwn42L8J+NifCfjYfwn42T8J+rkPCfjZLwn42R8J+lnScpCgpoaWRldHVydGxlKCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="aquarium">
+<h2>Aquarium<a class="headerlink" href="#aquarium" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous ajoutons des feuillages en bas de l’aquarium et intercalons les poissons avec les plantes.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZnJvbSByYW5kb20gaW1wb3J0ICoKCmdldHNjcmVlbigpLmJnY29sb3IoJ2xpZ2h0Ymx1ZScpCnVwKCkKCnBvaXNzb25zID0gbGlzdCgn8J+QoPCfkJ/wn5Ch8J+mgPCfkKAnKQpwbGFudGVzID0gbGlzdCgn8J+Mv/CfjLEnKQoKZm9yIGkgaW4gcmFuZ2UoMTApOgogICAgeCA9IHJhbmRpbnQoLTMwMCwgMjYwKQogICAgeSA9IHJhbmRpbnQoLTIwMCwgMTYwKQogICAgZCA9IGdhdXNzKDQwLCA1KQogICAgZ290byh4LCB5KQogICAgcG9pc3NvbiA9IGNob2ljZShwb2lzc29ucykKICAgIHdyaXRlKHBvaXNzb24sIGZvbnQ9KE5vbmUsIGludChkKSkpCiAgICAKICAgIHBsYW50ZSA9IGNob2ljZShwbGFudGVzKQogICAgZ290byhyYW5kaW50KC0zMDAsIDI1MCksIC0xODApCiAgICB3cml0ZShwbGFudGUsIGZvbnQ9KE5vbmUsIGludChnYXVzcyg1MCwgMjApKSkpCiAgICAKaGlkZXR1cnRsZSgp" data-file="cmFuZG9tMTQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="permuter">
+<h2>Permuter<a class="headerlink" href="#permuter" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">shuffle()</span></code> permet de permuter les éléments d’une liste. Ceci est l’équivalent de ce qu’on fait avec des cartes de jeux, quand on les mélange.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSByYW5kb20gaW1wb3J0ICoKCmEgPSBsaXN0KHJhbmdlKDEwKSkKcHJpbnQoYSkKCmZvciBpIGluIHJhbmdlKDMpOgogICAgc2h1ZmZsZShhKQogICAgcHJpbnQoYSk=" data-file="cmFuZG9tMTYucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>
 
         </article>
@@ -363,9 +413,21 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">6. Randomiser</a><ul>
-<li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
-<li><a class="reference internal" href="#et-a-part-le-dessin">Et à part le dessin ?</a></li>
+<li><a class="reference internal" href="#">6. Randomiser (exemples)</a><ul>
+<li><a class="reference internal" href="#entier-aleatoire">Entier aléatoire</a></li>
+<li><a class="reference internal" href="#position-aleatoire">Position aléatoire</a></li>
+<li><a class="reference internal" href="#angle-aleatoire">Angle aléatoire</a></li>
+<li><a class="reference internal" href="#taille-aleatoire">Taille aléatoire</a><ul>
+<li><a class="reference internal" href="#sous-la-belle-etoile">Sous la belle étoile</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#couleur-aleatoire">Couleur aléatoire</a></li>
+<li><a class="reference internal" href="#emoji-aleatoire">Emoji aléatoire</a></li>
+<li><a class="reference internal" href="#fleurs-dans-un-champ">Fleurs dans un champ</a></li>
+<li><a class="reference internal" href="#distribution-gaussienne">Distribution gaussienne</a></li>
+<li><a class="reference internal" href="#champs-de-fleurs">Champs de fleurs</a></li>
+<li><a class="reference internal" href="#aquarium">Aquarium</a></li>
+<li><a class="reference internal" href="#permuter">Permuter</a></li>
 </ul>
 </li>
 </ul>
