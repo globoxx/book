@@ -90,8 +90,8 @@ Idéalement, les images locales devraient être redimensionnées à l'avance afi
 
 Vous avez sûrement déjà vu des images sur lesquelles, quand vous laissez le curseur une seconde, un petit texte apparaît.
 
-![Alt text](../media/balises_html.jpg "Optional title")
-<img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" title="Test">
+```{image} ../media/tooltip_title.gif
+```
 
 Afin d'afficher une bulle d'aide sur vos images, vous pouvez utiliser l'attribut `title` suivi d'un `=` et du texte que vous voulez afficher entre `" "`; (à ne pas confondre avec la balise `title` qui permet d'indiquer au navigateur le titre d'une page web).
 
