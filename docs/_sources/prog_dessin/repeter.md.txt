@@ -268,7 +268,8 @@ for i in range(6):
 ```
 ````
 
-```{note} Rappel
+```{admonition} Rappel
+:class: note
 La fonction `dot(d, c)` dessine un disque de diamètre `d` et de couleur `c`.
 ```
 

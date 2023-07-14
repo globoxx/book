@@ -188,7 +188,8 @@ maison((150, 30), 50, 'yellow')
 ```
 ````
 
-```{note} Couleur de remplissage
+```{admonition} Couleur de remplissage
+:class: note
 Avec la fonction `fillcolor(c)`, nous pouvons définir une couleur de remplissage `c` pour une forme quelconque que nous voulons dessiner. Pour remplir une forme avec une couleur, nous devons ajouter les deux fonctions :
 
 - `begin_fill()` au début de la forme,
