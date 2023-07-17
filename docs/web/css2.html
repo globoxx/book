@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Glossaire" href="glossaire.html" /><link rel="prev" title="Portes logiques" href="../divers/portes_logiques.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Aventure textuelle" href="../divers/aventure.html" /><link rel="prev" title="5. Introduction au CSS" href="css1.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>Zone de code libre - Travaux pratiques</title>
+        <title>6. Plus de propriétés - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -196,7 +196,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -240,13 +240,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../web/html1.html">1. Introduction à l’HTML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../web/html2.html">2. Structurer son texte</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../web/html3.html">3. Faire des liens</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../web/html4.html">4. Plus sur les images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../web/css1.html">5. Introduction au CSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../web/css2.html">6. Plus de propriétés</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css1.html">5. Introduction au CSS</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">6. Plus de propriétés</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -255,9 +255,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Zone de code libre</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossaire.html">Glossaire</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
 </ul>
 
 </div>
@@ -278,45 +278,65 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="zone-de-code-libre">
-<span id="outils-code-libre"></span><h1>Zone de code libre<a class="headerlink" href="#zone-de-code-libre" title="Lien permanent vers ce titre">¶</a></h1>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBVdGlsaXNleiBjZXQgZXNwYWNlIHBvdXIgY29kZXIgbGlicmVtZW50CgoKCgoK" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+          <section class="tex2jax_ignore mathjax_ignore" id="plus-de-proprietes">
+<span id="web-css2"></span><h1>6. Plus de propriétés<a class="headerlink" href="#plus-de-proprietes" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Jusqu’ici, nous n’avons vu que des propriétés CSS associées aux couleurs: <code class="docutils literal notranslate"><span class="pre">color</span></code> et <code class="docutils literal notranslate"><span class="pre">background-color</span></code>. Il est temps d’élargir un peu notre vocabulaire !</p>
+<section id="apparence-du-texte">
+<h2>Apparence du texte<a class="headerlink" href="#apparence-du-texte" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="exercice-recapitulatif">
+<h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Exercice  (récapitulatif)</p>
+<p>Il est temps d’ajouter un peu de style à votre site de photographe !
+Reprenez votre dossier <code class="docutils literal notranslate"><span class="pre">photographie</span></code> des exercices récapitulatifs précédents.</p>
+<p>Créez-y un fichier <code class="docutils literal notranslate"><span class="pre">style.css</span></code>, puis, dans chacun de vos fichiers <code class="docutils literal notranslate"><span class="pre">.html</span></code>, ajoutez le lien vers la feuille de style comme expliqué au début de ce chapitre.</p>
+<p>Faites les améliorations suivantes:</p>
+<ul class="simple">
+<li><p>Appliquez la couleur noire (black) à tous vos liens.</p></li>
+<li><p>Appliquez une couleur (ou une couleur de fond) à votre nom (titre principal).</p></li>
+<li><p>Appliquez le style <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">#A5B4FC;</span></code> à 2 mots de votre paragraphe auto-biographique.</p></li>
+</ul>
+<p>Déposez votre dossier sur Moodle à l’endroit prévu.</p>
+</div>
+</section>
+</section>
 
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="glossaire.html">
+          <a class="next-page" href="../divers/aventure.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Glossaire</div>
+                <div class="title">Aventure textuelle</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../divers/portes_logiques.html">
+          <a class="prev-page" href="css1.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Portes logiques</div>
+                <div class="title">5. Introduction au CSS</div>
                 
               </div>
             </a>
         </div>
 
         <div class="related-information">
-            <a class="muted-link" href="../_sources/outils/code_libre.md.txt"
+            <a class="muted-link" href="../_sources/web/css2.md.txt"
                rel="nofollow">
               Montrer le code source
             </a>
@@ -324,8 +344,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">6. Plus de propriétés</a><ul>
+<li><a class="reference internal" href="#apparence-du-texte">Apparence du texte</a></li>
+<li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

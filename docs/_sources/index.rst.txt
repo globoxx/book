@@ -44,6 +44,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    web/html3
    web/html4
    web/css1
+   web/css2
 
 .. toctree::
    :name: Autres activités
