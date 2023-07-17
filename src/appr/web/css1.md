@@ -266,11 +266,13 @@ Rendez-vous sur <a href="https://codepen.io/pen/" target="_blank">CodePen</a> et
 Il vous faut donc définir une classe CSS et l'appliquer à vos balises `<span>`
 
 ````{dropdown} Solution
+Code CSS:
 ```{code-block} css
 .classe-rouge {
     color: red;
 }
 ```
+Code HTML:
 ```{code-block} html
 <p>L'informatique est la science du traitement <span class="classe-rouge">automatique</span> de l'<span class="classe-rouge">information</span> !</p>
 ```
