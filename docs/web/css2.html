@@ -356,7 +356,7 @@ Solution<div class="summary-down docutils">
 <h3>Ajoutez une image de fond avec <code class="docutils literal notranslate"><span class="pre">background-image</span></code><a class="headerlink" href="#ajoutez-une-image-de-fond-avec-background-image" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Une “image de fond” ne s’applique pas forcément à la page entière. On peut aussi mettre une image de fond derrière des titres, ou des paragraphes uniquement.</p>
 <p>Voyez déjà ce que donne <code class="docutils literal notranslate"><span class="pre">background-image</span></code> appliqué à <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> sur ce <a href="https://codepen.io/Vincent-Guertler/pen/poQVRXq" target="_blank">lien CodePen</a>.</p>
-<p>Le résultat n’est pas parfait et l’image se répète si vous resserez la fenêtre de votre navigateur. Pour arriver à un résultat qui vous plait, il existe plusieurs autres propriétés très utiles:</p>
+<p>Le résultat n’est pas parfait et l’image se répète à l’horizontal. Pour arriver à un résultat qui vous plait, il existe plusieurs autres propriétés très utiles:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">background-repeat</span></code> permet de définir si et comment votre image se répète (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat" target="_blank">ici</a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">background-size</span></code>: permet de définir la taille de l’image (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-size" target="_blank">ici</a>).</p></li>
@@ -371,7 +371,7 @@ Solution<div class="summary-down docutils">
 <p>Voici la marche à suivre:</p>
 <ol class="simple">
 <li><p>Ajouter une balise <code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">class="banniere&gt;</span> <span class="pre">&lt;/div&gt;</span></code> autour du titre de la page. Cela permet de créer un nouveau bloc pour la bannière qui va englober votre titre.</p></li>
-<li><p>Créez la classe <code class="docutils literal notranslate"><span class="pre">.banniere</span></code> en CSS et utilisez <code class="docutils literal notranslate"><span class="pre">background-image</span></code> pour appliquer une image de fond.</p></li>
+<li><p>Créez la classe <code class="docutils literal notranslate"><span class="pre">.banniere</span></code> en CSS et utilisez <code class="docutils literal notranslate"><span class="pre">background-image</span></code> pour appliquer l’image de fond de votre choix.</p></li>
 <li><p>Centrez le titre et mettez le en blanc.</p></li>
 <li><p>Ajoutez la propriété <code class="docutils literal notranslate"><span class="pre">background-size:</span> <span class="pre">cover;</span></code> afin que l’image soit redimensionnée au mieux pour couvrir le titre.</p></li>
 <li><p>Ajoutez la propriété <code class="docutils literal notranslate"><span class="pre">padding:</span> <span class="pre">100px</span></code> pour “faire gonfler” la bannière (nous verrons cette propriété plus tard).</p></li>
@@ -421,14 +421,14 @@ Solution<div class="summary-down docutils">
 <img alt="../_images/linear_gradient.png" src="../_images/linear_gradient.png"/>
 <p>Le plus simple pour s’en servir est de passer par <a href="https://uigradients.com/" target="_blank">UI Gradients</a> et de simplement copier le code CSS correspondant au dégradé souhaité.</p>
 </section>
-</section>
 <section id="jouez-sur-la-transparence-avec-opacity">
-<h2>Jouez sur la transparence avec <code class="docutils literal notranslate"><span class="pre">opacity</span></code><a class="headerlink" href="#jouez-sur-la-transparence-avec-opacity" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Jouez sur la transparence avec <code class="docutils literal notranslate"><span class="pre">opacity</span></code><a class="headerlink" href="#jouez-sur-la-transparence-avec-opacity" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La propriété <code class="docutils literal notranslate"><span class="pre">opacity</span></code> permet de rendre n’importe quel élément de votre page plus ou moins transparent.</p>
 <div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">opacity</span><span class="o">:</span> <span class="nt">0</span><span class="p">.</span><span class="nc">5</span><span class="o">;</span> <span class="c">/* Valeurs entre 0.0 (invisible) et 1.0 (opaque par défaut) */</span>
 </pre></div>
 </div>
 <img alt="../_images/opacity.png" src="../_images/opacity.png"/>
+</section>
 </section>
 <section id="apparence-du-texte">
 <h2>Apparence du texte<a class="headerlink" href="#apparence-du-texte" title="Lien permanent vers ce titre">¶</a></h2>
@@ -660,9 +660,9 @@ Solution<div class="summary-down docutils">
 <li><a class="reference internal" href="#appliquez-une-couleur-de-fond-avec-background-color">Appliquez une couleur de fond avec <code class="docutils literal notranslate"><span class="pre">background-color</span></code></a></li>
 <li><a class="reference internal" href="#ajoutez-une-image-de-fond-avec-background-image">Ajoutez une image de fond avec <code class="docutils literal notranslate"><span class="pre">background-image</span></code></a></li>
 <li><a class="reference internal" href="#creez-des-degrades-avec-linear-gradient">Créez des dégradés avec <code class="docutils literal notranslate"><span class="pre">linear-gradient</span></code></a></li>
+<li><a class="reference internal" href="#jouez-sur-la-transparence-avec-opacity">Jouez sur la transparence avec <code class="docutils literal notranslate"><span class="pre">opacity</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#jouez-sur-la-transparence-avec-opacity">Jouez sur la transparence avec <code class="docutils literal notranslate"><span class="pre">opacity</span></code></a></li>
 <li><a class="reference internal" href="#apparence-du-texte">Apparence du texte</a><ul>
 <li><a class="reference internal" href="#changez-la-taille-de-votre-texte-avec-font-size">Changez la taille de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-size</span></code></a></li>
 <li><a class="reference internal" href="#changez-la-police-de-votre-texte-avec-font-family">Changez la police de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-family</span></code></a></li>

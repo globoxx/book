@@ -69,7 +69,7 @@ Une "image de fond" ne s'applique pas forcément à la page entière. On peut au
 
 Voyez déjà ce que donne `background-image` appliqué à `<body>` sur ce <a href="https://codepen.io/Vincent-Guertler/pen/poQVRXq" target="_blank">lien CodePen</a>.
 
-Le résultat n'est pas parfait et l'image se répète si vous resserez la fenêtre de votre navigateur. Pour arriver à un résultat qui vous plait, il existe plusieurs autres propriétés très utiles:
+Le résultat n'est pas parfait et l'image se répète à l'horizontal. Pour arriver à un résultat qui vous plait, il existe plusieurs autres propriétés très utiles:
 
 1. `background-repeat` permet de définir si et comment votre image se répète (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat" target="_blank">ici</a>)
 2. `background-size`: permet de définir la taille de l'image (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-size" target="_blank">ici</a>).
@@ -86,7 +86,7 @@ Au lieu d'appliquer une image de fond à toute la page, vous allez l'appliquer u
 
 Voici la marche à suivre:
 1. Ajouter une balise `<div class="banniere> </div>` autour du titre de la page. Cela permet de créer un nouveau bloc pour la bannière qui va englober votre titre.
-2. Créez la classe `.banniere` en CSS et utilisez `background-image` pour appliquer une image de fond.
+2. Créez la classe `.banniere` en CSS et utilisez `background-image` pour appliquer l'image de fond de votre choix.
 3. Centrez le titre et mettez le en blanc.
 4. Ajoutez la propriété `background-size: cover;` afin que l'image soit redimensionnée au mieux pour couvrir le titre.
 5. Ajoutez la propriété `padding: 100px` pour "faire gonfler" la bannière (nous verrons cette propriété plus tard).
@@ -135,7 +135,7 @@ background: linear-gradient(90deg, #8360c3, #2ebf91);
 
 Le plus simple pour s'en servir est de passer par <a href="https://uigradients.com/" target="_blank">UI Gradients</a> et de simplement copier le code CSS correspondant au dégradé souhaité.
 
-## Jouez sur la transparence avec `opacity`
+### Jouez sur la transparence avec `opacity`
 
 La propriété `opacity` permet de rendre n'importe quel élément de votre page plus ou moins transparent.
 
