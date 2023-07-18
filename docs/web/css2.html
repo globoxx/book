@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Aventure textuelle" href="../divers/aventure.html" /><link rel="prev" title="5. Introduction au CSS" href="css1.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="7. Structurer sa page" href="css3.html" /><link rel="prev" title="5. Introduction au CSS" href="css1.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>6. Plus de propriétés - Travaux pratiques</title>
@@ -248,6 +248,7 @@
 <li class="toctree-l1"><a class="reference internal" href="html4.html">4. Plus sur les images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="css1.html">5. Introduction au CSS</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">6. Plus de propriétés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css3.html">7. Structurer sa page</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -288,23 +289,320 @@
           <section class="tex2jax_ignore mathjax_ignore" id="plus-de-proprietes">
 <span id="web-css2"></span><h1>6. Plus de propriétés<a class="headerlink" href="#plus-de-proprietes" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Jusqu’ici, nous n’avons vu que des propriétés CSS associées aux couleurs: <code class="docutils literal notranslate"><span class="pre">color</span></code> et <code class="docutils literal notranslate"><span class="pre">background-color</span></code>. Il est temps d’élargir un peu notre vocabulaire !</p>
+<section id="plus-sur-la-couleur">
+<h2>Plus sur la couleur<a class="headerlink" href="#plus-sur-la-couleur" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Avant d’aller plus loin, vous devez savoir que s’il est possible de donner une couleur en toutes lettres (par exemple: <code class="docutils literal notranslate"><span class="pre">blue</span></code>), les propriétés CSS acceptent aussi des codes hexadécimaux (<code class="docutils literal notranslate"><span class="pre">#FFC8D3</span></code>) et RGB (<code class="docutils literal notranslate"><span class="pre">rgb(250,25,118)</span></code>).</p>
+<p>Ainsi, les codes suivants sont équivalents:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">color</span><span class="o">:</span> <span class="nt">blue</span><span class="o">;</span>
+<span class="nt">color</span><span class="o">:</span> <span class="p">#</span><span class="nn">0000ff</span><span class="o">;</span>
+<span class="nt">color</span><span class="o">:</span> <span class="nt">rgb</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span> <span class="nt">0</span><span class="o">,</span> <span class="nt">255</span><span class="o">);</span>
+</pre></div>
+</div>
+<p><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">Color picker</a> vous permet de facilement faire votre choix parmi toutes les couleurs possibles.</p>
+<section id="appliquez-une-couleur-de-fond-avec-background-color">
+<h3>Appliquez une couleur de fond avec <code class="docutils literal notranslate"><span class="pre">background-color</span></code><a class="headerlink" href="#appliquez-une-couleur-de-fond-avec-background-color" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Nous avons rapidement vu la propriété <code class="docutils literal notranslate"><span class="pre">background-color</span></code> afin de mettre une couleur de fond à du texte. Mais elle permet de mettre une couleur de fond à n’importe quoi !</p>
+<p>Et pourquoi pas à toute la page ?</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Couleur de fond du site</p>
+<div class="question-content docutils">
+<p>D’après vous, à quelle balise faudrait-il appliquer la propriété <code class="docutils literal notranslate"><span class="pre">background-color</span></code> afin de changer la couleur de fond de toute la page ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;head&gt; &lt;/head&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>&lt;title&gt; &lt;/title&gt;</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>&lt;body&gt; &lt;/body&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Toutes les balises &lt;p&gt;</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>La 1ère balise &lt;h1&gt;</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> englobe la totalité du contenu de notre page. En changeant une proprité de <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code>, nous changeons le style de tous les éléments qu’elle contient.</p>
+</div>
+</div>
+</form></div><div class="note admonition">
+<p class="admonition-title">Exercice 1</p>
+<p>Prenez le <a href="https://codepen.io/Vincent-Guertler/pen/GRwQPNY" target="_blank">site sur la pizza</a> et faites les changements suivants pour toute la page:</p>
+<ul class="simple">
+<li><p>Couleur de fond noire</p></li>
+<li><p>Texte en blanc</p></li>
+<li><p>Titre principal en violet</p></li>
+</ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">purple</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+<div class="note admonition">
+<p class="admonition-title">L’héritage de propriétés</p>
+<p>En CSS, si vous appliquez un style à une balise, toutes les balises qui se trouvent à l’intérieur prendront le même style. Cela s’appelle l’héritage. Ainsi, toutes les balises qui se trouvent dans <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> héritent de ses propriétés, d’où le changement pour toute la page.</p>
+<p>C’est d’ailleurs de là que vient le nom “CSS”, qui signifie “Cascading Style Sheets”, c’est-à-dire “Feuilles de style en cascade”. Les propriétés CSS sont héritées en cascade.</p>
+</div>
+</section>
+<section id="ajoutez-une-image-de-fond-avec-background-image">
+<h3>Ajoutez une image de fond avec <code class="docutils literal notranslate"><span class="pre">background-image</span></code><a class="headerlink" href="#ajoutez-une-image-de-fond-avec-background-image" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une “image de fond” ne s’applique pas forcément à la page entière. On peut aussi mettre une image de fond derrière des titres, ou des paragraphes uniquement.</p>
+<p>Voyez déjà ce que donne <code class="docutils literal notranslate"><span class="pre">background-image</span></code> appliqué à <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> sur ce <a href="https://codepen.io/Vincent-Guertler/pen/poQVRXq" target="_blank">lien CodePen</a>.</p>
+<p>Le résultat n’est pas parfait et l’image se répète si vous resserez la fenêtre de votre navigateur. Pour arriver à un résultat qui vous plait, il existe plusieurs autres propriétés très utiles:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">background-repeat</span></code> permet de définir si et comment votre image se répète (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat" target="_blank">ici</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">background-size</span></code>: permet de définir la taille de l’image (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-size" target="_blank">ici</a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">background-position</span></code> permet d’indiquer la position de l’image (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-position" target="_blank">ici</a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">background-attachment</span></code> définit si la position de l’image est fixe ou si elle peut défiler avec le bloc englobant (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-attachment" target="_blank">ici</a>).</p></li>
+</ol>
+<p>Cela fait pas mal d’informations d’un coup. Je vous invite à les tester mais il est inutile de retenir toutes les propriétés par coeur. Les informaticiens ont une mémoire très limitée, mais accès à Internet.</p>
+<div class="note admonition">
+<p class="admonition-title">Exercice 2</p>
+<p>Rendez-vous à nouveau sur ce <a href="https://codepen.io/Vincent-Guertler/pen/poQVRXq" target="_blank">CodePen</a>.</p>
+<p>Au lieu d’appliquer une image de fond à toute la page, vous allez l’appliquer uniquement au titre afin de faire une bannière.</p>
+<p>Voici la marche à suivre:</p>
+<ol class="simple">
+<li><p>Ajouter une balise <code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">class="banniere&gt;</span> <span class="pre">&lt;/div&gt;</span></code> autour du titre de la page. Cela permet de créer un nouveau bloc pour la bannière qui va englober votre titre.</p></li>
+<li><p>Créez la classe <code class="docutils literal notranslate"><span class="pre">.banniere</span></code> en CSS et utilisez <code class="docutils literal notranslate"><span class="pre">background-image</span></code> pour appliquer une image de fond.</p></li>
+<li><p>Centrez le titre et mettez le en blanc.</p></li>
+<li><p>Ajoutez la propriété <code class="docutils literal notranslate"><span class="pre">background-size:</span> <span class="pre">cover;</span></code> afin que l’image soit redimensionnée au mieux pour couvrir le titre.</p></li>
+<li><p>Ajoutez la propriété <code class="docutils literal notranslate"><span class="pre">padding:</span> <span class="pre">100px</span></code> pour “faire gonfler” la bannière (nous verrons cette propriété plus tard).</p></li>
+<li><p>Ajoutez <code class="docutils literal notranslate"><span class="pre">background-position:</span> <span class="pre">center;</span></code> pour centrer l’image de fond autour du titre.</p></li>
+</ol>
+<p>Si le résultat ne vous convient pas (en fonction de l’image choisie), continuez à faire des tests jusqu’à avoir un résultat satisfaisant ou appelez votre enseignant.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici le code HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"banniere"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mon blog<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est le contenu de mon premier paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est le contenu de mon deuxième paragraphe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p class="card-text">Et le code CSS:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">banniere</span> <span class="p">{</span>
+    <span class="k">background-image</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">https://www.justgeek.fr/wp-content/uploads/2023/01/mettre-fond-ecran-anime-pc.jpg</span><span class="p">);</span>
+    <span class="k">background-size</span><span class="p">:</span> <span class="kc">cover</span><span class="p">;</span>
+    <span class="k">background-position</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section id="creez-des-degrades-avec-linear-gradient">
+<h3>Créez des dégradés avec <code class="docutils literal notranslate"><span class="pre">linear-gradient</span></code><a class="headerlink" href="#creez-des-degrades-avec-linear-gradient" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le code suivant permet de créer un dégradé:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">background</span><span class="o">:</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">90deg</span><span class="o">,</span> <span class="p">#</span><span class="nn">8360c3</span><span class="o">,</span> <span class="p">#</span><span class="nn">2ebf91</span><span class="o">);</span>
+</pre></div>
+</div>
+<img alt="../_images/linear_gradient.png" src="../_images/linear_gradient.png"/>
+<p>Le plus simple pour s’en servir est de passer par <a href="https://uigradients.com/" target="_blank">UI Gradients</a> et de simplement copier le code CSS correspondant au dégradé souhaité.</p>
+</section>
+</section>
+<section id="jouez-sur-la-transparence-avec-opacity">
+<h2>Jouez sur la transparence avec <code class="docutils literal notranslate"><span class="pre">opacity</span></code><a class="headerlink" href="#jouez-sur-la-transparence-avec-opacity" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La propriété <code class="docutils literal notranslate"><span class="pre">opacity</span></code> permet de rendre n’importe quel élément de votre page plus ou moins transparent.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">opacity</span><span class="o">:</span> <span class="nt">0</span><span class="p">.</span><span class="nc">5</span><span class="o">;</span> <span class="c">/* Valeurs entre 0.0 (invisible) et 1.0 (opaque par défaut) */</span>
+</pre></div>
+</div>
+<img alt="../_images/opacity.png" src="../_images/opacity.png"/>
+</section>
 <section id="apparence-du-texte">
 <h2>Apparence du texte<a class="headerlink" href="#apparence-du-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans cette section, nous allons nous attaquer à la mise en forme du texte.</p>
+<section id="changez-la-taille-de-votre-texte-avec-font-size">
+<h3>Changez la taille de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-size</span></code><a class="headerlink" href="#changez-la-taille-de-votre-texte-avec-font-size" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour modifier la taille du texte, on utilise la propriété CSS <code class="docutils literal notranslate"><span class="pre">font-size</span></code> et ensuite, on indique:</p>
+<ul class="simple">
+<li><p>une taille absolue en pixels (déconseillé car ne s’adapte pas à l’écran)</p></li>
+<li><p>une taille relative (recommandé car s’adapte à l’écran)</p></li>
+</ul>
+<p>Commençons par la taille absolue. Pour avoir un texte d’exactement 16 pixels de hauteur, vous devez écrire:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-size</span><span class="o">:</span> <span class="nt">16px</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>Concernant la taille relative, le méthode la plus fréquente consiste à indiquer la taille en <code class="docutils literal notranslate"><span class="pre">em</span></code>:</p>
+<ul class="simple">
+<li><p>Le texte a une taille normale avec <code class="docutils literal notranslate"><span class="pre">1em</span></code>.</p></li>
+<li><p>Le texte est 1.3x plus grand avec <code class="docutils literal notranslate"><span class="pre">1.3em</span></code>.</p></li>
+<li><p>Le texte est plus petit avec une valeur inférieure à 1, comme <code class="docutils literal notranslate"><span class="pre">0.8em</span></code>.</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Exercice 3</p>
+<p>Vous pouvez tester différentes tailles relatives sur ce <a href="https://codepen.io/Vincent-Guertler/pen/dyQepzz" target="_blank">lien CodePen</a>.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Le problème des tailles absolues</p>
+<p>16 pixels est une taille standard pour lire un texte mais peut ne pas suffire selon l’écran sur lequel il s’affiche. Imaginez que vous projetez votre site sur l’écran d’un stade qui possède une très bonne résolution (nombre de pixels par pouce), vos 16 pixels apparaîtront minuscules !</p>
+<p>Une taille relative quant à elle apparaîtra toujours identique peu importe la résolution de l’écran.</p>
+</div>
+</section>
+<section id="changez-la-police-de-votre-texte-avec-font-family">
+<h3>Changez la police de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-family</span></code><a class="headerlink" href="#changez-la-police-de-votre-texte-avec-font-family" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La propriété à utiliser se nomme <code class="docutils literal notranslate"><span class="pre">font-family</span></code>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-family</span><span class="o">:</span> <span class="nt">Verdana</span><span class="o">;</span> <span class="c">/* Valeur par défaut */</span>
+</pre></div>
+</div>
+<p>Pour qu’une police s’affiche correctement chez le visiteur du site, il faut qu’il la possède ! Les polices suivantes sont les plus sûres car tous les navigateurs les possèdent par défaut:</p>
+<ul class="simple">
+<li><p>Arial (sans-serif)</p></li>
+<li><p>Verdana (sans-serif)</p></li>
+<li><p>Tahoma (sans-serif)</p></li>
+<li><p>Trebuchet MS (sans-serif)</p></li>
+<li><p>Times New Roman (serif)</p></li>
+<li><p>Georgia (serif)</p></li>
+<li><p>Garamond (serif)</p></li>
+<li><p>Courier New (monospace)</p></li>
+<li><p>Brush Script MT (cursive)</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Exercice 4</p>
+<p>Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/dyQepzz" target="_blank">CodePen</a> et modifiez la police de l’élément 3.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">grand</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.3</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">Brush</span> <span class="n">Script</span> <span class="n">MT</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+<p>Si vous en voulez d’autres, faites un tour sur <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> et appelez votre enseignant pour savoir comment les intégrer à votre site.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Avec ou sans sérif ?<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Le sérif désigne l’empattement situé à l’extrémité des caractères. Choisir une police de caractères sans sérif est plus judicieux en termes d’accessibilité, car c’est plus facile à lire.</p>
+<img alt="../_images/serif.jpg" src="../_images/serif.jpg"/>
+</div>
+</details></section>
+<section id="italique-gras-souligne">
+<h3>Italique, gras, souligné<a class="headerlink" href="#italique-gras-souligne" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Italique et gras en HTML</p>
+<p>Rappelez-vous, les balises <code class="docutils literal notranslate"><span class="pre">&lt;em&gt;</span> <span class="pre">&lt;/em&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;</span> <span class="pre">&lt;/strong&gt;</span></code> servent respectivement à mettre un mot en <em>italique</em> ou en <strong>gras</strong> afin de mettre de l’<em>importance</em> sur un mot. Les robots qui parcourent le web pour référence votre site en tiennent compte !</p>
+<p>C’est donc la manière à privilégier si vous souhaitez donner de l’importance à certains mots clé sur votre site. Sinon, voyons comment utiliser le CSS pour simplement changer la forme du texte.</p>
+</div>
+<p>La propriété <code class="docutils literal notranslate"><span class="pre">font-style</span></code> permet de mettre du texte en <em>italique</em>:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-style</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span> <span class="c">/* Valeur par défaut */</span>
+<span class="nt">font-style</span><span class="o">:</span> <span class="nt">italic</span><span class="o">;</span> <span class="c">/* Valeur pour mettre en italique */</span>
+</pre></div>
+</div>
+<p>La propriété <code class="docutils literal notranslate"><span class="pre">font-weight</span></code> permet de choisir l’<strong>épaisseur</strong> du texte:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-weight</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span> <span class="c">/* Valeur par défaut */</span>
+<span class="nt">font-weight</span><span class="o">:</span> <span class="nt">bold</span><span class="o">;</span> <span class="c">/* Valeur pour mettre en gras */</span>
+<span class="nt">font-weight</span><span class="o">:</span> <span class="nt">thin</span><span class="o">;</span> <span class="c">/* Valeur pour mettre en fin */</span>
+</pre></div>
+</div>
+<p>La propriété <code class="docutils literal notranslate"><span class="pre">text-decoration</span></code> permet de souligner ou barrer du texte:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">text-decoration</span><span class="o">:</span> <span class="nt">none</span><span class="o">;</span> <span class="c">/* Valeur par défaut (sauf pour les liens) */</span>
+<span class="nt">text-decoration</span><span class="o">:</span> <span class="nt">underline</span><span class="o">;</span> <span class="c">/* Valeur pour souligner */</span>
+<span class="nt">text-decoration</span><span class="o">:</span> <span class="nt">line-through</span><span class="o">;</span> <span class="c">/* Valeur pour barrer */</span>
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 5</p>
+<p>Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/dyQepzz" target="_blank">CodePen</a> et faites en sorte que l’élément 2 soit <em>italique</em> et souligné ainsi que l’élément 4 soit <strong>gras</strong> et barré.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">normal</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">underline</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">tres-grand</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">2.5</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">line-through</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
+<section id="alignez-votre-texte-avec-text-align">
+<h3>Alignez votre texte avec <code class="docutils literal notranslate"><span class="pre">text-align</span></code><a class="headerlink" href="#alignez-votre-texte-avec-text-align" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La propriété permet <code class="docutils literal notranslate"><span class="pre">text-align</span></code> permet de définir l’alignement de votre texte:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">text-align</span><span class="o">:</span> <span class="nt">left</span><span class="o">;</span> <span class="c">/* Valeur par défaut (aligné à gauche) */</span>
+<span class="nt">text-align</span><span class="o">:</span> <span class="nt">center</span><span class="o">;</span> <span class="c">/* Valeur pour aligner au centre */</span>
+<span class="nt">text-align</span><span class="o">:</span> <span class="nt">right</span><span class="o">;</span> <span class="c">/* Valeur pour aligner à droite */</span>
+<span class="nt">text-align</span><span class="o">:</span> <span class="nt">justify</span><span class="o">;</span> <span class="c">/* Valeur pour mettre le texte en justifié */</span>
+</pre></div>
+</div>
+<img alt="../_images/alignement_css.png" src="../_images/alignement_css.png"/>
+<div class="note admonition">
+<p class="admonition-title">Rappel justifié</p>
+<p>Justifier le texte permet de faire en sorte qu’il prenne toute la largeur possible sans laisser d’espace blanc à la fin des lignes. Les textes des journaux, par exemple, sont toujours justifiés.</p>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Attention</p>
+<p>L’alignement ne fonctionne que sur des balises de type <code class="docutils literal notranslate"><span class="pre">block</span></code> comme <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">h1</span></code>, <code class="docutils literal notranslate"><span class="pre">div</span></code>, etc.</p>
+<p>Aligner le texte d’une balise <code class="docutils literal notranslate"><span class="pre">inline</span></code> comme <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">strong</span></code>, <code class="docutils literal notranslate"><span class="pre">span</span></code> n’est pas possible. Et c’est logique, vous n’allez pas aligner quelques mots au milieu d’un paragraphe !</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exercice 6</p>
+<p>Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/dyQepzz" target="_blank">CodePen</a> et alignez l’élément 1 au centre de la page.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">petit</span> <span class="p">{</span>
+<span class="k">font-size</span><span class="p">:</span> <span class="mf">0.7</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></div>
+</section>
 </section>
 <section id="exercice-recapitulatif">
 <h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Exercice  (récapitulatif)</p>
-<p>Il est temps d’ajouter un peu de style à votre site de photographe !
-Reprenez votre dossier <code class="docutils literal notranslate"><span class="pre">photographie</span></code> des exercices récapitulatifs précédents.</p>
-<p>Créez-y un fichier <code class="docutils literal notranslate"><span class="pre">style.css</span></code>, puis, dans chacun de vos fichiers <code class="docutils literal notranslate"><span class="pre">.html</span></code>, ajoutez le lien vers la feuille de style comme expliqué au début de ce chapitre.</p>
-<p>Faites les améliorations suivantes:</p>
-<ul class="simple">
-<li><p>Appliquez la couleur noire (black) à tous vos liens.</p></li>
-<li><p>Appliquez une couleur (ou une couleur de fond) à votre nom (titre principal).</p></li>
-<li><p>Appliquez le style <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">#A5B4FC;</span></code> à 2 mots de votre paragraphe auto-biographique.</p></li>
-</ul>
-<p>Déposez votre dossier sur Moodle à l’endroit prévu.</p>
+<p>Pas d’exercice à rendre pour ce chapitre !</p>
+<p>Prenez ce temps pour avancer sur votre site personnel ou pour avancer dans le parcours.</p>
 </div>
 </section>
 </section>
@@ -314,12 +612,12 @@ Reprenez votre dossier <code class="docutils literal notranslate"><span class="p
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../divers/aventure.html">
+          <a class="next-page" href="css3.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Aventure textuelle</div>
+                <div class="title">7. Structurer sa page</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -358,7 +656,20 @@ Reprenez votre dossier <code class="docutils literal notranslate"><span class="p
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">6. Plus de propriétés</a><ul>
-<li><a class="reference internal" href="#apparence-du-texte">Apparence du texte</a></li>
+<li><a class="reference internal" href="#plus-sur-la-couleur">Plus sur la couleur</a><ul>
+<li><a class="reference internal" href="#appliquez-une-couleur-de-fond-avec-background-color">Appliquez une couleur de fond avec <code class="docutils literal notranslate"><span class="pre">background-color</span></code></a></li>
+<li><a class="reference internal" href="#ajoutez-une-image-de-fond-avec-background-image">Ajoutez une image de fond avec <code class="docutils literal notranslate"><span class="pre">background-image</span></code></a></li>
+<li><a class="reference internal" href="#creez-des-degrades-avec-linear-gradient">Créez des dégradés avec <code class="docutils literal notranslate"><span class="pre">linear-gradient</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#jouez-sur-la-transparence-avec-opacity">Jouez sur la transparence avec <code class="docutils literal notranslate"><span class="pre">opacity</span></code></a></li>
+<li><a class="reference internal" href="#apparence-du-texte">Apparence du texte</a><ul>
+<li><a class="reference internal" href="#changez-la-taille-de-votre-texte-avec-font-size">Changez la taille de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-size</span></code></a></li>
+<li><a class="reference internal" href="#changez-la-police-de-votre-texte-avec-font-family">Changez la police de votre texte avec <code class="docutils literal notranslate"><span class="pre">font-family</span></code></a></li>
+<li><a class="reference internal" href="#italique-gras-souligne">Italique, gras, souligné</a></li>
+<li><a class="reference internal" href="#alignez-votre-texte-avec-text-align">Alignez votre texte avec <code class="docutils literal notranslate"><span class="pre">text-align</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
 </ul>
 </li>
