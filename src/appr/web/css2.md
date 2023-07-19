@@ -4,7 +4,7 @@
 
 Jusqu'ici, nous n'avons vu que des propriétés CSS associées aux couleurs: `color` et `background-color`. Il est temps d'élargir un peu notre vocabulaire !
 
-## Plus sur la couleur
+## Plus de couleurs
 
 Avant d'aller plus loin, vous devez savoir que s'il est possible de donner une couleur en toutes lettres (par exemple: `blue`), les propriétés CSS acceptent aussi des codes hexadécimaux (`#FFC8D3`) et RGB (`rgb(250,25,118)`).
 
@@ -71,10 +71,10 @@ Voyez déjà ce que donne `background-image` appliqué à `<body>` sur ce <a hre
 
 Le résultat n'est pas parfait et l'image se répète à l'horizontal. Pour arriver à un résultat qui vous plait, il existe plusieurs autres propriétés très utiles:
 
-1. `background-repeat` permet de définir si et comment votre image se répète (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat" target="_blank">ici</a>)
-2. `background-size`: permet de définir la taille de l'image (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-size" target="_blank">ici</a>).
-3. `background-position` permet d'indiquer la position de l'image (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-position" target="_blank">ici</a>).
-4. `background-attachment` définit si la position de l'image est fixe ou si elle peut défiler avec le bloc englobant (voir <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-attachment" target="_blank">ici</a>).
+1. <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-repeat" target="_blank">background-repeat</a> permet de définir si et comment votre image se répète.
+2. <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-size" target="_blank">background-size</a> permet de définir la taille de l'image.
+3. <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-position" target="_blank">background-position</a> permet d'indiquer la position de l'image.
+4. <a href="https://developer.mozilla.org/fr/docs/Web/CSS/background-attachment" target="_blank">background-attachment</a> définit si la position de l'image est fixe ou si elle peut défiler avec le bloc englobant.
 
 Cela fait pas mal d'informations d'un coup. Je vous invite à les tester mais il est inutile de retenir toutes les propriétés par coeur. Les informaticiens ont une mémoire très limitée, mais accès à Internet.
 
@@ -317,9 +317,50 @@ font-size: 0.7em;
 ````
 `````
 
+## Bordures et ombres
+
+Vous voulez ajouter une bordure à l'un des éléments de votre page ? CSS propose de nombreuses propriétés pour ça ! Voici les 3 principales:
+
+- <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-width" target="_blank">border-width</a> permet de définir la largeur de la bordure.
+- <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-color" target="_blank">border-color</a> permet de définir sa couleur.
+- <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-style" target="_blank">border-style</a> permet de définir son style (ex: pointillé).
+
+
+```{image} ../media/borders.png
+```
+
+Il est aussi possible d'utiliser le raccourci <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border" target="_blank">border</a> puis de spécifier la largeur, la couleur et le style en une seule fois comme ceci.  
+Cet exemple montre comment appliquer une bordure bleue en pointillé.
+
+```{code-block} css
+border: 1em dashed blue;
+```
+
+Vous préférez les bordures arrondies ?  
+<a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-radius" target="_blank">border-radius</a> permet d'arrondir les angles de la bordure.
+
+```{image} ../media/border_radius.png
+```
+
+Vous voulez ajouter de la profondeur à vos éléments ?  
+<a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow" target="_blank">box-shadow</a> permet d'ajouter des ombres aux blocs pour leur donner une illusion de profondeur.
+
+```{image} ../media/border_shadow.png
+```
+
+```{admonition} Trouver l'effet souhaité
+:class: hint
+Il n'est pas toujours simple de trouver l’effet d’ombre désiré à tâtons. <a href="https://getcssscan.com/css-box-shadow-examples" target="_blank">CSS Scan</a> donne des exemples que vous pouvez simplement copier.
+```
+
+`````{admonition} Exercice 7
+:class: note
+rendez-vous sur <a href="https://codepen.io/Vincent-Guertler/pen/GRwdwZp" target="_blank">CodePen</a> et testez un peu ces différentes bordures et ombres.
+`````
+
 ## Exercice récapitulatif
 
-```{admonition} Exercice  (récapitulatif)
+```{admonition} Exercice (récapitulatif)
 :class: note
 Pas d'exercice à rendre pour ce chapitre !
 

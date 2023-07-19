@@ -113,7 +113,7 @@ li {
 ## Appliquer une propriété CSS à plusieurs balises HTML
 
 Et si je veux appliquer la couleur bleue aux paragraphes et aux titres ?  
-Il suffit de renseigner la liste des balises qui seront affectées par ce changement de propriété (séparées par des `,`):
+Il suffit de donner la liste des balises qui seront affectées par ce changement de propriété (séparées par des `,`):
 
 ```{code-block} css
 p, h1 {
