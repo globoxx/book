@@ -45,7 +45,7 @@ Même si la balise `<p> </p>` est aussi une balise de type `block`, elle a un r�
 
 `````{admonition} Exercice 1
 :class: note
-Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/XWyqOaa>CodePen</a> pour voir un site sur les flamants roses.
+Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/XWyqOaa" target="_blank">CodePen</a> pour voir un site sur les flamants roses.
 
 Créez un nouveau bloc englobant les 2 premiers paragraphes de l'introduction. Ce nouveau bloc doit avoir les propriétés suivantes:
 - Couleur du texte: bleu
@@ -152,7 +152,7 @@ h1 {
 ````
 `````
 
-````{dropdown} Être plus précis ?
+````{dropdown} Être plus précis avec les marges ?
 Par défaut, `margin` et `padding` modifient les marges tout autour du bloc (dans toutes les directions en même temps).
 
 Il est possible de définir des marges intérieures et extérieures plus précisément en indiquant les directions voulues avec les propriétés suivantes:
@@ -207,6 +207,7 @@ Code CSS:
   margin: auto;
 }
 
+/* Challenge */
 .centre h2 {
   text-align: center;
 }

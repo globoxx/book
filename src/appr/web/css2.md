@@ -310,7 +310,7 @@ Retournez sur <a href="https://codepen.io/Vincent-Guertler/pen/dyQepzz" target="
 ````{dropdown} Solution
 ```{code-block} css
 .petit {
-font-size: 0.7em;
+    font-size: 0.7em;
     text-align: center;
 }
 ```
@@ -339,18 +339,22 @@ border: 1em dashed blue;
 Vous préférez les bordures arrondies ?  
 <a href="https://developer.mozilla.org/fr/docs/Web/CSS/border-radius" target="_blank">border-radius</a> permet d'arrondir les angles de la bordure.
 
+```{code-block} css
+border-radius: 20px;
+```
+
 ```{image} ../media/border_radius.png
 ```
 
 Vous voulez ajouter de la profondeur à vos éléments ?  
 <a href="https://developer.mozilla.org/fr/docs/Web/CSS/box-shadow" target="_blank">box-shadow</a> permet d'ajouter des ombres aux blocs pour leur donner une illusion de profondeur.
 
-```{image} ../media/border_shadow.png
-```
-
 ```{admonition} Trouver l'effet souhaité
 :class: hint
 Il n'est pas toujours simple de trouver l’effet d’ombre désiré à tâtons. <a href="https://getcssscan.com/css-box-shadow-examples" target="_blank">CSS Scan</a> donne des exemples que vous pouvez simplement copier.
+```
+
+```{image} ../media/border_shadow.png
 ```
 
 `````{admonition} Exercice 7
