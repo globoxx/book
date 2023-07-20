@@ -7,11 +7,12 @@ Plongez vous dans la peau d'un développeur web et concevez votre propre site !
 ## Cahier des charges
 
 ```{admonition} Liberté et créativité
+:class: note
 Vous avez carte blanche concernant le contenu de votre site. Prenez un sujet qui vous parle et que vous aimez !
 
-Sachez par contre que votre site sera hébergé et accessible pour le reste du monde, donc attention aux choses suivantes:
-- Pas de contenu innaproprié
-- Respect du droit d'auteurs (notamment pour les images)
+Sachez par contre que votre site **sera hébergé et accessible pour le reste du monde**, donc attention aux choses suivantes:
+- Pas de contenu innaproprié (appel à votre bon sens)
+- Respect du droit d'auteur (notamment pour les images)
 ```
 
 Pour ce qui est de la forme, voici les contraintes à respecter:
