@@ -246,7 +246,7 @@ Cela serait facile si ces deux mots étaient entourés par des balises... Eh bie
 
 ```{admonition} Inline ou block
 :class: note
-Petite différence entre ces deux balises: `<span> </span>` est une balise qui ne provoque pas de retour à la ligne (comme les balises `<a> </a>`, `<img>`, etc). On dit que ce sont des balises de type **inline**.
+Petite différence entre ces deux balises: `<span> </span>` est une balise qui ne provoque pas de retour à la ligne (comme les balises `<a> </a>`, `<strong> </strong>`, etc). On dit que ce sont des balises de type **inline**.
 
 De l'autre côté, `<div> </div>` provoque un retour à la ligne (comme `<p> </p>`, `<h1> </h1>`, etc). On dit que ce sont des balises de type **block**.
 ```

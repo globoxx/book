@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Aventure textuelle" href="../divers/aventure.html" /><link rel="prev" title="6. Plus de propriétés" href="css2.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="8. Aligner ses blocs avec Flexbox" href="css4.html" /><link rel="prev" title="6. Plus de propriétés" href="css2.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>7. Structurer sa page en blocs - Travaux pratiques</title>
@@ -249,6 +249,8 @@
 <li class="toctree-l1"><a class="reference internal" href="css1.html">5. Introduction au CSS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="css2.html">6. Plus de propriétés</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -367,7 +369,7 @@ Solution<div class="summary-down docutils">
 <div class="note admonition">
 <p class="admonition-title">Important</p>
 <p>Seuls les balises de type <code class="docutils literal notranslate"><span class="pre">block</span></code> peuvent être redimensionnés ou déplacés sur une page. Il ne serait pas logique de vouloir déplacer un mot dans un paragraphe.</p>
-<p>Il y a cependant des exceptions, comme les images qui sont de type <code class="docutils literal notranslate"><span class="pre">inline</span></code> (ne créent pas de retour à la ligne) mais peuvent être déplacées et redimensionnées (heureusement !).</p>
+<p>(Il existe en réalité un 3ème type: <code class="docutils literal notranslate"><span class="pre">inline-block</span></code>. La balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> est en réalité de ce type. Les images ne créent pas de retour à la ligne mais peuvent être déplacées et redimensionnées (heureusement !))</p>
 </div>
 </section>
 <section id="redimensionner-ses-blocs-avec-width-et-height">
@@ -387,8 +389,26 @@ Solution<div class="summary-down docutils">
 <h2>Ajouter des marges à ses blocs avec <code class="docutils literal notranslate"><span class="pre">margin</span></code> et <code class="docutils literal notranslate"><span class="pre">padding</span></code><a class="headerlink" href="#ajouter-des-marges-a-ses-blocs-avec-margin-et-padding" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Tous les blocs possèdent des marges intérieures et extérieures:</p>
 <img alt="../_images/margin_padding.jpg" src="../_images/margin_padding.jpg"/>
-<p>A COMPLéTER</p>
-<div class="note admonition">
+<p>Pour les modifier, on utilise les propriétés suivantes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">margin</span></code> pour les marges <strong>extérieures</strong> (ex: <code class="docutils literal notranslate"><span class="pre">margin:</span> <span class="pre">10px</span></code>). Cette marge ajoute de l’espace <strong>autour</strong> du bloc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">padding</span></code> pour les marges <strong>intérieures</strong> (ex: <code class="docutils literal notranslate"><span class="pre">padding:</span> <span class="pre">10px</span></code>). Cette marge ajoute de l’espace à l’<strong>intérieur</strong> du bloc, comme si on le faisait <strong>enfler</strong>.</p></li>
+</ul>
+<p>Voici ce que cela donne sur des blocs de textes (paragraphes avec balise <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>):</p>
+<img alt="../_images/exemple_marges.png" src="../_images/exemple_marges.png"/>
+<p>Testez différentes marges sur ce <a href="https://codepen.io/Vincent-Guertler/pen/gOQKmJj" target="_blank">CodePen</a>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Être plus précis avec les marges ?<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Par défaut, <code class="docutils literal notranslate"><span class="pre">margin</span></code> et <code class="docutils literal notranslate"><span class="pre">padding</span></code> modifient les marges tout autour du bloc (dans toutes les directions en même temps).</p>
+<p class="card-text">Il est possible de définir des marges intérieures et extérieures plus précisément en indiquant les directions voulues avec les propriétés suivantes:</p>
+<img alt="../_images/margin_padding_directions.jpg" src="../_images/margin_padding_directions.jpg"/>
+</div>
+</details><div class="note admonition">
 <p class="admonition-title">Exercice 2</p>
 <p>Reprenez le site sur les flamants roses après vos modifications de l’exercice 1.</p>
 <p>Faites les modifications suivantes:</p>
@@ -433,18 +453,7 @@ Code CSS:</p>
 </div>
 </div>
 </details></div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Être plus précis avec les marges ?<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Par défaut, <code class="docutils literal notranslate"><span class="pre">margin</span></code> et <code class="docutils literal notranslate"><span class="pre">padding</span></code> modifient les marges tout autour du bloc (dans toutes les directions en même temps).</p>
-<p class="card-text">Il est possible de définir des marges intérieures et extérieures plus précisément en indiquant les directions voulues avec les propriétés suivantes:</p>
-<img alt="../_images/margin_padding_directions.jpg" src="../_images/margin_padding_directions.jpg"/>
-</div>
-</details></section>
+</section>
 <section id="centrer-ses-blocs-avec-margin-auto">
 <h2>Centrer ses blocs avec <code class="docutils literal notranslate"><span class="pre">margin:</span> <span class="pre">auto</span></code><a class="headerlink" href="#centrer-ses-blocs-avec-margin-auto" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour centrer un bloc qui ne prend pas toute la largeur de la page, il faut respecter les règles suivantes:</p>
@@ -508,8 +517,7 @@ Solution<div class="summary-down docutils">
 <h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Exercice (récapitulatif)</p>
-<p>Copiez les codes HTML et CSS</p>
-<p>Prenez ce temps pour avancer sur votre site personnel ou pour avancer dans le parcours.</p>
+<p>http://prof.devillele.free.fr/</p>
 </div>
 </section>
 </section>
@@ -519,12 +527,12 @@ Solution<div class="summary-down docutils">
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../divers/aventure.html">
+          <a class="next-page" href="css4.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Aventure textuelle</div>
+                <div class="title">8. Aligner ses blocs avec Flexbox</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>

@@ -81,7 +81,7 @@ Code CSS:
 :class: note
 Seuls les balises de type `block` peuvent être redimensionnés ou déplacés sur une page. Il ne serait pas logique de vouloir déplacer un mot dans un paragraphe.
 
-Il y a cependant des exceptions, comme les images qui sont de type `inline` (ne créent pas de retour à la ligne) mais peuvent être déplacées et redimensionnées (heureusement !).
+(Il existe en réalité un 3ème type: `inline-block`. La balise `<img>` est en réalité de ce type. Les images ne créent pas de retour à la ligne mais peuvent être déplacées et redimensionnées (heureusement !))
 ```
 
 ## Redimensionner ses blocs avec `width` et `height`
@@ -110,7 +110,26 @@ Tous les blocs possèdent des marges intérieures et extérieures:
 ```{image} ../media/margin_padding.jpg
 ```
 
-A COMPLéTER
+Pour les modifier, on utilise les propriétés suivantes:
+
+- `margin` pour les marges **extérieures** (ex: `margin: 10px`). Cette marge ajoute de l'espace **autour** du bloc.
+- `padding` pour les marges **intérieures** (ex: `padding: 10px`). Cette marge ajoute de l'espace à l'**intérieur** du bloc, comme si on le faisait **enfler**.
+
+Voici ce que cela donne sur des blocs de textes (paragraphes avec balise `<p>`):
+
+```{image} ../media/exemple_marges.png
+```
+
+Testez différentes marges sur ce <a href="https://codepen.io/Vincent-Guertler/pen/gOQKmJj" target="_blank">CodePen</a>.
+
+````{dropdown} Être plus précis avec les marges ?
+Par défaut, `margin` et `padding` modifient les marges tout autour du bloc (dans toutes les directions en même temps).
+
+Il est possible de définir des marges intérieures et extérieures plus précisément en indiquant les directions voulues avec les propriétés suivantes:
+
+```{image} ../media/margin_padding_directions.jpg
+```
+````
 
 `````{admonition} Exercice 2
 :class: note
@@ -151,15 +170,6 @@ h1 {
 ```
 ````
 `````
-
-````{dropdown} Être plus précis avec les marges ?
-Par défaut, `margin` et `padding` modifient les marges tout autour du bloc (dans toutes les directions en même temps).
-
-Il est possible de définir des marges intérieures et extérieures plus précisément en indiquant les directions voulues avec les propriétés suivantes:
-
-```{image} ../media/margin_padding_directions.jpg
-```
-````
 
 ## Centrer ses blocs avec `margin: auto`
 
@@ -222,7 +232,5 @@ A ne pas confondre avec `.centre, h2` qui inclurait le bloc `centre` ET tous les
 
 ```{admonition} Exercice (récapitulatif)
 :class: note
-Copiez les codes HTML et CSS 
-
-Prenez ce temps pour avancer sur votre site personnel ou pour avancer dans le parcours.
+http://prof.devillele.free.fr/
 ```
