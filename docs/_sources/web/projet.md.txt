@@ -22,7 +22,7 @@ Pour ce qui est de la forme, voici les contraintes à respecter:
 
 ## Exemple
 
-En guise d'exemple, vous pouvez télécharger ici le contenu du site fictif d'une photographe.
+En guise d'exemple, vous pouvez télécharger {download}`ici<../data/robbie_lens.zip>` le contenu du site fictif d'une photographe.
 
 Il s'agit à la base d'un site développé par <a href="https://openclassrooms.com/fr/" target="_blank">OpenClassrooms</a> pour enseigner le développement web que j'ai légèrement modifié afin qu'il colle avec notre parcours d'apprentissage.
 

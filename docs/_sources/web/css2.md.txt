@@ -359,7 +359,7 @@ Il n'est pas toujours simple de trouver l’effet d’ombre désiré à tâtons.
 
 `````{admonition} Exercice 7
 :class: note
-rendez-vous sur <a href="https://codepen.io/Vincent-Guertler/pen/GRwdwZp" target="_blank">CodePen</a> et testez un peu ces différentes bordures et ombres.
+Rendez-vous sur <a href="https://codepen.io/Vincent-Guertler/pen/GRwdwZp" target="_blank">CodePen</a> et testez un peu ces différentes bordures et ombres.
 `````
 
 ## Exercice récapitulatif

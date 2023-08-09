@@ -153,19 +153,19 @@ Vous avez des fichiers organisés de la manière suivante:
 ```{image} ../media/organisation_dossiers.png
 ```
 
-Vous êtes dans le fichier `index.html`, quel code permet de faire un lien vers la `page1.html` ?
+Vous êtes dans le fichier `index.html`, quel code permet de faire un lien vers `page1.html` ?
 
-* {v}`<a href="page1.html">Page 1</a>`
-* {f}`<a href="dossier1/page1.html">Page 1</a>`
-* {v}`<a href="../dossier1/page1.html">Page 1</a>`
-* {f}`<a href="dossier2/page1.html">Page 1</a>`
+* {f}`<a href='page1.html'>Page 1</a>`
+* {v}`<a href='dossier1/page1.html'>Page 1</a>`
+* {f}`<a href='../dossier1/page1.html'>Page 1</a>`
+* {f}`<a href='dossier2/page1.html'>Page 1</a>`
 
-Vous êtes dans le fichier `page1.html`, quel code permet de faire un lien vers la `page2.html` ?
+Vous êtes dans le fichier `page1.html`, quel code permet de faire un lien vers `page2.html` ?
 
-* {v}`<a href="page2.html">Page 2</a>`
-* {f}`<a href="dossier2/page2.html">Page 2</a>`
-* {v}`<a href="../dossier2/page2.html">Page 2</a>`
-* {f}`<a href="../page2.html">Page 2</a>`
+* {f}`<a href='page2.html'>Page 2</a>`
+* {f}`<a href='dossier2/page2.html'>Page 2</a>`
+* {v}`<a href='../dossier2/page2.html'>Page 2</a>`
+* {f}`<a href='../page2.html'>Page 2</a>`
 ````
 
 ```{admonition} Info
