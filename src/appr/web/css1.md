@@ -286,6 +286,11 @@ Code HTML:
 ````
 `````
 
+```{admonition} Refaire la face de Mario
+Vous vous souvenez du Mario du début de chapitre ?  
+Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</a> pour voir comment ça a été fait (n'hésitez pas à modifier la couleur de sa moustache).
+```
+
 ## Exercice récapitulatif
 
 ```{admonition} Exercice  (récapitulatif)
