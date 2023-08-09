@@ -35,7 +35,7 @@ Quand vous visitez un site web, le serveur du site vous transmet en réalité un
 
 ````{admonition} Micro-activité
 :class: note
-Rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous..." pour sauver le fichier.  
+Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous..." pour sauver le fichier html.  
 Vous observez que votre navigateur télécharge un fichier `.html` que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).
 
 La page est-elle identique à tout à l'heure ? A quoi ressemble l'url de la page ?
@@ -43,7 +43,7 @@ La page est-elle identique à tout à l'heure ? A quoi ressemble l'url de la pag
 ```{dropdown} Réponse
 Cela dépend de la page que vous avez téléchargée. S'il s'agit d'une page web **statique**, le contenu devrait être identique après l'avoir téléchargé localement. En revanche, si le site est **dynamique**, le contenu risque d'être très différent car le serveur n'est plus là pour personaliser le contenu de la page en temps réel pour vous.
 
-Concernant l'url, vous pouvez voir qu'il ne pointe plus vers le serveur du site, mais bien vers le fichier `.html` de votre ordinateur.
+Concernant l'url, vous pouvez voir qu'il ne pointe plus vers le serveur du site, mais bien vers le fichier `.html` local de votre ordinateur.
 ```
 ````
 
@@ -53,14 +53,14 @@ Tout comme n'importe quel autre langage informatique, HTML peut être lu et édi
 
 ````{admonition} Micro-activité
 :class: note
-Ouvrez le fichier .html de l'activité précédente avec un éditeur de texte.  
+Ouvrez le fichier .html de l'activité précédente avec un éditeur de texte (Visual Studio Code).  
 Il est probable que le fichier ne contienne pas que du code HTML mais également du code Javascript et CSS (nous verrons cela plus tard).  
 Pour trouver le code HTML, cherchez les symboles `<` et `>`. HTML est un langage basé sur des balises représentées par des chevrons `<>`.  
 
 Voyez-vous des similitudes avec le langage python ?
 
 ```{dropdown} Réponse
-Vous ne devriez retrouver que très peu de similitudes avec python car HTML n'est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présents dans presque tous les langages informatiques.
+Vous ne devriez retrouver que très peu de similitudes avec python car HTML n'est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présentes dans presque tous les langages informatiques.
 ```
 ````
 
@@ -70,8 +70,8 @@ Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l'exception 
 ```{admonition} Exercice 1
 :class: note
 Vous allez écrire votre tout premier (simplissime) fichier HTML.  
-Créez un nouveau fichier texte (`.txt`) et changez l'extension du fichier en `.html` (ainsi vous pourrez l'ouvrir dans le navigateur).  
-Ouvrez votre fichier avec un éditeur de texte, écrivez quelques mots, sauvegardez, puis ouvrez votre fichier avec un navigateur en double-cliquant dessus.  
+Créez un nouveau fichier et changez l'extension du fichier en `.html` (vous devriez pouvoir le faire directement depuis Visual Studio Code).  
+Ouvrez votre fichier, écrivez quelques mots, sauvegardez, puis ouvrez votre fichier avec un navigateur en double-cliquant dessus.  
 Vous devriez voir votre texte s'afficher !
 ```
 
@@ -88,7 +88,7 @@ C'est ce que nous allons voir dans la prochaine section.
 
 ## Un langage de balises
 
-Comme évoqué précédemment, le langage HTML utilise ce qu'on appelle des balises. On les écrit entre chevrons `<`  et `>`:
+Comme évoqué précédemment, le langage HTML utilise ce qu'on appelle des balises. On les écrit entre chevrons `<` et `>`:
 
 ```{image} ../media/balises_html.jpg
 ```

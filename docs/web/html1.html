@@ -329,7 +329,7 @@ Il permet d’ajouter du texte, des liens, des images, des tableaux, etc.</p>
 <p>Quand vous visitez un site web, le serveur du site vous transmet en réalité un fichier HTML qui sera lu et interprété par votre navigateur.</p>
 <div class="note admonition">
 <p class="admonition-title">Micro-activité</p>
-<p>Rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur “Enregistrez sous…” pour sauver le fichier.<br/>
+<p>Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur “Enregistrez sous…” pour sauver le fichier html.<br/>
 Vous observez que votre navigateur télécharge un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).</p>
 <p>La page est-elle identique à tout à l’heure ? A quoi ressemble l’url de la page ?</p>
 <details class="sphinx-bs dropdown card mb-3">
@@ -340,7 +340,7 @@ Réponse<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Cela dépend de la page que vous avez téléchargée. S’il s’agit d’une page web <strong>statique</strong>, le contenu devrait être identique après l’avoir téléchargé localement. En revanche, si le site est <strong>dynamique</strong>, le contenu risque d’être très différent car le serveur n’est plus là pour personaliser le contenu de la page en temps réel pour vous.</p>
-<p class="card-text">Concernant l’url, vous pouvez voir qu’il ne pointe plus vers le serveur du site, mais bien vers le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> de votre ordinateur.</p>
+<p class="card-text">Concernant l’url, vous pouvez voir qu’il ne pointe plus vers le serveur du site, mais bien vers le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> local de votre ordinateur.</p>
 </div>
 </details></div>
 </section>
@@ -349,7 +349,7 @@ Réponse<div class="summary-down docutils">
 <p>Tout comme n’importe quel autre langage informatique, HTML peut être lu et édité avec n’importe quel éditeur de texte.</p>
 <div class="note admonition">
 <p class="admonition-title">Micro-activité</p>
-<p>Ouvrez le fichier .html de l’activité précédente avec un éditeur de texte.<br/>
+<p>Ouvrez le fichier .html de l’activité précédente avec un éditeur de texte (Visual Studio Code).<br/>
 Il est probable que le fichier ne contienne pas que du code HTML mais également du code Javascript et CSS (nous verrons cela plus tard).<br/>
 Pour trouver le code HTML, cherchez les symboles <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>. HTML est un langage basé sur des balises représentées par des chevrons <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code>.</p>
 <p>Voyez-vous des similitudes avec le langage python ?</p>
@@ -360,7 +360,7 @@ Réponse<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">Vous ne devriez retrouver que très peu de similitudes avec python car HTML n’est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présents dans presque tous les langages informatiques.</p>
+<p class="card-text">Vous ne devriez retrouver que très peu de similitudes avec python car HTML n’est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présentes dans presque tous les langages informatiques.</p>
 </div>
 </details></div>
 <p>L’HTML tout seul décrit simplement le contenu, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.<br/>
@@ -368,8 +368,8 @@ Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l’exceptio
 <div class="note admonition">
 <p class="admonition-title">Exercice 1</p>
 <p>Vous allez écrire votre tout premier (simplissime) fichier HTML.<br/>
-Créez un nouveau fichier texte (<code class="docutils literal notranslate"><span class="pre">.txt</span></code>) et changez l’extension du fichier en <code class="docutils literal notranslate"><span class="pre">.html</span></code> (ainsi vous pourrez l’ouvrir dans le navigateur).<br/>
-Ouvrez votre fichier avec un éditeur de texte, écrivez quelques mots, sauvegardez, puis ouvrez votre fichier avec un navigateur en double-cliquant dessus.<br/>
+Créez un nouveau fichier et changez l’extension du fichier en <code class="docutils literal notranslate"><span class="pre">.html</span></code> (vous devriez pouvoir le faire directement depuis Visual Studio Code).<br/>
+Ouvrez votre fichier, écrivez quelques mots, sauvegardez, puis ouvrez votre fichier avec un navigateur en double-cliquant dessus.<br/>
 Vous devriez voir votre texte s’afficher !</p>
 </div>
 <div class="note admonition">
@@ -390,7 +390,7 @@ C’est ce que nous allons voir dans la prochaine section.</p>
 </section>
 <section id="un-langage-de-balises">
 <h2>Un langage de balises<a class="headerlink" href="#un-langage-de-balises" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Comme évoqué précédemment, le langage HTML utilise ce qu’on appelle des balises. On les écrit entre chevrons <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>  et <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>:</p>
+<p>Comme évoqué précédemment, le langage HTML utilise ce qu’on appelle des balises. On les écrit entre chevrons <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>:</p>
 <img alt="../_images/balises_html.jpg" src="../_images/balises_html.jpg"/>
 <div class="hint admonition">
 <p class="admonition-title">Touches pour les chevrons</p>
