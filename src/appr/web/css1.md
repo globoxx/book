@@ -23,7 +23,14 @@ CSS3
 Le [CSS](https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade) (Cascading Style Sheets, aussi appelées feuilles de style) a pour rôle de gérer l'apparence de la page web (agencement, positionnement, décoration, couleurs, taille du texte…). Ce langage est venu compléter le HTML en 1996, et il est toujours au fondement même du style du Web de nos jours.
 ```
 
-TODO CSS art
+````{admonition} L'art CSS
+:class: hint
+Certaines personnes se pasionnent à faire de l'art en pur CSS, vous pouvez jeter un oeil à <a href="https://www.cssartist.com/" target="_blank">cette artiste</a> par exemple.  
+Ce visage de Mario a été fait en pur CSS ! C'est inutile mais plutôt impressionnant...
+
+```{image} ../media/mario_css.png
+```
+````
 
 ## Où écrire le CSS ?
 
@@ -41,7 +48,7 @@ Cette ligne s'ouvre avec la balise orpheline `<link>` et on la place à l'intér
 <head>
     <meta charset="utf-8">
     <title>Ma page</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"> <!-- Nouvelle ligne -->
 </head>
 ```
 ````
