@@ -11,7 +11,7 @@ Un **lien hypertexte** (ou hyperlien) est une référence placée dans le conten
 
 ````{admonition} Exercice 1
 :class: note
-Ouvrez Firefox, rendez-vous sur le site de votre choix et cherchez un lien hypertexte. Faites un clic droit sur le lien puis cliquez sur "Inspecter". Votre navigateur devrait alors ouvrir le code HTML du site et pointer directement sur le lien que vous aviez séléctionner.
+Ouvrez Firefox, rendez-vous sur le site de votre choix et cherchez un lien hypertexte. Faites un clic droit sur le lien, puis cliquez sur "Inspecter". Votre navigateur devrait alors ouvrir le code HTML de la page et pointer directement sur le code du lien.
 Lisez ce bout de code HTML pour découvrir quelle balise permet d'insérer un lien hypertexte.
 
 ```{dropdown} Solution
@@ -141,10 +141,10 @@ Ajoutez un lien relatif depuis la page principale `voyages.html` vers la page `c
 
 ```{question} Absolu ou relatif ?
 Parmi les liens suivants, les quels sont relatifs ?
-* {v}`<a href=`chats.html`>Chats</a>`
-* {f}`<a href="https://www.google.com">Google</a>`
-* {v}`<a href="mon_site/contenu/pages/page3.html">Page 3</a>`
-* {f}`<a href="https://www.codeur.com/page2/">Page 2</a>`
+* {v}`<a href='chats.html'>Chats</a>`
+* {f}`<a href='https://www.google.com'>Google</a>`
+* {v}`<a href='mon_site/contenu/pages/page3.html'>Page 3</a>`
+* {f}`<a href='https://www.codeur.com/page2/'>Page 2</a>`
 ```
 
 ````{question} Chemin relatif

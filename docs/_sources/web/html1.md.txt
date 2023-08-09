@@ -55,7 +55,7 @@ Tout comme n'importe quel autre langage informatique, HTML peut être lu et édi
 :class: note
 Ouvrez le fichier .html de l'activité précédente avec un éditeur de texte.  
 Il est probable que le fichier ne contienne pas que du code HTML mais également du code Javascript et CSS (nous verrons cela plus tard).  
-Pour trouver le code HTML, cherchez les symboles `<` et `>`. HTML est un langage basé sur des balises représentées par des chevrons `<...>`.  
+Pour trouver le code HTML, cherchez les symboles `<` et `>`. HTML est un langage basé sur des balises représentées par des chevrons `<>`.  
 
 Voyez-vous des similitudes avec le langage python ?
 
