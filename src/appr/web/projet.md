@@ -19,6 +19,20 @@ Pour ce qui est de la forme, voici les contraintes à respecter:
 
 - Au minimum 3 pages HTML liées entre elles par des liens hypertextes
 - Une cohérence du style entre toutes vos pages (un seul fichier `.css` pour l'ensemble de votre site)
+- Utilisation pertinente des balises html et des propriétés CSS vues en classe
+
+```{admonition} Plagiat et tricherie
+:class: attention
+Vous n'êtes pas autorisé à simplement copier-coller du code trouvé sur Internet où dans d'autres groupes.
+
+Il est cependant autorisé de s'inspirer de code d'autrui et de le modifier pour le faire sien. Dans ce cas, il vous est demandé d'ajouter un commentaire dans le code indiquant sa source.
+
+L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d'assistance uniquement. Tout code produit par une IA doit être compris par les membres du groupe et indiqué comme tel dans un commentaire.
+
+Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. Chaque groupe discutera avec l'enseignant au sujet de son code dans ce but.
+```
+
+Une grille d'évaluation précise vous sera transmise en temps voulu.
 
 ## Exemple
 
