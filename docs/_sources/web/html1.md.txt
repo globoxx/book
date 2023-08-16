@@ -35,13 +35,15 @@ Quand vous visitez un site web, le serveur du site vous transmet en réalité un
 
 ````{admonition} Micro-activité
 :class: note
-Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous..." pour sauver le fichier html.  
+Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous..." pour sauver le fichier html sur votre ordinateur.  
 Vous observez que votre navigateur télécharge un fichier `.html` que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).
 
 La page est-elle identique à tout à l'heure ? A quoi ressemble l'url de la page ?
 
 ```{dropdown} Réponse
-Cela dépend de la page que vous avez téléchargée. S'il s'agit d'une page web **statique**, le contenu devrait être identique après l'avoir téléchargé localement. En revanche, si le site est **dynamique**, le contenu risque d'être très différent car le serveur n'est plus là pour personaliser le contenu de la page en temps réel pour vous.
+En général, elle sera toute moche ! Car vous ne téléchargez que le fichier `.html` qui contient le contenu et non le fichier `.css` qui contient son style.
+
+Pour le contenu, cela dépend de la page que vous avez téléchargée. S'il s'agit d'une page web **statique** (ex: wikipedia), le contenu sera quasi identique après l'avoir téléchargé localement. En revanche, si le site est **dynamique** (ex: youtube), le contenu risque d'être très différent car le serveur n'est plus là pour personaliser le contenu de la page en temps réel pour vous.
 
 Concernant l'url, vous pouvez voir qu'il ne pointe plus vers le serveur du site, mais bien vers le fichier `.html` local de votre ordinateur.
 ```
