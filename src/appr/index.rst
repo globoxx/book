@@ -73,7 +73,7 @@ Bienvenue sur la plateforme de TP d'informatique !
 : ce chapitre contient le parcours d'apprentissage du langage python avec une approche formelle.
 
 `Programmation (parcours dessin) <prog_dessin/intro.html>`_
-: ce chapitre contient le parcours d'apprentissage du langage python avec une approche par le dessin (basé sur le contenu de <href="https://dev-apprendre.modulo-info.ch/prog1/index.html" target="_blank">Modulo</a>).
+: ce chapitre contient le parcours d'apprentissage du langage python avec une approche par le dessin (basé sur le contenu de Modulo).
 
 `Web <web/html1.html>`_
-: ce chapitre contient le parcours d'apprentissage du HTML et CSS pour concevoir des sites web (basé sur l'excellent [tutoriel](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3) de Mathieu Nebra).
+: ce chapitre contient le parcours d'apprentissage du HTML et CSS pour concevoir des sites web (basé sur l'excellent tutoriel de Mathieu Nebra sur OpenClassroom).
