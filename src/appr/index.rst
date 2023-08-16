@@ -9,7 +9,6 @@ Bienvenue sur la plateforme de TP d'informatique !
 .. toctree::
    :name: Programmation (parcours formel)
    :caption: Programmation (parcours formel)
-   :titlesonly:
    :maxdepth: 1
    :hidden:
 
@@ -21,19 +20,21 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog_formel/sequences
    prog_formel/algo
 
-.. toctree::
-   :name: Programmation (parcours dessin)
-   :caption: Programmation (parcours dessin)
-   :maxdepth: 3
-   :hidden:
 
-   prog_dessin/dessin
-   prog_dessin/definir
-   prog_dessin/repeter
-   prog_dessin/parametrer
-   prog_dessin/parcourir
-   prog_dessin/randomiser
-   prog_dessin/projet
+.. .. toctree::
+..    :name: Programmation (parcours dessin)
+..    :caption: Programmation (parcours dessin)
+..    :maxdepth: 3
+..    :hidden:
+
+..    prog_dessin/dessin
+..    prog_dessin/definir
+..    prog_dessin/repeter
+..    prog_dessin/parametrer
+..    prog_dessin/parcourir
+..    prog_dessin/randomiser
+..    prog_dessin/projet
+
 
 .. toctree::
    :name: Web
