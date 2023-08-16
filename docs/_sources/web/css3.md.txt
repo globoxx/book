@@ -230,7 +230,47 @@ A ne pas confondre avec `.centre, h2` qui inclurait le bloc `centre` ET tous les
 
 ## Exercice récapitulatif
 
-```{admonition} Exercice (récapitulatif)
+````{admonition} Exercice (récapitulatif)
 :class: note
-http://prof.devillele.free.fr/
+Voici le code HTML d'une page simpliste présentant un restaurant pour le moins douteux.
+
+```{code-block} html
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Restaurant en boîtes</title>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body>
+    <h1> Restaurant en boîtes </h1>
+    <div class="boite1">
+      Voici les menus proposés dans mon restaurant:
+      <div class="boite2">
+        <ul>
+          <li>Pâtes au beurre</li>
+          <li>Paquet de chips avec thé froid de la migros</li>
+          <li>Saucisses grillées</li>
+          <li>Sandwich au jambon</li>
+          <li>Salade du chef</li>
+        </ul>
+      </div>
+    </div>
+    <div class="boite1">
+      Voici un lien vers l'image de mon restaurant:
+      <div class="boite2">
+        <a href='https://espacescontemporains.ch/wp-content/uploads/2020/07/01_header_skyloungemainoverall2.jpg'>Mon magnifique resto</a>
+      </div>  
+    </div>
+  </body>
+</html>
 ```
+
+En utilisant la structure des blocs vus dans ce chapitre, écrivez le fichier index.css permettant d'obtenir un résultat aussi proche que possible de l'image ci-dessous.  
+Vous pouvez faire l'exercice directement sur CodePen si vous le souhaitez.
+
+```{image} ../media/restaurant_boites_css.png
+```
+
+Déposez votre fichier CSS sur Moodle à l'endroit prévu.
+````
