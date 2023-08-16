@@ -87,7 +87,7 @@ Voici des ressources très utiles:
 
 ## Exercice récapitulatif
 
-```{admonition} Exercice (récapitulatif)
+```{admonition} Exercice récapitulatif
 :class: note
 Pas d'exercice à rendre pour ce chapitre !
 

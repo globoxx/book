@@ -293,7 +293,7 @@ Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</
 
 ## Exercice récapitulatif
 
-```{admonition} Exercice  (récapitulatif)
+```{admonition} Exercice récapitulatif
 :class: note
 Il est temps d'ajouter un peu de style à votre site de photographe !
 Reprenez votre dossier `photographie` des exercices récapitulatifs précédents.

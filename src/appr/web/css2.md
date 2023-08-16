@@ -364,7 +364,7 @@ Rendez-vous sur <a href="https://codepen.io/Vincent-Guertler/pen/GRwdwZp" target
 
 ## Exercice récapitulatif
 
-```{admonition} Exercice (récapitulatif)
+```{admonition} Exercice récapitulatif
 :class: note
 Pas d'exercice à rendre pour ce chapitre !
 

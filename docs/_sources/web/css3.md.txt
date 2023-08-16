@@ -230,9 +230,9 @@ A ne pas confondre avec `.centre, h2` qui inclurait le bloc `centre` ET tous les
 
 ## Exercice récapitulatif
 
-````{admonition} Exercice (récapitulatif)
+````{admonition} Exercice récapitulatif
 :class: note
-Voici le code HTML d'une page simpliste présentant un restaurant pour le moins douteux.
+Voici le code HTML d'une page présentant un restaurant pour le moins douteux.
 
 ```{code-block} html
 <!DOCTYPE html>

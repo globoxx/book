@@ -113,7 +113,7 @@ L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple 
 
 ## Exercice récapitulatif
 
-```{admonition} Exercice 4 (récapitulatif)
+```{admonition} Exercice récapitulatif
 :class: note
 Votre site de photographie attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
 Reprenez votre dossier `photographie` du chapitre précédent et faites les améliorations suivantes:

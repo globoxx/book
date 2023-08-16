@@ -195,7 +195,7 @@ Voici un exemple:
 
 ## Exercice récapitulatif
 
-```{admonition} Exercice 4 (récapitulatif)
+```{admonition} Exercice récapitulatif
 :class: note
 Vous vous lancez dans la photographie. Vous avez besoin d'un site où les potentiels clients pourraient vous contacter pour vos services.  
 

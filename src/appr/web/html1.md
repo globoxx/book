@@ -267,7 +267,7 @@ Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot
 
 ## Exercice récapitulatif
 
-```{admonition} Exercice 6 (récapitulatif)
+```{admonition} Exercice récapitulatif
 :class: note
 Ecrivez la page web principale du site `champignons.ch`. dans un fichier nommé `champignons.html`.  
 Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:

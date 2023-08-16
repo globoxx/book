@@ -202,7 +202,7 @@ Reprenez votre page sur les champignons (`champignons.html`) et ajoutez 2 iframe
 
 ## Exercice récapitulatif
 
-```{admonition} Exercice 5 (récapitulatif)
+```{admonition} Exercice récapitulatif
 :class: note
 Vous êtes le gérant d'une agence de voyage et voulez faire une simple page listant les destinations que vous proposez.
 
