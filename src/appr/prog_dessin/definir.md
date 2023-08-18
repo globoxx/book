@@ -138,7 +138,7 @@ La définition d'une fonction permet d'ajouter de nouveaux mots à un langage de
 Ecrivez les fonctions sans accents, sans circonflexes et sans espaces: `batiment()`, `carre()`, `boite()`, `arc_en_ciel()`.
 ```
 
-````{exercise}
+`````{exercise}
 Ajoutez une deuxième porte au bâtiment.
 
 ```{codeplay}
@@ -169,7 +169,19 @@ batiment()
 forward(30)
 porte()
 ```
+
+````{dropdown} Solution
+```python
+...
+
+batiment()
+forward(30)
+porte()
+forward(120)
+porte()
+```
 ````
+`````
 
 ```{question}
 À combien de lignes de code la fonction `porte()` est-elle équivalente ?
@@ -216,7 +228,7 @@ Ensuite, vous appuyez sur:
 - la touche **tab** pour augmenter l'indentation
 - la touche **maj+tab** pour diminuer l'indentation
 
-````{exercise}
+`````{exercise}
 Essayez ces raccourcis dans le code ci-dessous. Transformez le code en deux fonctions `batiment()` et `porte()`, que vous appelez ensuite.
 
 ```{codeplay}
@@ -245,6 +257,35 @@ left(90)
 ```
 ````
 
+````{dropdown} Solution
+```python
+def batiment():
+    forward(200)
+    left(90)
+    forward(100)
+    left(90)
+    forward(200)
+    left(90)
+    forward(100)
+    left(90)
+
+def porte():
+    forward(30)
+    left(90)
+    forward(50)
+    left(90)
+    forward(30)
+    left(90)
+    forward(50)
+    left(90)
+
+batiment()
+forward(30)
+porte()
+```
+````
+`````
+
 ## Maison avec porte
 
 Une fois qu'une fonction est définie, elle peut être utilisée partout, même dans la définition d'une autre fonction.
@@ -254,7 +295,7 @@ Ici, nous avons une fonction `porte()`, qui est utilisée à l'intérieur d'une 
 ````{exercise}
 Déplacez la porte vers le milieu de la maison, et dessinez une deuxième maison.
 
-```{codeplay}
+````{codeplay}
 :file: def4.py
 from turtle import *
 
@@ -283,7 +324,31 @@ def maison():
 
 maison()
 ```
+
+````{dropdown} Solution
+```python
+...
+
+def maison():
+    forward(100)
+    left(90)
+    forward(60)
+    left(45)
+    forward(71)
+    left(90)
+    forward(71)
+    left(45)
+    forward(60)
+    left(90)
+    forward(40) # Décalage de la porte
+    porte()
+
+maison()
+forward(100)
+maison()
+```
 ````
+`````
 
 ## Variable globale
 
@@ -331,7 +396,7 @@ Nous verrons plus tard qu'il est plus judicieux d'utiliser des variables locales
 
 La fonction `dot()` dessine un point à la position actuelle de la tortue.
 
-````{exercise}
+`````{exercise}
 Ajoutez un point (`dot`) au sommet du triangle.
 
 ```{codeplay}
@@ -350,36 +415,51 @@ def triangle():
 
 triangle()
 ```
+
+````{dropdown} Solution
+```python
+...
+
+def triangle():
+    dot()
+    forward(d)
+    left(120)
+    dot()
+    forward(d)
+    left(120)
+    dot()   # Ajout ici
+    forward(d)
+
+triangle()
+```
 ````
+`````
 
 ## Lever le stylo
 
 Les deux commandes `up()` et `down()` permettent de lever et de baisser le stylo.
 
-````{exercise}
-Ceci nous permet de dessiner des formes séparées, comme ici le petit i avec son point.  
-Transformez le i vers un i avec trema (deux points).
+Ceci nous permet de dessiner des formes séparées, comme ici le petit i avec son point.
 
 ```{codeplay}
 from turtle import *
 d = 50
 
 def i():
-    dot()
     down()      # poser le stylo
     left(90)
     forward(d)
     up()        # lever le stylo
-    forward(d)
+    forward(10)
     dot()
-    backward(2*d)
+    backward(d+10)
     right(90)
-    forward(d/2)    # avancer à la prochaine lettre
+    forward(50)    # avancer à la prochaine lettre
     
 i()
 i()
+i()
 ```
-````
 
 ```{caution}
 Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un argument dans les parenthèses, les fonctions `up()` et `down()` ne nécessitent pas d'argument.
@@ -388,25 +468,82 @@ Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un ar
 ## Exercice récapitulatif
 
 ````{exercise}
-Définissez une fonction pour dessiner une maison (vous pouvez créer d'autres fonctions intermédiaires si besoin).  
-Ensuite, dessinez 3 maisons qui ne sont pas connectées, à des endroits différents du canevas.
+Définissez une fonction `drapeau()` permettant de dessiner le drapeau suisse.  
+Pour vous aider, définissez également une fonction pour le carré et une autre pour la croix. Vous n'avez pas à vous préocupper des couleurs pour le moment.
 
-```{codeplay}
-:file: maisons.py
-from turtle import *
-
-d = 100
-
-def maison():
-    ...
-
-
-maison()
-...
-done()
+```{image} ../media/drapeau_suisse.svg
 ```
 
-Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu.
+```{codeplay}
+:file: ex2.py
+from turtle import *
+
+up()
+goto(-125, -125) # Permet d'aller à des coordonnées précises sur le canvas
+down()
+
+# Votre code ici
+```
+
+Téléchargez le fichier `.py`, faites une capture d'écran et déposez les fichiers sur Moodle à l'endroit prévu.
+````
+
+````{dropdown} Solution
+```python
+from turtle import *
+
+up()
+goto(-125, -125)
+down()
+
+def croix():
+    forward(50)
+    right(90)
+    forward(50)
+    left(90)
+    forward(50)
+    left(90)
+    forward(50)
+    right(90)
+    forward(50)
+    left(90)
+    forward(50)
+    left(90)
+    forward(50)
+    right(90)
+    forward(50)
+    left(90)
+    forward(50)
+    left(90)
+    forward(50)
+    right(90)
+    forward(50)
+    left(90)
+    forward(50)
+    left(90)
+    
+def carre():
+    forward(250)
+    left(90)
+    forward(250)
+    left(90)
+    forward(250)
+    left(90)
+    forward(250)
+    left(90)
+    
+def drapeau():
+    carre()
+    up()
+    left(90)
+    forward(100)
+    right(90)
+    forward(50)
+    down()
+    croix()
+    
+drapeau()
+```
 ````
 
 ## Et à part le dessin ?
