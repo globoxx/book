@@ -193,9 +193,9 @@ Voici un exemple:
 <a href="https://mdlgb.ch/"><img src="https://pbs.twimg.com/profile_images/1125713968637579265/L4HJ0qyd_400x400.png"></a>
 ```
 
-## Exercice récapitulatif
+## Exercice récapitulatif 3
 
-```{admonition} Exercice récapitulatif
+```{admonition} Exercice récapitulatif 3
 :class: note
 Vous vous lancez dans la photographie. Vous avez besoin d'un site où les potentiels clients pourraient vous contacter pour vos services.  
 

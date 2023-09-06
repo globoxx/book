@@ -228,9 +228,9 @@ A ne pas confondre avec `.centre, h2` qui inclurait le bloc `centre` ET tous les
 ````
 `````
 
-## Exercice récapitulatif
+## Exercice récapitulatif 6
 
-````{admonition} Exercice récapitulatif
+````{admonition} Exercice récapitulatif 6
 :class: note
 Voici le code HTML d'une page présentant un restaurant pour le moins douteux.
 
@@ -240,7 +240,7 @@ Voici le code HTML d'une page présentant un restaurant pour le moins douteux.
   <head>
     <meta charset="utf-8"/>
     <title>Restaurant en boîtes</title>
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
     <h1> Restaurant en boîtes </h1>
@@ -266,7 +266,7 @@ Voici le code HTML d'une page présentant un restaurant pour le moins douteux.
 </html>
 ```
 
-En utilisant la structure des blocs vus dans ce chapitre, écrivez le fichier index.css permettant d'obtenir un résultat aussi proche que possible de l'image ci-dessous.  
+En utilisant la structure en blocs vue dans ce chapitre, écrivez le fichier `style.css` permettant d'obtenir un résultat aussi proche que possible de l'image ci-dessous.  
 Vous pouvez faire l'exercice directement sur CodePen si vous le souhaitez.
 
 ```{image} ../media/restaurant_boites_css.png

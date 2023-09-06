@@ -111,17 +111,18 @@ Reprenez le code de l'exercice précédent montrant une page d'ecublens et ajout
 L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple également possible d'ajouter l'attribut `title` à des liens (`<a> </a>`) ou des paragraphes (`<p> </p>`).
 ```
 
-## Exercice récapitulatif
+## Exercice récapitulatif 4
 
-```{admonition} Exercice récapitulatif
+```{admonition} Exercice récapitulatif 4
 :class: note
 Votre site de photographie attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
 Reprenez votre dossier `photographie` du chapitre précédent et faites les améliorations suivantes:
 
 - Ajustez les tailles des photos de votre galerie pour une meilleure harmonie.
-- Ajoutez des infobulles sur vos photos.
+- Ajoutez des infobulles sur vos photos afin de donner des informations sur leur origine aux utilisateurs du site.
 - Sur votre page contact, ajoutez les logos d'instagram et de twitter. (A télécharger {download}`ici<../media/instagram.png>` et {download}`ici<../media/twitter.png>`)
 - Faites en sorte que les logos redirigent directement vers le réseau social associé en cliquant dessus.
+- Ajoutez un logo sur chaque page de votre site. Ce logo doit permettre retourner sur la page principale de votre site (l'accueil), depuis n'importe quelle autre page.
 
 Déposez votre dossier sur Moodle à l'endroit prévu.
 ```

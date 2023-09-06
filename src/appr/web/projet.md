@@ -17,9 +17,11 @@ Sachez par contre que votre site **sera hébergé et accessible pour le reste du
 
 Pour ce qui est de la forme, voici les contraintes à respecter:
 
-- Au minimum 3 pages HTML liées entre elles par des liens hypertextes
+- Au minimum 4 pages HTML liées entre elles par des liens hypertextes
 - Une cohérence du style entre toutes vos pages (un seul fichier `.css` pour l'ensemble de votre site)
-- Utilisation pertinente des balises html et des propriétés CSS vues en classe
+- Un menu permettant de passer sur les différentes pages du site
+- Un logo cliquable permettant de revenir à l'accueil du site depuis n'importe quelle page
+- Une utilisation pertinente des balises html et des propriétés CSS vues en classe
 
 ```{admonition} Plagiat et tricherie
 :class: attention

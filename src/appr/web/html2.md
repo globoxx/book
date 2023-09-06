@@ -51,9 +51,9 @@ Les balises de titre vont de `<h1> </h1>` (pour le titre principal) jusqu'à `<h
 Ne confondez pas la balise `<h1> </h1>` avec la balise `<title>` qui elle n'affiche rien sur la page mais qui affiche le titre de la page dans l'onglet du navigateur.
 ```
 
-```{admonition} Exercice 1
+`````{admonition} Exercice 1
 :class: note
-Créez un nouveau fichier `.html` (ou reprenez un exercice précédent) et testez les différentes balises de titre avec les textes suivant:
+Créez un nouveau fichier `.html` avec la structure de texte ci-dessous. Ajoutez les balises de titres (`<h1>`, `<h2>`, etc) et les balises de paragraphes (`<p>`) aux endroits appropriés:
 
 - Histoire de la Suisse
 - 1. Introduction
@@ -68,7 +68,34 @@ Créez un nouveau fichier `.html` (ou reprenez un exercice précédent) et teste
 - ...
 - 3. Conclusion
 - Paragraphe de conclusion
+
+````{dropdown} Solution
+```{code-block} html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Ma page</title>
+    </head>
+    <body>
+        <h1>Histoire de la Suisse</h1>
+        <h2>1. Introduction</h2>
+        <p>Petit paragraphe introductif</p>
+        <p>Second petit paragraphe introductif</p>
+        <h2>2. Préhistoire</h2>
+        <h3>2.1 Age du bronze</h3>
+        <p>Petit blabla</p>
+        <h3>2.2 Age du fer</h3>
+        <h4>2.2.1 L'occupation celte</h4>
+        <p>Encore du blabla</p>
+        <p>...</p>
+        <h2>3. Conclusion</h2>
+        <p>Paragraphe de conclusion</p>
+    </body>
+</html>
 ```
+````
+`````
 
 ```{admonition} Note
 :class: note
@@ -188,7 +215,7 @@ Le plus simple est encore d'obtenir le **code d'intégration** de la vidéo ou d
 :class: note
 Pour YouTube, il suffit de faire un clic droit sur la vidéo et de choisir "Copier le code d'intégration". Vous n'avez alors plus qu'à coller le code dans votre page web.
 
-Pour Google Maps, ouvrez le menu en haut à gauche de la page et cliquez sur "Partager ou intégrer la carte". Choisissez ensuite "Intégrer une carte", choisissez la taille de l'iframe et copiez le code.
+Pour Google Maps, ouvrez le menu en haut à gauche de la page et cliquez sur "Partager ou intégrer la carte". Choisissez ensuite "Intégrer une carte", choisissez la taille de l'iframe et copiez le code. Appelez votre enseignant en cas de problème pour le trouver.
 ```
 
 ````{admonition} Exercice 4
@@ -196,13 +223,15 @@ Pour Google Maps, ouvrez le menu en haut à gauche de la page et cliquez sur "Pa
 Reprenez votre page sur les champignons (`champignons.html`) et ajoutez 2 iframe. Une comportant une vidéo sur les champignons et une seconde affichant une carte afin de pouvoir partir à la chasse plus facilement.
 
 ```{dropdown} Solution
+<iframe width="1257" height="707" src="https://www.youtube.com/embed/l7udttS73b4" title="Les champignons nous gouvernent-ils ? | 42, la réponse à presque tout | ARTE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1632.458353780154!2d6.587522971164904!3d46.51886278094501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sch!4v1693984746042!5m2!1sfr!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 ```
 ````
 
-## Exercice récapitulatif
+## Exercice récapitulatif 2
 
-```{admonition} Exercice récapitulatif
+```{admonition} Exercice récapitulatif 2
 :class: note
 Vous êtes le gérant d'une agence de voyage et voulez faire une simple page listant les destinations que vous proposez.
 
@@ -212,8 +241,8 @@ Vous êtes libre sur le contenu mais la page doit contenir les éléments suivan
 - Le titre principal "Mes voyages" qui doit apparaître en haut de la page.
 - Un petit paragraphe expliquant à quoi sert le site.
 - Un sous-titre "Destinations".
-- Une liste non-ordonnée de destinations avec images.
-- Au moins 1 mot important (gras, italique ou surligné).
+- Une liste non-ordonnée de destinations avec images à l'appui.
+- Au moins 1 mot important (gras, italique ou surligné) sur votre page.
 - Un iframe Google maps.
 
 Déposez votre fichier sur Moodle à l'endroit prévu.

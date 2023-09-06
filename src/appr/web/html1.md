@@ -267,9 +267,9 @@ Oui ! Rappelez-vous, le fichier `.html` est envoyé au visiteur et il a donc tou
 Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot de passe dans les commentaires de votre page !
 ```
 
-## Exercice récapitulatif
+## Exercice récapitulatif 1
 
-```{admonition} Exercice récapitulatif
+```{admonition} Exercice récapitulatif 1
 :class: note
 Ecrivez la page web principale du site `champignons.ch`. dans un fichier nommé `champignons.html`.  
 Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:

@@ -330,7 +330,7 @@ Si ! La balise orpheline <code class="docutils literal notranslate"><span class=
 </div>
 <div class="note admonition">
 <p class="admonition-title">Exercice 1</p>
-<p>Créez un nouveau fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> (ou reprenez un exercice précédent) et testez les différentes balises de titre avec les textes suivant:</p>
+<p>Créez un nouveau fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> avec la structure de texte ci-dessous. Ajoutez les balises de titres (<code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span></code>, etc) et les balises de paragraphes (<code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>) aux endroits appropriés:</p>
 <ul class="simple">
 <li><p>Histoire de la Suisse</p></li>
 <li><ol class="simple">
@@ -355,7 +355,39 @@ Si ! La balise orpheline <code class="docutils literal notranslate"><span class=
 </li>
 <li><p>Paragraphe de conclusion</p></li>
 </ul>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Histoire de la Suisse<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>1. Introduction<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Petit paragraphe introductif<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Second petit paragraphe introductif<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>2. Préhistoire<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>2.1 Age du bronze<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Petit blabla<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>2.2 Age du fer<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>2.2.1 L'occupation celte<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Encore du blabla<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>3. Conclusion<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Paragraphe de conclusion<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
 </div>
+</div>
+</details></div>
 <div class="note admonition">
 <p class="admonition-title">Note</p>
 <p>Vous noterez que les tailles de chaque titre sont prédéfinies par le navigateur. Nous pourrons les modifier à notre guise lors que nous verrons le langage CSS.</p>
@@ -477,7 +509,7 @@ Solution<div class="summary-down docutils">
 <div class="note admonition">
 <p class="admonition-title">Comment faire</p>
 <p>Pour YouTube, il suffit de faire un clic droit sur la vidéo et de choisir “Copier le code d’intégration”. Vous n’avez alors plus qu’à coller le code dans votre page web.</p>
-<p>Pour Google Maps, ouvrez le menu en haut à gauche de la page et cliquez sur “Partager ou intégrer la carte”. Choisissez ensuite “Intégrer une carte”, choisissez la taille de l’iframe et copiez le code.</p>
+<p>Pour Google Maps, ouvrez le menu en haut à gauche de la page et cliquez sur “Partager ou intégrer la carte”. Choisissez ensuite “Intégrer une carte”, choisissez la taille de l’iframe et copiez le code. Appelez votre enseignant en cas de problème pour le trouver.</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Exercice 4</p>
@@ -489,13 +521,15 @@ Solution<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="707" src="https://www.youtube.com/embed/l7udttS73b4" title="Les champignons nous gouvernent-ils ? | 42, la réponse à presque tout | ARTE" width="1257"></iframe>
+<iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1632.458353780154!2d6.587522971164904!3d46.51886278094501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sch!4v1693984746042!5m2!1sfr!2sch" style="border:0;" width="600"></iframe>
 </div>
 </details></div>
 </section>
-<section id="exercice-recapitulatif">
-<h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-recapitulatif-2">
+<h2>Exercice récapitulatif 2<a class="headerlink" href="#exercice-recapitulatif-2" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
-<p class="admonition-title">Exercice récapitulatif</p>
+<p class="admonition-title">Exercice récapitulatif 2</p>
 <p>Vous êtes le gérant d’une agence de voyage et voulez faire une simple page listant les destinations que vous proposez.</p>
 <p>Ecrivez la page web principale du site <code class="docutils literal notranslate"><span class="pre">mesvoyages.ch</span></code> dans un fichier nommé <code class="docutils literal notranslate"><span class="pre">voyages.html</span></code>.<br/>
 Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:</p>
@@ -504,8 +538,8 @@ Vous êtes libre sur le contenu mais la page doit contenir les éléments suivan
 <li><p>Le titre principal “Mes voyages” qui doit apparaître en haut de la page.</p></li>
 <li><p>Un petit paragraphe expliquant à quoi sert le site.</p></li>
 <li><p>Un sous-titre “Destinations”.</p></li>
-<li><p>Une liste non-ordonnée de destinations avec images.</p></li>
-<li><p>Au moins 1 mot important (gras, italique ou surligné).</p></li>
+<li><p>Une liste non-ordonnée de destinations avec images à l’appui.</p></li>
+<li><p>Au moins 1 mot important (gras, italique ou surligné) sur votre page.</p></li>
 <li><p>Un iframe Google maps.</p></li>
 </ul>
 <p>Déposez votre fichier sur Moodle à l’endroit prévu.</p>
@@ -567,7 +601,7 @@ Vous êtes libre sur le contenu mais la page doit contenir les éléments suivan
 <li><a class="reference internal" href="#les-listes">Les listes</a></li>
 <li><a class="reference internal" href="#mettre-en-valeur-du-texte">Mettre en valeur du texte</a></li>
 <li><a class="reference internal" href="#inserer-une-autre-page-dans-sa-page">Insérer une autre page dans sa page ?</a></li>
-<li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
+<li><a class="reference internal" href="#exercice-recapitulatif-2">Exercice récapitulatif 2</a></li>
 </ul>
 </li>
 </ul>
