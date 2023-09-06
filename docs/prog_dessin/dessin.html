@@ -291,13 +291,13 @@ Nous allons voir que:</p>
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p>Un programme informatique est</p>
-<p><label class="answer incorrect"><input type="checkbox"/>une instruction de séquence</label><br/>
+<p><label class="answer incorrect"><input type="checkbox"/>une instruction de séquences</label><br/>
 <label class="answer correct"><input type="checkbox"/>une séquence d’instructions</label><br/>
 <label class="answer incorrect"><input type="checkbox"/>un algorithme</label><br/>
 <label class="answer incorrect"><input type="checkbox"/>une recette de cuisine</label></p>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
-<p>Tout programme n’est qu’une séquence d’instructions.<br/>
+<p>Tout programme n’est qu’une séquence (une suite ordrée) d’instructions.<br/>
 Un algorithme par contre est la description générale des étapes de résolution d’un problème. Il <strong>peut</strong> être traduit en un programme informatique.</p>
 </div>
 </div>
@@ -484,11 +484,36 @@ Un commentaire permet d’ajouter une explication pour le lecteur humain. Il n�
 <div class="admonition">
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
-<p>Dessinez une chaise en partant de rien.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoK" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et déposez le sur Moodle à l’endroit prévu.</p>
+<p>:file: ex1.py
+Dessinez une chaise en faisant varier l’épaisseur du trait.<br/>
+Le plus simple est de la dessiner de profil, mais si vous avez l’âme courageuse, vous pouvez tenter de la faire sous un autre angle !</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCiMgVm90cmUgY29kZSBpY2k=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code>, faites une capture d’écran de votre dessin et déposez les fichiers sur Moodle à l’endroit prévu.</p>
 </div>
 </div>
-</section>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici le code générant une chaise simpliste.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">width</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">width</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">width</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">backward</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></section>
 <section id="et-a-part-le-dessin">
 <h2>Et à part le dessin ?<a class="headerlink" href="#et-a-part-le-dessin" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Python ne sert évidemment pas qu’à faire du dessin, c’est juste une façon d’apprendre à l’utiliser.<br/>

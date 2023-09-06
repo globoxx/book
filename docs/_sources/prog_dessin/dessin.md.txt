@@ -12,12 +12,12 @@ Nous allons voir que:
 ```{question}
 Un programme informatique est
 
-{f}`une instruction de séquence`  
+{f}`une instruction de séquences`  
 {v}`une séquence d'instructions`  
 {f}`un algorithme`  
 {f}`une recette de cuisine`
 ===
-Tout programme n'est qu'une séquence d'instructions.  
+Tout programme n'est qu'une séquence (une suite ordrée) d'instructions.  
 Un algorithme par contre est la description générale des étapes de résolution d'un problème. Il **peut** être traduit en un programme informatique.
 ```
 
@@ -331,14 +331,35 @@ L'expression `left(90)` est équivalent à
 ## Exercice récapitulatif
 
 ````{exercise}
-Dessinez une chaise en partant de rien.
+:file: ex1.py
+Dessinez une chaise en faisant varier l'épaisseur du trait.  
+Le plus simple est de la dessiner de profil, mais si vous avez l'âme courageuse, vous pouvez tenter de la faire sous un autre angle !
 
 ```{codeplay}
 from turtle import *
 
+# Votre code ici
 ```
 
-Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu.
+Téléchargez le fichier `.py`, faites une capture d'écran de votre dessin et déposez les fichiers sur Moodle à l'endroit prévu.
+````
+
+````{dropdown} Solution
+Voici le code générant une chaise simpliste.
+```python
+from turtle import *
+
+width(10)
+left(90)
+forward(60)
+right(90)
+width(20)
+forward(60)
+width(10)
+right(90)
+forward(60)
+backward(150)
+```
 ````
 
 ## Et à part le dessin ?
