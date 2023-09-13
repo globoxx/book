@@ -235,7 +235,7 @@ Reprenez votre page sur les champignons (`champignons.html`) et ajoutez 2 iframe
 
 ```{admonition} Exercice récapitulatif 2
 :class: note
-Vous êtes le gérant d'une agence de voyage et voulez faire une simple page listant les destinations que vous proposez.
+Vous êtes le gérant d'une agence de voyage et voulez créer une simple page listant les destinations que vous proposez.
 
 Ecrivez la page web principale du site `mesvoyages.ch` dans un fichier nommé `voyages.html`.  
 Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:
@@ -243,9 +243,9 @@ Vous êtes libre sur le contenu mais la page doit contenir les éléments suivan
 - Le titre principal "Mes voyages" qui doit apparaître en haut de la page.
 - Un petit paragraphe expliquant à quoi sert le site.
 - Un sous-titre "Destinations".
-- Une liste non-ordonnée de destinations avec images à l'appui.
+- Une liste non-ordonnée de destinations avec images à l'appui (donc chaque item de la liste contient le nom de la destination ainsi qu'une image).
 - Au moins 1 mot important (gras, italique ou surligné) sur votre page.
-- Un iframe Google maps.
+- Un iframe Google maps pointant vers une de vos destinations.
 
 Déposez votre fichier sur Moodle à l'endroit prévu.
 ```

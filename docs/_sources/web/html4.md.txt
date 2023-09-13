@@ -115,14 +115,14 @@ L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple 
 
 ```{admonition} Exercice récapitulatif 4
 :class: note
-Votre site de photographie attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
+Votre site de photographie "photostyle.ch" attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
 Reprenez votre dossier `photographie` du chapitre précédent et faites les améliorations suivantes:
-
-- Ajustez les tailles des photos de votre galerie pour une meilleure harmonie.
-- Ajoutez des infobulles sur vos photos afin de donner des informations sur leur origine aux utilisateurs du site.
-- Sur votre page contact, ajoutez les logos d'instagram et de twitter. (A télécharger {download}`ici<../media/instagram.png>` et {download}`ici<../media/twitter.png>`)
-- Faites en sorte que les logos redirigent directement vers le réseau social associé en cliquant dessus.
+- Ajustez les tailles des photos de votre galerie pour une meilleure harmonie (les photos doivent avoir une même largeur)
+- Ajoutez des infobulles sur vos photos afin de donner des informations sur leur origine aux utilisateurs du site
+- Faites en sorte qu'au moins une de vos images de galerie soit cliquable et qu'elle redirige vers `https://www.flickr.com/`
+- Sur votre page de contact, ajoutez les logos d'instagram et de twitter. (A télécharger {download}`ici<../media/instagram.png>` et {download}`ici<../media/twitter.png>`)
+- Faites en sorte que les logos redirigent directement vers le réseau social associé en cliquant dessus
 - Ajoutez un logo sur chaque page de votre site. Ce logo doit permettre retourner sur la page principale de votre site (l'accueil), depuis n'importe quelle autre page.
 
-Déposez votre dossier sur Moodle à l'endroit prévu.
+Déposez votre dossier `photographie` sur Moodle à l'endroit prévu.
 ```

@@ -81,7 +81,8 @@ On appelle ça un **lien absolu** car il indique une adresse complète.
 
 ## Les liens relatifs (entre vos pages)
 
-Si vous voulez faire un lien vers une autre page de votre site, il  suffit d'entrer le nom du fichier `.html` entre `" "` à la suite de l'attribut `href`, comme ceci:
+En général, un site web contient un fichier `.html` par page.  
+Si vous voulez faire un lien vers une autre page de votre site, il suffit d'entrer le nom du fichier `.html` entre `" "` à la suite de l'attribut `href`, comme ceci:
 
 ```{code-block} html
 <a href="page2.html">Page 2</a>
@@ -120,7 +121,7 @@ Copiez le code suivant dans le fichier `contact.html`:
         <ul>
             <!-- Il est aussi possible de créer un lien vers une adresse mail avec "mailto" -->
             <li>Email: <a href="mailto:mesvoyages@gmail.com">mesvoyages@gmail.com</a></li>
-            <li>Telephone: 0791234567
+            <li>Telephone: 0791234567</li>
         </ul>
     </body>
 </html>
@@ -131,9 +132,9 @@ Ajoutez un lien relatif depuis la page principale `voyages.html` vers la page `c
 ````{dropdown} Solution
 ```{code-block} html
 <!-- Quelque part sur la page principale -->
-<a href="concact.html">Contact</a>
+<a href="contact.html">Contact</a>
 
-<!-- Quelque part sur la page concact -->
+<!-- Quelque part sur la page contact -->
 <a href="voyages.html">Accueil</a>
 ```
 ````
@@ -153,14 +154,14 @@ Vous avez des fichiers organisés de la manière suivante:
 ```{image} ../media/organisation_dossiers.png
 ```
 
-Vous êtes dans le fichier `index.html`, quel code permet de faire un lien vers `page1.html` ?
+Vous êtes dans la page `index.html`, quel code permet de faire un lien vers `page1.html` ?
 
 * {f}`<a href='page1.html'>Page 1</a>`
 * {v}`<a href='dossier1/page1.html'>Page 1</a>`
 * {f}`<a href='../dossier1/page1.html'>Page 1</a>`
 * {f}`<a href='dossier2/page1.html'>Page 1</a>`
 
-Vous êtes dans le fichier `page1.html`, quel code permet de faire un lien vers `page2.html` ?
+Vous êtes dans la page `page1.html`, quel code permet de faire un lien vers `page2.html` ?
 
 * {f}`<a href='page2.html'>Page 2</a>`
 * {f}`<a href='dossier2/page2.html'>Page 2</a>`
@@ -170,7 +171,7 @@ Vous êtes dans le fichier `page1.html`, quel code permet de faire un lien vers 
 
 ```{admonition} Info
 :class: hint
-La convention veut que la page d'accueil d'un site porte le nom `index.html`. Il s'agit de la première page que voit un visiteur et celle qui est en général référencée par les moteurs de recherche.   
+La convention veut que la page d'accueil d'un site porte le nom `index.html`. Il s'agit de la première page que voit un visiteur qui entre sur votre site et celle qui est en général référencée par les moteurs de recherche.   
 Ce n'est pas strictement obligatoire, mais recommandé.
 ```
 
@@ -198,19 +199,26 @@ Voici un exemple:
 ```{admonition} Exercice récapitulatif 3
 :class: note
 Vous vous lancez dans la photographie. Vous avez besoin d'un site où les potentiels clients pourraient vous contacter pour vos services.  
+Vous décidez alors de lancer votre site: `photostyle.ch`.
 
 Créez un nouveau dossier de travail nommé `photographie`.  
 Ecrivez la page d'accueil du site dans un fichier nommé `index.html`.  
-Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:
-- Un titre qui doit apparaître dans l'onglet du navigateur.
-- Un titre principal avec votre nom.
-- Un petit paragraphe auto-biographique.
-- Un lien vers une page `galerie.html`.
-- Un lien vers une page `contact.html`.
+Vous êtes libre sur le contenu mais la page principale doit contenir les éléments suivants:
+- Le titre "Photostyle" qui doit apparaître dans l'onglet du navigateur
+- Un titre principal avec votre nom
+- Un petit paragraphe auto-biographique (vous pouvez inventer votre biographie)
+- Un lien vers une page `galerie.html`
+- Un lien vers une page `contact.html`
 
-La page `galerie.html` contient quelques-unes de vos meilleures photographies (trouvées sur Internet) et un lien pour retourner à l'accueil.
+La page `galerie.html` contient:
+- Un titre "Galerie"
+- Quelques-unes de vos meilleures photographies (trouvées sur Internet mais libres de droit) (au moins 3 photos)
+- Un lien pour retourner à l'accueil
 
-La page `contact.html` contient votre adresse mail (fausse) et un lien pour retourner à l'accueil.
+La page `contact.html` contient:
+- Un titre "Contact"
+- Une liste à puce avec votre adresse mail (fausse), un numéro de téléphone (faux) et
+- Un lien pour retourner à l'accueil
 
-Déposez votre dossier sur Moodle à l'endroit prévu.
+Déposez votre dossier `photographie` sur Moodle à l'endroit prévu.
 ```
