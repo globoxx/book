@@ -63,7 +63,8 @@ Si vous précisez une largeur et une hauteur qui ne correspondent pas aux propor
 `````{admonition} Exercice 2
 :class: note
 Voici une photo en ligne de la place d'ecublens: <a href="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg">photo</a>.
-Ouvrez un fichier `.html` et intégrer cette image dans sa taille originale.
+Ouvrez un fichier `.html` et intégrez cette image dans sa taille originale.  
+Vous pouvez le faire directement sur <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro" target="_blank">w3schools</a>.
 
 Quelle est la taille de l'image originale ?
 
