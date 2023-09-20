@@ -280,7 +280,7 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="faire-des-liens">
 <span id="web-html3"></span><h1>3. Faire des liens<a class="headerlink" href="#faire-des-liens" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Ne serait-ce pas chouette de pouvoir ajouter plusieurs pages à nos sites web ? Même si les sites “one-page” (qui ne contiennent qu’une seule longue page) sont de plus en plus courants (<a class="reference external" href="https://mort-modern.losttype.com/">exemple ici</a>), la majorité des sites web contiennent une multitude de pages liées entre elles par des liens.</p>
+<p>Ne serait-ce pas chouette de pouvoir ajouter <strong>plusieurs pages</strong> à nos sites web ? Même si les sites “one-page” (qui ne contiennent qu’une seule longue page) sont de plus en plus courants (<a class="reference external" href="https://mort-modern.losttype.com/">exemple ici</a>), la majorité des sites web contiennent une multitude de pages liées entre elles par des liens.</p>
 <div class="note admonition">
 <p class="admonition-title">A retenir</p>
 <p>Un <strong>lien hypertexte</strong> (ou hyperlien) est une référence placée dans le contenu d’un document éléctronique permettant de passer automatiquement à un autre document.</p>
@@ -303,7 +303,8 @@ Solution<div class="summary-down docutils">
 </details></div>
 <div class="note admonition">
 <p class="admonition-title">Exercice 2</p>
-<p>Modifiez le code HTML suivant pour ajouter des liens hypertextes vers les pages wikipédia des différentes destinations de la liste.</p>
+<p>Modifiez le code HTML suivant pour ajouter des liens hypertextes vers les pages wikipédia des différentes destinations de la liste.<br/>
+Vous pouvez le faire directement sur <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro" target="_blank">w3schools</a>.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -349,7 +350,7 @@ Solution<div class="summary-down docutils">
 </details></div>
 <section id="les-liens-absolus-vers-dautres-sites">
 <h2>Les liens absolus (vers d’autres sites)<a class="headerlink" href="#les-liens-absolus-vers-dautres-sites" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Si vous voulez faire un lien vers un autre site existant en ligne, rien de plus simple, il suffit de copier l’URL du site et le coller entre <code class="docutils literal notranslate"><span class="pre">"</span> <span class="pre">"</span></code> à la suite de l’attribut <code class="docutils literal notranslate"><span class="pre">href</span></code>, comme ceci:</p>
+<p>Si vous voulez faire un lien vers un autre site existant en ligne, rien de plus simple, il suffit de copier l’URL du site et le coller entre <code class="docutils literal notranslate"><span class="pre">""</span></code> à la suite de l’attribut <code class="docutils literal notranslate"><span class="pre">href</span></code>, comme ceci:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://mdlgb.ch/"</span><span class="p">&gt;</span>Accédez à Moodle<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -361,7 +362,7 @@ Solution<div class="summary-down docutils">
 <section id="les-liens-relatifs-entre-vos-pages">
 <h2>Les liens relatifs (entre vos pages)<a class="headerlink" href="#les-liens-relatifs-entre-vos-pages" title="Lien permanent vers ce titre">¶</a></h2>
 <p>En général, un site web contient un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> par page.<br/>
-Si vous voulez faire un lien vers une autre page de votre site, il suffit d’entrer le nom du fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> entre <code class="docutils literal notranslate"><span class="pre">"</span> <span class="pre">"</span></code> à la suite de l’attribut <code class="docutils literal notranslate"><span class="pre">href</span></code>, comme ceci:</p>
+Si vous voulez faire un lien vers une autre page <strong>de votre site</strong>, il suffit d’entrer le nom du fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> entre <code class="docutils literal notranslate"><span class="pre">""</span></code> à la suite de l’attribut <code class="docutils literal notranslate"><span class="pre">href</span></code>, comme ceci:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"page2.html"</span><span class="p">&gt;</span>Page 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -376,7 +377,7 @@ Si vous voulez faire un lien vers une autre page de votre site, il suffit d’en
 <div class="note admonition">
 <p class="admonition-title">Exercice 3</p>
 <p>Nous allons ajouter une 2ème page à votre site <code class="docutils literal notranslate"><span class="pre">mesvoyages.ch</span></code> créé dans le chapitre précédent. Le but est d’ajouter une page permettant aux visiteurs de contacter l’agence de voyage.</p>
-<p>Commencez par créer un nouveau fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> nommé <code class="docutils literal notranslate"><span class="pre">contact.html</span></code> et déposez le dans le même dossier que la page principale <code class="docutils literal notranslate"><span class="pre">voyages.html</span></code>.</p>
+<p>Commencez par créer un nouveau fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> nommé <code class="docutils literal notranslate"><span class="pre">contact.html</span></code> et déposez le dans <strong>le même dossier</strong> que la page principale <code class="docutils literal notranslate"><span class="pre">voyages.html</span></code>.</p>
 <p>Copiez le code suivant dans le fichier <code class="docutils literal notranslate"><span class="pre">contact.html</span></code>:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
@@ -479,23 +480,23 @@ Vous décidez alors de lancer votre site: <code class="docutils literal notransl
 Ecrivez la page d’accueil du site dans un fichier nommé <code class="docutils literal notranslate"><span class="pre">index.html</span></code>.<br/>
 Vous êtes libre sur le contenu mais la page principale doit contenir les éléments suivants:</p>
 <ul class="simple">
-<li><p>Le titre “Photostyle” qui doit apparaître dans l’onglet du navigateur</p></li>
-<li><p>Un titre principal avec votre nom</p></li>
-<li><p>Un petit paragraphe auto-biographique (vous pouvez inventer votre biographie)</p></li>
-<li><p>Un lien vers une page <code class="docutils literal notranslate"><span class="pre">galerie.html</span></code></p></li>
-<li><p>Un lien vers une page <code class="docutils literal notranslate"><span class="pre">contact.html</span></code></p></li>
+<li><p>Le titre “Photostyle” qui doit apparaître dans l’onglet du navigateur.</p></li>
+<li><p>Un titre principal avec votre nom.</p></li>
+<li><p>Un petit paragraphe auto-biographique (vous pouvez inventer votre biographie).</p></li>
+<li><p>Un lien vers une page <code class="docutils literal notranslate"><span class="pre">galerie.html</span></code>.</p></li>
+<li><p>Un lien vers une page <code class="docutils literal notranslate"><span class="pre">contact.html</span></code>.</p></li>
 </ul>
 <p>La page <code class="docutils literal notranslate"><span class="pre">galerie.html</span></code> contient:</p>
 <ul class="simple">
-<li><p>Un titre “Galerie”</p></li>
-<li><p>Quelques-unes de vos meilleures photographies (trouvées sur Internet mais libres de droit) (au moins 3 photos)</p></li>
-<li><p>Un lien pour retourner à l’accueil</p></li>
+<li><p>Un titre “Galerie”.</p></li>
+<li><p>Quelques-unes de vos meilleures photographies (trouvées sur Internet mais libres de droit) (au moins 3 photos).</p></li>
+<li><p>Un lien pour retourner à l’accueil.</p></li>
 </ul>
 <p>La page <code class="docutils literal notranslate"><span class="pre">contact.html</span></code> contient:</p>
 <ul class="simple">
-<li><p>Un titre “Contact”</p></li>
-<li><p>Une liste à puce avec votre adresse mail (fausse), un numéro de téléphone (faux) et</p></li>
-<li><p>Un lien pour retourner à l’accueil</p></li>
+<li><p>Un titre “Contact”.</p></li>
+<li><p>Une liste à puce avec votre adresse mail (fausse), un numéro de téléphone (faux) et un bouton “Contactez-moi” (à vous de chercher comment ajouter un bouton en html).</p></li>
+<li><p>Un lien pour retourner à l’accueil.</p></li>
 </ul>
 <p>Déposez votre dossier <code class="docutils literal notranslate"><span class="pre">photographie</span></code> sur Moodle à l’endroit prévu.</p>
 </div>

@@ -2,7 +2,7 @@
 
 # 3. Faire des liens
 
-Ne serait-ce pas chouette de pouvoir ajouter plusieurs pages à nos sites web ? Même si les sites "one-page" (qui ne contiennent qu'une seule longue page) sont de plus en plus courants ([exemple ici](https://mort-modern.losttype.com/)), la majorité des sites web contiennent une multitude de pages liées entre elles par des liens.
+Ne serait-ce pas chouette de pouvoir ajouter **plusieurs pages** à nos sites web ? Même si les sites "one-page" (qui ne contiennent qu'une seule longue page) sont de plus en plus courants ([exemple ici](https://mort-modern.losttype.com/)), la majorité des sites web contiennent une multitude de pages liées entre elles par des liens.
 
 ```{admonition} A retenir
 :class: note
@@ -25,7 +25,8 @@ Finalement, on écrit entre les 2 balises le texte du lien.
 
 `````{admonition} Exercice 2
 :class: note
-Modifiez le code HTML suivant pour ajouter des liens hypertextes vers les pages wikipédia des différentes destinations de la liste.
+Modifiez le code HTML suivant pour ajouter des liens hypertextes vers les pages wikipédia des différentes destinations de la liste.  
+Vous pouvez le faire directement sur <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro" target="_blank">w3schools</a>.
 
 ```{code-block} html
 <!DOCTYPE html>
@@ -68,7 +69,7 @@ Modifiez le code HTML suivant pour ajouter des liens hypertextes vers les pages 
 
 ## Les liens absolus (vers d'autres sites)
 
-Si vous voulez faire un lien vers un autre site existant en ligne, rien de plus simple, il suffit de copier l'URL du site et le coller entre `" "` à la suite de l'attribut `href`, comme ceci:
+Si vous voulez faire un lien vers un autre site existant en ligne, rien de plus simple, il suffit de copier l'URL du site et le coller entre `""` à la suite de l'attribut `href`, comme ceci:
 
 ```{code-block} html
 <a href="https://mdlgb.ch/">Accédez à Moodle</a>
@@ -82,7 +83,7 @@ On appelle ça un **lien absolu** car il indique une adresse complète.
 ## Les liens relatifs (entre vos pages)
 
 En général, un site web contient un fichier `.html` par page.  
-Si vous voulez faire un lien vers une autre page de votre site, il suffit d'entrer le nom du fichier `.html` entre `" "` à la suite de l'attribut `href`, comme ceci:
+Si vous voulez faire un lien vers une autre page **de votre site**, il suffit d'entrer le nom du fichier `.html` entre `""` à la suite de l'attribut `href`, comme ceci:
 
 ```{code-block} html
 <a href="page2.html">Page 2</a>
@@ -103,7 +104,7 @@ Attention, si votre 2ème page se trouve dans un dossier (par exemple un dossier
 :class: note
 Nous allons ajouter une 2ème page à votre site `mesvoyages.ch` créé dans le chapitre précédent. Le but est d'ajouter une page permettant aux visiteurs de contacter l'agence de voyage.
 
-Commencez par créer un nouveau fichier `.html` nommé `contact.html` et déposez le dans le même dossier que la page principale `voyages.html`.
+Commencez par créer un nouveau fichier `.html` nommé `contact.html` et déposez le dans **le même dossier** que la page principale `voyages.html`.
 
 Copiez le code suivant dans le fichier `contact.html`:
 
@@ -204,21 +205,21 @@ Vous décidez alors de lancer votre site: `photostyle.ch`.
 Créez un nouveau dossier de travail nommé `photographie`.  
 Ecrivez la page d'accueil du site dans un fichier nommé `index.html`.  
 Vous êtes libre sur le contenu mais la page principale doit contenir les éléments suivants:
-- Le titre "Photostyle" qui doit apparaître dans l'onglet du navigateur
-- Un titre principal avec votre nom
-- Un petit paragraphe auto-biographique (vous pouvez inventer votre biographie)
-- Un lien vers une page `galerie.html`
-- Un lien vers une page `contact.html`
+- Le titre "Photostyle" qui doit apparaître dans l'onglet du navigateur.
+- Un titre principal avec votre nom.
+- Un petit paragraphe auto-biographique (vous pouvez inventer votre biographie).
+- Un lien vers une page `galerie.html`.
+- Un lien vers une page `contact.html`.
 
 La page `galerie.html` contient:
-- Un titre "Galerie"
-- Quelques-unes de vos meilleures photographies (trouvées sur Internet mais libres de droit) (au moins 3 photos)
-- Un lien pour retourner à l'accueil
+- Un titre "Galerie".
+- Quelques-unes de vos meilleures photographies (trouvées sur Internet mais libres de droit) (au moins 3 photos).
+- Un lien pour retourner à l'accueil.
 
 La page `contact.html` contient:
-- Un titre "Contact"
-- Une liste à puce avec votre adresse mail (fausse), un numéro de téléphone (faux) et
-- Un lien pour retourner à l'accueil
+- Un titre "Contact".
+- Une liste à puce avec votre adresse mail (fausse), un numéro de téléphone (faux) et un bouton "Contactez-moi" (à vous de chercher comment ajouter un bouton en html).
+- Un lien pour retourner à l'accueil.
 
 Déposez votre dossier `photographie` sur Moodle à l'endroit prévu.
 ```

@@ -77,12 +77,12 @@ L'image originale a les dimensions suivantes: 2560 x 1707 (ce qui est bien trop 
 
 ```{code-block} html
 <img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens">
-<img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens" width="500" height="300">
+<img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens" width="500">
 <img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens" height="300">
 <img src="https://ecublens-plage.ch/wp-content/uploads/2022/07/IMG_6854-Edit-scaled.jpg" alt="Plage d'ecublens" width="150" height="200">
 ```
 
-Idéalement, les images locales devraient être redimensionnées à l'avance afin que ça ne soit pas le travail du navigateur.
+Idéalement, les images devraient être redimensionnées à l'avance par vos soins afin que ça ne soit pas le travail du navigateur.
 ````
 `````
 
@@ -117,12 +117,12 @@ L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple 
 :class: note
 Votre site de photographie "photostyle.ch" attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
 Reprenez votre dossier `photographie` du chapitre précédent et faites les améliorations suivantes:
-- Ajustez les tailles des photos de votre galerie pour une meilleure harmonie (les photos doivent avoir une même largeur)
-- Ajoutez des infobulles sur vos photos afin de donner des informations sur leur origine aux utilisateurs du site
-- Faites en sorte qu'au moins une de vos images de galerie soit cliquable et qu'elle redirige vers `https://www.flickr.com/`
-- Sur votre page de contact, ajoutez les logos d'instagram et de twitter. (A télécharger {download}`ici<../media/instagram.png>` et {download}`ici<../media/twitter.png>`)
-- Faites en sorte que les logos redirigent directement vers le réseau social associé en cliquant dessus
-- Ajoutez un logo sur chaque page de votre site. Ce logo doit permettre retourner sur la page principale de votre site (l'accueil), depuis n'importe quelle autre page.
+- Ajustez les tailles des photos de votre galerie pour une meilleure harmonie (les photos doivent avoir la même largeur).
+- Ajoutez des infobulles sur vos photos afin de donner des informations sur leur origine aux utilisateurs du site.
+- Sur votre page de contact, ajoutez les logos d'instagram et de twitter. (A télécharger {download}`ici<../media/instagram.png>` et {download}`ici<../media/twitter.png>`).
+- Faites en sorte que les logos redirigent directement vers le réseau social associé en cliquant dessus.
+- Ajoutez un logo unique sur chaque page de votre site (<a href="https://www.logotouse.com/?utm_source=bdmtools&utm_medium=siteweb&utm_campaign=logotouse" target="_blank">banque de logos</a>). Ce logo doit permettre de retourner sur la page principale de votre site (l'accueil) depuis n'importe quelle autre page en cliquant dessus.
 
-Déposez votre dossier `photographie` sur Moodle à l'endroit prévu.
+Compressez votre dossier `photographie` en `photographie.zip` (clic droit sur le dossier -> compresser).  
+Déposez le dossier compressé sur Moodle à l'endroit prévu.
 ```

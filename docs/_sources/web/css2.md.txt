@@ -6,7 +6,7 @@ Jusqu'ici, nous n'avons vu que des propriétés CSS associées aux couleurs: `co
 
 ## Plus de couleurs
 
-Avant d'aller plus loin, vous devez savoir que s'il est possible de donner une couleur en toutes lettres (par exemple: `blue`), les propriétés CSS acceptent aussi des codes hexadécimaux (`#FFC8D3`) et RGB (`rgb(250,25,118)`).
+Avant d'aller plus loin, vous devez savoir que s'il est possible de donner une couleur en toutes lettres (par exemple: `blue`), les propriétés CSS acceptent aussi des codes hexadécimaux (`#FFC8D3`) et RGB (`rgb(250, 25, 118)`).
 
 Ainsi, les codes suivants sont équivalents:
 

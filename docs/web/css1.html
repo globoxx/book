@@ -281,7 +281,7 @@
           <section class="tex2jax_ignore mathjax_ignore" id="introduction-au-css">
 <span id="web-css1"></span><h1>5. Introduction au CSS<a class="headerlink" href="#introduction-au-css" title="Lien permanent vers ce titre">¶</a></h1>
 <p>On ne va pas se mentir. Jusqu’ici, nos sites étaient plutôt moches.<br/>
-A partir de ce chapitre, nous allons pouvoir styliser nos pages grâce à un second langage fondateur du web: le CSS.</p>
+A partir de ce chapitre, nous allons pouvoir <strong>styliser nos pages</strong> grâce à un second langage fondateur du web: le CSS.</p>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -526,6 +526,7 @@ Par exemple, comment écrire en rouge <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code></p></li>
 <li><p>et <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code></p></li>
 </ul>
+<p>Leur unique utilité est de regrouper du contenu HTML afin de pouvoir appliquer un style CSS.</p>
 <div class="note admonition">
 <p class="admonition-title">Inline ou block</p>
 <p>Petite différence entre ces deux balises: <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> est une balise qui ne provoque pas de retour à la ligne (comme les balises <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span> <span class="pre">&lt;/a&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;</span> <span class="pre">&lt;/strong&gt;</span></code>, etc). On dit que ce sont des balises de type <strong>inline</strong>.</p>
@@ -541,13 +542,13 @@ Par exemple, comment écrire en rouge <code class="docutils literal notranslate"
 </ul>
 </div>
 <div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
-<p>Il vaut mieux utiliser <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> pour éviter de créer un retour à la ligne après chacun des mots. La balise <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> sert plutôt à définir un bloc et est beaucoup utilisée dans la construction de la mise en page.</p>
+<p>Il vaut mieux utiliser <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> pour éviter de créer un retour à la ligne après chacun des mots. La balise <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> sert plutôt à définir un bloc et est beaucoup utilisée dans la construction de la mise en page (nous verrons ça bientôt).</p>
 </div>
 </div>
 </form></div><div class="note admonition">
 <p class="admonition-title">Exercice 4</p>
 <p>Rendez-vous sur <a href="https://codepen.io/pen/" target="_blank">CodePen</a> et mettez les mots <code class="docutils literal notranslate"><span class="pre">automatique</span></code> et <code class="docutils literal notranslate"><span class="pre">information</span></code> en rouge dans le paragraphe donné en début de section.</p>
-<p>Il vous faut donc définir une classe CSS et l’appliquer à vos balises <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code></p>
+<p>Il vous faut donc définir une classe CSS et l’appliquer à vos balises <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code>.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Solution<div class="summary-down docutils">
@@ -570,7 +571,7 @@ Solution<div class="summary-down docutils">
 <div class="admonition-refaire-la-face-de-mario admonition">
 <p class="admonition-title">Refaire la face de Mario</p>
 <p>Vous vous souvenez du Mario du début de chapitre ?<br/>
-Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</a> pour voir comment ça a été fait (n’hésitez pas à modifier la couleur de sa moustache si vous vous en sentez capable !).</p>
+Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</a> pour voir comment ça a été fait (n’hésitez pas à essayer de modifier la couleur de sa moustache si vous vous en sentez capable !).</p>
 </div>
 </section>
 <section id="exercice-recapitulatif-5">
@@ -583,11 +584,11 @@ Reprenez votre dossier <code class="docutils literal notranslate"><span class="p
 <p>Faites les améliorations suivantes:</p>
 <ul class="simple">
 <li><p>Appliquez la couleur noire (black) à tous vos liens.</p></li>
-<li><p>Appliquez une couleur (ou une couleur de fond) à votre nom (titre principal).</p></li>
-<li><p>Appliquez le style <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">#A5B4FC;</span></code> à 2 mots de votre paragraphe auto-biographique.</p></li>
-<li><p>Changez la couleur de fond de votre site.</p></li>
+<li><p>Appliquez une couleur et une couleur de fond à votre nom (titre principal de la page d’accueil).</p></li>
+<li><p>Appliquez le style <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">#A5B4FC;</span></code> à 2 mots <strong>séparés</strong> de votre paragraphe auto-biographique.</p></li>
+<li><p>Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos.</p></li>
 </ul>
-<p>Déposez votre dossier sur Moodle à l’endroit prévu.</p>
+<p>Déposez votre dossier compressé sur Moodle à l’endroit prévu.</p>
 </div>
 </section>
 </section>

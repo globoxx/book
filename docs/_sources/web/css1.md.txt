@@ -3,7 +3,7 @@
 # 5. Introduction au CSS
 
 On ne va pas se mentir. Jusqu'ici, nos sites étaient plutôt moches.  
-A partir de ce chapitre, nous allons pouvoir styliser nos pages grâce à un second langage fondateur du web: le CSS.
+A partir de ce chapitre, nous allons pouvoir **styliser nos pages** grâce à un second langage fondateur du web: le CSS.
 
 ```{panels}
 
@@ -251,6 +251,8 @@ Cela serait facile si ces deux mots étaient entourés par des balises... Eh bie
 - `<span> </span>`
 - et `<div> </div>`
 
+Leur unique utilité est de regrouper du contenu HTML afin de pouvoir appliquer un style CSS.
+
 ```{admonition} Inline ou block
 :class: note
 Petite différence entre ces deux balises: `<span> </span>` est une balise qui ne provoque pas de retour à la ligne (comme les balises `<a> </a>`, `<strong> </strong>`, etc). On dit que ce sont des balises de type **inline**.
@@ -263,14 +265,14 @@ Pour mettre en couleur `automatique` et `information` dans le paragraphe ci-dess
 * {v}`<span> </span>`
 * {f}`<div> </div>`
 ===
-Il vaut mieux utiliser `<span> </span>` pour éviter de créer un retour à la ligne après chacun des mots. La balise `<div> </div>` sert plutôt à définir un bloc et est beaucoup utilisée dans la construction de la mise en page.
+Il vaut mieux utiliser `<span> </span>` pour éviter de créer un retour à la ligne après chacun des mots. La balise `<div> </div>` sert plutôt à définir un bloc et est beaucoup utilisée dans la construction de la mise en page (nous verrons ça bientôt).
 ```
 
 `````{admonition} Exercice 4
 :class: note
 Rendez-vous sur <a href="https://codepen.io/pen/" target="_blank">CodePen</a> et mettez les mots `automatique` et `information` en rouge dans le paragraphe donné en début de section.
 
-Il vous faut donc définir une classe CSS et l'appliquer à vos balises `<span>`
+Il vous faut donc définir une classe CSS et l'appliquer à vos balises `<span>`.
 
 ````{dropdown} Solution
 Code CSS:
@@ -288,7 +290,7 @@ Code HTML:
 
 ```{admonition} Refaire la face de Mario
 Vous vous souvenez du Mario du début de chapitre ?  
-Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</a> pour voir comment ça a été fait (n'hésitez pas à modifier la couleur de sa moustache si vous vous en sentez capable !).
+Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</a> pour voir comment ça a été fait (n'hésitez pas à essayer de modifier la couleur de sa moustache si vous vous en sentez capable !).
 ```
 
 ## Exercice récapitulatif 5
@@ -302,9 +304,9 @@ Créez-y un fichier `style.css`, puis, dans chacun de vos fichiers `.html`, ajou
 
 Faites les améliorations suivantes:
 - Appliquez la couleur noire (black) à tous vos liens.
-- Appliquez une couleur (ou une couleur de fond) à votre nom (titre principal).
-- Appliquez le style `color: #A5B4FC;` à 2 mots de votre paragraphe auto-biographique.
-- Changez la couleur de fond de votre site.
+- Appliquez une couleur et une couleur de fond à votre nom (titre principal de la page d'accueil).
+- Appliquez le style `color: #A5B4FC;` à 2 mots **séparés** de votre paragraphe auto-biographique.
+- Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos.
 
-Déposez votre dossier sur Moodle à l'endroit prévu.
+Déposez votre dossier compressé sur Moodle à l'endroit prévu.
 ```

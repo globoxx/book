@@ -243,7 +243,7 @@ Vous êtes libre sur le contenu mais la page doit contenir les éléments suivan
 - Le titre principal "Mes voyages" qui doit apparaître en haut de la page.
 - Un petit paragraphe expliquant à quoi sert le site.
 - Un sous-titre "Destinations".
-- Une liste non-ordonnée de destinations avec images à l'appui (donc chaque item de la liste contient le nom de la destination ainsi qu'une image).
+- Une liste non-ordonnée de destinations (au moins 3) avec images à l'appui (donc chaque item de la liste contient le nom de la destination ainsi qu'une image).
 - Au moins 1 mot important (gras, italique ou surligné) sur votre page.
 - Un iframe Google maps pointant vers une de vos destinations.
 
