@@ -38,8 +38,7 @@ Une grille d'évaluation précise vous sera transmise en temps voulu.
 
 ## Exemple
 
-En guise d'exemple, vous pouvez télécharger {download}`ici<../data/robbie_lens.zip>` le contenu du site fictif d'une photographe.
-<a href="sites/robbie_lens/index.html" target="_blank">voir</a>
+En guise d'exemple, vous pouvez voir le contenu du site fictif d'une photographe <a href="sites/robbie_lens/index.html" target="_blank">ici</a>.
 
 Il s'agit à la base d'un site développé par <a href="https://openclassrooms.com/fr/" target="_blank">OpenClassrooms</a> pour enseigner le développement web que j'ai légèrement modifié afin qu'il colle avec notre parcours d'apprentissage.
 
