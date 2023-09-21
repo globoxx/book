@@ -116,7 +116,7 @@ L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple 
 
 ```{admonition} Exercice récapitulatif 4
 :class: note
-Votre site de photographie "photostyle.ch" attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
+Votre site de photographie `photostyle.ch` attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
 Reprenez votre dossier `photographie` du chapitre précédent et faites les améliorations suivantes:
 - Ajustez les tailles des photos de votre galerie pour une meilleure harmonie (les photos doivent avoir la même largeur).
 - Ajoutez des infobulles sur vos photos afin de donner des informations sur leur origine aux utilisateurs du site.
@@ -124,6 +124,5 @@ Reprenez votre dossier `photographie` du chapitre précédent et faites les amé
 - Faites en sorte que les logos redirigent directement vers le réseau social associé en cliquant dessus.
 - Ajoutez un logo unique sur chaque page de votre site (<a href="https://www.logotouse.com/?utm_source=bdmtools&utm_medium=siteweb&utm_campaign=logotouse" target="_blank">banque de logos</a>). Ce logo doit permettre de retourner sur la page principale de votre site (l'accueil) depuis n'importe quelle autre page en cliquant dessus.
 
-Compressez votre dossier `photographie` en `photographie.zip` (clic droit sur le dossier -> compresser).  
 Déposez le dossier compressé sur Moodle à l'endroit prévu.
 ```

@@ -221,5 +221,6 @@ La page `contact.html` contient:
 - Une liste à puce avec votre adresse mail (fausse), un numéro de téléphone (faux) et un bouton "Contactez-moi" (à vous de chercher comment ajouter un bouton en html).
 - Un lien pour retourner à l'accueil.
 
-Déposez votre dossier `photographie` sur Moodle à l'endroit prévu.
+Compressez votre dossier `photographie` en `photographie.zip` (clic droit sur le dossier -> compresser).  
+Déposez le dossier compressé sur Moodle à l'endroit prévu.
 ```
