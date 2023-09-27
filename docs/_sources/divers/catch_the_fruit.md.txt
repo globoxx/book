@@ -30,22 +30,26 @@ Voici les différentes étapes que nous allons suivre afin de programmer le jeu:
 
 ## Étape 1 - Faire tomber un fruit
 
-Nous allons programmer un fruit qui tombe sur une des 5 colonne choisie aléatoirement.
+Nous allons programmer un fruit qui tombe sur une des 5 colonne choisie aléatoirement.  
+Sur l'interface de programmation, vous voyez 2 blocs déjà présents:
+
+* `au démarrage`: les blocs posés dans ce bloc ne s'effectuent **qu'une seule fois** au démarrage du programme.
+* `toujours`: les blocs posés dans ce bloc s'effectuent **en boucle** tant que le programme tourne.
 
 ### Exercice 1
 
 Nous allons commencer par faire tomber le fruit sur la colonne 1, c'est à dire la 2ème colonne en partant de la gauche.  
 Chaque led possède des coordonnées `x` et `y`. Le led tout en haut à gauche se trouve aux coordonnées `(0, 0)` tandis que celui tout en bas à droite se trouve aux coordonnées `(4, 4)`.
 
-Utilisez les blocs `allumer` pour allumer tous les blocs de la colonne 1.
+Ajoutez des blocs `allumer` dans le bloc `toujours` pour allumer tous les blocs de la colonne 1.
 
 ![img](../media/tomberfruit0.png)
 
 ### Exercice 2
 
-Ajoutez à présent les blocs `éteindre` pour allumer et éteindre succèssivement tous les led de la colonne du haut vers le bas.  
-Problème: vous ne voyez rien ! Pourquoi ? Car les led s'allument et s'éteignent trop vite pour que vous puissiez voir.
+Ajoutez à présent les blocs `éteindre` pour allumer et éteindre succèssivement tous les led de la colonne du haut vers le bas.
 
+Problème: vous ne voyez rien ! Pourquoi ? Car les led s'allument et s'éteignent trop vite pour que vous puissiez voir.  
 Pour résoudre ce problème, ajoutez des blocs `pause` de 500ms après chaque allumage afin que le led ne s'éteigne pas immédiatement après avoir été allumé.
 
 ![img](../media/tomberfruit1.png)
@@ -110,7 +114,7 @@ Si on oublie d'allumer les leds correspondantes, on ne verra pas le panier !
 Voici les étapes à suivre:
 
 1. Créer une nouvelle variable nommée `panier`.
-2. Dans le bloc `au démarrage`, ajoutez un bloc `définir panier à 0` pour définir la position initiale du panier à 0.
+2. Dans le bloc `au démarrage`, ajoutez un bloc `définir panier à 0` pour définir la position initiale du panier à 0 (tout à gauche).
 3. Ajoutez un bloc `allumer` afin d'allumer la led à la position du panier.
 
 ![img](../media/panier1.png)

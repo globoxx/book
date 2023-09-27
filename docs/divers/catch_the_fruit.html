@@ -303,19 +303,24 @@
 </section>
 <section id="etape-1-faire-tomber-un-fruit">
 <h2>Étape 1 - Faire tomber un fruit<a class="headerlink" href="#etape-1-faire-tomber-un-fruit" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous allons programmer un fruit qui tombe sur une des 5 colonne choisie aléatoirement.</p>
+<p>Nous allons programmer un fruit qui tombe sur une des 5 colonne choisie aléatoirement.<br/>
+Sur l’interface de programmation, vous voyez 2 blocs déjà présents:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>: les blocs posés dans ce bloc ne s’effectuent <strong>qu’une seule fois</strong> au démarrage du programme.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toujours</span></code>: les blocs posés dans ce bloc s’effectuent <strong>en boucle</strong> tant que le programme tourne.</p></li>
+</ul>
 <section id="exercice-1">
 <h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Nous allons commencer par faire tomber le fruit sur la colonne 1, c’est à dire la 2ème colonne en partant de la gauche.<br/>
 Chaque led possède des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>. Le led tout en haut à gauche se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> tandis que celui tout en bas à droite se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>.</p>
-<p>Utilisez les blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> pour allumer tous les blocs de la colonne 1.</p>
+<p>Ajoutez des blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code> pour allumer tous les blocs de la colonne 1.</p>
 <p><img alt="img" src="../_images/tomberfruit0.png"/></p>
 </section>
 <section id="exercice-2">
 <h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Ajoutez à présent les blocs <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour allumer et éteindre succèssivement tous les led de la colonne du haut vers le bas.<br/>
-Problème: vous ne voyez rien ! Pourquoi ? Car les led s’allument et s’éteignent trop vite pour que vous puissiez voir.</p>
-<p>Pour résoudre ce problème, ajoutez des blocs <code class="docutils literal notranslate"><span class="pre">pause</span></code> de 500ms après chaque allumage afin que le led ne s’éteigne pas immédiatement après avoir été allumé.</p>
+<p>Ajoutez à présent les blocs <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour allumer et éteindre succèssivement tous les led de la colonne du haut vers le bas.</p>
+<p>Problème: vous ne voyez rien ! Pourquoi ? Car les led s’allument et s’éteignent trop vite pour que vous puissiez voir.<br/>
+Pour résoudre ce problème, ajoutez des blocs <code class="docutils literal notranslate"><span class="pre">pause</span></code> de 500ms après chaque allumage afin que le led ne s’éteigne pas immédiatement après avoir été allumé.</p>
 <p><img alt="img" src="../_images/tomberfruit1.png"/></p>
 </section>
 <section id="exercice-3">
@@ -377,7 +382,7 @@ Si on oublie d’allumer les leds correspondantes, on ne verra pas le panier !</
 <p>Voici les étapes à suivre:</p>
 <ol class="simple">
 <li><p>Créer une nouvelle variable nommée <code class="docutils literal notranslate"><span class="pre">panier</span></code>.</p></li>
-<li><p>Dans le bloc <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">définir</span> <span class="pre">panier</span> <span class="pre">à</span> <span class="pre">0</span></code> pour définir la position initiale du panier à 0.</p></li>
+<li><p>Dans le bloc <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">définir</span> <span class="pre">panier</span> <span class="pre">à</span> <span class="pre">0</span></code> pour définir la position initiale du panier à 0 (tout à gauche).</p></li>
 <li><p>Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">allumer</span></code> afin d’allumer la led à la position du panier.</p></li>
 </ol>
 <p><img alt="img" src="../_images/panier1.png"/></p>
