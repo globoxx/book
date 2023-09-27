@@ -4,349 +4,262 @@
 
 ## Introduction
 
-Une introduction à la programmation avec les micro:bit où il s'agit de coder un petit jeu de type .
+Dans ce TP, nous allons programmer un petit jeu sur `micro:bit`. Le micro:bit est un ordinateur minimaliste qui prend la forme d’une carte sur laquelle on trouve, entre autres, un écran de diodes lumineuses et deux boutons.
+
+![img](../media/microbit.jpg)
+
+Le but de l'activité est de programmer un jeu appelé `catch the fruit`.
+
+L'idée est d'utiliser la matrice de 25 leds du micro:bit comme écran sur lequel un fruit représenté par 1 led va tomber du haut de l'écran et qu'il faudra rattraper dans un panier. Le panier sera déplaçable à l'aide des boutons A et B.
 
 ```{youtube} vE4-GZSi5wY
 :start: 5
 ```
 
-L'idée est d'utiliser la matrice de 25 leds du micro:bit comme écran sur lequel un fruit représenté par 1 led va tomber du haut de l'écran et qu'il faudra rattraper dans un panier, 2 leds adjacentes, qui sera déplacé en utilisant le gyroscope intégré, i.e. en penchant le micro:bit.
+## Mise en place
 
-## Objectifs du cours
+## Etapes à programmer
 
-Faire découvrir différents concepts de programmation au fur et à mesure de la réalisation d'un jeu.  
-Les concepts utilisés sont :
+Voici les différentes étapes que nous allons suivre afin de programmer le jeu:
 
-* Variables
-* Boucles
-* Structures conditionnelles
-
-## Durée
-
-2 x 2 périodes de cours en salle d'informatique avec des micro:bit.
-
-## Matériel requis
-
-Des ordinateurs avec connexion à internet pour accéder à la plateforme de programmation [MakeCode](https://makecode.microbit.org/) à l'aide d'un navigateur (Chrome recommandé).
-Des micro:bit pour les élèves, au moins 1 pour 2.
-
-## Accroche
-
-Coder un jeu qui utilise les capacités interractives du micro:bit.
-
-## Marche à suivre
-
-### Étape 0 - Analyse des besoins
-
-#### Objectif : Prendre conscience de la nécessité de réfléchir avant de coder
-
-#### Définition des besoins
-
-Les étapes suivantes sont en générale assez vite identifiées :
-
-1. Faire tomber un fruit
-2. Déplacer le panier
+1. Faire tomber un fruit du haut de l'écran
+2. Déplacer le panier à l'aide des boutons
 3. Détecter lorsqu'un fruit est attrapé (i.e. collision fruit-panier)
 4. Gestion des échecs (i.e. fruit n'est pas attrapé)
 5. Fin du jeu et nouvelle partie
 
-### Étape 1 - Faire tomber un fruit
+## Étape 1 - Faire tomber un fruit
 
-#### Objectif
+Nous allons programmer un fruit qui tombe sur une des 5 colonne choisie aléatoirement.
 
-Programmer la visualisation d'un fruit qui tombe sur une des 5 colonne choisie aléatoirement.
+### Exercice 1
 
-#### Exercice 1
+Nous allons commencer par faire tomber le fruit sur la colonne 1, c'est à dire la 2ème colonne en partant de la gauche.  
+Chaque led possède des coordonnées `x` et `y`. Le led tout en haut à gauche se trouve aux coordonnées `(0, 0)` tandis que celui tout en bas à droite se trouve aux coordonnées `(4, 4)`.
 
-Commencer par faire le rendu visuel sur une colonne prédéfinie.  
-Déterminer avec les élèves quelles sont les actions à faire faire au micro:bit : allumer puis éteindre successivement les leds de la colonne choisie.  
+Utilisez les blocs `allumer` pour allumer tous les blocs de la colonne 1.
 
-On utilise les blocs `allumer` et `éteindre` du menu `LED`. Ces blocs ont besoin des coordonnées `x` et `y` de la led.  
+![img](../media/tomberfruit0.png)
 
-##### Questions
+### Exercice 2
 
-* Où se trouve le (0,0) ?
-* Comment le vérifier ?
+Ajoutez à présent les blocs `éteindre` pour allumer et éteindre succèssivement tous les led de la colonne du haut vers le bas.  
+Problème: vous ne voyez rien ! Pourquoi ? Car les led s'allument et s'éteignent trop vite pour que vous puissiez voir.
 
-##### Résultat attendu
+Pour résoudre ce problème, ajoutez des blocs `pause` de 500ms après chaque allumage afin que le led ne s'éteigne pas immédiatement après avoir été allumé.
 
-![img](media/tomberfruit1.png)
+![img](../media/tomberfruit1.png)
 
-##### Problèmes
+### Exercice 3
 
-On ne voir rien qui se passe !  
-C'est dû au fait que le micro:bit effectue les opérations trop rapidement pour que notre œil le voit, il faut mettre des pauses avant d'éteindre chaque led.
+En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes blocs : `allumer`, `pause` et `éteindre`. Chaque bloc est répété 5 fois.  
+Quand on a une répétition d'instructions, on veut que ce soit l'ordinateur qui fasse le travail : on utilise les **boucles**.
 
-Si au lieu d'avoir un écran de 5 leds de hauteur il en faisait 50, ou 100, ce code deviendrait vite laborieux à écrire... comment faire ?
+```{question}
+Dans votre code, quelle est l'unique valeur qui change à chaque répétition des 3 blocs `allumer`, `pause` et `éteindre` ?
 
-#### Exercice 2
+* {f}`La durée de la pause`
+* {f}`La coordonnée horizontale x`
+* {v}`La coordonnée verticale y`
+* {f}`Aucune idée`
+===
+La coordonnée verticale `y` est la seule à changer entre chaque répétition. C'est le cas car le fruit tombe du haut vers le bas, et donc la coordonnée `y` est augmentée de 1 à chaque tour.
+```
 
-En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes blocs : `allumer`, `pause` et `éteindre`.  
-Quand on a une répétition d'instruction, on veut que ce soit l'ordinateur qui fasse le travail : on utilise les **boucles**.
+Utilisez le bloc `pour index variant de 0 à 4` qui va nous permettre de créer une **boucle** dans laquelle `index` va prendre succèssivement les valeurs de 0 à 4, ce qui est exactement ce qu'il nous faut pour les valeurs de `y`.  
+`index` est ici ce que l'on appelle une `variable`. Sa valeur va varier de 0 à 4 et on peut l'utiliser pour indiquer la coordonnée `y`. Remplacez donc les valeurs de `y` par `index`.
 
-Présenter les différents types de boucle et faire revenir aux blocs en place.
+![img](../media/tomberfruit2.png)
 
-##### Questions
-
-* Qu'est-ce qui est stable ? (la succession des 3 blocs)
-* Qu'est-ce qui ne change pas ? (`x`)
-* Qu'est-ce qui varie, et comment ? (`y` par incrément de 1)
-* Quel type de boucle doit-on utiliser ? (une boucle de type `répéter`)
-
-Cependant, en réponse à la dernière question, le bloc `pour index variant de 0 à 4` semble encore plus adapté 
-puisqu'on a `index` qui prend les valeurs de 0 à 4, ce qui est exactement ce qu'il nous faut pour les valeurs de `y`.
-Introduction de la notion de `variable` dont on va se servir tout de suite après.
-
-##### Résultat attendu
-
-![img](media/tomberfruit2.png)
-
-##### Problèmes
+### Exercice 4
 
 Le fruit tombe toujours dans la même colonne, on veut changer de colonne pour chaque fruit et que le choix de la colonne soit aléatoire.
 
-#### Exercice 3
-
 Pour choisir un nombre au hasard, on peut utiliser le bloc `choisir au hasard de 0 à 10` du menu `Maths`.  
-Ce bloc permet de choisir un entier entre 2 bornes, dans notre cas de 0 à 4.
-
-##### Questions
+Ce bloc permet de choisir un tirer un entier entre 2 bornes, dans notre cas de 0 à 4.
 
 * Comment et où utiliser ce bloc ?
 * Que va-t-il se passer si on le met à la place de `x` dans les blocs `allumer` et `éteindre` ?
 
 Il faut donc choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.  
-Dès l'instant où on veut stocker de l'information pour pouvoir la réutiliser, la solution est d'utiliser une `variable`.
+Dès l'instant où on veut stocker de l'information pour pouvoir la réutiliser, la solution est d'utiliser une `variable`.  
+Voici les étapes à suivre:
 
-##### Résultat attendu
+1. Dans la catégorie de blocs `Variables`, choisissez `Créer une variable` et donnez lui le nom `colonne`. Cette variable aura pour objectif de stocker le numéro aléatoire de la colonne dans laquelle va tomber le fruit.
+2. Utilisez ensuite le bloc `définir colonne à` pour donner la valeur aléatoire à la variable `colonne`.
+3. Remplassez les coordonnées de `x` par la valeur de la variable `colonne`.
 
 ![img](media/tomberfruit3.png)
 
 Fin de l'étape 1, on a un fruit qui tombe dans une colonne choisie aléatoirement.
 
-### Étape 2 - Déplacer le panier
+## Étape 2 - Déplacer le panier
 
-#### Objectif
+Nous allons programmer le panier qui se déplace de droite à gauche à l'aide des boutons A et B.
 
-Programmer la visualisation d'un panier qui se déplace sur la ligne du bas en utilisant le gyroscope du micro:bit,
-c'est à dire en l'inclinant à droite ou à gauche.
+### Exercice 5
 
-#### Exercice 4
+Pour commencer il faut choisir comment sera représenté le panier. Nous utiliserons 1 seule led sur la ligne tout en bas (coordonnée `y` à 4).
 
-Pour commencer il faut choisir comment sera représenté le panier, en général, 2 leds adjacentes.  
-
-##### Questions
-
-* La position du panier va changer au cours du jeu, comment faire pour stocker de l'information qui varie ? (utiliser des variables)
-* Que doit-on représenter avec ces variables ? (la position en X du panier, Y vaut toujours 4, car sur la dernière ligne)
-* Combien de variables va-t-on utiliser ? (1 suffit, 2 est plus simple à conceptualiser, à choix)
+* La position du panier va changer au cours du jeu, comment faire pour stocker de l'information qui varie ? (utiliser une variable)
+* Que doit-on représenter avec cette variables ? (la position en `x` du panier, `y` vaut toujours 4, car sur la dernière ligne)
 
 Partons sur 2 variables, `panierG` et `panierD`. On choisi la position de départ du panier et on initialise les variables en conséquence.  
 Si on oublie d'allumer les leds correspondantes, on ne verra pas le panier !
 
-##### Résultat attendu
+Voici les étapes à suivre:
 
-![img](media/panier1.png)
+1. Créer une nouvelle variable nommée `panier`.
+2. Dans le bloc `au démarrage`, ajoutez un bloc `définir panier à 0` pour définir la position initiale du panier à 0.
+3. Ajoutez un bloc `allumer` afin d'allumer la led à la position du panier.
 
-##### Problèmes
+![img](../media/panier1.png)
 
-Le panier est fixe, il faut le faire bouger.
+### Exercice 6
 
-#### Exercice 5
+Le panier est fixe, il faut le faire bouger.  
+Nous allons utiliser les boutons `A` et `B` pour les déplacements gauche et droite, respectivement.  
 
-Dans un premier temps, pour faciliter le développement et les tests, on va plutôt utiliser les boutons `A` et `B` pour les déplacements gauche et droite, respectivement.  
-
-##### Questions
-
-* Que signifie déplacer le panier à gauche (resp. à droite) en termes de positions ? (diminuer les valeurs de ses coordonnées de 1, resp. les augmenter de 1)
+* Que signifie déplacer le panier à gauche (resp. à droite) en termes de positions ? (diminuer les valeurs de ses coordonnées en `x` de 1, resp. les augmenter de 1)
 * Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)
 
 On doit donc éteindre les leds du panier, faire le déplacement, allumer les leds du panier. On le fait avec `A` pour le déplacement à gauche et avec `B` pour le déplacement à droite.
 
-##### Résultat attendu
+Voici les étapes à suivre:
 
-![img](media/panier2.png)
+1. Ajouter un bloc `lorsque le bouton A est pressé`.
+2. A l'intérieur, ajouter un bloc `éteindre` pour éteindre la led du panier.
+3. Modifier la valeur de la variable `panier` pour la diminuer de 1. Pour cela, ajoutez un bloc `modifier panier de -1`.
+4. Ajouter un bloc `allumer` pour allumer la led correspondant au nouvel emplacement du panier.
+5. Faire la même chose pour le bouton `B` qui doit permettre de déplacer le panier vers la droite.
 
-##### Problèmes
+![img](../media/panier2.png)
 
-Si on appuie de nombreuses fois sur le bouton `A` (resp. `B`), le panier disparait, il sort de l'écran.
-Ce n'est pas le comportement voulu, spécialement si on garde à l'esprit que le déplacement se fera, in fine, par inclinaison du micro:bit.
+### Exercice 7
 
-#### Exercice 6
+Si on appuie de nombreuses fois sur le bouton `A` (resp. `B`), le panier disparait, il sort de l'écran.  
+On doit empêcher le panier d'aller plus loin que les bords de l'écran.
 
-On veut empêcher le panier d'aller plus loin que les bords de l'écran.
-
-##### Questions
-
-* Pourquoi est-ce que le panier sort de l'écran ? (les variables continuent d'être modifiées pour finalement engendrer l'allumage de leds à des coordonnées qui n'existent pas)
+* Pourquoi est-ce que le panier sort de l'écran ? (la variable `panier` continue d'être modifiée pour finalement engendrer l'allumage de leds à des coordonnées qui n'existent pas)
 * Comment empêcher la modification des variables ? (conditionner les modifications selon la position du panier)
-* Sous quelle condition le panier peut se déplacer à gauche (resp. à droite) ? (si la position en X de sa partie gauche (resp. droite) est > 0 (resp. < 4))
+* Sous quelle condition le panier peut-il se déplacer à gauche ? (si sa position en `x` est > 0)
+* Sous quelle condition le panier peut-il se déplacer à droite ? (si sa position en `x` est < 4)
 
-On introduit ici la structure de contrôle conditionnelle `si ... alors ...` et les tests de comparaison qui *répondent* `vrai` ou `faux` et servent de condition à l'exécution d'instructions. Ici, le déplacement du panier.
+On introduit ici la structure de contrôle conditionnelle `si ... alors ...` et les tests de comparaison qui *répondent* `vrai` ou `faux` et servent de condition à l'exécution d'instructions.  
+Dans notre cas, on déplace le panier uniquement **si** ça ne le fait pas sortir de l'écran.
 
-##### Résultat attendu
+Voici les étapes à suivre:
 
-![img](media/panier3.png)
+1. Ajoutez un bloc `si vrai alors` **autour** des instructions permettant de déplacer le panier vers la gauche (bouton `A`).
+2. Remplacer `vrai` par le test de comparaison qui permet de contrôler que la position du panier est > 0.
+3. Faire la même chose pour le déplacement vers la droite (en ajustant le test de comparaison).
 
-##### Problèmes
+![img](../media/panier3.png)
 
-Le panier se déplace avec les boutons, on veut utiliser l'inclinaison du micro:bit pour faire bouger le panier.
+## Étape 3 - Détecter lorsqu'un fruit est attrapé
 
-#### Exercice 7
-
-Pour utiliser l'inclinaison du micro:bit, le remplacement des `Entrées` de type *lorsque bouton pressé* par celles de type *lorsque incliner* est assez évidente.
-Par contre, lors de l'utilisation on remarque que l'inclinaison n'engendre qu'un seul déplacement et qu'il faut repasser par l'horizontal pour faire un nouveau déplacement.
-
-##### Questions
-
-* Pourquoi seul 1 déplacement est effectué et il est nécessaire de repasser par la position horizontale ? (l'inclinaison est un déclencheur comme l'appui sur `A`)
-* Quel est en fait le comportement attendu ? (le panier se déplace **tant que** le micro:bit est incliné)
-
-On rajoute une boucle `tant que` conditionnée par l'inclinaison du micro:bit pour faire les déplacements déclanchés par l'inclinaison.  
-Comme pour la chute du fruit, si on oublie la `pause`, le panier se déplace d'un bord à l'autre instantanément. Laisser les élèves faire le rapprochement.
-
-##### Résultat attendu
-
-![img](media/panier4.png)
-
-Fin de l'étape 2, on a un panier qui bouge lorsque le micro:bit est incliné.
-Certains élèves auron surement remarqué que lorsque le fruit tombe dans le panier, le panier disparait.
-Avant de s'occuper de la collision à proprement parler, on peut remédier ce problème simplement en *rallumant* le panier avant chaque chute de fruit.
-
-### Étape 3 - Détecter lorsqu'un fruit est attrapé
-
-#### Objectif
+### Exercice 8
 
 Il s'agit maintenant de détecter lorsque le fruit est attrapé par le panier, c'est-à-dire lorqu'il y a collision entre le fruit et le panier et réaliser les actions qui en découle.
 
-#### Exercice 7
-
 Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais comme le micro:bit ne *voit* pas, il faut trouver une autre solution pour qu'il puisse vérifier s'il y a collision ou non.
 
-##### Questions
+* A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes)
+* Quelles sonts les coordonnées respectives du panier et du fruit ? (comme elles changent, varient, elles sont dans des variables. Fruit(`colonne`, `index`) et panier(`panier`, `4`))
+* Comment s'écrit l'égalité des coordonnées avec ces variables ? (`colonne == panier ET index == 4`)
 
-* A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées / positions du fruit et du panier sont les mêmes. Il est vraisemblable que plusieurs reformulation soient nécessaires pour obtenir la bonne réponse)
-* Quelles sonts les coordonnées respectives du panier et du fruit ? (comme elles changent, varient, elles sont dans des variables. Fruit(`colonne`, `index`) et Panier(`panierG` ou `PanierD`, `4`))
-* Comment s'écrit l'égalité des coordonnées avec ces variables ?
+Traduisez cette égalité avec les blocs à votre disposition.
 
-**(PanierG = colonne OU PanierD = colonne) ET index = 4**
+![img](../media/collision1.png)
 
-Avant de traduire cette condition avec des blocs, il faut insister sur les priorités liées aux parenthèses de l'expression ci-dessus.
+### Exercice 9
 
-##### Résultat attendu
+On a maintenant un test permettant de détecter la collision entre un fruit et le panier, mais on fait quoi ?  
+Il s'agit maintenant de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu'il y a collision.
 
-![img](media/collision1.png)
-
-##### Problèmes
-
-On a maintenant un test permettant de détecter la collision entre un fruit et le panier, mais on fait quoi ?
-
-#### Exercice 8
-
-Il s'agit maintenant de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu'il y a collision.  
-Sans rentrer dans le détail de la portée des varibles, on peut juste utiliser le fait que la variable `index` soit utilisé dans notre test pour guider et justifier le position du test dans le code.
-
-##### Questions
-
-* A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, i.e. dans la boucle `répéter`, en dehors, le fruit n'existe pas )
+* A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, i.e. dans la boucle `répéter`, en dehors, le fruit n'existe pas)
 * Que doit-il se passer lorsqu'on attrape un fruit ? (on marque 1 point)
 * Comment faire pour tenir le score à jour ? (il faut utiliser une variable)
 
 L'implémentation de ces éléments ne pose pas de problème, cependant il ne faut pas oublier d'initialiser le score à 0 `au démarrage`.  
-En outre, on peut également *fortement* suggérer de donner un signal visuel au joueur lorsqu'il marque un point ; avec l'apparition d'une icône, par exemple.
+En outre, on peut également *fortement* suggérer de donner un signal visuel au joueur lorsqu'il marque un point ; avec l'apparition d'un smiley, par exemple.
 
-##### Résultat attendu
+Voici les étapes à suivre:
 
-![img](media/collision2.png)
+1. Créez une nouvelle variable nommée `score` et définissez-la à 0 `au démarrage`.
+2. Ajouter le bloc conditionnel testant la collision à la fin de la boucle faisant tomber le fruit.
+3. Si la condition est respectée, affichez un smiley avec le bloc `montrer l'icône`.
+4. Si la condition est respectée, augmenter le `score` de 1.
+5. Si la condition est respectée, ajoutez un bloc `effacer l'écran` afin d'éffacer le smiley.
 
-##### Problèmes
+![img](../media/collision2.png)
 
-Si l'icône a été ajoutée comme visualisation du point marqué, lorsque le jeu continue, l'icône est toujours présente et perturbe la jouabilité. Pour y remédier, il suffit d'`effacer l'écran` après avoir modifié le score.
+Vous remarquerez que nous avons ajoué un bloc `allumer x panier` au début du bloc `toujours`. Sans ce bloc, le panier disparaît lorsqu'il entre en collisin avec un fruit.  
+L'ajout de ce bloc permet de rallumer la led associée au panier avant la chute d'un fruit.
 
-Fin de l'étape 3, lorsqu'un fruit tombe dans le panier, on le détecte et on marque un point.
+## Étape 4 - Gestion des échecs
 
-### Étape 4 - Gestion des échecs
+### Exercice 10
 
-#### Objectif
-
-Un échec est lorsqu'un fruit fini sa chute en dehors du panier. Il faut détecter lorsque ce cas se produit et également définir les actions associées.
-
-#### Exercice 9
+Un échec se produit lorsqu'un fruit finit sa chute en dehors du panier. Il faut détecter lorsque ce cas se produit et également définir les actions associées.
 
 L'échec n'est pas seulement le contraire du fruit qui tombe dans le panier, car cela inclut également tous les cas ou le fruit est en train de tomber, qu'il soit au-dessus du panier ou non.  
 Il faut donc déterminer comment détecter ces cas là uniquement.
-
-##### Questions
 
 * Quels sont les positions du fruit concernés par le `sinon` du bloc permettant de détecter les collisions ? (toutes les positions sauf celles du panier)
 * Toutes ces positions constituent-elles des échecs ? (non)
 * Quelle condition supplémentaire doit-on avoir pour que le fruit soit tombé à côté du panier ? (index = 4)
 * Que se passe-t-il lorsqu'on rate un fruit ? (perte de vie, par exemple)
 
-Là aussi, une fois les réponses déterminées, l'implémentation ne pose pas de difficultés particulière. A l'instar de la collision, on peut ajouter un signal visuel pour signifier l'échec au jouer. Dans ce cas, il ne faut pas oublier d'`effacer l'écran`. Il ne faut pas non plus oublier d'initialiser le nombre de `vies` au démarrage.
+Là aussi, une fois les réponses déterminées, l'implémentation ne pose pas de difficultés particulière. Comme pour la collision, on peut ajouter un signal visuel pour signifier l'échec au joueur. Dans ce cas, il ne faut pas oublier d'`effacer l'écran`. Il ne faut pas non plus oublier d'initialiser le nombre de `vies` au démarrage.
 
-##### Résultat attendu
+Voici les étapes à suivre:
 
-![img](media/echec.png)
+1. Créez une nouvelle variable nommée `vie` et définissez-la à 3 `au démarrage`.
+2. Cliquez 2x sur le petit `+` du bloc `si ...` de la collision afin de faire apparaître le `sinon si ...`.
+3. Ajoutez le bloc permettant de tester l'échec dans le `sinon si ...`. Pour rappel, la condition d'échec est que le fruit soit arrivé en bas de l'écran et donc que `index` vaut 4.
+4. Si la condition d'échec est respectée, affichez un smiley triste avec le bloc `montrer l'icône`.
+5. Si la condition d'échec est respectée, diminuer la `vie` de 1.
+6. Si la condition d'échec est respectée, `effacer l'écran`.
 
-##### Problèmes
+![img](../media/echec1.png)
+
+## Étape 5 - Fin du jeu
+
+### Exercice 11
 
 Le jeu est maintenant fonctionnel, on marque des points lorsqu'un fruit est attrapé et on perd une vie quand on le rate. Cependant, le jeu ne s'arrête pas même si on a perdu plus de vies qu'on en avait au départ.
 
-Fin de l'étape 4, pour finaliser le jeu il va falloir qu'il s'arrête lorsqu'on a plus de vie et qu'on ait la possibilité de recommencer une nouvelle partie.
-
-### Étape 5 - Fin du jeu et nouvelle partie
-
-#### Objectif
-
-Déterminer lorsque le jeu doit s'arrêter et trouver une solution pour recommencer une partie.
-
-#### Exercice 10
-
-Faire s'arrêter le jeu selon une condition à déterminer.
-
-##### Questions
+Nous allons donc faire s'arrêter le jeu selon une condition à déterminer, puis nous afficherons le score du joueur.
 
 * Quand est-ce que le jeu doit s'arrêter ? (lorsqu'on a plus de vies)
 * Quelle est la condition qui permet de continuer à jouer ? (si le nombre de vies > 0)
-* Quelle partie du jeu suffit-il d'empêcher pour que le jeu soit fini, de facto ? (la chute des fruits)
-* Que doit-on faire lorsque le jeu est fini ? (afficher le score, signifier le Game Over au joueur)
+* Quelle partie du jeu suffit-il d'empêcher pour que le jeu s'arrête ? (la chute des fruits)
+* Que doit-on faire lorsque le jeu est fini ? (afficher le score)
 
 L'arrêt du jeu s'implémente simplement en conditionnant la chute des fruits au fait d'avoir au moins une vie, l'alternative (sinon) étant la fin de partie avec affichage du score.
 
-##### Résultat attendu
+Voici les étapes à suivre:
 
-![img](media/gameover1.png)
+1. Ajoutez la condition testant que `vie > 0` tout autour du code se trouvant dans le bloc `toujours`. Ainsi les fruits ne tomberont que s'il reste des vies au joueur.
+2. Si la condition n'est **pas** respectée (c'est à dire s'il reste des vies), alors ajoutez le bloc `montrer nombre` afin d'afficher le score.
 
-#### Exercice 11
-
-Donner au joueur la possibilité de recommencer une partie, par exemple en appuyant sur `A + B`.
-
-##### Questions
-
-* Qu'est-ce qui fait qu'on a perdu, qu'on ne peut plus jouer ? (on a plus de vies)
-* Que faudrait-il pour que le jeu recommence ? (avoir de nouveau des vies)
-* Est-ce qu'il y a autre chose qu'il faudrait faire pour que ce soit une nouvelle partie ? (remettre le score à 0, effacer l'écran, allumer le panier, tout ce qui est fait au démarrage)
-
-Pour finir, aucune difficulté d'implémentation, il reste simplement à tester le jeu et vérifier les détails d'affichage.
-
-##### Résultat attendu
-
-![img](media/gameover2.png)
+![img](../media/gameover1.png)
 
 Ceci termine l'implémentation de base de ce jeu sur micro:bit.  
-Une version du jeu complet est disponible [ici](./FruitCatch.hex), il suffit de le déposer dans la fenêtre Makecode ouverte dans votre navigateur.
+Voici le code final que vous devriez avoir.
+
+![img](../media/microbit_final.png)
+
+Une version du jeu complet est disponible [ici](../data/microbit-catch-the-fruit.hex), il suffit de déposer le fichier dans la fenêtre Makecode ouverte dans votre navigateur (mais attention, il remplacera votre code).
 
 ## Pour aller plus loin
 
-Pour rendre le jeu plus intéressant et donner aux élèves l'occasion de faire des expérimentations et remobiliser ce qu'ils viennent de voir, on peut demander à la classe ce qu'on pourrait faire pour augmenter la difficulté du jeu et les laisser essayer d'implémenter quelques unes de leur suggestions.  
-Des suggestions qui reviennent régulièrement : 
+Pour rendre le jeu plus intéressant, voici une liste de suggestions:
 
-* Augmenter la vitesse de chute du fruit tous les X points
-* Diminuer la vitesse de déplacement du panier tous les Y points
+* Augmenter la vitesse de chute des fruits après un certain nombre de points
 * Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité pour faire la distinction)
+* Faire déplacer le panier en inclinant la carte micro:bit au lieu des boutons A et B
 * Faire tomber plusieurs fruits
-* Perturber la chute du fruit qui ne reste plus sur sa colonne initiale (attention aux cas en bord de l'écran)
-* Inverser les commandes
-
-![img](media/gameall.png)
+* Faire tomber certains fruits légèrement en diagonal
+* Elargir le panier à 2 leds

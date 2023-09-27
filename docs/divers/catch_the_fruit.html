@@ -282,361 +282,246 @@
 <span id="divers-catch-the-fruit"></span><h1>Catch the fruit<a class="headerlink" href="#catch-the-fruit" title="Lien permanent vers ce titre">¶</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une introduction à la programmation avec les micro:bit où il s’agit de coder un petit jeu de type .</p>
-<div class="video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://www.youtube-nocookie.com/embed/vE4-GZSi5wY?start=5" webkitallowfullscreen="" width="560">"</iframe></div><p>L’idée est d’utiliser la matrice de 25 leds du micro:bit comme écran sur lequel un fruit représenté par 1 led va tomber du haut de l’écran et qu’il faudra rattraper dans un panier, 2 leds adjacentes, qui sera déplacé en utilisant le gyroscope intégré, i.e. en penchant le micro:bit.</p>
+<p>Dans ce TP, nous allons programmer un petit jeu sur <code class="docutils literal notranslate"><span class="pre">micro:bit</span></code>. Le micro:bit est un ordinateur minimaliste qui prend la forme d’une carte sur laquelle on trouve, entre autres, un écran de diodes lumineuses et deux boutons.</p>
+<p><img alt="img" src="../_images/microbit.jpg"/></p>
+<p>Le but de l’activité est de programmer un jeu appelé <code class="docutils literal notranslate"><span class="pre">catch</span> <span class="pre">the</span> <span class="pre">fruit</span></code>.</p>
+<p>L’idée est d’utiliser la matrice de 25 leds du micro:bit comme écran sur lequel un fruit représenté par 1 led va tomber du haut de l’écran et qu’il faudra rattraper dans un panier. Le panier sera déplaçable à l’aide des boutons A et B.</p>
+<div class="video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" mozallowfullscreen="" src="https://www.youtube-nocookie.com/embed/vE4-GZSi5wY?start=5" webkitallowfullscreen="" width="560">"</iframe></div></section>
+<section id="mise-en-place">
+<h2>Mise en place<a class="headerlink" href="#mise-en-place" title="Lien permanent vers ce titre">¶</a></h2>
 </section>
-<section id="objectifs-du-cours">
-<h2>Objectifs du cours<a class="headerlink" href="#objectifs-du-cours" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Faire découvrir différents concepts de programmation au fur et à mesure de la réalisation d’un jeu.<br/>
-Les concepts utilisés sont :</p>
-<ul class="simple">
-<li><p>Variables</p></li>
-<li><p>Boucles</p></li>
-<li><p>Structures conditionnelles</p></li>
-</ul>
-</section>
-<section id="duree">
-<h2>Durée<a class="headerlink" href="#duree" title="Lien permanent vers ce titre">¶</a></h2>
-<p>2 x 2 périodes de cours en salle d’informatique avec des micro:bit.</p>
-</section>
-<section id="materiel-requis">
-<h2>Matériel requis<a class="headerlink" href="#materiel-requis" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Des ordinateurs avec connexion à internet pour accéder à la plateforme de programmation <a class="reference external" href="https://makecode.microbit.org/">MakeCode</a> à l’aide d’un navigateur (Chrome recommandé).
-Des micro:bit pour les élèves, au moins 1 pour 2.</p>
-</section>
-<section id="accroche">
-<h2>Accroche<a class="headerlink" href="#accroche" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Coder un jeu qui utilise les capacités interractives du micro:bit.</p>
-</section>
-<section id="marche-a-suivre">
-<h2>Marche à suivre<a class="headerlink" href="#marche-a-suivre" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="etape-0-analyse-des-besoins">
-<h3>Étape 0 - Analyse des besoins<a class="headerlink" href="#etape-0-analyse-des-besoins" title="Lien permanent vers ce titre">¶</a></h3>
-<section id="objectif-prendre-conscience-de-la-necessite-de-reflechir-avant-de-coder">
-<h4>Objectif : Prendre conscience de la nécessité de réfléchir avant de coder<a class="headerlink" href="#objectif-prendre-conscience-de-la-necessite-de-reflechir-avant-de-coder" title="Lien permanent vers ce titre">¶</a></h4>
-</section>
-<section id="definition-des-besoins">
-<h4>Définition des besoins<a class="headerlink" href="#definition-des-besoins" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Les étapes suivantes sont en générale assez vite identifiées :</p>
+<section id="etapes-a-programmer">
+<h2>Etapes à programmer<a class="headerlink" href="#etapes-a-programmer" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici les différentes étapes que nous allons suivre afin de programmer le jeu:</p>
 <ol class="simple">
-<li><p>Faire tomber un fruit</p></li>
-<li><p>Déplacer le panier</p></li>
+<li><p>Faire tomber un fruit du haut de l’écran</p></li>
+<li><p>Déplacer le panier à l’aide des boutons</p></li>
 <li><p>Détecter lorsqu’un fruit est attrapé (i.e. collision fruit-panier)</p></li>
 <li><p>Gestion des échecs (i.e. fruit n’est pas attrapé)</p></li>
 <li><p>Fin du jeu et nouvelle partie</p></li>
 </ol>
 </section>
-</section>
 <section id="etape-1-faire-tomber-un-fruit">
-<h3>Étape 1 - Faire tomber un fruit<a class="headerlink" href="#etape-1-faire-tomber-un-fruit" title="Lien permanent vers ce titre">¶</a></h3>
-<section id="objectif">
-<h4>Objectif<a class="headerlink" href="#objectif" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Programmer la visualisation d’un fruit qui tombe sur une des 5 colonne choisie aléatoirement.</p>
-</section>
+<h2>Étape 1 - Faire tomber un fruit<a class="headerlink" href="#etape-1-faire-tomber-un-fruit" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons programmer un fruit qui tombe sur une des 5 colonne choisie aléatoirement.</p>
 <section id="exercice-1">
-<h4>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Commencer par faire le rendu visuel sur une colonne prédéfinie.<br/>
-Déterminer avec les élèves quelles sont les actions à faire faire au micro:bit : allumer puis éteindre successivement les leds de la colonne choisie.</p>
-<p>On utilise les blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> du menu <code class="docutils literal notranslate"><span class="pre">LED</span></code>. Ces blocs ont besoin des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> de la led.</p>
-<section id="questions">
-<h5>Questions<a class="headerlink" href="#questions" title="Lien permanent vers ce titre">¶</a></h5>
-<ul class="simple">
-<li><p>Où se trouve le (0,0) ?</p></li>
-<li><p>Comment le vérifier ?</p></li>
-</ul>
-</section>
-<section id="resultat-attendu">
-<h5>Résultat attendu<a class="headerlink" href="#resultat-attendu" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/tomberfruit1.png"/></p>
-</section>
-<section id="problemes">
-<h5>Problèmes<a class="headerlink" href="#problemes" title="Lien permanent vers ce titre">¶</a></h5>
-<p>On ne voir rien qui se passe !<br/>
-C’est dû au fait que le micro:bit effectue les opérations trop rapidement pour que notre œil le voit, il faut mettre des pauses avant d’éteindre chaque led.</p>
-<p>Si au lieu d’avoir un écran de 5 leds de hauteur il en faisait 50, ou 100, ce code deviendrait vite laborieux à écrire… comment faire ?</p>
-</section>
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Nous allons commencer par faire tomber le fruit sur la colonne 1, c’est à dire la 2ème colonne en partant de la gauche.<br/>
+Chaque led possède des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>. Le led tout en haut à gauche se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> tandis que celui tout en bas à droite se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>.</p>
+<p>Utilisez les blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> pour allumer tous les blocs de la colonne 1.</p>
+<p><img alt="img" src="../_images/tomberfruit0.png"/></p>
 </section>
 <section id="exercice-2">
-<h4>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h4>
-<p>En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes blocs : <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code>.<br/>
-Quand on a une répétition d’instruction, on veut que ce soit l’ordinateur qui fasse le travail : on utilise les <strong>boucles</strong>.</p>
-<p>Présenter les différents types de boucle et faire revenir aux blocs en place.</p>
-<section id="id1">
-<h5>Questions<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h5>
-<ul class="simple">
-<li><p>Qu’est-ce qui est stable ? (la succession des 3 blocs)</p></li>
-<li><p>Qu’est-ce qui ne change pas ? (<code class="docutils literal notranslate"><span class="pre">x</span></code>)</p></li>
-<li><p>Qu’est-ce qui varie, et comment ? (<code class="docutils literal notranslate"><span class="pre">y</span></code> par incrément de 1)</p></li>
-<li><p>Quel type de boucle doit-on utiliser ? (une boucle de type <code class="docutils literal notranslate"><span class="pre">répéter</span></code>)</p></li>
-</ul>
-<p>Cependant, en réponse à la dernière question, le bloc <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code> semble encore plus adapté
-puisqu’on a <code class="docutils literal notranslate"><span class="pre">index</span></code> qui prend les valeurs de 0 à 4, ce qui est exactement ce qu’il nous faut pour les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code>.
-Introduction de la notion de <code class="docutils literal notranslate"><span class="pre">variable</span></code> dont on va se servir tout de suite après.</p>
-</section>
-<section id="id2">
-<h5>Résultat attendu<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/tomberfruit2.png"/></p>
-</section>
-<section id="id3">
-<h5>Problèmes<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h5>
-<p>Le fruit tombe toujours dans la même colonne, on veut changer de colonne pour chaque fruit et que le choix de la colonne soit aléatoire.</p>
-</section>
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ajoutez à présent les blocs <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour allumer et éteindre succèssivement tous les led de la colonne du haut vers le bas.<br/>
+Problème: vous ne voyez rien ! Pourquoi ? Car les led s’allument et s’éteignent trop vite pour que vous puissiez voir.</p>
+<p>Pour résoudre ce problème, ajoutez des blocs <code class="docutils literal notranslate"><span class="pre">pause</span></code> de 500ms après chaque allumage afin que le led ne s’éteigne pas immédiatement après avoir été allumé.</p>
+<p><img alt="img" src="../_images/tomberfruit1.png"/></p>
 </section>
 <section id="exercice-3">
-<h4>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h4>
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
+<p>En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes blocs : <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code>. Chaque bloc est répété 5 fois.<br/>
+Quand on a une répétition d’instructions, on veut que ce soit l’ordinateur qui fasse le travail : on utilise les <strong>boucles</strong>.</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Dans votre code, quelle est l’unique valeur qui change à chaque répétition des 3 blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>La durée de la pause</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>La coordonnée horizontale x</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>La coordonnée verticale y</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Aucune idée</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>La coordonnée verticale <code class="docutils literal notranslate"><span class="pre">y</span></code> est la seule à changer entre chaque répétition. C’est le cas car le fruit tombe du haut vers le bas, et donc la coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> est augmentée de 1 à chaque tour.</p>
+</div>
+</div>
+</form></div><p>Utilisez le bloc <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code> qui va nous permettre de créer une <strong>boucle</strong> dans laquelle <code class="docutils literal notranslate"><span class="pre">index</span></code> va prendre succèssivement les valeurs de 0 à 4, ce qui est exactement ce qu’il nous faut pour les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code>.<br/>
+<code class="docutils literal notranslate"><span class="pre">index</span></code> est ici ce que l’on appelle une <code class="docutils literal notranslate"><span class="pre">variable</span></code>. Sa valeur va varier de 0 à 4 et on peut l’utiliser pour indiquer la coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code>. Remplacez donc les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code> par <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
+<p><img alt="img" src="../_images/tomberfruit2.png"/></p>
+</section>
+<section id="exercice-4">
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le fruit tombe toujours dans la même colonne, on veut changer de colonne pour chaque fruit et que le choix de la colonne soit aléatoire.</p>
 <p>Pour choisir un nombre au hasard, on peut utiliser le bloc <code class="docutils literal notranslate"><span class="pre">choisir</span> <span class="pre">au</span> <span class="pre">hasard</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">10</span></code> du menu <code class="docutils literal notranslate"><span class="pre">Maths</span></code>.<br/>
-Ce bloc permet de choisir un entier entre 2 bornes, dans notre cas de 0 à 4.</p>
-<section id="id4">
-<h5>Questions<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h5>
+Ce bloc permet de choisir un tirer un entier entre 2 bornes, dans notre cas de 0 à 4.</p>
 <ul class="simple">
 <li><p>Comment et où utiliser ce bloc ?</p></li>
 <li><p>Que va-t-il se passer si on le met à la place de <code class="docutils literal notranslate"><span class="pre">x</span></code> dans les blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> ?</p></li>
 </ul>
 <p>Il faut donc choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.<br/>
-Dès l’instant où on veut stocker de l’information pour pouvoir la réutiliser, la solution est d’utiliser une <code class="docutils literal notranslate"><span class="pre">variable</span></code>.</p>
-</section>
-<section id="id5">
-<h5>Résultat attendu<a class="headerlink" href="#id5" title="Lien permanent vers ce titre">¶</a></h5>
+Dès l’instant où on veut stocker de l’information pour pouvoir la réutiliser, la solution est d’utiliser une <code class="docutils literal notranslate"><span class="pre">variable</span></code>.<br/>
+Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p>Dans la catégorie de blocs <code class="docutils literal notranslate"><span class="pre">Variables</span></code>, choisissez <code class="docutils literal notranslate"><span class="pre">Créer</span> <span class="pre">une</span> <span class="pre">variable</span></code> et donnez lui le nom <code class="docutils literal notranslate"><span class="pre">colonne</span></code>. Cette variable aura pour objectif de stocker le numéro aléatoire de la colonne dans laquelle va tomber le fruit.</p></li>
+<li><p>Utilisez ensuite le bloc <code class="docutils literal notranslate"><span class="pre">définir</span> <span class="pre">colonne</span> <span class="pre">à</span></code> pour donner la valeur aléatoire à la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code>.</p></li>
+<li><p>Remplassez les coordonnées de <code class="docutils literal notranslate"><span class="pre">x</span></code> par la valeur de la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code>.</p></li>
+</ol>
 <p><img alt="img" src="divers/media/tomberfruit3.png"/></p>
 <p>Fin de l’étape 1, on a un fruit qui tombe dans une colonne choisie aléatoirement.</p>
 </section>
 </section>
-</section>
 <section id="etape-2-deplacer-le-panier">
-<h3>Étape 2 - Déplacer le panier<a class="headerlink" href="#etape-2-deplacer-le-panier" title="Lien permanent vers ce titre">¶</a></h3>
-<section id="id6">
-<h4>Objectif<a class="headerlink" href="#id6" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Programmer la visualisation d’un panier qui se déplace sur la ligne du bas en utilisant le gyroscope du micro:bit,
-c’est à dire en l’inclinant à droite ou à gauche.</p>
-</section>
-<section id="exercice-4">
-<h4>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Pour commencer il faut choisir comment sera représenté le panier, en général, 2 leds adjacentes.</p>
-<section id="id7">
-<h5>Questions<a class="headerlink" href="#id7" title="Lien permanent vers ce titre">¶</a></h5>
+<h2>Étape 2 - Déplacer le panier<a class="headerlink" href="#etape-2-deplacer-le-panier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons programmer le panier qui se déplace de droite à gauche à l’aide des boutons A et B.</p>
+<section id="exercice-5">
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour commencer il faut choisir comment sera représenté le panier. Nous utiliserons 1 seule led sur la ligne tout en bas (coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> à 4).</p>
 <ul class="simple">
-<li><p>La position du panier va changer au cours du jeu, comment faire pour stocker de l’information qui varie ? (utiliser des variables)</p></li>
-<li><p>Que doit-on représenter avec ces variables ? (la position en X du panier, Y vaut toujours 4, car sur la dernière ligne)</p></li>
-<li><p>Combien de variables va-t-on utiliser ? (1 suffit, 2 est plus simple à conceptualiser, à choix)</p></li>
+<li><p>La position du panier va changer au cours du jeu, comment faire pour stocker de l’information qui varie ? (utiliser une variable)</p></li>
+<li><p>Que doit-on représenter avec cette variables ? (la position en <code class="docutils literal notranslate"><span class="pre">x</span></code> du panier, <code class="docutils literal notranslate"><span class="pre">y</span></code> vaut toujours 4, car sur la dernière ligne)</p></li>
 </ul>
 <p>Partons sur 2 variables, <code class="docutils literal notranslate"><span class="pre">panierG</span></code> et <code class="docutils literal notranslate"><span class="pre">panierD</span></code>. On choisi la position de départ du panier et on initialise les variables en conséquence.<br/>
 Si on oublie d’allumer les leds correspondantes, on ne verra pas le panier !</p>
+<p>Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p>Créer une nouvelle variable nommée <code class="docutils literal notranslate"><span class="pre">panier</span></code>.</p></li>
+<li><p>Dans le bloc <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">définir</span> <span class="pre">panier</span> <span class="pre">à</span> <span class="pre">0</span></code> pour définir la position initiale du panier à 0.</p></li>
+<li><p>Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">allumer</span></code> afin d’allumer la led à la position du panier.</p></li>
+</ol>
+<p><img alt="img" src="../_images/panier1.png"/></p>
 </section>
-<section id="id8">
-<h5>Résultat attendu<a class="headerlink" href="#id8" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/panier1.png"/></p>
-</section>
-<section id="id9">
-<h5>Problèmes<a class="headerlink" href="#id9" title="Lien permanent vers ce titre">¶</a></h5>
-<p>Le panier est fixe, il faut le faire bouger.</p>
-</section>
-</section>
-<section id="exercice-5">
-<h4>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Dans un premier temps, pour faciliter le développement et les tests, on va plutôt utiliser les boutons <code class="docutils literal notranslate"><span class="pre">A</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span></code> pour les déplacements gauche et droite, respectivement.</p>
-<section id="id10">
-<h5>Questions<a class="headerlink" href="#id10" title="Lien permanent vers ce titre">¶</a></h5>
+<section id="exercice-6">
+<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le panier est fixe, il faut le faire bouger.<br/>
+Nous allons utiliser les boutons <code class="docutils literal notranslate"><span class="pre">A</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span></code> pour les déplacements gauche et droite, respectivement.</p>
 <ul class="simple">
-<li><p>Que signifie déplacer le panier à gauche (resp. à droite) en termes de positions ? (diminuer les valeurs de ses coordonnées de 1, resp. les augmenter de 1)</p></li>
+<li><p>Que signifie déplacer le panier à gauche (resp. à droite) en termes de positions ? (diminuer les valeurs de ses coordonnées en <code class="docutils literal notranslate"><span class="pre">x</span></code> de 1, resp. les augmenter de 1)</p></li>
 <li><p>Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)</p></li>
 </ul>
 <p>On doit donc éteindre les leds du panier, faire le déplacement, allumer les leds du panier. On le fait avec <code class="docutils literal notranslate"><span class="pre">A</span></code> pour le déplacement à gauche et avec <code class="docutils literal notranslate"><span class="pre">B</span></code> pour le déplacement à droite.</p>
-</section>
-<section id="id11">
-<h5>Résultat attendu<a class="headerlink" href="#id11" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/panier2.png"/></p>
-</section>
-<section id="id12">
-<h5>Problèmes<a class="headerlink" href="#id12" title="Lien permanent vers ce titre">¶</a></h5>
-<p>Si on appuie de nombreuses fois sur le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code> (resp. <code class="docutils literal notranslate"><span class="pre">B</span></code>), le panier disparait, il sort de l’écran.
-Ce n’est pas le comportement voulu, spécialement si on garde à l’esprit que le déplacement se fera, in fine, par inclinaison du micro:bit.</p>
-</section>
-</section>
-<section id="exercice-6">
-<h4>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h4>
-<p>On veut empêcher le panier d’aller plus loin que les bords de l’écran.</p>
-<section id="id13">
-<h5>Questions<a class="headerlink" href="#id13" title="Lien permanent vers ce titre">¶</a></h5>
-<ul class="simple">
-<li><p>Pourquoi est-ce que le panier sort de l’écran ? (les variables continuent d’être modifiées pour finalement engendrer l’allumage de leds à des coordonnées qui n’existent pas)</p></li>
-<li><p>Comment empêcher la modification des variables ? (conditionner les modifications selon la position du panier)</p></li>
-<li><p>Sous quelle condition le panier peut se déplacer à gauche (resp. à droite) ? (si la position en X de sa partie gauche (resp. droite) est &gt; 0 (resp. &lt; 4))</p></li>
-</ul>
-<p>On introduit ici la structure de contrôle conditionnelle <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> et les tests de comparaison qui <em>répondent</em> <code class="docutils literal notranslate"><span class="pre">vrai</span></code> ou <code class="docutils literal notranslate"><span class="pre">faux</span></code> et servent de condition à l’exécution d’instructions. Ici, le déplacement du panier.</p>
-</section>
-<section id="id14">
-<h5>Résultat attendu<a class="headerlink" href="#id14" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/panier3.png"/></p>
-</section>
-<section id="id15">
-<h5>Problèmes<a class="headerlink" href="#id15" title="Lien permanent vers ce titre">¶</a></h5>
-<p>Le panier se déplace avec les boutons, on veut utiliser l’inclinaison du micro:bit pour faire bouger le panier.</p>
-</section>
+<p>Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p>Ajouter un bloc <code class="docutils literal notranslate"><span class="pre">lorsque</span> <span class="pre">le</span> <span class="pre">bouton</span> <span class="pre">A</span> <span class="pre">est</span> <span class="pre">pressé</span></code>.</p></li>
+<li><p>A l’intérieur, ajouter un bloc <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour éteindre la led du panier.</p></li>
+<li><p>Modifier la valeur de la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> pour la diminuer de 1. Pour cela, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">panier</span> <span class="pre">de</span> <span class="pre">-1</span></code>.</p></li>
+<li><p>Ajouter un bloc <code class="docutils literal notranslate"><span class="pre">allumer</span></code> pour allumer la led correspondant au nouvel emplacement du panier.</p></li>
+<li><p>Faire la même chose pour le bouton <code class="docutils literal notranslate"><span class="pre">B</span></code> qui doit permettre de déplacer le panier vers la droite.</p></li>
+</ol>
+<p><img alt="img" src="../_images/panier2.png"/></p>
 </section>
 <section id="exercice-7">
-<h4>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Pour utiliser l’inclinaison du micro:bit, le remplacement des <code class="docutils literal notranslate"><span class="pre">Entrées</span></code> de type <em>lorsque bouton pressé</em> par celles de type <em>lorsque incliner</em> est assez évidente.
-Par contre, lors de l’utilisation on remarque que l’inclinaison n’engendre qu’un seul déplacement et qu’il faut repasser par l’horizontal pour faire un nouveau déplacement.</p>
-<section id="id16">
-<h5>Questions<a class="headerlink" href="#id16" title="Lien permanent vers ce titre">¶</a></h5>
+<h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si on appuie de nombreuses fois sur le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code> (resp. <code class="docutils literal notranslate"><span class="pre">B</span></code>), le panier disparait, il sort de l’écran.<br/>
+On doit empêcher le panier d’aller plus loin que les bords de l’écran.</p>
 <ul class="simple">
-<li><p>Pourquoi seul 1 déplacement est effectué et il est nécessaire de repasser par la position horizontale ? (l’inclinaison est un déclencheur comme l’appui sur <code class="docutils literal notranslate"><span class="pre">A</span></code>)</p></li>
-<li><p>Quel est en fait le comportement attendu ? (le panier se déplace <strong>tant que</strong> le micro:bit est incliné)</p></li>
+<li><p>Pourquoi est-ce que le panier sort de l’écran ? (la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> continue d’être modifiée pour finalement engendrer l’allumage de leds à des coordonnées qui n’existent pas)</p></li>
+<li><p>Comment empêcher la modification des variables ? (conditionner les modifications selon la position du panier)</p></li>
+<li><p>Sous quelle condition le panier peut-il se déplacer à gauche ? (si sa position en <code class="docutils literal notranslate"><span class="pre">x</span></code> est &gt; 0)</p></li>
+<li><p>Sous quelle condition le panier peut-il se déplacer à droite ? (si sa position en <code class="docutils literal notranslate"><span class="pre">x</span></code> est &lt; 4)</p></li>
 </ul>
-<p>On rajoute une boucle <code class="docutils literal notranslate"><span class="pre">tant</span> <span class="pre">que</span></code> conditionnée par l’inclinaison du micro:bit pour faire les déplacements déclanchés par l’inclinaison.<br/>
-Comme pour la chute du fruit, si on oublie la <code class="docutils literal notranslate"><span class="pre">pause</span></code>, le panier se déplace d’un bord à l’autre instantanément. Laisser les élèves faire le rapprochement.</p>
-</section>
-<section id="id17">
-<h5>Résultat attendu<a class="headerlink" href="#id17" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/panier4.png"/></p>
-<p>Fin de l’étape 2, on a un panier qui bouge lorsque le micro:bit est incliné.
-Certains élèves auron surement remarqué que lorsque le fruit tombe dans le panier, le panier disparait.
-Avant de s’occuper de la collision à proprement parler, on peut remédier ce problème simplement en <em>rallumant</em> le panier avant chaque chute de fruit.</p>
-</section>
+<p>On introduit ici la structure de contrôle conditionnelle <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> et les tests de comparaison qui <em>répondent</em> <code class="docutils literal notranslate"><span class="pre">vrai</span></code> ou <code class="docutils literal notranslate"><span class="pre">faux</span></code> et servent de condition à l’exécution d’instructions.<br/>
+Dans notre cas, on déplace le panier uniquement <strong>si</strong> ça ne le fait pas sortir de l’écran.</p>
+<p>Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p>Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">vrai</span> <span class="pre">alors</span></code> <strong>autour</strong> des instructions permettant de déplacer le panier vers la gauche (bouton <code class="docutils literal notranslate"><span class="pre">A</span></code>).</p></li>
+<li><p>Remplacer <code class="docutils literal notranslate"><span class="pre">vrai</span></code> par le test de comparaison qui permet de contrôler que la position du panier est &gt; 0.</p></li>
+<li><p>Faire la même chose pour le déplacement vers la droite (en ajustant le test de comparaison).</p></li>
+</ol>
+<p><img alt="img" src="../_images/panier3.png"/></p>
 </section>
 </section>
 <section id="etape-3-detecter-lorsquun-fruit-est-attrape">
-<h3>Étape 3 - Détecter lorsqu’un fruit est attrapé<a class="headerlink" href="#etape-3-detecter-lorsquun-fruit-est-attrape" title="Lien permanent vers ce titre">¶</a></h3>
-<section id="id18">
-<h4>Objectif<a class="headerlink" href="#id18" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Il s’agit maintenant de détecter lorsque le fruit est attrapé par le panier, c’est-à-dire lorqu’il y a collision entre le fruit et le panier et réaliser les actions qui en découle.</p>
-</section>
-<section id="id19">
-<h4>Exercice 7<a class="headerlink" href="#id19" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Visuellement il est facile de <em>voir</em> quand le fruit tombe dans le panier, mais comme le micro:bit ne <em>voit</em> pas, il faut trouver une autre solution pour qu’il puisse vérifier s’il y a collision ou non.</p>
-<section id="id20">
-<h5>Questions<a class="headerlink" href="#id20" title="Lien permanent vers ce titre">¶</a></h5>
-<ul class="simple">
-<li><p>A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées / positions du fruit et du panier sont les mêmes. Il est vraisemblable que plusieurs reformulation soient nécessaires pour obtenir la bonne réponse)</p></li>
-<li><p>Quelles sonts les coordonnées respectives du panier et du fruit ? (comme elles changent, varient, elles sont dans des variables. Fruit(<code class="docutils literal notranslate"><span class="pre">colonne</span></code>, <code class="docutils literal notranslate"><span class="pre">index</span></code>) et Panier(<code class="docutils literal notranslate"><span class="pre">panierG</span></code> ou <code class="docutils literal notranslate"><span class="pre">PanierD</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>))</p></li>
-<li><p>Comment s’écrit l’égalité des coordonnées avec ces variables ?</p></li>
-</ul>
-<p><strong>(PanierG = colonne OU PanierD = colonne) ET index = 4</strong></p>
-<p>Avant de traduire cette condition avec des blocs, il faut insister sur les priorités liées aux parenthèses de l’expression ci-dessus.</p>
-</section>
-<section id="id21">
-<h5>Résultat attendu<a class="headerlink" href="#id21" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/collision1.png"/></p>
-</section>
-<section id="id22">
-<h5>Problèmes<a class="headerlink" href="#id22" title="Lien permanent vers ce titre">¶</a></h5>
-<p>On a maintenant un test permettant de détecter la collision entre un fruit et le panier, mais on fait quoi ?</p>
-</section>
-</section>
+<h2>Étape 3 - Détecter lorsqu’un fruit est attrapé<a class="headerlink" href="#etape-3-detecter-lorsquun-fruit-est-attrape" title="Lien permanent vers ce titre">¶</a></h2>
 <section id="exercice-8">
-<h4>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Il s’agit maintenant de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu’il y a collision.<br/>
-Sans rentrer dans le détail de la portée des varibles, on peut juste utiliser le fait que la variable <code class="docutils literal notranslate"><span class="pre">index</span></code> soit utilisé dans notre test pour guider et justifier le position du test dans le code.</p>
-<section id="id23">
-<h5>Questions<a class="headerlink" href="#id23" title="Lien permanent vers ce titre">¶</a></h5>
+<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il s’agit maintenant de détecter lorsque le fruit est attrapé par le panier, c’est-à-dire lorqu’il y a collision entre le fruit et le panier et réaliser les actions qui en découle.</p>
+<p>Visuellement il est facile de <em>voir</em> quand le fruit tombe dans le panier, mais comme le micro:bit ne <em>voit</em> pas, il faut trouver une autre solution pour qu’il puisse vérifier s’il y a collision ou non.</p>
 <ul class="simple">
-<li><p>A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, i.e. dans la boucle <code class="docutils literal notranslate"><span class="pre">répéter</span></code>, en dehors, le fruit n’existe pas )</p></li>
+<li><p>A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes)</p></li>
+<li><p>Quelles sonts les coordonnées respectives du panier et du fruit ? (comme elles changent, varient, elles sont dans des variables. Fruit(<code class="docutils literal notranslate"><span class="pre">colonne</span></code>, <code class="docutils literal notranslate"><span class="pre">index</span></code>) et panier(<code class="docutils literal notranslate"><span class="pre">panier</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>))</p></li>
+<li><p>Comment s’écrit l’égalité des coordonnées avec ces variables ? (<code class="docutils literal notranslate"><span class="pre">colonne</span> <span class="pre">==</span> <span class="pre">panier</span> <span class="pre">ET</span> <span class="pre">index</span> <span class="pre">==</span> <span class="pre">4</span></code>)</p></li>
+</ul>
+<p>Traduisez cette égalité avec les blocs à votre disposition.</p>
+<p><img alt="img" src="../_images/collision1.png"/></p>
+</section>
+<section id="exercice-9">
+<h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On a maintenant un test permettant de détecter la collision entre un fruit et le panier, mais on fait quoi ?<br/>
+Il s’agit maintenant de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu’il y a collision.</p>
+<ul class="simple">
+<li><p>A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, i.e. dans la boucle <code class="docutils literal notranslate"><span class="pre">répéter</span></code>, en dehors, le fruit n’existe pas)</p></li>
 <li><p>Que doit-il se passer lorsqu’on attrape un fruit ? (on marque 1 point)</p></li>
 <li><p>Comment faire pour tenir le score à jour ? (il faut utiliser une variable)</p></li>
 </ul>
 <p>L’implémentation de ces éléments ne pose pas de problème, cependant il ne faut pas oublier d’initialiser le score à 0 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.<br/>
-En outre, on peut également <em>fortement</em> suggérer de donner un signal visuel au joueur lorsqu’il marque un point ; avec l’apparition d’une icône, par exemple.</p>
-</section>
-<section id="id24">
-<h5>Résultat attendu<a class="headerlink" href="#id24" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/collision2.png"/></p>
-</section>
-<section id="id25">
-<h5>Problèmes<a class="headerlink" href="#id25" title="Lien permanent vers ce titre">¶</a></h5>
-<p>Si l’icône a été ajoutée comme visualisation du point marqué, lorsque le jeu continue, l’icône est toujours présente et perturbe la jouabilité. Pour y remédier, il suffit d’<code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> après avoir modifié le score.</p>
-<p>Fin de l’étape 3, lorsqu’un fruit tombe dans le panier, on le détecte et on marque un point.</p>
-</section>
+En outre, on peut également <em>fortement</em> suggérer de donner un signal visuel au joueur lorsqu’il marque un point ; avec l’apparition d’un smiley, par exemple.</p>
+<p>Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p>Créez une nouvelle variable nommée <code class="docutils literal notranslate"><span class="pre">score</span></code> et définissez-la à 0 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.</p></li>
+<li><p>Ajouter le bloc conditionnel testant la collision à la fin de la boucle faisant tomber le fruit.</p></li>
+<li><p>Si la condition est respectée, affichez un smiley avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>.</p></li>
+<li><p>Si la condition est respectée, augmenter le <code class="docutils literal notranslate"><span class="pre">score</span></code> de 1.</p></li>
+<li><p>Si la condition est respectée, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> afin d’éffacer le smiley.</p></li>
+</ol>
+<p><img alt="img" src="../_images/collision2.png"/></p>
+<p>Vous remarquerez que nous avons ajoué un bloc <code class="docutils literal notranslate"><span class="pre">allumer</span> <span class="pre">x</span> <span class="pre">panier</span></code> au début du bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code>. Sans ce bloc, le panier disparaît lorsqu’il entre en collisin avec un fruit.<br/>
+L’ajout de ce bloc permet de rallumer la led associée au panier avant la chute d’un fruit.</p>
 </section>
 </section>
 <section id="etape-4-gestion-des-echecs">
-<h3>Étape 4 - Gestion des échecs<a class="headerlink" href="#etape-4-gestion-des-echecs" title="Lien permanent vers ce titre">¶</a></h3>
-<section id="id26">
-<h4>Objectif<a class="headerlink" href="#id26" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Un échec est lorsqu’un fruit fini sa chute en dehors du panier. Il faut détecter lorsque ce cas se produit et également définir les actions associées.</p>
-</section>
-<section id="exercice-9">
-<h4>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h4>
+<h2>Étape 4 - Gestion des échecs<a class="headerlink" href="#etape-4-gestion-des-echecs" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-10">
+<h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Un échec se produit lorsqu’un fruit finit sa chute en dehors du panier. Il faut détecter lorsque ce cas se produit et également définir les actions associées.</p>
 <p>L’échec n’est pas seulement le contraire du fruit qui tombe dans le panier, car cela inclut également tous les cas ou le fruit est en train de tomber, qu’il soit au-dessus du panier ou non.<br/>
 Il faut donc déterminer comment détecter ces cas là uniquement.</p>
-<section id="id27">
-<h5>Questions<a class="headerlink" href="#id27" title="Lien permanent vers ce titre">¶</a></h5>
 <ul class="simple">
 <li><p>Quels sont les positions du fruit concernés par le <code class="docutils literal notranslate"><span class="pre">sinon</span></code> du bloc permettant de détecter les collisions ? (toutes les positions sauf celles du panier)</p></li>
 <li><p>Toutes ces positions constituent-elles des échecs ? (non)</p></li>
 <li><p>Quelle condition supplémentaire doit-on avoir pour que le fruit soit tombé à côté du panier ? (index = 4)</p></li>
 <li><p>Que se passe-t-il lorsqu’on rate un fruit ? (perte de vie, par exemple)</p></li>
 </ul>
-<p>Là aussi, une fois les réponses déterminées, l’implémentation ne pose pas de difficultés particulière. A l’instar de la collision, on peut ajouter un signal visuel pour signifier l’échec au jouer. Dans ce cas, il ne faut pas oublier d’<code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code>. Il ne faut pas non plus oublier d’initialiser le nombre de <code class="docutils literal notranslate"><span class="pre">vies</span></code> au démarrage.</p>
+<p>Là aussi, une fois les réponses déterminées, l’implémentation ne pose pas de difficultés particulière. Comme pour la collision, on peut ajouter un signal visuel pour signifier l’échec au joueur. Dans ce cas, il ne faut pas oublier d’<code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code>. Il ne faut pas non plus oublier d’initialiser le nombre de <code class="docutils literal notranslate"><span class="pre">vies</span></code> au démarrage.</p>
+<p>Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p>Créez une nouvelle variable nommée <code class="docutils literal notranslate"><span class="pre">vie</span></code> et définissez-la à 3 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.</p></li>
+<li><p>Cliquez 2x sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code> du bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span></code> de la collision afin de faire apparaître le <code class="docutils literal notranslate"><span class="pre">sinon</span> <span class="pre">si</span> <span class="pre">...</span></code>.</p></li>
+<li><p>Ajoutez le bloc permettant de tester l’échec dans le <code class="docutils literal notranslate"><span class="pre">sinon</span> <span class="pre">si</span> <span class="pre">...</span></code>. Pour rappel, la condition d’échec est que le fruit soit arrivé en bas de l’écran et donc que <code class="docutils literal notranslate"><span class="pre">index</span></code> vaut 4.</p></li>
+<li><p>Si la condition d’échec est respectée, affichez un smiley triste avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>.</p></li>
+<li><p>Si la condition d’échec est respectée, diminuer la <code class="docutils literal notranslate"><span class="pre">vie</span></code> de 1.</p></li>
+<li><p>Si la condition d’échec est respectée, <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code>.</p></li>
+</ol>
+<p><img alt="img" src="../_images/echec1.png"/></p>
 </section>
-<section id="id28">
-<h5>Résultat attendu<a class="headerlink" href="#id28" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/echec.png"/></p>
 </section>
-<section id="id29">
-<h5>Problèmes<a class="headerlink" href="#id29" title="Lien permanent vers ce titre">¶</a></h5>
+<section id="etape-5-fin-du-jeu">
+<h2>Étape 5 - Fin du jeu<a class="headerlink" href="#etape-5-fin-du-jeu" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-11">
+<h3>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Le jeu est maintenant fonctionnel, on marque des points lorsqu’un fruit est attrapé et on perd une vie quand on le rate. Cependant, le jeu ne s’arrête pas même si on a perdu plus de vies qu’on en avait au départ.</p>
-<p>Fin de l’étape 4, pour finaliser le jeu il va falloir qu’il s’arrête lorsqu’on a plus de vie et qu’on ait la possibilité de recommencer une nouvelle partie.</p>
-</section>
-</section>
-</section>
-<section id="etape-5-fin-du-jeu-et-nouvelle-partie">
-<h3>Étape 5 - Fin du jeu et nouvelle partie<a class="headerlink" href="#etape-5-fin-du-jeu-et-nouvelle-partie" title="Lien permanent vers ce titre">¶</a></h3>
-<section id="id30">
-<h4>Objectif<a class="headerlink" href="#id30" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Déterminer lorsque le jeu doit s’arrêter et trouver une solution pour recommencer une partie.</p>
-</section>
-<section id="exercice-10">
-<h4>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Faire s’arrêter le jeu selon une condition à déterminer.</p>
-<section id="id31">
-<h5>Questions<a class="headerlink" href="#id31" title="Lien permanent vers ce titre">¶</a></h5>
+<p>Nous allons donc faire s’arrêter le jeu selon une condition à déterminer, puis nous afficherons le score du joueur.</p>
 <ul class="simple">
 <li><p>Quand est-ce que le jeu doit s’arrêter ? (lorsqu’on a plus de vies)</p></li>
 <li><p>Quelle est la condition qui permet de continuer à jouer ? (si le nombre de vies &gt; 0)</p></li>
-<li><p>Quelle partie du jeu suffit-il d’empêcher pour que le jeu soit fini, de facto ? (la chute des fruits)</p></li>
-<li><p>Que doit-on faire lorsque le jeu est fini ? (afficher le score, signifier le Game Over au joueur)</p></li>
+<li><p>Quelle partie du jeu suffit-il d’empêcher pour que le jeu s’arrête ? (la chute des fruits)</p></li>
+<li><p>Que doit-on faire lorsque le jeu est fini ? (afficher le score)</p></li>
 </ul>
 <p>L’arrêt du jeu s’implémente simplement en conditionnant la chute des fruits au fait d’avoir au moins une vie, l’alternative (sinon) étant la fin de partie avec affichage du score.</p>
-</section>
-<section id="id32">
-<h5>Résultat attendu<a class="headerlink" href="#id32" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/gameover1.png"/></p>
-</section>
-</section>
-<section id="exercice-11">
-<h4>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">¶</a></h4>
-<p>Donner au joueur la possibilité de recommencer une partie, par exemple en appuyant sur <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">+</span> <span class="pre">B</span></code>.</p>
-<section id="id33">
-<h5>Questions<a class="headerlink" href="#id33" title="Lien permanent vers ce titre">¶</a></h5>
-<ul class="simple">
-<li><p>Qu’est-ce qui fait qu’on a perdu, qu’on ne peut plus jouer ? (on a plus de vies)</p></li>
-<li><p>Que faudrait-il pour que le jeu recommence ? (avoir de nouveau des vies)</p></li>
-<li><p>Est-ce qu’il y a autre chose qu’il faudrait faire pour que ce soit une nouvelle partie ? (remettre le score à 0, effacer l’écran, allumer le panier, tout ce qui est fait au démarrage)</p></li>
-</ul>
-<p>Pour finir, aucune difficulté d’implémentation, il reste simplement à tester le jeu et vérifier les détails d’affichage.</p>
-</section>
-<section id="id34">
-<h5>Résultat attendu<a class="headerlink" href="#id34" title="Lien permanent vers ce titre">¶</a></h5>
-<p><img alt="img" src="divers/media/gameover2.png"/></p>
+<p>Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p>Ajoutez la condition testant que <code class="docutils literal notranslate"><span class="pre">vie</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> tout autour du code se trouvant dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code>. Ainsi les fruits ne tomberont que s’il reste des vies au joueur.</p></li>
+<li><p>Si la condition n’est <strong>pas</strong> respectée (c’est à dire s’il reste des vies), alors ajoutez le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">nombre</span></code> afin d’afficher le score.</p></li>
+</ol>
+<p><img alt="img" src="../_images/gameover1.png"/></p>
 <p>Ceci termine l’implémentation de base de ce jeu sur micro:bit.<br/>
-Une version du jeu complet est disponible <span class="xref myst">ici</span>, il suffit de le déposer dans la fenêtre Makecode ouverte dans votre navigateur.</p>
-</section>
-</section>
+Voici le code final que vous devriez avoir.</p>
+<p><img alt="img" src="../_images/microbit_final.png"/></p>
+<p>Une version du jeu complet est disponible <span class="xref myst">ici</span>, il suffit de déposer le fichier dans la fenêtre Makecode ouverte dans votre navigateur (mais attention, il remplacera votre code).</p>
 </section>
 </section>
 <section id="pour-aller-plus-loin">
 <h2>Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour rendre le jeu plus intéressant et donner aux élèves l’occasion de faire des expérimentations et remobiliser ce qu’ils viennent de voir, on peut demander à la classe ce qu’on pourrait faire pour augmenter la difficulté du jeu et les laisser essayer d’implémenter quelques unes de leur suggestions.<br/>
-Des suggestions qui reviennent régulièrement :</p>
+<p>Pour rendre le jeu plus intéressant, voici une liste de suggestions:</p>
 <ul class="simple">
-<li><p>Augmenter la vitesse de chute du fruit tous les X points</p></li>
-<li><p>Diminuer la vitesse de déplacement du panier tous les Y points</p></li>
+<li><p>Augmenter la vitesse de chute des fruits après un certain nombre de points</p></li>
 <li><p>Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité pour faire la distinction)</p></li>
+<li><p>Faire déplacer le panier en inclinant la carte micro:bit au lieu des boutons A et B</p></li>
 <li><p>Faire tomber plusieurs fruits</p></li>
-<li><p>Perturber la chute du fruit qui ne reste plus sur sa colonne initiale (attention aux cas en bord de l’écran)</p></li>
-<li><p>Inverser les commandes</p></li>
+<li><p>Faire tomber certains fruits légèrement en diagonal</p></li>
+<li><p>Elargir le panier à 2 leds</p></li>
 </ul>
-<p><img alt="img" src="divers/media/gameall.png"/></p>
 </section>
 </section>
 
@@ -672,104 +557,32 @@ Des suggestions qui reviennent régulièrement :</p>
             <ul>
 <li><a class="reference internal" href="#">Catch the fruit</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
-<li><a class="reference internal" href="#objectifs-du-cours">Objectifs du cours</a></li>
-<li><a class="reference internal" href="#duree">Durée</a></li>
-<li><a class="reference internal" href="#materiel-requis">Matériel requis</a></li>
-<li><a class="reference internal" href="#accroche">Accroche</a></li>
-<li><a class="reference internal" href="#marche-a-suivre">Marche à suivre</a><ul>
-<li><a class="reference internal" href="#etape-0-analyse-des-besoins">Étape 0 - Analyse des besoins</a><ul>
-<li><a class="reference internal" href="#objectif-prendre-conscience-de-la-necessite-de-reflechir-avant-de-coder">Objectif : Prendre conscience de la nécessité de réfléchir avant de coder</a></li>
-<li><a class="reference internal" href="#definition-des-besoins">Définition des besoins</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#mise-en-place">Mise en place</a></li>
+<li><a class="reference internal" href="#etapes-a-programmer">Etapes à programmer</a></li>
 <li><a class="reference internal" href="#etape-1-faire-tomber-un-fruit">Étape 1 - Faire tomber un fruit</a><ul>
-<li><a class="reference internal" href="#objectif">Objectif</a></li>
-<li><a class="reference internal" href="#exercice-1">Exercice 1</a><ul>
-<li><a class="reference internal" href="#questions">Questions</a></li>
-<li><a class="reference internal" href="#resultat-attendu">Résultat attendu</a></li>
-<li><a class="reference internal" href="#problemes">Problèmes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#exercice-2">Exercice 2</a><ul>
-<li><a class="reference internal" href="#id1">Questions</a></li>
-<li><a class="reference internal" href="#id2">Résultat attendu</a></li>
-<li><a class="reference internal" href="#id3">Problèmes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#exercice-3">Exercice 3</a><ul>
-<li><a class="reference internal" href="#id4">Questions</a></li>
-<li><a class="reference internal" href="#id5">Résultat attendu</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
+<li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
+<li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
+<li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#etape-2-deplacer-le-panier">Étape 2 - Déplacer le panier</a><ul>
-<li><a class="reference internal" href="#id6">Objectif</a></li>
-<li><a class="reference internal" href="#exercice-4">Exercice 4</a><ul>
-<li><a class="reference internal" href="#id7">Questions</a></li>
-<li><a class="reference internal" href="#id8">Résultat attendu</a></li>
-<li><a class="reference internal" href="#id9">Problèmes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#exercice-5">Exercice 5</a><ul>
-<li><a class="reference internal" href="#id10">Questions</a></li>
-<li><a class="reference internal" href="#id11">Résultat attendu</a></li>
-<li><a class="reference internal" href="#id12">Problèmes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#exercice-6">Exercice 6</a><ul>
-<li><a class="reference internal" href="#id13">Questions</a></li>
-<li><a class="reference internal" href="#id14">Résultat attendu</a></li>
-<li><a class="reference internal" href="#id15">Problèmes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#exercice-7">Exercice 7</a><ul>
-<li><a class="reference internal" href="#id16">Questions</a></li>
-<li><a class="reference internal" href="#id17">Résultat attendu</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
+<li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
+<li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#etape-3-detecter-lorsquun-fruit-est-attrape">Étape 3 - Détecter lorsqu’un fruit est attrapé</a><ul>
-<li><a class="reference internal" href="#id18">Objectif</a></li>
-<li><a class="reference internal" href="#id19">Exercice 7</a><ul>
-<li><a class="reference internal" href="#id20">Questions</a></li>
-<li><a class="reference internal" href="#id21">Résultat attendu</a></li>
-<li><a class="reference internal" href="#id22">Problèmes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#exercice-8">Exercice 8</a><ul>
-<li><a class="reference internal" href="#id23">Questions</a></li>
-<li><a class="reference internal" href="#id24">Résultat attendu</a></li>
-<li><a class="reference internal" href="#id25">Problèmes</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>
+<li><a class="reference internal" href="#exercice-9">Exercice 9</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#etape-4-gestion-des-echecs">Étape 4 - Gestion des échecs</a><ul>
-<li><a class="reference internal" href="#id26">Objectif</a></li>
-<li><a class="reference internal" href="#exercice-9">Exercice 9</a><ul>
-<li><a class="reference internal" href="#id27">Questions</a></li>
-<li><a class="reference internal" href="#id28">Résultat attendu</a></li>
-<li><a class="reference internal" href="#id29">Problèmes</a></li>
+<li><a class="reference internal" href="#exercice-10">Exercice 10</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a class="reference internal" href="#etape-5-fin-du-jeu-et-nouvelle-partie">Étape 5 - Fin du jeu et nouvelle partie</a><ul>
-<li><a class="reference internal" href="#id30">Objectif</a></li>
-<li><a class="reference internal" href="#exercice-10">Exercice 10</a><ul>
-<li><a class="reference internal" href="#id31">Questions</a></li>
-<li><a class="reference internal" href="#id32">Résultat attendu</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#exercice-11">Exercice 11</a><ul>
-<li><a class="reference internal" href="#id33">Questions</a></li>
-<li><a class="reference internal" href="#id34">Résultat attendu</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#etape-5-fin-du-jeu">Étape 5 - Fin du jeu</a><ul>
+<li><a class="reference internal" href="#exercice-11">Exercice 11</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pour-aller-plus-loin">Pour aller plus loin</a></li>
