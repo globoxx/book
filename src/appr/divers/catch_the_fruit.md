@@ -93,7 +93,7 @@ Voici les étapes à suivre:
 2. Utilisez ensuite le bloc `définir colonne à` pour donner la valeur aléatoire à la variable `colonne`.
 3. Remplassez les coordonnées de `x` par la valeur de la variable `colonne`.
 
-![img](media/tomberfruit3.png)
+![img](../media/tomberfruit3.png)
 
 Fin de l'étape 1, on a un fruit qui tombe dans une colonne choisie aléatoirement.
 
@@ -160,6 +160,8 @@ Voici les étapes à suivre:
 
 ![img](../media/panier3.png)
 
+Fin de l'étape 2, on a un panier déplaçable à l'aide des boutons.
+
 ## Étape 3 - Détecter lorsqu'un fruit est attrapé
 
 ### Exercice 8
@@ -201,6 +203,8 @@ Voici les étapes à suivre:
 Vous remarquerez que nous avons ajoué un bloc `allumer x panier` au début du bloc `toujours`. Sans ce bloc, le panier disparaît lorsqu'il entre en collisin avec un fruit.  
 L'ajout de ce bloc permet de rallumer la led associée au panier avant la chute d'un fruit.
 
+Fin de l'étape 3, le jeu détecte la collision entre le panier et le fruit.
+
 ## Étape 4 - Gestion des échecs
 
 ### Exercice 10
@@ -227,6 +231,8 @@ Voici les étapes à suivre:
 6. Si la condition d'échec est respectée, `effacer l'écran`.
 
 ![img](../media/echec1.png)
+
+Fin de l'étape 4, le jeu détecte quand le joueur rate un fruit.
 
 ## Étape 5 - Fin du jeu
 
