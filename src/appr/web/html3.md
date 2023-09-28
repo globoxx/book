@@ -149,7 +149,7 @@ Parmi les liens suivants, les quels sont relatifs ?
 * {f}`<a href='https://www.codeur.com/page2/'>Page 2</a>`
 ```
 
-```{admonition}
+```{admonition} Remonter dans les dossiers parents
 :class: note
 Dans un chemin **relatif**, utiliser `..` permet de pointer vers le dossier parent (c'est à dire que cela permet de **remonter** dans la hiérarchie des fichiers).
 ```
