@@ -75,7 +75,7 @@ La coordonnée verticale `y` est la seule à changer entre chaque répétition. 
 Utilisez le bloc `pour index variant de 0 à 4` qui va permettre de créer une **boucle** dans laquelle `index` va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu'il nous faut pour les valeurs de `y`.  
 `index` est ici ce que l'on appelle une `variable`. Sa valeur va **varier** de 0 à 4 et on peut l'utiliser pour indiquer la coordonnée `y`. Il faut remplacer les valeurs de `y` par `index`.
 
-```{dropdown} Montre moi les étapes à suivre
+```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Dans le bloc `toujours`, gardez une seule répétition des blocs `allumer`, `pause` et `éteindre`. Supprimez les autres blocs.
@@ -92,7 +92,7 @@ Voici les étapes à suivre:
 Le fruit tombe toujours dans la même colonne, on veut changer de colonne pour chaque fruit et que le choix de la colonne soit aléatoire.
 
 Pour choisir un nombre au hasard, on peut utiliser le bloc `choisir au hasard de 0 à 10` du menu `Maths`.  
-Ce bloc permet de choisir un tirer un entier entre 2 bornes, dans notre cas de 0 à 4.
+Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0 à 4.
 
 * Comment et où utiliser ce bloc ?
 * Que va-t-il se passer si on le met à la place de `x` dans les blocs `allumer` et `éteindre` ?
@@ -100,12 +100,12 @@ Ce bloc permet de choisir un tirer un entier entre 2 bornes, dans notre cas de 0
 Il faut donc choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.  
 Dès l'instant où on veut stocker de l'information pour pouvoir la réutiliser, la solution est d'utiliser une `variable`.
 
-```{dropdown} Montre moi les étapes à suivre
+```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Dans la catégorie de blocs `Variables`, choisissez `Créer une variable` et donnez lui le nom `colonne`. Cette variable aura pour objectif de stocker le numéro aléatoire de la colonne dans laquelle va tomber le fruit.
 2. Utilisez ensuite le bloc `définir colonne à` pour donner la valeur aléatoire à la variable `colonne`.
-3. Remplassez les coordonnées de `x` par la valeur de la variable `colonne`.
+3. Remplacez les coordonnées de `x` par la valeur de la variable `colonne`.
 ```
 
 ```{dropdown} Voir la solution
@@ -123,15 +123,15 @@ Nous allons programmer le panier qui se déplace de droite à gauche à l'aide d
 Pour commencer il faut choisir comment sera représenté le panier. Nous utiliserons 1 seule led sur la ligne tout en bas (coordonnée `y` à 4).
 
 * La position du panier va changer au cours du jeu, comment faire pour stocker de l'information qui varie ? (utiliser une variable)
-* Que doit-on représenter avec cette variables ? (la position en `x` du panier, `y` vaut toujours 4, car sur la dernière ligne)
+* Que doit-on représenter avec cette variables ? (la position en `x` du panier)
 
 Partons sur 2 variables, `panierG` et `panierD`. On choisi la position de départ du panier et on initialise les variables en conséquence.  
 Si on oublie d'allumer les leds correspondantes, on ne verra pas le panier !
 
-```{dropdown} Montre moi les étapes à suivre
+```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
-1. Créer une nouvelle variable nommée `panier`.
+1. Créez une nouvelle variable nommée `panier`.
 2. Dans le bloc `au démarrage`, ajoutez un bloc `définir panier à 0` pour définir la position initiale du panier à 0 (tout à gauche).
 3. Ajoutez un bloc `allumer` afin d'allumer la led à la position du panier.
 ```
@@ -148,16 +148,16 @@ Nous allons utiliser les boutons `A` et `B` pour les déplacements gauche et dro
 * Que signifie déplacer le panier à gauche (resp. à droite) en termes de positions ? (diminuer les valeurs de ses coordonnées en `x` de 1, resp. les augmenter de 1)
 * Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)
 
-On doit donc éteindre les leds du panier, faire le déplacement, allumer les leds du panier. On le fait avec `A` pour le déplacement à gauche et avec `B` pour le déplacement à droite.
+Utilisez les blocs `lorsque le bouton ... est pressé` et ajoutez-y les blocs permettant de déplacer le panier. Le bloc `modifier panier de 1` permet d'augmenter la valeur de la variable `panier` de 1. Changez le 1 en -1 afin de diminuer sa valeur.
 
-```{dropdown} Montre moi les étapes à suivre
+```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
-1. Ajouter un bloc `lorsque le bouton A est pressé`.
-2. A l'intérieur, ajouter un bloc `éteindre` pour éteindre la led du panier.
-3. Modifier la valeur de la variable `panier` pour la diminuer de 1. Pour cela, ajoutez un bloc `modifier panier de -1`.
-4. Ajouter un bloc `allumer` pour allumer la led correspondant au nouvel emplacement du panier.
-5. Faire la même chose pour le bouton `B` qui doit permettre de déplacer le panier vers la droite.
+1. Ajoutez un bloc `lorsque le bouton A est pressé`.
+2. A l'intérieur, ajoutez un bloc `éteindre` pour éteindre la led du panier.
+3. Modifiez la valeur de la variable `panier` pour la diminuer de 1. Pour cela, ajoutez un bloc `modifier panier de -1`.
+4. Ajoutez un bloc `allumer` pour allumer la led correspondant au nouvel emplacement du panier.
+5. Faites la même chose pour le bouton `B` qui doit permettre de déplacer le panier vers la droite.
 ```
 
 ```{dropdown} Voir la solution
@@ -177,12 +177,12 @@ On doit empêcher le panier d'aller plus loin que les bords de l'écran.
 On introduit ici la structure de contrôle conditionnelle `si ... alors ...` et les tests de comparaison qui *répondent* `vrai` ou `faux` et servent de condition à l'exécution d'instructions.  
 Dans notre cas, on déplace le panier uniquement **si** ça ne le fait pas sortir de l'écran.
 
-```{dropdown} Montre moi les étapes à suivre
+```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Ajoutez un bloc `si vrai alors` **autour** des instructions permettant de déplacer le panier vers la gauche (bouton `A`).
-2. Remplacer `vrai` par le test de comparaison qui permet de contrôler que la position du panier est > 0.
-3. Faire la même chose pour le déplacement vers la droite (en ajustant le test de comparaison).
+2. Remplacez `vrai` par le test de comparaison qui permet de contrôler que la position du panier est > 0.
+3. Faites la même chose pour le déplacement vers la droite (en ajustant le test de comparaison).
 ```
 
 ```{dropdown} Voir la solution
@@ -203,7 +203,7 @@ Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais c
 * Quelles sonts les coordonnées respectives du panier et du fruit ? (comme elles changent, varient, elles sont dans des variables. Fruit(`colonne`, `index`) et panier(`panier`, `4`))
 * Comment s'écrit l'égalité des coordonnées avec ces variables ? (`colonne == panier ET index == 4`)
 
-Traduisez cette égalité avec les blocs à votre disposition.
+Traduisez cette égalité avec les blocs de `comparaison` à votre disposition dans la section `logique`.
 
 ```{dropdown} Voir la solution
 ![img](../media/collision1.png)
@@ -221,13 +221,13 @@ Il s'agit maintenant de déterminer à quel moment du jeu il faut faire ce test,
 L'implémentation de ces éléments ne pose pas de problème, cependant il ne faut pas oublier d'initialiser le score à 0 `au démarrage`.  
 En outre, on peut également *fortement* suggérer de donner un signal visuel au joueur lorsqu'il marque un point ; avec l'apparition d'un smiley, par exemple.
 
-```{dropdown} Montre moi les étapes à suivre
+```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Créez une nouvelle variable nommée `score` et définissez-la à 0 `au démarrage`.
-2. Ajouter le bloc conditionnel testant la collision à la fin de la boucle faisant tomber le fruit.
+2. Ajoutez le bloc conditionnel testant la collision à la fin de la boucle faisant tomber le fruit.
 3. Si la condition est respectée, affichez un smiley avec le bloc `montrer l'icône`.
-4. Si la condition est respectée, augmenter le `score` de 1.
+4. Si la condition est respectée, augmentez le `score` de 1.
 5. Si la condition est respectée, ajoutez un bloc `effacer l'écran` afin d'effacer le smiley.
 ```
 
@@ -256,15 +256,15 @@ Il faut donc déterminer comment détecter ces cas là uniquement.
 
 Là aussi, une fois les réponses déterminées, l'implémentation ne pose pas de difficultés particulière. Comme pour la collision, on peut ajouter un signal visuel pour signifier l'échec au joueur. Dans ce cas, il ne faut pas oublier d'`effacer l'écran`. Il ne faut pas non plus oublier d'initialiser le nombre de `vies` au démarrage.
 
-```{dropdown} Montre moi les étapes à suivre
+```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Créez une nouvelle variable nommée `vie` et définissez-la à 3 `au démarrage`.
 2. Cliquez 2x sur le petit `+` du bloc `si ...` de la collision afin de faire apparaître le `sinon si ...`.
 3. Ajoutez le bloc permettant de tester l'échec dans le `sinon si ...`. Pour rappel, la condition d'échec est que le fruit soit arrivé en bas de l'écran et donc que `index` vaut 4.
 4. Si la condition d'échec est respectée, affichez un smiley triste avec le bloc `montrer l'icône`.
-5. Si la condition d'échec est respectée, diminuer la `vie` de 1.
-6. Si la condition d'échec est respectée, `effacer l'écran`.
+5. Si la condition d'échec est respectée, diminuez la `vie` de 1.
+6. Si la condition d'échec est respectée, effacez l'écran.
 ```
 
 ```{dropdown} Voir la solution
@@ -288,7 +288,7 @@ Nous allons donc faire s'arrêter le jeu selon une condition à déterminer, pui
 
 L'arrêt du jeu s'implémente simplement en conditionnant la chute des fruits au fait d'avoir au moins une vie, l'alternative (sinon) étant la fin de partie avec affichage du score.
 
-```{dropdown} Montre moi les étapes à suivre
+```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Ajoutez la condition testant que `vie > 0` tout autour du code se trouvant dans le bloc `toujours`. Ainsi les fruits ne tomberont que s'il reste des vies au joueur.
