@@ -24,7 +24,7 @@ Voici les différentes étapes que nous allons suivre afin de programmer le jeu:
 2. Déplacer le panier à l'aide des boutons
 3. Détecter lorsqu'un fruit est attrapé (i.e. collision fruit-panier)
 4. Gestion des échecs (i.e. fruit n'est pas attrapé)
-5. Fin du jeu et nouvelle partie
+5. Fin du jeu et affichage du score
 
 ## Étape 1 - Faire tomber un fruit
 
@@ -49,8 +49,8 @@ Ajoutez des blocs `allumer` dans le bloc `toujours` pour allumer tous les blocs 
 
 Ajoutez à présent les blocs `éteindre` pour allumer et éteindre successivement tous les leds de la colonne du haut vers le bas.
 
-Problème: vous ne voyez rien ! Pourquoi ? Car les led s'allument et s'éteignent trop vite pour que vous puissiez voir.  
-Pour résoudre ce problème, ajoutez des blocs `pause` de 500ms après chaque allumage afin que le led ne s'éteigne pas immédiatement après avoir été allumé.
+Problème: vous ne voyez rien ! Pourquoi ? Car les led s'allument et s'éteignent trop vite pour que vous puissiez les voir.  
+Pour résoudre ce problème, ajoutez des blocs `pause` de 500ms après chaque allumage afin que la led ne s'éteigne pas immédiatement après avoir été allumé.
 
 ```{dropdown} Voir la solution
 ![img](../media/tomberfruit1.png)
