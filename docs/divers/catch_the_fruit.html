@@ -343,7 +343,7 @@ Voir la solution<div class="summary-down docutils">
 <section id="exercice-3">
 <h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
 <p>En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes blocs : <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code>. Chaque bloc est répété 5 fois.<br/>
-Quand on a une répétition d’instructions, on veut que ce soit l’ordinateur qui fasse le travail : on utilise les <strong>boucles</strong>.</p>
+Quand on a une répétition d’instructions, on veut que ce soit l’ordinateur qui fasse le travail ! On utilise alors les <strong>boucles</strong>.</p>
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
@@ -359,8 +359,9 @@ Quand on a une répétition d’instructions, on veut que ce soit l’ordinateur
 <p>La coordonnée verticale <code class="docutils literal notranslate"><span class="pre">y</span></code> est la seule à changer entre chaque répétition. C’est le cas car le fruit tombe du haut vers le bas, et donc la coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> est augmentée de 1 à chaque tour.</p>
 </div>
 </div>
-</form></div><p>Utilisez le bloc <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code> qui va permettre de créer une <strong>boucle</strong> dans laquelle <code class="docutils literal notranslate"><span class="pre">index</span></code> va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu’il nous faut pour les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code>.<br/>
-<code class="docutils literal notranslate"><span class="pre">index</span></code> est ici ce que l’on appelle une <code class="docutils literal notranslate"><span class="pre">variable</span></code>. Sa valeur va <strong>varier</strong> de 0 à 4 et on peut l’utiliser pour indiquer la coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code>. Il faut remplacer les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code> par <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
+</form></div><p>L’idée est donc d’utiliser une boucle qui va répéter les instructions tout en augmentant <code class="docutils literal notranslate"><span class="pre">y</span></code> de 1 à chaque tour afin de faire tomber le fruit.</p>
+<p>Utilisez le bloc <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code> qui va permettre de créer une <strong>boucle</strong> dans laquelle <code class="docutils literal notranslate"><span class="pre">index</span></code> va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu’il nous faut pour les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code>.<br/>
+<code class="docutils literal notranslate"><span class="pre">index</span></code> est ici ce que l’on appelle une <code class="docutils literal notranslate"><span class="pre">variable</span></code>. Sa valeur va <strong>varier</strong> de 0 à 4 à chaque tour. Il faut donc ensuite remplacer les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code> par <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -387,14 +388,13 @@ Voir la solution<div class="summary-down docutils">
 </details></section>
 <section id="exercice-4">
 <h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Le fruit tombe toujours dans la même colonne, on veut changer de colonne pour chaque fruit et que le choix de la colonne soit aléatoire.</p>
+<p>Le fruit tombe toujours dans la même colonne, on veut changer aléatoirement de colonne pour chaque fruit.</p>
 <p>Pour choisir un nombre au hasard, on peut utiliser le bloc <code class="docutils literal notranslate"><span class="pre">choisir</span> <span class="pre">au</span> <span class="pre">hasard</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">10</span></code> du menu <code class="docutils literal notranslate"><span class="pre">Maths</span></code>.<br/>
-Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0 à 4.</p>
+Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0 à 4 pour les 5 colonnes possibles.</p>
 <ul class="simple">
 <li><p>Comment et où utiliser ce bloc ?</p></li>
-<li><p>Que va-t-il se passer si on le met à la place de <code class="docutils literal notranslate"><span class="pre">x</span></code> dans les blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> ?</p></li>
 </ul>
-<p>Il faut donc choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.<br/>
+<p>Il faut choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.<br/>
 Dès l’instant où on veut stocker de l’information pour pouvoir la réutiliser, la solution est d’utiliser une <code class="docutils literal notranslate"><span class="pre">variable</span></code>.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -692,10 +692,12 @@ Voir le code final<div class="summary-down docutils">
 <li><p>Augmenter la vitesse de chute des fruits après un certain nombre de points</p></li>
 <li><p>Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité pour faire la distinction)</p></li>
 <li><p>Faire déplacer le panier en inclinant la carte micro:bit au lieu des boutons A et B</p></li>
-<li><p>Faire tomber plusieurs fruits</p></li>
+<li><p>Faire tomber plusieurs fruits en même temps</p></li>
 <li><p>Faire tomber certains fruits légèrement en diagonal</p></li>
 <li><p>Elargir le panier à 2 leds</p></li>
+<li><p>Etc…</p></li>
 </ul>
+<p>Nous n’avons fait que gratouiller la surface de ce qu’il est possible de programmer sur un micro:bit. Rendez-vous <a class="reference external" href="https://makecode.microbit.org/">ici</a> et explorez les différents projets.</p>
 </section>
 </section>
 

@@ -59,7 +59,7 @@ Pour résoudre ce problème, ajoutez des blocs `pause` de 500ms après chaque al
 ### Exercice 3
 
 En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes blocs : `allumer`, `pause` et `éteindre`. Chaque bloc est répété 5 fois.  
-Quand on a une répétition d'instructions, on veut que ce soit l'ordinateur qui fasse le travail : on utilise les **boucles**.
+Quand on a une répétition d'instructions, on veut que ce soit l'ordinateur qui fasse le travail ! On utilise alors les **boucles**.
 
 ```{question}
 Dans votre code, quelle est l'unique valeur qui change à chaque répétition des 3 blocs `allumer`, `pause` et `éteindre` ?
@@ -72,8 +72,10 @@ Dans votre code, quelle est l'unique valeur qui change à chaque répétition de
 La coordonnée verticale `y` est la seule à changer entre chaque répétition. C'est le cas car le fruit tombe du haut vers le bas, et donc la coordonnée `y` est augmentée de 1 à chaque tour.
 ```
 
+L'idée est donc d'utiliser une boucle qui va répéter les instructions tout en augmentant `y` de 1 à chaque tour afin de faire tomber le fruit.
+
 Utilisez le bloc `pour index variant de 0 à 4` qui va permettre de créer une **boucle** dans laquelle `index` va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu'il nous faut pour les valeurs de `y`.  
-`index` est ici ce que l'on appelle une `variable`. Sa valeur va **varier** de 0 à 4 et on peut l'utiliser pour indiquer la coordonnée `y`. Il faut remplacer les valeurs de `y` par `index`.
+`index` est ici ce que l'on appelle une `variable`. Sa valeur va **varier** de 0 à 4 à chaque tour. Il faut donc ensuite remplacer les valeurs de `y` par `index`.
 
 ```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
@@ -89,15 +91,14 @@ Voici les étapes à suivre:
 
 ### Exercice 4
 
-Le fruit tombe toujours dans la même colonne, on veut changer de colonne pour chaque fruit et que le choix de la colonne soit aléatoire.
+Le fruit tombe toujours dans la même colonne, on veut changer aléatoirement de colonne pour chaque fruit.
 
 Pour choisir un nombre au hasard, on peut utiliser le bloc `choisir au hasard de 0 à 10` du menu `Maths`.  
-Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0 à 4.
+Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0 à 4 pour les 5 colonnes possibles.
 
 * Comment et où utiliser ce bloc ?
-* Que va-t-il se passer si on le met à la place de `x` dans les blocs `allumer` et `éteindre` ?
 
-Il faut donc choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.  
+Il faut choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.  
 Dès l'instant où on veut stocker de l'information pour pouvoir la réutiliser, la solution est d'utiliser une `variable`.
 
 ```{dropdown} Montrez moi les étapes à suivre
@@ -314,6 +315,9 @@ Pour rendre le jeu plus intéressant, voici une liste de suggestions:
 * Augmenter la vitesse de chute des fruits après un certain nombre de points
 * Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité pour faire la distinction)
 * Faire déplacer le panier en inclinant la carte micro:bit au lieu des boutons A et B
-* Faire tomber plusieurs fruits
+* Faire tomber plusieurs fruits en même temps
 * Faire tomber certains fruits légèrement en diagonal
 * Elargir le panier à 2 leds
+* Etc...
+
+Nous n'avons fait que gratouiller la surface de ce qu'il est possible de programmer sur un micro:bit. Rendez-vous [ici](https://makecode.microbit.org/) et explorez les différents projets.
