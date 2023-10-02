@@ -117,7 +117,7 @@ Fin de l'étape 1, on a un fruit qui tombe dans une colonne choisie aléatoireme
 
 ## Étape 2 - Déplacer le panier
 
-Nous allons programmer le panier qui se déplace de droite à gauche à l'aide des boutons A et B.
+Nous allons programmer le panier qui se déplace de droite à gauche à l'aide des boutons `A` et `B`.
 
 ### Exercice 5
 
@@ -126,8 +126,8 @@ Pour commencer il faut choisir comment sera représenté le panier. Nous utilise
 * La position du panier va changer au cours du jeu, comment faire pour stocker de l'information qui varie ? (utiliser une variable)
 * Que doit-on représenter avec cette variables ? (la position en `x` du panier)
 
-Partons sur 2 variables, `panierG` et `panierD`. On choisi la position de départ du panier et on initialise les variables en conséquence.  
-Si on oublie d'allumer les leds correspondantes, on ne verra pas le panier !
+Définissez une variable pour contenir la coordonnée `x` du panier qui va varier et initiez-la à 0 au début du programme.
+N'oubliez pas les leds correspondantes, sinon on ne verra pas le panier !
 
 ```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
