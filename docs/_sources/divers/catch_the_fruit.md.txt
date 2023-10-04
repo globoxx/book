@@ -246,7 +246,7 @@ Voici les étapes à suivre:
 ![img](../media/collision2.png)
 ```
 
-Vous remarquerez que nous avons ajoué un bloc `allumer x panier` au début du bloc `toujours`. Sans ce bloc, le panier disparaît lorsqu'il entre en collisin avec un fruit.  
+Vous remarquerez que nous avons ajoué un bloc `allumer x panier` au début du bloc `toujours`. Sans ce bloc, le panier disparaît lorsqu'il entre en collision avec un fruit.  
 L'ajout de ce bloc permet de rallumer la led associée au panier avant la chute d'un fruit.
 
 Fin de l'étape 3, le jeu détecte la collision entre le panier et le fruit.
