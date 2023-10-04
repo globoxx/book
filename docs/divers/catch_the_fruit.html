@@ -343,7 +343,7 @@ Voir la solution<div class="summary-down docutils">
 <section id="exercice-3">
 <h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
 <p>En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes blocs : <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code>. Chaque bloc est répété 5 fois.<br/>
-Quand on a une répétition d’instructions, on veut que ce soit l’ordinateur qui fasse le travail ! On utilise alors les <strong>boucles</strong>.</p>
+Quand on a une répétition d’instructions, on veut que ce soit l’ordinateur qui fasse le travail ! On utilise alors des <strong>boucles</strong>.</p>
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
@@ -360,11 +360,11 @@ Quand on a une répétition d’instructions, on veut que ce soit l’ordinateur
 </div>
 </div>
 </form></div><p>L’idée est donc d’utiliser une boucle qui va répéter les instructions tout en augmentant <code class="docutils literal notranslate"><span class="pre">y</span></code> de 1 à chaque tour afin de faire tomber le fruit.</p>
-<p>Utilisez le bloc <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code> qui va permettre de créer une <strong>boucle</strong> dans laquelle <code class="docutils literal notranslate"><span class="pre">index</span></code> va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu’il nous faut pour les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code>.<br/>
+<p>Utilisez le bloc <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code> qui va créer une <strong>boucle</strong> dans laquelle <code class="docutils literal notranslate"><span class="pre">index</span></code> va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu’il nous faut pour les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code>.<br/>
 <code class="docutils literal notranslate"><span class="pre">index</span></code> est ici ce que l’on appelle une <code class="docutils literal notranslate"><span class="pre">variable</span></code>. Sa valeur va <strong>varier</strong> de 0 à 4 à chaque tour. Il faut donc ensuite remplacer les valeurs de <code class="docutils literal notranslate"><span class="pre">y</span></code> par <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Montrez moi les étapes à suivre<div class="summary-down docutils">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
@@ -398,7 +398,7 @@ Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0
 Dès l’instant où on veut stocker de l’information pour pouvoir la réutiliser, la solution est d’utiliser une <code class="docutils literal notranslate"><span class="pre">variable</span></code>.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Montrez moi les étapes à suivre<div class="summary-down docutils">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
@@ -430,13 +430,13 @@ Voir la solution<div class="summary-down docutils">
 <p>Pour commencer il faut choisir comment sera représenté le panier. Nous utiliserons 1 seule led sur la ligne tout en bas (coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> à 4).</p>
 <ul class="simple">
 <li><p>La position du panier va changer au cours du jeu, comment faire pour stocker de l’information qui varie ? (utiliser une variable)</p></li>
-<li><p>Que doit-on représenter avec cette variables ? (la position en <code class="docutils literal notranslate"><span class="pre">x</span></code> du panier)</p></li>
+<li><p>Que doit-on représenter avec cette variable ? (la position en <code class="docutils literal notranslate"><span class="pre">x</span></code> du panier)</p></li>
 </ul>
-<p>Définissez une variable pour contenir la coordonnée <code class="docutils literal notranslate"><span class="pre">x</span></code> du panier qui va varier et initiez-la à 0 au début du programme.
-N’oubliez pas les leds correspondantes, sinon on ne verra pas le panier !</p>
+<p>Définissez une variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> pour la coordonnée horizontale du panier qui va varier et initiez-la à 0 au début du programme.
+N’oubliez pas d’allumer les leds correspondantes, sinon on ne verra pas le panier !</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Montrez moi les étapes à suivre<div class="summary-down docutils">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
@@ -463,13 +463,13 @@ Voir la solution<div class="summary-down docutils">
 <p>Le panier est fixe, il faut le faire bouger.<br/>
 Nous allons utiliser les boutons <code class="docutils literal notranslate"><span class="pre">A</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span></code> pour les déplacements gauche et droite, respectivement.</p>
 <ul class="simple">
-<li><p>Que signifie déplacer le panier à gauche (resp. à droite) en termes de positions ? (diminuer les valeurs de ses coordonnées en <code class="docutils literal notranslate"><span class="pre">x</span></code> de 1, resp. les augmenter de 1)</p></li>
+<li><p>Que signifie déplacer le panier à gauche en termes de positions ? (diminuer les valeurs de ses coordonnées en <code class="docutils literal notranslate"><span class="pre">x</span></code> de 1)</p></li>
 <li><p>Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)</p></li>
 </ul>
 <p>Utilisez les blocs <code class="docutils literal notranslate"><span class="pre">lorsque</span> <span class="pre">le</span> <span class="pre">bouton</span> <span class="pre">...</span> <span class="pre">est</span> <span class="pre">pressé</span></code> et ajoutez-y les blocs permettant de déplacer le panier. Le bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">panier</span> <span class="pre">de</span> <span class="pre">1</span></code> permet d’augmenter la valeur de la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> de 1. Changez le 1 en -1 afin de diminuer sa valeur.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Montrez moi les étapes à suivre<div class="summary-down docutils">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
@@ -495,19 +495,21 @@ Voir la solution<div class="summary-down docutils">
 </details></section>
 <section id="exercice-7">
 <h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Si on appuie de nombreuses fois sur le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code> (resp. <code class="docutils literal notranslate"><span class="pre">B</span></code>), le panier disparait, il sort de l’écran.<br/>
+<p>Si on appuie de nombreuses fois sur le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code> ou <code class="docutils literal notranslate"><span class="pre">B</span></code>, le panier disparait, il sort de l’écran.<br/>
 On doit empêcher le panier d’aller plus loin que les bords de l’écran.</p>
 <ul class="simple">
-<li><p>Pourquoi est-ce que le panier sort de l’écran ? (la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> continue d’être modifiée pour finalement engendrer l’allumage de leds à des coordonnées qui n’existent pas)</p></li>
+<li><p>Pourquoi est-ce que le panier sort de l’écran ? (la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> continue d’être modifiée pour finalement allumer des leds à des coordonnées qui n’existent pas)</p></li>
 <li><p>Comment empêcher la modification des variables ? (conditionner les modifications selon la position du panier)</p></li>
 <li><p>Sous quelle condition le panier peut-il se déplacer à gauche ? (si sa position en <code class="docutils literal notranslate"><span class="pre">x</span></code> est &gt; 0)</p></li>
 <li><p>Sous quelle condition le panier peut-il se déplacer à droite ? (si sa position en <code class="docutils literal notranslate"><span class="pre">x</span></code> est &lt; 4)</p></li>
 </ul>
 <p>On introduit ici la structure de contrôle conditionnelle <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> et les tests de comparaison qui <em>répondent</em> <code class="docutils literal notranslate"><span class="pre">vrai</span></code> ou <code class="docutils literal notranslate"><span class="pre">faux</span></code> et servent de condition à l’exécution d’instructions.<br/>
-Dans notre cas, on déplace le panier uniquement <strong>si</strong> ça ne le fait pas sortir de l’écran.</p>
+Dans notre cas, on déplace le panier <strong>uniquement si</strong> ça ne le fait pas sortir de l’écran.</p>
+<p><img alt="img" src="../_images/logique_microbit.png"/></p>
+<p>Donc pour le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code>, on exécute les blocs permettant le déplacement du panier que s’il n’est pas déjà tout à gauche.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Montrez moi les étapes à suivre<div class="summary-down docutils">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
@@ -515,7 +517,7 @@ Montrez moi les étapes à suivre<div class="summary-down docutils">
 <p class="card-text">Voici les étapes à suivre:</p>
 <ol class="simple">
 <li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">vrai</span> <span class="pre">alors</span></code> <strong>autour</strong> des instructions permettant de déplacer le panier vers la gauche (bouton <code class="docutils literal notranslate"><span class="pre">A</span></code>).</p></li>
-<li><p class="card-text">Remplacez <code class="docutils literal notranslate"><span class="pre">vrai</span></code> par le test de comparaison qui permet de contrôler que la position du panier est &gt; 0.</p></li>
+<li><p class="card-text">Remplacez <code class="docutils literal notranslate"><span class="pre">vrai</span></code> par le <strong>test de comparaison</strong> qui permet de contrôler que la position du panier est &gt; 0. Les blocs de comparaison de trouve dans le menu <code class="docutils literal notranslate"><span class="pre">Logique</span></code>.</p></li>
 <li><p class="card-text">Faites la même chose pour le déplacement vers la droite (en ajustant le test de comparaison).</p></li>
 </ol>
 </div>
@@ -535,14 +537,16 @@ Voir la solution<div class="summary-down docutils">
 <h2>Étape 3 - Détecter lorsqu’un fruit est attrapé<a class="headerlink" href="#etape-3-detecter-lorsquun-fruit-est-attrape" title="Lien permanent vers ce titre">¶</a></h2>
 <section id="exercice-8">
 <h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Il s’agit maintenant de détecter lorsque le fruit est attrapé par le panier, c’est-à-dire lorqu’il y a collision entre le fruit et le panier et réaliser les actions qui en découle.</p>
+<p>Il s’agit maintenant de détecter lorsque le fruit est attrapé par le panier, c’est-à-dire lorqu’il y a collision entre le fruit et le panier.</p>
 <p>Visuellement il est facile de <em>voir</em> quand le fruit tombe dans le panier, mais comme le micro:bit ne <em>voit</em> pas, il faut trouver une autre solution pour qu’il puisse vérifier s’il y a collision ou non.</p>
 <ul class="simple">
 <li><p>A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes)</p></li>
-<li><p>Quelles sonts les coordonnées respectives du panier et du fruit ? (comme elles changent, varient, elles sont dans des variables. Fruit(<code class="docutils literal notranslate"><span class="pre">colonne</span></code>, <code class="docutils literal notranslate"><span class="pre">index</span></code>) et panier(<code class="docutils literal notranslate"><span class="pre">panier</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>))</p></li>
+<li><p>Quelles sonts les coordonnées du panier et du fruit ? (comme elles changent, elles sont dans des variables. Fruit(<code class="docutils literal notranslate"><span class="pre">colonne</span></code>, <code class="docutils literal notranslate"><span class="pre">index</span></code>) et panier(<code class="docutils literal notranslate"><span class="pre">panier</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>))</p></li>
 <li><p>Comment s’écrit l’égalité des coordonnées avec ces variables ? (<code class="docutils literal notranslate"><span class="pre">colonne</span> <span class="pre">==</span> <span class="pre">panier</span> <span class="pre">ET</span> <span class="pre">index</span> <span class="pre">==</span> <span class="pre">4</span></code>)</p></li>
 </ul>
-<p>Traduisez cette égalité avec les blocs de <code class="docutils literal notranslate"><span class="pre">comparaison</span></code> à votre disposition dans la section <code class="docutils literal notranslate"><span class="pre">logique</span></code>.</p>
+<p>Traduisez cette égalité avec les blocs de <code class="docutils literal notranslate"><span class="pre">comparaison</span></code> à votre disposition dans la section <code class="docutils literal notranslate"><span class="pre">Logique</span></code>.<br/>
+Placez ensuite le test de comparaison dans un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code>.</p>
+<p>Nous verrons ensuite où nous devrons placer ce test de collision.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir la solution<div class="summary-down docutils">
@@ -556,17 +560,19 @@ Voir la solution<div class="summary-down docutils">
 <section id="exercice-9">
 <h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
 <p>On a maintenant un test permettant de détecter la collision entre un fruit et le panier, mais on fait quoi ?<br/>
-Il s’agit maintenant de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu’il y a collision.</p>
+Il s’agit de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu’il y a collision.</p>
 <ul class="simple">
-<li><p>A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, i.e. dans la boucle <code class="docutils literal notranslate"><span class="pre">répéter</span></code>, en dehors, le fruit n’existe pas)</p></li>
-<li><p>Que doit-il se passer lorsqu’on attrape un fruit ? (on marque 1 point)</p></li>
+<li><p>A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, dans la boucle <code class="docutils literal notranslate"><span class="pre">répéter</span></code>)</p></li>
+<li><p>Que doit-il se passer lorsqu’on attrape un fruit ? (on augment le score de 1)</p></li>
 <li><p>Comment faire pour tenir le score à jour ? (il faut utiliser une variable)</p></li>
 </ul>
-<p>L’implémentation de ces éléments ne pose pas de problème, cependant il ne faut pas oublier d’initialiser le score à 0 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.<br/>
-En outre, on peut également <em>fortement</em> suggérer de donner un signal visuel au joueur lorsqu’il marque un point ; avec l’apparition d’un smiley, par exemple.</p>
+<p>Vous devez donc créer une nouvelle variable pour le <code class="docutils literal notranslate"><span class="pre">score</span></code> que vous allez initialiser à 0 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.<br/>
+Le test de collision doit se faire à chaque déplacement du fruit.<br/>
+Lorsqu’une collision a lieu, augmentez le score de 1.</p>
+<p>En outre, on peut également <em>fortement</em> suggérer de donner un signal visuel au joueur lorsqu’il marque un point, avec l’apparition d’un smiley par exemple.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Montrez moi les étapes à suivre<div class="summary-down docutils">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
@@ -682,7 +688,7 @@ Voir le code final<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><img alt="img" src="../_images/microbit_final.png"/></p>
 </div>
-</details><p>Une version du jeu complet est disponible <span class="xref myst">ici</span>, il suffit de déposer le fichier dans la fenêtre Makecode ouverte dans votre navigateur (mais attention, il remplacera votre code).</p>
+</details><p>Une version du jeu complet est disponible <a class="reference download internal" download="" href="../_downloads/bbe90f5830a2bf348f33adb8457710e5/microbit-catch-the-fruit.hex"><code class="xref download docutils literal notranslate"><span class="pre">ici</span></code></a>, il suffit de télélcharger et déposer le fichier dans la fenêtre Makecode ouverte dans votre navigateur (mais attention, il remplacera votre code).</p>
 </section>
 </section>
 <section id="pour-aller-plus-loin">

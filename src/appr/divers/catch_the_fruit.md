@@ -59,7 +59,7 @@ Pour résoudre ce problème, ajoutez des blocs `pause` de 500ms après chaque al
 ### Exercice 3
 
 En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes blocs : `allumer`, `pause` et `éteindre`. Chaque bloc est répété 5 fois.  
-Quand on a une répétition d'instructions, on veut que ce soit l'ordinateur qui fasse le travail ! On utilise alors les **boucles**.
+Quand on a une répétition d'instructions, on veut que ce soit l'ordinateur qui fasse le travail ! On utilise alors des **boucles**.
 
 ```{question}
 Dans votre code, quelle est l'unique valeur qui change à chaque répétition des 3 blocs `allumer`, `pause` et `éteindre` ?
@@ -74,10 +74,10 @@ La coordonnée verticale `y` est la seule à changer entre chaque répétition. 
 
 L'idée est donc d'utiliser une boucle qui va répéter les instructions tout en augmentant `y` de 1 à chaque tour afin de faire tomber le fruit.
 
-Utilisez le bloc `pour index variant de 0 à 4` qui va permettre de créer une **boucle** dans laquelle `index` va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu'il nous faut pour les valeurs de `y`.  
+Utilisez le bloc `pour index variant de 0 à 4` qui va créer une **boucle** dans laquelle `index` va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu'il nous faut pour les valeurs de `y`.  
 `index` est ici ce que l'on appelle une `variable`. Sa valeur va **varier** de 0 à 4 à chaque tour. Il faut donc ensuite remplacer les valeurs de `y` par `index`.
 
-```{dropdown} Montrez moi les étapes à suivre
+```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Dans le bloc `toujours`, gardez une seule répétition des blocs `allumer`, `pause` et `éteindre`. Supprimez les autres blocs.
@@ -101,7 +101,7 @@ Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0
 Il faut choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.  
 Dès l'instant où on veut stocker de l'information pour pouvoir la réutiliser, la solution est d'utiliser une `variable`.
 
-```{dropdown} Montrez moi les étapes à suivre
+```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Dans la catégorie de blocs `Variables`, choisissez `Créer une variable` et donnez lui le nom `colonne`. Cette variable aura pour objectif de stocker le numéro aléatoire de la colonne dans laquelle va tomber le fruit.
@@ -124,12 +124,12 @@ Nous allons programmer le panier qui se déplace de droite à gauche à l'aide d
 Pour commencer il faut choisir comment sera représenté le panier. Nous utiliserons 1 seule led sur la ligne tout en bas (coordonnée `y` à 4).
 
 * La position du panier va changer au cours du jeu, comment faire pour stocker de l'information qui varie ? (utiliser une variable)
-* Que doit-on représenter avec cette variables ? (la position en `x` du panier)
+* Que doit-on représenter avec cette variable ? (la position en `x` du panier)
 
-Définissez une variable pour contenir la coordonnée `x` du panier qui va varier et initiez-la à 0 au début du programme.
-N'oubliez pas les leds correspondantes, sinon on ne verra pas le panier !
+Définissez une variable `panier` pour la coordonnée horizontale du panier qui va varier et initiez-la à 0 au début du programme.
+N'oubliez pas d'allumer les leds correspondantes, sinon on ne verra pas le panier !
 
-```{dropdown} Montrez moi les étapes à suivre
+```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Créez une nouvelle variable nommée `panier`.
@@ -146,12 +146,12 @@ Voici les étapes à suivre:
 Le panier est fixe, il faut le faire bouger.  
 Nous allons utiliser les boutons `A` et `B` pour les déplacements gauche et droite, respectivement.  
 
-* Que signifie déplacer le panier à gauche (resp. à droite) en termes de positions ? (diminuer les valeurs de ses coordonnées en `x` de 1, resp. les augmenter de 1)
+* Que signifie déplacer le panier à gauche en termes de positions ? (diminuer les valeurs de ses coordonnées en `x` de 1)
 * Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)
 
 Utilisez les blocs `lorsque le bouton ... est pressé` et ajoutez-y les blocs permettant de déplacer le panier. Le bloc `modifier panier de 1` permet d'augmenter la valeur de la variable `panier` de 1. Changez le 1 en -1 afin de diminuer sa valeur.
 
-```{dropdown} Montrez moi les étapes à suivre
+```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Ajoutez un bloc `lorsque le bouton A est pressé`.
@@ -167,22 +167,26 @@ Voici les étapes à suivre:
 
 ### Exercice 7
 
-Si on appuie de nombreuses fois sur le bouton `A` (resp. `B`), le panier disparait, il sort de l'écran.  
+Si on appuie de nombreuses fois sur le bouton `A` ou `B`, le panier disparait, il sort de l'écran.  
 On doit empêcher le panier d'aller plus loin que les bords de l'écran.
 
-* Pourquoi est-ce que le panier sort de l'écran ? (la variable `panier` continue d'être modifiée pour finalement engendrer l'allumage de leds à des coordonnées qui n'existent pas)
+* Pourquoi est-ce que le panier sort de l'écran ? (la variable `panier` continue d'être modifiée pour finalement allumer des leds à des coordonnées qui n'existent pas)
 * Comment empêcher la modification des variables ? (conditionner les modifications selon la position du panier)
 * Sous quelle condition le panier peut-il se déplacer à gauche ? (si sa position en `x` est > 0)
 * Sous quelle condition le panier peut-il se déplacer à droite ? (si sa position en `x` est < 4)
 
 On introduit ici la structure de contrôle conditionnelle `si ... alors ...` et les tests de comparaison qui *répondent* `vrai` ou `faux` et servent de condition à l'exécution d'instructions.  
-Dans notre cas, on déplace le panier uniquement **si** ça ne le fait pas sortir de l'écran.
+Dans notre cas, on déplace le panier **uniquement si** ça ne le fait pas sortir de l'écran.
 
-```{dropdown} Montrez moi les étapes à suivre
+![img](../media/logique_microbit.png)
+
+Donc pour le bouton `A`, on exécute les blocs permettant le déplacement du panier que s'il n'est pas déjà tout à gauche.
+
+```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Ajoutez un bloc `si vrai alors` **autour** des instructions permettant de déplacer le panier vers la gauche (bouton `A`).
-2. Remplacez `vrai` par le test de comparaison qui permet de contrôler que la position du panier est > 0.
+2. Remplacez `vrai` par le **test de comparaison** qui permet de contrôler que la position du panier est > 0. Les blocs de comparaison de trouve dans le menu `Logique`.
 3. Faites la même chose pour le déplacement vers la droite (en ajustant le test de comparaison).
 ```
 
@@ -196,15 +200,18 @@ Fin de l'étape 2, on a un panier déplaçable à l'aide des boutons.
 
 ### Exercice 8
 
-Il s'agit maintenant de détecter lorsque le fruit est attrapé par le panier, c'est-à-dire lorqu'il y a collision entre le fruit et le panier et réaliser les actions qui en découle.
+Il s'agit maintenant de détecter lorsque le fruit est attrapé par le panier, c'est-à-dire lorqu'il y a collision entre le fruit et le panier.
 
 Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais comme le micro:bit ne *voit* pas, il faut trouver une autre solution pour qu'il puisse vérifier s'il y a collision ou non.
 
 * A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes)
-* Quelles sonts les coordonnées respectives du panier et du fruit ? (comme elles changent, varient, elles sont dans des variables. Fruit(`colonne`, `index`) et panier(`panier`, `4`))
+* Quelles sonts les coordonnées du panier et du fruit ? (comme elles changent, elles sont dans des variables. Fruit(`colonne`, `index`) et panier(`panier`, `4`))
 * Comment s'écrit l'égalité des coordonnées avec ces variables ? (`colonne == panier ET index == 4`)
 
-Traduisez cette égalité avec les blocs de `comparaison` à votre disposition dans la section `logique`.
+Traduisez cette égalité avec les blocs de `comparaison` à votre disposition dans la section `Logique`.  
+Placez ensuite le test de comparaison dans un bloc `si ... alors ...`.
+
+Nous verrons ensuite où nous devrons placer ce test de collision.
 
 ```{dropdown} Voir la solution
 ![img](../media/collision1.png)
@@ -213,16 +220,19 @@ Traduisez cette égalité avec les blocs de `comparaison` à votre disposition d
 ### Exercice 9
 
 On a maintenant un test permettant de détecter la collision entre un fruit et le panier, mais on fait quoi ?  
-Il s'agit maintenant de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu'il y a collision.
+Il s'agit de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu'il y a collision.
 
-* A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, i.e. dans la boucle `répéter`, en dehors, le fruit n'existe pas)
-* Que doit-il se passer lorsqu'on attrape un fruit ? (on marque 1 point)
+* A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, dans la boucle `répéter`)
+* Que doit-il se passer lorsqu'on attrape un fruit ? (on augment le score de 1)
 * Comment faire pour tenir le score à jour ? (il faut utiliser une variable)
 
-L'implémentation de ces éléments ne pose pas de problème, cependant il ne faut pas oublier d'initialiser le score à 0 `au démarrage`.  
-En outre, on peut également *fortement* suggérer de donner un signal visuel au joueur lorsqu'il marque un point ; avec l'apparition d'un smiley, par exemple.
+Vous devez donc créer une nouvelle variable pour le `score` que vous allez initialiser à 0 `au démarrage`.  
+Le test de collision doit se faire à chaque déplacement du fruit.  
+Lorsqu'une collision a lieu, augmentez le score de 1.
 
-```{dropdown} Montrez moi les étapes à suivre
+En outre, on peut également *fortement* suggérer de donner un signal visuel au joueur lorsqu'il marque un point, avec l'apparition d'un smiley par exemple.
+
+```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Créez une nouvelle variable nommée `score` et définissez-la à 0 `au démarrage`.
@@ -306,7 +316,7 @@ Ceci termine l'implémentation de base de ce jeu sur micro:bit.
 ![img](../media/microbit_final.png)
 ```
 
-Une version du jeu complet est disponible [ici](../data/microbit-catch-the-fruit.hex), il suffit de déposer le fichier dans la fenêtre Makecode ouverte dans votre navigateur (mais attention, il remplacera votre code).
+Une version du jeu complet est disponible {download}`ici<../data/microbit-catch-the-fruit.hex>`, il suffit de télélcharger et déposer le fichier dans la fenêtre Makecode ouverte dans votre navigateur (mais attention, il remplacera votre code).
 
 ## Pour aller plus loin
 
