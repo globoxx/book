@@ -96,16 +96,16 @@ Le fruit tombe toujours dans la même colonne, on veut changer aléatoirement de
 Pour choisir un nombre au hasard, on peut utiliser le bloc `choisir au hasard de 0 à 10` du menu `Maths`.  
 Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0 à 4 pour les 5 colonnes possibles.
 
-* Comment et où utiliser ce bloc ?
-
-Il faut choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.  
+Il faut donc tirer un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.  
 Dès l'instant où on veut stocker de l'information pour pouvoir la réutiliser, la solution est d'utiliser une `variable`.
+
+Utilisez le menu `Variables` pour créer une variable `colonne` et lui donner une valeur aléatoire avant la chute de chaque fruit.
 
 ```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Dans la catégorie de blocs `Variables`, choisissez `Créer une variable` et donnez lui le nom `colonne`. Cette variable aura pour objectif de stocker le numéro aléatoire de la colonne dans laquelle va tomber le fruit.
-2. Utilisez ensuite le bloc `définir colonne à` pour donner la valeur aléatoire à la variable `colonne`.
+2. Ajoutez ensuite le bloc `définir colonne à` pour donner une valeur aléatoire à la variable `colonne`. Ce bloc doit être ajouté juste avant le début de la chute du fruit.
 3. Remplacez les coordonnées de `x` par la valeur de la variable `colonne`.
 ```
 
@@ -175,8 +175,8 @@ On doit empêcher le panier d'aller plus loin que les bords de l'écran.
 * Sous quelle condition le panier peut-il se déplacer à gauche ? (si sa position en `x` est > 0)
 * Sous quelle condition le panier peut-il se déplacer à droite ? (si sa position en `x` est < 4)
 
-On introduit ici la structure de contrôle conditionnelle `si ... alors ...` et les tests de comparaison qui *répondent* `vrai` ou `faux` et servent de condition à l'exécution d'instructions.  
-Dans notre cas, on déplace le panier **uniquement si** ça ne le fait pas sortir de l'écran.
+On introduit ici la structure de contrôle conditionnelle `si ... alors ...` et les tests de comparaison qui se trouvent dans le menu `Logique`.  
+Dans notre cas, `si le panier ne va pas sortir de l'écran, alors il bouge`.
 
 ![img](../media/logique_microbit.png)
 

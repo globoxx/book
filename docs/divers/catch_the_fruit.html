@@ -391,11 +391,9 @@ Voir la solution<div class="summary-down docutils">
 <p>Le fruit tombe toujours dans la même colonne, on veut changer aléatoirement de colonne pour chaque fruit.</p>
 <p>Pour choisir un nombre au hasard, on peut utiliser le bloc <code class="docutils literal notranslate"><span class="pre">choisir</span> <span class="pre">au</span> <span class="pre">hasard</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">10</span></code> du menu <code class="docutils literal notranslate"><span class="pre">Maths</span></code>.<br/>
 Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0 à 4 pour les 5 colonnes possibles.</p>
-<ul class="simple">
-<li><p>Comment et où utiliser ce bloc ?</p></li>
-</ul>
-<p>Il faut choisir un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.<br/>
+<p>Il faut donc tirer un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.<br/>
 Dès l’instant où on veut stocker de l’information pour pouvoir la réutiliser, la solution est d’utiliser une <code class="docutils literal notranslate"><span class="pre">variable</span></code>.</p>
+<p>Utilisez le menu <code class="docutils literal notranslate"><span class="pre">Variables</span></code> pour créer une variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code> et lui donner une valeur aléatoire avant la chute de chaque fruit.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 (Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -406,7 +404,7 @@ Dès l’instant où on veut stocker de l’information pour pouvoir la réutili
 <p class="card-text">Voici les étapes à suivre:</p>
 <ol class="simple">
 <li><p class="card-text">Dans la catégorie de blocs <code class="docutils literal notranslate"><span class="pre">Variables</span></code>, choisissez <code class="docutils literal notranslate"><span class="pre">Créer</span> <span class="pre">une</span> <span class="pre">variable</span></code> et donnez lui le nom <code class="docutils literal notranslate"><span class="pre">colonne</span></code>. Cette variable aura pour objectif de stocker le numéro aléatoire de la colonne dans laquelle va tomber le fruit.</p></li>
-<li><p class="card-text">Utilisez ensuite le bloc <code class="docutils literal notranslate"><span class="pre">définir</span> <span class="pre">colonne</span> <span class="pre">à</span></code> pour donner la valeur aléatoire à la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code>.</p></li>
+<li><p class="card-text">Ajoutez ensuite le bloc <code class="docutils literal notranslate"><span class="pre">définir</span> <span class="pre">colonne</span> <span class="pre">à</span></code> pour donner une valeur aléatoire à la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code>. Ce bloc doit être ajouté juste avant le début de la chute du fruit.</p></li>
 <li><p class="card-text">Remplacez les coordonnées de <code class="docutils literal notranslate"><span class="pre">x</span></code> par la valeur de la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code>.</p></li>
 </ol>
 </div>
@@ -503,8 +501,8 @@ On doit empêcher le panier d’aller plus loin que les bords de l’écran.</p>
 <li><p>Sous quelle condition le panier peut-il se déplacer à gauche ? (si sa position en <code class="docutils literal notranslate"><span class="pre">x</span></code> est &gt; 0)</p></li>
 <li><p>Sous quelle condition le panier peut-il se déplacer à droite ? (si sa position en <code class="docutils literal notranslate"><span class="pre">x</span></code> est &lt; 4)</p></li>
 </ul>
-<p>On introduit ici la structure de contrôle conditionnelle <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> et les tests de comparaison qui <em>répondent</em> <code class="docutils literal notranslate"><span class="pre">vrai</span></code> ou <code class="docutils literal notranslate"><span class="pre">faux</span></code> et servent de condition à l’exécution d’instructions.<br/>
-Dans notre cas, on déplace le panier <strong>uniquement si</strong> ça ne le fait pas sortir de l’écran.</p>
+<p>On introduit ici la structure de contrôle conditionnelle <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> et les tests de comparaison qui se trouvent dans le menu <code class="docutils literal notranslate"><span class="pre">Logique</span></code>.<br/>
+Dans notre cas, <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">le</span> <span class="pre">panier</span> <span class="pre">ne</span> <span class="pre">va</span> <span class="pre">pas</span> <span class="pre">sortir</span> <span class="pre">de</span> <span class="pre">l'écran,</span> <span class="pre">alors</span> <span class="pre">il</span> <span class="pre">bouge</span></code>.</p>
 <p><img alt="img" src="../_images/logique_microbit.png"/></p>
 <p>Donc pour le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code>, on exécute les blocs permettant le déplacement du panier que s’il n’est pas déjà tout à gauche.</p>
 <details class="sphinx-bs dropdown card mb-3">
