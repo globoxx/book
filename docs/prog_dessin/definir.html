@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="3. Répéter" href="repeter.html" /><link rel="prev" title="1. Dessiner" href="dessiner.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>2. Définir - Travaux pratiques</title>
@@ -229,6 +229,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
 <ul>
@@ -458,36 +468,40 @@ Ensuite, vous appuyez sur:</p>
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
 <p>Essayez ces raccourcis dans le code ci-dessous. Transformez le code en deux fonctions <code class="docutils literal notranslate"><span class="pre">batiment()</span></code> et <code class="docutils literal notranslate"><span class="pre">porte()</span></code>, que vous appelez ensuite.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvcndhcmQoMjAwKQpsZWZ0KDkwKQpmb3J3YXJkKDEwMCkKbGVmdCg5MCkKZm9yd2FyZCgyMDApCmxlZnQoOTApCmZvcndhcmQoMTAwKQpsZWZ0KDkwKQoKZm9yd2FyZCgzMCkKCmZvcndhcmQoMzApCmxlZnQoOTApCmZvcndhcmQoNTApCmxlZnQoOTApCmZvcndhcmQoMzApCmxlZnQoOTApCmZvcndhcmQoNTApCmxlZnQoOTAp" data-file="ZGVmMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-````{dropdown} Solution
-```python
-def batiment():
-    forward(200)
-    left(90)
-    forward(100)
-    left(90)
-    forward(200)
-    left(90)
-    forward(100)
-    left(90)
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvcndhcmQoMjAwKQpsZWZ0KDkwKQpmb3J3YXJkKDEwMCkKbGVmdCg5MCkKZm9yd2FyZCgyMDApCmxlZnQoOTApCmZvcndhcmQoMTAwKQpsZWZ0KDkwKQoKZm9yd2FyZCgzMCkKCmZvcndhcmQoMzApCmxlZnQoOTApCmZvcndhcmQoNTApCmxlZnQoOTApCmZvcndhcmQoMzApCmxlZnQoOTApCmZvcndhcmQoNTApCmxlZnQoOTAp" data-file="ZGVmMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">batiment</span><span class="p">():</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
 
-def porte():
-    forward(30)
-    left(90)
-    forward(50)
-    left(90)
-    forward(30)
-    left(90)
-    forward(50)
-    left(90)
+<span class="k">def</span> <span class="nf">porte</span><span class="p">():</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
 
-batiment()
-forward(30)
-porte()
-```
+<span class="n">batiment</span><span class="p">()</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">porte</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+</details></div>
 </div>
 </section>
 <section id="maison-avec-porte">
@@ -532,16 +546,15 @@ Solution<div class="summary-down docutils">
 </section>
 <section id="variable-globale">
 <h2>Variable globale<a class="headerlink" href="#variable-globale" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Une variable permet d’associer un <strong>nom symbolique</strong> à une valeur.</p>
+<p>Une variable permet d’associer un <strong>nom</strong> à une valeur.</p>
 <p>Avant de pouvoir utiliser une variable, elle doit être créée.
 On appelle ce processus une <strong>affectation</strong> et on dit qu’on associe une valeur à une variable.
-La forme générale est <code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">valeur</span></code> ou <code class="docutils literal notranslate"><span class="pre">var</span></code> est le nom de la variable et <code class="docutils literal notranslate"><span class="pre">valeur</span></code> est sa valeur.
-Attention, le <code class="docutils literal notranslate"><span class="pre">=</span></code> ici ne représente pas l’égalité au sens mathématique.</p>
-<p>Dans le programme, chaque instance de <code class="docutils literal notranslate"><span class="pre">d</span></code> est remplacée par 80. La commande <code class="docutils literal notranslate"><span class="pre">forward(d)</span></code> va donc prendre le sens de <code class="docutils literal notranslate"><span class="pre">forward(80)</span></code> et faire avancer la tortue de 80 pas.</p>
+La forme générale est <code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">=</span> <span class="pre">valeur</span></code> ou <code class="docutils literal notranslate"><span class="pre">var</span></code> est le nom de la variable et <code class="docutils literal notranslate"><span class="pre">valeur</span></code> est sa valeur.</p>
+<p>Attention, le <code class="docutils literal notranslate"><span class="pre">=</span></code> ici ne représente pas l’égalité au sens mathématique.</p>
 <div class="admonition">
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
-<p>Dans cet exemple, nous créons la variable <code class="docutils literal notranslate"><span class="pre">d</span></code> pour “distance” et lui affectons la valeur <code class="docutils literal notranslate"><span class="pre">80</span></code>. Python remplacera donc chaque <code class="docutils literal notranslate"><span class="pre">d</span></code> par <code class="docutils literal notranslate"><span class="pre">80</span></code> au cours du programme. La commande <code class="docutils literal notranslate"><span class="pre">forward(d)</span></code> va donc prendre le sens de <code class="docutils literal notranslate"><span class="pre">forward(80)</span></code> et faire avancer la tortue de <code class="docutils literal notranslate"><span class="pre">80</span></code> pas.<br/>
+<p>Dans cet exemple, nous créons une variable <code class="docutils literal notranslate"><span class="pre">d</span></code> pour “distance” et lui affectons la valeur <code class="docutils literal notranslate"><span class="pre">80</span></code>. Python remplacera donc chaque <code class="docutils literal notranslate"><span class="pre">d</span></code> par <code class="docutils literal notranslate"><span class="pre">80</span></code> au cours du programme. La commande <code class="docutils literal notranslate"><span class="pre">forward(d)</span></code> va donc prendre le sens de <code class="docutils literal notranslate"><span class="pre">forward(80)</span></code> et faire avancer la tortue de <code class="docutils literal notranslate"><span class="pre">80</span></code> pas.<br/>
 Modifiez la valeur de la variable globale <code class="docutils literal notranslate"><span class="pre">d</span></code> et exécutez le programme.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmQgPSA4MCAgIyB2YXJpYWJsZSBnbG9iYWxlIChkID0gZGlzdGFuY2UpCgpkZWYgdHJpYW5nbGUoKToKICAgIGZvcndhcmQoZCkKICAgIGxlZnQoMTIwKQogICAgZm9yd2FyZChkKQogICAgbGVmdCgxMjApCiAgICBmb3J3YXJkKGQpCgp0cmlhbmdsZSgpCnRyaWFuZ2xlKCkKdHJpYW5nbGUoKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </div>
@@ -704,7 +717,23 @@ drapeau()
 <div class="question-content docutils">
 <p>Définissez une fonction <code class="docutils literal notranslate"><span class="pre">presentations()</span></code> qui affiche du texte vous présentant en plusieurs lignes (nom, age, hobbies, etc).<br/>
 Exécutez la fonction.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoIlNhbHV0IGplIG0nYXBwZWxsZSBSb2dlciAhIikKLi4u" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoIlNhbHV0IGplIG0nYXBwZWxsZSBSb2dlciAhIikKLi4u" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">presentations</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Salut, je m'appelle Roger"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"J'ai 58 ans"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"J'aime nourrir les canards"</span><span class="p">)</span>
+
+<span class="n">presentations</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 </div>
 </section>
 </section>
@@ -714,8 +743,26 @@ Exécutez la fonction.</p>
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="repeter.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">3. Répéter</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="dessiner.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">1. Dessiner</div>
+                
+              </div>
+            </a>
         </div>
 
         <div class="related-information">

@@ -267,7 +267,6 @@ left(90)
 forward(50)
 left(90)
 ```
-````
 
 ````{dropdown} Solution
 ```python
@@ -364,17 +363,16 @@ maison()
 
 ## Variable globale
 
-Une variable permet d'associer un **nom symbolique** à une valeur.
+Une variable permet d'associer un **nom** à une valeur.
 
 Avant de pouvoir utiliser une variable, elle doit être créée.
 On appelle ce processus une **affectation** et on dit qu'on associe une valeur à une variable.
 La forme générale est `var = valeur` ou `var` est le nom de la variable et `valeur` est sa valeur.
+
 Attention, le `=` ici ne représente pas l'égalité au sens mathématique.
 
-Dans le programme, chaque instance de `d` est remplacée par 80. La commande `forward(d)` va donc prendre le sens de `forward(80)` et faire avancer la tortue de 80 pas.
-
 ````{exercise}
-Dans cet exemple, nous créons la variable `d` pour "distance" et lui affectons la valeur `80`. Python remplacera donc chaque `d` par `80` au cours du programme. La commande `forward(d)` va donc prendre le sens de `forward(80)` et faire avancer la tortue de `80` pas.  
+Dans cet exemple, nous créons une variable `d` pour "distance" et lui affectons la valeur `80`. Python remplacera donc chaque `d` par `80` au cours du programme. La commande `forward(d)` va donc prendre le sens de `forward(80)` et faire avancer la tortue de `80` pas.  
 Modifiez la valeur de la variable globale `d` et exécutez le programme.
 
 ```{codeplay}
@@ -597,7 +595,7 @@ Une fonction ne sert pas qu'à regrouper des instructions de dessin. Vous pouvez
 La fonction `print()` permet d'afficher du texte.
 ```
 
-````{exercise}
+`````{exercise}
 Définissez une fonction `presentations()` qui affiche du texte vous présentant en plusieurs lignes (nom, age, hobbies, etc).  
 Exécutez la fonction.
 
@@ -605,4 +603,15 @@ Exécutez la fonction.
 print("Salut je m'appelle Roger !")
 ...
 ```
+
+````{dropdown} Solution
+```python
+def presentations():
+    print("Salut, je m'appelle Roger")
+    print("J'ai 58 ans")
+    print("J'aime nourrir les canards")
+
+presentations()
+```
 ````
+`````
