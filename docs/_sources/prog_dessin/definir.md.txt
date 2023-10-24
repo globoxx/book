@@ -35,7 +35,7 @@ left(90)
 Serait-il possible de nommer cette séquence d'instructions afin qu'on puisse la réutiliser autant que l'on veut ?
 
 Oui ! Avec le mot-clé `def`, nous pouvons **définir** une nouvelle fonction que nous pouvons par exemple appeler `rectangle()`.
-C'est une espèce de raccourci pour ne pas avoir à réécrire tout le temps des séquences identiques.
+C'est une sorte de raccourci pour ne pas avoir à réécrire tout le temps des séquences identiques.
 Le code à exécuter se trouve après l'expression `def rectangle():` et se trouve en **indentation** (décalé vers la droite).
 
 ```python
@@ -60,7 +60,7 @@ Rappelez-vous ceci:
 Définir une fonction nous permet de réduire le nombre de lignes de code nécessaires.
 Chaque fois que nous utilisons `rectangle()`, au lieu d'écrire 8 lignes, nous écrivons seulement une ligne de code.
 
-````{exercise}
+`````{exercise}
 Dessinez encore d'autres rectangles en appelant la nouvelle fonction `rectangle()`.
 
 ```{codeplay}
@@ -81,7 +81,19 @@ rectangle() # 1er appel de la fonction rectangle
 left(90)
 rectangle() # 2ème appel de la fonction rectangle
 ```
+
+````{dropdown} Solution
+```python
+...
+
+rectangle() # 1er appel de la fonction rectangle
+left(90)
+rectangle() # 2ème appel de la fonction rectangle
+left(45)
+rectangle() # Encore un appel à la fonction
+```
 ````
+`````
 
 ```{question}
 Une **indentation** de texte est 
@@ -292,10 +304,10 @@ Une fois qu'une fonction est définie, elle peut être utilisée partout, même 
 
 Ici, nous avons une fonction `porte()`, qui est utilisée à l'intérieur d'une deuxième fonction `maison()`. Pour que ceci soit possible, la définition de porte doit être placée avant la définition de `maison()`.
 
-````{exercise}
+`````{exercise}
 Déplacez la porte vers le milieu de la maison, et dessinez une deuxième maison.
 
-````{codeplay}
+```{codeplay}
 :file: def4.py
 from turtle import *
 
@@ -469,9 +481,37 @@ Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un ar
 
 ````{exercise}
 Définissez une fonction `drapeau()` permettant de dessiner le drapeau suisse.  
-Pour vous aider, définissez également une fonction pour le carré et une autre pour la croix. Vous n'avez pas à vous préocupper des couleurs pour le moment.
+Pour vous aider, définissez une fonction pour le carré et une autre pour la croix. Vous n'avez pas à vous préocupper des couleurs pour le moment.
 
 ```{image} ../media/drapeau_suisse.svg
+```
+
+Pour vous aider, voici une séquence d'instructions permettant de dessiner une croix.
+```python
+forward(50)
+right(90)
+forward(50)
+left(90)
+forward(50)
+left(90)
+forward(50)
+right(90)
+forward(50)
+left(90)
+forward(50)
+left(90)
+forward(50)
+right(90)
+forward(50)
+left(90)
+forward(50)
+left(90)
+forward(50)
+right(90)
+forward(50)
+left(90)
+forward(50)
+left(90)
 ```
 
 ```{codeplay}
@@ -488,6 +528,7 @@ down()
 Téléchargez le fichier `.py`, faites une capture d'écran et déposez les fichiers sur Moodle à l'endroit prévu.
 ````
 
+<!--
 ````{dropdown} Solution
 ```python
 from turtle import *
@@ -545,6 +586,7 @@ def drapeau():
 drapeau()
 ```
 ````
+-->
 
 ## Et à part le dessin ?
 
