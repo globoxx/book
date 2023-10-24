@@ -478,10 +478,10 @@ Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un ar
 ## Exercice récapitulatif
 
 ````{exercise}
-Définissez une fonction `drapeau()` permettant de dessiner le drapeau suisse.  
+Définissez une fonction `drapeau()` permettant de dessiner un drapeau suisse.  
 Pour vous aider, définissez une fonction pour le carré et une autre pour la croix. Vous n'avez pas à vous préocupper des couleurs pour le moment.
 
-```{image} ../media/drapeau_suisse.svg
+```{image} ../media/drapeau_suisse.png
 ```
 
 Pour vous aider, voici une séquence d'instructions permettant de dessiner une croix.
