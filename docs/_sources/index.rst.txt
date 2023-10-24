@@ -9,7 +9,7 @@ Bienvenue sur la plateforme de TP d'informatique !
 .. toctree::
    :name: Programmation (parcours formel)
    :caption: Programmation (parcours formel)
-   :maxdepth: 2
+   :maxdepth: 3
    :hidden:
 
    prog_formel/intro
@@ -21,19 +21,19 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog_formel/algo
 
 
-.. .. toctree::
-..    :name: Programmation (parcours dessin)
-..    :caption: Programmation (parcours dessin)
-..    :maxdepth: 3
-..    :hidden:
+.. toctree::
+    :name: Programmation (parcours dessin)
+    :caption: Programmation (parcours dessin)
+    :maxdepth: 3
+    :hidden:
 
-..    prog_dessin/dessin
-..    prog_dessin/definir
-..    prog_dessin/repeter
-..    prog_dessin/parametrer
-..    prog_dessin/parcourir
-..    prog_dessin/randomiser
-..    prog_dessin/projet
+    prog_dessin/dessiner
+    prog_dessin/definir
+    prog_dessin/repeter
+    prog_dessin/parametrer
+    prog_dessin/parcourir
+    prog_dessin/randomiser
+    prog_dessin/projet
 
 
 .. toctree::
@@ -74,7 +74,7 @@ Bienvenue sur la plateforme de TP d'informatique !
 `Programmation (parcours formel) <prog_formel/intro.html>`_
 : ce chapitre contient le parcours d'apprentissage du langage python avec une approche formelle.
 
-`Programmation (parcours dessin) <prog_dessin/intro.html>`_
+`Programmation (parcours dessin) <prog_dessin/dessiner.html>`_
 : ce chapitre contient le parcours d'apprentissage du langage python avec une approche par le dessin (basé sur le contenu de Modulo).
 
 `Web <web/html1.html>`_

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="2. Définir" href="definir.html" /><link rel="prev" title="7. Les algorithmes" href="../prog_formel/algo.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>1. Dessiner - Travaux pratiques</title>
@@ -230,6 +230,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin)</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../web/html1.html">1. Introduction à l’HTML</a></li>
@@ -279,7 +289,7 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="dessiner">
-<span id="prog-dessiner-dessin"></span><h1>1. Dessiner<a class="headerlink" href="#dessiner" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="prog-dessin-dessiner"></span><h1>1. Dessiner<a class="headerlink" href="#dessiner" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Dans ce chapitre, nous allons explorer la programmation par le dessin. Dans ce contexte, un programme est une séquence d’instructions permettant de générer un image.<br/>
 Nous allons voir que:</p>
 <ul class="simple">
@@ -351,10 +361,24 @@ Ce rectangle a les propriétés suivantes :</p>
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
 <p>Ajoutez une instruction dans le code ci-dessous pour mener la tortue tout en bas du canevas. Ensuite, ajoutez une diagonale.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCnNoYXBlKCd0dXJ0bGUnKQpmb3J3YXJkKDMwMCkKYmFja3dhcmQoNjAwKQpmb3J3YXJkKDMwMCkKCmxlZnQoOTApCmZvcndhcmQoMjAwKQoKYGBgYHtkcm9wZG93bn0gU29sdXRpb24KYGBgcHl0aG9uCi4uLgoKYmFja3dhcmQoNDAwKQpyaWdodCg5MCkKZm9yd2FyZCgzMDApCnJpZ2h0KDQ1KQpiYWNrd2FyZCg1MDAp" data-file="Zm9yd2FyZDIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCnNoYXBlKCd0dXJ0bGUnKQpmb3J3YXJkKDMwMCkKYmFja3dhcmQoNjAwKQpmb3J3YXJkKDMwMCkKCmxlZnQoOTApCmZvcndhcmQoMjAwKQ==" data-file="Zm9yd2FyZDIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="n">backward</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">forward</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">right</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">backward</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details></div>
 </div>
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
@@ -483,7 +507,7 @@ Solution<div class="summary-down docutils">
 <span class="n">width</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
 <span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">width</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">backward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">backward</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
 <span class="n">width</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
 <span class="n">backward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
@@ -506,34 +530,9 @@ Un commentaire permet d’ajouter une explication pour le lecteur humain. Il n�
 <p>Ajoutez un commentaire pour chaque ligne du programme suivant.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCndpZHRoKDEwKSAgICAgICAjIG1ldHRyZSBsJ8OpcGFpc3NldXIgZHUgdHJhaXQgw6AgMTAKZm9yd2FyZCgyMCkgICAgICMgYXZhbmNlciBkZSAyMCBwaXhlbHMKbGVmdCg5MCkKYmFja3dhcmQoNjAp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </div>
-<p>L’exercice précédent servait à expliciter pour un débutant en programmation la signification des commandes écrites en anglais. Normalement, on ne fait pas ça, car un programmeur est censé connaitre la signification des commandes.</p>
-<p>Les commentaires servent à expliciter la signification d’une partie du programme.</p>
-<div class="admonition">
-<p class="admonition-title">Exercice</p>
-<div class="question-content docutils">
-<p>Expliquez cette fois ce que dessine chaque partie du programme (verre, pont, verre, charnière, branche).</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCndpZHRoKDUwKSAgICAgICAjIGRlc3NpbmVyIGxlIHByZW1pZXIgdmVycmUKZm9yd2FyZCgyMCkKd2lkdGgoMTApICAgICAgICMgZGVzc2luZXIgbGUgcG9udCAobmV6KQpmb3J3YXJkKDYwKQp3aWR0aCg1MCkKZm9yd2FyZCgyMCkKd2lkdGgoMTApCmZvcndhcmQoNDApCmxlZnQoNDUpCmZvcndhcmQoNjAp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">width</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>       <span class="c1"># dessiner le premier verre</span>
-<span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">width</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>       <span class="c1"># dessiner le pont (nez)</span>
-<span class="n">forward</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
-<span class="n">width</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>       <span class="c1"># desinner le deuxième verre</span>
-<span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">width</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>       <span class="c1"># dessiner la charnière</span>
-<span class="n">forward</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
-<span class="n">left</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
-<span class="n">forward</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>     <span class="c1"># dessiner la branche</span>
-</pre></div>
-</div>
-</div>
-</details></div>
-</div>
+<p>L’exercice précédent servait à expliciter pour un débutant en programmation la signification des commandes écrites en anglais.<br/>
+Normalement, on ne fait pas ça, car un programmeur est censé connaitre la signification des commandes.</p>
+<p>Les commentaires servent à expliquer la signification d’une <strong>partie</strong> du programme.</p>
 </section>
 <section id="equivalence">
 <h2>Équivalence<a class="headerlink" href="#equivalence" title="Lien permanent vers ce titre">¶</a></h2>
@@ -559,10 +558,9 @@ Solution<div class="summary-down docutils">
 <div class="admonition">
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
-<p>:file: ex1.py
-Dessinez une chaise en faisant varier l’épaisseur du trait (les pieds sont plus fins que le reste).<br/>
+<p>Dessinez une chaise en faisant varier l’épaisseur du trait (les pieds sont plus fins que le reste).<br/>
 Le plus simple est de la dessiner de profil, mais si vous avez l’âme courageuse, vous pouvez tenter de la faire sous un autre angle !</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCiMgVm90cmUgY29kZSBpY2k=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code>, faites une capture d’écran de votre dessin et déposez les fichiers sur Moodle à l’endroit prévu.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCiMgVm90cmUgY29kZSBpY2k=" data-file="ZXgxLnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code>, faites une capture d’écran de votre dessin et déposez les fichiers sur Moodle à l’endroit prévu.</p>
 </div>
 </div>
 <!--
@@ -604,8 +602,26 @@ Modifiez le texte à afficher. Ensuite, ajoutez d’autres commandes <code class
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="definir.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">2. Définir</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../prog_formel/algo.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">7. Les algorithmes</div>
+                
+              </div>
+            </a>
         </div>
 
         <div class="related-information">

@@ -1,4 +1,4 @@
-(prog_dessiner.dessin)=
+(prog_dessin.dessiner)=
 
 # 1. Dessiner
 
@@ -86,6 +86,7 @@ forward(300)
 
 left(90)
 forward(200)
+```
 
 ````{dropdown} Solution
 ```python
@@ -278,7 +279,7 @@ forward(100)
 width(80)
 forward(20)
 width(20)
-backward(100)
+backward(120)
 width(80)
 backward(20)
 ```
@@ -330,43 +331,10 @@ backward(60)
 ```
 ````
 
-L'exercice précédent servait à expliciter pour un débutant en programmation la signification des commandes écrites en anglais. Normalement, on ne fait pas ça, car un programmeur est censé connaitre la signification des commandes.
+L'exercice précédent servait à expliciter pour un débutant en programmation la signification des commandes écrites en anglais.  
+Normalement, on ne fait pas ça, car un programmeur est censé connaitre la signification des commandes.
 
-Les commentaires servent à expliciter la signification d'une partie du programme.
-
-`````{exercise}
-Expliquez cette fois ce que dessine chaque partie du programme (verre, pont, verre, charnière, branche).
-
-```{codeplay}
-from turtle import *
-
-width(50)       # dessiner le premier verre
-forward(20)
-width(10)       # dessiner le pont (nez)
-forward(60)
-width(50)
-forward(20)
-width(10)
-forward(40)
-left(45)
-forward(60)
-```
-
-````{dropdown} Solution
-```python
-width(50)       # dessiner le premier verre
-forward(20)
-width(10)       # dessiner le pont (nez)
-forward(60)
-width(50)       # desinner le deuxième verre
-forward(20)
-width(10)       # dessiner la charnière
-forward(40)
-left(45)
-forward(60)     # dessiner la branche
-```
-````
-`````
+Les commentaires servent à expliquer la signification d'une **partie** du programme.
 
 ## Équivalence
 
@@ -404,11 +372,11 @@ L'expression `left(90)` est équivalent à
 ## Exercice récapitulatif
 
 ````{exercise}
-:file: ex1.py
 Dessinez une chaise en faisant varier l'épaisseur du trait (les pieds sont plus fins que le reste).  
 Le plus simple est de la dessiner de profil, mais si vous avez l'âme courageuse, vous pouvez tenter de la faire sous un autre angle !
 
 ```{codeplay}
+:file: ex1.py
 from turtle import *
 
 # Votre code ici
