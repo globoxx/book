@@ -2,11 +2,11 @@
 
 # 4. Paramétrer
 
-Dans ce chapitre, nous revenons sur le concept de la fonction. Dans le chapitre 2 nous avons vu la fonction comme une façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :
+Dans ce chapitre, nous revenons sur le concept de la fonction. Dans le chapitre 2 nous avons vu la fonction comme une façon de donner un nom à une séquence d'instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs **paramètres** à une fonction. Nous allons voir que :
 
 - l'expression `def rect(d, e):` permet de définir une fonction avec deux paramètres,
 - les paramètres `d` et `e` sont des variables locales valides uniquement à l'intérieur de la définition de fonction,
-- ces paramètres prennent une valeur au moment de l'appel  de la fonction avec, par exemple, `rect(50, 30)`.
+- ces paramètres prennent une valeur au moment de l'appel de la fonction avec, par exemple, `rect(50, 30)`.
 
 ```{question}
 En Python, `def` est un raccourci pour
@@ -28,7 +28,7 @@ Un paramètre de fonction est une variable locale qui peut être utilisée dans 
 Lors de l'appel de la fonction, nous donnons des valeurs à la fonction.
 Ces valeurs sont les **arguments** de la fonction.
 
-````{exercise}
+`````{exercise}
 Aujoutez un deuxième rectangle avec d'autres dimensions.
 
 ```{codeplay}
@@ -48,9 +48,18 @@ def rectangle(d, e):    # paramètres (d, e)
         
 rectangle(160, 100)      # largeur=160, hauteur=100 
 ```
-````
 
-La fonction `losange(d, a)` a comme paramètre la longueur et le premier angle. Le deuxième angle du losange est calculé.
+````{dropdown} Solution
+```python
+...
+
+rectangle(160, 100)      # largeur=160, hauteur=100 
+rectangle(120, 200)      # largeur=120, hauteur=200
+```
+````
+``````
+
+La fonction `losange(d, a)` a comme paramètre la longueur et le premier angle. Le deuxième angle du losange est calculé automatiquement.
 
 ```{codeplay}
 from turtle import *
@@ -117,13 +126,13 @@ maison(70)      # maison de taille 70
 
 ## Positionner la maison
 
-La fonction `goto(x, y)` place la tortue à la position `(x, y)`. Cette fonction  permet de positionner notre maison à un endroit précis.
-Pour désigner cette position, nous utilisons la variable `p` (point, position) qui consiste d'un tuple `(x, y)` de coordonnées.
+La fonction `goto(x, y)` place la tortue à la position `(x, y)`. Cette fonction permet de positionner notre maison à un endroit précis.
+Pour désigner cette position, nous utilisons la variable `p` qui consiste en une paire `(x, y)` de coordonnées.
 
 La fonction `write(p)` écrit la position `p` sur le canevas, à la position actuelle de la tortue. Pour marquer ce point de positionnement, nous ajoutons un point (dot) comme marqueur.
 
 ````{exercise}
-Aujoutez deux autres maisons de taille différente.
+Aujoutez deux autres maisons de taille différente à des endroits différents.
 
 ```{codeplay}
 from turtle import *
@@ -196,34 +205,6 @@ Avec la fonction `fillcolor(c)`, nous pouvons définir une couleur de remplissag
 - `end_fill()` à la fin de la forme.
 ```
 
-## Arbre
-
-Pour dessiner un arbre simple, nous utilisons un segment droit pour le tronc et un disque (dot) pour le feuillage.  
-C'est une fonction qui a 3 paramètres:
-
-- `d` -- longueur du tronc
-- `c` -- couleur du tronc
-- `c2` -- couleur du feuillage
-
-```{codeplay}
-from turtle import *
-
-def arbre(d, c, c2):
-    down()
-    left(90)
-    width(d/6)      # tronc
-    pencolor(c)
-    forward(d)
-    dot(d, c2)      # feuillage
-    up()
-    backward(d)     # retourner à la position de départ
-    right(90)
-    
-arbre(100, 'brown', 'lime')
-forward(70)
-arbre(90, 'brown', 'green')
-```
-
 ## Bus
 
 Pour dessiner un bus, une voiture ou un camion simple, nous pouvons utiliser des rectangles pour le châssis, et un disque (dot) pour les roues.  
@@ -260,6 +241,34 @@ def bus(p, d, c):
     
 bus((-200, 50), 200, 'red')
 bus((50, 20), 150, 'lightblue')
+```
+
+## Arbre
+
+Pour dessiner un arbre simple, nous utilisons un segment droit pour le tronc et un disque (dot) pour le feuillage.  
+C'est une fonction qui a 3 paramètres:
+
+- `d` -- longueur du tronc
+- `c` -- couleur du tronc
+- `c2` -- couleur du feuillage
+
+```{codeplay}
+from turtle import *
+
+def arbre(d, c, c2):
+    down()
+    left(90)
+    width(d/6)      # tronc
+    pencolor(c)
+    forward(d)
+    dot(d, c2)      # feuillage
+    up()
+    backward(d)     # retourner à la position de départ
+    right(90)
+    
+arbre(100, 'brown', 'lime')
+forward(70)
+arbre(90, 'brown', 'green')
 ```
 
 ## Escalier
@@ -363,7 +372,7 @@ Lesquels des noms de variable sont valides ?
 
 
 ```{codeplay}
-:file: rails.py
+:file: ex4.py
 TODO
 ```
 
@@ -381,7 +390,7 @@ Paramètrer une fonction permet en quelque sorte de la généraliser pour qu'ell
 - `a = a + 3` permet d'ajouter 3 à la variable `a`.
 ```
 
-````{exercise}
+`````{exercise}
 Ecrivez une fonction qui permet de calculer l'aire d'un triangle en vous basant sur la longueur de sa base et sa hauteur.
 
 La fonction prend donc 2 paramètres:
@@ -391,9 +400,17 @@ La fonction prend donc 2 paramètres:
 ```{codeplay}
 # Votre code ici...
 ```
-````
 
-````{exercise}
+````{dropdown} Solution
+```python
+def calcul_aire(base, hauteur):
+    aire = base*hauteur / 2
+    print(aire)
+```
+````
+`````
+
+`````{exercise}
 Reprenez la solution de l'exercice final du chapitre 3 et écrivez une fonction permettant de calculer la somme des chiffres de 0 à n.
 
 La fonction prend donc un unique paramètre: `n`.
@@ -401,4 +418,14 @@ La fonction prend donc un unique paramètre: `n`.
 ```{codeplay}
 # Votre code ici...
 ```
+
+````{dropdown} Solution
+```python
+def calcul_somme(n):
+    somme = 0
+    for i in range(n+1):
+        somme = somme + i
+    print(somme)
+```
 ````
+`````

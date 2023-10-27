@@ -405,7 +405,7 @@ Dessinez les rails d'un chemin de fer.
 Utilisez une boucle `for` pour la répétition des traverses.
 
 ```{codeplay}
-:file: rails.py
+:file: ex3.py
 from turtle import *
 
 def traverse():
@@ -457,7 +457,7 @@ somme = 0
 
 for i in range(10):
     somme = somme + i
-    
+
 moyenne = somme / 10
 print(moyenne)
 ```

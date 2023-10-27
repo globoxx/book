@@ -290,11 +290,11 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="parametrer">
 <span id="prog-dessin-parametrer"></span><h1>4. Paramétrer<a class="headerlink" href="#parametrer" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Dans ce chapitre, nous revenons sur le concept de la fonction. Dans le chapitre 2 nous avons vu la fonction comme une façon de donner un nom à une séquence d’instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs paramètres à une fonction. Nous allons voir que :</p>
+<p>Dans ce chapitre, nous revenons sur le concept de la fonction. Dans le chapitre 2 nous avons vu la fonction comme une façon de donner un nom à une séquence d’instructions. Ici nous allons voir comment nous pouvons ajouter un ou plusieurs <strong>paramètres</strong> à une fonction. Nous allons voir que :</p>
 <ul class="simple">
 <li><p>l’expression <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">rect(d,</span> <span class="pre">e):</span></code> permet de définir une fonction avec deux paramètres,</p></li>
 <li><p>les paramètres <code class="docutils literal notranslate"><span class="pre">d</span></code> et <code class="docutils literal notranslate"><span class="pre">e</span></code> sont des variables locales valides uniquement à l’intérieur de la définition de fonction,</p></li>
-<li><p>ces paramètres prennent une valeur au moment de l’appel  de la fonction avec, par exemple, <code class="docutils literal notranslate"><span class="pre">rect(50,</span> <span class="pre">30)</span></code>.</p></li>
+<li><p>ces paramètres prennent une valeur au moment de l’appel de la fonction avec, par exemple, <code class="docutils literal notranslate"><span class="pre">rect(50,</span> <span class="pre">30)</span></code>.</p></li>
 </ul>
 <div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
@@ -318,9 +318,23 @@ Ces valeurs sont les <strong>arguments</strong> de la fonction.</p>
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
 <p>Aujoutez un deuxième rectangle avec d’autres dimensions.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiByZWN0YW5nbGUoZCwgZSk6ICAgICMgcGFyYW3DqHRyZXMgKGQsIGUpCiAgICBmb3IgaSBpbiByYW5nZSgyKToKICAgICAgICBmb3J3YXJkKGQvMikKICAgICAgICB3cml0ZShkKQogICAgICAgIGZvcndhcmQoZC8yKQogICAgICAgIGxlZnQoOTApCgogICAgICAgIGZvcndhcmQoZS8yKQogICAgICAgIHdyaXRlKGUpCiAgICAgICAgZm9yd2FyZChlLzIpCiAgICAgICAgbGVmdCg5MCkKICAgICAgICAKcmVjdGFuZ2xlKDE2MCwgMTAwKSAgICAgICMgbGFyZ2V1cj0xNjAsIGhhdXRldXI9MTAwIA==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiByZWN0YW5nbGUoZCwgZSk6ICAgICMgcGFyYW3DqHRyZXMgKGQsIGUpCiAgICBmb3IgaSBpbiByYW5nZSgyKToKICAgICAgICBmb3J3YXJkKGQvMikKICAgICAgICB3cml0ZShkKQogICAgICAgIGZvcndhcmQoZC8yKQogICAgICAgIGxlZnQoOTApCgogICAgICAgIGZvcndhcmQoZS8yKQogICAgICAgIHdyaXRlKGUpCiAgICAgICAgZm9yd2FyZChlLzIpCiAgICAgICAgbGVmdCg5MCkKICAgICAgICAKcmVjdGFuZ2xlKDE2MCwgMTAwKSAgICAgICMgbGFyZ2V1cj0xNjAsIGhhdXRldXI9MTAwIA==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="n">rectangle</span><span class="p">(</span><span class="mi">160</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>      <span class="c1"># largeur=160, hauteur=100 </span>
+<span class="n">rectangle</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>      <span class="c1"># largeur=120, hauteur=200</span>
+</pre></div>
 </div>
-<p>La fonction <code class="docutils literal notranslate"><span class="pre">losange(d,</span> <span class="pre">a)</span></code> a comme paramètre la longueur et le premier angle. Le deuxième angle du losange est calculé.</p>
+</div>
+</details></div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">losange(d,</span> <span class="pre">a)</span></code> a comme paramètre la longueur et le premier angle. Le deuxième angle du losange est calculé automatiquement.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBsb3NhbmdlKGQsIGEpOiAgICAgICMgcGFyYW3DqHRyZXMgKGQ9ZGlzdGFuY2UsIGE9YW5nbGUpCiAgICBmb3IgaSBpbiByYW5nZSgyKToKICAgICAgICBmb3J3YXJkKGQpCiAgICAgICAgbGVmdChhKQogICAgICAgIHdyaXRlKGEpCiAgICAgICAgCiAgICAgICAgZm9yd2FyZChkKQogICAgICAgIGxlZnQoMTgwLWEpCiAgICAgICAgd3JpdGUoMTgwLWEpCgpsb3NhbmdlKDEwMCwgNjApICAgICAgICAjIGRpc3RhbmNlPTEwMCwgYW5nbGU9NjAKbG9zYW5nZSgxNDAsIDEwMCkgICAgICAgIyBkaXN0YW5jZT0xNDAsIGFuZ2xlPTEwMA==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>La fonction <code class="docutils literal notranslate"><span class="pre">polygone(d,</span> <span class="pre">n)</span></code> a comme paramètre la distance du côté et le nombre de sommets.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwb2x5Z29uZShkLCBuKTogICAgICMgcGFyYW3DqHRyZXMgKGQsIG4pCiAgICBmb3IgaSBpbiByYW5nZShuKToKICAgICAgICBmb3J3YXJkKGQpCiAgICAgICAgbGVmdCgzNjAvbikKICAgICAgICB3cml0ZSgzNjAvbikKCnBvbHlnb25lKDEwMCwgMykgICAgIyB0cmlhbmdsZQpwb2x5Z29uZSgxMDAsIDQpICAgICMgY2FycsOpICAgIApwb2x5Z29uZSgxMDAsIDUpICAgICMgcGVudGFnb25l" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="dessiner-une-maison">
@@ -335,13 +349,13 @@ Ces valeurs sont les <strong>arguments</strong> de la fonction.</p>
 </section>
 <section id="positionner-la-maison">
 <h2>Positionner la maison<a class="headerlink" href="#positionner-la-maison" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La fonction <code class="docutils literal notranslate"><span class="pre">goto(x,</span> <span class="pre">y)</span></code> place la tortue à la position <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code>. Cette fonction  permet de positionner notre maison à un endroit précis.
-Pour désigner cette position, nous utilisons la variable <code class="docutils literal notranslate"><span class="pre">p</span></code> (point, position) qui consiste d’un tuple <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> de coordonnées.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">goto(x,</span> <span class="pre">y)</span></code> place la tortue à la position <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code>. Cette fonction permet de positionner notre maison à un endroit précis.
+Pour désigner cette position, nous utilisons la variable <code class="docutils literal notranslate"><span class="pre">p</span></code> qui consiste en une paire <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> de coordonnées.</p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">write(p)</span></code> écrit la position <code class="docutils literal notranslate"><span class="pre">p</span></code> sur le canevas, à la position actuelle de la tortue. Pour marquer ce point de positionnement, nous ajoutons un point (dot) comme marqueur.</p>
 <div class="admonition">
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
-<p>Aujoutez deux autres maisons de taille différente.</p>
+<p>Aujoutez deux autres maisons de taille différente à des endroits différents.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBtYWlzb24ocCwgZCk6CiAgICBnb3RvKHApICAgICAjIGFsbGVyIMOgIGxhIHBvc2l0aW9uIHAKICAgIHdyaXRlKHApICAgICMgYWZmaWNoZXIgY2V0dGUgcG9zaXRpb24gcAogICAgZG90KCkgICAgICAgIyBham91dGVyIHVuIG1hcnF1ZXIgKGRvdCkKICAgIGRvd24oKQogICAgZm9yd2FyZCAoMS40MSpkKSAgIyBzb2wKICAgIGxlZnQoOTApCiAgICBmb3J3YXJkKGQpICAjIG11ciBkcm9pdAogICAgbGVmdCg0NSkKICAgIGZvcndhcmQoZCkgICMgdG9pdCBkcm9pdAogICAgbGVmdCg5MCkKICAgIGZvcndhcmQoZCkgICMgdG9pdCBnYXVjaGUKICAgIGxlZnQoNDUpCiAgICBmb3J3YXJkKGQpICAjIG11ciBnYXVjaGUKICAgIGxlZnQoOTApCiAgICB1cCgpCiAgICAKbWFpc29uKCgwLCAwKSwgNTApICAgICAgICAgICMgbWFpc29uIMOgIGxhIHBvc2l0aW9uICgwLCAwKQptYWlzb24oKC0xNTAsIDUwKSwgNzApICAgICAgIyBtYWlzb24gw6AgbGEgcG9zaXRpb24gKC0xNTAsIDUwKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
 </div>
 </section>
@@ -368,16 +382,6 @@ Pour désigner cette position, nous utilisons la variable <code class="docutils 
 </ul>
 </div>
 </section>
-<section id="arbre">
-<h2>Arbre<a class="headerlink" href="#arbre" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour dessiner un arbre simple, nous utilisons un segment droit pour le tronc et un disque (dot) pour le feuillage.<br/>
-C’est une fonction qui a 3 paramètres:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code> – longueur du tronc</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> – couleur du tronc</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">c2</span></code> – couleur du feuillage</p></li>
-</ul>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBhcmJyZShkLCBjLCBjMik6CiAgICBkb3duKCkKICAgIGxlZnQoOTApCiAgICB3aWR0aChkLzYpICAgICAgIyB0cm9uYwogICAgcGVuY29sb3IoYykKICAgIGZvcndhcmQoZCkKICAgIGRvdChkLCBjMikgICAgICAjIGZldWlsbGFnZQogICAgdXAoKQogICAgYmFja3dhcmQoZCkgICAgICMgcmV0b3VybmVyIMOgIGxhIHBvc2l0aW9uIGRlIGTDqXBhcnQKICAgIHJpZ2h0KDkwKQogICAgCmFyYnJlKDEwMCwgJ2Jyb3duJywgJ2xpbWUnKQpmb3J3YXJkKDcwKQphcmJyZSg5MCwgJ2Jyb3duJywgJ2dyZWVuJyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="bus">
 <h2>Bus<a class="headerlink" href="#bus" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour dessiner un bus, une voiture ou un camion simple, nous pouvons utiliser des rectangles pour le châssis, et un disque (dot) pour les roues.<br/>
@@ -388,6 +392,16 @@ C’est une fonction qui a pour paramètres:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> – couleur du bus</p></li>
 </ul>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiByZWN0YW5nbGUoZCwgZSwgYyk6CiAgICBmaWxsY29sb3IoYykKICAgIGJlZ2luX2ZpbGwoKQogICAgZm9yIGkgaW4gcmFuZ2UoMik6CiAgICAgICAgZm9yd2FyZChkKQogICAgICAgIGxlZnQoOTApCiAgICAgICAgZm9yd2FyZChlKQogICAgICAgIGxlZnQoOTApCiAgICBlbmRfZmlsbCgpCiAgICAgICAgCmRlZiBidXMocCwgZCwgYyk6CiAgICBnb3RvKHApCiAgICBkb3duKCkKICAgIHJlY3RhbmdsZShkLCBkLzMsIGMpICMgY2hhc3NpcwogICAgZm9yd2FyZChkLzQpCiAgICBkb3QoZC81KSAgICAgICAgICAgICMgcm91ZSBhcnJpw6hyZQogICAgZG90KGQvMTAsICd3aGl0ZScpCiAgICBmb3J3YXJkKGQvMikKICAgIGRvdChkLzUpICAgICAgICAgICAgIyByb3VlIGF2YW50CiAgICBkb3QoZC8xMCwgJ3doaXRlJykKICAgIHVwKCkKICAgIApidXMoKC0yMDAsIDUwKSwgMjAwLCAncmVkJykKYnVzKCg1MCwgMjApLCAxNTAsICdsaWdodGJsdWUnKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="arbre">
+<h2>Arbre<a class="headerlink" href="#arbre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour dessiner un arbre simple, nous utilisons un segment droit pour le tronc et un disque (dot) pour le feuillage.<br/>
+C’est une fonction qui a 3 paramètres:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code> – longueur du tronc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> – couleur du tronc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c2</span></code> – couleur du feuillage</p></li>
+</ul>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBhcmJyZShkLCBjLCBjMik6CiAgICBkb3duKCkKICAgIGxlZnQoOTApCiAgICB3aWR0aChkLzYpICAgICAgIyB0cm9uYwogICAgcGVuY29sb3IoYykKICAgIGZvcndhcmQoZCkKICAgIGRvdChkLCBjMikgICAgICAjIGZldWlsbGFnZQogICAgdXAoKQogICAgYmFja3dhcmQoZCkgICAgICMgcmV0b3VybmVyIMOgIGxhIHBvc2l0aW9uIGRlIGTDqXBhcnQKICAgIHJpZ2h0KDkwKQogICAgCmFyYnJlKDEwMCwgJ2Jyb3duJywgJ2xpbWUnKQpmb3J3YXJkKDcwKQphcmJyZSg5MCwgJ2Jyb3duJywgJ2dyZWVuJyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="escalier">
 <h2>Escalier<a class="headerlink" href="#escalier" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici une fonction permettant de dessiner des escaliers avec les paramètres suivants:</p>
@@ -439,7 +453,7 @@ C’est une fonction qui a pour paramètres:</p>
 <div class="admonition">
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="VE9ETw==" data-file="cmFpbHMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et déposez le sur Moodle à l’endroit prévu.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="VE9ETw==" data-file="ZXg0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et déposez le sur Moodle à l’endroit prévu.</p>
 </div>
 </div>
 </section>
@@ -463,14 +477,42 @@ C’est une fonction qui a pour paramètres:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hauteur</span></code></p></li>
 </ul>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaS4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaS4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcul_aire</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">):</span>
+    <span class="n">aire</span> <span class="o">=</span> <span class="n">base</span><span class="o">*</span><span class="n">hauteur</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">aire</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 </div>
 <div class="admonition">
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
 <p>Reprenez la solution de l’exercice final du chapitre 3 et écrivez une fonction permettant de calculer la somme des chiffres de 0 à n.</p>
 <p>La fonction prend donc un unique paramètre: <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaS4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaS4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcul_somme</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 </div>
 </section>
 </section>
@@ -528,8 +570,8 @@ C’est une fonction qui a pour paramètres:</p>
 <li><a class="reference internal" href="#dessiner-une-maison">Dessiner une maison</a></li>
 <li><a class="reference internal" href="#positionner-la-maison">Positionner la maison</a></li>
 <li><a class="reference internal" href="#colorier-la-maison">Colorier la maison</a></li>
-<li><a class="reference internal" href="#arbre">Arbre</a></li>
 <li><a class="reference internal" href="#bus">Bus</a></li>
+<li><a class="reference internal" href="#arbre">Arbre</a></li>
 <li><a class="reference internal" href="#escalier">Escalier</a></li>
 <li><a class="reference internal" href="#stickman">Stickman</a></li>
 <li><a class="reference internal" href="#nommer-une-variable">Nommer une variable</a></li>
