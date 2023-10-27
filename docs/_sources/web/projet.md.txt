@@ -18,7 +18,7 @@ Sachez par contre que votre site **sera hébergé et accessible pour le reste du
 ```{admonition} Pour ce qui est de la forme, voici les contraintes à respecter:
 :class: note
 
-Structure et contenu de base:
+**Structure et contenu de base:**
 - Au minimum 4 pages HTML liées entre elles par des liens hypertextes
 - Un seul fichier `.css` est utilisé pour l'ensemble de votre site
 - Les 4 pages ont toutes une structure différente (pas de copié collé avec simplement le texte qui change)
@@ -26,14 +26,14 @@ Structure et contenu de base:
 - Un menu vertical ou horizontal permet de passer sur les différentes pages du site
 - Un logo cliquable permet de revenir à l'accueil du site depuis n'importe quelle page
 
-Design et ergonomie:
+**Design et ergonomie:**
 - Le design et le style des pages sont cohérents et consistants
 - Le site est facile d'utilisation, il est agréable de naviguer dessus (ex: les liens sont bien visibles)
 - Le logo et les images du site sont de bonne qualité
 - La syntaxe et l'orthographe des textes sont correctes
 - Le menu est beau et fonctionnel
 
-Utilisation pertinente des balises html vues en classe:
+**Utilisation pertinente de balises html:**
 - Le nom du site doit apparaître dans l'onglet du navigateur
 - Votre site doit au minimum avoir un titre bien visible en page d'accueil
 - Tous vos paragraphes doivent être dans des balises `<p>`
@@ -44,7 +44,7 @@ Utilisation pertinente des balises html vues en classe:
 - Au moins une infobulle est présente sur une image
 - Au moins une balise html non vue en classe est présente
 
-Utilisation pertinente des balises css vues en classe:
+**Utilisation pertinente de propriétés css:**
 - Des classes css pertinentes sont utilisées avec les balises `<span>` et `<div>`
 - Les propriétés `color` et `background-color` sont utilisées
 - Au moins une propriété de style de texte est utilisée (ex: `text-align`)
@@ -55,12 +55,12 @@ Utilisation pertinente des balises css vues en classe:
 - Au moins un élément change de style au survol de la souris
 - Au moins une propriété css non vue en classe est utilisée
 
-Structure du code et du projet:
+**Structure du code et du projet:**
 - Toutes les images sont regroupées dans un sous-dossier `images`
 - Le code ne doit pas contenir d'erreurs de syntaxe (ex: balises mal formattées)
 - Le code doit être propre et facilement lisible (indentations/décalages à droite corrects)
 
-Bonus:
+**Bonus:**
 - Le design du site est particulièrement beau et original
 - Le site contient un élément css particulièrement complexe non vu en classe
 - Un exploit technique dépassant le cadre du cours est présent
