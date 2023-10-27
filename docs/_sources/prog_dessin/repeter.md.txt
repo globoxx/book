@@ -418,6 +418,17 @@ from turtle import *
 
 Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu.
 ````
+<!--
+from turtle import *
+
+longueur_segment = 10
+augmentation = 10
+
+for i in range(20):
+    forward(longueur_segment)
+    left(90)
+    longueur_segment += augmentation
+-->
 
 ## Et à part le dessin ?
 

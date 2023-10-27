@@ -57,7 +57,7 @@ rectangle(160, 100)      # largeur=160, hauteur=100
 rectangle(120, 150)      # largeur=120, hauteur=150
 ```
 ````
-``````
+`````
 
 La fonction `losange(d, a)` a comme paramètre la longueur et le premier angle. Le deuxième angle du losange est calculé automatiquement.
 
@@ -370,15 +370,47 @@ Lesquels des noms de variable sont valides ?
 ## Exercice récapitulatif
 
 ````{exercise}
+Reprenez l'exercice récapitulatif du chapitre `répéter` et créez une fonction pour dessiner votre spirale.
+La fonction doit avoir les paramètres suivants:
+- `l`: longueur initiale d'un segment
+- `i`: incrément de la longueur du segment à chaque tour
+- `a`: angle entre chaque segment
+- `c`: couleur de la spirale
+- `n`: nombre de segments
 
+Appelez votre fonction 3 fois avec des paramètres différents, comme dans l'exemple ci-dessous:
+
+![spirale](../media/spirale_parametree.png)
 
 ```{codeplay}
 :file: ex4.py
-TODO
+from turtle import *
+
+# Votre code ici...
 ```
 
 Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu.
 ````
+<!--
+from turtle import *
+
+def spirale(l, i, a, c, n):
+    color(c)
+    for i in range(n):
+        forward(l)
+        left(a)
+        l += i
+        
+spirale(10, 3, 45, 'red', 20)
+up()
+goto(-125, -150)
+down()
+spirale(5, 3, 95, 'blue', 20)
+up()
+goto(175, 100)
+down()
+spirale(5, 5, 135, 'green', 30)
+-->
 
 ## Et à part le dessin ?
 

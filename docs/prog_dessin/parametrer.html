@@ -453,9 +453,40 @@ C’est une fonction qui a 3 paramètres:</p>
 <div class="admonition">
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="VE9ETw==" data-file="ZXg0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et déposez le sur Moodle à l’endroit prévu.</p>
+<p>Reprenez l’exercice récapitulatif du chapitre <code class="docutils literal notranslate"><span class="pre">répéter</span></code> et créez une fonction pour dessiner votre spirale.
+La fonction doit avoir les paramètres suivants:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">l</span></code>: longueur initiale d’un segment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span></code>: incrément de la longueur du segment à chaque tour</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code>: angle entre chaque segment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code>: couleur de la spirale</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code>: nombre de segments</p></li>
+</ul>
+<p>Appelez votre fonction 3 fois avec des paramètres différents, comme dans l’exemple ci-dessous:</p>
+<p><img alt="spirale" src="../_images/spirale_parametree.png"/></p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCiMgVm90cmUgY29kZSBpY2kuLi4=" data-file="ZXg0LnB5" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Téléchargez le fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et déposez le sur Moodle à l’endroit prévu.</p>
 </div>
 </div>
+<!--
+from turtle import *
+
+def spirale(l, i, a, c, n):
+    color(c)
+    for i in range(n):
+        forward(l)
+        left(a)
+        l += i
+        
+spirale(10, 3, 45, 'red', 20)
+up()
+goto(-125, -150)
+down()
+spirale(5, 3, 95, 'blue', 20)
+up()
+goto(175, 100)
+down()
+spirale(5, 5, 135, 'green', 30)
+-->
 </section>
 <section id="et-a-part-le-dessin">
 <h2>Et à part le dessin ?<a class="headerlink" href="#et-a-part-le-dessin" title="Lien permanent vers ce titre">¶</a></h2>
