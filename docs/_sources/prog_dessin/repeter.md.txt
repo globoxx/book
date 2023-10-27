@@ -416,7 +416,7 @@ from turtle import *
 # Votre code ici...
 ```
 
-Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu.
+Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu avec une capture d'écran du dessin.
 ````
 <!--
 from turtle import *

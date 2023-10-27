@@ -274,7 +274,7 @@ getscreen().bgcolor('skyblue') # Permet de modifier la couleur de fond
 up()
 
 backward(200)
-for d in (10, 20, 30, 40):
+for d in [10, 20, 30, 40]:
     dot(100, 'yellow')
 
     left(45)
@@ -303,7 +303,7 @@ Avec trois losanges, nous pouvons dessiner un cube en 3D.
 from turtle import *
 
 def losange(d):
-    for a in (120, 60, 120, 60):
+    for a in [120, 60, 120, 60]:
         forward(d)
         left(a)
         
@@ -323,13 +323,13 @@ from turtle import *
 def losange(d, c):
     fillcolor(c)
     begin_fill()
-    for a in (120, 60, 120, 60):
+    for a in [120, 60, 120, 60]:
         forward(100)
         left(a)
     end_fill()
 
 def cube():      
-    for c in ('pink', 'violet', 'darkviolet'):
+    for c in ['pink', 'violet', 'darkviolet']:
         losange(100, c)
         left(120)
 
@@ -346,13 +346,13 @@ from turtle import *
 def losange(d, c):
     fillcolor(c)
     begin_fill()
-    for a in (120, 60, 120, 60):
+    for a in [120, 60, 120, 60]:
         forward(100)
         left(a)
     end_fill()
         
 def cube():
-    for c in ('pink', 'violet', 'darkviolet'):
+    for c in ['pink', 'violet', 'darkviolet']:
         losange(100, c)
         left(120)
 
@@ -367,13 +367,17 @@ for i in range(3):
 
 ````{exercise}
 
+Réalisez une forme inédite de votre choix à l'aide d'une boucle `for ... in [...]`.
+Le dessin que vous réalisez dans cet exercice pourra être ré-utilisé dans le projet.
 
 ```{codeplay}
 :file: ex5.py
-TODO
+from turtle import *
+
+# Votre code ici...
 ```
 
-Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu.
+Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu avec une capture d'écran du dessin.
 ````
 
 ## Et à part le dessin ?
@@ -390,7 +394,7 @@ Les listes sont souvent un moyen de grouper des valeurs ensemble. Par exemple, l
 `````{exercise}
 Ecrivez une fonction qui prend une liste de notes en paramètre et affiche la moyenne.
 
-La fonction prend donc un paramètre `notes` qui est une liste de nombres entiers. La fonction `len(liste)` permet de calculer la longueur d'une liste.
+La fonction prend donc un paramètre `notes` qui est une liste de nombres. La fonction `len(liste)` permet de calculer la longueur d'une liste.
 
 ```{codeplay}
 # Votre code ici...

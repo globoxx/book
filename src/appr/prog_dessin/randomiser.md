@@ -60,7 +60,7 @@ for i in range(10):
 ## Angle aléatoire
 
 La fonction `a = randint(-90, 90)` retourne un angle aléatoire dans l'intervalle `[-90, 90]`.
-Le programme produit un parcours aléatoire (<a href="https://fr.wikipedia.org/wiki/Marche_al%C3%A9atoire">marche aléatoire</a>).
+Le programme produit un parcours aléatoire (<a href="https://fr.wikipedia.org/wiki/Marche_al%C3%A9atoire" target="_blank">marche aléatoire</a>).
 
 ```{codeplay}
 from turtle import *
