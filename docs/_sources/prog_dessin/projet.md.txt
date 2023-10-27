@@ -49,7 +49,11 @@ from turtle import *
 from random import *
 # from tkinter import * 
 
-speed(0)
+speed(0) # Permet d'accélérer le dessin
+
+# -----------------------------------
+# Définissez ici toutes vos fonctions
+# -----------------------------------
 
 def triangle(d, c):
     # Dessine un triangle équilatéral de longueur d et de couleur c
@@ -115,6 +119,10 @@ def fleur(d, n, c_centre, c_petale):
     left(60)
     forward(d*0.7)
     dot(d*0.7, c_centre)
+
+# --------------------------------------------------------
+# Ecrivez ici les appels de fonctions pour faire le dessin
+# --------------------------------------------------------
 
 dot(10000, 'green') # Background vert
 up()
