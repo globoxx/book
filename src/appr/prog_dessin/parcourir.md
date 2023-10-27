@@ -2,7 +2,7 @@
 
 # 5. Parcourir
 
-Dans ce chapitre, nous allons découvrir le concept très important de liste. Une liste est une séquence ordonnée d'objets, par exemple de couleurs, de distances ou d'angles. Nous pouvons parcourir les valeurs d'une liste une après l'autre avec une boucle `for`. Nous allons voir que :
+Dans ce chapitre, nous allons découvrir le concept très important de **liste**. Une liste est une séquence ordonnée d'objets, par exemple de couleurs, de distances ou d'angles. Nous pouvons parcourir les valeurs d'une liste une après l'autre avec une boucle `for`. Nous allons voir que :
 
 - la liste `[10, 20, 30]` représente une séquence de valeurs,
 - dans la boucle `for d in [10, 20, 30]:` la variable d'itération `d` parcourt des nombres,
@@ -17,7 +17,7 @@ En informatique, une liste est
 {f}`une suite de nombres (et uniquement ça)`
 ```
 
-Auparavant nous avons vu la boucle `for` comme une simple répétition. Dans ce chapitre la boucle `for` est différente dans le sens que nous parcourons une séquence et nous utilisons une valeur différente pour chaque tour. En Python, cette idée de **parcourir une séquence** et d'utiliser une **valeur successive** à chaque tour, est un concept fondamental.
+Auparavant nous avons vu la boucle `for` comme une simple répétition. Dans ce chapitre, la boucle `for` est différente dans le sens où nous parcourons une séquence et nous utilisons une valeur différente pour chaque tour. En programmation, cette idée de **parcourir une séquence** et d'utiliser une **valeur successive** à chaque tour, est un concept fondamental.
 
 ## Variable d'itération
 
@@ -135,7 +135,7 @@ from turtle import *
 def maison(d):
     dot()
     forward (1.41*d)
-    for a in (90, 45, 90, 45):
+    for a in [90, 45, 90, 45]:
         write(a)
         left(a)
         forward(d)
@@ -157,7 +157,7 @@ Le sens des paramètres :
 
 - `start` est la valeur de départ,
 - `stop` est la valeur finale, mais sans l'inclure,
-- `step` est l'incrément.
+- `step` est l'incrément (la distance entre 2 valeurs successives).
 
 Par défaut, `start = 0`, `step = 1` et seule la valeur de `stop` est obligatoire. C'est pourquoi quand nous écrivions `for i in range(n)`, `n` variait de `0` à `n-1`.
 
@@ -166,7 +166,7 @@ Par défaut, `start = 0`, `step = 1` et seule la valeur de `stop` est obligatoir
 Ecrire `range(10)` est donc similaire à écrire `[0, 1, 2, ..., 8, 9]`. L'unique différence réside dans le fait que la fonction `range()` ne retourne pas à proprement parler une liste, mais un <a href="https://gayerie.dev/docs/python/python3/iterateur_generateur.html#les-generateurs">générateur</a>.
 ```
 
-````{exercise}
+`````{exercise}
 Affichez les entiers entre -50 et 200 avec un incrément de 25.
 
 ```{codeplay}
@@ -182,7 +182,15 @@ for x in range(start, stop, step):
     goto(x, 0)
     write(x)
 ```
+
+````{dropdown} Solution
+```python
+start = -50
+stop = 201
+step = 25
+```
 ````
+`````
 
 ## Dessiner une spirale
 
@@ -203,10 +211,6 @@ for i in range(100):
 Revenons à nos listes et parcourons une séquence d'angles avec une variable d'itération `a` pour dessiner une maison.
 
 Ensuite, nous allons parcourir une séquence de couleurs avec une variable `c` pour dessiner des maisons de différentes couleurs.
-
-```{exercise}
-Changez les couleurs des maisons.
-```
 
 ```{codeplay}
 :file: tuple5.py
@@ -233,9 +237,8 @@ for c in ['red', 'yellow', 'pink', 'lightblue', 'lightgreen']:
 Ci-dessous nous dessinons 6 fois un losange pour obtenir une fleur.
 Avec une boucle `for` nous parcourons une séquence de 6 couleurs alternantes.
 
-```{exercise}
+````{exercise}
 Il manque un pétale, corrigez le programme.
-```
 
 ```{codeplay}
 :file: tuple6.py
@@ -245,15 +248,20 @@ getscreen().bgcolor('lightgreen')
 def losange(d, c):
     fillcolor(c)
     begin_fill()
-    for a in (60, 120, 60, 120):
+    for a in [60, 120, 60, 120]:
         forward(d)
         left(a)
     end_fill()
 
-for c in ('pink', 'red', 'pink', 'red', 'pink'):
+for c in ['pink', 'red', 'pink', 'red', 'pink']:
     losange(100, c)
     left(60)
 ```
+
+```{dropdown} Solution
+Il n'y a que 5 couleurs dans la listes ce qui ne créera que 5 losanges. Il suffit d'ajouter une couleur à la liste à parcourir.
+```
+````
 
 ## Smiley
 
@@ -365,7 +373,7 @@ for i in range(3):
 
 
 ```{codeplay}
-:file: rails.py
+:file: ex5.py
 TODO
 ```
 
@@ -383,12 +391,26 @@ Les listes sont souvent un moyen de grouper des valeurs ensemble. Par exemple, l
 - `a = a + 3` permet d'ajouter 3 à la variable `a`.
 ```
 
-````{exercise}
+`````{exercise}
 Ecrivez une fonction qui prend une liste de notes en paramètre et affiche la moyenne.
 
-La fonction prend donc un paramètre `notes` qui est une liste de nombres entiers.
+La fonction prend donc un paramètre `notes` qui est une liste de nombres entiers. La fonction `len(liste)` permet de calculer la longueur d'une liste.
 
 ```{codeplay}
 # Votre code ici...
 ```
+
+````{dropdown} Solution
+```python
+def calcul_moyenne(notes):
+    somme = 0
+    for n in notes:
+        somme += n
+    moyenne = somme / len(notes)
+    return moyenne
+
+moyenne = calcul_moyenne([4.5, 5, 5.5, 4, 6])
+print(moyenne)
+```
 ````
+`````
