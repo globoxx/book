@@ -18,29 +18,40 @@ Sachez par contre que votre site **sera hébergé et accessible pour le reste du
 Pour ce qui est de la forme, voici les contraintes à respecter:
 
 - Au minimum 4 pages HTML liées entre elles par des liens hypertextes
-- Une cohérence du style entre toutes vos pages (un seul fichier `.css` pour l'ensemble de votre site)
-- Un menu vertical ou horizontal permettant de passer sur les différentes pages du site
-- Un logo cliquable permettant de revenir à l'accueil du site depuis n'importe quelle page
-- Une utilisation pertinente des balises html vues en classe:
-    - Le nom de votre site doit apparaître dans l'onglet du navigateur
-    - Votre site doit au minimum avoir un titre bien visible en page d'accueil
-    - Tous vos paragraphes doivent être dans des balises `<p>`
-    - Au moins un mot de votre site doit être **important** et apparaître en gras
-    - Au moins une liste (ordonnée ou non) doit être présente
-    - Au moins un lien absolu vers un site externe doit être présent
-    - Des images doivent être présentes et doivent avoir l'attribut `alt`
-    - Au moins une infobulle est présente sur une image
-    - 
-- Une utilisation pertinente des balises css vues en classe:
-    - Des classes css pertinentes sont utilisées avec les balises `<span>` et `<div>`
-    - Les propriétés `color` et `background-color` sont utilisées
-    - Au moins une propriété de style de texte est utilisée
-    - Des bordures et ombres sont présentes
-    - Des blocs `div` sont utilisés de manière pertinente pour regrouper les éléments des pages
-    - Des marges intérieures et extérieures sont utilisées
-    - Des blocs sont alignés horizontalement avec Flexbox
-    - Au moins un élément change de style au survol de la souris
+- Un seul fichier `.css` est utilisé pour l'ensemble de votre site
+- Les 4 pages ont toutes une structure différente (pas de copié collé avec simplement le texte qui change)
+- Les 4 pages ont suffisamment de contenu visuel et textuel (elles ne semblent pas vides)
+- Le design et le style des pages sont cohérents et consistants
+- Le site est facile d'utilisation, il est agréable de naviguer dessus (ex: les liens sont bien visibles)
+- Un menu vertical ou horizontal permet de passer sur les différentes pages du site
+- Un logo cliquable permet de revenir à l'accueil du site depuis n'importe quelle page
 
+- Une utilisation pertinente des balises html vues en classe:
+  - Le nom du site doit apparaître dans l'onglet du navigateur
+  - Votre site doit au minimum avoir un titre bien visible en page d'accueil
+  - Tous vos paragraphes doivent être dans des balises `<p>`
+  - Au moins un mot de votre site doit être important et apparaître en gras
+  - Au moins une liste (ordonnée ou non) doit être présente
+  - Au moins un lien absolu vers un site externe doit être présent
+  - Des images doivent être présentes et doivent avoir l'attribut `alt`
+  - Au moins une infobulle est présente sur une image
+  - Au moins une balise html non vue en classe est présente
+- Une utilisation pertinente des balises css vues en classe:
+  - Des classes css pertinentes sont utilisées avec les balises `<span>` et `<div>`
+  - Les propriétés `color` et `background-color` sont utilisées
+  - Au moins une propriété de style de texte est utilisée
+  - Des bordures et ombres sont présentes
+  - Des blocs `div` sont utilisés de manière pertinente pour regrouper les éléments des pages
+  - Des marges intérieures et extérieures sont utilisées
+  - Des blocs sont alignés horizontalement avec Flexbox
+  - Au moins un élément change de style au survol de la souris
+  - Au moins une propriété css non vue en classe est utilisée
+  
+- Toutes les images sont regroupées dans un sous-dossier `images`
+- Le code ne doit pas contenir d'erreurs de syntaxe (ex: balises mal formattées)
+- Le code doit être propre et facilement lisible (indentations/décalages à droite corrects)
+- (Bonus) Le design du site est particulièrement beau et original
+- (Bonus) Le site contient un élément css particulièrement complexe non vu en classe
 
 ```{admonition} Plagiat et tricherie
 :class: attention
@@ -52,8 +63,6 @@ L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d
 
 Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. Chaque groupe discutera avec l'enseignant au sujet de son code dans ce but.
 ```
-
-Une grille d'évaluation précise vous sera transmise en temps voulu.
 
 ## Exemple
 
