@@ -200,9 +200,6 @@ for i in range(18):
 Voici une autre façon de toujours avancer, mais en tournant chaque fois d'un angle un peu plus petit que 180°.
 Essayons !
 
-````{exercise}
-Changez le nombre de pics de l'étoile.
-
 ```{codeplay}
 :file: for8.py
 from turtle import *
@@ -212,7 +209,6 @@ for i in range(9):
     forward(200)
     left(160)
 ```
-````
 
 ## Losange
 
@@ -269,33 +265,9 @@ for i in range(6):
 
 Une boucle `for` est utilisée dans l'exemple suivant pour dessiner les hublots d'un paquebot. Les hublots sont numérotés en utilisant la variable `i`.
 
-`````{exercise}
-Créez une fonction `paquebot()` et dessinez-en un deuxième.
-
 ```{codeplay}
 from turtle import *
 
-forward(200)
-left(80)
-forward(60)
-left(100)
-forward(220)
-left(100)
-forward(60)
-
-up()
-left(125)
-forward(40)
-right(45)
-
-for i in range(6):
-    dot(20, 'lightgray')
-    write(i)  
-    forward(30)
-```
-
-````{dropdown} Solution
-```python
 def paquebot():
     forward(200)
     left(80)
@@ -317,8 +289,6 @@ def paquebot():
 
 paquebot()
 ```
-````
-`````
 
 ```{admonition} Rappel
 :class: note
@@ -351,7 +321,7 @@ speed(2)
 for i in range(36):
     forward(280)
     left(170)
-    speed(i)
+    speed(i+1) # +1 pour éviter de commencer à 0
 ```
 ````
 `````
@@ -458,13 +428,38 @@ Les boucles sont primordiales dans tout programme informatique. La boucle `for` 
 - `a = a + 3` permet d'ajouter 3 à la variable `a`.
 ```
 
-````{exercise}
+`````{exercise}
 Nous allons voir que les boucles peuvent être extrêmement utiles pour faire certains calculs.
 
-1. Ecrivez un programme affichant tous les nombres entre 0 et 10.
-2. Modifiez le programme pour afficher la somme des nombres de 0 à 10.
-3. Modifiez le programme pour afficher la moyenne des nombres de 0 à 10.
+1. Ecrivez un programme affichant tous les nombres entre 0 et 9.
+2. Modifiez le programme pour afficher la somme des nombres de 0 à 9.
+3. Modifiez le programme pour afficher la moyenne des nombres de 0 à 9.
 ```{codeplay}
 # Votre code ici...
 ```
+
+````{dropdown} Solution
+```python
+# Partie 1
+for i in range(10):
+    print(i)
+
+# Partie 2
+somme = 0
+
+for i in range(10):
+    somme = somme + i
+
+print(somme)
+
+# Partie 3
+somme = 0
+
+for i in range(10):
+    somme = somme + i
+    
+moyenne = somme / 10
+print(moyenne)
+```
 ````
+``````

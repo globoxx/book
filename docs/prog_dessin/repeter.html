@@ -405,13 +405,7 @@ Une toute petite modification du programme peut faire une chouette différence.<
 <h2>Étoile<a class="headerlink" href="#etoile" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici une autre façon de toujours avancer, mais en tournant chaque fois d’un angle un peu plus petit que 180°.
 Essayons !</p>
-<div class="admonition">
-<p class="admonition-title">Exercice</p>
-<div class="question-content docutils">
-<p>Changez le nombre de pics de l’étoile.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvciBpIGluIHJhbmdlKDkpOgogICAgd3JpdGUoaSkKICAgIGZvcndhcmQoMjAwKQogICAgbGVmdCgxNjAp" data-file="Zm9yOC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
-</div>
-</section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvciBpIGluIHJhbmdlKDkpOgogICAgd3JpdGUoaSkKICAgIGZvcndhcmQoMjAwKQogICAgbGVmdCgxNjAp" data-file="Zm9yOC5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="losange">
 <h2>Losange<a class="headerlink" href="#losange" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Si nous déformons les angles droits d’un carré, nous obtenons un losange.</p>
@@ -426,43 +420,7 @@ Essayons !</p>
 <section id="paquebot">
 <h2>Paquebot<a class="headerlink" href="#paquebot" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> est utilisée dans l’exemple suivant pour dessiner les hublots d’un paquebot. Les hublots sont numérotés en utilisant la variable <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
-<div class="admonition">
-<p class="admonition-title">Exercice</p>
-<div class="question-content docutils">
-<p>Créez une fonction <code class="docutils literal notranslate"><span class="pre">paquebot()</span></code> et dessinez-en un deuxième.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvcndhcmQoMjAwKQpsZWZ0KDgwKQpmb3J3YXJkKDYwKQpsZWZ0KDEwMCkKZm9yd2FyZCgyMjApCmxlZnQoMTAwKQpmb3J3YXJkKDYwKQoKdXAoKQpsZWZ0KDEyNSkKZm9yd2FyZCg0MCkKcmlnaHQoNDUpCgpmb3IgaSBpbiByYW5nZSg2KToKICAgIGRvdCgyMCwgJ2xpZ2h0Z3JheScpCiAgICB3cml0ZShpKSAgCiAgICBmb3J3YXJkKDMwKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">paquebot</span><span class="p">():</span>
-    <span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
-    <span class="n">left</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
-    <span class="n">forward</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
-    <span class="n">left</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">forward</span><span class="p">(</span><span class="mi">220</span><span class="p">)</span>
-    <span class="n">left</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-    <span class="n">forward</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
-
-    <span class="n">up</span><span class="p">()</span>
-    <span class="n">left</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span>
-    <span class="n">forward</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
-    <span class="n">right</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-        <span class="n">dot</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s1">'lightgray'</span><span class="p">)</span>
-        <span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>  
-        <span class="n">forward</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-
-<span class="n">paquebot</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</details></div>
-</div>
-<div class="note admonition">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiBwYXF1ZWJvdCgpOgogICAgZm9yd2FyZCgyMDApCiAgICBsZWZ0KDgwKQogICAgZm9yd2FyZCg2MCkKICAgIGxlZnQoMTAwKQogICAgZm9yd2FyZCgyMjApCiAgICBsZWZ0KDEwMCkKICAgIGZvcndhcmQoNjApCgogICAgdXAoKQogICAgbGVmdCgxMjUpCiAgICBmb3J3YXJkKDQwKQogICAgcmlnaHQoNDUpCgogICAgZm9yIGkgaW4gcmFuZ2UoNik6CiAgICAgICAgZG90KDIwLCAnbGlnaHRncmF5JykKICAgICAgICB3cml0ZShpKSAgCiAgICAgICAgZm9yd2FyZCgzMCkKCnBhcXVlYm90KCk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><div class="note admonition">
 <p class="admonition-title">Rappel</p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">dot(d,</span> <span class="pre">c)</span></code> dessine un disque de diamètre <code class="docutils literal notranslate"><span class="pre">d</span></code> et de couleur <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 </div>
@@ -487,7 +445,7 @@ Solution<div class="summary-down docutils">
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">):</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">280</span><span class="p">)</span>
     <span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
-    <span class="n">speed</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">speed</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># +1 pour éviter de commencer à 0</span>
 </pre></div>
 </div>
 </div>
@@ -568,11 +526,41 @@ Dans cette section, vous allez découvrir les différentes catégories d’erreu
 <div class="question-content docutils">
 <p>Nous allons voir que les boucles peuvent être extrêmement utiles pour faire certains calculs.</p>
 <ol class="simple">
-<li><p>Ecrivez un programme affichant tous les nombres entre 0 et 10.</p></li>
-<li><p>Modifiez le programme pour afficher la somme des nombres de 0 à 10.</p></li>
-<li><p>Modifiez le programme pour afficher la moyenne des nombres de 0 à 10.</p></li>
+<li><p>Ecrivez un programme affichant tous les nombres entre 0 et 9.</p></li>
+<li><p>Modifiez le programme pour afficher la somme des nombres de 0 à 9.</p></li>
+<li><p>Modifiez le programme pour afficher la moyenne des nombres de 0 à 9.</p></li>
 </ol>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaS4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaS4uLg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Partie 1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="c1"># Partie 2</span>
+<span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">i</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
+
+<span class="c1"># Partie 3</span>
+<span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">i</span>
+    
+<span class="n">moyenne</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">/</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">moyenne</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 </div>
 </section>
 </section>
