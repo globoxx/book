@@ -3,20 +3,22 @@
 # Projet
 
 Il est temps de mettre en pratique vos connaissances pour réaliser un dessin libre (avec quelques contraintes).
+Le projet peut être réalisé par groupe de 2.
 
 ## Template
 
-Voici le template (fichier de base) à utiliser pour votre projet. Il vous aidera à structurer votre code.
+Voici le template (fichier de base) à utiliser pour votre projet. Il vous aidera à structurer correctement votre code.
+Vous travaillerez sur l'application `Thonny` afin de pouvoir sauvegarder votre travail.
 
 {download}`Télécharger ici<../data/template_projet_dessin.py>`
 
 ## Consignes
 
-Le cahier des charges est le suivant:
+Le cahier des charges (en construction) est le suivant:
 
 - créer un dessin concret (pas abstrait)
 - choisir un sujet libre : nature, ville, intérieur, jeux vidéo, science-fiction, etc.
-- au minimum 4 objets différents dont on peut paramétriser au moins 2 caractéristiques (ex: taille et couleur)
+- au moins 4 objets différents auxquelles l'on peut donner au moins 2 paramètres (ex: taille et couleur)
 - chaque objet est défini à l'aide d'une fonction
 - chaque fonction est décrite en 1-2 lignes de commentaires (voir exemple plus bas)
 - les objets complexes (plus de 15 lignes de code) sont découpées en sous-fonctions
@@ -26,14 +28,12 @@ Le cahier des charges est le suivant:
 - utiliser des cercles et des arcs de cercle
 - utiliser des couleurs de ligne, point, remplissage et arrière-fond
 - utiliser des variables pour nommer vos entités (largeur, hauteur, rayon, couleur)
-- utiliser des expressions mathématiques (largeur/n, 2*rayon, etc.)
-- suivre la typographie standard PEP8 (espacement, noms des variables)
-- vérifier votre code en ligne [pep8online.com](http://pep8online.com)
 - parcourir avec une boucle `for` des séquences de couleurs, angles, distances, et tailles
 - répéter avec une boucle `for` (par exemple: hublots, traverses, fenêtres, roues, clôtures, etc)
 - intégrer au moins un élément aléatoire (module `random`) dans votre dessin
-- exporter en format image : EPS, PNG, JPG
-- déposer sur Moodle les 4 fichiers avec un nom de forme `prénom_projet1` (par exemple `alice_projet1.py`, `alice_projet1.eps`, etc.)
+- (bonus) intégrer une forme particulièrement complexe
+
+Comme pour les exercices récapitulatifs, vous rendrez sur Moodle un fichier `.py` et une capture d'écran `.png`.
 
 ## Exemple
 
