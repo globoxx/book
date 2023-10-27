@@ -37,15 +37,18 @@ Le cahier des charges est le suivant:
 
 ## Exemple
 
-Voici un exemple qui satisfait toutes les contraintes du cahier des charges:
+L'exemple ci-dessous satisfait toutes les contraintes du cahier des charges.
 
-```{codeplay}
-:file: projet_dessin.py
+![projet](../media/dessin_exemple.png)
+
+Copiez-collez le code du dessin dans l'application `Thonny` pour visualiser comment il est réalisé.
+
+```python
 from turtle import *
 from random import *
 # from tkinter import * 
 
-tracer(0) # Permet de rendre le dessin instantané
+speed(0)
 
 def triangle(d, c):
     # Dessine un triangle équilatéral de longueur d et de couleur c
