@@ -43,6 +43,7 @@ L'exemple ci-dessous satisfait toutes les contraintes du cahier des charges.
 
 Copiez-collez le code du dessin dans l'application `Thonny` pour visualiser comment il est réalisé.
 
+````{dropdown} Voir le code
 ```python
 from turtle import *
 from random import *
@@ -156,6 +157,7 @@ hideturtle() # Cache la tortue
 # Screen().getcanvas().postscript(file='classe_prenom_nom.eps') # Sauvegarde une image vectorielle
 done()
 ```
+````
 
 ## Plus d'exemples
 
@@ -167,7 +169,7 @@ Ces exemples ont été créés par des élèves en 3M, en option complémentaire
 
 ### Maison de campagne
 
-![projet]../media/projets_dessin/projet_alice.png)
+![projet](../media/projets_dessin/projet_alice.png)
 
 ### Cadre des Pyrénées
 
