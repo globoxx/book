@@ -328,7 +328,7 @@ Solution<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
 <span class="n">rectangle</span><span class="p">(</span><span class="mi">160</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>      <span class="c1"># largeur=160, hauteur=100 </span>
-<span class="n">rectangle</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>      <span class="c1"># largeur=120, hauteur=200</span>
+<span class="n">rectangle</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>      <span class="c1"># largeur=120, hauteur=150</span>
 </pre></div>
 </div>
 </div>
@@ -391,7 +391,7 @@ C’est une fonction qui a pour paramètres:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">d</span></code> – dimension (longeur) du bus</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> – couleur du bus</p></li>
 </ul>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiByZWN0YW5nbGUoZCwgZSwgYyk6CiAgICBmaWxsY29sb3IoYykKICAgIGJlZ2luX2ZpbGwoKQogICAgZm9yIGkgaW4gcmFuZ2UoMik6CiAgICAgICAgZm9yd2FyZChkKQogICAgICAgIGxlZnQoOTApCiAgICAgICAgZm9yd2FyZChlKQogICAgICAgIGxlZnQoOTApCiAgICBlbmRfZmlsbCgpCiAgICAgICAgCmRlZiBidXMocCwgZCwgYyk6CiAgICBnb3RvKHApCiAgICBkb3duKCkKICAgIHJlY3RhbmdsZShkLCBkLzMsIGMpICMgY2hhc3NpcwogICAgZm9yd2FyZChkLzQpCiAgICBkb3QoZC81KSAgICAgICAgICAgICMgcm91ZSBhcnJpw6hyZQogICAgZG90KGQvMTAsICd3aGl0ZScpCiAgICBmb3J3YXJkKGQvMikKICAgIGRvdChkLzUpICAgICAgICAgICAgIyByb3VlIGF2YW50CiAgICBkb3QoZC8xMCwgJ3doaXRlJykKICAgIHVwKCkKICAgIApidXMoKC0yMDAsIDUwKSwgMjAwLCAncmVkJykKYnVzKCg1MCwgMjApLCAxNTAsICdsaWdodGJsdWUnKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiByZWN0YW5nbGUoZCwgZSwgYyk6CiAgICBmaWxsY29sb3IoYykKICAgIGJlZ2luX2ZpbGwoKQogICAgZm9yIGkgaW4gcmFuZ2UoMik6CiAgICAgICAgZm9yd2FyZChkKQogICAgICAgIGxlZnQoOTApCiAgICAgICAgZm9yd2FyZChlKQogICAgICAgIGxlZnQoOTApCiAgICBlbmRfZmlsbCgpCiAgICAgICAgCmRlZiBidXMocCwgZCwgYyk6CiAgICB1cCgpCiAgICBnb3RvKHApCiAgICBkb3duKCkKICAgIHJlY3RhbmdsZShkLCBkLzMsIGMpICMgY2hhc3NpcwogICAgZm9yd2FyZChkLzQpCiAgICBkb3QoZC81KSAgICAgICAgICAgICMgcm91ZSBhcnJpw6hyZQogICAgZG90KGQvMTAsICd3aGl0ZScpCiAgICBmb3J3YXJkKGQvMikKICAgIGRvdChkLzUpICAgICAgICAgICAgIyByb3VlIGF2YW50CiAgICBkb3QoZC8xMCwgJ3doaXRlJykKICAgIHVwKCkKICAgIApidXMoKC0yMDAsIDUwKSwgMjAwLCAncmVkJykKYnVzKCg1MCwgMjApLCAxNTAsICdsaWdodGJsdWUnKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="arbre">
 <h2>Arbre<a class="headerlink" href="#arbre" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour dessiner un arbre simple, nous utilisons un segment droit pour le tronc et un disque (dot) pour le feuillage.<br/>
@@ -487,6 +487,8 @@ Solution<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcul_aire</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">hauteur</span><span class="p">):</span>
     <span class="n">aire</span> <span class="o">=</span> <span class="n">base</span><span class="o">*</span><span class="n">hauteur</span> <span class="o">/</span> <span class="mi">2</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">aire</span><span class="p">)</span>
+
+<span class="n">calcul_aire</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -509,6 +511,8 @@ Solution<div class="summary-down docutils">
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">i</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
+
+<span class="n">calcul_somme</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

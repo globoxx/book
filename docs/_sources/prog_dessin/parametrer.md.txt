@@ -54,7 +54,7 @@ rectangle(160, 100)      # largeur=160, hauteur=100
 ...
 
 rectangle(160, 100)      # largeur=160, hauteur=100 
-rectangle(120, 200)      # largeur=120, hauteur=200
+rectangle(120, 150)      # largeur=120, hauteur=150
 ```
 ````
 ``````
@@ -228,6 +228,7 @@ def rectangle(d, e, c):
     end_fill()
         
 def bus(p, d, c):
+    up()
     goto(p)
     down()
     rectangle(d, d/3, c) # chassis
@@ -406,6 +407,8 @@ La fonction prend donc 2 paramètres:
 def calcul_aire(base, hauteur):
     aire = base*hauteur / 2
     print(aire)
+
+calcul_aire(5, 10)
 ```
 ````
 `````
@@ -426,6 +429,8 @@ def calcul_somme(n):
     for i in range(n+1):
         somme = somme + i
     print(somme)
+
+calcul_somme(100)
 ```
 ````
 `````
