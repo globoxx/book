@@ -19,9 +19,28 @@ Pour ce qui est de la forme, voici les contraintes à respecter:
 
 - Au minimum 4 pages HTML liées entre elles par des liens hypertextes
 - Une cohérence du style entre toutes vos pages (un seul fichier `.css` pour l'ensemble de votre site)
-- Un menu permettant de passer sur les différentes pages du site
+- Un menu vertical ou horizontal permettant de passer sur les différentes pages du site
 - Un logo cliquable permettant de revenir à l'accueil du site depuis n'importe quelle page
-- Une utilisation pertinente des balises html et des propriétés CSS vues en classe
+- Une utilisation pertinente des balises html vues en classe:
+    - Le nom de votre site doit apparaître dans l'onglet du navigateur
+    - Votre site doit au minimum avoir un titre bien visible en page d'accueil
+    - Tous vos paragraphes doivent être dans des balises `<p>`
+    - Au moins un mot de votre site doit être **important** et apparaître en gras
+    - Au moins une liste (ordonnée ou non) doit être présente
+    - Au moins un lien absolu vers un site externe doit être présent
+    - Des images doivent être présentes et doivent avoir l'attribut `alt`
+    - Au moins une infobulle est présente sur une image
+    - 
+- Une utilisation pertinente des balises css vues en classe:
+    - Des classes css pertinentes sont utilisées avec les balises `<span>` et `<div>`
+    - Les propriétés `color` et `background-color` sont utilisées
+    - Au moins une propriété de style de texte est utilisée
+    - Des bordures et ombres sont présentes
+    - Des blocs `div` sont utilisés de manière pertinente pour regrouper les éléments des pages
+    - Des marges intérieures et extérieures sont utilisées
+    - Des blocs sont alignés horizontalement avec Flexbox
+    - Au moins un élément change de style au survol de la souris
+
 
 ```{admonition} Plagiat et tricherie
 :class: attention

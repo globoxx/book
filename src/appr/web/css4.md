@@ -69,6 +69,15 @@ La propriété `align-items` permet de changer leur alignement sur l'axe seconda
 Testez les différentes valeurs de `align-items` dans le <a href="https://codepen.io/Vincent-Guertler/pen/jOQKwYa" target="_blank">CodePen précédent</a>.
 `````
 
+## Exemple: créer un menu horizontal
+
+Flexbox peut être utilisé pour créer le menu suivant:
+
+```{image} ../media/menu_css.gif
+```
+
+Rendez-vous sur ce <a href="https://codepen.io/Vincent-Guertler/pen/jOdbXBy" target="_blank">CodePen</a> pour comprendre comment arriver à ce résultat.
+
 ## Un outil puissant
 
 Dans ce court chapitre, je ne vous ai montré que les bases du système **Flexbox** en vous cachant intentionnellement des propriétés plus complexes.

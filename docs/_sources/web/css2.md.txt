@@ -362,6 +362,21 @@ Il n'est pas toujours simple de trouver l’effet d’ombre désiré à tâtons.
 Rendez-vous sur <a href="https://codepen.io/Vincent-Guertler/pen/GRwdwZp" target="_blank">CodePen</a> et testez un peu ces différentes bordures et ombres.
 `````
 
+## Survoler des éléments avec :hover
+
+Le sélecteur CSS `:hover` permet de dire que l'on veut modifier les propriétés de style des éléments que l'on survole avec le curseur de la souris.
+
+```{image} ../media/css_hover.gif
+```
+
+Le code ci-dessous permet de dire que les liens doivent être surlignés en jaune lorsqu'ils sont survolés. Testez <a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss_sel_hover" target="_blank">ici</a>.
+
+```{code-block} css
+a:hover {
+    background-color: yellow;
+}
+```
+
 ## Exercice récapitulatif
 
 ```{admonition} Exercice récapitulatif
