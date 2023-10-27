@@ -251,9 +251,9 @@ d = 100
 def losange():
     for i in range(2):
         forward(d)
-        left(120)
-        forward(d)
         left(60)
+        forward(d)
+        left(120)
 
 for i in range(6):
     losange()
@@ -398,20 +398,22 @@ for i in range():
 ## Exercice récapitulatif
 
 ````{exercise}
-Dessinez les rails d'un chemin de fer.
+Dessinez une spirale dont chaque segment est plus long que le précédent. Cette spirale sera formée de segments rectilignes. À chaque tour, la longueur du segment augmentera, créant ainsi un effet de spirale.
 
-![rails](../media/rails.png)
+![spirale](../media/spirale.png)
 
-Utilisez une boucle `for` pour la répétition des traverses.
+1. Commencez par un segment de longueur 10.
+2. Pour chaque segment suivant, augmentez la longueur de 10 unités.
+3. Tournez la tortue de 90 degrés après chaque segment.
+4. Dessinez la spirale avec un total de 20 segments.
+
+Vous devez utiliser une boucle `for`.
 
 ```{codeplay}
 :file: ex3.py
 from turtle import *
 
-def traverse():
-    ...
-
-forward(200)
+# Votre code ici...
 ```
 
 Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu.

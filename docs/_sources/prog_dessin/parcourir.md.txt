@@ -126,15 +126,12 @@ porte()
 Nous allons reprendre notre fonction `maison()` et, à l'aide d'une séquence, nous allons l'écrire de manière bien plus compacte. Cette fois-ci, la séquence représente des angles, donc nous nommons notre variable `angle` pour nous en rappeler.
 Pour illustrer le parcours des angles, nous les affichons à chaque itération avec `write(angle)`.
 
-````{exercise}
-Ajoutez une porte et une fenêtre à la maison.
-
 ```{codeplay}
 from turtle import *
 
 def maison(d):
     dot()
-    forward (1.41*d)
+    forward(1.41*d)
     for a in [90, 45, 90, 45]:
         write(a)
         left(a)
@@ -146,7 +143,6 @@ maison(50)
 forward(150)
 maison(80)
 ```
-````
 
 ## Range
 

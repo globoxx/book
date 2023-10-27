@@ -479,7 +479,7 @@ Contrairement aux fonctions `forward(d)` et `backward(d)` qui nécessitent un ar
 
 ````{exercise}
 Définissez une fonction `drapeau()` permettant de dessiner un drapeau suisse.  
-Pour vous aider, définissez une fonction pour le carré et une autre pour la croix. Vous n'avez pas à vous préocupper des couleurs pour le moment.
+Pour vous aider, définissez une fonction pour le carré et une autre pour la croix. Vous n'avez pas à vous préoccuper des couleurs pour le moment mais, si vous le souhaitez, cherchez les fonction `begin_fill()` et `end_fill()` sur Internet.
 
 ```{image} ../media/drapeau_suisse.png
 ```
