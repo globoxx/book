@@ -317,13 +317,29 @@ C’est possible avec une boucle <code class="docutils literal notranslate"><spa
 <div class="question-content docutils">
 <p>La ligne <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(4):</span></code> va répéter <code class="docutils literal notranslate"><span class="pre">4</span></code> fois le bloc en indentation qui suit afin de dessiner un rectangle.<br/>
 Transformez le rectangle en triangle.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZCA9IDEwMAoKZm9yIGkgaW4gcmFuZ2UoNCk6CiAgICBmb3J3YXJkKGQpCiAgICBsZWZ0KDkwKQ==" data-file="Zm9yMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZCA9IDEwMAoKZm9yIGkgaW4gcmFuZ2UoNCk6CiAgICBmb3J3YXJkKGQpCiAgICBsZWZ0KDkwKQ==" data-file="Zm9yMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">forward</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 </div>
 </section>
 <section id="variable-diteration-i">
 <h2>Variable d’itération <code class="docutils literal notranslate"><span class="pre">i</span></code><a class="headerlink" href="#variable-diteration-i" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Que représente <code class="docutils literal notranslate"><span class="pre">i</span></code> dans l’expression <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(n)</span></code> ?<br/>
-C’est ce qu’on appelle une <strong>variable d’itération</strong>. Cette variable commence à 0 et augmente de 1 à chaque répétition jusqu’à <span class="math notranslate nohighlight">\(n-1\)</span>. Pour visualiser cette valeur nous pouvons l’afficher dans le dessin avec l’instruction <code class="docutils literal notranslate"><span class="pre">write(i)</span></code>.</p>
+C’est ce qu’on appelle une <strong>variable d’itération</strong>. Cette variable commence à 0 et augmente de 1 à chaque répétition jusqu’à <code class="docutils literal notranslate"><span class="pre">n-1</span></code>. Pour visualiser cette valeur nous pouvons l’afficher dans le dessin avec l’instruction <code class="docutils literal notranslate"><span class="pre">write(i)</span></code>.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKZCA9IDEwMAoKZm9yIGkgaW4gcmFuZ2UoNCk6CiAgICB3cml0ZShpKQogICAgZm9yd2FyZChkKQogICAgbGVmdCg5MCk=" data-file="Zm9yMi5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="polygone-regulier">
 <h2>Polygone régulier<a class="headerlink" href="#polygone-regulier" title="Lien permanent vers ce titre">¶</a></h2>
@@ -338,9 +354,30 @@ C’est ce qu’on appelle une <strong>variable d’itération</strong>. Cette v
 </ul>
 <p>Dans les deux cas un <code class="docutils literal notranslate"><span class="pre">:</span></code> est suivi d’un bloc en indentation. En Python vous pouvez avoir plusieurs niveaux d’indentation.</p>
 <p>Définissez la fonction <code class="docutils literal notranslate"><span class="pre">hexagone()</span></code> pour dessiner un hexagone, et appelez cette fonction.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiB0cmlhbmdsZSgpOgogICAgZm9yIGkgaW4gcmFuZ2UoMyk6ICAgICAgIyBpbmRlbnRhdGlvbiAxIChibG9jIHBvdXIgZGVmKQogICAgICAgIGZvcndhcmQoMTAwKSAgICAgICAgIyBpbmRlbnRhdGlvbiAyIChibG9jIHBvdXIgZm9yKQogICAgICAgIGxlZnQoMTIwKQoKZGVmIGNhcnJlKCk6CiAgICBmb3IgaSBpbiByYW5nZSg0KToKICAgICAgICBmb3J3YXJkKDEwMCkKICAgICAgICBsZWZ0KDkwKQoKZGVmIHBlbnRhZ29uZSgpOgogICAgZm9yIGkgaW4gcmFuZ2UoNSk6CiAgICAgICAgZm9yd2FyZCgxMDApCiAgICAgICAgbGVmdCg3MikKCnRyaWFuZ2xlKCkKY2FycmUoKQpwZW50YWdvbmUoKQ==" data-file="Zm9yMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">hexagone</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="n">triangle</span><span class="p">()</span>
+<span class="n">carre</span><span class="p">()</span>
+<span class="n">pentagone</span><span class="p">()</span>
+<span class="n">hexagone</span><span class="p">()</span>
+</pre></div>
 </div>
 </div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmRlZiB0cmlhbmdsZSgpOgogICAgZm9yIGkgaW4gcmFuZ2UoMyk6ICAgICAgIyBpbmRlbnRhdGlvbiAxIChibG9jIHBvdXIgZGVmKQogICAgICAgIGZvcndhcmQoMTAwKSAgICAgICAgIyBpbmRlbnRhdGlvbiAyIChibG9jIHBvdXIgZm9yKQogICAgICAgIGxlZnQoMTIwKQoKZGVmIGNhcnJlKCk6CiAgICBmb3IgaSBpbiByYW5nZSg0KToKICAgICAgICBmb3J3YXJkKDEwMCkKICAgICAgICBsZWZ0KDkwKQoKZGVmIHBlbnRhZ29uZSgpOgogICAgZm9yIGkgaW4gcmFuZ2UoNSk6CiAgICAgICAgZm9yd2FyZCgxMDApCiAgICAgICAgbGVmdCg3MikKCnRyaWFuZ2xlKCkKY2FycmUoKQpwZW50YWdvbmUoKQ==" data-file="Zm9yMy5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+</details></div>
+</div>
+</section>
 <section id="escalier">
 <h2>Escalier<a class="headerlink" href="#escalier" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour dessiner un escalier, il faut simplement répéter dans une boucle le dessin pour une seule marche. Nous utilisons la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> pour numéroter les marches.</p>
@@ -393,7 +430,37 @@ Essayons !</p>
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
 <p>Créez une fonction <code class="docutils literal notranslate"><span class="pre">paquebot()</span></code> et dessinez-en un deuxième.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvcndhcmQoMjAwKQpsZWZ0KDgwKQpmb3J3YXJkKDYwKQpsZWZ0KDEwMCkKZm9yd2FyZCgyMjApCmxlZnQoMTAwKQpmb3J3YXJkKDYwKQoKdXAoKQpsZWZ0KDEyNSkKZm9yd2FyZCg0MCkKcmlnaHQoNDUpCgpmb3IgaSBpbiByYW5nZSg2KToKICAgIGRvdCgyMCwgJ2xpZ2h0Z3JheScpCiAgICB3cml0ZShpKSAgCiAgICBmb3J3YXJkKDMwKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKCmZvcndhcmQoMjAwKQpsZWZ0KDgwKQpmb3J3YXJkKDYwKQpsZWZ0KDEwMCkKZm9yd2FyZCgyMjApCmxlZnQoMTAwKQpmb3J3YXJkKDYwKQoKdXAoKQpsZWZ0KDEyNSkKZm9yd2FyZCg0MCkKcmlnaHQoNDUpCgpmb3IgaSBpbiByYW5nZSg2KToKICAgIGRvdCgyMCwgJ2xpZ2h0Z3JheScpCiAgICB3cml0ZShpKSAgCiAgICBmb3J3YXJkKDMwKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">paquebot</span><span class="p">():</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">220</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+    <span class="n">up</span><span class="p">()</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="n">dot</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s1">'lightgray'</span><span class="p">)</span>
+        <span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>  
+        <span class="n">forward</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="n">paquebot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Rappel</p>
@@ -407,7 +474,24 @@ Le paramètre vitesse <code class="docutils literal notranslate"><span class="pr
 <p class="admonition-title">Exercice</p>
 <div class="question-content docutils">
 <p>Augmentez graduellement la vitesse de la tortue, en utilisant la variable <code class="docutils literal notranslate"><span class="pre">i</span></code> comme argument de vitesse.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKc3BlZWQoMikKCmZvciBpIGluIHJhbmdlKDM2KToKICAgIGZvcndhcmQoMjgwKQogICAgbGVmdCgxNzAp" data-file="Zm9yMTMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSB0dXJ0bGUgaW1wb3J0ICoKc3BlZWQoMikKCmZvciBpIGluIHJhbmdlKDM2KToKICAgIGZvcndhcmQoMjgwKQogICAgbGVmdCgxNzAp" data-file="Zm9yMTMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">speed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">):</span>
+    <span class="n">forward</span><span class="p">(</span><span class="mi">280</span><span class="p">)</span>
+    <span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>
+    <span class="n">speed</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details></div>
 </div>
 </section>
 </section>
@@ -584,8 +668,6 @@ Dans cette section, vous allez découvrir les différentes catégories d’erreu
     <script src="../_static/blanks.js"></script>
     <script src="../_static/timeline.js"></script>
     <script src="../_static/translations.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="../_static/scripts/reactions.js"></script>
     <script src="../_static/scripts/progress.js"></script>

@@ -41,7 +41,7 @@ left(90)
 Ne serait-ce pas pratique de pouvoir répéter ces deux instructions 4 fois ?
 C'est possible avec une boucle `for`.
 
-````{exercise}
+`````{exercise}
 La ligne `for i in range(4):` va répéter `4` fois le bloc en indentation qui suit afin de dessiner un rectangle.  
 Transformez le rectangle en triangle.
 
@@ -54,12 +54,23 @@ for i in range(4):
     forward(d)
     left(90)
 ```
+
+````{dropdown} Solution
+```python
+from turtle import *
+d = 100
+
+for i in range(3):
+    forward(d)
+    left(120)
+```
 ````
+`````
 
 ## Variable d'itération `i`
 
 Que représente `i` dans l'expression `for i in range(n)` ?  
-C'est ce qu'on appelle une **variable d'itération**. Cette variable commence à 0 et augmente de 1 à chaque répétition jusqu'à $n-1$. Pour visualiser cette valeur nous pouvons l'afficher dans le dessin avec l'instruction `write(i)`.
+C'est ce qu'on appelle une **variable d'itération**. Cette variable commence à 0 et augmente de 1 à chaque répétition jusqu'à `n-1`. Pour visualiser cette valeur nous pouvons l'afficher dans le dessin avec l'instruction `write(i)`.
 
 ```{codeplay}
 :file: for2.py
@@ -76,7 +87,7 @@ for i in range(4):
 
 Avec une boucle `for`, nous pouvons simplifier le dessin des formes symétriques.
 
-```{exercise}
+`````{exercise}
 Observez bien la double indentation dans le code suivant :
 
 - la première pour `def`
@@ -85,7 +96,6 @@ Observez bien la double indentation dans le code suivant :
 Dans les deux cas un `:` est suivi d'un bloc en indentation. En Python vous pouvez avoir plusieurs niveaux d'indentation.
 
 Définissez la fonction `hexagone()` pour dessiner un hexagone, et appelez cette fonction.
-```
 
 ```{codeplay}
 :file: for3.py
@@ -110,6 +120,23 @@ triangle()
 carre()
 pentagone()
 ```
+
+````{dropdown} Solution
+```python
+...
+
+def hexagone():
+    for i in range(6):
+        forward(100)
+        left(60)
+
+triangle()
+carre()
+pentagone()
+hexagone()
+```
+````
+`````
 
 ## Escalier
 
@@ -242,7 +269,7 @@ for i in range(6):
 
 Une boucle `for` est utilisée dans l'exemple suivant pour dessiner les hublots d'un paquebot. Les hublots sont numérotés en utilisant la variable `i`.
 
-````{exercise}
+`````{exercise}
 Créez une fonction `paquebot()` et dessinez-en un deuxième.
 
 ```{codeplay}
@@ -266,7 +293,32 @@ for i in range(6):
     write(i)  
     forward(30)
 ```
+
+````{dropdown} Solution
+```python
+def paquebot():
+    forward(200)
+    left(80)
+    forward(60)
+    left(100)
+    forward(220)
+    left(100)
+    forward(60)
+
+    up()
+    left(125)
+    forward(40)
+    right(45)
+
+    for i in range(6):
+        dot(20, 'lightgray')
+        write(i)  
+        forward(30)
+
+paquebot()
+```
 ````
+`````
 
 ```{admonition} Rappel
 :class: note
@@ -278,7 +330,7 @@ La fonction `dot(d, c)` dessine un disque de diamètre `d` et de couleur `c`.
 Vous pouvez changer la vitesse de la tortue avec la fonction `speed(s)`.
 Le paramètre vitesse `s` peut varier entre 1 (le plus lent) et 1000 (le plus rapide). Sa vitesse par défaut est de 3. Mettre la vitesse à 0 choisit automatiquement la vitesse maximum.
 
-````{exercise}
+`````{exercise}
 Augmentez graduellement la vitesse de la tortue, en utilisant la variable `i` comme argument de vitesse.
 
 ```{codeplay}
@@ -290,7 +342,19 @@ for i in range(36):
     forward(280)
     left(170)
 ```
+
+````{dropdown} Solution
+```python
+from turtle import *
+speed(2)
+
+for i in range(36):
+    forward(280)
+    left(170)
+    speed(i)
+```
 ````
+`````
 
 ## Erreurs
 
