@@ -484,43 +484,41 @@ Pour vous aider, définissez une fonction pour le carré et une autre pour la cr
 ```{image} ../media/drapeau_suisse.png
 ```
 
-Pour vous aider, voici une séquence d'instructions permettant de dessiner une croix.
-```python
-forward(50)
-right(90)
-forward(50)
-left(90)
-forward(50)
-left(90)
-forward(50)
-right(90)
-forward(50)
-left(90)
-forward(50)
-left(90)
-forward(50)
-right(90)
-forward(50)
-left(90)
-forward(50)
-left(90)
-forward(50)
-right(90)
-forward(50)
-left(90)
-forward(50)
-left(90)
-```
+Pour vous aider, la séquence d'instructions permettant de dessiner la croix vous est donnée.
 
 ```{codeplay}
 :file: ex2.py
 from turtle import *
 
 up()
-goto(-125, -125) # Permet d'aller à des coordonnées précises sur le canvas
+goto(-75, -25) # Permet d'aller à des coordonnées précises sur le canvas
 down()
 
-# Votre code ici
+forward(50)
+right(90)
+forward(50)
+left(90)
+forward(50)
+left(90)
+forward(50)
+right(90)
+forward(50)
+left(90)
+forward(50)
+left(90)
+forward(50)
+right(90)
+forward(50)
+left(90)
+forward(50)
+left(90)
+forward(50)
+right(90)
+forward(50)
+left(90)
+forward(50)
+left(90)
+
 ```
 
 Téléchargez le fichier `.py`, faites une capture d'écran et déposez les fichiers sur Moodle à l'endroit prévu.
