@@ -494,6 +494,7 @@ up()
 goto(-75, -25) # Permet d'aller à des coordonnées précises sur le canvas
 down()
 
+# Cette suite d'instructions dessine une croix, placez ces instructions dans une fonction "croix"
 forward(50)
 right(90)
 forward(50)
@@ -518,6 +519,8 @@ forward(50)
 left(90)
 forward(50)
 left(90)
+
+# Suite de votre code
 
 ```
 
