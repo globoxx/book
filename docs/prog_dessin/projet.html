@@ -349,18 +349,18 @@ Voir le code<div class="summary-down docutils">
 
 <span class="k">def</span> <span class="nf">triangle</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="c1"># Dessine un triangle équilatéral de longueur d et de couleur c</span>
-    <span class="n">up</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
     <span class="n">fillcolor</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
     <span class="n">begin_fill</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="n">forward</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
     <span class="n">end_fill</span><span class="p">()</span>
-    <span class="n">down</span><span class="p">()</span>
+    <span class="n">up</span><span class="p">()</span>
         
 <span class="k">def</span> <span class="nf">rectangle</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="c1"># Dessine un rectangle de largeur w, de hauteur h et de couleur c</span>
-    <span class="n">up</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
     <span class="n">fillcolor</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
     <span class="n">begin_fill</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
@@ -369,11 +369,11 @@ Voir le code<div class="summary-down docutils">
         <span class="n">forward</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
     <span class="n">end_fill</span><span class="p">()</span>
-    <span class="n">down</span><span class="p">()</span>
+    <span class="n">up</span><span class="p">()</span>
         
 <span class="k">def</span> <span class="nf">montagne</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="c1"># Dessine une montagne de taille d et de couleur c</span>
-    <span class="n">up</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
     <span class="n">triangle</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
     <span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
@@ -382,11 +382,11 @@ Voir le code<div class="summary-down docutils">
     <span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
     <span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
-    <span class="n">down</span><span class="p">()</span>
+    <span class="n">up</span><span class="p">()</span>
     
 <span class="k">def</span> <span class="nf">rayons</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="c1"># Dessine n rayons de soleil de longueur d</span>
-    <span class="n">up</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
     <span class="n">color</span><span class="p">(</span><span class="s1">'yellow'</span><span class="p">)</span>
     <span class="n">width</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -394,29 +394,29 @@ Voir le code<div class="summary-down docutils">
         <span class="n">backward</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
     <span class="n">color</span><span class="p">(</span><span class="s1">'black'</span><span class="p">)</span>
-    <span class="n">down</span><span class="p">()</span>
+    <span class="n">up</span><span class="p">()</span>
     
 <span class="k">def</span> <span class="nf">soleil</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="c1"># Dessine un soleil de rayon r avec n rayons de longueur d</span>
-    <span class="n">up</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
     <span class="n">dot</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">)</span>
     <span class="n">rayons</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
-    <span class="n">down</span><span class="p">()</span>
+    <span class="n">up</span><span class="p">()</span>
     
 <span class="k">def</span> <span class="nf">nuage</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="c1"># Dessine un nuage composé aléatoirement de n cercles de diamètre d</span>
-    <span class="n">up</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">dot</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">'white'</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">))</span>
         <span class="n">up</span><span class="p">()</span>
         <span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
         <span class="n">down</span><span class="p">()</span>
-    <span class="n">down</span><span class="p">()</span>
+    <span class="n">up</span><span class="p">()</span>
     
 <span class="k">def</span> <span class="nf">fleur</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">c_centre</span><span class="p">,</span> <span class="n">c_petale</span><span class="p">):</span>
     <span class="c1"># Dessine une fleur avec un centre de diamètre d et de couleur c_centre avec n pétales de couleur c_petale</span>
-    <span class="n">up</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">dot</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">c_petale</span><span class="p">)</span>
         <span class="n">forward</span><span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="mf">0.8</span><span class="p">)</span>
@@ -424,7 +424,7 @@ Voir le code<div class="summary-down docutils">
     <span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
     <span class="n">forward</span><span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="mf">0.7</span><span class="p">)</span>
     <span class="n">dot</span><span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">c_centre</span><span class="p">)</span>
-    <span class="n">down</span><span class="p">()</span>
+    <span class="n">up</span><span class="p">()</span>
 
 <span class="c1"># --------------------------------------------------------</span>
 <span class="c1"># Ecrivez ici les appels de fonctions pour faire le dessin</span>

@@ -65,18 +65,18 @@ speed(0) # Permet d'accélérer le dessin
 
 def triangle(d, c):
     # Dessine un triangle équilatéral de longueur d et de couleur c
-    up()
+    down()
     fillcolor(c)
     begin_fill()
     for i in range(3):
         forward(d)
         left(120)
     end_fill()
-    down()
+    up()
         
 def rectangle(w, h, c):
     # Dessine un rectangle de largeur w, de hauteur h et de couleur c
-    up()
+    down()
     fillcolor(c)
     begin_fill()
     for i in range(2):
@@ -85,11 +85,11 @@ def rectangle(w, h, c):
         forward(h)
         left(90)
     end_fill()
-    down()
+    up()
         
 def montagne(d, c):
     # Dessine une montagne de taille d et de couleur c
-    up()
+    down()
     triangle(d, c)
     left(60)
     forward(2*d/3)
@@ -98,11 +98,11 @@ def montagne(d, c):
     right(120)
     forward(2*d/3)
     left(120)
-    down()
+    up()
     
 def rayons(n, d):
     # Dessine n rayons de soleil de longueur d
-    up()
+    down()
     color('yellow')
     width(5)
     for i in range(n):
@@ -110,29 +110,29 @@ def rayons(n, d):
         backward(d)
         left(360/n)
     color('black')
-    down()
+    up()
     
 def soleil(r, n, d):
     # Dessine un soleil de rayon r avec n rayons de longueur d
-    up()
+    down()
     dot(r*2, 'yellow')
     rayons(n, d)
-    down()
+    up()
     
 def nuage(d, n):
     # Dessine un nuage composé aléatoirement de n cercles de diamètre d
-    up()
+    down()
     for i in range(n):
         dot(d, 'white')
         left(randint(0, 360))
         up()
         forward(20)
         down()
-    down()
+    up()
     
 def fleur(d, n, c_centre, c_petale):
     # Dessine une fleur avec un centre de diamètre d et de couleur c_centre avec n pétales de couleur c_petale
-    up()
+    down()
     for i in range(n):
         dot(d, c_petale)
         forward(d*0.8)
@@ -140,7 +140,7 @@ def fleur(d, n, c_centre, c_petale):
     left(60)
     forward(d*0.7)
     dot(d*0.7, c_centre)
-    down()
+    up()
 
 # --------------------------------------------------------
 # Ecrivez ici les appels de fonctions pour faire le dessin
