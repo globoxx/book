@@ -132,7 +132,7 @@ def nuage(d, n):
     
 def fleur(d, n, c_centre, c_petale):
     # Dessine une fleur avec un centre de diamètre d et de couleur c_centre avec n pétales de couleur c_petale
-    down()
+    up()
     for i in range(n):
         dot(d, c_petale)
         forward(d*0.8)
@@ -140,7 +140,6 @@ def fleur(d, n, c_centre, c_petale):
     left(60)
     forward(d*0.7)
     dot(d*0.7, c_centre)
-    up()
 
 # --------------------------------------------------------
 # Ecrivez ici les appels de fonctions pour faire le dessin
