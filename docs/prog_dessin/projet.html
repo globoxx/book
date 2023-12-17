@@ -291,7 +291,7 @@
           <section class="tex2jax_ignore mathjax_ignore" id="projet">
 <span id="prog-dessin-projet"></span><h1>Projet<a class="headerlink" href="#projet" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Il est temps de mettre en pratique vos connaissances pour réaliser un dessin libre (avec quelques contraintes).
-Le projet peut être réalisé par groupe de 2.</p>
+Le projet peut être réalisé par groupe de 2 ou seul.</p>
 <section id="template">
 <h2>Template<a class="headerlink" href="#template" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici le template (fichier de base) à utiliser pour votre projet. Il vous aidera à structurer correctement votre code.
@@ -300,26 +300,31 @@ Vous travaillerez sur l’application <code class="docutils literal notranslate"
 </section>
 <section id="consignes">
 <h2>Consignes<a class="headerlink" href="#consignes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le cahier des charges (en construction) est le suivant:</p>
+<p>Le cahier des charges est le suivant:</p>
 <ul class="simple">
-<li><p>créer un dessin concret (pas abstrait)</p></li>
-<li><p>choisir un sujet libre : nature, ville, intérieur, jeux vidéo, science-fiction, etc.</p></li>
-<li><p>au moins 4 objets différents auxquelles l’on peut donner au moins 2 paramètres (ex: taille et couleur)</p></li>
+<li><p>créer un dessin concret et cohérent (pas juste des formes abstraites) sur un sujet libre</p></li>
+<li><p>au moins 4 (3 si élève seul) objets <strong>différents</strong> et <strong>inédits</strong> auxquels on peut donner au moins 2 paramètres (ex: taille et couleur)</p></li>
 <li><p>chaque objet est défini à l’aide d’une fonction</p></li>
 <li><p>chaque fonction est décrite en 1-2 lignes de commentaires (voir exemple plus bas)</p></li>
-<li><p>les objets complexes (plus de 15 lignes de code) sont découpées en sous-fonctions</p></li>
-<li><p>utiliser des dots, lignes et le remplissage</p></li>
+<li><p>les objets complexes (plus de 15 lignes de code) sont découpés en sous-fonctions</p></li>
+<li><p>utiliser des boucles pour répéter des instructions</p></li>
+<li><p>utiliser des boucles pour parcourir des valeurs (ex: couleurs, tailles, emplacements, etc)</p></li>
+<li><p>utiliser des dots, cercles, lignes et couleurs</p></li>
 <li><p>varier l’épaisseur du trait</p></li>
-<li><p>lever et baisser le stylo</p></li>
-<li><p>utiliser des cercles et des arcs de cercle</p></li>
-<li><p>utiliser des couleurs de ligne, point, remplissage et arrière-fond</p></li>
-<li><p>utiliser des variables pour nommer vos entités (largeur, hauteur, rayon, couleur)</p></li>
-<li><p>parcourir avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> des séquences de couleurs, angles, distances, et tailles</p></li>
-<li><p>répéter avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> (par exemple: hublots, traverses, fenêtres, roues, clôtures, etc)</p></li>
+<li><p>lever et baisser le stylo entre les objects</p></li>
+<li><p>utiliser des variables pour nommer les entités (ex: largeur, hauteur, rayon, couleur)</p></li>
 <li><p>intégrer au moins un élément aléatoire (module <code class="docutils literal notranslate"><span class="pre">random</span></code>) dans votre dessin</p></li>
-<li><p>(bonus) intégrer une forme particulièrement complexe</p></li>
+<li><p>le code est bien structuré (ex: les définitions de fonctions d’abord, puis les appels sont faits en dessous)</p></li>
+<li><p>(bonus) intégrer un objet particulièrement complexe</p></li>
 </ul>
 <p>Comme pour les exercices récapitulatifs, vous rendrez sur Moodle un fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et une capture d’écran <code class="docutils literal notranslate"><span class="pre">.png</span></code>.</p>
+<div class="attention admonition">
+<p class="admonition-title">Plagiat et tricherie</p>
+<p>Vous n’êtes pas autorisé à simplement copier-coller du code trouvé dans les exercices, sur Internet où dans d’autres groupes.</p>
+<p>Il est cependant autorisé de s’inspirer de code d’autrui et de le modifier pour le faire sien. Dans ce cas, il vous est demandé d’ajouter un commentaire dans le code indiquant sa source. Attention vos objets ne doivent cependant pas être de simples légères modifications (ex: couleur) d’un objet présent dans les exercices.</p>
+<p>L’utilisation d’IA génératives telles que ChatGPT est autorisée à des fins d’assistance uniquement. Tout code produit par une IA doit être compris par les membres du groupe et indiqué comme tel dans un commentaire.</p>
+<p>Enfin, <strong>chaque ligne de code doit pouvoir être expliquée et défendue par le groupe</strong>. L’enseignant se réserve le droit d’interroger le groupe sur le code en cas de doute. Un membre du groupe peut avoir une note différente de son binôme s’il est révélé que sa contribution est nettement inférieure.</p>
+</div>
 </section>
 <section id="exemple">
 <h2>Exemple<a class="headerlink" href="#exemple" title="Lien permanent vers ce titre">¶</a></h2>
@@ -335,7 +340,6 @@ Voir le code<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="c1"># from tkinter import * </span>
 
 <span class="n">speed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># Permet d'accélérer le dessin</span>
 
@@ -345,15 +349,18 @@ Voir le code<div class="summary-down docutils">
 
 <span class="k">def</span> <span class="nf">triangle</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="c1"># Dessine un triangle équilatéral de longueur d et de couleur c</span>
+    <span class="n">up</span><span class="p">()</span>
     <span class="n">fillcolor</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
     <span class="n">begin_fill</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="n">forward</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
     <span class="n">end_fill</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
         
 <span class="k">def</span> <span class="nf">rectangle</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="c1"># Dessine un rectangle de largeur w, de hauteur h et de couleur c</span>
+    <span class="n">up</span><span class="p">()</span>
     <span class="n">fillcolor</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
     <span class="n">begin_fill</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
@@ -362,9 +369,11 @@ Voir le code<div class="summary-down docutils">
         <span class="n">forward</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
     <span class="n">end_fill</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
         
 <span class="k">def</span> <span class="nf">montagne</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="c1"># Dessine une montagne de taille d et de couleur c</span>
+    <span class="n">up</span><span class="p">()</span>
     <span class="n">triangle</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
     <span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
@@ -373,9 +382,11 @@ Voir le code<div class="summary-down docutils">
     <span class="n">right</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
     <span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+    <span class="n">down</span><span class="p">()</span>
     
 <span class="k">def</span> <span class="nf">rayons</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="c1"># Dessine n rayons de soleil de longueur d</span>
+    <span class="n">up</span><span class="p">()</span>
     <span class="n">color</span><span class="p">(</span><span class="s1">'yellow'</span><span class="p">)</span>
     <span class="n">width</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -383,23 +394,29 @@ Voir le code<div class="summary-down docutils">
         <span class="n">backward</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="mi">360</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
     <span class="n">color</span><span class="p">(</span><span class="s1">'black'</span><span class="p">)</span>
+    <span class="n">down</span><span class="p">()</span>
     
 <span class="k">def</span> <span class="nf">soleil</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
     <span class="c1"># Dessine un soleil de rayon r avec n rayons de longueur d</span>
+    <span class="n">up</span><span class="p">()</span>
     <span class="n">dot</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">)</span>
     <span class="n">rayons</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+    <span class="n">down</span><span class="p">()</span>
     
 <span class="k">def</span> <span class="nf">nuage</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="c1"># Dessine un nuage composé aléatoirement de n cercles de diamètre d</span>
+    <span class="n">up</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">dot</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s1">'white'</span><span class="p">)</span>
         <span class="n">left</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">))</span>
         <span class="n">up</span><span class="p">()</span>
         <span class="n">forward</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
         <span class="n">down</span><span class="p">()</span>
+    <span class="n">down</span><span class="p">()</span>
     
 <span class="k">def</span> <span class="nf">fleur</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">c_centre</span><span class="p">,</span> <span class="n">c_petale</span><span class="p">):</span>
     <span class="c1"># Dessine une fleur avec un centre de diamètre d et de couleur c_centre avec n pétales de couleur c_petale</span>
+    <span class="n">up</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="n">dot</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">c_petale</span><span class="p">)</span>
         <span class="n">forward</span><span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="mf">0.8</span><span class="p">)</span>
@@ -407,6 +424,7 @@ Voir le code<div class="summary-down docutils">
     <span class="n">left</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
     <span class="n">forward</span><span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="mf">0.7</span><span class="p">)</span>
     <span class="n">dot</span><span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">c_centre</span><span class="p">)</span>
+    <span class="n">down</span><span class="p">()</span>
 
 <span class="c1"># --------------------------------------------------------</span>
 <span class="c1"># Ecrivez ici les appels de fonctions pour faire le dessin</span>
@@ -428,20 +446,15 @@ Voir le code<div class="summary-down docutils">
 <span class="n">montagne</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="s1">'grey'</span><span class="p">)</span>
 
 <span class="c1"># Dessin du soleil</span>
-<span class="n">up</span><span class="p">()</span>
 <span class="n">goto</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-<span class="n">down</span><span class="p">()</span>
 <span class="n">soleil</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
 
 <span class="c1"># Dessin des nuages aux coordonnées prédéfinies dans une liste</span>
 <span class="k">for</span> <span class="n">coords</span> <span class="ow">in</span> <span class="p">[(</span><span class="o">-</span><span class="mi">400</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">350</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">320</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">)]:</span>
-    <span class="n">up</span><span class="p">()</span>
     <span class="n">goto</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
-    <span class="n">down</span><span class="p">()</span>
     <span class="n">nuage</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 
 <span class="c1"># Dessin de 50 fleurs disposées aléatoirement dans l'herbe</span>
-<span class="n">up</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">350</span><span class="p">,</span> <span class="o">-</span><span class="mi">50</span><span class="p">)</span>
@@ -450,7 +463,6 @@ Voir le code<div class="summary-down docutils">
     <span class="n">fleur</span><span class="p">(</span><span class="n">taille</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">'gold'</span><span class="p">,</span> <span class="s1">'red'</span><span class="p">)</span>
 
 <span class="n">hideturtle</span><span class="p">()</span> <span class="c1"># Cache la tortue</span>
-<span class="c1"># Screen().getcanvas().postscript(file='classe_prenom_nom.eps') # Sauvegarde une image vectorielle</span>
 <span class="n">done</span><span class="p">()</span>
 </pre></div>
 </div>

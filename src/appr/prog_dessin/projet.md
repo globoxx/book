@@ -3,7 +3,7 @@
 # Projet
 
 Il est temps de mettre en pratique vos connaissances pour réaliser un dessin libre (avec quelques contraintes).
-Le projet peut être réalisé par groupe de 2.
+Le projet peut être réalisé par groupe de 2 ou seul.
 
 ## Template
 
@@ -14,26 +14,35 @@ Vous travaillerez sur l'application `Thonny` afin de pouvoir sauvegarder votre t
 
 ## Consignes
 
-Le cahier des charges (en construction) est le suivant:
+Le cahier des charges est le suivant:
 
-- créer un dessin concret (pas abstrait)
-- choisir un sujet libre : nature, ville, intérieur, jeux vidéo, science-fiction, etc.
-- au moins 4 objets différents auxquelles l'on peut donner au moins 2 paramètres (ex: taille et couleur)
+- créer un dessin concret et cohérent (pas juste des formes abstraites) sur un sujet libre
+- au moins 4 (3 si élève seul) objets **différents** et **inédits** auxquels on peut donner au moins 2 paramètres (ex: taille et couleur)
 - chaque objet est défini à l'aide d'une fonction
 - chaque fonction est décrite en 1-2 lignes de commentaires (voir exemple plus bas)
-- les objets complexes (plus de 15 lignes de code) sont découpées en sous-fonctions
-- utiliser des dots, lignes et le remplissage
+- les objets complexes (plus de 15 lignes de code) sont découpés en sous-fonctions
+- utiliser des boucles pour répéter des instructions
+- utiliser des boucles pour parcourir des valeurs (ex: couleurs, tailles, emplacements, etc)
+- utiliser des dots, cercles, lignes et couleurs
 - varier l'épaisseur du trait
-- lever et baisser le stylo
-- utiliser des cercles et des arcs de cercle
-- utiliser des couleurs de ligne, point, remplissage et arrière-fond
-- utiliser des variables pour nommer vos entités (largeur, hauteur, rayon, couleur)
-- parcourir avec une boucle `for` des séquences de couleurs, angles, distances, et tailles
-- répéter avec une boucle `for` (par exemple: hublots, traverses, fenêtres, roues, clôtures, etc)
+- lever et baisser le stylo entre les objects
+- utiliser des variables pour nommer les entités (ex: largeur, hauteur, rayon, couleur)
 - intégrer au moins un élément aléatoire (module `random`) dans votre dessin
-- (bonus) intégrer une forme particulièrement complexe
+- le code est bien structuré (ex: les définitions de fonctions d'abord, puis les appels sont faits en dessous)
+- (bonus) intégrer un objet particulièrement complexe
 
 Comme pour les exercices récapitulatifs, vous rendrez sur Moodle un fichier `.py` et une capture d'écran `.png`.
+
+```{admonition} Plagiat et tricherie
+:class: attention
+Vous n'êtes pas autorisé à simplement copier-coller du code trouvé dans les exercices, sur Internet où dans d'autres groupes.
+
+Il est cependant autorisé de s'inspirer de code d'autrui et de le modifier pour le faire sien. Dans ce cas, il vous est demandé d'ajouter un commentaire dans le code indiquant sa source. Attention vos objets ne doivent cependant pas être de simples légères modifications (ex: couleur) d'un objet présent dans les exercices.
+
+L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d'assistance uniquement. Tout code produit par une IA doit être compris par les membres du groupe et indiqué comme tel dans un commentaire.
+
+Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. L'enseignant se réserve le droit d'interroger le groupe sur le code en cas de doute. Un membre du groupe peut avoir une note différente de son binôme s'il est révélé que sa contribution est nettement inférieure.
+```
 
 ## Exemple
 
@@ -47,7 +56,6 @@ Copiez-collez le code du dessin dans l'application `Thonny` pour visualiser comm
 ```python
 from turtle import *
 from random import *
-# from tkinter import * 
 
 speed(0) # Permet d'accélérer le dessin
 
@@ -57,15 +65,18 @@ speed(0) # Permet d'accélérer le dessin
 
 def triangle(d, c):
     # Dessine un triangle équilatéral de longueur d et de couleur c
+    up()
     fillcolor(c)
     begin_fill()
     for i in range(3):
         forward(d)
         left(120)
     end_fill()
+    down()
         
 def rectangle(w, h, c):
     # Dessine un rectangle de largeur w, de hauteur h et de couleur c
+    up()
     fillcolor(c)
     begin_fill()
     for i in range(2):
@@ -74,9 +85,11 @@ def rectangle(w, h, c):
         forward(h)
         left(90)
     end_fill()
+    down()
         
 def montagne(d, c):
     # Dessine une montagne de taille d et de couleur c
+    up()
     triangle(d, c)
     left(60)
     forward(2*d/3)
@@ -85,9 +98,11 @@ def montagne(d, c):
     right(120)
     forward(2*d/3)
     left(120)
+    down()
     
 def rayons(n, d):
     # Dessine n rayons de soleil de longueur d
+    up()
     color('yellow')
     width(5)
     for i in range(n):
@@ -95,23 +110,29 @@ def rayons(n, d):
         backward(d)
         left(360/n)
     color('black')
+    down()
     
 def soleil(r, n, d):
     # Dessine un soleil de rayon r avec n rayons de longueur d
+    up()
     dot(r*2, 'yellow')
     rayons(n, d)
+    down()
     
 def nuage(d, n):
     # Dessine un nuage composé aléatoirement de n cercles de diamètre d
+    up()
     for i in range(n):
         dot(d, 'white')
         left(randint(0, 360))
         up()
         forward(20)
         down()
+    down()
     
 def fleur(d, n, c_centre, c_petale):
     # Dessine une fleur avec un centre de diamètre d et de couleur c_centre avec n pétales de couleur c_petale
+    up()
     for i in range(n):
         dot(d, c_petale)
         forward(d*0.8)
@@ -119,6 +140,7 @@ def fleur(d, n, c_centre, c_petale):
     left(60)
     forward(d*0.7)
     dot(d*0.7, c_centre)
+    down()
 
 # --------------------------------------------------------
 # Ecrivez ici les appels de fonctions pour faire le dessin
@@ -140,20 +162,15 @@ backward(80)
 montagne(100, 'grey')
 
 # Dessin du soleil
-up()
 goto(300, 200)
-down()
 soleil(50, 10, 80)
 
 # Dessin des nuages aux coordonnées prédéfinies dans une liste
 for coords in [(-400, 250), (-350, 300), (-320, 200), (-250, 250), (-100, 300)]:
-    up()
     goto(coords)
-    down()
     nuage(40, 5)
 
 # Dessin de 50 fleurs disposées aléatoirement dans l'herbe
-up()
 for i in range(50):
     x = randint(-400, 400)
     y = randint(-350, -50)
@@ -162,7 +179,6 @@ for i in range(50):
     fleur(taille, 5, 'gold', 'red')
 
 hideturtle() # Cache la tortue
-# Screen().getcanvas().postscript(file='classe_prenom_nom.eps') # Sauvegarde une image vectorielle
 done()
 ```
 ````
