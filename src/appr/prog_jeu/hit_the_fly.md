@@ -75,14 +75,14 @@ def update():
 
 ## 3. Ajouter le joueur
 
-Il est temps d'ajouter notre joueur. Il sera représenté par un `objet`. Voyez un objet comme une sorte de super variable qui peut contenir d'autres variables. Chaque objet sera également représenté par une image que nous appelerons un sprite.
+Il est temps d'ajouter notre joueur. Il sera représenté par un `objet`. Voyez un objet comme une sorte de super variable qui peut contenir d'autres variables. Chaque objet sera également représenté par une image que nous appelerons un sprite. Chaque sprite doit être sauvegardé dans le dossier `images`.
 
 ```{image} ../media/alien_walk1.png
 ```
 
-La plateforme Kenny[https://kenney.nl/assets] contient énormément de sprites gratuits à utiliser pour vos jeux.
+La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux.
 
-Pour chaque nouvel objet que l'on veut ajouter à notre jeu, nous allons créer une `classe` associée. Voyez une classe comme un moule qui nous permettra de créer des objets, comme notre joueur. En programmation orientée objet (voic ici[https://courspython.com/classes-et-objets.html]), une classe possède des `attributs` (des variables décrivant l'objet) et des `méthodes` (des fonctions pouvant être appelées par l'objet).
+Pour chaque nouvel objet que l'on veut ajouter à notre jeu, nous allons créer une `classe` associée. Voyez une classe comme un moule qui nous permettra de créer des objets, comme notre joueur. En <a href="https://courspython.com/classes-et-objets.html" target="_blank">programmation orientée objet</a>, une classe possède des `attributs` (des variables décrivant l'objet) et des `méthodes` (des fonctions pouvant être appelées par l'objet).
 
 ```{image} ../media/classe_voiture.svg
 ```
@@ -109,7 +109,7 @@ Afin de dessiner notre joueur, il faut en dernier lieu appeler la méthode `play
 ```python
 def draw():
     screen.blit('grass', (0, 0))
-    player.draw()
+    player.draw() # On dessine le joueur ici !
 ```
 
 `draw` est une méthode possèdée par tous les objets de type `Actor`. Etant donné que notre objet de type `Player` est aussi un `Actor`, il hérite de cette méthode ainsi que de plein d'attributs dont nous aurons besoin plus tard comme les coordonnées `x` et `y` de notre objet.
@@ -318,7 +318,7 @@ class Player(Actor):
         elif keyboard.s:
             self.y += self.speed
             
-        detect_border(self) # Appel ici !
+        detect_border(self) # Appel de la fonction ici !
 ```
 
 Notez ici que l'argument donné à `detect_border` est `self` car il représente justement le joueur !
@@ -408,11 +408,11 @@ N'oublions pas d'appeler la méthode `ennemy.draw()` dans la fonction `draw` du 
 def draw():
     screen.blit('grass', (0, 0))
     player.draw()
-    ennemy.draw()
+    ennemy.draw() # On dessine l'ennemi !
 
 def update():
     player.update()
-    ennemy.update()
+    ennemy.update() # Ne fait rien pour le moment
 ```
 
 Occupons nous à présent du déplacement de l'ennemi. Cela se code dans la méthode `update` de la classe `Ennemy`. Nous allons utiliser l'attribut `direction` qui indique la direction dans laquelle notre ennemi va se déplacer. Il s'agit d'un angle entre `0` et `360` degrés où `0` correspond à un déplacement vers la droite.
@@ -544,7 +544,7 @@ def draw():
     screen.blit('grass', (0, 0))
     player.draw()
     ennemy.draw()
-    ennemy.animate()
+    ennemy.animate() # On fait avancer l'animation ici !
 ```
 
 Notez que par défaut, l'animation se déroule à `5` fps. Cela signifie que l'image change 5 fois par seconde. Pour changer cette valeur, il suffit de modifier l'attribut `fps` dans le constructeur de la classe `Ennemy`.
@@ -617,7 +617,7 @@ def update():
 
 ## 8. Ajouter des ennemis à intervalle régulier
 
-Pour avoir plusieurs ennemis en même temps dans le jeu, nous allons remplir une **liste d'ennemis**. Nous allons donc remplacer notre unique objet `ennemy` par une liste (`[]`) qui contient initialement un ennemi.
+Pour avoir plusieurs ennemis en même temps dans le jeu, nous allons remplir une **liste d'ennemis**. Nous allons donc remplacer notre unique objet `ennemy` par une liste (`[]`) qui contient initialement un seul ennemi.
 
 ```python
 ennemies = [Ennemy('fly1', (randint(0, WIDTH), randint(0, HEIGHT)))]
@@ -768,7 +768,7 @@ Nous devons utiliser `pos` pour calculer la direction que devra prendre notre mi
 ```python
 def on_mouse_down(pos):
     direction = player.angle_to(pos) # Calcul de l'angle entre le joueur et le curseur de la souris
-    missile = Missile('missile', (player.x, player.y), direction) # Création du missile
+    missile = Missile('missile', (player.x, player.y), direction) # Création du missile avec la direction calculée
     missiles.append(missile) # Ajout du missile à la liste
 ```
 
@@ -1078,7 +1078,7 @@ def update():
 
 ## 11. Ajouter un son de collision
 
-Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier `.wav` souhaité dans le dossier `sounds`. De nombreux bruitages gratuits peuvent être trouvés sur OpenGameArt[https://opengameart.org/]. Priviliégiez les sons courts pour éviter des problèmes de performance.
+Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier `.wav` souhaité dans le dossier `sounds`. De nombreux bruitages et musiques gratuits peuvent être trouvés sur <a href="https://opengameart.org/" target="_blank">OpenGameArt</a>. Priviliégiez les sons courts pour éviter des problèmes de performance.
 
 Pygame nous offre l'objet `sounds` qui nous permet de facilement lancer un bruitage. Dans notre cas, nous souhaitons lancer un bruit d'explosion lorsque qu'un missile touche un ennemi.
 
@@ -1291,7 +1291,7 @@ def update():
 
 ## 14. Idées d'améliorations
 
-Voici plusieurs idées d'amélioration du jeu. Il vous est demandé d'en choisir au minimum 2 dans la liste et de les implémenter par vous-même.
+Voici plusieurs idées d'amélioration du jeu. **Il vous est demandé d'en choisir au minimum 2 dans la liste et de les implémenter par vous-même.**
 
 Totalement dans vos cordes:
 

@@ -357,10 +357,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </details></section>
 <section id="ajouter-le-joueur">
 <h2>3. Ajouter le joueur<a class="headerlink" href="#ajouter-le-joueur" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il est temps d’ajouter notre joueur. Il sera représenté par un <code class="docutils literal notranslate"><span class="pre">objet</span></code>. Voyez un objet comme une sorte de super variable qui peut contenir d’autres variables. Chaque objet sera également représenté par une image que nous appelerons un sprite.</p>
+<p>Il est temps d’ajouter notre joueur. Il sera représenté par un <code class="docutils literal notranslate"><span class="pre">objet</span></code>. Voyez un objet comme une sorte de super variable qui peut contenir d’autres variables. Chaque objet sera également représenté par une image que nous appelerons un sprite. Chaque sprite doit être sauvegardé dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>.</p>
 <img alt="../_images/alien_walk1.png" src="../_images/alien_walk1.png"/>
-<p>La plateforme Kenny[https://kenney.nl/assets] contient énormément de sprites gratuits à utiliser pour vos jeux.</p>
-<p>Pour chaque nouvel objet que l’on veut ajouter à notre jeu, nous allons créer une <code class="docutils literal notranslate"><span class="pre">classe</span></code> associée. Voyez une classe comme un moule qui nous permettra de créer des objets, comme notre joueur. En programmation orientée objet (voic ici[https://courspython.com/classes-et-objets.html]), une classe possède des <code class="docutils literal notranslate"><span class="pre">attributs</span></code> (des variables décrivant l’objet) et des <code class="docutils literal notranslate"><span class="pre">méthodes</span></code> (des fonctions pouvant être appelées par l’objet).</p>
+<p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux.</p>
+<p>Pour chaque nouvel objet que l’on veut ajouter à notre jeu, nous allons créer une <code class="docutils literal notranslate"><span class="pre">classe</span></code> associée. Voyez une classe comme un moule qui nous permettra de créer des objets, comme notre joueur. En <a href="https://courspython.com/classes-et-objets.html" target="_blank">programmation orientée objet</a>, une classe possède des <code class="docutils literal notranslate"><span class="pre">attributs</span></code> (des variables décrivant l’objet) et des <code class="docutils literal notranslate"><span class="pre">méthodes</span></code> (des fonctions pouvant être appelées par l’objet).</p>
 <img alt="../_images/classe_voiture.svg" src="../_images/classe_voiture.svg"/><p>Nous créons donc une classe <code class="docutils literal notranslate"><span class="pre">Player</span></code> qui hérite des attributs et méthodes d’une autre classe nommée <code class="docutils literal notranslate"><span class="pre">Actor</span></code> offerte par Pygame. En fait, tous les objets que nous allons ajouter à notre jeu sont des <code class="docutils literal notranslate"><span class="pre">acteurs</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -376,7 +376,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p>Afin de dessiner notre joueur, il faut en dernier lieu appeler la méthode <code class="docutils literal notranslate"><span class="pre">player.draw()</span></code> dans la fonction principale <code class="docutils literal notranslate"><span class="pre">draw</span></code> de Pygame.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'grass'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine le joueur ici !</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">draw</span></code> est une méthode possèdée par tous les objets de type <code class="docutils literal notranslate"><span class="pre">Actor</span></code>. Etant donné que notre objet de type <code class="docutils literal notranslate"><span class="pre">Player</span></code> est aussi un <code class="docutils literal notranslate"><span class="pre">Actor</span></code>, il hérite de cette méthode ainsi que de plein d’attributs dont nous aurons besoin plus tard comme les coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> de notre objet.</p>
@@ -573,7 +573,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">speed</span>
             
-        <span class="n">detect_border</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="c1"># Appel ici !</span>
+        <span class="n">detect_border</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="c1"># Appel de la fonction ici !</span>
 </pre></div>
 </div>
 <p>Notez ici que l’argument donné à <code class="docutils literal notranslate"><span class="pre">detect_border</span></code> est <code class="docutils literal notranslate"><span class="pre">self</span></code> car il représente justement le joueur !</p>
@@ -659,11 +659,11 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'grass'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="n">ennemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">ennemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine l'ennemi !</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-    <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+    <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span> <span class="c1"># Ne fait rien pour le moment</span>
 </pre></div>
 </div>
 <p>Occupons nous à présent du déplacement de l’ennemi. Cela se code dans la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Ennemy</span></code>. Nous allons utiliser l’attribut <code class="docutils literal notranslate"><span class="pre">direction</span></code> qui indique la direction dans laquelle notre ennemi va se déplacer. Il s’agit d’un angle entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">360</span></code> degrés où <code class="docutils literal notranslate"><span class="pre">0</span></code> correspond à un déplacement vers la droite.</p>
@@ -788,7 +788,7 @@ La première étape consiste donc à définir la valeur de cet attribut <code cl
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'grass'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">ennemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="n">ennemy</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
+    <span class="n">ennemy</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span> <span class="c1"># On fait avancer l'animation ici !</span>
 </pre></div>
 </div>
 <p>Notez que par défaut, l’animation se déroule à <code class="docutils literal notranslate"><span class="pre">5</span></code> fps. Cela signifie que l’image change 5 fois par seconde. Pour changer cette valeur, il suffit de modifier l’attribut <code class="docutils literal notranslate"><span class="pre">fps</span></code> dans le constructeur de la classe <code class="docutils literal notranslate"><span class="pre">Ennemy</span></code>.</p>
@@ -866,7 +866,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </details></section>
 <section id="ajouter-des-ennemis-a-intervalle-regulier">
 <h2>8. Ajouter des ennemis à intervalle régulier<a class="headerlink" href="#ajouter-des-ennemis-a-intervalle-regulier" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour avoir plusieurs ennemis en même temps dans le jeu, nous allons remplir une <strong>liste d’ennemis</strong>. Nous allons donc remplacer notre unique objet <code class="docutils literal notranslate"><span class="pre">ennemy</span></code> par une liste (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) qui contient initialement un ennemi.</p>
+<p>Pour avoir plusieurs ennemis en même temps dans le jeu, nous allons remplir une <strong>liste d’ennemis</strong>. Nous allons donc remplacer notre unique objet <code class="docutils literal notranslate"><span class="pre">ennemy</span></code> par une liste (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) qui contient initialement un seul ennemi.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ennemies</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ennemy</span><span class="p">(</span><span class="s1">'fly1'</span><span class="p">,</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)))]</span>
 </pre></div>
 </div>
@@ -1003,7 +1003,7 @@ Nous pouvons également déjà lui donner une vitesse (de 5 par exemple).</p>
 <p>Nous devons utiliser <code class="docutils literal notranslate"><span class="pre">pos</span></code> pour calculer la direction que devra prendre notre missile. Il est possible de calculer l’angle entre un acteur et une coordonnée grâce à la méthode <code class="docutils literal notranslate"><span class="pre">angle_to</span></code> héritée de <code class="docutils literal notranslate"><span class="pre">Actor</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="n">direction</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">angle_to</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="c1"># Calcul de l'angle entre le joueur et le curseur de la souris</span>
-    <span class="n">missile</span> <span class="o">=</span> <span class="n">Missile</span><span class="p">(</span><span class="s1">'missile'</span><span class="p">,</span> <span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span><span class="p">),</span> <span class="n">direction</span><span class="p">)</span> <span class="c1"># Création du missile</span>
+    <span class="n">missile</span> <span class="o">=</span> <span class="n">Missile</span><span class="p">(</span><span class="s1">'missile'</span><span class="p">,</span> <span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span><span class="p">),</span> <span class="n">direction</span><span class="p">)</span> <span class="c1"># Création du missile avec la direction calculée</span>
     <span class="n">missiles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">missile</span><span class="p">)</span> <span class="c1"># Ajout du missile à la liste</span>
 </pre></div>
 </div>
@@ -1305,7 +1305,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </details></section>
 <section id="ajouter-un-son-de-collision">
 <h2>11. Ajouter un son de collision<a class="headerlink" href="#ajouter-un-son-de-collision" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier <code class="docutils literal notranslate"><span class="pre">.wav</span></code> souhaité dans le dossier <code class="docutils literal notranslate"><span class="pre">sounds</span></code>. De nombreux bruitages gratuits peuvent être trouvés sur OpenGameArt[https://opengameart.org/]. Priviliégiez les sons courts pour éviter des problèmes de performance.</p>
+<p>Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier <code class="docutils literal notranslate"><span class="pre">.wav</span></code> souhaité dans le dossier <code class="docutils literal notranslate"><span class="pre">sounds</span></code>. De nombreux bruitages et musiques gratuits peuvent être trouvés sur <a href="https://opengameart.org/" target="_blank">OpenGameArt</a>. Priviliégiez les sons courts pour éviter des problèmes de performance.</p>
 <p>Pygame nous offre l’objet <code class="docutils literal notranslate"><span class="pre">sounds</span></code> qui nous permet de facilement lancer un bruitage. Dans notre cas, nous souhaitons lancer un bruit d’explosion lorsque qu’un missile touche un ennemi.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Missile</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -1512,7 +1512,7 @@ Voir le code final<div class="summary-down docutils">
 </details></section>
 <section id="idees-dameliorations">
 <h2>14. Idées d’améliorations<a class="headerlink" href="#idees-dameliorations" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Voici plusieurs idées d’amélioration du jeu. Il vous est demandé d’en choisir au minimum 2 dans la liste et de les implémenter par vous-même.</p>
+<p>Voici plusieurs idées d’amélioration du jeu. <strong>Il vous est demandé d’en choisir au minimum 2 dans la liste et de les implémenter par vous-même.</strong></p>
 <p>Totalement dans vos cordes:</p>
 <ul class="simple">
 <li><p>Ajouter une animation au joueur quand il se déplace.</p></li>
