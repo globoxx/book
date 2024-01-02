@@ -91,8 +91,8 @@ Nous créons donc une classe `Player` qui hérite des attributs et méthodes d'u
 
 ```python
 class Player(Actor):
-    def __init__(self, image, pos, **kwargs):
-        super().__init__(image, pos, **kwargs) # Cette ligne appelle le constructeur de la classe Actor
+    def __init__(self, image, pos, **kwargs): # Init est le constructeur de la classe
+        super().__init__(image, pos, **kwargs) # Cette ligne appelle le constructeur de la classe mère Actor
         # Ne vous en préoccupez pas trop pour le moment
 ```
 
@@ -155,7 +155,7 @@ Remarquez que, tout comme `init`, `update` prend un argument spécial: `self`. C
 `keyboard` est (tout comme `screen`) un objet donné par Pygame qui nous permet de récupérer les touches enfoncées par l'utilisateur. C'est très simple d'utilisation: si la touche `x` est enfoncée, alors `keyboard.x` vaudra `True`, sinon il vaudra `False`.
 
 ```python
-if keyboard.a:
+if keyboard.a: # Si la touche a est appuyée
     # Déplace le joueur à gauche
 ```
 
@@ -178,7 +178,7 @@ class Player(Actor):
             self.y += 3
 ```
 
-Vous remarquez que nous bougeons de `3` pixels par `tick` (un `tick` représentant un tour dans la boucle principale du jeu). Afin de rendre le code plus propre et de pouvoir facilement modifier la vitesse de notre personnage par la suite, il serait plus judicieux de lui définir une vitesse.
+Vous remarquez que nous bougeons de `3` pixels par `tick` (un `tick` représente un tour dans la boucle principale du jeu). Afin de rendre le code plus propre et pouvoir facilement modifier la vitesse de notre personnage par la suite, il serait plus judicieux de lui définir une vitesse.
 
 Nous pouvons ajouter un attribut `speed` à notre classe `Player` et lui donner la valeur `3`. Ainsi, nous n'aurons ensuite plus qu'à modifier cette valeur pour accélérer ou ralentir notre personnage à notre guise. Cet ajout se fait dans le **constructeur** de notre classe, c'est à dire dans la méthode `init`.
 
@@ -207,9 +207,9 @@ def update():
     player.update()
 ```
 
-Une dernière étape est de faire en sorte que le sprite représentant le joueur s'adapte à sa direction. Par défaut il regarde à droite, mais on voudrait qu'il regarde à gauche s'il se déplace à gauche.
+Dernière étape: faire en sorte que le sprite représentant le joueur s'adapte à sa direction. Par défaut il regarde à droite, mais on voudrait qu'il regarde à gauche s'il se déplace à gauche.
 
-Ceci est faisable grâce à l'attribut `flip_x` hérité de la classe `Actor`. Par défaut, `flip_x` vaut `False`. Il suffit de le faire passer à `True` au bon moment:
+Ceci est faisable grâce à l'attribut `flip_x` hérité de la classe `Actor`. Par défaut, `flip_x` vaut `False`. Il suffit de le faire passer à `True` au bon moment.
 
 ```python
 class Player(Actor):
@@ -272,7 +272,7 @@ def update():
 
 La détection des bords de la fenêtre de jeu est un élément récurrent de tout jeu vidéo. Il existe plétore de manières de résoudre ce problème mais je vous propose la solution suivante: **si un acteur sort de l'écran, il réapparaît du coté opposé**.
 
-Comme cela ne concernera pas que notre joueur mais probablement d'autres acteurs de notre jeu, il semble être une bonne idée de créer une fonction qui pourra s'appliquer à n'importe quel acteur.
+Comme cela ne concernera pas que notre joueur mais probablement d'autres acteurs de notre jeu, il semble être une bonne idée de créer une fonction qui pourra s'appliquer à n'importe quel acteur. Notre fonction `detect_border` prendra donc un acteur en argument.
 
 ```python
 def detect_border(actor):
@@ -280,7 +280,7 @@ def detect_border(actor):
     # et la modification des coordonnées de l'acteur si nécessaire
 ```
 
-Tout `Actor` possède des attributs `x` et `y` que nous pouvons lire pour savoir si l'acteur sort de la fenêtre de jeu. Par exemple, si `actor.x > WITH`, cela signifie que l'acteur sort du jeu par la droite. Dans ce cas, vous voulons faire réapparaître l'acteur à gauche, c'est à dire que `actor.x` doit valoir `0`.
+Tout `Actor` possède des attributs `x` et `y` que nous pouvons lire pour savoir si l'acteur sort de la fenêtre de jeu. Par exemple, si `actor.x > WIDTH`, cela signifie que l'acteur sort du jeu par la droite. Dans ce cas, vous voulons faire réapparaître l'acteur à gauche, c'est à dire que `actor.x` doit valoir `0`.
 
 Nous n'avons qu'à faire les 4 tests pour les 4 bords de la fenêtre:
 
@@ -297,7 +297,7 @@ def detect_border(actor):
         actor.y = HEIGHT # Dépassement en haut
 ```
 
-Mais quand appeler cette fonction ? Eh bien à la fin du déplacement de notre personnage ! C'est à dire à la fin de la méthode `player.update`.
+Mais à quel moment appeler cette fonction ? Eh bien à la fin du déplacement de notre personnage ! C'est à dire à la fin de la méthode `player.update`.
 
 ```python
 class Player(Actor):
@@ -380,7 +380,7 @@ Il est temps d'ajouter un ennemi pour pimenter un peu notre jeu. Dans notre cas,
 ```{image} ../media/fly1.png
 ```
 
-Comme pour `Player`, la première étape est de créer une nouvelle classe pour représenter notre ennemi:
+Comme pour `Player`, la première étape est de créer une nouvelle classe pour représenter notre ennemi.
 
 ```python
 class Ennemi(Actor):
@@ -394,12 +394,12 @@ class Ennemi(Actor):
 Nous pouvons ensuite créer un ennemi en appelant son constructeur et en lui donnant un sprite et des coordonnées de départ **aléatoires**. La foncton permettant de tirer un nombre entier aléatoire entre 2 bornes `a` et `b` se nomme `randint(a, b)`. Pour qu'elle fonctionne, nous devons également importer le module `random` qui contient cette fonction.
 
 ```python
-from random import *
+from random import * # Importe tout un tas de fonctions pour faire de l'aléatoire
 
 # reste du code...
 
 player = Player('alien_walk1', (WIDTH/2, HEIGHT/2))
-ennemy = Ennemy('fly1', (randint(0, WIDTH), randint(0, HEIGHT)))
+ennemy = Ennemy('fly1', (randint(0, WIDTH), randint(0, HEIGHT))) # Création de l'ennemi aux coordonnées aléatoires sur la fenêtre
 ```
 
 N'oublions pas d'appeler la méthode `ennemy.draw()` dans la fonction `draw` du programme principal. Nous pouvons également déjà appeler la méthode `ennemy.update()` dans la fonction `update` même si elle ne fait rien pour l'instant.
@@ -547,7 +547,7 @@ def draw():
     ennemy.animate() # On fait avancer l'animation ici !
 ```
 
-Notez que par défaut, l'animation se déroule à `5` fps. Cela signifie que l'image change 5 fois par seconde. Pour changer cette valeur, il suffit de modifier l'attribut `fps` dans le constructeur de la classe `Ennemy`.
+Notez que par défaut, l'animation se déroule à `5` fps. Cela signifie que l'image change 5 fois par seconde. Pour changer cette valeur, il suffirait de modifier l'attribut `fps` dans le constructeur de la classe `Ennemy`.
 
 ````{dropdown} Voir le code complet à ce point
 ```python
@@ -647,15 +647,15 @@ def add_ennemy():
     ennemies.append(ennemy) # Ajoute ennemy à la liste ennemies
 ```
 
-La question est quand appeler cette fonction ? Quand voulons nous ajouter un ennemi ? Ici disons que nous aimerions ajouter un ennemi toutes les 15 secondes.
+La question est: quand appeler cette fonction ? Quand voulons nous ajouter un ennemi ? Ici, disons que nous aimerions ajouter un ennemi toutes les 15 secondes.
 
-Pygame nous offre pour ceci un objet très utile: `clock`. Cet objet nous permet d'agender des appels de fonction dans le temps.
+Pygame nous offre pour ceci un objet très utile: `clock`. **Cet objet permet d'agender des appels de fonction dans le temps**.
 
 ```python
 clock.schedule_interval(add_ennemy, 15.0)
 ```
 
-La méthode `schedule_interval` nous permet d'appeler une fonction toutes les x secondes. Nous l'avons donc réglée pour appeler `add_ennemy` toutes les 15 secondes.
+La méthode `schedule_interval` permet d'appeler une fonction toutes les x secondes. Nous l'avons donc réglée pour appeler `add_ennemy` toutes les 15 secondes.
 
 ````{dropdown} Voir le code complet à ce point
 ```python
@@ -733,7 +733,7 @@ def update():
 
 ## 9. Tirer des projectiles
 
-Il est temps de pouvoir frapper nos ennemis ! Nous allons créer un nouvel objet pour représenter un projectile qui sera tiré avec un clic de souris et qui partira dans la direction du curseur de la souris.
+Il est temps de pouvoir frapper nos ennemis ! Nous allons créer un nouvel objet pour représenter un projectile qui sera tiré avec un clic de souris et qui partira depuis le joueur dans la direction du curseur de la souris.
 
 ```{image} ../media/missile.png
 ```
@@ -921,7 +921,7 @@ def update():
 
 ## 10. Gérer les collisions
 
-Il est temps de donner du pouvoir à nos missiles pour détruire les ennemis ! Normalement, la gestion des collisions est un moment compliqué dans le développement d'un jeu car cela requiert des algorithmes et conditions assez complexes. Heureusement pour nous, Pygame nous mâche le travail grâce à la classe `Actor` qui est déjà capable de détecter des collisions grâce à sa méthode `collides_with(other_actor)`. Elle retourne `True` si l'acteur est en contact avec `other_actor`.
+Il est temps de donner du pouvoir à nos missiles pour détruire les ennemis ! Normalement, la gestion des collisions est un moment compliqué dans le développement d'un jeu car cela requiert des algorithmes assez complexes. Heureusement pour nous, Pygame nous mâche le travail grâce à la classe `Actor` qui est déjà capable de détecter des collisions grâce à sa méthode `collides_with(other_actor)`. Elle retourne `True` si l'acteur est en contact avec `other_actor`.
 
 ```{image} ../media/collision.png
 ```
@@ -936,7 +936,7 @@ class Missile(Actor):
         self.angle = direction
         self.speed = 5
 
-    def update(self, ennemies): # Ajout de l'argument ennemies
+    def update(self, ennemies): # Ajout de l'argument ennemies pour pouvoir lire la liste des ennemis
         self.move_in_direction(self.speed)
         for ennemy in ennemies: # Parcourt chaque ennemi
             if self.collides_with(ennemy): # Si il y a collision
@@ -946,7 +946,7 @@ class Missile(Actor):
 
 Bon, on affiche `BOOOOM` quand on touche en ennemi, mais on voudrait bien qu'il soit détruit, ainsi que notre missile ! Pour détruire un acteur du jeu, il suffit de le supprimer de la liste qui le contient. C'est à dire que nous voulons supprimer le missile de `missiles` et l'ennemi touché de `ennemies`.
 
-Mais à quel moment ? En fait il existe plein de manières de faire... Une façon propre est d'utiliser l'attribut `to_remove` qui traque si un objet doit être retiré du jeu ou non (il vaut `False` par défaut). Il suffit donc de passer cet `to_remove` à `True` pour le missile en question et pour l'ennemi qu'il a touché.
+Mais à quel moment ? En fait il existe plein de manières de faire... Une façon propre est d'utiliser l'attribut `to_remove` qui traque si un objet doit être retiré du jeu ou non (il vaut `False` par défaut). Il suffit donc de passer `to_remove` à `True` pour le missile en question et pour l'ennemi qu'il a touché.
 
 ```python
 class Missile(Actor):
@@ -966,7 +966,7 @@ class Missile(Actor):
                 break
 ```
 
-A la fin de la fonction `update` du programme principal, on parcourt nos listes et on supprime tous les objets qui sont marqués pour être détruits. Cela permet de tous les détruire au même moment pour éviter les bugs et simplifier la logique du jeu.  
+A la fin de la fonction `update` du programme principal, on parcourt nos listes et on supprime tous les objets qui sont marqués pour être détruits. Cela permet de tous les détruire en même temps pour éviter les bugs et simplifier la logique du jeu.  
 Par soucis de simplicité, j'ai écrit une fonction toute prête: `remove_actors(actors)` qui s'occupe de supprimer de la liste `actors` tous les acteurs dont l'attribut `to_remove` est à `True`.
 
 ```python
@@ -1121,7 +1121,7 @@ clock.schedule_interval(add_ennemy, 15.0)
 
 ## 13. Tenir et afficher un score
 
-Le score est important dans les jeux ! Pour en tenir un, il nous faut commencer par définir une variable `score` au début de notre programme principal et de l'initialiser à `0`.
+Le score est important dans les jeux ! Pour en tenir un, il nous faut commencer par définir une variable `score` au début de notre programme principal et l'initialiser à `0`.
 
 ```python
 music.play('adventure')
@@ -1135,7 +1135,7 @@ score = 0 # Création de la variable score ici !
 clock.schedule_interval(add_ennemy, 15.0)
 ```
 
-Avant de nous occuper de l'augmentation du score, voyons déjà commencer l'afficher. Afficher du texte à l'écran se fait via l'objet `screen` offert par Pygame. Nous l'utilisons dans la fonction `draw` du programme principal, juste après avoir défini l'image de fond.
+Avant de nous occuper de l'augmentation du score, voyons déjà comment l'afficher. Afficher du texte à l'écran se fait via l'objet `screen` offert par Pygame. Nous l'utilisons dans la fonction `draw` du programme principal, juste après avoir défini l'image de fond.
 
 ```python
 def draw():
