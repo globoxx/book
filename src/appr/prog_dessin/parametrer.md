@@ -376,15 +376,16 @@ La fonction doit avoir les paramètres suivants:
 - `c`: couleur de la spirale
 - `n`: nombre de segments
 
-Appelez votre fonction 3 fois avec des paramètres différents, comme dans l'exemple ci-dessous:
+Appelez votre fonction 3 fois avec des paramètres différents pour `a`, `c` et `n`, afin d'obtenir 3 spirales différentes:
 
 ![spirale](../media/spirale_parametree.png)
+
+Vous n'avez pas à reproduire les mêmes spirales que dans l'image ci-dessus.
 
 ```{codeplay}
 :file: ex4.py
 from turtle import *
 
-# Votre code ici...
 def spirale(...):
     # Code de l'exercice 3
 ```
