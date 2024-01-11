@@ -370,10 +370,8 @@ Lesquels des noms de variable sont valides ?
 ## Exercice récapitulatif
 
 ````{exercise}
-Reprenez l'exercice récapitulatif du chapitre `répéter` et créez une fonction pour dessiner votre spirale.
+Reprenez l'exercice récapitulatif du chapitre 3 `répéter` et créez une fonction `spirale` pour dessiner votre spirale.
 La fonction doit avoir les paramètres suivants:
-- `l`: longueur initiale d'un segment
-- `i`: incrément de la longueur du segment à chaque tour
 - `a`: angle entre chaque segment
 - `c`: couleur de la spirale
 - `n`: nombre de segments
@@ -387,6 +385,8 @@ Appelez votre fonction 3 fois avec des paramètres différents, comme dans l'exe
 from turtle import *
 
 # Votre code ici...
+def spirale(...):
+    # Code de l'exercice 3
 ```
 
 Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu avec une capture d'écran du dessin.

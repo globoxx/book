@@ -13,8 +13,12 @@ La première étape est de définir le nom de notre jeu dans la variable `TITLE`
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
+
 WIDTH = 800
 HEIGHT = 600
+```
+
+```{image} ../media/pygame_fenetre.png
 ```
 
 Pygame Zero fonctionne avec 2 fonctions principales: `draw` et `update`. Tandis que `draw` est appelée pour afficher des choses à l'écran, `update` est appelée pour faire évoluer le jeu. Elles sont toutes 2 appelées en boucle automatiquement tant qu'on ne quitte pas le jeu.
@@ -80,7 +84,7 @@ Il est temps d'ajouter notre joueur. Il sera représenté par un `objet`. Voyez 
 ```{image} ../media/alien_walk1.png
 ```
 
-La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux.
+La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux. Le sprite du petit alien ci-dessus vient du <a href="https://kenney.nl/assets/platformer-art-deluxe">Platformer art deluxe</a>.
 
 Pour chaque nouvel objet que l'on veut ajouter à notre jeu, nous allons créer une `classe` associée. Voyez une classe comme un moule qui nous permettra de créer des objets, comme notre joueur. En <a href="https://courspython.com/classes-et-objets.html" target="_blank">programmation orientée objet</a>, une classe possède des `attributs` (des variables décrivant l'objet) et des `méthodes` (des fonctions pouvant être appelées par l'objet).
 
@@ -1300,7 +1304,7 @@ Totalement dans vos cordes:
 - Faire en sorte que plus le score augmente, plus les ennemis se déplacent rapidement.
 - Détruire les missiles lorsqu'ils sortent de l'écran et limiter le joueur à 3 missiles à la fois.
 - Créer un game over sous les conditions de votre choix (par exemple au contact d'un ennemi ou après un certain temps). Cela affiche par exemple un écran noir avec écrit "Game Over" en grand.
-- Une autre idée à proposer à l'enseignant !
+- Une autre idée à proposer à me proposer !
 
 Un peu plus complexe:
 
@@ -1312,4 +1316,4 @@ Challenging:
 
 - Ajouter un nouveau type d'ennemi qui se comporte différemment.
 - Ajouter des armes au personnage. Par exemple une attaque au corps à corps ou la possibilité de larguer des bombes qui explosent après quelques secondes.
-- Faire en sorte que le monde bouge autour du personnage afin qu'il puisse se balader librement dans toutes les directions sans jamais toucher un bord.
+- Faire en sorte que le monde bouge autour du personnage afin qu'il puisse se balader librement dans toutes les directions sans jamais toucher un bord. Indice: déplacez tous les acteurs du jeu dans la direction inverse au déplacement du joueur.

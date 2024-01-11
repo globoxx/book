@@ -368,7 +368,8 @@ for i in range(3):
 ````{exercise}
 
 Réalisez une forme inédite de votre choix à l'aide d'une boucle `for ... in [...]`.
-Le dessin que vous réalisez dans cet exercice pourra être ré-utilisé dans le projet.
+Le dessin que vous réalisez dans cet exercice pourra être ré-utilisé dans le projet.  
+Si vous êtes en panne d'inspiration, vous pouvez aller trouver des exemples de dessins dans le chapitre `projet`.
 
 ```{codeplay}
 :file: ex5.py
