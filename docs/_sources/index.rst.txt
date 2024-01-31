@@ -51,6 +51,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    web/css3
    web/css4
    web/projet
+   web/projets_eleves
 
 .. toctree::
    :name: Autres activités
