@@ -4,6 +4,11 @@
 
 ## 2023 - 2024
 
+### 2M01
+
+* <a href="sites/2023-2024/2M01/Sonia_Anais/index.html" target="_blank">SOANIS - Sonia et Anaïs</a>
+* <a href="sites/2023-2024/2M01/Bruno_Quentin/index.html" target="_blank">Bruno Martin - Bruno et Quentin</a>
+
 ### 2M02
 
 * <a href="sites/2023-2024/2M02/Qenti_Precieuse/index.html" target="_blank">LETSEA - Q'enti et Précieuse</a>
