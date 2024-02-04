@@ -8,6 +8,7 @@
 
 * <a href="sites/2023-2024/2M01/Sonia_Anais/index.html" target="_blank">SOANIS - Sonia et Anaïs</a>
 * <a href="sites/2023-2024/2M01/Bruno_Quentin/index.html" target="_blank">Bruno Martin - Bruno et Quentin</a>
+* <a href="sites/2023-2024/2M01/Loris_Dylan/index.html" target="_blank">Guide Minecraft - Loris et Dylan</a>
 
 ### 2M02
 
