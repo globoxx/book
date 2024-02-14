@@ -1304,7 +1304,7 @@ Totalement dans vos cordes:
 - Faire en sorte que plus le score augmente, plus les ennemis se déplacent rapidement.
 - Détruire les missiles lorsqu'ils sortent de l'écran et limiter le joueur à 3 missiles à la fois.
 - Créer un game over sous les conditions de votre choix (par exemple au contact d'un ennemi ou après un certain temps). Cela affiche par exemple un écran noir avec écrit "Game Over" en grand.
-- Une autre idée à proposer à me proposer !
+- Une autre idée à me proposer !
 
 Un peu plus complexe:
 
@@ -1316,4 +1316,4 @@ Challenging:
 
 - Ajouter un nouveau type d'ennemi qui se comporte différemment.
 - Ajouter des armes au personnage. Par exemple une attaque au corps à corps ou la possibilité de larguer des bombes qui explosent après quelques secondes.
-- Faire en sorte que le monde bouge autour du personnage afin qu'il puisse se balader librement dans toutes les directions sans jamais toucher un bord. Indice: déplacez tous les acteurs du jeu dans la direction inverse au déplacement du joueur.
+- Faire en sorte que le monde bouge autour du personnage afin qu'il puisse se balader librement dans toutes les directions sans jamais toucher un bord. Indice: le joueur ne se déplace plus, mais déplacez tous les acteurs du jeu dans la direction inverse au déplacement du joueur.
