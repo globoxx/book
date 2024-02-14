@@ -325,9 +325,65 @@ Jouez avec ces 2 nouveaux types de blocs en remplaçant vos blocs d'origine.
 
 ## 9. Remplir le niveau avec différents types de blocs
 
-## 10. Ajouter des objets à ramasser
+Voyons à présent une méthode permettant de disposer comme on le souhaite ces différents types de bloc dans notre niveau. Le plus simple est de modifier notre constante `WORLD_MAP`. Nous allons simplement ajouter des `2` pour signifier des blocs solides et des `3` pour signifier des blocs que l'on peut escalader.
 
-## 11. Ajouter un ennemi qui se balade
+```python
+WORLD_MAP = [
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,3,0,0,0,1,1,1,0,0,2,2,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [1,1,1,1,0,0,1,1,1,1,1,1,1,1,1],
+]
+```
+
+Comment prendre en compte ces changements ? Lorsque nous parcourons ce tableau pour créer nos objets `Platform`, nous ajoutons 2 tests de condition pour savoir si l'élément parcouru est `1`, `2` ou `3` et créons le bon bloc en conséquence.
+
+```python
+platforms = []
+for row in range(ROWS):
+    for col in range(COLS):
+        pos = (col*TILE_SIZE, row*TILE_SIZE)
+        if WORLD_MAP[row][col] == 1: # Bloc classique traversable
+            platform = Platform('grass_tile', pos, width=TILE_SIZE)
+            platforms.append(platform)
+        elif WORLD_MAP[row][col] == 2: # Bloc solide mais que l'on ne peut pas escalader
+            platform = Platform('grass_tile', pos, solid=True, width=TILE_SIZE)
+            platforms.append(platform)
+        elif WORLD_MAP[row][col] == 3: # Bloc solide que l'on peut escalader
+            platform = Platform('grass_tile', pos, solid=True, sticky=True, width=TILE_SIZE)
+            platforms.append(platform)
+```
+
+Lancez le jeu pour tester que les bons types de blocs se trouvent bien au bon endroit.
+
+## 10. Ajouter un ennemi qui se balade
+
+Notre personnage se sent un peu seul dans son niveau. Pourquoi ne pas ajouter un slime qui se balade de gauche à droite sur les blocs ?
+
+```{image} ../media/platformer_slime.gif
+```
+
+Commençons par créer une classe `Slime` pour notre ami. Il aura également besoin d'une vitesse de déplacement (`speed`) ainsi qu'une vitesse verticale `vy` si l'on veut qu'il soit soumis à la gravité. On en profite pour également lui donner des images pour son animation (`images`).
+
+```python
+class Slime(Actor):
+    def __init__(self, image, pos, **kwargs):
+        super().__init__(image, pos, **kwargs)
+        self.images = ['slime_green1', 'slime_green2']
+        self.vy = 0
+        self.speed = 2
+
+    def update(self):
+        pass # Ne fait rien pour l'instant
+```
+
+## 11. Ajouter des objets à ramasser
 
 ## 12. Changer de niveau
 
