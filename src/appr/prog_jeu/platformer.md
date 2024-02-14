@@ -298,7 +298,38 @@ Vous devriez pouvoir à présent librement déplacer votre personnage dans le ni
 
 ## 8. Différents types de blocs
 
+Pour l'instant, nous avons uniquement des blocs qui servent de plateformes mais que l'on peut traverser librement (par exemple pour sauter dessus depuis dessous). Il peut être utile d'ajouter 2 autres types de blocs:
 
+* Des blocs solides que l'on ne peut pas traverser.
+* Des blocs solides que l'on ne peut pas traverser mais auquels le personnage peut s'accrocher, pour escalader par exemple.
+
+Pour cela, l'acteur `Platform` qui représente un bloc prend 2 arguments logiques supplémentaires: `solid` et `sticky`.  
+Un bloc avec `solid = True` ne pourra pas être traversé.  
+Un bloc avec `sticky = True` pourra être escaladé.
+
+L'unique différence entre ces blocs se fait au niveau de la méthode `check_collisions_with(actor)` et vous n'avez pas à vous préoccuper de comment c'est fait (sauf si vous êtes curieux !).
+
+Voici comment définir un bloc solide:
+
+```python
+platform = Platform('grass_tile', pos, solid=True, width=TILE_SIZE)
+```
+
+Et un bloc solide que l'on peut escalader:
+
+```python
+platform = Platform('grass_tile', pos, solid=True, sticky=True, width=TILE_SIZE)
+```
+
+Jouez avec ces 2 nouveaux types de blocs en remplaçant vos blocs d'origine.
+
+## 9. Remplir le niveau avec différents types de blocs
+
+## 10. Ajouter des objets à ramasser
+
+## 11. Ajouter un ennemi qui se balade
+
+## 12. Changer de niveau
 
 ## 14. Idées d'améliorations
 
