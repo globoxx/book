@@ -371,6 +371,8 @@ Notre personnage se sent un peu seul dans son niveau. Pourquoi ne pas ajouter un
 
 Commençons par créer une classe `Slime` pour notre ami. Il aura également besoin d'une vitesse de déplacement (`speed`) ainsi qu'une vitesse verticale `vy` si l'on veut qu'il soit soumis à la gravité. On en profite pour également lui donner des images pour son animation (`images`).
 
+Il nous faut ensuite le créer en appelant le constructeur `Slime` et mettre à jour les fonctions principale `draw` et `update`.
+
 ```python
 class Slime(Actor):
     def __init__(self, image, pos, **kwargs):
@@ -381,9 +383,79 @@ class Slime(Actor):
 
     def update(self):
         pass # Ne fait rien pour l'instant
+
+player = Player('alien_walk1', (100, 100))
+
+slime = Slime('slime_green1', (600, 100)) # Création et placement du slime
+
+# ... Création des plateformes
+
+def draw():
+    screen.fill('sky blue')
+    player.draw()
+    slime.draw()
+    for platform in platforms:
+        platform.draw()
+
+def update():
+    player.update()
+    slime.update() # Ne fait rien pour le moment
 ```
 
+Occupons nous à présent de la méthode `update` de notre ami afin qu'il puisse se déplacer. Nous allons simplement le faire se déplacer vers la droite selon sa vitesse (`speed`). Nous allons également lui appliquer la gravité et contrôler sa collision avec les blocs de la même manière qu'on l'a fait pour notre joueur.
+
+```python
+def update(self):
+    self.vy += GRAVITY # On augmente sa vitesse verticale avec la gravité
+
+    for platform in platforms: # On teste sa collision avec chaque bloc
+        platform.check_collision_with_actor(self)
+
+    self.x += self.speed # On met à jour sa position en x
+    self.y += self.vy # On met à jour sa position en y
+```
+
+Testez votre jeu ! Le slime devrait à présent tomber de sa position initiale puis se déplacer vers la droite à l'infini.  
+Il serait intéressant de faire en sorte que notre slime reste dans une zone choisie et qu'il se retourne lorsqu'il dépasse cette zone.
+
+On peut ajouter ce comportement en passant à son constructeur une distance horizontale maximale à parcourir avant de repartir dans l'autre sens. Nous allons ajouter l'argument `max_distance_x` à son constructeur. Nous devons également déclarer une nouvelle variable `distance_x` qui nous servira à connaître la distance parcourure par notre slime depuis son lieu d'origine.
+
+```python
+class Slime(Actor):
+    def __init__(self, image, pos, max_distance_x, **kwargs): # Ajout de l'argument max_distance_x
+        super().__init__(image, pos, **kwargs)
+        self.images = ['slime_green1', 'slime_green2']
+        self.vy = 0
+        self.speed = 2
+        self.max_distance_x = max_distance_x
+        self.distance_x = 0
+```
+
+Enfin, il ne reste plus qu'à mettre à jour la méthode `update` pour augmenter `distance_x` à chaque déplacement et contrôler si `0 <= distance_x <= max_distance_x` pour savoir si notre ami est toujours dans sa zone. Si ce n'est pas le cas, on inverse sa vitesse `speed` pour qu'il reparte dans l'autre sens et on change l'orientation de son sprite (`flip_x`).
+
+```python
+def update(self):
+    self.vy += GRAVITY
+
+    for platform in platforms:
+        platform.check_collision_with_actor(self)
+
+    self.x += self.speed
+    self.y += self.vy
+    self.distance_x += self.speed # On met à jour sa distance parcourue
+
+    if not (0 <= self.distance_x <= self.max_distance_x): # S'il sort de sa zone
+        self.flip_x = not self.flip_x # On inverse l'orientation de son sprite
+        self.speed = -self.speed # On inverse sa vitesse horizontale
+```
+
+Et voilà ! Votre ami le slime devrait à présent se cantonner à sa zone. Nous ne nous préoccupons pas de sa collision avec le joueur dans ce tutoriel, revoyez le tutoriel précédent pour voir comment ajouter ce comportement.
+
 ## 11. Ajouter des objets à ramasser
+
+Nous n'avons aucun objectif dans le jeu ! Il serait bien d'ajouter des objets à ramasser pour le joueur. Pourquoi pas des pièces ? C'est très classique mais ça fonctionne toujours.
+
+
 
 ## 12. Changer de niveau
 
