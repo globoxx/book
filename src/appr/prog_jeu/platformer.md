@@ -366,7 +366,7 @@ Lancez le jeu pour tester que les bons types de blocs se trouvent bien au bon en
 
 Notre personnage se sent un peu seul dans son niveau. Pourquoi ne pas ajouter un slime qui se balade de gauche à droite sur les blocs ?
 
-```{image} ../media/platformer_slime.gif
+```{image} ../media/platformer_slime.png
 ```
 
 Commençons par créer une classe `Slime` pour notre ami. Il aura également besoin d'une vitesse de déplacement (`speed`) ainsi qu'une vitesse verticale `vy` si l'on veut qu'il soit soumis à la gravité. On en profite pour également lui donner des images pour son animation (`images`).
@@ -455,7 +455,103 @@ Et voilà ! Votre ami le slime devrait à présent se cantonner à sa zone. Nous
 
 Nous n'avons aucun objectif dans le jeu ! Il serait bien d'ajouter des objets à ramasser pour le joueur. Pourquoi pas des pièces ? C'est très classique mais ça fonctionne toujours.
 
+```{image} ../media/platformer_coin.png
+```
 
+Comme d'habitude, commençons par créer une classe pour notre nouvel acteur `Coin`. Les pièces n'auront rien d'autre à faire que de s'afficher et de disparaître au contact du joueur, son implémentation sera donc relativement simple.
+
+```python
+class Coin(Actor):
+    def __init__(self, image, pos, **kwargs):
+        super().__init__(image, pos, **kwargs)
+
+    def update(self):
+        pass # Ne fait rien pour l'instant
+```
+
+Pour choisir l'emplacement de nos pièces, le plus simple est de passer par notre constante `WOLRD_MAP`. Nous pouvons utiliser la valeur `4` pour représenter une pièce.
+
+```python
+WORLD_MAP = [
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+    [0,0,0,4,0,0,0,0,0,0,0,0,0,4,0],
+    [0,0,0,3,0,0,0,1,1,1,0,0,2,2,0],
+    [0,0,0,0,0,0,0,0,0,0,4,4,0,0,0],
+    [1,1,1,1,0,0,1,1,1,1,1,1,1,1,1],
+]
+```
+
+Modifions à présent notre parcours du tableau pour créer les acteurs `Coin` au bon endroit. Nous devons aussi créer une liste `coins` pour nos pièces, comme nous l'avons fait pour nos plateformes. Finalement, n'oublions pas d'adapter les fonctions principales `draw` et `update` pour afficher les pièces de notre liste.
+
+```python
+platforms = []
+coins = [] # Liste vide pour stocker les pièces
+for row in range(ROWS):
+    for col in range(COLS):
+        pos = (col*TILE_SIZE, row*TILE_SIZE)
+        if WORLD_MAP[row][col] == 1:
+            platform = Platform('grass_tile', pos, width=TILE_SIZE)
+            platforms.append(platform)
+        elif WORLD_MAP[row][col] == 2:
+            platform = Platform('grass_tile', pos, solid=True, width=TILE_SIZE)
+            platforms.append(platform)
+        elif WORLD_MAP[row][col] == 3:
+            platform = Platform('grass_tile', pos, solid=True, sticky=True, width=TILE_SIZE)
+            platforms.append(platform)
+        elif WORLD_MAP[row][col] == 4: # Création d'une pièce
+            coin = Coin('coin', pos)
+            coins.append(coin)
+
+def draw():
+    screen.fill('sky blue')
+    player.draw()
+    slime.draw()
+    for platform in platforms:
+        platform.draw()
+    for coin in coins:
+        coin.draw()
+
+def update():
+    player.update()
+    slime.update()
+    for coin in coins:
+        coin.update() # Ne fait rien pour l'instant
+```
+
+Reste à savoir de quelle manière de gérer les collisions avec le joueur. Il y a 2 possibilités:
+
+* Ajouter le test de collision avec une pièce dans le `update` du `Player`.
+* Ajouter le test de collision avec le joueur dans le `update` des `Coin`.
+
+Je vous propose la 2ème solution, qui a pour avantage de ne pas ajouter plus de code à la classe `Player` qui est déjà complexe.  
+Afin de pouvoir tester la collision avec le joueur dans la méthode `update` de `Coin`, il faut lui passer le `player` en argument. Il suffit ensuite de tester s'il y a collision et, le cas échéant, marquer le `coin` pour qu'il soit supprimé.
+
+```python
+class Coin(Actor):
+    def __init__(self, image, pos, **kwargs):
+        super().__init__(image, pos, **kwargs)
+
+    def update(self, player): # Ajout de player en argument
+        if self.collides_with(player): # Test de collision avec le joueur
+            self.to_remove = True # On marque la pièce en question pour la supprimer
+
+# ...
+
+def update():
+    player.update()
+    slime.update()
+    for coin in coins:
+        coin.update(player) # Chaque pièce teste si elle est en collision avec le player
+
+    remove_actors(coins) # On supprime du jeu les pièces marquées pour être supprimées
+```
+
+Testez le jeu et ramassez les pièces pour voir si tout fonctionne. Pour le moment, ramasser des pièces n'apporte rien au joueur, vous serez libre d'ajouter cette fonctionnalité par après.
 
 ## 12. Changer de niveau
 
