@@ -1295,7 +1295,7 @@ def update():
 
 ## 14. Idées d'améliorations
 
-Voici plusieurs idées d'amélioration du jeu. **Il vous est demandé d'en choisir au minimum 2 dans la liste et de les implémenter par vous-même.**
+Voici plusieurs idées d'amélioration du jeu.
 
 Totalement dans vos cordes:
 
