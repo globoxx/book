@@ -1,6 +1,6 @@
 # 1. Création d'un jeu de plateformes
 
-Dans ce tutoriel, nous allons développer un jeu de plateforme où le personnage peut se déplacer sur des blocs pour attraper des objets et combattre des ennemis. Nous allons également devoir un système de gravité pour permettre au joueur de sauter et de tomber des blocs.
+Dans ce tutoriel, nous allons développer un jeu de plateforme où le personnage peut se déplacer sur des blocs pour attraper des objets et combattre des ennemis. Nous allons également devoir mettre en place un système de gravité pour permettre au joueur de sauter et de tomber des blocs.
 
 ```{image} ../media/platformer.gif
 ```
@@ -24,7 +24,7 @@ def draw():
     platform.draw()
 
 def update():
-    pass # Notre acteur platform n'a pas de fonction update à appeler, il doit juste s'afficher
+    pass # Notre acteur platform n'a pas de fonction update à appeler, il doit juste s'afficher, donc on ne fait rien ici
 ```
 
 ```{image} ../media/platformer_bloc.png
