@@ -4,14 +4,14 @@ nouveauparagraphe.className = "texte-fin-de-jeu"
 
 function clicked1() {
   if (x % 2 == 0 && a == 0) {
-    document.getElementById("case 1").innerHTML = ' <img src="photos/Capture d’écran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 1").innerHTML = ' <img src="photos/Capture decran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     a += 1;
     result();
 
   }
   else if (x % 2 == 1 && a == 0) {
-    document.getElementById("case 1").innerHTML = '<img src="photos/Capture d’écran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 1").innerHTML = '<img src="photos/Capture decran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     a += 2;
     result();
@@ -21,7 +21,7 @@ function clicked1() {
 function clicked2() {
   if (x % 2 == 0 && b == 0) {
 
-    document.getElementById("case 2").innerHTML = ' <img src="photos/Capture d’écran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 2").innerHTML = ' <img src="photos/Capture decran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     b = 1;
     result();
@@ -29,7 +29,7 @@ function clicked2() {
   }
   else if (x % 2 == 1 && b == 0) {
 
-    document.getElementById("case 2").innerHTML = '<img src="photos/Capture d’écran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 2").innerHTML = '<img src="photos/Capture decran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     b = 2;
     result();
@@ -38,7 +38,7 @@ function clicked2() {
 }
 function clicked3() {
   if (x % 2 == 0 && c == 0) {
-    document.getElementById("case 3").innerHTML = ' <img src="photos/Capture d’écran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 3").innerHTML = ' <img src="photos/Capture decran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     c = 1;
     result();
@@ -46,7 +46,7 @@ function clicked3() {
   }
   else if (x % 2 == 1 && c == 0) {
 
-    document.getElementById("case 3").innerHTML = '<img src="photos/Capture d’écran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 3").innerHTML = '<img src="photos/Capture decran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     c = 2;
     result();
@@ -55,7 +55,7 @@ function clicked3() {
 }
 function clicked4() {
   if (x % 2 == 0 && d == 0) {
-    document.getElementById("case 4").innerHTML = ' <img src="photos/Capture d’écran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 4").innerHTML = ' <img src="photos/Capture decran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     d = 1;
     result();
@@ -63,7 +63,7 @@ function clicked4() {
   }
   else if (x % 2 == 1 && d == 0) {
 
-    document.getElementById("case 4").innerHTML = '<img src="photos/Capture d’écran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 4").innerHTML = '<img src="photos/Capture decran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     d = 2;
     result();
@@ -72,7 +72,7 @@ function clicked4() {
 }
 function clicked5() {
   if (x % 2 == 0 && e == 0) {
-    document.getElementById("case 5").innerHTML = ' <img src="photos/Capture d’écran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 5").innerHTML = ' <img src="photos/Capture decran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     e = 1;
     result();
@@ -80,7 +80,7 @@ function clicked5() {
   }
   else if (x % 2 == 1 && e == 0) {
 
-    document.getElementById("case 5").innerHTML = '<img src="photos/Capture d’écran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 5").innerHTML = '<img src="photos/Capture decran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     e = 2;
     result();
@@ -90,7 +90,7 @@ function clicked5() {
 }
 function clicked6() {
   if (x % 2 == 0 && f == 0) {
-    document.getElementById("case 6").innerHTML = ' <img src="photos/Capture d’écran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 6").innerHTML = ' <img src="photos/Capture decran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     f = 1;
     result();
@@ -98,7 +98,7 @@ function clicked6() {
   }
   else if (x % 2 == 1 && f == 0) {
 
-    document.getElementById("case 6").innerHTML = '<img src="photos/Capture d’écran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 6").innerHTML = '<img src="photos/Capture decran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     f = 2;
     result();
@@ -108,7 +108,7 @@ function clicked6() {
 function clicked7() {
   if (x % 2 == 0 && g == 0) {
 
-    document.getElementById("case 7").innerHTML = ' <img src="photos/Capture d’écran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 7").innerHTML = ' <img src="photos/Capture decran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     g = 1;
     result();
@@ -116,7 +116,7 @@ function clicked7() {
   }
   else if (x % 2 == 1 && g == 0) {
 
-    document.getElementById("case 7").innerHTML = '<img src="photos/Capture d’écran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 7").innerHTML = '<img src="photos/Capture decran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     g = 2;
     result();
@@ -127,7 +127,7 @@ function clicked7() {
 function clicked8() {
   if (x % 2 == 0 && h == 0) {
 
-    document.getElementById("case 8").innerHTML = ' <img src="photos/Capture d’écran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 8").innerHTML = ' <img src="photos/Capture decran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     h = 1;
     result();
@@ -135,7 +135,7 @@ function clicked8() {
   }
   else if (x % 2 == 1 && h == 0) {
 
-    document.getElementById("case 8").innerHTML = '<img src="photos/Capture d’écran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 8").innerHTML = '<img src="photos/Capture decran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     h = 2;
     result();
@@ -145,7 +145,7 @@ function clicked8() {
 function clicked9() {
   if (x % 2 == 0 && i == 0) {
 
-    document.getElementById("case 9").innerHTML = ' <img src="photos/Capture d’écran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 9").innerHTML = ' <img src="photos/Capture decran 2023-09-21 à 11.40.38.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     i = 1;
     result();
@@ -153,7 +153,7 @@ function clicked9() {
   }
   else if (x % 2 == 1 && i == 0) {
 
-    document.getElementById("case 9").innerHTML = '<img src="photos/Capture d’écran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
+    document.getElementById("case 9").innerHTML = '<img src="photos/Capture decran 2023-09-21 à 11.40.16.png"style="border: 1px solid" alt="case rond"width="350" height="350">';
     x += 1;
     i = 2;
     result();
