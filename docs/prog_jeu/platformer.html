@@ -259,6 +259,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../divers/aventure.html">Aventure textuelle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
@@ -432,6 +433,10 @@ Il nous suffit de l’appeler dans la méthode <code class="docutils literal not
 <p>Un jeu de plateforme n’en est pas un si notre personnage ne peut pas sauter ! Nous allons le faire avec la touche espace (<code class="docutils literal notranslate"><span class="pre">space</span></code>) du clavier.<br/>
 Quand on y pense, faire sauter notre personnage revient à modifier sa vitesse verticale. En la rendant négative, le personnage se déplace vers le haut jusqu’à ce que la gravité vienne compenser l’action du saut et le fasse tomber à nouveau.</p>
 <p>Il suffit donc d’ajouter 2 lignes de code à la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> où l’on vérifie si la touche <code class="docutils literal notranslate"><span class="pre">space</span></code> est enfoncée. Si c’est le cas, on modifie la vitesse verticale <code class="docutils literal notranslate"><span class="pre">vy</span></code> de notre personnage (ex: <code class="docutils literal notranslate"><span class="pre">vy</span> <span class="pre">=</span> <span class="pre">-10</span></code>).</p>
+<div class="warning admonition">
+<p class="admonition-title">Pas de saut dans le vide !</p>
+<p>Attention, il faut également que le personnage se trouve sur une plateforme pour pouvoir sauter ! Cela se vérifie si la vitesse verticale de notre personange est nulle au moment du saut ! (<code class="docutils literal notranslate"><span class="pre">vy</span> <span class="pre">==</span> <span class="pre">0</span></code>)</p>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>

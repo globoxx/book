@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Projet" href="projet.html" /><link rel="prev" title="7. Structurer sa page en blocs" href="css3.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Zone de code libre" href="../outils/code_libre.html" /><link rel="prev" title="Portes logiques" href="portes_logiques.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>8. Aligner ses blocs avec Flexbox - Travaux pratiques</title>
+        <title>Projets libres d’élèves - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -242,24 +242,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves.html">Projets d’élèves</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Web</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="html1.html">1. Introduction à l’HTML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
-<li class="toctree-l1"><a class="reference internal" href="html3.html">3. Faire des liens</a></li>
-<li class="toctree-l1"><a class="reference internal" href="html4.html">4. Plus sur les images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css1.html">5. Introduction au CSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css2.html">6. Plus de propriétés</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css3.html">7. Structurer sa page en blocs</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">8. Aligner ses blocs avec Flexbox</a></li>
-<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web/html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css1.html">5. Introduction au CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css2.html">6. Plus de propriétés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css3.html">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projets_eleves.html">Projets d’élèves</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../divers/aventure.html">Aventure textuelle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="aventure.html">Aventure textuelle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Projets libres d’élèves</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Outils</span></p>
 <ul>
@@ -291,95 +291,22 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="aligner-ses-blocs-avec-flexbox">
-<span id="web-css4"></span><h1>8. Aligner ses blocs avec Flexbox<a class="headerlink" href="#aligner-ses-blocs-avec-flexbox" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Nous avons vu comment créer des blocs, modifier leur taille, leurs marges et comment les centrer. Mais comment gérer l’alignement de ses blocs ? Par exemple horizontalement ? C’est ce que nous allons voir ici !</p>
-<p>Pour pouvoir gérer l’alignement de nos blocs, on va devoir les ranger dans un <strong>conteneur</strong> (qui est en fait un autre bloc qui englobe vos blocs). Prenons un exemple simple:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"conteneur"</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Paragraphe 1<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Paragraphe 2<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Paragraphe 3<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Par défaut, les 3 paragraphes vont s’afficher les uns sous les autres. Il s’agit maintenant de spécifier au <code class="docutils literal notranslate"><span class="pre">conteneur</span></code> qu’il doit aligner ses blocs horizontalement. Cela se fait comme ceci:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">conteneur</span> <span class="p">{</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Testez ce code dans ce <a href="https://codepen.io/Vincent-Guertler/pen/jOQKwYa" target="_blank">CodePen</a>.</p>
-<p>Ce système s’appelle <strong>Flexbox</strong> et permet de définir simplement la manière dont un conteneur organise ses blocs.</p>
-<section id="choisir-la-direction-avec-flex-direction">
-<h2>Choisir la direction avec <code class="docutils literal notranslate"><span class="pre">flex-direction</span></code><a class="headerlink" href="#choisir-la-direction-avec-flex-direction" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La propriété <code class="docutils literal notranslate"><span class="pre">flex-direction</span></code> permet de définir la direction des blocs avec les valeurs principales suivantes:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">row</span></code>: alignement horizontal (par défaut dès qu’on a appliqué <code class="docutils literal notranslate"><span class="pre">display:</span> <span class="pre">flex</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">column</span></code>: alignement vertical</p></li>
-</ul>
+          <section class="tex2jax_ignore mathjax_ignore" id="projets-libres-deleves">
+<span id="divers-projets-eleves"></span><h1>Projets libres d’élèves<a class="headerlink" href="#projets-libres-deleves" title="Lien permanent vers ce titre">¶</a></h1>
+<section id="id1">
+<h2>2023 - 2024<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="nathan-et-arthur-1m01">
+<h3>Nathan et Arthur (1M01)<a class="headerlink" href="#nathan-et-arthur-1m01" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference download internal" download="" href="../_downloads/ec4339c222896499b5c122cc88986ece/Hangman.zip"><code class="xref download docutils literal notranslate"><span class="pre">Jeu</span> <span class="pre">du</span> <span class="pre">pendu</span> <span class="pre">avec</span> <span class="pre">interface</span> <span class="pre">graphique</span></code></a></p>
 </section>
-<section id="aligner-ses-blocs-sur-laxe-principal-avec-justify-content">
-<h2>Aligner ses blocs sur l’axe principal avec <code class="docutils literal notranslate"><span class="pre">justify-content</span></code><a class="headerlink" href="#aligner-ses-blocs-sur-laxe-principal-avec-justify-content" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les blocs sont organisés par défaut de manière horizontale. Mais ils peuvent être organisés de manière verticale. Selon le choix que vous faîtes, ça va définir ce qu’on appelle l’axe principal. Il y a aussi un axe secondaire:</p>
-<ul class="simple">
-<li><p>si vos éléments sont organisés horizontalement, l’axe secondaire est l’axe vertical</p></li>
-<li><p>si vos éléments sont organisés verticalement, l’axe secondaire est l’axe horizontal</p></li>
-</ul>
-<p>Pour changer leur alignement sur l’axe principal, on va utiliser <code class="docutils literal notranslate"><span class="pre">justify-content</span></code>, qui peut prendre ces valeurs:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flex-start</span></code>: alignés au début de l’axe (par défaut)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">flex-end</span></code>: alignés à la fin de l’axe</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">center</span></code>: alignés au centre de l’axe</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">space-between</span></code>: les éléments sont étirés sur tout l’axe (il y a de l’espace entre eux)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">space-around</span></code>: idem, les éléments sont étirés sur tout l’axe, mais ils laissent aussi de l’espace sur les extrémités</p></li>
-</ul>
-<div class="note admonition">
-<p class="admonition-title">Exercice 1</p>
-<p>Testez les différentes valeurs de <code class="docutils literal notranslate"><span class="pre">justify-content</span></code> dans le <a href="https://codepen.io/Vincent-Guertler/pen/jOQKwYa" target="_blank">CodePen précédent</a>.</p>
-<p>Tentez également de changer la direction avec <code class="docutils literal notranslate"><span class="pre">flex-direction</span></code>.</p>
-</div>
+<section id="jay-dan-1m01">
+<h3>Jay-Dan (1M01)<a class="headerlink" href="#jay-dan-1m01" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference download internal" download="" href="../_downloads/685bfbc556854f126f9f65b9e1c1ad32/Flashcards.py"><code class="xref download docutils literal notranslate"><span class="pre">Simulateur</span> <span class="pre">de</span> <span class="pre">flashcards</span></code></a></p>
 </section>
-<section id="aligner-ses-blocs-sur-laxe-secondaire-avec-align-items">
-<h2>Aligner ses blocs sur l’axe secondaire avec <code class="docutils literal notranslate"><span class="pre">align-items</span></code><a class="headerlink" href="#aligner-ses-blocs-sur-laxe-secondaire-avec-align-items" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La propriété <code class="docutils literal notranslate"><span class="pre">align-items</span></code> permet de changer leur alignement sur l’axe secondaire (par défaut vertical), grâce aux valeurs:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">stretch</span></code>: les éléments sont étirés sur tout l’axe (valeur par défaut)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">flex-start</span></code>: alignés au début de l’axe</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">flex-end</span></code>: alignés à la fin de l’axe</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">center</span></code>: alignés au centre de l’axe</p></li>
-</ul>
-<div class="note admonition">
-<p class="admonition-title">Exercice 2</p>
-<p>Testez les différentes valeurs de <code class="docutils literal notranslate"><span class="pre">align-items</span></code> dans le <a href="https://codepen.io/Vincent-Guertler/pen/jOQKwYa" target="_blank">CodePen précédent</a>.</p>
-</div>
+<section id="sebastien-1m01">
+<h3>Sébastien (1M01)<a class="headerlink" href="#sebastien-1m01" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference download internal" download="" href="../_downloads/7fc16aed9dcfb5cfa8f912a8ed4b4d18/Generateur_mdp.py"><code class="xref download docutils literal notranslate"><span class="pre">Générateur</span> <span class="pre">de</span> <span class="pre">mots</span> <span class="pre">de</span> <span class="pre">passe</span> <span class="pre">avec</span> <span class="pre">interface</span> <span class="pre">graphique</span></code></a></p>
 </section>
-<section id="exemple-creer-un-menu-horizontal">
-<h2>Exemple: créer un menu horizontal<a class="headerlink" href="#exemple-creer-un-menu-horizontal" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Flexbox peut être utilisé pour créer le menu suivant:</p>
-<img alt="../_images/menu_css.gif" src="../_images/menu_css.gif"/>
-<p>Rendez-vous sur ce <a href="https://codepen.io/Vincent-Guertler/pen/jOdbXBy" target="_blank">CodePen</a> pour comprendre comment arriver à ce résultat.</p>
-</section>
-<section id="un-outil-puissant">
-<h2>Un outil puissant<a class="headerlink" href="#un-outil-puissant" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Dans ce court chapitre, je ne vous ai montré que les bases du système <strong>Flexbox</strong> en vous cachant intentionnellement des propriétés plus complexes.</p>
-<p>Voici un poster récapitulatif:</p>
-<img alt="../_images/css-flexbox-poster.png" src="../_images/css-flexbox-poster.png"/>
-<div class="note admonition">
-<p class="admonition-title">Visualiser tout ça</p>
-<p>Voici des ressources très utiles:</p>
-<ul class="simple">
-<li><p><a href="https://cssflex-generator.netlify.app/" target="_blank">CSS flex-generator</a> est un site permettant de visualiser facilement l’utilisation de FlexBox.</p></li>
-<li><p><a href="https://flexboxfroggy.com/#fr" target="_blank">Flexbox Froggy</a> est un petit jeu pour vous entraîner à faire des alignements parfaits !</p></li>
-</ul>
-</div>
-</section>
-<section id="exercice-recapitulatif">
-<h2>Exercice récapitulatif<a class="headerlink" href="#exercice-recapitulatif" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="note admonition">
-<p class="admonition-title">Exercice récapitulatif</p>
-<p>Pas d’exercice à rendre pour ce chapitre !</p>
-<p>Concentrez-vous sur le développement de votre site web.</p>
-</div>
 </section>
 </section>
 
@@ -388,30 +315,30 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="projet.html">
+          <a class="next-page" href="../outils/code_libre.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Projet</div>
+                <div class="title">Zone de code libre</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="css3.html">
+          <a class="prev-page" href="portes_logiques.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">7. Structurer sa page en blocs</div>
+                <div class="title">Portes logiques</div>
                 
               </div>
             </a>
         </div>
 
         <div class="related-information">
-            <a class="muted-link" href="../_sources/web/css4.md.txt"
+            <a class="muted-link" href="../_sources/divers/projets_eleves.md.txt"
                rel="nofollow">
               Montrer le code source
             </a>
@@ -431,13 +358,13 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">8. Aligner ses blocs avec Flexbox</a><ul>
-<li><a class="reference internal" href="#choisir-la-direction-avec-flex-direction">Choisir la direction avec <code class="docutils literal notranslate"><span class="pre">flex-direction</span></code></a></li>
-<li><a class="reference internal" href="#aligner-ses-blocs-sur-laxe-principal-avec-justify-content">Aligner ses blocs sur l’axe principal avec <code class="docutils literal notranslate"><span class="pre">justify-content</span></code></a></li>
-<li><a class="reference internal" href="#aligner-ses-blocs-sur-laxe-secondaire-avec-align-items">Aligner ses blocs sur l’axe secondaire avec <code class="docutils literal notranslate"><span class="pre">align-items</span></code></a></li>
-<li><a class="reference internal" href="#exemple-creer-un-menu-horizontal">Exemple: créer un menu horizontal</a></li>
-<li><a class="reference internal" href="#un-outil-puissant">Un outil puissant</a></li>
-<li><a class="reference internal" href="#exercice-recapitulatif">Exercice récapitulatif</a></li>
+<li><a class="reference internal" href="#">Projets libres d’élèves</a><ul>
+<li><a class="reference internal" href="#id1">2023 - 2024</a><ul>
+<li><a class="reference internal" href="#nathan-et-arthur-1m01">Nathan et Arthur (1M01)</a></li>
+<li><a class="reference internal" href="#jay-dan-1m01">Jay-Dan (1M01)</a></li>
+<li><a class="reference internal" href="#sebastien-1m01">Sébastien (1M01)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

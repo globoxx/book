@@ -164,7 +164,7 @@ Quand on y pense, faire sauter notre personnage revient à modifier sa vitesse v
 
 Il suffit donc d'ajouter 2 lignes de code à la méthode `update` où l'on vérifie si la touche `space` est enfoncée. Si c'est le cas, on modifie la vitesse verticale `vy` de notre personnage (ex: `vy = -10`).
 
-```{admonition}
+```{admonition} Pas de saut dans le vide !
 :class: warning
 Attention, il faut également que le personnage se trouve sur une plateforme pour pouvoir sauter ! Cela se vérifie si la vitesse verticale de notre personange est nulle au moment du saut ! (`vy == 0`)
 ```
