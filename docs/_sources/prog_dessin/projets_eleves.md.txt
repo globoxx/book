@@ -129,7 +129,7 @@
 
 #### Nejla et Lena
 
-```{image} ../media/dessins_eleves/Neijla_Lena.png
+```{image} ../media/dessins_eleves/Nejla_Lena.png
 ```
 
 #### Noam et Leila
