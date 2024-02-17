@@ -34,7 +34,7 @@ Bienvenue sur la plateforme de TP d'informatique !
     prog_dessin/parcourir
     prog_dessin/randomiser
     prog_dessin/projet
-    prog_dessin/projet_eleves
+    prog_dessin/projets_eleves
 
 
 .. toctree::
