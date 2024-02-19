@@ -1,6 +1,6 @@
 (prog_dessin.projet)=
 
-# Projet
+# Projet de dessin
 
 Il est temps de mettre en pratique vos connaissances pour réaliser un dessin libre (avec quelques contraintes).
 Le projet peut être réalisé par groupe de 2 ou seul.

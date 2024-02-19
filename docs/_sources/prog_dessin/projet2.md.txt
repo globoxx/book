@@ -1,6 +1,6 @@
-(divers.aventure2)=
+(prog_dessin.projet2)=
 
-# Projet
+# Projet d'histoire interactive
 
 Il est temps de mettre en pratique vos compétences de programmeur pour développer un petit jeu textuel en histoire interactive.
 Le projet peut être réalisé par groupe de 2 ou seul.
