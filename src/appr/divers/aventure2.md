@@ -5,13 +5,13 @@
 Il est temps de mettre en pratique vos compétences de programmeur pour développer un petit jeu textuel en histoire interactive.
 Le projet peut être réalisé par groupe de 2 ou seul.
 
-## Consignes (temporaire, peut être mis à jour)
+## Consignes
 
 ```{admonition} Consignes
 :class: note
 **Le cahier des charges est le suivant:**
 
-- créer une histoire interactive où l'utilisateur peut interragir avec le programme pour prendre des choix
+- créer une histoire interactive où l'utilisateur peut interagir avec le programme pour prendre des choix
 - le programme correspond au logigramme du jeu
 - au moins 4 questions à choix multiples posées à l'utilisateur au cours de l'histoire (3 si projet seul)
 - au moins 3 tests automatiques se faisant sur l'inventaire ou sur une variable d'état (ex: vie ou argent) (2 si projet seul)
