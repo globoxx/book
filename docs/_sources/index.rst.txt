@@ -60,7 +60,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    :maxdepth: 3
    :hidden:
 
-   divers/aventure
+   divers/aventure2
    divers/epidemie
    divers/portes_logiques
    divers/projets_eleves
