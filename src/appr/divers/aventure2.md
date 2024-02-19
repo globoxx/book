@@ -7,7 +7,9 @@ Le projet peut être réalisé par groupe de 2 ou seul.
 
 ## Consignes (temporaire, peut être mis à jour)
 
-Le cahier des charges est le suivant:
+```{admonition} Consignes
+:class: note
+**Le cahier des charges est le suivant:**
 
 - créer une histoire interactive où l'utilisateur peut interragir avec le programme pour prendre des choix
 - le programme correspond au logigramme du jeu
@@ -23,6 +25,7 @@ Le cahier des charges est le suivant:
 - le code est bien structuré et facile à lire (ex: les indentations sont correctes, les if elif else sont utilisés correctement, etc)
 - (bonus) histoire particulièrement complexe et/ou créative
 - (bonus) ajout d'éléments/notions non-vus en classe
+```
 
 Vous aurez à rendre le logigramme représentant votre jeu (`.png`) et le code (`.py`) du programme.
 
