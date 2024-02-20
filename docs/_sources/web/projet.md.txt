@@ -85,3 +85,27 @@ Il s'agit à la base d'un site développé par <a href="https://openclassrooms.c
 
 ```{image} ../media/robbie_lens.png
 ```
+
+## Héberger votre site
+
+Héberger son site permet de le mettre à disposition pour le reste du monde sur le Web. Héberger son site requiert 2 choses:
+
+* Un nom de domaine pour votre site (ex: mon-super-site.ch). Ces noms de domaines doivent être loués à l'année (environ 5 CHF **par an** pour un nom de domaine `.ch`). Vous pouvez contrôler si un nom de domaine est déjà utilisé et connaître son prix ici: https://www.infomaniak.com/fr/domaines/tarifs/ch.
+* Un serveur sur lequel vous allez déposer vos fichiers HTML et CSS et qui sera relié au reste du Web. Ces serveurs se louent également, généralement par mois. Les prix peuvent grandement varier en fonction de la qualité du service (ex: taille de stockage, sécurité, débit maximal, etc). Pour un site statique comme le votre, il faut généralement compter moins de 10 CHF **par mois**.
+
+Sachez que beaucoup de plateformes permettent des offres combinées comprenant un nom de domaine et un serveur à prix réduit. L'autre avantage de ces hébergeurs est qu'ils garantissent la plupart du temps un bon référencement par les moteurs de recherche comme Google. On appelle cela le SEO.
+
+Vous pouvez trouver une liste récente (2024) qui compare différentes plateformes **suisses** ici: https://hellosafe.ch/hebergeurs.
+
+La procédure à suivre une fois les paiements effectués dépendent complétement de la plateforme choisie. Dans le cas où vous choisiriez cette option, n'hésitez pas à me contacter pour vous aider à mettre tout cela en place.
+
+### Astuce pour héberger son site gratuitement
+
+Il est possible d'héberger gratuitement son site sur la plateforme Github (https://github.com/). Il s'agit d'une plateforme de partage de code pour les développeurs mais elle permet également d'héberger des pages statiques, ce qui est normalement votre cas.
+
+La 1ère étape est de se créer un compte sur la plateforme Github.  
+Quand c'est fait, il suffit de suivre ce tutoriel pour créer un repository sur lequel vous déposerez vos fichiers: https://docs.github.com/fr/pages/getting-started-with-github-pages/creating-a-github-pages-site.
+
+Sachez toutefois qu'avec cette méthode, l'url de votre site sera par défaut : `https://<pseudo>.github.io`. Dans le cas où vous voulez un nom de domaine customisé, il reste nécessaire d'acheter un nom de domaine. De plus le stockage offert par cette méthode est de 1 GB au maximum.
+
+Dans le cas où vous opteriez pour cette méthode, je suis à disposition pour passer un peu de temps à vous aider à la mettre en place car j'ai déjà hébergé plusieurs sites de cette manière.
