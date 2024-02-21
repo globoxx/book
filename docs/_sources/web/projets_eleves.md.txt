@@ -12,6 +12,7 @@
 * <a href="sites/2023-2024/2M01/Anthony_Lucas/index.html" target="_blank">Tout sur la F1 - Anthony et Lucas</a>
 * <a href="sites/2023-2024/2M01/Raphael/sabre.html" target="_blank">Foodie - Raphael</a>
 * <a href="sites/2023-2024/2M01/Lana_Sonia/index.html" target="_blank">Les friperies de Lausanne - Lana et Sonia</a>
+* <a href="sites/2023-2024/2M01/Jeremy_David/index.html" target="_blank">Mythologie grecque - Jeremy et David</a>
 
 ### 2M02
 
