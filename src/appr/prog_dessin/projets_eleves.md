@@ -90,6 +90,31 @@
 ```{image} ../media/dessins_eleves/Nathan_Eliott.png
 ```
 
+#### Corto
+
+```{image} ../media/dessins_eleves/Corto.png
+```
+
+#### Dimitri et Nina
+
+```{image} ../media/dessins_eleves/Dimitri_Nina.png
+```
+
+#### Lucile et Cali
+
+```{image} ../media/dessins_eleves/Lucile_Cali.png
+```
+
+#### Manon et Julia
+
+```{image} ../media/dessins_eleves/Manon_Julia.png
+```
+
+#### Pauline et Marie-Caroline
+
+```{image} ../media/dessins_eleves/Pauline_Marie.gif
+```
+
 ### 1M07
 
 #### Alice et Cigdem
