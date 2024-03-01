@@ -426,7 +426,7 @@ Il nous suffit de l’appeler dans la méthode <code class="docutils literal not
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vy</span>
 </pre></div>
 </div>
-<p>Je vous invite à aller jeter un oeil à l’implémentation de cette méthode dans le fichier <code class="docutils literal notranslate"><span class="pre">pgzhelper.py</span></code>.</p>
+<p>Si vous êtes curieux de comprendre comment la collision est gérée, je vous invite à aller jeter un oeil à l’implémentation de cette méthode dans le fichier <code class="docutils literal notranslate"><span class="pre">pgzhelper.py</span></code>.</p>
 </section>
 <section id="permettre-au-personnage-de-sauter">
 <h2>6. Permettre au personnage de sauter<a class="headerlink" href="#permettre-au-personnage-de-sauter" title="Lien permanent vers ce titre">¶</a></h2>
@@ -793,12 +793,12 @@ Il serait intéressant de faire en sorte que notre slime reste dans une zone cho
 <li><p>Ajouter le test de collision avec le joueur dans le <code class="docutils literal notranslate"><span class="pre">update</span></code> des <code class="docutils literal notranslate"><span class="pre">Coin</span></code>.</p></li>
 </ul>
 <p>Je vous propose la 2ème solution, qui a pour avantage de ne pas ajouter plus de code à la classe <code class="docutils literal notranslate"><span class="pre">Player</span></code> qui est déjà complexe.<br/>
-Afin de pouvoir tester la collision avec le joueur dans la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de <code class="docutils literal notranslate"><span class="pre">Coin</span></code>, il faut lui passer le <code class="docutils literal notranslate"><span class="pre">player</span></code> en argument. Il suffit ensuite de tester s’il y a collision et, le cas échéant, marquer le <code class="docutils literal notranslate"><span class="pre">coin</span></code> pour qu’il soit supprimé.</p>
+Il suffit alos de tester s’il y a collision avec le <code class="docutils literal notranslate"><span class="pre">player</span></code> et, le cas échéant, marquer le <code class="docutils literal notranslate"><span class="pre">coin</span></code> pour qu’il soit supprimé.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Coin</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span> <span class="c1"># Ajout de player en argument</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># Test de collision avec le joueur</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># On marque la pièce en question pour la supprimer</span>
 
@@ -809,7 +809,7 @@ Afin de pouvoir tester la collision avec le joueur dans la méthode <code class=
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
         <span class="n">slime</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">coins</span><span class="p">:</span>
-        <span class="n">coin</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">player</span><span class="p">)</span> <span class="c1"># Chaque pièce teste si elle est en collision avec le player</span>
+        <span class="n">coin</span><span class="o">.</span><span class="n">update</span><span class="p">()</span> <span class="c1"># Chaque pièce teste si elle est en collision avec le player</span>
 
     <span class="n">remove_actors</span><span class="p">(</span><span class="n">coins</span><span class="p">)</span> <span class="c1"># On supprime du jeu les pièces marquées pour être supprimées</span>
 </pre></div>
@@ -887,19 +887,19 @@ Afin de pouvoir tester la collision avec le joueur dans la méthode <code class=
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
         <span class="n">slime</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">coins</span><span class="p">:</span>
-        <span class="n">coin</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+        <span class="n">coin</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">portal</span> <span class="ow">in</span> <span class="n">portals</span><span class="p">:</span>
         <span class="n">portal</span><span class="o">.</span><span class="n">update</span><span class="p">()</span> <span class="c1"># Ne fait rien pour l'instant</span>
 
     <span class="n">remove_actors</span><span class="p">(</span><span class="n">coins</span><span class="p">)</span> <span class="c1"># On supprime du jeu les pièces marquées pour être supprimées</span>
 </pre></div>
 </div>
-<p>Vous devriez voir le portail apparaître à l’endroit indiqué. Voyons à présent comment modifier le niveau lorsque le joueur est en contact avec le portail et qu’il appuie sur la touche <code class="docutils literal notranslate"><span class="pre">e</span></code>. On va commencer par modifier la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de <code class="docutils literal notranslate"><span class="pre">Portal</span></code> pour qu’il puisse détecter cet évenement. A nouveau, nous devons passer l’argument <code class="docutils literal notranslate"><span class="pre">player</span></code> dans la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> pour pouvoir interagir avec le joueur. Pour le moment, affichons simplement l’activation du niveau 2 sous forme de texte dans la console avec <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
+<p>Vous devriez voir le portail apparaître à l’endroit indiqué. Voyons à présent comment modifier le niveau lorsque le joueur est en contact avec le portail et qu’il appuie sur la touche <code class="docutils literal notranslate"><span class="pre">e</span></code>. On va commencer par modifier la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de <code class="docutils literal notranslate"><span class="pre">Portal</span></code> pour qu’il puisse détecter cet évenement. Pour le moment, affichons simplement l’activation du niveau 2 sous forme de texte dans la console avec <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span> <span class="c1"># Création de la classe Portal</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="ow">and</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">'Niveau 2 !'</span><span class="p">)</span>
 </pre></div>
@@ -969,15 +969,15 @@ Afin de pouvoir tester la collision avec le joueur dans la méthode <code class=
 </pre></div>
 </div>
 <p>Si tout a fonctionné, vous ne devriez voir aucun changement par rapport à tout à l’heure, on a simplement déplacé du code, mais il fait la même chose.<br/>
-Il ne reste plus à présent d’appeler la fonction <code class="docutils literal notranslate"><span class="pre">load_level</span></code> lorsque l’on passe le portail mais en lui passant <code class="docutils literal notranslate"><span class="pre">WORLD_MAP_2</span></code> ! Cependant rappelez-vous, comme nous souhaitons ici modifier les listes des objets (<code class="docutils literal notranslate"><span class="pre">platforms</span></code>, <code class="docutils literal notranslate"><span class="pre">coins</span></code>, etc) depuis une fonction, nous devons déclarer ces variables <code class="docutils literal notranslate"><span class="pre">global</span></code> avant de les toucher.</p>
+Il ne reste plus à présent d’appeler la fonction <code class="docutils literal notranslate"><span class="pre">load_level</span></code> lorsque l’on passe le portail mais en lui passant <code class="docutils literal notranslate"><span class="pre">WORLD_MAP_2</span></code> ! Cependant, comme nous souhaitons ici <strong>modifier</strong> les listes des objets (<code class="docutils literal notranslate"><span class="pre">platforms</span></code>, <code class="docutils literal notranslate"><span class="pre">coins</span></code>, etc) depuis une fonction, nous devons déclarer ces variables <code class="docutils literal notranslate"><span class="pre">global</span></code> avant de pouvoir les toucher.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span> <span class="c1"># Création de la classe Portal</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="ow">and</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">e</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">'Niveau 2 !'</span><span class="p">)</span>
-            <span class="k">global</span> <span class="n">platforms</span> <span class="c1"># On déclare les variables que l'on veut modifier comme globales</span>
+            <span class="k">global</span> <span class="n">platforms</span> <span class="c1"># On déclare les variables externes que l'on veut modifier comme globales</span>
             <span class="k">global</span> <span class="n">slimes</span>
             <span class="k">global</span> <span class="n">coins</span>
             <span class="k">global</span> <span class="n">portals</span>
@@ -1084,7 +1084,7 @@ Voir le code final<div class="summary-down docutils">
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span>
 
@@ -1092,7 +1092,7 @@ Voir le code final<div class="summary-down docutils">
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="ow">and</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">e</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">'Niveau 2 !'</span><span class="p">)</span>
             <span class="k">global</span> <span class="n">platforms</span>
@@ -1151,9 +1151,9 @@ Voir le code final<div class="summary-down docutils">
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
         <span class="n">slime</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">coins</span><span class="p">:</span>
-        <span class="n">coin</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+        <span class="n">coin</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">portal</span> <span class="ow">in</span> <span class="n">portals</span><span class="p">:</span>
-        <span class="n">portal</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">player</span><span class="p">)</span>
+        <span class="n">portal</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
     <span class="n">remove_actors</span><span class="p">(</span><span class="n">coins</span><span class="p">)</span>
 </pre></div>

@@ -155,7 +155,7 @@ class Player(Actor):
         self.y += self.vy
 ```
 
-Je vous invite à aller jeter un oeil à l'implémentation de cette méthode dans le fichier `pgzhelper.py`.
+Si vous êtes curieux de comprendre comment la collision est gérée, je vous invite à aller jeter un oeil à l'implémentation de cette méthode dans le fichier `pgzhelper.py`.
 
 ## 6. Permettre au personnage de sauter
 
@@ -570,14 +570,14 @@ Reste à savoir de quelle manière de gérer les collisions avec le joueur. Il y
 * Ajouter le test de collision avec le joueur dans le `update` des `Coin`.
 
 Je vous propose la 2ème solution, qui a pour avantage de ne pas ajouter plus de code à la classe `Player` qui est déjà complexe.  
-Afin de pouvoir tester la collision avec le joueur dans la méthode `update` de `Coin`, il faut lui passer le `player` en argument. Il suffit ensuite de tester s'il y a collision et, le cas échéant, marquer le `coin` pour qu'il soit supprimé.
+Il suffit alos de tester s'il y a collision avec le `player` et, le cas échéant, marquer le `coin` pour qu'il soit supprimé.
 
 ```python
 class Coin(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
 
-    def update(self, player): # Ajout de player en argument
+    def update(self):
         if player.collides_with(self): # Test de collision avec le joueur
             self.to_remove = True # On marque la pièce en question pour la supprimer
 
@@ -588,7 +588,7 @@ def update():
     for slime in slimes:
         slime.update()
     for coin in coins:
-        coin.update(player) # Chaque pièce teste si elle est en collision avec le player
+        coin.update() # Chaque pièce teste si elle est en collision avec le player
 
     remove_actors(coins) # On supprime du jeu les pièces marquées pour être supprimées
 ```
@@ -669,21 +669,21 @@ def update():
     for slime in slimes:
         slime.update()
     for coin in coins:
-        coin.update(player)
+        coin.update()
     for portal in portals:
         portal.update() # Ne fait rien pour l'instant
 
     remove_actors(coins) # On supprime du jeu les pièces marquées pour être supprimées
 ```
 
-Vous devriez voir le portail apparaître à l'endroit indiqué. Voyons à présent comment modifier le niveau lorsque le joueur est en contact avec le portail et qu'il appuie sur la touche `e`. On va commencer par modifier la méthode `update` de `Portal` pour qu'il puisse détecter cet évenement. A nouveau, nous devons passer l'argument `player` dans la méthode `update` pour pouvoir interagir avec le joueur. Pour le moment, affichons simplement l'activation du niveau 2 sous forme de texte dans la console avec `print`.
+Vous devriez voir le portail apparaître à l'endroit indiqué. Voyons à présent comment modifier le niveau lorsque le joueur est en contact avec le portail et qu'il appuie sur la touche `e`. On va commencer par modifier la méthode `update` de `Portal` pour qu'il puisse détecter cet évenement. Pour le moment, affichons simplement l'activation du niveau 2 sous forme de texte dans la console avec `print`.
 
 ```python
 class Portal(Actor): # Création de la classe Portal
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
 
-    def update(self, player):
+    def update(self):
         if player.collides_with(self) and keyboard.space:
             print('Niveau 2 !')
 ```
@@ -757,17 +757,17 @@ platforms, slimes, coins, portals = load_level(WORLD_MAP)
 ```
 
 Si tout a fonctionné, vous ne devriez voir aucun changement par rapport à tout à l'heure, on a simplement déplacé du code, mais il fait la même chose.  
-Il ne reste plus à présent d'appeler la fonction `load_level` lorsque l'on passe le portail mais en lui passant `WORLD_MAP_2` ! Cependant rappelez-vous, comme nous souhaitons ici modifier les listes des objets (`platforms`, `coins`, etc) depuis une fonction, nous devons déclarer ces variables `global` avant de les toucher.
+Il ne reste plus à présent d'appeler la fonction `load_level` lorsque l'on passe le portail mais en lui passant `WORLD_MAP_2` ! Cependant, comme nous souhaitons ici **modifier** les listes des objets (`platforms`, `coins`, etc) depuis une fonction, nous devons déclarer ces variables `global` avant de pouvoir les toucher.
 
 ```python
 class Portal(Actor): # Création de la classe Portal
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
 
-    def update(self, player):
+    def update(self):
         if player.collides_with(self) and keyboard.e:
             print('Niveau 2 !')
-            global platforms # On déclare les variables que l'on veut modifier comme globales
+            global platforms # On déclare les variables externes que l'on veut modifier comme globales
             global slimes
             global coins
             global portals
@@ -870,7 +870,7 @@ class Coin(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
 
-    def update(self, player):
+    def update(self):
         if player.collides_with(self):
             self.to_remove = True
 
@@ -878,7 +878,7 @@ class Portal(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
 
-    def update(self, player):
+    def update(self):
         if player.collides_with(self) and keyboard.e:
             print('Niveau 2 !')
             global platforms
@@ -937,9 +937,9 @@ def update():
     for slime in slimes:
         slime.update()
     for coin in coins:
-        coin.update(player)
+        coin.update()
     for portal in portals:
-        portal.update(player)
+        portal.update()
 
     remove_actors(coins)
 ```
