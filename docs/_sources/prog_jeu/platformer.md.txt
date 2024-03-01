@@ -87,7 +87,7 @@ class Player(Actor):
         if keyboard.a:
             self.x -= self.speed
             self.flip_x = True
-        elif keyboard.d:
+        if keyboard.d:
             self.x += self.speed
             self.flip_x = False
 ```

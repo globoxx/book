@@ -387,7 +387,7 @@ Il est temps d'ajouter un ennemi pour pimenter un peu notre jeu. Dans notre cas,
 Comme pour `Player`, la première étape est de créer une nouvelle classe pour représenter notre ennemi.
 
 ```python
-class Ennemi(Actor):
+class Ennemy(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
     
@@ -753,7 +753,7 @@ class Missile(Actor):
         self.direction = direction # La direction initiale dépendra de la valeur donnée lors de la création du missile
         self.speed = 5
 
-    def update(self, ennemies):
+    def update(self):
         pass # On s'en occupe plus tard
 ```
 
@@ -765,7 +765,7 @@ ennemies = [Ennemy('fly1', (randint(0, WIDTH), randint(0, HEIGHT)))]
 missiles = [] # Création de la liste vide de missiles
 ```
 
-Nous voulons ajouter un missile à chaque clic de souris. Pygame nous fournit la fonction `on_mouse_down(pos)` qui nous permet de réagir à un clic de souris. `pos` correspond à l'emplacement (x, y) du curseur au moment du clic.
+Nous voulons ajouter un missile à chaque clic de souris. Pygame nous fournit la fonction `on_mouse_down(pos)` qui nous permet de réagir à un clic de souris. `pos` correspond à l'emplacement `(x, y)` du curseur au moment du clic.
 
 Nous devons utiliser `pos` pour calculer la direction que devra prendre notre missile. Il est possible de calculer l'angle entre un acteur et une coordonnée grâce à la méthode `angle_to` héritée de `Actor`.
 
@@ -793,7 +793,7 @@ def update():
     for ennemy in ennemies:
         ennemy.update()
     for missile in missiles: # Parcourt les missiles
-        missile.update(ennemies)
+        missile.update()
 ```
 
 Il ne nous reste plus qu'à définir le déplacement de nos missiles dans leur méthode `update`. C'est assez simple, nous voulons simplement qu'il avance dans sa direction avec sa vitesse.
@@ -805,7 +805,7 @@ class Missile(Actor):
         self.direction = direction
         self.speed = 5
 
-    def update(self, ennemies):
+    def update(self):
         self.move_in_direction(self.speed)
 ```
 
@@ -824,7 +824,7 @@ class Missile(Actor):
         self.angle = direction # Ajout de l'attribut ici !
         self.speed = 5
 
-    def update(self, ennemies):
+    def update(self):
         self.move_in_direction(self.speed)
 ```
 
@@ -876,7 +876,7 @@ class Missile(Actor):
         self.angle = direction
         self.speed = 5
 
-    def update(self, ennemies):
+    def update(self):
         self.move_in_direction(self.speed)
         
 def detect_border(actor):
@@ -919,7 +919,7 @@ def update():
     for ennemy in ennemies:
         ennemy.update()
     for missile in missiles:
-        missile.update(ennemies)
+        missile.update()
 ```
 ````
 
@@ -930,7 +930,7 @@ Il est temps de donner du pouvoir à nos missiles pour détruire les ennemis ! N
 ```{image} ../media/collision.png
 ```
 
-Où ajouter le contrôle de collision ? Eh bien dans la méthode `update` du missile ! Après le déplacement, on parcourt la liste des ennemis et on contrôle si le missile est en contacte avec l'un d'eux. Cela signifie que l'on doit faire passer la liste des ennemis à la méthode `update` de la classe `Missile`.
+Où ajouter le contrôle de collision ? Eh bien dans la méthode `update` du missile ! Après le déplacement, on parcourt la liste des ennemis et on contrôle si le missile est en contacte avec l'un d'eux.
 
 ```python
 class Missile(Actor):
@@ -940,12 +940,11 @@ class Missile(Actor):
         self.angle = direction
         self.speed = 5
 
-    def update(self, ennemies): # Ajout de l'argument ennemies pour pouvoir lire la liste des ennemis
+    def update(self):
         self.move_in_direction(self.speed)
         for ennemy in ennemies: # Parcourt chaque ennemi
             if self.collides_with(ennemy): # Si il y a collision
                 print('BOOOOM') # On affiche boom dans la console
-                break # On quitte la boucle for
 ```
 
 Bon, on affiche `BOOOOM` quand on touche en ennemi, mais on voudrait bien qu'il soit détruit, ainsi que notre missile ! Pour détruire un acteur du jeu, il suffit de le supprimer de la liste qui le contient. C'est à dire que nous voulons supprimer le missile de `missiles` et l'ennemi touché de `ennemies`.
@@ -960,14 +959,13 @@ class Missile(Actor):
         self.angle = direction
         self.speed = 5
 
-    def update(self, ennemies):
+    def update(self):
         self.move_in_direction(self.speed)
         for ennemy in ennemies:
             if self.collides_with(ennemy):
                 print('BOOOOM')
                 ennemy.to_remove = True # On marque l'ennemi touché
                 self.to_remove = True # On marque le missile en question
-                break
 ```
 
 A la fin de la fonction `update` du programme principal, on parcourt nos listes et on supprime tous les objets qui sont marqués pour être détruits. Cela permet de tous les détruire en même temps pour éviter les bugs et simplifier la logique du jeu.  
@@ -979,7 +977,7 @@ def update():
     for ennemy in ennemies:
         ennemy.update()
     for missile in missiles:
-        missile.update(ennemies)
+        missile.update()
         
     remove_actors(ennemies) # On supprime les ennemis marqués
     remove_actors(missiles) # On supprime les missiles marqués
@@ -1033,7 +1031,7 @@ class Missile(Actor):
         self.angle = direction
         self.speed = 5
 
-    def update(self, ennemies):
+    def update(self):
         self.move_in_direction(self.speed)
         
 def detect_border(actor):
@@ -1068,15 +1066,15 @@ def draw():
     for ennemy in ennemies:
         ennemy.draw()
         ennemy.animate()
-    for missile in missiles: # Parcourt les missiles
+    for missile in missiles:
         missile.draw()
 
 def update():
     player.update()
     for ennemy in ennemies:
         ennemy.update()
-    for missile in missiles: # Parcourt les missiles
-        missile.update(ennemies)
+    for missile in missiles:
+        missile.update()
 ```
 ````
 
@@ -1094,7 +1092,7 @@ class Missile(Actor):
         self.angle = direction
         self.speed = 5
 
-    def update(self, ennemies):
+    def update(self):
         self.move_in_direction(self.speed)
         for ennemy in ennemies:
             if self.collides_with(ennemy):
@@ -1102,7 +1100,6 @@ class Missile(Actor):
                 sounds.explosion.play() # Ajout du bruitage ici !
                 ennemy.to_remove = True
                 self.to_remove = True
-                break
 ```
 
 `sounds.explosion.play()` fait ici référence au nom du fichier son: `explosion.wav`.
@@ -1125,18 +1122,14 @@ clock.schedule_interval(add_ennemy, 15.0)
 
 ## 13. Tenir et afficher un score
 
-Le score est important dans les jeux ! Pour en tenir un, il nous faut commencer par définir une variable `score` au début de notre programme principal et l'initialiser à `0`.
+Le score est important dans les jeux ! Pour en tenir un, on peut le définir dans les attributs de notre `player` et l'initialiser à `0`.
 
 ```python
-music.play('adventure')
-
-player = Player('alien_walk1', (WIDTH/2, HEIGHT/2))
-ennemies = [Ennemy('fly1', (randint(0, WIDTH), randint(0, HEIGHT)))]
-missiles = []
-
-score = 0 # Création de la variable score ici !
-
-clock.schedule_interval(add_ennemy, 15.0)
+class Player(Actor):
+    def __init__(self, image, pos, **kwargs):
+        super().__init__(image, pos, **kwargs)
+        self.speed = 3
+        self.score = 0 # Création de l'attribut score ici !
 ```
 
 Avant de nous occuper de l'augmentation du score, voyons déjà comment l'afficher. Afficher du texte à l'écran se fait via l'objet `screen` offert par Pygame. Nous l'utilisons dans la fonction `draw` du programme principal, juste après avoir défini l'image de fond.
@@ -1144,10 +1137,8 @@ Avant de nous occuper de l'augmentation du score, voyons déjà comment l'affich
 ```python
 def draw():
     screen.blit('grass', (0, 0))
-    screen.draw.text(f"Score: {score}", (0, 0)) # Ajout du score ici aux coordonnées (0, 0), tout en haut à gauche
+    screen.draw.text(f"Score: {player.score}", (0, 0)) # Ajout du score ici aux coordonnées (0, 0), tout en haut à gauche
     player.draw()
-    if abs(player.vx) > 0 or abs(player.vy) > 0:
-        player.animate()
     for ennemy in ennemies:
         ennemy.draw()
         ennemy.animate()
@@ -1165,8 +1156,7 @@ class Missile(Actor):
         self.angle = direction
         self.speed = 5
 
-    def update(self, ennemies):
-        global score # On permet l'écriture sur la variable score
+    def update(self):
         self.move_in_direction(self.speed)
         for ennemy in ennemies:
             if self.collides_with(ennemy):
@@ -1174,11 +1164,8 @@ class Missile(Actor):
                 sounds.explosion.play()
                 ennemy.to_remove = True
                 self.to_remove = True
-                score += 1 # Augmentation du score de 1
-                break
+                player.score += 1 # Augmentation du score de 1
 ```
-
-Notez que `score` est une variable créée dans le programme principal (on dit que c'est une variable **globale**). Il est toujours possible de lire les variables globales depuis les fonctions mais, par défaut, il n'est pas possible de les affecter à de nouvelles valeurs avec le symbole `=`. Afin que l'on soit autorisé à **écrire** sur la variable globale `score` pour l'augmenter, on doit écrire `global score` au début de la fonction `update`.
 
 ````{dropdown} Voir le code final
 ```python
@@ -1193,6 +1180,7 @@ class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
         self.speed = 3
+        self.score = 0
         
     def update(self):
         if keyboard.a:
@@ -1228,8 +1216,7 @@ class Missile(Actor):
         self.angle = direction
         self.speed = 5
 
-    def update(self, ennemies):
-        global score
+    def update(self):
         self.move_in_direction(self.speed)
         for ennemy in ennemies:
             if self.collides_with(ennemy):
@@ -1237,8 +1224,7 @@ class Missile(Actor):
                 sounds.explosion.play()
                 ennemy.to_remove = True
                 self.to_remove = True
-                score += 1
-                break
+                player.score += 1
         
 def detect_border(actor):
     if actor.x > WIDTH:
@@ -1266,13 +1252,11 @@ player = Player('alien_walk1', (WIDTH/2, HEIGHT/2))
 ennemies = [Ennemy('fly1', (randint(0, WIDTH), randint(0, HEIGHT)))]
 missiles = []
 
-score = 0
-
 clock.schedule_interval(add_ennemy, 15.0)
 
 def draw():
     screen.blit('grass', (0, 0))
-    screen.draw.text(f"Score: {score}", (0, 0))
+    screen.draw.text(f"Score: {player.score}", (0, 0))
     player.draw()
     for ennemy in ennemies:
         ennemy.draw()
@@ -1285,7 +1269,7 @@ def update():
     for ennemy in ennemies:
         ennemy.update()
     for missile in missiles:
-        missile.update(ennemies)
+        missile.update()
         
     remove_actors(ennemies)
     remove_actors(missiles)

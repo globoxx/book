@@ -643,7 +643,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p>Il est temps d’ajouter un ennemi pour pimenter un peu notre jeu. Dans notre cas, ce sera une mouche virevoltant aléatoirement.</p>
 <img alt="../_images/fly1.png" src="../_images/fly1.png"/>
 <p>Comme pour <code class="docutils literal notranslate"><span class="pre">Player</span></code>, la première étape est de créer une nouvelle classe pour représenter notre ennemi.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Ennemi</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Ennemy</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     
@@ -994,7 +994,7 @@ Nous pouvons également déjà lui donner une vitesse (de 5 par exemple).</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span> <span class="c1"># La direction initiale dépendra de la valeur donnée lors de la création du missile</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span> <span class="c1"># On s'en occupe plus tard</span>
 </pre></div>
 </div>
@@ -1004,7 +1004,7 @@ Nous pouvons également déjà lui donner une vitesse (de 5 par exemple).</p>
 <span class="n">missiles</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Création de la liste vide de missiles</span>
 </pre></div>
 </div>
-<p>Nous voulons ajouter un missile à chaque clic de souris. Pygame nous fournit la fonction <code class="docutils literal notranslate"><span class="pre">on_mouse_down(pos)</span></code> qui nous permet de réagir à un clic de souris. <code class="docutils literal notranslate"><span class="pre">pos</span></code> correspond à l’emplacement (x, y) du curseur au moment du clic.</p>
+<p>Nous voulons ajouter un missile à chaque clic de souris. Pygame nous fournit la fonction <code class="docutils literal notranslate"><span class="pre">on_mouse_down(pos)</span></code> qui nous permet de réagir à un clic de souris. <code class="docutils literal notranslate"><span class="pre">pos</span></code> correspond à l’emplacement <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> du curseur au moment du clic.</p>
 <p>Nous devons utiliser <code class="docutils literal notranslate"><span class="pre">pos</span></code> pour calculer la direction que devra prendre notre missile. Il est possible de calculer l’angle entre un acteur et une coordonnée grâce à la méthode <code class="docutils literal notranslate"><span class="pre">angle_to</span></code> héritée de <code class="docutils literal notranslate"><span class="pre">Actor</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="n">direction</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">angle_to</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="c1"># Calcul de l'angle entre le joueur et le curseur de la souris</span>
@@ -1027,7 +1027,7 @@ Nous pouvons également déjà lui donner une vitesse (de 5 par exemple).</p>
     <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span> <span class="c1"># Parcourt les missiles</span>
-        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ennemies</span><span class="p">)</span>
+        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Il ne nous reste plus qu’à définir le déplacement de nos missiles dans leur méthode <code class="docutils literal notranslate"><span class="pre">update</span></code>. C’est assez simple, nous voulons simplement qu’il avance dans sa direction avec sa vitesse.</p>
@@ -1037,7 +1037,7 @@ Nous pouvons également déjà lui donner une vitesse (de 5 par exemple).</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1050,7 +1050,7 @@ Nous pouvons également déjà lui donner une vitesse (de 5 par exemple).</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span> <span class="c1"># Ajout de l'attribut ici !</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1107,7 +1107,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
         
 <span class="k">def</span> <span class="nf">detect_border</span><span class="p">(</span><span class="n">actor</span><span class="p">):</span>
@@ -1150,7 +1150,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span>
-        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ennemies</span><span class="p">)</span>
+        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1159,7 +1159,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <h2>10. Gérer les collisions<a class="headerlink" href="#gerer-les-collisions" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps de donner du pouvoir à nos missiles pour détruire les ennemis ! Normalement, la gestion des collisions est un moment compliqué dans le développement d’un jeu car cela requiert des algorithmes assez complexes. Heureusement pour nous, Pygame nous mâche le travail grâce à la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> qui est déjà capable de détecter des collisions grâce à sa méthode <code class="docutils literal notranslate"><span class="pre">collides_with(other_actor)</span></code>. Elle retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si l’acteur est en contact avec <code class="docutils literal notranslate"><span class="pre">other_actor</span></code>.</p>
 <img alt="../_images/collision.png" src="../_images/collision.png"/>
-<p>Où ajouter le contrôle de collision ? Eh bien dans la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> du missile ! Après le déplacement, on parcourt la liste des ennemis et on contrôle si le missile est en contacte avec l’un d’eux. Cela signifie que l’on doit faire passer la liste des ennemis à la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Missile</span></code>.</p>
+<p>Où ajouter le contrôle de collision ? Eh bien dans la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> du missile ! Après le déplacement, on parcourt la liste des ennemis et on contrôle si le missile est en contacte avec l’un d’eux.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Missile</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -1167,12 +1167,11 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span> <span class="c1"># Ajout de l'argument ennemies pour pouvoir lire la liste des ennemis</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span> <span class="c1"># Parcourt chaque ennemi</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">ennemy</span><span class="p">):</span> <span class="c1"># Si il y a collision</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s1">'BOOOOM'</span><span class="p">)</span> <span class="c1"># On affiche boom dans la console</span>
-                <span class="k">break</span> <span class="c1"># On quitte la boucle for</span>
 </pre></div>
 </div>
 <p>Bon, on affiche <code class="docutils literal notranslate"><span class="pre">BOOOOM</span></code> quand on touche en ennemi, mais on voudrait bien qu’il soit détruit, ainsi que notre missile ! Pour détruire un acteur du jeu, il suffit de le supprimer de la liste qui le contient. C’est à dire que nous voulons supprimer le missile de <code class="docutils literal notranslate"><span class="pre">missiles</span></code> et l’ennemi touché de <code class="docutils literal notranslate"><span class="pre">ennemies</span></code>.</p>
@@ -1184,14 +1183,13 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">ennemy</span><span class="p">):</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s1">'BOOOOM'</span><span class="p">)</span>
                 <span class="n">ennemy</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># On marque l'ennemi touché</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># On marque le missile en question</span>
-                <span class="k">break</span>
 </pre></div>
 </div>
 <p>A la fin de la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> du programme principal, on parcourt nos listes et on supprime tous les objets qui sont marqués pour être détruits. Cela permet de tous les détruire en même temps pour éviter les bugs et simplifier la logique du jeu.<br/>
@@ -1201,7 +1199,7 @@ Par soucis de simplicité, j’ai écrit une fonction toute prête: <code class=
     <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span>
-        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ennemies</span><span class="p">)</span>
+        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
         
     <span class="n">remove_actors</span><span class="p">(</span><span class="n">ennemies</span><span class="p">)</span> <span class="c1"># On supprime les ennemis marqués</span>
     <span class="n">remove_actors</span><span class="p">(</span><span class="n">missiles</span><span class="p">)</span> <span class="c1"># On supprime les missiles marqués</span>
@@ -1260,7 +1258,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
         
 <span class="k">def</span> <span class="nf">detect_border</span><span class="p">(</span><span class="n">actor</span><span class="p">):</span>
@@ -1295,15 +1293,15 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span> <span class="c1"># Parcourt les missiles</span>
+    <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span>
         <span class="n">missile</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span> <span class="c1"># Parcourt les missiles</span>
-        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ennemies</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span>
+        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1319,7 +1317,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">ennemy</span><span class="p">):</span>
@@ -1327,7 +1325,6 @@ Voir le code complet à ce point<div class="summary-down docutils">
                 <span class="n">sounds</span><span class="o">.</span><span class="n">explosion</span><span class="o">.</span><span class="n">play</span><span class="p">()</span> <span class="c1"># Ajout du bruitage ici !</span>
                 <span class="n">ennemy</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span>
-                <span class="k">break</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">sounds.explosion.play()</span></code> fait ici référence au nom du fichier son: <code class="docutils literal notranslate"><span class="pre">explosion.wav</span></code>.</p>
@@ -1348,25 +1345,19 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </section>
 <section id="tenir-et-afficher-un-score">
 <h2>13. Tenir et afficher un score<a class="headerlink" href="#tenir-et-afficher-un-score" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le score est important dans les jeux ! Pour en tenir un, il nous faut commencer par définir une variable <code class="docutils literal notranslate"><span class="pre">score</span></code> au début de notre programme principal et l’initialiser à <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s1">'adventure'</span><span class="p">)</span>
-
-<span class="n">player</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s1">'alien_walk1'</span><span class="p">,</span> <span class="p">(</span><span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">ennemies</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ennemy</span><span class="p">(</span><span class="s1">'fly1'</span><span class="p">,</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)))]</span>
-<span class="n">missiles</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Création de la variable score ici !</span>
-
-<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_ennemy</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">)</span>
+<p>Le score est important dans les jeux ! Pour en tenir un, on peut le définir dans les attributs de notre <code class="docutils literal notranslate"><span class="pre">player</span></code> et l’initialiser à <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Création de l'attribut score ici !</span>
 </pre></div>
 </div>
 <p>Avant de nous occuper de l’augmentation du score, voyons déjà comment l’afficher. Afficher du texte à l’écran se fait via l’objet <code class="docutils literal notranslate"><span class="pre">screen</span></code> offert par Pygame. Nous l’utilisons dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> du programme principal, juste après avoir défini l’image de fond.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'grass'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="c1"># Ajout du score ici aux coordonnées (0, 0), tout en haut à gauche</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Score: </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">score</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="c1"># Ajout du score ici aux coordonnées (0, 0), tout en haut à gauche</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">vx</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">abs</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">vy</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
@@ -1382,8 +1373,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span>
-        <span class="k">global</span> <span class="n">score</span> <span class="c1"># On permet l'écriture sur la variable score</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">ennemy</span><span class="p">):</span>
@@ -1391,11 +1381,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
                 <span class="n">sounds</span><span class="o">.</span><span class="n">explosion</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
                 <span class="n">ennemy</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span>
-                <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Augmentation du score de 1</span>
-                <span class="k">break</span>
+                <span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Augmentation du score de 1</span>
 </pre></div>
 </div>
-<p>Notez que <code class="docutils literal notranslate"><span class="pre">score</span></code> est une variable créée dans le programme principal (on dit que c’est une variable <strong>globale</strong>). Il est toujours possible de lire les variables globales depuis les fonctions mais, par défaut, il n’est pas possible de les affecter à de nouvelles valeurs avec le symbole <code class="docutils literal notranslate"><span class="pre">=</span></code>. Afin que l’on soit autorisé à <strong>écrire</strong> sur la variable globale <code class="docutils literal notranslate"><span class="pre">score</span></code> pour l’augmenter, on doit écrire <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">score</span></code> au début de la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir le code final<div class="summary-down docutils">
@@ -1414,6 +1402,7 @@ Voir le code final<div class="summary-down docutils">
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
         
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
@@ -1449,8 +1438,7 @@ Voir le code final<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ennemies</span><span class="p">):</span>
-        <span class="k">global</span> <span class="n">score</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">ennemy</span><span class="p">):</span>
@@ -1458,8 +1446,7 @@ Voir le code final<div class="summary-down docutils">
                 <span class="n">sounds</span><span class="o">.</span><span class="n">explosion</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
                 <span class="n">ennemy</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span>
-                <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">break</span>
+                <span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
         
 <span class="k">def</span> <span class="nf">detect_border</span><span class="p">(</span><span class="n">actor</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">actor</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
@@ -1487,13 +1474,11 @@ Voir le code final<div class="summary-down docutils">
 <span class="n">ennemies</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ennemy</span><span class="p">(</span><span class="s1">'fly1'</span><span class="p">,</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)))]</span>
 <span class="n">missiles</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
-
 <span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_ennemy</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'grass'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Score: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Score: </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">score</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
@@ -1506,7 +1491,7 @@ Voir le code final<div class="summary-down docutils">
     <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span>
-        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ennemies</span><span class="p">)</span>
+        <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
         
     <span class="n">remove_actors</span><span class="p">(</span><span class="n">ennemies</span><span class="p">)</span>
     <span class="n">remove_actors</span><span class="p">(</span><span class="n">missiles</span><span class="p">)</span>
