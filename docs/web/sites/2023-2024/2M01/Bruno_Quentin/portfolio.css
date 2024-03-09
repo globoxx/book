@@ -1,0 +1,113 @@
+.entete {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+  height: fit-content;
+}
+
+#logo {
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.menu p {
+  text-align: center;
+  margin-top: 0;
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 1.5rem;
+  background-color: #aaa;
+  text-decoration: none;
+  color: #111;
+  border-bottom: 3px solid #333;
+}
+
+/* Définit les propriétés des liens survolés dans la classe menu */
+.menu a:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
+
+}
+
+.param {
+  font-style: italic;
+}
+
+#name {
+  font-weight: bold;
+}
+
+body {
+  font-family: Copperplate;
+  font-size: 16
+}
+
+.vignette {
+  width: 300px;
+}
+
+.popup {
+  display: inline-block;
+  width: 100%;
+  /* largeur de page */
+}
+
+.popup .image {
+  width: 60%;
+  height: auto;
+  /* centré horizontalement sur la page */
+  margin-left: 20%;
+  /* superposé avant vignettes */
+  position: absolute;
+  /* au dessus du body */
+  z-index: 1;
+}
+
+.popup .hidden {
+  /* masque l'image popup */
+  visibility: hidden;
+}
+
+.tourphoto {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*pour aligner label et input*/
+.labelcontact {
+  display: inline-block;
+  width: 75px;
+}
+
+h1 {
+  text-shadow: 3px 3px #d9d9d9;
+}
+
+.h2 {
+  margin-top: 25px;
+  margin-right: 250px;
+}
+
+
+/*pour ajouter de la marge externe autour des div du formulaire de contact*/
+.form-group {
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #c0c0c0;
+  padding: 10px;
+  text-align: center;
+}
