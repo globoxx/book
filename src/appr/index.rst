@@ -63,6 +63,7 @@ Bienvenue sur la plateforme de TP d'informatique !
 
    divers/epidemie
    divers/portes_logiques
+   divers/aventure
    divers/projets_eleves
 
 .. toctree::

@@ -1,6 +1,6 @@
 (divers.aventure)=
 
-# Aventure textuelle
+# Histoire interactive
 
 Dans cette activité, vous allez programmer une **histoire interactive**.
 C'est-à-dire une **histoire durant laquelle le lecteur peut faire des choix**.
@@ -8,20 +8,20 @@ C'est-à-dire une **histoire durant laquelle le lecteur peut faire des choix**.
 Pour cela, vous allez principalement utiliser les éléments suivants:
 
 - `print()` pour afficher le texte de l'histoire
-- `input()` pour récupérer les choix du lecteur
+- `input()` pour poser des questions au lecteur
 - `if`, `elif` et `else` pour créer les embranchements de l'histoire
-- `while` si vous voulez créer des boucles dans l'histoire
+- `while` pour répéter des choses
 - éventuellement une `liste` pour stocker un inventaire
 
-Voici un exemple pour vous aider:
+## Exemple 1
 
 ```{codeplay}
 # Vous pouvez utiliser cette fonction pour poser une question avec des choix possibles à l'utilisateur
 def poser_question(question, choix_possibles):
-    choix = input(f'{question} ({"/".join(choix_possibles)}): ')
-    while choix not in choix_possibles:
-        choix = input(f'{question} ({"/".join(choix_possibles)}): ')
-    return choix
+    reponse = input(question + str(choix_possibles))
+    while reponse not in choix_possibles:
+        reponse = input(question + str(choix_possibles))
+    return reponse
 
 inventaire = []
 perdu = False
@@ -62,41 +62,23 @@ if not perdu:
 print("Fin de l'aventure")
 ```
 
-## A vous de jouer 🎮
+## Exemple 2
 
-Créez votre propre histoire interactive et déposez le fichier `.py` sur Moodle !
-
-```{codeplay}
-:file: mon_aventure.py
-# Vous pouvez utiliser cette fonction pour poser une question avec des choix possibles à l'utilisateur
-def poser_question(question, choix_possibles):
-    choix = input(f'{question} ({"/".join(choix_possibles)}): ')
-    while choix not in choix_possibles:
-        choix = input(f'{question} ({"/".join(choix_possibles)}): ')
-    return choix
-
-inventaire = []
-
-print("Début de votre histoire...")
-```
-
-`````{admonition} Exemple plus complexe
-:class: hint
-````{dropdown} <span style="color:grey">Clique ici</span>
 Voici le logigramme représentant une aventure plus complexe:
 
 ```{image} ../media/aventure.png
 :width: 800px
 ```
+
 Et son code:
 
 ```{codeplay}
 # Vous pouvez utiliser cette fonction pour poser une question avec des choix possibles à l'utilisateur
 def poser_question(question, choix_possibles):
-    choix = input(f'{question} ({"/".join(choix_possibles)}): ')
-    while choix not in choix_possibles:
-        choix = input(f'{question} ({"/".join(choix_possibles)}): ')
-    return choix
+    reponse = input(question + str(choix_possibles))
+    while reponse not in choix_possibles:
+        reponse = input(question + str(choix_possibles))
+    return reponse
 
 def entrer_foret():
     print("Vous arrivez dans une grande forêt lugubre.")
@@ -148,11 +130,8 @@ def entrer_grotte():
     elif choix == "non":
         print("Vous décidez de ne pas prendre la torche et vous entrez dans la grotte sans lumière.")
     print("Vous avancez dans la grotte et vous rencontrez un dragon qui bloque votre chemin.")
-    if "canne à pêche" in inventaire:
-        print("Vous utilisez votre canne à pêche pour combattre le dragon et vous réussissez à le vaincre (incroyable).")
-        entrer_salle_secrete()
-    elif "torche" in inventaire:
-        print("Vous utilisez votre torche pour effrayer le dragon et vous réussissez à passer sans être attaqué (incroyable).")
+    if "canne à pêche" in inventaire or "torche" in inventaire:
+        print("Vous utilisez votre arme pour combattre le dragon et vous réussissez à le vaincre (incroyable).")
         entrer_salle_secrete()
     else:
         print("Vous n'avez pas d'arme pour combattre le dragon et vous êtes dévoré.")
