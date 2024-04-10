@@ -53,6 +53,51 @@
 
 ### 1M04
 
+#### Carmelo
+
+```{image} ../media/dessins_eleves/Carmelo.png
+```
+
+#### Dorian et Axel
+
+```{image} ../media/dessins_eleves/Dorian_Axel.png
+```
+
+#### Emile et Valentin
+
+```{image} ../media/dessins_eleves/Emile_Valentin.png
+```
+
+#### Eva et Mariana
+
+```{image} ../media/dessins_eleves/Eva_Mariana.png
+```
+
+#### Gaétane et Omar
+
+```{image} ../media/dessins_eleves/Gaetane_Omar.png
+```
+
+#### Jessie et Soline
+
+```{image} ../media/dessins_eleves/Jessie_Soline.png
+```
+
+#### Kilian et Marco
+
+```{image} ../media/dessins_eleves/Kilian_Marco.png
+```
+
+#### Delia et Ninon G.
+
+```{image} ../media/dessins_eleves/Ninon_Delia.png
+```
+
+#### Lina et Ninon B.
+
+```{image} ../media/dessins_eleves/Ninon_Lina.png
+```
+
 ### 1M05
 
 #### Antoine et Alexandre
