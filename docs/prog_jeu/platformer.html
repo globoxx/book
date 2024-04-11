@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Projet" href="projet.html" /><link rel="prev" title="1. Introduction à Pygame" href="hit_the_fly.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Projet" href="projet.html" /><link rel="prev" title="1. Hit the fly (shooter)" href="hit_the_fly.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
-        <title>1. Création d’un jeu de plateformes - Travaux pratiques</title>
+        <title>2. Jumper (platformer) - Travaux pratiques</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
     <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
@@ -258,8 +258,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="hit_the_fly.html">1. Introduction à Pygame</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">1. Création d’un jeu de plateformes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hit_the_fly.html">1. Hit the fly (shooter)</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">2. Jumper (platformer)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
@@ -299,8 +299,8 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="creation-dun-jeu-de-plateformes">
-<h1>1. Création d’un jeu de plateformes<a class="headerlink" href="#creation-dun-jeu-de-plateformes" title="Lien permanent vers ce titre">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="jumper-platformer">
+<span id="prog-jeu-platformer"></span><h1>2. Jumper (platformer)<a class="headerlink" href="#jumper-platformer" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Dans ce tutoriel, nous allons développer un jeu de plateforme où le personnage peut se déplacer sur des blocs pour attraper des objets et combattre des ennemis. Nous allons également devoir mettre en place un système de gravité pour permettre au joueur de sauter et de tomber des blocs.</p>
 <img alt="../_images/platformer.gif" src="../_images/platformer.gif"/>
 <section id="faire-apparaitre-des-blocs">
@@ -475,6 +475,7 @@ Quand on y pense, faire sauter notre personnage revient à modifier sa vitesse v
 <h2>7. Créer un niveau rempli de plateformes<a class="headerlink" href="#creer-un-niveau-rempli-de-plateformes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Bon notre jeu est un peu triste avec une unique plateforme. Il est temps de créer un niveau entier.<br/>
 Il existe évidemment plein de manières de s’y prendre. Une solution courante et répendue est de représenter le niveau sous la forme d’un tableau en 2 dimensions où chaque élément du tableau spécifie si une plateforme s’y trouve ou non.</p>
+<img alt="../_images/platformer_grid.png" src="../_images/platformer_grid.png"/>
 <p>Pour cela, nous allons définir une variable constante <code class="docutils literal notranslate"><span class="pre">WORLD_MAP</span></code> qui contient une liste de listes (donc un tableau 2D). Un <code class="docutils literal notranslate"><span class="pre">1</span></code> signifie que l’on y place un bloc tandis qu’un <code class="docutils literal notranslate"><span class="pre">0</span></code> signifie que l’on y met rien. Je vous propose de reprendre le tableau ci-dessous.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">WORLD_MAP</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
@@ -899,7 +900,7 @@ Il suffit alos de tester s’il y a collision avec le <code class="docutils lite
     <span class="k">for</span> <span class="n">portal</span> <span class="ow">in</span> <span class="n">portals</span><span class="p">:</span>
         <span class="n">portal</span><span class="o">.</span><span class="n">update</span><span class="p">()</span> <span class="c1"># Ne fait rien pour l'instant</span>
 
-    <span class="n">remove_actors</span><span class="p">(</span><span class="n">coins</span><span class="p">)</span> <span class="c1"># On supprime du jeu les pièces marquées pour être supprimées</span>
+    <span class="n">remove_actors</span><span class="p">(</span><span class="n">coins</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Vous devriez voir le portail apparaître à l’endroit indiqué. Voyons à présent comment modifier le niveau lorsque le joueur est en contact avec le portail et qu’il appuie sur la touche <code class="docutils literal notranslate"><span class="pre">e</span></code>. On va commencer par modifier la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de <code class="docutils literal notranslate"><span class="pre">Portal</span></code> pour qu’il puisse détecter cet évenement. Pour le moment, affichons simplement l’activation du niveau 2 sous forme de texte dans la console avec <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
@@ -1217,7 +1218,7 @@ Voir le code final<div class="summary-down docutils">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">1. Introduction à Pygame</div>
+                <div class="title">1. Hit the fly (shooter)</div>
                 
               </div>
             </a>
@@ -1244,7 +1245,7 @@ Voir le code final<div class="summary-down docutils">
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">1. Création d’un jeu de plateformes</a><ul>
+<li><a class="reference internal" href="#">2. Jumper (platformer)</a><ul>
 <li><a class="reference internal" href="#faire-apparaitre-des-blocs">1. Faire apparaître des blocs</a></li>
 <li><a class="reference internal" href="#faire-apparaitre-notre-joueur">2. Faire apparaître notre joueur</a></li>
 <li><a class="reference internal" href="#deplacer-le-joueur-horiontalement">3. Déplacer le joueur horiontalement</a></li>

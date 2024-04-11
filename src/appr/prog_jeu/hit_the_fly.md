@@ -1,4 +1,6 @@
-# 1. Introduction à Pygame
+(prog_jeu.hit_the_fly)=
+
+# 1. Hit the fly (shooter)
 
 Dans cette introduction, nous allons développer un premier jeu simple étape par étape. Le jeu consiste en un personnage pouvant se déplacer librement au clavier et pouvant tirer des projectiles sur des ennemis se déplaçant aléatoirement avec des clics de souris.
 

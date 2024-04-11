@@ -1,4 +1,6 @@
-# 1. Création d'un jeu de plateformes
+(prog_jeu.platformer)=
+
+# 2. Jumper (platformer)
 
 Dans ce tutoriel, nous allons développer un jeu de plateforme où le personnage peut se déplacer sur des blocs pour attraper des objets et combattre des ennemis. Nous allons également devoir mettre en place un système de gravité pour permettre au joueur de sauter et de tomber des blocs.
 
@@ -199,6 +201,9 @@ class Player(Actor):
 
 Bon notre jeu est un peu triste avec une unique plateforme. Il est temps de créer un niveau entier.  
 Il existe évidemment plein de manières de s'y prendre. Une solution courante et répendue est de représenter le niveau sous la forme d'un tableau en 2 dimensions où chaque élément du tableau spécifie si une plateforme s'y trouve ou non.
+
+```{image} ../media/platformer_grid.png
+```
 
 Pour cela, nous allons définir une variable constante `WORLD_MAP` qui contient une liste de listes (donc un tableau 2D). Un `1` signifie que l'on y place un bloc tandis qu'un `0` signifie que l'on y met rien. Je vous propose de reprendre le tableau ci-dessous.
 
@@ -673,7 +678,7 @@ def update():
     for portal in portals:
         portal.update() # Ne fait rien pour l'instant
 
-    remove_actors(coins) # On supprime du jeu les pièces marquées pour être supprimées
+    remove_actors(coins)
 ```
 
 Vous devriez voir le portail apparaître à l'endroit indiqué. Voyons à présent comment modifier le niveau lorsque le joueur est en contact avec le portail et qu'il appuie sur la touche `e`. On va commencer par modifier la méthode `update` de `Portal` pour qu'il puisse détecter cet évenement. Pour le moment, affichons simplement l'activation du niveau 2 sous forme de texte dans la console avec `print`.
