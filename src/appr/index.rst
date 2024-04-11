@@ -22,8 +22,8 @@ Bienvenue sur la plateforme de TP d'informatique !
 
 
 .. toctree::
-    :name: Programmation (parcours dessin)
-    :caption: Programmation (parcours dessin)
+    :name: Programmation (parcours dessin et aventure)
+    :caption: Programmation (parcours dessin et aventure)
     :maxdepth: 3
     :hidden:
 
@@ -35,6 +35,7 @@ Bienvenue sur la plateforme de TP d'informatique !
     prog_dessin/randomiser
     prog_dessin/projet
     prog_dessin/projets_eleves
+    prog_dessin/aventure
     prog_dessin/projet2
 
 
@@ -56,14 +57,24 @@ Bienvenue sur la plateforme de TP d'informatique !
    web/projets_eleves
 
 .. toctree::
+   :name: Programmation de jeu 2D
+   :caption: Programmation de jeu 2D
+   :maxdepth: 3
+   :hidden:
+
+   prog_jeu/hit_the_fly
+   prog_jeu/platformer
+   prog_jeu/projet
+
+.. toctree::
    :name: Autres activités
    :caption: Autres activités
    :maxdepth: 3
    :hidden:
 
    divers/epidemie
+   divers/catch_the_fruit
    divers/portes_logiques
-   divers/aventure
    divers/projets_eleves
 
 .. toctree::

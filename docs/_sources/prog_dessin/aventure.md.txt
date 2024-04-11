@@ -1,4 +1,4 @@
-(divers.aventure)=
+(prog_dessin.aventure)=
 
 # Histoire interactive
 
