@@ -952,26 +952,37 @@ def update():
 
 ## 13. Idées d'améliorations
 
-Voici plusieurs idées d'amélioration du jeu.
+Voici plusieurs idées d'amélioration du jeu.  
+Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficulté.
 
-Totalement dans vos cordes:
+Totalement dans vos cordes (facile):
 
 * Ajouter une animation au joueur quand il se déplace.
 * Ajouter une musique de fond.
 * Ajouter des bruitages (par exemple pour le saut ou les pièces).
 * Empêcher le joueur de sortir de l'écran à gauche et droite.
+* Faire en sorte que le joueur perde de la vie à chaque contact avec un ennemi.
+* Créer un game over sous les conditions de votre choix (par exemple au contact d'un ennemi ou après un certain temps). Cela affiche par exemple un écran noir avec écrit "Game Over" en grand.
 * Ajouter un compteur de pièces pour le score.
-* Cacher une clé dans le niveau nécessaire au déblocage du portail vers le prochain niveau.
 * Ajouter un 3ème niveau.
+* Permettre de mettre le jeu en pause avec la touche espace.
 
-Un peu plus complexe:
+Un peu plus complexe (moyen):
 
-* Gérer la collision entre le slime et le joueur (par exemple faire perdre de la vie au joueur).
-* Pernettre au joueur de tirer des projectiles soumis à la gravité pour détruire les slimes.
+* Ajouter une clé dans le niveau nécessaire au déblocage du portail vers le prochain niveau.
+* Permettre au joueur de tirer des projectiles soumis à la gravité pour détruire les slimes (ex: flèches).
+* Permettre au joueur de sauter sur les ennemis pour les détruire.
 * Permettre au joueur de faire des doubles sauts.
-* Ajouter un nouveau type d'ennemi.
+* Ajouter un nouveau type d'ennemi (ex: qui peut sauter).
+* Faire en sorte que les ennemis suivent le joueur s'il est sufisamment proche au lieu de se balader aléatoirement.
+* Faire en sorte qu'en cas de contact avec un ennemi, le joueur perd de la vie et l'ennemi meurt. La vie du joueur est affichée sous le score.
+* Créer un nouveau type de bloc qui peut tuer le joueur au contact (ex: lave).
 
-Challenging:
+Challenging (difficile):
 
-* Permettre au joueur de poser des bombes pour détruire des blocs.
+* Permettre au joueur de poser des bombes pour détruire certains blocs.
+* Ajouter un système d'interupteur à activer pour détruire des blocs et donc ouvrir des passages.
+* Ajouter un second joueur pour pouvoir faire une course aux pièces (celui qui en ramasse le plus gagne).
+* Ajouter un item qui permet au joueur de voler pendant un temps limité.
 * Permettre la création de niveaux bien plus grands que la fenêtre de jeu principale qui défileront ensuite avec le déplacement du joueur. Indice: déplacez tous les acteurs du jeu dans la direction inverse au déplacement du joueur.
+* Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.

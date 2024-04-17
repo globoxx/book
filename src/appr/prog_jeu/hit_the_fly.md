@@ -1281,26 +1281,36 @@ def update():
 
 ## 14. Idées d'améliorations
 
-Voici plusieurs idées d'amélioration du jeu.
+Voici plusieurs idées d'amélioration du jeu.  
+Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficulté.
 
-Totalement dans vos cordes:
+Totalement dans vos cordes (facile):
 
 * Ajouter une animation au joueur quand il se déplace.
 * Faire en sorte que le jeu arrête de créer des ennemis s'il y en a déjà 5 ou plus en jeu.
 * Faire en sorte que plus le score augmente, plus les ennemis se déplacent rapidement.
 * Détruire les missiles lorsqu'ils sortent de l'écran et limiter le joueur à 3 missiles à la fois.
+* Faire en sorte que le joueur perde de la vie à chaque contact avec un ennemi.
 * Créer un game over sous les conditions de votre choix (par exemple au contact d'un ennemi ou après un certain temps). Cela affiche par exemple un écran noir avec écrit "Game Over" en grand.
-* Une autre idée à me proposer !
+* Faire en sorte que le personnage ne se déplace pas plus rapidement en diagonal qu'à l'horizontal ou à la verticale.
+* Permettre de mettre le jeu en pause avec la touche espace.
 
-Un peu plus complexe:
+Un peu plus complexe (moyen):
 
 * Faire en sorte que les ennemis suivent le joueur au lieu de se balader aléatoirement.
 * Faire en sorte qu'en cas de contact avec un ennemi, le joueur perd de la vie et l'ennemi meurt. La vie du joueur est affichée sous le score.
 * Permettre au joueur de ramasser des objets pour augmenter son score, par exemple des pièces.
-
-Challenging:
-
 * Ajouter un nouveau type d'ennemi qui se comporte différemment.
-* Ajouter des armes au personnage. Par exemple une attaque au corps à corps ou la possibilité de larguer des bombes qui explosent après quelques secondes.
-* Faire en sorte que le monde bouge autour du personnage afin qu'il puisse se balader librement dans toutes les directions sans jamais toucher un bord. Indice: le joueur ne se déplace plus, mais déplacez tous les acteurs du jeu dans la direction inverse au déplacement du joueur.
+* Ajouter un item qui permet d'augmenter temporairement la vitesse du joueur si rammassé.
+* Faire en sorte qu'en cas de contact avec un ennemi, le joueur perde un peu de vie et soit invincible pendant un court laps de temps (pour éviter des dégats à répétition).
+* Ajouter un boss qui apparaît seulement après un certain temps et nécessite beaucoup de dégats pour être battu mais offre un score élevé.
 * Ajouter un second joueur qui pourra se déplacer et tirer avec d'autres touches.
+
+Challenging (difficile):
+
+* Ajouter des armes au personnage. Par exemple une attaque au corps à corps ou la possibilité de larguer des bombes qui explosent après quelques secondes.
+* Permettre au joueur de poser des pièges qui blesseront les ennemis qui passent dessus.
+* Faire en sorte que le monde bouge autour du personnage afin qu'il puisse se balader librement dans toutes les directions sans jamais toucher un bord. Indice: le joueur ne se déplace plus, mais déplacez tous les acteurs du jeu dans la direction inverse au déplacement du joueur.
+* Créer un second niveau atteignable en passant un certain score où les ennemis sont différents et plus coriaces.
+* Donner aux ennemis la capacité d'essayer d'esquiver les projectiles (en se déplaçant perpendiculairement à leur trajectoire).
+* Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.

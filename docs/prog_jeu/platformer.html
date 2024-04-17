@@ -261,6 +261,8 @@
 <li class="toctree-l1"><a class="reference internal" href="hit_the_fly.html">1. Hit the fly (shooter)</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">2. Jumper (platformer)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html#trouver-les-ressources-sons-et-images">Trouver les ressources (sons et images)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html#feuille-de-triche-sur-les-principales-fonctions-de-pygame-zero">Feuille de triche sur les principales fonctions de Pygame Zero</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -1171,28 +1173,39 @@ Voir le code final<div class="summary-down docutils">
 </details></section>
 <section id="idees-dameliorations">
 <h2>13. Idées d’améliorations<a class="headerlink" href="#idees-dameliorations" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Voici plusieurs idées d’amélioration du jeu.</p>
-<p>Totalement dans vos cordes:</p>
+<p>Voici plusieurs idées d’amélioration du jeu.<br/>
+Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur difficulté.</p>
+<p>Totalement dans vos cordes (facile):</p>
 <ul class="simple">
 <li><p>Ajouter une animation au joueur quand il se déplace.</p></li>
 <li><p>Ajouter une musique de fond.</p></li>
 <li><p>Ajouter des bruitages (par exemple pour le saut ou les pièces).</p></li>
 <li><p>Empêcher le joueur de sortir de l’écran à gauche et droite.</p></li>
+<li><p>Faire en sorte que le joueur perde de la vie à chaque contact avec un ennemi.</p></li>
+<li><p>Créer un game over sous les conditions de votre choix (par exemple au contact d’un ennemi ou après un certain temps). Cela affiche par exemple un écran noir avec écrit “Game Over” en grand.</p></li>
 <li><p>Ajouter un compteur de pièces pour le score.</p></li>
-<li><p>Cacher une clé dans le niveau nécessaire au déblocage du portail vers le prochain niveau.</p></li>
 <li><p>Ajouter un 3ème niveau.</p></li>
+<li><p>Permettre de mettre le jeu en pause avec la touche espace.</p></li>
 </ul>
-<p>Un peu plus complexe:</p>
+<p>Un peu plus complexe (moyen):</p>
 <ul class="simple">
-<li><p>Gérer la collision entre le slime et le joueur (par exemple faire perdre de la vie au joueur).</p></li>
-<li><p>Pernettre au joueur de tirer des projectiles soumis à la gravité pour détruire les slimes.</p></li>
+<li><p>Ajouter une clé dans le niveau nécessaire au déblocage du portail vers le prochain niveau.</p></li>
+<li><p>Permettre au joueur de tirer des projectiles soumis à la gravité pour détruire les slimes (ex: flèches).</p></li>
+<li><p>Permettre au joueur de sauter sur les ennemis pour les détruire.</p></li>
 <li><p>Permettre au joueur de faire des doubles sauts.</p></li>
-<li><p>Ajouter un nouveau type d’ennemi.</p></li>
+<li><p>Ajouter un nouveau type d’ennemi (ex: qui peut sauter).</p></li>
+<li><p>Faire en sorte que les ennemis suivent le joueur s’il est sufisamment proche au lieu de se balader aléatoirement.</p></li>
+<li><p>Faire en sorte qu’en cas de contact avec un ennemi, le joueur perd de la vie et l’ennemi meurt. La vie du joueur est affichée sous le score.</p></li>
+<li><p>Créer un nouveau type de bloc qui peut tuer le joueur au contact (ex: lave).</p></li>
 </ul>
-<p>Challenging:</p>
+<p>Challenging (difficile):</p>
 <ul class="simple">
-<li><p>Permettre au joueur de poser des bombes pour détruire des blocs.</p></li>
+<li><p>Permettre au joueur de poser des bombes pour détruire certains blocs.</p></li>
+<li><p>Ajouter un système d’interupteur à activer pour détruire des blocs et donc ouvrir des passages.</p></li>
+<li><p>Ajouter un second joueur pour pouvoir faire une course aux pièces (celui qui en ramasse le plus gagne).</p></li>
+<li><p>Ajouter un item qui permet au joueur de voler pendant un temps limité.</p></li>
 <li><p>Permettre la création de niveaux bien plus grands que la fenêtre de jeu principale qui défileront ensuite avec le déplacement du joueur. Indice: déplacez tous les acteurs du jeu dans la direction inverse au déplacement du joueur.</p></li>
+<li><p>Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d’autres options.</p></li>
 </ul>
 </section>
 </section>

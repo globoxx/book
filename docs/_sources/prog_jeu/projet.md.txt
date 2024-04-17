@@ -18,15 +18,30 @@ Vous avez le choix entre:
 2. Créer un jeu inédit en partant de rien
 
 **Si vous améliorer un tutoriel:**
-- En construction
+- Implémenter au moins 3 améliorations faciles.
+- Implémenter au moins 2 améliorations moyennes.
+- Implémenter au moins 1 amélioration difficile.
+- Le jeu est jouable de bout en bout et ne plante jamais.
+- Il est possible de perdre et de gagner (ou augmenter un score).
+- Le code du jeu est propre et lisible.
 
 **Si vous partez de rien:**
-- En construction
+- Le code du jeu est clairement différent des tutoriels.
+- Le jeu est jouable de bout en bout et ne plante jamais.
+- Le jeu comporte au moins 1 personnage ou objet déplaçable par l'utilisateur.
+- Le jeu comporte au moins 2 autres objets ou personnages différents qui se déplacent et intéragissent avec le joueur (ex: collision).
+- Le jeu comporte au moins 1 liste d'éléments (ex: liste d'ennemis ou d'items à ramasser).
+- Le jeu comporte au moins 1 objet pouvant interagir avec le joueur par collision (ex: item ramassable)
+- Il est possible de perdre au jeu et un game over doit s'afficher.
+- Il est possible de gagner ou d'augmenter un score au jeu.
+- Le jeu comporte une musique ainsi qu'au moins un bruitage.
+- Le joueur possède au moins 2 attributs utilisés dans le jeu (ex: vie, score, etc).
+- Le code du jeu est propre et lisible.
 
 **Bonus:**
-- N'importe quel élément supplémentaire non demandé dans le cahier des charges
-- Une créativité particulière au niveau du gameplay (ex: un gameplay très différent de ce qui a été vu en tutoriel)
-- Un exploit technique dépassant le cadre du cours
+- N'importe quel élément supplémentaire non demandé dans le cahier des charges.
+- Une créativité particulière au niveau du gameplay (un gameplay très différent de ce qui a été vu en tutoriel).
+- Un exploit technique dépassant le cadre du cours.
 ```
 
 ```{admonition} Plagiat et tricherie
@@ -39,3 +54,17 @@ L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d
 
 Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. L'enseignant se réserve le droit d'interroger le groupe sur le code en cas de doute.
 ```
+
+# Trouver les ressources (sons et images)
+
+Voici des suggestions de plateformes pour facilement trouver vos ressources:
+
+- Musique: <a href="https://opengameart.org/art-search-advanced?keys=&field_art_type_tid%5B%5D=12&sort_by=count&sort_order=DESC" target="_blank">OpenGameArt Music</a>
+- Bruitages: <a href="https://opengameart.org/art-search-advanced?keys=&field_art_type_tid%5B0%5D=13&sort_by=count&sort_order=DESC&page=4" target="_blank">OpenGameArt Sounds</a>
+- Sprites: <a href="https://kenney.nl/assets" target="_blank">Kenny</a>
+
+Il va de soit que vous pouve utiliser des ressources qui viennent d'ailleurs !
+
+# Feuille de triche sur les principales fonctions de Pygame Zero
+
+{download}`Télécharger ici<../data/pygame_zero_documentation.pdf>`
