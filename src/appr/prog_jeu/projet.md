@@ -33,7 +33,7 @@ Vous avez le choix entre:
 - Le jeu comporte au moins 1 liste d'éléments (ex: liste d'ennemis ou d'items à ramasser).
 - Le jeu comporte au moins 1 objet pouvant interagir avec le joueur par collision (ex: item ramassable)
 - Il est possible de perdre au jeu et un game over doit s'afficher.
-- Il est possible de gagner ou d'augmenter un score au jeu.
+- Il est possible de gagner ou d'augmenter son score au jeu.
 - Le jeu comporte une musique ainsi qu'au moins un bruitage.
 - Le joueur possède au moins 2 attributs utilisés dans le jeu (ex: vie, score, etc).
 - Le code du jeu est propre et lisible.
@@ -50,9 +50,9 @@ Vous n'êtes pas autorisé à simplement copier-coller du code trouvé sur Inter
 
 Il est cependant autorisé de s'inspirer de code d'autrui et de le modifier pour le faire sien. Dans ce cas, il vous est demandé d'ajouter un commentaire dans le code indiquant sa source.
 
-L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d'assistance uniquement (avec commentaire indiquant son utilisation). Il n'est pas autorisé d'utiliser directement le code produit par une IA et de le coller dans son code en faisant 2-3 modifications (sachez que cela se voit tout de suite).
+L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d'assistance uniquement (avec commentaire indiquant son utilisation). Il n'est pas autorisé d'utiliser directement le code produit par une IA et de le coller dans son code en faisant 2-3 modifications sans citer son utilisation (sachez que cela se voit tout de suite).
 
-Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. L'enseignant se réserve le droit d'interroger le groupe sur le code en cas de doute.
+Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. L'enseignant se réserve le droit d'interroger le groupe sur le code en cas de doute, auquel cas l'élève qui est l'auteur de la ligne en question doit pouvoir l'expliquer en détails.
 ```
 
 ## Trouver les ressources (sons et images)
@@ -63,8 +63,8 @@ Voici des suggestions de plateformes pour facilement trouver vos ressources:
 - Bruitages: <a href="https://opengameart.org/art-search-advanced?keys=&field_art_type_tid%5B0%5D=13&sort_by=count&sort_order=DESC&page=4" target="_blank">OpenGameArt Sounds</a>
 - Sprites: <a href="https://kenney.nl/assets" target="_blank">Kenny</a>
 
-Il va de soit que vous pouve utiliser des ressources qui viennent d'ailleurs !
+Il va de soit que vous pouvez utiliser des ressources qui viennent d'ailleurs !
 
-## Feuille de triche sur les principales fonctions de Pygame Zero
+## Feuille de triche sur Pygame Zero
 
 {download}`Télécharger ici<../data/pygame_zero_documentation.pdf>`
