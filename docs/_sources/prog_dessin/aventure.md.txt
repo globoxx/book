@@ -156,3 +156,26 @@ print("En vous balladant un peu trop loin de chez vous, vous avez fini par vous 
 print("Retrouvez le chemin de la maison.")
 entrer_foret()
 ```
+
+## Ajouter des images et du son
+
+Le code suivant permet d'ouvrir une image affichant un game over tout en jouant un petit bruitage qui va bien avec.  
+Notez qu'il faut importer 2 librairies `PIL` et `playsound` pour que cela fonctionne.
+
+```python
+from PIL import Image
+from playsound import playsound
+
+Image.open('game_over.jpg').show() # L'image game_over.jpg doit se trouver dans le même dossier que le code
+playsound('game_over.wav') # .wav et .mp3 devraient fonctionner
+```
+
+Malheureusement, `PIL` et `playsound` ne sont pas installés de base sur Thonny. Il faut aller dans `Outils` puis `Gérer les paquets` et rechercher et installer les paquets suivants: `pillow` et `playsound`.
+
+```{image} ../media/installation_paquets_thonny_1.png
+```
+
+```{image} ../media/installation_paquets_thonny_2.png
+```
+
+Dans le cas où vous avez une erreur avec `playsound`, tentez d'installer également le paquet `pyobjc`. Si rien ne fonctionne, appelez votre enseignant à la rescousse !
