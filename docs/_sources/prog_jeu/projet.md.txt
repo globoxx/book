@@ -55,7 +55,7 @@ L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d
 Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. L'enseignant se réserve le droit d'interroger le groupe sur le code en cas de doute.
 ```
 
-# Trouver les ressources (sons et images)
+## Trouver les ressources (sons et images)
 
 Voici des suggestions de plateformes pour facilement trouver vos ressources:
 
@@ -65,6 +65,6 @@ Voici des suggestions de plateformes pour facilement trouver vos ressources:
 
 Il va de soit que vous pouve utiliser des ressources qui viennent d'ailleurs !
 
-# Feuille de triche sur les principales fonctions de Pygame Zero
+## Feuille de triche sur les principales fonctions de Pygame Zero
 
 {download}`Télécharger ici<../data/pygame_zero_documentation.pdf>`

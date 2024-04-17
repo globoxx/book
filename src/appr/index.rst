@@ -94,3 +94,6 @@ Bienvenue sur la plateforme de TP d'informatique !
 
 `Web <web/html1.html>`_
 : ce chapitre contient le parcours d'apprentissage du HTML et CSS pour concevoir des sites web (basé sur l'excellent tutoriel de Mathieu Nebra sur OpenClassroom).
+
+`Programmation de jeu 2D`_
+: ce chapitre contient le parcours d'apprentissage du framework Pygame Zero permettant de développer des jeux 2D en python.
