@@ -34,7 +34,7 @@ Dans cette première partie, vous allez concevoir un circuit logique qui permet 
 
 ### Exercice 1.1 - Critères simples
 
-Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien à la fois **petit** `et` **gentil**.
+Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien à la fois **petit** et **gentil**.
 
 Voici la table de vérité associée:
   | Petit                 | Gentil          | OK          |
@@ -45,7 +45,7 @@ Voici la table de vérité associée:
   | 1                     | 1               | 1           |
 
 ```{logic}
-:height: 200
+:height: 300
 :mode: design
 :showonly: in,out,and,or,xor
 
@@ -68,7 +68,7 @@ Voici la table de vérité associée:
 Il suffit d'insérer une porte **ET**.
 
 ```{logic}
-:height: 200
+:height: 300
 :mode: tryout
 
 {
@@ -307,7 +307,7 @@ Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (m
 :width: 300px
 ```
 
-Un dé de jeu peut afficher les nombres 1 à 6 à l'aide de 7 lampes.  
+Un dé de jeu peut afficher les nombres 1 à 6 à l'aide de 7 petits points que l'on peut représenter par 7 lampes.  
 Plusieurs lampes s'allument par paire. Voici la table de vérité.
 
 | b2 | b1 | b0 |valeur| a,g | b,f | c,e | d |
