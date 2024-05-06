@@ -59,7 +59,7 @@ Voici la table de vérité associée:
   "out": [{"pos": [360, 80], "id": 18, "name": "OK"}]
 }
 ```
-
+<!-->
 `````{admonition} Solution 1.1
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -81,6 +81,7 @@ Il suffit d'insérer une porte **ET**.
 ```
 ````
 `````
+<!-->
 
 ### Exercice 1.2 - Critères plus compliqués
 
@@ -115,7 +116,7 @@ On s'attend dans ce cas à ce que la sortie «OK» vaille 1.
   "out": [{"pos": [540, 160], "id": 18, "name": "OK"}]
 }
 ```
-
+<!-->
 `````{admonition} Solution 1.2
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -147,6 +148,7 @@ Il existe de multiples solutions, en voici une.
 ```
 ````
 `````
+<!-->
 
 ### Exercice 1.3 - Encodage et décodage des races
 
@@ -194,7 +196,7 @@ On a donc maintenant besoin d'un `décodeur`: en utilisant les 2 bits d'entrées
   ]
 }
 ```
-
+<!-->
 `````{admonition} Solution 1.3
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -245,7 +247,7 @@ On a donc maintenant besoin d'un `décodeur`: en utilisant les 2 bits d'entrées
 La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer toutes les portes **ET** par des portes **OU** et inversement. Le même circuit peut donc être réalisé avec des portes **OU**.
 ````
 `````
-
+<!-->
 ## 2. Binaire et décimal
 
 Dans cette partie, vous allez concevoir des circuits traduisant des nombres décimaux en nombres binaires.
@@ -273,7 +275,7 @@ Complétez le circuit pour un décodeur de touches de clavier qui a le comportem
   "wires": [[0, 6], [2, 7], [8, 11]]
 }
 ```
-
+<!-->
 `````{admonition} Solution 2.1
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -300,7 +302,7 @@ Complétez le circuit pour un décodeur de touches de clavier qui a le comportem
 Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (mais vous auriez besoin d'augmenter le nombre de bits de sortie).
 ````
 `````
-
+<!-->
 ### Exercice 2.2 - Décodeur de dé
 
 ```{image} ../media/de_6_faces.png
@@ -348,7 +350,7 @@ Pour résoudre l'exercice, il est nécessaire de trouver la fonction logique ass
   ]
 }
 ```
-
+<!-->
 `````{admonition} Solution 2.2
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -382,7 +384,7 @@ Pour résoudre l'exercice, il est conseillé de trouver la fonction logique asso
 ````
 ````
 `````
-
+<!-->
 ## 3. Commutateurs
 
 La porte XOR (OU Exclusif) peut permetre d'allumer et éteindre une lampe avec des commutateurs multiples.
@@ -407,7 +409,7 @@ Ajoutez un circuit pour qu'on puisse également l'allumer ou l'éteindre depuis 
   "wires": [[13, 10], [9, 11], [15, 12]]
 }
 ```
-
+<!-->
 `````{admonition} Solution 3
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -434,7 +436,7 @@ Ajoutez un circuit pour qu'on puisse également l'allumer ou l'éteindre depuis 
 La porte **XOR** est très utile pour créer des commutateurs. Elle permet de créer un circuit qui ne s'active que si un nombre impair d'entrées sont activées.
 ````
 `````
-
+<!-->
 ```{question}
 Comment se comporte une porte XOR prenant 3 entrées ? (A XOR B XOR C)  
 Dans quel cas la valeur de sortie sera 1 ?
@@ -483,7 +485,7 @@ Créez le circuit logique correspondant à la table de vérité suivante:
 ```
 
 Que fait ce circuit d'après vous ?
-
+<!-->
 `````{admonition} Solution 4
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -513,5 +515,5 @@ Que fait ce circuit d'après vous ?
 Ce circuit représente un additionneur 3 bits (full adder). Il permet d'additionner 3 bits A, B et C et de récupérer le résultat sur 2 bits S1 et S2.
 ````
 `````
-
+<!-->
 Si vous avez tout terminé, vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp2.html#addition-binaire" target="_blank">cette page modulo</a> qui contient des exercices plus avancés sur les additionneurs (à partir de l'exercice 10.6).
