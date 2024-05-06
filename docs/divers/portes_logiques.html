@@ -327,8 +327,34 @@
 <p>Dans cette première partie, vous allez concevoir un circuit logique qui permet de sélectionner un chien en fonction de ces différentes caractéristiques.</p>
 <section id="exercice-1-1-criteres-simples">
 <h3>Exercice 1.1 - Critères simples<a class="headerlink" href="#exercice-1-1-criteres-simples" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien à la fois <strong>petit</strong> et <strong>gentil</strong>.</p>
-<p>Les caractéristiques <strong>petit</strong> et <strong>gentil</strong> sont les valeurs logiques d’entrée pouvant valoir 0 ou 1.</p>
+<p>Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c’est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d’un chien à la fois <strong>petit</strong> <code class="docutils literal notranslate"><span class="pre">et</span></code> <strong>gentil</strong>.</p>
+<p>Voici la table de vérité associée:</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Petit</p></th>
+<th class="text-align:left head"><p>Gentil</p></th>
+<th class="text-align:left head"><p>OK</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:left"><p>1</p></td>
+<td class="text-align:left"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:left"><p>0</p></td>
+<td class="text-align:left"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:left"><p>1</p></td>
+<td class="text-align:left"><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
 <div class="logic-container" style="height: 200px;"><logic-editor mode="design" showonly="in,out,and,or,xor">
 <script type="application/json">
 {
@@ -461,7 +487,7 @@
 </tr>
 </tbody>
 </table></div>
-<p>On a donc maintenant besoin d’un décodeur: en utilisant les 2 bits d’entrées, il s’agit d’avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.</p>
+<p>On a donc maintenant besoin d’un <code class="docutils literal notranslate"><span class="pre">décodeur</span></code>: en utilisant les 2 bits d’entrées, il s’agit d’avoir un circuit qui va activer <strong>une seule des quatre sorties</strong>, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.</p>
 <div class="logic-container" style="height: 390px;"><logic-editor mode="design" showonly="in,out,and,or,xor,not">
 <script type="application/json">
 {
@@ -554,8 +580,7 @@
   "out": [{"pos": [300, 150], "orient": "s", "id": 10}, {"pos": [350, 150], "orient": "s", "id": 11}],
   "wires": [[0, 6], [2, 7], [8, 11]]
 }
-</script></logic-editor></div><p>Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (mais vous auriez besoin d’augmenter le nombre de bits de sortie).</p>
-<div class="hint admonition">
+</script></logic-editor></div><div class="hint admonition">
 <p class="admonition-title">Solution 2.1</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
 <summary class="summary-title card-header">
@@ -579,11 +604,13 @@
   },
   wires: [[0, 6], [2, 7], [8, 11], [1, 3], [2, 4], [5, 10]]
 }
-</script></logic-editor></div></div>
+</script></logic-editor></div><p class="card-text">Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (mais vous auriez besoin d’augmenter le nombre de bits de sortie).</p>
+</div>
 </details></div>
 </section>
 <section id="exercice-2-2-decodeur-de-de">
 <h3>Exercice 2.2 - Décodeur de dé<a class="headerlink" href="#exercice-2-2-decodeur-de-de" title="Lien permanent vers ce titre">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/de_6_faces.png"><img alt="../_images/de_6_faces.png" src="../_images/de_6_faces.png" style="width: 300px;"/></a>
 <p>Un dé de jeu peut afficher les nombres 1 à 6 à l’aide de 7 lampes.<br/>
 Plusieurs lampes s’allument par paire. Voici la table de vérité.</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
@@ -673,8 +700,9 @@ Plusieurs lampes s’allument par paire. Voici la table de vérité.</p>
 </tr>
 </tbody>
 </table></div>
-<p>Utilisez les portes logiques OU et ET pour créer le circuit de décodage affichant les lampes qui correspondent aux nombres 1 à 6.</p>
-<p>Le nombre binaire <span class="math notranslate nohighlight">\(b_2 b_1 b_0\)</span> doit allumer les lampes a-g pour afficher ce nombre dans la façon d’un dé à jeu standard.</p>
+<p>Utilisez les portes logiques <code class="docutils literal notranslate"><span class="pre">OU</span></code> et <code class="docutils literal notranslate"><span class="pre">ET</span></code> pour créer le circuit de décodage affichant les lampes qui correspondent aux nombres 1 à 6.</p>
+<p>Le nombre binaire <span class="math notranslate nohighlight">\(b_2 b_1 b_0\)</span> doit allumer les lampes a-g pour afficher ce nombre dans la façon d’un dé à 6 faces.<br/>
+Pour résoudre l’exercice, il est nécessaire de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie ‘a,g’ vaut 1 si et seulement si b1 ou b2 vaut 1.</p>
 <div class="logic-container" style="height: 300px;"><logic-editor showonly="in and or out.bar">
 <script type="application/json">
 {
@@ -725,7 +753,7 @@ Plusieurs lampes s’allument par paire. Voici la table de vérité.</p>
   },
   wires: [[8, 9], [26, 10], [8, 12], [26, 13], [11, 0], [11, 6], [14, 1], [14, 4], [26, 3], [26, 5], [7, 2]]
 }
-</script></logic-editor></div><p class="card-text">Pour résoudre l’exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie ‘a-g’ vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte <strong>OU</strong> pour cette sortie. On procède ensuite de la même manière pour les autres sorties.</p>
+</script></logic-editor></div><p class="card-text">Pour résoudre l’exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie ‘a,g’ vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte <strong>OU</strong> pour cette sortie. On procède ensuite de la même manière pour les autres sorties.</p>
 </div>
 </details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
@@ -783,7 +811,7 @@ Déterminez d'abord en français les conditions qui doivent être remplies pour 
 </section>
 <section id="commutateurs">
 <h2>3. Commutateurs<a class="headerlink" href="#commutateurs" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La porte XOR (OU-X) peut permetre d’allumer et éteindre une lampe avec des commutateurs multiples.</p>
+<p>La porte XOR (OU Exclusif) peut permetre d’allumer et éteindre une lampe avec des commutateurs multiples.</p>
 <p>Dans le schéma ci-dessous, on peut allumer ou éteindre la lumière dans une pièce à partir de la porte d’entrée ou de la cuisine.<br/>
 Ajoutez un circuit pour qu’on puisse également l’allumer ou l’éteindre depuis la chambre.</p>
 <div class="logic-container" style="height: 300px;"><logic-editor id="logic_xor" showonly="in out not and or xor label.rect">

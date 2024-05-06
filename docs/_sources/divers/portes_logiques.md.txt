@@ -34,9 +34,15 @@ Dans cette première partie, vous allez concevoir un circuit logique qui permet 
 
 ### Exercice 1.1 - Critères simples
 
-Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien à la fois **petit** et **gentil**.
+Concevez le circuit de manière à faire en sorte que la sortie «OK» soit allumée (c'est-à-dire, vaille 1) lorsque les 2 entrées sont réglées selon les caractéristiques d'un chien à la fois **petit** `et` **gentil**.
 
-Les caractéristiques **petit** et **gentil** sont les valeurs logiques d'entrée pouvant valoir 0 ou 1.
+Voici la table de vérité associée:
+  | Petit                 | Gentil          | OK          |
+  | :-------------------: | :---------------| :-----------|
+  | 0                     | 0               | 0           |
+  | 0                     | 1               | 0           |
+  | 1                     | 0               | 0           |
+  | 1                     | 1               | 1           |
 
 ```{logic}
 :height: 200
@@ -167,7 +173,7 @@ On va donc s'intéresser à 4 races de chiens: border collie, berger allemand, h
   | 10                     | husky           |
   | 11                     | labrador        |
 
-On a donc maintenant besoin d'un décodeur: en utilisant les 2 bits d'entrées, il s'agit d'avoir un circuit qui va activer une seule des quatre sorties, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.  
+On a donc maintenant besoin d'un `décodeur`: en utilisant les 2 bits d'entrées, il s'agit d'avoir un circuit qui va activer **une seule des quatre sorties**, celle correspondant à la race du chien représentée selon la table ci-dessus. Par exemple, si les 2 entrées valent 0, alors la sortie «border collie» doit valoir 1 et les autres sorties doivent valoir 0.  
 
 ```{logic}
 :height: 390
@@ -268,8 +274,6 @@ Complétez le circuit pour un décodeur de touches de clavier qui a le comportem
 }
 ```
 
-Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (mais vous auriez besoin d'augmenter le nombre de bits de sortie).
-
 `````{admonition} Solution 2.1
 :class: hint
 ````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
@@ -293,10 +297,15 @@ Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (m
   wires: [[0, 6], [2, 7], [8, 11], [1, 3], [2, 4], [5, 10]]
 }
 ```
+Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (mais vous auriez besoin d'augmenter le nombre de bits de sortie).
 ````
 `````
 
 ### Exercice 2.2 - Décodeur de dé
+
+```{image} ../media/de_6_faces.png
+:width: 300px
+```
 
 Un dé de jeu peut afficher les nombres 1 à 6 à l'aide de 7 lampes.  
 Plusieurs lampes s'allument par paire. Voici la table de vérité.
@@ -312,9 +321,10 @@ Plusieurs lampes s'allument par paire. Voici la table de vérité.
 | 1  | 1  | 0  | 6    |  1  |  1  |  1  | 0 |
 | 1  | 1  | 1  |      |  1  |  1  |  1  | 1 |
 
-Utilisez les portes logiques OU et ET pour créer le circuit de décodage affichant les lampes qui correspondent aux nombres 1 à 6.
+Utilisez les portes logiques `OU` et `ET` pour créer le circuit de décodage affichant les lampes qui correspondent aux nombres 1 à 6.
 
-Le nombre binaire $b_2 b_1 b_0$ doit allumer les lampes a-g pour afficher ce nombre dans la façon d'un dé à jeu standard.
+Le nombre binaire $b_2 b_1 b_0$ doit allumer les lampes a-g pour afficher ce nombre dans la façon d'un dé à 6 faces.  
+Pour résoudre l'exercice, il est nécessaire de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie 'a,g' vaut 1 si et seulement si b1 ou b2 vaut 1.  
 
 ```{logic}
 :height: 300
@@ -368,7 +378,7 @@ Le nombre binaire $b_2 b_1 b_0$ doit allumer les lampes a-g pour afficher ce nom
   wires: [[8, 9], [26, 10], [8, 12], [26, 13], [11, 0], [11, 6], [14, 1], [14, 4], [26, 3], [26, 5], [7, 2]]
 }
 ```
-Pour résoudre l'exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie 'a-g' vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte **OU** pour cette sortie. On procède ensuite de la même manière pour les autres sorties.
+Pour résoudre l'exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie 'a,g' vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte **OU** pour cette sortie. On procède ensuite de la même manière pour les autres sorties.
 ````
 ````
 `````
@@ -424,7 +434,7 @@ Déterminez d'abord en français les conditions qui doivent être remplies pour 
 
 ## 3. Commutateurs
 
-La porte XOR (OU-X) peut permetre d'allumer et éteindre une lampe avec des commutateurs multiples.
+La porte XOR (OU Exclusif) peut permetre d'allumer et éteindre une lampe avec des commutateurs multiples.
 
 Dans le schéma ci-dessous, on peut allumer ou éteindre la lumière dans une pièce à partir de la porte d'entrée ou de la cuisine.  
 Ajoutez un circuit pour qu'on puisse également l'allumer ou l'éteindre depuis la chambre.
