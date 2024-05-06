@@ -383,55 +383,6 @@ Pour résoudre l'exercice, il est conseillé de trouver la fonction logique asso
 ````
 `````
 
-<!--
-### Exercice 2.1 - Système d'alarmes pour animaux de compagnie
-
-Oublions un moment les chiens et concentrons-nous sur les systèmes d'alarme pour animaux de compagnie. Vous êtes mandaté par une entreprise pour développer un système capable de déclencher une alarme lorsque certaines conditions sont remplies.
-
-1. Analysez la table de vérité ci-dessous. Comprenez quelles sont les conditions qui doivent être remplies pour que l'alarme se déclenche.
-2. Concevez le circuit logique correspondant.
-
-| Chien | Chat | Porte ouverte | Propriétaire présent | **Alarme** |
-| :---: | :--: | :-----------: | :------------------: | :----: |
-|   0   |  0   |       0       |           0           |   0   |
-|   0   |  0   |       0       |           1           |   0   |
-|   0   |  0   |       1       |           0           |   0   |
-|   0   |  0   |       1       |           1           |   0   |
-|   0   |  1   |       0       |           0           |   0   |
-|   0   |  1   |       0       |           1           |   0   |
-|   0   |  1   |       1       |           0           |   1   |
-|   0   |  1   |       1       |           1           |   0   |
-|   1   |  0   |       0       |           0           |   0   |
-|   1   |  0   |       0       |           1           |   0   |
-|   1   |  0   |       1       |           0           |   1   |
-|   1   |  0   |       1       |           1           |   0   |
-|   1   |  1   |       0       |           0           |   0   |
-|   1   |  1   |       0       |           1           |   0   |
-|   1   |  1   |       1       |           0           |   1   |
-|   1   |  1   |       1       |           1           |   0   |
-
-Déterminez d'abord en français les conditions qui doivent être remplies pour que l'alarme se déclenche. Ensuite, concevez le circuit logique correspondant.
-
-```{logic}
-:height: 390
-:mode: design
-:showonly: and,or,xor,not
-
-{
-  "v": 5,
-  "in": [
-    {"pos": [180, 115], "id": 14, "name": "Chien"},
-    {"pos": [180, 175], "id": 15, "name": "Chat"},
-    {"pos": [180, 235], "id": 16, "name": "Porte ouverte"},
-    {"pos": [180, 290], "id": 21, "name": "Propriétaire présent"}
-  ],
-  "out": [
-    {"pos": [660, 195], "id": 22, "name": "Alarme"}
-  ]
-}
-```
--->
-
 ## 3. Commutateurs
 
 La porte XOR (OU Exclusif) peut permetre d'allumer et éteindre une lampe avec des commutateurs multiples.
