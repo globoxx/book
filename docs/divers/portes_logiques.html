@@ -366,30 +366,7 @@
 ],
   "out": [{"pos": [360, 80], "id": 18, "name": "OK"}]
 }
-</script></logic-editor></div><!-->
-<div class="hint admonition">
-<p class="admonition-title">Solution 1.1</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Il suffit d’insérer une porte <strong>ET</strong>.</p>
-<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
-<script type="application/json">
-{
-  "v": 2,
-  "in": [{"pos": [110, 50], "id": 14, "name": "Gentil", "val": 0}, {"pos": [110, 110], "id": 16, "name": "Petit", "val": 0}],
-  "out": [{"pos": [460, 80], "id": 18, "name": "OK"}],
-  "gates": [{"type": "AND", "pos": [240, 80], "in": [0, 1], "out": 2}],
-  "wires": [[2, 18], [14, 0], [16, 1]]
-}
-</script></logic-editor></div></div>
-</details></div>
-<!-->
-</section>
+</script></logic-editor></div></section>
 <section id="exercice-1-2-criteres-plus-compliques">
 <h3>Exercice 1.2 - Critères plus compliqués<a class="headerlink" href="#exercice-1-2-criteres-plus-compliques" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Les critères sont maintenant devenus plus complexes. Le chien doit remplir les conditions suivantes:</p>
@@ -418,40 +395,7 @@
   ],
   "out": [{"pos": [540, 160], "id": 18, "name": "OK"}]
 }
-</script></logic-editor></div><!-->
-<div class="hint admonition">
-<p class="admonition-title">Solution 1.2</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Il existe de multiples solutions, en voici une.</p>
-<div class="logic-container" style="height: 320px;"><logic-editor mode="tryout">
-<script type="application/json">
-{
-  "v": 2,
-  "in": [
-    {"pos": [190, 70], "id": 14, "name": "Gentil", "val": 0},
-    {"pos": [190, 130], "id": 15, "name": "Bave tout le temps", "val": 0},
-    {"pos": [190, 190], "id": 16, "name": "Petit", "val": 0},
-    {"pos": [190, 250], "id": 17, "name": "Labrador", "val": 0}
-  ],
-  "out": [{"pos": [490, 210], "id": 18, "name": "OK pour ce chien!"}],
-  "gates": [
-    {"type": "AND", "pos": [420, 210], "in": [0, 1], "out": 2},
-    {"type": "OR", "pos": [310, 220], "in": [3, 4], "out": 5},
-    {"type": "AND", "pos": [340, 120], "in": [6, 7], "out": 8},
-    {"type": "NOT", "pos": [260, 130], "in": 9, "out": 10}
-  ],
-  "wires": [[2, 18], [8, 0], [14, 6], [15, 9], [10, 7], [16, 3], [17, 4], [5, 1]]
-}
-</script></logic-editor></div></div>
-</details></div>
-<!-->
-</section>
+</script></logic-editor></div></section>
 <section id="exercice-1-3-encodage-et-decodage-des-races">
 <h3>Exercice 1.3 - Encodage et décodage des races<a class="headerlink" href="#exercice-1-3-encodage-et-decodage-des-races" title="Lien permanent vers ce titre">¶</a></h3>
 <p>L’entrée «labrador» de la partie précédente n’est pas très intéressante, car elle ne permet de modéliser qu’une seule race de chiens. Dans cette deuxième partie, on va tenter <strong>d’encoder différentes races de chien avec seulement 2 bits</strong>.</p>
@@ -507,60 +451,7 @@
     {"pos": [460, 230], "id": 5, "name": "c’est un berger allemand"}
   ]
 }
-</script></logic-editor></div><!-->
-<div class="hint admonition">
-<p class="admonition-title">Solution 1.3</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
-<script type="application/json">
-{
-  "v": 2,
-  "in": [
-    {"pos": [120, 80], "orient": "s", "id": 0, "val": 0},
-    {"pos": [160, 80], "orient": "s", "id": 1, "name": "Code de la race du chien sur 2 bits", "val": 0}
-  ],
-  "out": [
-    {"pos": [460, 190], "id": 2, "name": "c’est un border collie"},
-    {"pos": [460, 310], "id": 3, "name": "c’est un labrador"},
-    {"pos": [460, 270], "id": 4, "name": "c’est un husky"},
-    {"pos": [460, 230], "id": 5, "name": "c’est un berger allemand"}
-  ],
-  "gates": [
-    {"type": "AND", "pos": [210, 310], "in": [6, 7], "out": 8},
-    {"type": "AND", "pos": [360, 270], "in": [9, 10], "out": 11},
-    {"type": "NOT", "pos": [230, 110], "in": 12, "out": 13},
-    {"type": "NOT", "pos": [230, 160], "in": 14, "out": 15},
-    {"type": "AND", "pos": [390, 120], "in": [16, 17], "out": 18},
-    {"type": "AND", "pos": [360, 210], "in": [19, 20], "out": 21}
-  ],
-  "wires": [
-    [8, 3],
-    [1, 6],
-    [0, 7],
-    [11, 4],
-    [1, 12],
-    [0, 14],
-    [18, 2],
-    [13, 16],
-    [15, 17],
-    [21, 5],
-    [13, 9],
-    [0, 10, {"via": [[240, 280]]}],
-    [15, 19],
-    [1, 20, {"via": [[200, 220]]}]
-  ]
-}
-</script></logic-editor></div><p class="card-text">La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer toutes les portes <strong>ET</strong> par des portes <strong>OU</strong> et inversement. Le même circuit peut donc être réalisé avec des portes <strong>OU</strong>.</p>
-</div>
-</details></div>
-<!-->
-</section>
+</script></logic-editor></div></section>
 </section>
 <section id="binaire-et-decimal">
 <h2>2. Binaire et décimal<a class="headerlink" href="#binaire-et-decimal" title="Lien permanent vers ce titre">¶</a></h2>
@@ -586,36 +477,7 @@
   "out": [{"pos": [300, 150], "orient": "s", "id": 10}, {"pos": [350, 150], "orient": "s", "id": 11}],
   "wires": [[0, 6], [2, 7], [8, 11]]
 }
-</script></logic-editor></div><!-->
-<div class="hint admonition">
-<p class="admonition-title">Solution 2.1</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
-<script type="application/json">
-{
-  v: 6,
-  components: {
-    in0: {type: 'in', pos: [50, 30], id: 0, name: '1', isPushButton: true},
-    in1: {type: 'in', pos: [50, 80], id: 1, name: '2', isPushButton: true},
-    in2: {type: 'in', pos: [50, 130], id: 2, name: '3', isPushButton: true},
-    out0: {type: 'out', pos: [300, 150], orient: 's', id: 10},
-    out1: {type: 'out', pos: [350, 150], orient: 's', id: 11},
-    or0: {type: 'or', pos: [220, 40], in: [6, 7], out: 8},
-    or1: {type: 'or', pos: [200, 110], in: [3, 4], out: 5},
-  },
-  wires: [[0, 6], [2, 7], [8, 11], [1, 3], [2, 4], [5, 10]]
-}
-</script></logic-editor></div><p class="card-text">Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (mais vous auriez besoin d’augmenter le nombre de bits de sortie).</p>
-</div>
-</details></div>
-<!-->
-</section>
+</script></logic-editor></div></section>
 <section id="exercice-2-2-decodeur-de-de">
 <h3>Exercice 2.2 - Décodeur de dé<a class="headerlink" href="#exercice-2-2-decodeur-de-de" title="Lien permanent vers ce titre">¶</a></h3>
 <a class="reference internal image-reference" href="../_images/de_6_faces.png"><img alt="../_images/de_6_faces.png" src="../_images/de_6_faces.png" style="width: 300px;"/></a>
@@ -731,45 +593,7 @@ Pour résoudre l’exercice, il est nécessaire de trouver la fonction logique a
     {"type": "bar", "pos": [480, 120], "id": 6, "display": "px", "name": "g"}
   ]
 }
-</script></logic-editor></div><!-->
-<div class="hint admonition">
-<p class="admonition-title">Solution 2.2</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
-<script type="application/json">
-{
-  v: 6,
-  opts: {propagationDelay: 10},
-  components: {
-    in0: {type: 'in', pos: [60, 40], id: 7, name: 'b0', val: 1},
-    in1: {type: 'in', pos: [60, 80], id: 8, name: 'b1'},
-    in2: {type: 'in', pos: [60, 120], id: 26, name: 'b2', val: 1},
-    bar0: {type: 'bar', pos: [535, 45], id: 0, name: 'a', display: 'px'},
-    bar1: {type: 'bar', pos: [535, 85], id: 1, name: 'b', display: 'px'},
-    bar2: {type: 'bar', pos: [585, 85], orient: 's', id: 2, name: 'd', display: 'px'},
-    bar3: {type: 'bar', pos: [535, 135], id: 3, name: 'c', display: 'px'},
-    bar4: {type: 'bar', pos: [635, 85], id: 4, name: 'f', display: 'px'},
-    bar5: {type: 'bar', pos: [635, 45], id: 5, name: 'e', display: 'px'},
-    bar6: {type: 'bar', pos: [635, 135], id: 6, name: 'g', display: 'px'},
-    or0: {type: 'or', pos: [295, 130], in: [9, 10], out: 11},
-    and0: {type: 'and', pos: [295, 210], in: [12, 13], out: 14},
-  },
-  wires: [[8, 9], [26, 10], [8, 12], [26, 13], [11, 0], [11, 6], [14, 1], [14, 4], [26, 3], [26, 5], [7, 2]]
-}
-</script></logic-editor></div><p class="card-text">Pour résoudre l’exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie ‘a,g’ vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte <strong>OU</strong> pour cette sortie. On procède ensuite de la même manière pour les autres sorties.</p>
-</div>
-</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
-<!-->
-</section>
+</script></logic-editor></div></section>
 </section>
 <section id="commutateurs">
 <h2>3. Commutateurs<a class="headerlink" href="#commutateurs" title="Lien permanent vers ce titre">¶</a></h2>
@@ -790,36 +614,7 @@ Ajoutez un circuit pour qu’on puisse également l’allumer ou l’éteindre d
   "gates": [{"type": "XOR", "pos": [220, 90], "orient": "n", "in": [11, 12], "out": 13}],
   "wires": [[13, 10], [9, 11], [15, 12]]
 }
-</script></logic-editor></div><!-->
-<div class="hint admonition">
-<p class="admonition-title">Solution 3</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="logic-container" style="height: 300px;"><logic-editor mode="tryout">
-<script type="application/json">
-{
-  v: 6,
-  components: {
-    rect0: {type: 'rect', pos: [290, 120], w: 300, h: 200, color: 'yellow', strokeWidth: 2},
-    in0: {type: 'in', pos: [100, 150], id: 9, name: 'entrée'},
-    in1: {type: 'in', pos: [290, 250], orient: 'n', id: 14, name: 'chambre'},
-    in2: {type: 'in', pos: [470, 120], orient: 'w', id: 15, name: 'cuisine'},
-    bar0: {type: 'bar', pos: [300, 40], id: 10, color: 'yellow', display: 'px'},
-    xor0: {type: 'xor', pos: [190, 140], orient: 'n', in: [11, 12], out: 13},
-    xor1: {type: 'xor', pos: [245, 70], orient: 'n', in: [0, 1], out: 2},
-  },
-  wires: [[9, 11], [15, 12], [14, 1], [13, 0], [2, 10]]
-}
-</script></logic-editor></div><p class="card-text">La porte <strong>XOR</strong> est très utile pour créer des commutateurs. Elle permet de créer un circuit qui ne s’active que si un nombre impair d’entrées sont activées.</p>
-</div>
-</details></div>
-<!-->
-<div class="question"><form><div class="admonition">
+</script></logic-editor></div><div class="question"><form><div class="admonition">
 <p class="admonition-title">Question</p>
 <div class="question-content docutils">
 <p>Comment se comporte une porte XOR prenant 3 entrées ? (A XOR B XOR C)<br/>
@@ -913,38 +708,6 @@ Dans quel cas la valeur de sortie sera 1 ?</p>
   ]
 }
 </script></logic-editor></div><p>Que fait ce circuit d’après vous ?</p>
-<!-->
-<div class="hint admonition">
-<p class="admonition-title">Solution 4</p>
-<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
-<summary class="summary-title card-header">
-<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
-<script type="application/json">
-{
-  v: 6,
-  components: {
-    in0: {type: 'in', pos: [100, 115], id: 14, name: 'A'},
-    in1: {type: 'in', pos: [100, 175], id: 15, name: 'B'},
-    in2: {type: 'in', pos: [100, 235], id: 16, name: 'C'},
-    out0: {type: 'out', pos: [660, 150], id: 22, name: 'S1'},
-    out1: {type: 'out', pos: [660, 195], id: 23, name: 'S2'},
-    and0: {type: 'and', pos: [370, 50], in: [0, 1], out: 2},
-    and1: {type: 'and', pos: [370, 110], in: [3, 4], out: 5},
-    and2: {type: 'and', pos: [370, 170], in: [6, 7], out: 8},
-    or0: {type: 'or', pos: [540, 110], in: [12, 13, 17], out: 18, bits: 3},
-    xor0: {type: 'xor', pos: [385, 280], in: '24-26', out: 27, bits: 3},
-  },
-  wires: [[14, 0], [15, 1], [14, 3], [16, 4], [15, 6], [16, 7], [2, 12], [5, 13], [8, 17], [14, 24], [15, 25], [16, 26], [27, 23], [18, 22]]
-}
-</script></logic-editor></div><p class="card-text">Ce circuit représente un additionneur 3 bits (full adder). Il permet d’additionner 3 bits A, B et C et de récupérer le résultat sur 2 bits S1 et S2.</p>
-</div>
-</details></div>
-<!-->
 <p>Si vous avez tout terminé, vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp2.html#addition-binaire" target="_blank">cette page modulo</a> qui contient des exercices plus avancés sur les additionneurs (à partir de l’exercice 10.6).</p>
 </section>
 </section>
