@@ -90,7 +90,10 @@ def entrer_foret():
         entrer_grotte()
 
 def arriver_riviere():
+    global argent # cette instruction est nécessaire pour pouvoir modifier la variable argent au sein de la fonction
     print("Vous arrivez à la rivière.")
+    print("Vous trouvez une pépite d'or ! Argent + 100")
+    argent = argent + 100
     print("Vous pouvez voir une canne à pêche sur la berge.")
     choix = poser_question("Voulez-vous ramasser la canne à pêche ?", ["oui", "non"])
     if choix == "oui":
@@ -151,6 +154,7 @@ def entrer_salle_secrete():
 
 # Début de l'aventure
 inventaire = []
+argent = 0
 
 print("En vous balladant un peu trop loin de chez vous, vous avez fini par vous perdre.")
 print("Retrouvez le chemin de la maison.")
