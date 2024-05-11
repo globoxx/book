@@ -302,7 +302,7 @@
           <section class="tex2jax_ignore mathjax_ignore" id="portes-logiques">
 <span id="divers-portes-logiques"></span><h1>Portes logiques<a class="headerlink" href="#portes-logiques" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Dans cette activité, vous allez concevoir des circuits logiques à l’aide de portes logiques.</p>
-<p>Voici par exemple un circuit logique qui permet de calculer la valeur de sortie d’une porte <strong>OU-EXCLUSIF</strong> (XOR) en fonction de ses deux entrées.</p>
+<p>Voici par exemple un circuit logique qui permet de calculer la valeur de sortie d’une porte <strong>OU-Exclusif</strong> (XOR) en fonction de ses 2 entrées.</p>
 <div class="logic-container" style="height: 160px;"><logic-editor mode="tryout">
 <script type="application/json">
 {
@@ -321,6 +321,20 @@
     {"type": "AND", "pos": [360, 50], "in": [56, 57], "out": 58}
   ],
   "wires": [[0, 48], [47, 49], [0, 51], [47, 52], [53, 54], [50, 56], [55, 57], [58, 59]]
+}
+</script></logic-editor></div><p>Pour rappel, le <strong>OU-Exclusif</strong> (XOR) sort un 1 en sortie si et seulement si il y a un nombre impair de 1 en entrée. Gardez le curseur de la souris sur cette porte XOR à 3 entrées pour voir sa table de vérité.</p>
+<div class="logic-container" style="height: 160px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [110, 90], id: 0},
+    in1: {type: 'in', pos: [110, 130], id: 1},
+    in2: {type: 'in', pos: [110, 170], id: 2},
+    out0: {type: 'out', pos: [295, 130], id: 3},
+    xor0: {type: 'xor', pos: [215, 130], in: '7-9', out: 10, bits: 3},
+  },
+  wires: [[10, 3], [0, 7], [1, 8], [2, 9]]
 }
 </script></logic-editor></div><section id="selecteur-de-chien">
 <h2>1. Sélecteur de chien 🐶<a class="headerlink" href="#selecteur-de-chien" title="Lien permanent vers ce titre">¶</a></h2>
@@ -804,7 +818,7 @@ Ajoutez un circuit pour qu’on puisse également l’allumer ou l’éteindre d
   },
   wires: [[9, 11], [15, 12], [14, 1], [13, 0], [2, 10]]
 }
-</script></logic-editor></div><p class="card-text">La porte <strong>XOR</strong> est très utile pour créer des commutateurs. Elle permet de créer un circuit qui ne s’active que si un nombre impair d’entrées sont activées.</p>
+</script></logic-editor></div><p class="card-text">La porte <strong>XOR</strong> est très utile pour créer des commutateurs. Elle permet de créer un circuit qui ne s’active que si un nombre impair d’entrées sont activées. Il aurait aussi été possible de résoudre cet exercice en utilisant une unique porte XOR à 3 entrées.</p>
 </div>
 </details></div>
 <div class="question"><form><div class="admonition">
@@ -823,8 +837,8 @@ Dans quel cas la valeur de sortie sera 1 ?</p>
 </div>
 </div>
 </form></div></section>
-<section id="challenge-exercice-4-table-mystere">
-<h2>(Challenge) Exercice 4 - Table mystère<a class="headerlink" href="#challenge-exercice-4-table-mystere" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="table-mystere-challenge">
+<h2>4. Table mystère (Challenge)<a class="headerlink" href="#table-mystere-challenge" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Créez le circuit logique correspondant à la table de vérité suivante:</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
@@ -900,7 +914,7 @@ Dans quel cas la valeur de sortie sera 1 ?</p>
     {"pos": [660, 195], "id": 23, "name": "S2"}
   ]
 }
-</script></logic-editor></div><p>Que fait ce circuit d’après vous ?</p>
+</script></logic-editor></div><p>Que fait ce circuit d’après vous ? Plus précisément, quelle opération fait-il ?</p>
 <div class="hint admonition">
 <p class="admonition-title">Solution 4</p>
 <details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
@@ -996,7 +1010,7 @@ Dans quel cas la valeur de sortie sera 1 ?</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#commutateurs">3. Commutateurs</a></li>
-<li><a class="reference internal" href="#challenge-exercice-4-table-mystere">(Challenge) Exercice 4 - Table mystère</a></li>
+<li><a class="reference internal" href="#table-mystere-challenge">4. Table mystère (Challenge)</a></li>
 </ul>
 </li>
 </ul>

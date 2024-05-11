@@ -4,7 +4,7 @@
 
 Dans cette activité, vous allez concevoir des circuits logiques à l'aide de portes logiques.
 
-Voici par exemple un circuit logique qui permet de calculer la valeur de sortie d'une porte **OU-EXCLUSIF** (XOR) en fonction de ses deux entrées.
+Voici par exemple un circuit logique qui permet de calculer la valeur de sortie d'une porte **OU-Exclusif** (XOR) en fonction de ses 2 entrées.
 
 ```{logic}
 :height: 160
@@ -25,6 +25,24 @@ Voici par exemple un circuit logique qui permet de calculer la valeur de sortie 
     {"type": "AND", "pos": [360, 50], "in": [56, 57], "out": 58}
   ],
   "wires": [[0, 48], [47, 49], [0, 51], [47, 52], [53, 54], [50, 56], [55, 57], [58, 59]]
+}
+```
+
+Pour rappel, le **OU-Exclusif** (XOR) sort un 1 en sortie si et seulement si il y a un nombre impair de 1 en entrée. Gardez le curseur de la souris sur cette porte XOR à 3 entrées pour voir sa table de vérité.
+
+```{logic}
+:height: 160
+:mode: tryout
+{
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [110, 90], id: 0},
+    in1: {type: 'in', pos: [110, 130], id: 1},
+    in2: {type: 'in', pos: [110, 170], id: 2},
+    out0: {type: 'out', pos: [295, 130], id: 3},
+    xor0: {type: 'xor', pos: [215, 130], in: '7-9', out: 10, bits: 3},
+  },
+  wires: [[10, 3], [0, 7], [1, 8], [2, 9]]
 }
 ```
 
@@ -431,7 +449,7 @@ Ajoutez un circuit pour qu'on puisse également l'allumer ou l'éteindre depuis 
   wires: [[9, 11], [15, 12], [14, 1], [13, 0], [2, 10]]
 }
 ```
-La porte **XOR** est très utile pour créer des commutateurs. Elle permet de créer un circuit qui ne s'active que si un nombre impair d'entrées sont activées.
+La porte **XOR** est très utile pour créer des commutateurs. Elle permet de créer un circuit qui ne s'active que si un nombre impair d'entrées sont activées. Il aurait aussi été possible de résoudre cet exercice en utilisant une unique porte XOR à 3 entrées.
 ````
 `````
 
@@ -448,7 +466,7 @@ Dans quel cas la valeur de sortie sera 1 ?
 De manière générale, la porte XOR est un détecteur de parité (pair/impair). La sortie vaut 1 seuelement si un nombre impair d'entrées valent 1 (ce qui est une propriété extrêmement utile).
 ```
 
-## (Challenge) Exercice 4 - Table mystère
+## 4. Table mystère (Challenge)
 
 Créez le circuit logique correspondant à la table de vérité suivante:
 
@@ -482,7 +500,7 @@ Créez le circuit logique correspondant à la table de vérité suivante:
 }
 ```
 
-Que fait ce circuit d'après vous ?
+Que fait ce circuit d'après vous ? Plus précisément, quelle opération fait-il ?
 
 `````{admonition} Solution 4
 :class: hint
