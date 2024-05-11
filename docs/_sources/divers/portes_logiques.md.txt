@@ -32,7 +32,7 @@ Pour rappel, le **OU-Exclusif** (XOR) sort un 1 en sortie si et seulement si il 
 
 ```{logic}
 :height: 160
-:mode: tryout
+:mode: connect
 {
   v: 6,
   components: {
