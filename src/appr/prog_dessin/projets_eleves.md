@@ -1,6 +1,6 @@
 (prog_dessin.projets_eleves)=
 
-# Projets d'élèves
+# Projets de dessin d'élèves
 
 ## 2023 - 2024
 

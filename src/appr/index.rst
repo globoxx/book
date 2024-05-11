@@ -37,6 +37,7 @@ Bienvenue sur la plateforme de TP d'informatique !
     prog_dessin/projets_eleves
     prog_dessin/aventure
     prog_dessin/projet2
+    prog_dessin/projets_eleves2
 
 
 .. toctree::
