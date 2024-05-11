@@ -36,11 +36,11 @@ Pour rappel, le **OU-Exclusif** (XOR) sort un 1 en sortie si et seulement si il 
 {
   v: 6,
   components: {
-    in0: {type: 'in', pos: [110, 90], id: 0},
-    in1: {type: 'in', pos: [110, 130], id: 1},
-    in2: {type: 'in', pos: [110, 170], id: 2},
-    out0: {type: 'out', pos: [295, 130], id: 3},
-    xor0: {type: 'xor', pos: [215, 130], in: '7-9', out: 10, bits: 3},
+    in0: {type: 'in', pos: [40, 30], id: 0},
+    in1: {type: 'in', pos: [40, 70], id: 1},
+    in2: {type: 'in', pos: [40, 110], id: 2},
+    out0: {type: 'out', pos: [225, 70], id: 3},
+    xor0: {type: 'xor', pos: [245, 70], in: '7-9', out: 10, bits: 3},
   },
   wires: [[10, 3], [0, 7], [1, 8], [2, 9]]
 }
