@@ -1,4 +1,4 @@
-(divers.projets_eleves2)=
+(prog_dessin.projets_eleves2)=
 
 # Projets d'histoire interactive d'élèves
 
