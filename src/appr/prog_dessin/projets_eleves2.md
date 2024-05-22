@@ -8,6 +8,18 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 
 ### 1M01
 
+{download}`Diogo et Marvellous<../data/projets_eleves/histoires_interactives/Diogo_Marvellous.py>`
+
+{download}`Jay-Dan<../data/projets_eleves/histoires_interactives/Jay-Dan.py>`
+
+{download}`Johannes<../data/projets_eleves/histoires_interactives/Johannes.py>`
+
+{download}`Nalo et Mylan<../data/projets_eleves/histoires_interactives/Nalo_Mylan.py>`
+
+{download}`Sébastien et Gabriel<../data/projets_eleves/histoires_interactives/Sebastien_Gabriel.py>`
+
+{download}`Yehia et Mio<../data/projets_eleves/histoires_interactives/Yehia_Mio.py>`
+
 ### 1M04
 
 {download}`Emile et Valentin<../data/projets_eleves/histoires_interactives/Emile_Valentin.py>`
