@@ -12,6 +12,18 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 
 ### 1M05
 
+{download}`Corto<../data/projets_eleves/histoires_interactives/Corto.py>`
+
+{download}`Luan et Fatema<../data/projets_eleves/histoires_interactives/Luan_Fatema.py>`
+
+{download}`Lucile<../data/projets_eleves/histoires_interactives/Lucile.py>`
+
+{download}`Manon et Julia<../data/projets_eleves/histoires_interactives/Manon_Julia.py>`
+
+{download}`Nina et Dimitri<../data/projets_eleves/histoires_interactives/Nina_Dimitri.py>`
+
+{download}`Pauline et Marie-Caroline<../data/projets_eleves/histoires_interactives/Pauline_Marie-Caroline.py>`
+
 ### 1M07
 
 {download}`Arda<../data/projets_eleves/histoires_interactives/Arda.py>`
