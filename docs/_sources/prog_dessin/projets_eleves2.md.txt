@@ -10,6 +10,14 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 
 ### 1M04
 
+{download}`Emile et Valentin<../data/projets_eleves/histoires_interactives/Emile_Valentin.py>`
+
+{download}`Jessie et Soline<../data/projets_eleves/histoires_interactives/Jessie_Soline.py>`
+
+{download}`Lina<../data/projets_eleves/histoires_interactives/Lina.zip>`
+
+{download}`Ninon et Délia<../data/projets_eleves/histoires_interactives/Ninon_Delia.py>`
+
 ### 1M05
 
 {download}`Corto<../data/projets_eleves/histoires_interactives/Corto.py>`
