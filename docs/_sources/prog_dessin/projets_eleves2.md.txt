@@ -33,3 +33,13 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 {download}`Magali et Emma<../data/projets_eleves/histoires_interactives/Magali_Emma.py>`
 
 {download}`Yassine et Radwan<../data/projets_eleves/histoires_interactives/Yassine_Radwan.py>`
+
+## 2C02
+
+{download}`Elise et Riyad<../data/projets_eleves/histoires_interactives/Elise_Riyad.py>`
+
+{download}`Leticia<../data/projets_eleves/histoires_interactives/Leticia.py>`
+
+{download}`Luisa et Beatriz<../data/projets_eleves/histoires_interactives/Luisa_Beatriz.zip>`
+
+{download}`Matteo et Pablo<../data/projets_eleves/histoires_interactives/Matteo_Pablo.py>`
