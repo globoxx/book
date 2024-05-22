@@ -66,7 +66,7 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 
 {download}`Yassine et Radwan<../data/projets_eleves/histoires_interactives/Yassine_Radwan.py>`
 
-## 2C02
+### 2C02
 
 {download}`Elise et Riyad<../data/projets_eleves/histoires_interactives/Elise_Riyad.py>`
 
