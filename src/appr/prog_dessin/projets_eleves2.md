@@ -44,6 +44,18 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 
 {download}`Pauline et Marie-Caroline<../data/projets_eleves/histoires_interactives/Pauline_Marie-Caroline.py>`
 
+{download}`Arthur et Gabriel<../data/projets_eleves/histoires_interactives/Arthur_Gabriel.py>`
+
+{download}`Eliott et Nathan<../data/projets_eleves/histoires_interactives/Eliott_Nathan.py>`
+
+{download}`Eva<../data/projets_eleves/histoires_interactives/Eva.py>`
+
+{download}`Isaac<../data/projets_eleves/histoires_interactives/Isaac.py>`
+
+{download}`Méline<../data/projets_eleves/histoires_interactives/Meline.py>`
+
+{download}`Timothée<../data/projets_eleves/histoires_interactives/Timothee.py>`
+
 ### 1M07
 
 {download}`Arda<../data/projets_eleves/histoires_interactives/Arda.py>`
