@@ -42,6 +42,14 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 
 {download}`Ninon et Délia<../data/projets_eleves/histoires_interactives/Ninon_Delia.py>`
 
+{download}`Axel et Dorian<../data/projets_eleves/histoires_interactives/Axel_Dorian.py>`
+
+{download}`Kilian et Marco<../data/projets_eleves/histoires_interactives/Kilian_Marco.py>`
+
+{download}`Mariana et Eva<../data/projets_eleves/histoires_interactives/Mariana_Eva.py>`
+
+{download}`Omar et Gaétane<../data/projets_eleves/histoires_interactives/Omar_Gaetane.py>`
+
 ### 1M05
 
 {download}`Corto<../data/projets_eleves/histoires_interactives/Corto.py>`
@@ -63,6 +71,8 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 {download}`Eva<../data/projets_eleves/histoires_interactives/Eva.py>`
 
 {download}`Isaac<../data/projets_eleves/histoires_interactives/Isaac.py>`
+
+{download}`Juliette et Tania<../data/projets_eleves/histoires_interactives/Juliette_Tania.py>`
 
 {download}`Méline<../data/projets_eleves/histoires_interactives/Meline.py>`
 
