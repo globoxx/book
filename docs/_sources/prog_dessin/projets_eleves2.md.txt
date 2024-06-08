@@ -20,6 +20,18 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 
 {download}`Yehia et Mio<../data/projets_eleves/histoires_interactives/Yehia_Mio.py>`
 
+{download}`Ana et Rania<../data/projets_eleves/histoires_interactives/Ana_Rania.py>`
+
+{download}`Ella et Adeline<../data/projets_eleves/histoires_interactives/Ella_Adeline.py>`
+
+{download}`Julian<../data/projets_eleves/histoires_interactives/Julian.py>`
+
+{download}`Nathan et Arthur<../data/projets_eleves/histoires_interactives/Nathan_Arthur.zip>`
+
+{download}`Olivier et Ashraaf<../data/projets_eleves/histoires_interactives/Olivier_Ashraaf.py>`
+
+{download}`Zafir<../data/projets_eleves/histoires_interactives/Zafir.zip>`
+
 ### 1M04
 
 {download}`Emile et Valentin<../data/projets_eleves/histoires_interactives/Emile_Valentin.py>`
