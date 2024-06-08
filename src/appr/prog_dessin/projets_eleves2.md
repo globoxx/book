@@ -42,7 +42,7 @@ Si votre navigateur (ex: Chrome) bloque le téléchargement de fichiers python p
 
 {download}`Ninon et Délia<../data/projets_eleves/histoires_interactives/Ninon_Delia.py>`
 
-{download}`Axel et Dorian<../data/projets_eleves/histoires_interactives/Axel_Dorian.py>`
+{download}`Axel et Dorian<../data/projets_eleves/histoires_interactives/Axel_Dorian.zip>`
 
 {download}`Kilian et Marco<../data/projets_eleves/histoires_interactives/Kilian_Marco.py>`
 
