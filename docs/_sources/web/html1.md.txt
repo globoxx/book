@@ -108,6 +108,7 @@ Voici quelques exemples:
 - `<title> ... </title>`: Titre de la page (s'affiche dans l'onglet)
 - `<img ...>`: Image
 - `<p> ... </p>`: Paragraphe
+- `<h1> ... </h1>`: Titre de niveau 1 (gros titre)
 
 ```{admonition} Remarque
 :class: hint
@@ -271,11 +272,11 @@ Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot
 
 ```{admonition} Exercice récapitulatif 1
 :class: note
-Ecrivez la page web principale du site `champignons.ch`. dans un fichier nommé `champignons.html`.  
+Ecrivez la page web principale du site `jo2024.ch`. dans un fichier nommé `jo2024.html`.  
 Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:
-- Le titre "Champignons" qui doit apparaître dans l'onglet du navigateur.
-- Au moins 3 paragraphes de texte.
-- Une image de champignon entre 2 paragraphes.
+- Le titre "Jeux Olympiques 2024" qui doit apparaître dans l'onglet du navigateur.
+- Au moins 3 paragraphes de texte de votre choix.
+- Une image des jeux olympiques de votre choix entre 2 paragraphes.
 - Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web).
 - Un commentaire indiquant le site où vous avez trouvé la balise permettant de mettre un mot en gras.
 

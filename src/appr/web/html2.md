@@ -220,13 +220,13 @@ Pour Google Maps, ouvrez le menu en haut à gauche de la page et cliquez sur "Pa
 
 `````{admonition} Exercice 4
 :class: note
-Reprenez votre page sur les champignons (`champignons.html`) et ajoutez 2 iframe. Une comportant une vidéo sur les champignons et une seconde affichant une carte afin de pouvoir partir à la chasse plus facilement.
+Reprenez votre page sur les jeux olympiques (`jo2024.html`) et ajoutez 2 iframe. Une comportant une vidéo sur les jeux et une seconde affichant une carte indiquant l'endroit d'une épreuve.
 
 ````{dropdown} Solution
 ```{code-block} html
-<iframe width="1257" height="707" src="https://www.youtube.com/embed/l7udttS73b4" title="Les champignons nous gouvernent-ils ? | 42, la réponse à presque tout | ARTE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1257" height="707" src="lien vers votre vidéo" title="titre de la vidéo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1632.458353780154!2d6.587522971164904!3d46.51886278094501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sch!4v1693984746042!5m2!1sfr!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="source google map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 ```
 ````
 `````

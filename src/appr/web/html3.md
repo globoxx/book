@@ -217,12 +217,12 @@ Vous êtes libre sur le contenu mais la page principale doit contenir les élém
 - Un lien vers une page `contact.html`.
 
 La page `galerie.html` contient:
-- Un titre "Galerie".
+- Un titre principal (h1) "Galerie".
 - Quelques-unes de vos meilleures photographies (trouvées sur Internet mais libres de droit) (au moins 3 photos).
 - Un lien pour retourner à l'accueil.
 
 La page `contact.html` contient:
-- Un titre "Contact".
+- Un titre principal (h1) "Contact".
 - Une liste à puce avec votre adresse mail (fausse), un numéro de téléphone (faux) et un bouton "Contactez-moi" (à vous de chercher comment ajouter un bouton en html).
 - Un lien pour retourner à l'accueil.
 
