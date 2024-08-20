@@ -1,0 +1,1386 @@
+.titreinfo {
+    background-color: rgb(51, 57, 65);
+    color: rgb(135, 135, 29);
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.bodyinfo{
+    background-color: rgb(84, 95, 125);
+    
+}
+.info{
+    background-color: rgb(51, 57, 65);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.conseil{
+    background-color: rgb(51, 57, 65);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.listesanspuce{
+  list-style: none;
+}
+.contacttitre{
+  text-align: center;
+}
+.fondateur{
+    background-color: rgb(51, 57, 65);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.contact1{
+  background-color: rgb(35, 70, 71);
+  color: rgb(255, 255, 255);
+  padding: 50px;
+  margin: 10px;
+  list-style: none;
+  border-radius: 10px;
+  text-align: left;
+}
+.conteneurcontact{
+  display: flex;
+  justify-content:space-evenly;
+}
+
+
+.imagerando img{
+    border-radius: 50px;
+    padding: 30px;
+    margin: 20px;
+}
+.conteneur2info{
+  text-align: center;
+  background-color: rgb(51, 57, 65);
+    color: rgb(255, 255, 255);
+    padding: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+.conteneurinfo{
+    justify-content: center;
+    display: flex;
+    
+    
+}
+
+.conteneur5logo{
+    display: flex;
+    
+    justify-content:center;
+
+}
+
+
+.conseilshop{
+  background-color:#0b0c0f;
+  padding: 20px;
+  margin: 20px;
+  color: white ;
+  border-radius: 20px;
+  text-align: left;
+  font-family:Arial
+}
+a{
+    color:rgb(137, 132, 163);
+    text-decoration: none;
+}
+
+.bodych{
+    background-color: rgb(108, 69, 93);
+}
+.titrech{
+    background-color: rgb(67, 48, 85);
+    color: rgb(11, 169, 208);
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 180px;
+    border-radius: 10px;
+
+}
+.introch{
+    background-color: rgb(67, 48, 85);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    margin-left: 180px;
+
+}
+.descrich{
+    background-color: rgb(67, 48, 85);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.montech{
+    background-color: rgb(29, 24, 33);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.descech{
+    background-color: rgb(29, 24, 33);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.transpoch{
+    background-color: rgb(29, 24, 33);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.photoch{
+    background-color: rgb(29, 24, 33);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+   justify-content: center;
+}
+.photoch img{
+    border-radius: 40px;
+    padding: 30px;
+    margin: 20px;
+}
+
+
+.conteneurch{
+    display: flex;
+    margin-left: 180px;
+}
+
+.remarch{
+    background-color: rgb(67, 48, 85);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.introch2{
+    background-color: rgb(29, 24, 33);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+   
+    border-radius: 10px;
+}
+.remarch2{
+    background-color: rgb(29, 24, 33);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.infopratich{
+    background-color: rgb(67, 48, 85);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    margin-left: 180px;
+    
+}
+.recommandation{
+    background-color: rgb(29, 24, 33);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    margin-right: 1000px;
+
+}
+
+.difficulté{
+    background-color: rgb(29, 24, 33);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    margin-right: 1000px;
+    
+}
+
+.conteneur2{
+    background-color: rgb(67, 48, 85);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    margin-left: 180px;
+}
+
+.conteneurpiclogo{
+    background-color: rgb(67, 48, 85);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.rouge{
+    color: rgb(252, 3, 3);
+}
+.bodyindex{
+    background-color: rgb(47, 67, 67);
+    
+}
+
+.menu{
+    background-color: #404040;
+    padding: 10px;
+    position: fixed;
+    height: 100%;
+    top:0px;
+    left:0px;
+   font-family: Arial;
+  }
+
+.menuliste {
+    list-style: none;
+    padding-left: 0;
+   font-family: Arial;
+  }
+.elemmenu {
+   margin:15px;
+  margin-bottom:30px;
+   font-family: Arial;
+  }
+.menulien {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+     font-family: Arial;
+  }
+.menulien:hover {
+    background-color: #949494;
+    padding:10px;
+   padding-right:50px;
+  }
+
+.sousmenu {
+  list-style: none;
+   margin-top:10px;
+   
+  }
+.menulien2 {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+   font-family: Arial;
+ 
+  }
+.menulien2:hover {
+    background-color:#a2b135;
+    padding:10px;
+  
+  }
+
+
+  .cabanelogo{
+    
+    font-family:Brush Script MT;
+    text-align:center;
+    padding:1px;
+    font-size: 1.3em;
+    margin: 5px;
+    
+  }
+
+  .conteneur2logo{
+    display: flex;
+    background-color:#be710b;
+    justify-content:center;
+
+  }
+  .logo{
+    
+    
+    text-align:center;
+    padding:15px;
+    font-size: 1.3em;
+    margin: 5px;
+  }
+  
+  
+  
+  
+  .titrecabane{
+    background-color:#0b0c0f;
+    color: white ;
+    text-align: center;
+    margin: 7px;
+    margin-right: 700px;
+    padding:7px;
+    font-family:Tahoma;
+    
+  }
+  
+  .bodycabane1{
+    background-color:#0b0c0f;
+    padding-right:30px;
+    margin-left:160px;
+  }
+  
+  .bodycabane2{
+    padding:7px;
+    background-color:white;
+    
+  }
+  
+  .introtraverse1{
+    background-color:#0b0c0f;
+    padding: 7px;
+    margin: 7px;
+    color: white ;
+    text-align: left;
+    font-family:Arial;
+    
+  }
+  
+  .fichetechniquetraverse{
+     background-color:#0b0c0f;
+    padding: 7px;
+    margin: 7px;
+    color: white ;
+    text-align: left;
+    font-family:Arial;
+    
+  }
+  
+  .conteneurtraverse1{
+    display:flex;
+  }
+  
+  .jour12{
+    background-color:#474747;
+    font-family:Arial;
+    padding: 7px;
+    margin: 7px;
+    color: white ;
+    text-align: center;
+    
+  }
+  
+  .jour22{
+    background-color:#474747;
+    padding: 7px;
+    margin: 7px;
+    color: white ;
+    text-align: center;
+    font-family:Arial;
+  }
+  
+  .finishtraverse{
+    background-color:#999900;
+    padding: 7px;
+    margin: 7px;
+    margin-left: 700px;
+    color: white ;
+    text-align: center;
+    font-family:Verdana ;
+  }
+  .conteneurtraverse10{
+    background-color: rgb(48, 85, 71);
+    color: rgb(255, 255, 255);
+    padding: 7px;
+    margin: 7px;
+    
+    
+}
+.phototraverse{
+  background-color: rgb(29, 24, 33);
+  padding: 7px;
+  margin: 7px;
+  
+  display: flex;
+ justify-content: space-evenly;
+}
+
+.phototraverse img{
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px;
+}
+.photo1traverse{
+  margin-top: 50px;
+}
+  
+  
+  .introtraverse{
+    background-color:#474747;
+    padding: 7px;
+    margin: 7px;
+    margin-right: 650px;
+    color: white ;
+    text-align: center;
+    font-family:Verdana ;
+    
+  }
+
+  .titreconseil{
+     background-image: url(photos/photo42.jpg);
+     font-size: 1.3em;
+    color:black ;
+    text-align: center;
+    margin: 7px;
+    background-size: length;
+    margin-right:700px;
+    padding:50px;
+    font-family:Tahoma;
+    
+  }
+  
+  .bodyconseil5{
+    background-color:#372544;
+  }
+  .introconseil{
+    background-color:#372544;
+      padding: 7px;
+      margin: 7px;
+      
+      font-family:Arial;
+  }
+  .bodyconseil6{
+    background-color:#0b0c0f;
+    padding: 7px;
+      margin: 7px;
+  }
+  .securiteavalanche{
+    
+    background-color:#372544;
+    padding: 7px;
+      margin: 7px;
+  }
+  .photodva{
+    margin-top:20px;
+    margin-left:40px;
+  }
+  .titreavalanche{ 
+   text-align: center;
+    padding: 7px;
+      margin: 7px;
+    color:white ;
+    }
+  .introsecurite{
+    background-color:#0b0c0f;
+    padding: 7px;
+      margin: 7px;
+    color:white ;
+  }
+  .dva{
+     background-color:#ffffff;
+    padding: 7px;
+      margin: 7px;
+    color:rgb(0, 0, 0) ;
+    
+    text-align:left;
+  }
+  .sonde{
+     background-color:#ffffff;
+    padding: 7px;
+      margin: 7px;
+    color:rgb(0, 0, 0) ;
+   
+    text-align:left;
+  }
+
+  .pelle{
+    background-color:#ffffff;
+    padding: 7px;
+      margin: 7px;
+    color:rgb(0, 0, 0) ;
+    
+    text-align:left;
+  }
+ 
+  
+  .spandva{
+    font-weight: bold;
+  }
+  
+  .nommodels{
+    font-style: italic;
+  }
+  .spandva1{
+     color:green;
+  }
+
+  .bodymatos{
+    background-color:#292f38;
+  }
+  
+  .bodymatos2{
+    background-color:#2F4F4F;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    
+    
+  }
+  
+  .titrematos{
+    background-color:#0b0c0f;
+    padding: 20px;
+    margin: 20px;
+    color: white ;
+    border-radius: 20px;
+    text-align: center;
+    font-family:Tahoma;
+   
+  } 
+  
+  .intromatos{
+    background-color:#0b0c0f;
+    padding: 20px;
+    margin: 20px;
+    color: white ;
+    border-radius: 20px;
+    text-align:left;
+    font-family:Arial
+  }
+  
+  .matos2{
+    background-color:#0b0c0f;
+    padding: 20px;
+    margin: 20px;
+    color: white ;
+    border-radius: 20px;
+    text-align: left;
+    font-family:Arial
+  }
+  
+  .marque {
+    font-style: italic;
+    
+  }
+  
+  .gore-tex{
+    background-color:#0b0c0f;
+    padding: 20px;
+    margin: 20px;
+    color: white ;
+    border-radius: 20px;
+    text-align: left;
+    font-family:Arial
+  }
+  
+  .mips{
+    background-color:#0b0c0f;
+    padding: 20px;
+    margin: 20px;
+    color: white ;
+    border-radius: 20px;
+    text-align: left;
+    font-family:Arial
+  }
+  
+  .conteneurmatos{
+    display:flex;
+  }
+
+  .bodych{
+    background-color:#0f1a3c;
+  }
+  
+
+  .bodyconseil1000{
+    margin-left: 160px;
+  }
+  
+  
+  .bodymatos1000{
+    margin-left: 160px;
+  }
+
+  .conteneurdva{
+    display:flex;
+    justify-content: center;
+    background-color:#ffffff;
+    margin-right:200px;
+  }
+  
+  .conteneursonde{
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color:#ffffff;
+    margin-right:200px;
+  }
+
+  .conteneurpelle{
+    display:flex;
+    justify-content: center;
+    background-color:#ffffff;
+    margin-top: 20px;
+    margin-right:200px;
+  }
+
+  .bodyindex{
+    background-color: black;
+
+
+  }
+
+  .bodyindex2{
+    background-color: rgb(5, 5, 5);
+    
+    
+    display:flex;
+  }
+  .photoindex1{
+    padding:30px;
+    margin-left: 160px;
+    margin-bottom: 190px;
+  }
+
+  .photoindex2{
+    
+    padding:30px;
+   
+  }
+.photoindex1000{
+  margin-top: 17px;
+  margin-bottom: 50px;
+
+  
+}
+.index1000{
+  color: #c6b113;
+  font-family:Tahoma;
+  font-size: 4.0em;
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+.grosspanindex{
+  font-weight: bold;
+}
+
+
+.photoindex2000{
+  
+  margin-bottom: 20px;
+}
+
+.conteneurfix10{
+  display:flex;
+  font-family:arial;
+  background-color:white;
+   border: 5px double black;
+ text-align:left;
+   margin:7px;
+  padding:7px;
+
+}
+.body2fix100{
+  margin-left:160px
+}
+.pivot{
+   text-align:center;
+   background-color:#4d4d4d;
+  margin:10px;
+  padding:10px;
+  font-family:arial;
+}
+
+.bodyideefix{
+   background-color:black;
+}
+.titreidee{
+  padding:10px;
+  background-color:#b8860b ;
+   text-align:left;
+   font-family:Tahoma;
+}
+
+.conteneurfix20{
+  display:flex;
+  font-family:arial;
+  background-color:white;
+   border: 5px double black;
+ text-align:left;
+   margin:7px;
+  padding:7px;
+}
+
+.salomon{
+   text-align:center;
+   background-color:#4d4d4d;
+  margin:10px;
+  padding:10px;
+  font-family:arial;
+}
+
+.photoshift{
+  margin:40px;
+}
+.photoshift2{
+  margin:40px;
+  margin-top:110px;
+}
+.fixshift{
+  margin-top:20px;
+}
+
+.conteneurfix30{
+  display:flex;
+  font-family:arial;
+  background-color:white;
+   border: 5px double black;
+ text-align:left;
+   margin:7px;
+  padding:7px;
+}
+.dynafit{
+   text-align:center;
+   background-color:#4d4d4d;
+  margin:10px;
+  padding:10px;
+  font-family:arial;
+}
+.photoradical1{
+  margin:40px;
+  margin-top:10px;
+}
+.photoradical2{
+  margin:40px;
+  margin-top:10px;
+}
+.photoradicalaction{
+  margin-left:40px;
+   margin-right:40px;
+}
+.photoradicalaction2{
+  margin-left:40px;
+   margin-right:40px;
+}
+.conteneurphotoactionradical{
+   display:flex;
+  justify-content:center;
+}
+
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 0.7em;
+  font-family:arial;
+}
+
+
+
+th {
+  background-color: rgb(235,235,235);
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 15px;
+  text-align: center;
+}
+
+td{
+   background-color: rgb(235,235,235);
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.bodyidee{
+  background-color:#0b0c0f;
+   font-family:arial;
+}
+
+.titreidee{
+  padding:10px;
+  background-color:#09717f ;
+   text-align:left;
+   font-family:Tahoma;
+   
+}
+.titreidee5{
+  background-color: #0b0c0f;
+  padding: 10px;
+  
+}
+
+.conteneurskirando1{
+  background-color:#104475 ;
+  padding:10px;
+  margin:10px;
+}
+
+.bodyidee105{
+  margin-left:160px;
+  
+}
+
+
+.bentchetler{
+  border: 2px solid rgb(200,200,200);
+   margin:7px;
+  padding:7px;
+  text-align:center;
+}
+
+.bent{
+  display:flex;
+   text-align:left;
+}
+
+
+.Bc111{
+  display:flex;
+ text-align:left;
+}
+.candide{
+   margin:7px;
+  padding:7px;
+   border: 2px solid rgb(200,200,200);
+   text-align:center;
+}
+
+.skirando2{
+  margin:7px;
+  padding:7px;
+  background-color:white;
+}
+.conteneurskirando2{
+  background-color:#104475 ;
+  padding:10px;
+  margin:10px;
+  margin-bottom: 10px;
+}
+
+.tableauski10{
+  margin-left: 20em;
+}
+.skirando20{
+  margin:7px;
+  padding:7px;
+  background-color:white;
+}
+.atomic{
+  border: 2px solid rgb(200,200,200);
+   margin:7px;
+  padding:7px;
+  text-align:center;
+}
+
+.backland{
+  display:flex;
+   text-align:left;
+}
+
+.blizzard{
+  display:flex;
+   text-align:left;
+}
+.zero{
+  border: 2px solid rgb(200,200,200);
+   margin:7px;
+  padding:7px;
+  text-align:center;
+}
+
+.conteneur1000rando{
+  display:flex;
+}
+.tableauskirando20{
+  margin-top:20px;
+  margin-right:50px;
+  margin-left:50px;
+  font-size: 1.2em;
+}
+
+.photobackland{
+   margin-top:20px;
+}
+
+
+.photozero{
+   margin-top:20px;
+}
+
+.photo1896{
+  margin-left:50px;
+   margin-top:10px;
+}
+.photo1897{
+  margin-left:120px;
+   margin-top:20px;
+}
+
+
+.titre {
+  text-align: center; 
+  background-color: rgb(84, 138, 146); 
+  padding: 20px; 
+  border-radius: 15px;
+} 
+
+.tableautarifs {
+  margin-left: 680px;
+  margin-bottom: 50px;
+}
+
+.hi1 {
+  background-color: rgb(42, 42, 44);
+  display: flex;
+  border-radius: 15px;
+}
+
+.horaires1 {
+  padding: 65px;
+  width: 50%;
+  margin: auto;
+  color: rgb(6, 6, 6);
+}
+
+
+.infossupp1 {
+  padding: 16px;
+  color: white;
+  display: flex; 
+  justify-content: space-evenly;
+}
+
+.diablerets {
+  background-color: rgb(139, 191, 174);
+}
+
+.it {
+  display: flex; 
+}
+
+.img1  {
+  text-align: center;
+}
+
+.img1 img  {
+  border-radius: 15px;
+  margin-top: 30px;
+}
+.authenticité{
+  color:rgb(168, 207, 223);
+}
+.vidéo_diabl {
+  margin-left: 400px;
+  text-align: center;
+  flex: 1;
+}
+
+.portes_du_soleil {
+  background-color: rgb(177, 218, 235);
+}
+.vidéo_portes {
+  margin-bottom: 50px;
+  text-align: center;
+  flex: 1;
+}
+.bloc53 {
+  flex: 1;
+}
+.bloc54 {
+  flex: 1;
+}
+
+
+
+
+.bodyintromatos5{
+  margin-left:160px;
+  background-color: #232323;
+ padding-bottom: 20px;
+}
+.bodyintromatos6{
+  
+  background-color: #232323;
+ 
+}
+
+.para1{
+  padding:20px;
+  background-color: #757575;
+  margin:20px;
+  
+  border-radius: 10px;
+}
+
+.conteneurpara2{
+  display:flex;
+  justify-content: space-evenly;
+}
+.conteneurpara34{
+  display:flex;
+}
+.photopara{
+  border-radius: 10px;
+  background-color: #757575;
+  padding: 20px;
+  margin: 20px;
+}
+.paraphoto{
+  margin-top:80px;
+}
+.paraphoto img{
+  border-radius: 10px;
+}
+.para2{
+  margin:20px;
+  padding:20px;
+  border-radius: 10px;
+  background-color: #757575;
+}
+.para3{
+  margin:20px;
+  padding:20px;
+  border-radius: 10px;
+  background-color: #757575;
+}
+.para4{
+  margin:20px;
+  padding:20px;
+  border-radius: 10px;
+  background-color: #757575;
+}
+
+.para5{
+  margin:20px;
+  padding:20px;
+  border-radius: 10px;
+  background-color: #757575;
+}
+.para6{
+  margin:20px;
+  padding:20px;
+  border-radius: 10px;
+  background-color: #757575;
+  margin-right: 800px;
+}
+.bodyski22{
+  background-color: #000000;
+}
+
+.bodycourses2{
+
+  padding:15px;
+  padding-left:5px;
+  background: linear-gradient(90deg, #0f3e70, #26004d);
+}
+.bodycourses1{
+ background-color:#0b0c0f;
+  padding:10px;
+}
+
+.paragraphe1{
+  background-color:#bfbfbf;
+  padding:15px;
+  margin-right:500px;
+  font-family:Arial;
+  border-radius: 10px;
+   box-shadow: 6px 6px 0px rgba(0, 0, 0);
+   margin-top: 20px;
+}
+.paragraphe2{
+  background-color:#0b0c0f;
+  color:white;
+  padding:15px;
+  font-family:Arial;
+  margin-top:15px;
+  border-radius: 10px;
+}
+
+.conteneurparagraphe{
+  display:flex;
+}
+
+
+.contcour{
+  margin:15px;
+  margin-right:20px;
+  margin-top:80px;
+}
+
+.contcour img {
+  border-radius: 10px;
+}
+
+.titrecontcour{
+  text-align:left;
+  background-color:#bfbfbf;
+  padding:15px;
+   border-radius: 10px;
+   box-shadow: 10px 10px 10px rgb(0, 0, 0);
+}
+
+.bodystation{
+  background-image: url(photos/photo5.jpg);
+  padding-bottom: 100px;
+  margin: 7px;
+  background-size: cover;
+  padding:50px; 
+  padding-top:0px;
+  padding-left:5px;
+}
+.titrestation{
+  padding:10px;
+  margin: 7px;
+  color:black;
+  font-family:Tahoma;
+  border-radius: 10px;
+  background-color:#29293d;
+  margin-right:950px;
+   text-align: center;
+}
+
+.paragraphe1{
+  background-color:#bfbfbf;
+  padding:15px;
+  margin-right:500px;
+  font-family:Arial;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+   
+}
+.paragraphe2{
+  background-color:#33334d;
+  color:white;
+  padding:15px;
+  font-family:Arial;
+  margin-top:15px;
+  border-radius: 10px;
+  margin-left:400px;
+}
+.paragraphe3{
+  background-color:#33334d;
+  color:white;
+  padding:15px;
+  font-family:Arial;
+  margin-top:15px;
+  border-radius: 10px;
+  margin-right:15px;
+  margin-left:400px;
+  margin-bottom: 100px;
+}
+.paragraphe4{
+  background-color:#33334d;
+  color:white;
+  padding:15px;
+  font-family:Arial;
+  margin-top:15px;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+
+.conteneurparagraphe{
+  display:flex;
+  
+}
+
+
+
+.titrecabane{
+  background-color:#0b0c0f;
+  color: white ;
+  text-align: center;
+  margin: 7px;
+  margin-right: 700px;
+  padding:7px;
+  font-family:Tahoma;
+  
+}
+
+.bodycabane1{
+  background-color:#0b0c0f;
+  padding-right:30px;
+}
+
+.bodycabane2{
+  padding:7px;
+  background-color:white;
+  
+}
+
+.introtraverse1{
+  background-color:#0b0c0f;
+  padding: 7px;
+  margin: 7px;
+  color: white ;
+  text-align: left;
+  font-family:Arial;
+  
+}
+
+.fichetechniquetraverse{
+   background-color:#0b0c0f;
+  padding: 7px;
+  margin: 7px;
+  color: white ;
+  text-align: left;
+  font-family:Arial;
+  
+}
+
+.conteneurtraverse1{
+  display:flex;
+}
+
+.jour12{
+  background-color:#474747;
+  font-family:Arial;
+  padding: 7px;
+  margin: 7px;
+  color: white ;
+  text-align: center;
+  
+}
+
+.jour22{
+  background-color:#474747;
+  padding: 7px;
+  margin: 7px;
+  color: white ;
+  text-align: center;
+  font-family:Arial;
+}
+
+.finishtraverse{
+  background-color:#999900;
+  padding: 7px;
+  margin: 7px;
+  margin-left: 700px;
+  color: white ;
+  text-align: center;
+  font-family:Verdana ;
+}
+
+
+.introtraverse{
+  background-color:#474747;
+  padding: 7px;
+  margin: 7px;
+  margin-right: 650px;
+  color: white ;
+  text-align: center;
+  font-family:Verdana ;
+  
+}
+.bodycourses3{
+  margin-left: 160px;
+}
+.bodystation2{
+  margin-left: 110px;
+}
+
+.bodymarecottes{
+  background-color:black;
+  padding:15px;
+  padding-top:0px;
+}
+
+.bodymarecottes1{
+   background-color: #444422;
+   padding: 20px;
+   margin: 20px;
+   margin-left:160px;
+}
+
+.titremarecottes{
+  background-color:#333333;
+  color:white;
+  padding: 40px;
+  margin: 20px;
+  margin-right:500px;
+  color: white ;
+  text-align: center;
+  font-family:Tahoma;
+  border: 0.5em double black;
+  letter-spacing:0.5em;
+}
+
+.intro1mare{
+   padding: 20px;
+   margin: 10px;
+   color: white ;
+   background-color:#0b0c0f;
+   font-family:Arial;
+}
+.conteneurmarecottes1{
+  display:flex;
+  background-color:#333333;
+  padding: 15px;
+}
+.marephoto{
+  padding: 20px;
+   margin: 10px;
+   color: white ;
+   background-color:#0b0c0f;
+}
+
+.marephoto img{
+   border-radius:15px;
+   margin-top: 150px;
+}   
+
+.conteneurmarecottes2{
+  display:flex;
+  background-color:#333333;
+  padding: 15px;
+  margin-top:20px;
+}
+.bodyportes2{
+  margin-left:160px;
+}
+.mare2tabl{
+   padding: 20px;
+   margin: 10px;
+   background-color:#0b0c0f;
+   justify-content: center;
+   padding-top:10px;
+   display:flex;
+
+}
+
+.titremarecottetabl{
+  font-family:Arial;
+  color: white ;
+}
+.accesmare{
+  padding: 20px;
+   margin: 10px;
+   color: white ;
+   background-color:#0b0c0f;
+   font-family:Arial;
+}
+.bodydiableret2{
+  margin-left: 160px;
+}
+.intro1mare2{
+  padding: 20px;
+   margin: 10px;
+   color: white ;
+   background-color:#0b0c0f;
+   font-family:Arial;
+   margin-top:40px;
+}
+.para111{
+   margin-left:160px;
+}
