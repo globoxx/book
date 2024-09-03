@@ -102,9 +102,9 @@ Attention, si votre 2ème page se trouve dans un dossier (par exemple un dossier
 
 `````{admonition} Exercice 3
 :class: note
-Nous allons ajouter une 2ème page à votre site `mesvoyages.ch` créé dans le chapitre précédent. Le but est d'ajouter une page permettant aux visiteurs de contacter l'agence de voyage.
+Nous allons ajouter une 2ème page à votre site de restaurant créé dans le chapitre précédent. Le but est d'ajouter une page permettant aux visiteurs de contacter le restaurant.
 
-Commencez par créer un nouveau fichier `.html` nommé `contact.html` et déposez le dans **le même dossier** que la page principale `voyages.html`.
+Commencez par créer un nouveau fichier `.html` nommé `contact.html` et déposez le dans **le même dossier** que la page principale `restaurant.html`.
 
 Copiez le code suivant dans le fichier `contact.html`:
 
@@ -121,14 +121,14 @@ Copiez le code suivant dans le fichier `contact.html`:
         agence par les moyens suivants:</p>
         <ul>
             <!-- Il est aussi possible de créer un lien vers une adresse mail avec "mailto" -->
-            <li>Email: <a href="mailto:mesvoyages@gmail.com">mesvoyages@gmail.com</a></li>
+            <li>Email: <a href="mailto:restaurant@gmail.com">restaurant@gmail.com</a></li>
             <li>Telephone: 0791234567</li>
         </ul>
     </body>
 </html>
 ```
 
-Ajoutez un lien relatif depuis la page principale `voyages.html` vers la page `contact.html`. Ajoutez également un lien dans l'autre sens.
+Ajoutez un lien relatif depuis la page principale `restaurant.html` vers la page `contact.html`. Ajoutez également un lien dans l'autre sens.
 
 ````{dropdown} Solution
 ```{code-block} html
@@ -136,7 +136,7 @@ Ajoutez un lien relatif depuis la page principale `voyages.html` vers la page `c
 <a href="contact.html">Contact</a>
 
 <!-- Quelque part sur la page contact -->
-<a href="voyages.html">Accueil</a>
+<a href="restaurant.html">Accueil</a>
 ```
 ````
 `````

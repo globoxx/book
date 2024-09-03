@@ -260,11 +260,11 @@ En HTML, la syntaxe est la suivante:
 ```
 
 ```{question} Confidendialité
-Si vous mettez en ligne un site web avec des commentaires dans le code, pensez-vous que les visiteurs de votre site pourront les lires ?
+Si vous mettez en ligne un site web avec des commentaires dans le code, pensez-vous que les visiteurs de votre site pourront les retrouver avec un peu d'ingéniosité ?
 * {v}`Oui`
 * {f}`Non`
 ===
-Oui ! Rappelez-vous, le fichier `.html` est envoyé au visiteur et il a donc tout le loisir de le lire, y compris vos commentaires.  
+Oui ! Rappelez-vous, le fichier `.html` est envoyé au visiteur et il a donc tout le loisir de lire son code, y compris vos commentaires.  
 Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot de passe dans les commentaires de votre page !
 ```
 
