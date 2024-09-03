@@ -19,7 +19,7 @@ Un lien hypertexte s'insert avec la balise `<a> </a>` (pour "anchor", ancre en f
 
 L'attribut `href` suivi de `=` indique l'URL de redirection (par exemple l'url d'un autre site web). Il faut mettre des `" "` autour de l'URL.
 
-Finalement, on écrit entre les 2 balises le texte du lien.
+Finalement, on écrit entre les 2 balises le texte du lien.  
 Exemple: `<a href="https://mdlgb.ch/">Accédez à Moodle</a>`
 ```
 ````
