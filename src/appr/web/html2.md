@@ -235,17 +235,18 @@ Reprenez votre page sur les jeux olympiques (`jo2024.html`) et ajoutez 2 iframe.
 
 ```{admonition} Exercice récapitulatif 2
 :class: note
-Vous êtes le gérant d'une agence de voyage et voulez créer une simple page listant les destinations que vous proposez.
+Vous êtes le nouveau propriétaire d'un restaurant et souhaitez créer une simple page listant les plats que vous proposez.
 
-Ecrivez la page web principale du site `mesvoyages.ch` dans un fichier nommé `voyages.html`.  
-Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:
-- Le titre "Mes voyages" qui doit apparaître dans l'onglet du navigateur.
-- Le titre principal "Mes voyages" qui doit apparaître en haut de la page.
-- Un petit paragraphe expliquant à quoi sert le site.
-- Un sous-titre "Destinations".
-- Une liste non-ordonnée de destinations (au moins 3) avec images à l'appui (donc chaque item de la liste contient le nom de la destination ainsi qu'une image).
-- Au moins 1 mot important (gras, italique ou surligné) sur votre page.
-- Un iframe Google maps pointant vers une de vos destinations.
+Écrivez la page web principale de votre site dans un fichier nommé `restaurant.html`.
+Vous êtes libre sur le contenu, mais la page doit contenir les éléments suivants :
+
+- Le titre “Notre menu” qui doit apparaître dans l’onglet du navigateur.
+- Le titre principal “Notre menu” qui doit apparaître en haut de la page.
+- Un petit paragraphe expliquant quels genres de plats sont servis dans votre restaurant.
+- Un sous-titre “Plats proposés”.
+- Une liste non ordonnée de plats (au moins 3) avec images à l’appui (chaque item de la liste contient le nom du plat ainsi qu’une image).
+- Au moins un mot important (gras, italique ou surligné) sur votre page.
+- Un iframe Google Maps pointant vers l'emplacement de votre restaurant.
 
 Déposez votre fichier sur Moodle à l'endroit prévu.
 ```

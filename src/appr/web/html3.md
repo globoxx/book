@@ -204,28 +204,30 @@ Voici un exemple:
 
 ```{admonition} Exercice récapitulatif 3
 :class: note
-Vous vous lancez dans la photographie. Vous avez besoin d'un site où les potentiels clients pourraient vous contacter pour vos services.  
-Vous décidez alors de lancer votre site: `photostyle.ch`.
+Vous êtes un artiste peintre qui souhaite se faire connaître. Vous avez besoin d'un site où les amateurs d'art pourraient vous contacter pour acheter vos œuvres ou pour des commandes spéciales.
+Vous décidez alors de lancer votre propre site.
 
-Créez un nouveau dossier de travail nommé `photographie`.  
-Ecrivez la page d'accueil du site dans un fichier nommé `index.html`.  
-Vous êtes libre sur le contenu mais la page principale doit contenir les éléments suivants:
-- Le titre "Photostyle" qui doit apparaître dans l'onglet du navigateur.
+Créez un nouveau dossier de travail nommé `ArtGallerie`.
+Écrivez la page d'accueil du site dans un fichier nommé `index.html`.
+Vous êtes libre sur le contenu mais les différentes pages doivent contenir les éléments suivants :
+
+La page principale `index.html` contient :
+- Le titre "ArtGallerie" qui doit apparaître dans l'onglet du navigateur.
 - Un titre principal avec votre nom.
 - Un petit paragraphe auto-biographique (vous pouvez inventer votre biographie).
 - Un lien vers une page `galerie.html`.
 - Un lien vers une page `contact.html`.
 
-La page `galerie.html` contient:
-- Un titre principal (h1) "Galerie".
-- Quelques-unes de vos meilleures photographies (trouvées sur Internet mais libres de droit) (au moins 3 photos).
-- Un lien pour retourner à l'accueil.
+La page `galerie.html` contient :
+- Un titre principal "Galerie".
+- Quelques-unes de vos meilleures œuvres (trouvées sur Internet mais libres de droit) (au moins 3 œuvres).
+- Un lien pour retourner à l'accueil (`index.html`).
 
-La page `contact.html` contient:
-- Un titre principal (h1) "Contact".
+La page `contact.html` contient :
+- Un titre principal "Contact".
 - Une liste à puce avec votre adresse mail (fausse), un numéro de téléphone (faux) et un bouton "Contactez-moi" (à vous de chercher comment ajouter un bouton en html).
-- Un lien pour retourner à l'accueil.
+- Un lien pour retourner à l'accueil (`index.html`).
 
-Compressez votre dossier `photographie` en `photographie.zip` (clic droit sur le dossier -> compresser).  
+Compressez votre dossier `ArtGallerie` en `ArtGallerie.zip` (clic droit sur le dossier -> compresser).  
 Déposez le dossier compressé sur Moodle à l'endroit prévu.
 ```
