@@ -265,7 +265,7 @@ Pour mettre en couleur `automatique` et `information` dans le paragraphe ci-dess
 * {v}`<span> </span>`
 * {f}`<div> </div>`
 ===
-Il vaut mieux utiliser `<span> </span>` pour éviter de créer un retour à la ligne après chacun des mots. La balise `<div> </div>` sert plutôt à définir un bloc et est beaucoup utilisée dans la construction de la mise en page (nous verrons ça bientôt).
+Il vaut mieux utiliser `<span> </span>` pour éviter de créer un retour à la ligne après chacun des mots. La balise `<div> </div>` sert plutôt à définir **un bloc** et est beaucoup utilisée dans la construction de la mise en page (nous verrons ça bientôt).
 ```
 
 `````{admonition} Exercice 4
@@ -297,16 +297,16 @@ Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</
 
 ```{admonition} Exercice récapitulatif 5
 :class: note
-Il est temps d'ajouter un peu de style à votre site de photographe !
-Reprenez votre dossier `photographie` des exercices récapitulatifs précédents.
+Il est temps d'ajouter un peu de style à votre site d'artiste `ArtGallerie` !
+Reprenez votre dossier `ArtGallerie` des exercices récapitulatifs précédents.
 
 Créez-y un fichier `style.css`, puis, dans chacun de vos fichiers `.html`, ajoutez le lien vers la feuille de style `style.css` comme expliqué au début de ce chapitre.
 
 Faites les améliorations suivantes:
-- Appliquez la couleur noire (black) à tous vos liens.
+- Appliquez la couleur noire (black) à tous vos liens (balise `<a>`).
 - Appliquez une couleur et une couleur de fond à votre nom (titre principal de la page d'accueil).
-- Appliquez le style `color: #A5B4FC;` à 2 mots **séparés** de votre paragraphe auto-biographique.
-- Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos.
+- Appliquez le style `color: #A5B4FC;` à 2 mots **séparés** (pas côte-à-côte) de votre paragraphe auto-biographique.
+- Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos. Il vous faut donc créer un bloc `<div> </div>` autour de vos images et appliquer un style CSS à ce bloc.
 
-Déposez votre dossier compressé sur Moodle à l'endroit prévu.
+Déposez votre dossier compressé (`ArtGallerie.zip`) sur Moodle à l'endroit prévu.
 ```

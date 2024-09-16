@@ -29,7 +29,7 @@ Il est fortement conseillé de rassembler les images de votre site dans un dossi
 
 `````{admonition} Exercice 1
 :class: note
-Si ce n'est pas déjà fait, reprenez le dossier `photographie` de l'exercice récapitulatif du chapitre précédent et créez un dossier `images` pour y placer toutes vos images. Bien entendu, il vous faut ensuite modifier les sources des images dans le code.  
+Si ce n'est pas déjà fait, reprenez le dossier `ArtGallerie` de l'exercice récapitulatif du chapitre précédent et créez un dossier `images` pour y placer toutes vos images. Bien entendu, il vous faut ensuite modifier les sources des images dans le code.  
 Ajoutez également l'attribut `alt` pour chaque image.
 
 ````{dropdown} Solution
@@ -116,13 +116,12 @@ L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple 
 
 ```{admonition} Exercice récapitulatif 4
 :class: note
-Votre site de photographie `photostyle.ch` attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie de photos.
-Reprenez votre dossier `photographie` du chapitre précédent et faites les améliorations suivantes:
-- Ajustez les tailles des photos de votre galerie pour une meilleure harmonie (les photos doivent avoir la même largeur).
-- Ajoutez des infobulles sur vos photos afin de donner des informations sur leur origine aux utilisateurs du site.
-- Sur votre page de contact, ajoutez les logos d'instagram et de twitter. (A télécharger {download}`ici<../media/instagram.png>` et {download}`ici<../media/twitter.png>`).
-- Faites en sorte que les logos redirigent directement vers le réseau social associé en cliquant dessus.
-- Ajoutez un logo unique sur chaque page de votre site (<a href="https://www.logotouse.com/?utm_source=bdmtools&utm_medium=siteweb&utm_campaign=logotouse" target="_blank">banque de logos</a>). Ce logo doit permettre de retourner sur la page principale de votre site (l'accueil) depuis n'importe quelle autre page en cliquant dessus.
+Votre site d'artiste (`ArtGallerie`) attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie d'images.
+Reprenez votre dossier `ArtGallerie` du chapitre précédent et faites les améliorations suivantes:
+- Ajustez les tailles des images de votre galerie pour une meilleure harmonie (les images doivent toutes avoir la même largeur).
+- Ajoutez des infobulles sur vos images afin de donner des informations sur leur origine aux utilisateurs du site. Par exemple une mini-description de l'oeuvre ou de l'artiste.
+- Sur votre page de contact, ajoutez le logo d'instagram. (A télécharger {download}`ici<../media/instagram.png>`).
+- Faites en sorte que le logo redirige directement vers le réseau social si on clique dessus.
 
-Déposez le dossier compressé sur Moodle à l'endroit prévu.
+Déposez le dossier compressé (`ArtGallerie.zip`) sur Moodle à l'endroit prévu.
 ```
