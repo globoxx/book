@@ -198,7 +198,7 @@ Il est tout à fait possible de transformer une image en lien. Pour ceci, il suf
 Voici un exemple:
 
 ```{code-block} html
-<a href="https://mdlgb.ch/"><img src="https://pbs.twimg.com/profile_images/1125713968637579265/L4HJ0qyd_400x400.png"></a>
+<a href="https://mdlgb.ch/"><img src="logo.png"></a>
 ```
 
 ## Exercice récapitulatif 3
