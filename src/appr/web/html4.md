@@ -112,6 +112,15 @@ Reprenez le code de l'exercice précédent montrant une page d'ecublens et ajout
 L'attribut `title` n'est pas réservé à la balise `<img>`. Il est par exemple également possible d'ajouter l'attribut `title` à des liens (`<a> </a>`) ou des paragraphes (`<p> </p>`).
 ```
 
+## Une image cliquable
+
+Il est tout à fait possible de transformer une image en lien. Pour ceci, il suffit de mettre une image entre les balises `<a> </a>` au lieu d'un texte.
+Voici un exemple:
+
+```{code-block} html
+<a href="https://mdlgb.ch/"><img src="https://pbs.twimg.com/profile_images/1125713968637579265/L4HJ0qyd_400x400.png"></a>
+```
+
 ## Exercice récapitulatif 4
 
 ```{admonition} Exercice récapitulatif 4
