@@ -210,33 +210,6 @@ Et voici la liste HTML modifiée:
 Les propriétés CSS définies avec des classes ont la priorité sur les propriétés plus générales définies au niveau des balises.
 ```
 
-## Appliquer un style à un élément unique
-
-Si l'attribut `class` permet de créer une classe d'éléments partageant un style commun, l'attribut `id` permet de définir un style pour un UNIQUE élément en particulier.
-
-```{code-block} html
-<h1 class="ma-classe">Ceci est un titre qui fait partie de ma-classe</h1>
-<p class="ma-classe">Ceci est un paragraphe qui fait partie de ma-classe</p>
-<p id="mon-id">Ceci est un second paragraphe avec un identifiant unique</p>
-```
-
-On définit les propriétés de cet élément unique en commençant par un dièse `#`:
-
-```{code-block} css
-.ma-classe {
-    color: purple;
-}
-
-#mon-id {
-    background-color: yellow; /* Cette propriété définit la couleur de fond */
-}
-```
-
-```{admonition} A retenir
-:class: note
-L'attribut `id` a la priorité sur tout le reste, mais il faut l'utiliser avec parcimonie car il crée plein d'éléments uniques rendant le code plus difficile à maintenir.
-```
-
 ## Les balises universelles `span` et `div`
 
 Tout ça c'est très bien mais comment appliquer un style à un mot particulier qui n'est pas entouré par une balise ?  
@@ -304,9 +277,9 @@ Créez-y un fichier `style.css`, puis, dans chacun de vos fichiers `.html`, ajou
 
 Faites les améliorations suivantes:
 - Appliquez la couleur noire (black) à tous vos liens (balise `<a>`).
-- Appliquez une couleur et une couleur de fond à votre nom (titre principal de la page d'accueil).
-- Appliquez le style `color: #A5B4FC;` à 2 mots **séparés** (pas côte-à-côte) de votre paragraphe auto-biographique.
-- Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos. Il vous faut donc créer un bloc `<div> </div>` autour de vos images et appliquer un style CSS à ce bloc.
+- Appliquez une couleur et une couleur de fond à vos titres.
+- Appliquez le style `color: #A5B4FC;` à 2 mots **séparés** (pas côte-à-côte) de votre paragraphe auto-biographique. Pour ce faire, vous pouvez utiliser des balises `<span> </span>` pour entourer chacun des mots choisis puis leur donner une classe. Il ne reste alors plus qu'à appliquer la couleur à cette classe en CSS.
+- Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos. Il vous faut donc créer un bloc `<div> </div>` autour de vos images et appliquer un style CSS à ce bloc (idéalement à l'aide d'une classe).
 
 Déposez votre dossier compressé (`ArtGallerie.zip`) sur Moodle à l'endroit prévu.
 ```

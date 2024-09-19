@@ -514,29 +514,6 @@ Solution<div class="summary-down docutils">
 <p>Les propriétés CSS définies avec des classes ont la priorité sur les propriétés plus générales définies au niveau des balises.</p>
 </div>
 </section>
-<section id="appliquer-un-style-a-un-element-unique">
-<h2>Appliquer un style à un élément unique<a class="headerlink" href="#appliquer-un-style-a-un-element-unique" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Si l’attribut <code class="docutils literal notranslate"><span class="pre">class</span></code> permet de créer une classe d’éléments partageant un style commun, l’attribut <code class="docutils literal notranslate"><span class="pre">id</span></code> permet de définir un style pour un UNIQUE élément en particulier.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"ma-classe"</span><span class="p">&gt;</span>Ceci est un titre qui fait partie de ma-classe<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"ma-classe"</span><span class="p">&gt;</span>Ceci est un paragraphe qui fait partie de ma-classe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"mon-id"</span><span class="p">&gt;</span>Ceci est un second paragraphe avec un identifiant unique<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>On définit les propriétés de cet élément unique en commençant par un dièse <code class="docutils literal notranslate"><span class="pre">#</span></code>:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">ma-classe</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">purple</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">#</span><span class="nn">mon-id</span> <span class="p">{</span>
-    <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span> <span class="c">/* Cette propriété définit la couleur de fond */</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<div class="note admonition">
-<p class="admonition-title">A retenir</p>
-<p>L’attribut <code class="docutils literal notranslate"><span class="pre">id</span></code> a la priorité sur tout le reste, mais il faut l’utiliser avec parcimonie car il crée plein d’éléments uniques rendant le code plus difficile à maintenir.</p>
-</div>
-</section>
 <section id="les-balises-universelles-span-et-div">
 <h2>Les balises universelles <code class="docutils literal notranslate"><span class="pre">span</span></code> et <code class="docutils literal notranslate"><span class="pre">div</span></code><a class="headerlink" href="#les-balises-universelles-span-et-div" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Tout ça c’est très bien mais comment appliquer un style à un mot particulier qui n’est pas entouré par une balise ?<br/>
@@ -607,9 +584,9 @@ Reprenez votre dossier <code class="docutils literal notranslate"><span class="p
 <p>Faites les améliorations suivantes:</p>
 <ul class="simple">
 <li><p>Appliquez la couleur noire (black) à tous vos liens (balise <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>).</p></li>
-<li><p>Appliquez une couleur et une couleur de fond à votre nom (titre principal de la page d’accueil).</p></li>
-<li><p>Appliquez le style <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">#A5B4FC;</span></code> à 2 mots <strong>séparés</strong> (pas côte-à-côte) de votre paragraphe auto-biographique.</p></li>
-<li><p>Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos. Il vous faut donc créer un bloc <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> autour de vos images et appliquer un style CSS à ce bloc.</p></li>
+<li><p>Appliquez une couleur et une couleur de fond à vos titres.</p></li>
+<li><p>Appliquez le style <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">#A5B4FC;</span></code> à 2 mots <strong>séparés</strong> (pas côte-à-côte) de votre paragraphe auto-biographique. Pour ce faire, vous pouvez utiliser des balises <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> pour entourer chacun des mots choisis puis leur donner une classe. Il ne reste alors plus qu’à appliquer la couleur à cette classe en CSS.</p></li>
+<li><p>Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos. Il vous faut donc créer un bloc <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> autour de vos images et appliquer un style CSS à ce bloc (idéalement à l’aide d’une classe).</p></li>
 </ul>
 <p>Déposez votre dossier compressé (<code class="docutils literal notranslate"><span class="pre">ArtGallerie.zip</span></code>) sur Moodle à l’endroit prévu.</p>
 </div>
@@ -669,7 +646,6 @@ Reprenez votre dossier <code class="docutils literal notranslate"><span class="p
 <li><a class="reference internal" href="#appliquer-une-propriete-css-a-une-balise-html">Appliquer une propriété CSS à une balise HTML</a></li>
 <li><a class="reference internal" href="#appliquer-une-propriete-css-a-plusieurs-balises-html">Appliquer une propriété CSS à plusieurs balises HTML</a></li>
 <li><a class="reference internal" href="#appliquer-un-style-a-une-classe-delements">Appliquer un style à une classe d’éléments</a></li>
-<li><a class="reference internal" href="#appliquer-un-style-a-un-element-unique">Appliquer un style à un élément unique</a></li>
 <li><a class="reference internal" href="#les-balises-universelles-span-et-div">Les balises universelles <code class="docutils literal notranslate"><span class="pre">span</span></code> et <code class="docutils literal notranslate"><span class="pre">div</span></code></a></li>
 <li><a class="reference internal" href="#exercice-recapitulatif-5">Exercice récapitulatif 5</a></li>
 </ul>
