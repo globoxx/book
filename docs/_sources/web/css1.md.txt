@@ -241,25 +241,22 @@ Pour mettre en couleur `automatique` et `information` dans le paragraphe ci-dess
 Il vaut mieux utiliser `<span> </span>` pour éviter de créer un retour à la ligne après chacun des mots. La balise `<div> </div>` sert plutôt à définir **un bloc** et est beaucoup utilisée dans la construction de la mise en page (nous verrons ça bientôt).
 ```
 
-`````{admonition} Exercice 4
-:class: note
-Rendez-vous sur <a href="https://codepen.io/pen/" target="_blank">CodePen</a> et mettez les mots `automatique` et `information` en rouge dans le paragraphe donné en début de section.
+Voici donc comment mettre les mots `automatique` et `information` en rouge dans le paragraphe donné en début de section.  
+Il vous faut définir une classe CSS et l'appliquer à vos balises `<span>`.
 
-Il vous faut donc définir une classe CSS et l'appliquer à vos balises `<span>`.
+Code HTML:
 
-````{dropdown} Solution
+```{code-block} html
+<p>L'informatique est la science du traitement <span class="classe-rouge">automatique</span> de l'<span class="classe-rouge">information</span> !</p>
+```
+
 Code CSS:
+
 ```{code-block} css
 .classe-rouge {
     color: red;
 }
 ```
-Code HTML:
-```{code-block} html
-<p>L'informatique est la science du traitement <span class="classe-rouge">automatique</span> de l'<span class="classe-rouge">information</span> !</p>
-```
-````
-`````
 
 ```{admonition} Refaire la face de Mario
 Vous vous souvenez du Mario du début de chapitre ?  
