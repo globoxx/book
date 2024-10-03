@@ -36,11 +36,11 @@ Sur l'interface de programmation, vous voyez 2 blocs déjà présents:
 
 ### Exercice 1
 
-Chaque led possède des coordonnées `x` et `y`. Le led tout en haut à gauche se trouve aux coordonnées `(0, 0)` tandis que celui tout en bas à droite se trouve aux coordonnées `(4, 4)`.
+Chaque led possède des coordonnées `x` et `y`. Le led tout en haut à gauche se trouve aux coordonnées `(0, 0)` tandis que celui tout en bas à droite se trouve aux coordonnées `(4, 4)`.  
 Nous allons commencer par faire tomber le fruit sur la colonne en x=1, c'est à dire la 2ème colonne en partant de la gauche.  
 
 Ajoutez 5 blocs `allumer` dans le bloc `toujours` pour allumer tous les blocs de la colonne en x=1.  
-Ajoutez également un bloc `pause` de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.
+Ajoutez aussiun bloc `pause` de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.
 
 ```{dropdown} Voir la solution
 ![img](../media/tomberfruit0.png)
@@ -253,17 +253,16 @@ Fin de l'étape 3, le jeu détecte la collision entre le panier et le fruit.
 
 ### Exercice 10
 
-Un échec se produit lorsqu'un fruit finit sa chute en dehors du panier. Il faut détecter lorsque ce cas se produit et également définir les actions associées.
+Un échec se produit lorsqu'un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur pert une vie.
 
-L'échec n'est pas seulement le contraire du fruit qui tombe dans le panier, car cela inclut également tous les cas ou le fruit est en train de tomber, qu'il soit au-dessus du panier ou non.  
-Il faut donc déterminer comment détecter ces cas là uniquement.
+L'échec n'est pas seulement le contraire du fruit qui tombe dans le panier, car cela inclurait également tous les cas où le fruit est en train de tomber.  
+On cliquant 2 fois sur le petit `+` du bloc `si ...` de la collision, on peut ajouter un `sinon si ...` qui permet de tester si on a raté le fruit.
 
-* Quels sont les positions du fruit concernés par le `sinon` du bloc permettant de détecter les collisions ? (toutes les positions sauf celles du panier)
-* Toutes ces positions constituent-elles des échecs ? (non)
-* Quelle condition supplémentaire doit-on avoir pour que le fruit soit tombé à côté du panier ? (index = 4)
+* S'il n'y a pas de collision, quelle condition doit-on avoir pour que le fruit soit tombé à côté du panier ? (index = 4)
 * Que se passe-t-il lorsqu'on rate un fruit ? (perte de vie, par exemple)
 
-Là aussi, une fois les réponses déterminées, l'implémentation ne pose pas de difficultés particulière. Comme pour la collision, on peut ajouter un signal visuel pour signifier l'échec au joueur. Dans ce cas, il ne faut pas oublier d'`effacer l'écran`. Il ne faut pas non plus oublier d'initialiser le nombre de `vies` au démarrage.
+Dans le bloc `sinon si ...`, ajoutez un test pour vérifier si le fruit a touché le sol (i.e. `index` vaut 4).  
+Comme pour la collision, on peut ajouter un signal visuel pour signifier l'échec au joueur. Dans ce cas, il ne faut pas oublier d'`effacer l'écran`. Il ne faut pas non plus oublier d'initialiser le nombre de `vies` au démarrage.
 
 ```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
@@ -286,7 +285,7 @@ Fin de l'étape 4, le jeu détecte quand le joueur rate un fruit.
 
 ### Exercice 11
 
-Le jeu est maintenant fonctionnel, on marque des points lorsqu'un fruit est attrapé et on perd une vie quand on le rate. Cependant, le jeu ne s'arrête pas même si on a perdu plus de vies qu'on en avait au départ.
+Le jeu est maintenant fonctionnel, on marque des points lorsqu'un fruit est attrapé et on perd une vie quand on le rate ! Cependant, le jeu ne s'arrête pas même si on a perdu plus de vies qu'on en avait au départ.
 
 Nous allons donc faire s'arrêter le jeu selon une condition à déterminer, puis nous afficherons le score du joueur.
 

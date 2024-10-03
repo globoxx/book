@@ -335,10 +335,10 @@ Sur l’interface de programmation, vous voyez 2 blocs déjà présents:</p>
 </ul>
 <section id="exercice-1">
 <h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Chaque led possède des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>. Le led tout en haut à gauche se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> tandis que celui tout en bas à droite se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>.
+<p>Chaque led possède des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>. Le led tout en haut à gauche se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> tandis que celui tout en bas à droite se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>.<br/>
 Nous allons commencer par faire tomber le fruit sur la colonne en x=1, c’est à dire la 2ème colonne en partant de la gauche.</p>
 <p>Ajoutez 5 blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code> pour allumer tous les blocs de la colonne en x=1.<br/>
-Ajoutez également un bloc <code class="docutils literal notranslate"><span class="pre">pause</span></code> de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.</p>
+Ajoutez aussiun bloc <code class="docutils literal notranslate"><span class="pre">pause</span></code> de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir la solution<div class="summary-down docutils">
@@ -624,16 +624,15 @@ L’ajout de ce bloc permet de rallumer la led associée au panier avant la chut
 <h2>Étape 4 - Gestion des échecs<a class="headerlink" href="#etape-4-gestion-des-echecs" title="Lien permanent vers ce titre">¶</a></h2>
 <section id="exercice-10">
 <h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Un échec se produit lorsqu’un fruit finit sa chute en dehors du panier. Il faut détecter lorsque ce cas se produit et également définir les actions associées.</p>
-<p>L’échec n’est pas seulement le contraire du fruit qui tombe dans le panier, car cela inclut également tous les cas ou le fruit est en train de tomber, qu’il soit au-dessus du panier ou non.<br/>
-Il faut donc déterminer comment détecter ces cas là uniquement.</p>
+<p>Un échec se produit lorsqu’un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur pert une vie.</p>
+<p>L’échec n’est pas seulement le contraire du fruit qui tombe dans le panier, car cela inclurait également tous les cas où le fruit est en train de tomber.<br/>
+On cliquant 2 fois sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code> du bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span></code> de la collision, on peut ajouter un <code class="docutils literal notranslate"><span class="pre">sinon</span> <span class="pre">si</span> <span class="pre">...</span></code> qui permet de tester si on a raté le fruit.</p>
 <ul class="simple">
-<li><p>Quels sont les positions du fruit concernés par le <code class="docutils literal notranslate"><span class="pre">sinon</span></code> du bloc permettant de détecter les collisions ? (toutes les positions sauf celles du panier)</p></li>
-<li><p>Toutes ces positions constituent-elles des échecs ? (non)</p></li>
-<li><p>Quelle condition supplémentaire doit-on avoir pour que le fruit soit tombé à côté du panier ? (index = 4)</p></li>
+<li><p>S’il n’y a pas de collision, quelle condition doit-on avoir pour que le fruit soit tombé à côté du panier ? (index = 4)</p></li>
 <li><p>Que se passe-t-il lorsqu’on rate un fruit ? (perte de vie, par exemple)</p></li>
 </ul>
-<p>Là aussi, une fois les réponses déterminées, l’implémentation ne pose pas de difficultés particulière. Comme pour la collision, on peut ajouter un signal visuel pour signifier l’échec au joueur. Dans ce cas, il ne faut pas oublier d’<code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code>. Il ne faut pas non plus oublier d’initialiser le nombre de <code class="docutils literal notranslate"><span class="pre">vies</span></code> au démarrage.</p>
+<p>Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span> <span class="pre">si</span> <span class="pre">...</span></code>, ajoutez un test pour vérifier si le fruit a touché le sol (i.e. <code class="docutils literal notranslate"><span class="pre">index</span></code> vaut 4).<br/>
+Comme pour la collision, on peut ajouter un signal visuel pour signifier l’échec au joueur. Dans ce cas, il ne faut pas oublier d’<code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code>. Il ne faut pas non plus oublier d’initialiser le nombre de <code class="docutils literal notranslate"><span class="pre">vies</span></code> au démarrage.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -667,7 +666,7 @@ Voir la solution<div class="summary-down docutils">
 <h2>Étape 5 - Fin du jeu<a class="headerlink" href="#etape-5-fin-du-jeu" title="Lien permanent vers ce titre">¶</a></h2>
 <section id="exercice-11">
 <h3>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Le jeu est maintenant fonctionnel, on marque des points lorsqu’un fruit est attrapé et on perd une vie quand on le rate. Cependant, le jeu ne s’arrête pas même si on a perdu plus de vies qu’on en avait au départ.</p>
+<p>Le jeu est maintenant fonctionnel, on marque des points lorsqu’un fruit est attrapé et on perd une vie quand on le rate ! Cependant, le jeu ne s’arrête pas même si on a perdu plus de vies qu’on en avait au départ.</p>
 <p>Nous allons donc faire s’arrêter le jeu selon une condition à déterminer, puis nous afficherons le score du joueur.</p>
 <ul class="simple">
 <li><p>Quand est-ce que le jeu doit s’arrêter ? (lorsqu’on a plus de vies)</p></li>
