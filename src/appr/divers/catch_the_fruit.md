@@ -36,10 +36,11 @@ Sur l'interface de programmation, vous voyez 2 blocs déjà présents:
 
 ### Exercice 1
 
-Nous allons commencer par faire tomber le fruit sur la colonne 1, c'est à dire la 2ème colonne en partant de la gauche.  
 Chaque led possède des coordonnées `x` et `y`. Le led tout en haut à gauche se trouve aux coordonnées `(0, 0)` tandis que celui tout en bas à droite se trouve aux coordonnées `(4, 4)`.
+Nous allons commencer par faire tomber le fruit sur la colonne en x=1, c'est à dire la 2ème colonne en partant de la gauche.  
 
-Ajoutez des blocs `allumer` dans le bloc `toujours` pour allumer tous les blocs de la colonne 1.
+Ajoutez 5 blocs `allumer` dans le bloc `toujours` pour allumer tous les blocs de la colonne en x=1.  
+Ajoutez également un bloc `pause` de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.
 
 ```{dropdown} Voir la solution
 ![img](../media/tomberfruit0.png)
@@ -47,10 +48,7 @@ Ajoutez des blocs `allumer` dans le bloc `toujours` pour allumer tous les blocs 
 
 ### Exercice 2
 
-Ajoutez à présent les blocs `éteindre` pour allumer et éteindre successivement tous les leds de la colonne du haut vers le bas.
-
-Problème: vous ne voyez rien ! Pourquoi ? Car les led s'allument et s'éteignent trop vite pour que vous puissiez les voir.  
-Pour résoudre ce problème, ajoutez des blocs `pause` de 500ms après chaque allumage afin que la led ne s'éteigne pas immédiatement après avoir été allumé.
+Ajoutez à présent 5 blocs `éteindre` pour allumer et éteindre successivement toutes les leds de la colonne du haut vers le bas.
 
 ```{dropdown} Voir la solution
 ![img](../media/tomberfruit1.png)
@@ -146,10 +144,10 @@ Voici les étapes à suivre:
 Le panier est fixe, il faut le faire bouger.  
 Nous allons utiliser les boutons `A` et `B` pour les déplacements gauche et droite, respectivement.  
 
-* Que signifie déplacer le panier à gauche en termes de positions ? (diminuer les valeurs de ses coordonnées en `x` de 1)
+* Que signifie déplacer le panier à gauche en termes de positions ? (diminuer la valeur de sa coordonnée en `x` de 1)
 * Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)
 
-Utilisez les blocs `lorsque le bouton ... est pressé` et ajoutez-y les blocs permettant de déplacer le panier. Le bloc `modifier panier de 1` permet d'augmenter la valeur de la variable `panier` de 1. Changez le 1 en -1 afin de diminuer sa valeur.
+Utilisez les blocs `lorsque le bouton ... est pressé` et ajoutez-y les blocs permettant de déplacer le panier. Le bloc `modifier panier de 1` permet d'augmenter la valeur de la variable `panier` de 1. Changez le 1 en -1 pour diminuer sa valeur.
 
 ```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
@@ -167,7 +165,7 @@ Voici les étapes à suivre:
 
 ### Exercice 7
 
-Si on appuie de nombreuses fois sur le bouton `A` ou `B`, le panier disparait, il sort de l'écran.  
+Si on appuie de nombreuses fois sur le bouton `A` ou `B`, le panier disparait, il sort de l'écran !  
 On doit empêcher le panier d'aller plus loin que les bords de l'écran.
 
 * Pourquoi est-ce que le panier sort de l'écran ? (la variable `panier` continue d'être modifiée pour finalement allumer des leds à des coordonnées qui n'existent pas)
@@ -202,9 +200,9 @@ Fin de l'étape 2, on a un panier déplaçable à l'aide des boutons.
 
 Il s'agit maintenant de détecter lorsque le fruit est attrapé par le panier, c'est-à-dire lorqu'il y a collision entre le fruit et le panier.
 
-Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais comme le micro:bit ne *voit* pas, il faut trouver une autre solution pour qu'il puisse vérifier s'il y a collision ou non.
+Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais comme le micro:bit ne *voit* pas, il faut trouver un moyen pour qu'il puisse vérifier s'il y a collision ou non.
 
-* A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes)
+* A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes en `x` et en `y`)
 * Quelles sonts les coordonnées du panier et du fruit ? (comme elles changent, elles sont dans des variables. Fruit(`colonne`, `index`) et panier(`panier`, `4`))
 * Comment s'écrit l'égalité des coordonnées avec ces variables ? (`colonne == panier ET index == 4`)
 

@@ -335,9 +335,10 @@ Sur l’interface de programmation, vous voyez 2 blocs déjà présents:</p>
 </ul>
 <section id="exercice-1">
 <h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Nous allons commencer par faire tomber le fruit sur la colonne 1, c’est à dire la 2ème colonne en partant de la gauche.<br/>
-Chaque led possède des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>. Le led tout en haut à gauche se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> tandis que celui tout en bas à droite se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>.</p>
-<p>Ajoutez des blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code> pour allumer tous les blocs de la colonne 1.</p>
+<p>Chaque led possède des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>. Le led tout en haut à gauche se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> tandis que celui tout en bas à droite se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>.
+Nous allons commencer par faire tomber le fruit sur la colonne en x=1, c’est à dire la 2ème colonne en partant de la gauche.</p>
+<p>Ajoutez 5 blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code> pour allumer tous les blocs de la colonne en x=1.<br/>
+Ajoutez également un bloc <code class="docutils literal notranslate"><span class="pre">pause</span></code> de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir la solution<div class="summary-down docutils">
@@ -350,9 +351,7 @@ Voir la solution<div class="summary-down docutils">
 </details></section>
 <section id="exercice-2">
 <h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Ajoutez à présent les blocs <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour allumer et éteindre successivement tous les leds de la colonne du haut vers le bas.</p>
-<p>Problème: vous ne voyez rien ! Pourquoi ? Car les led s’allument et s’éteignent trop vite pour que vous puissiez les voir.<br/>
-Pour résoudre ce problème, ajoutez des blocs <code class="docutils literal notranslate"><span class="pre">pause</span></code> de 500ms après chaque allumage afin que la led ne s’éteigne pas immédiatement après avoir été allumé.</p>
+<p>Ajoutez à présent 5 blocs <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour allumer et éteindre successivement toutes les leds de la colonne du haut vers le bas.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir la solution<div class="summary-down docutils">
@@ -484,10 +483,10 @@ Voir la solution<div class="summary-down docutils">
 <p>Le panier est fixe, il faut le faire bouger.<br/>
 Nous allons utiliser les boutons <code class="docutils literal notranslate"><span class="pre">A</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span></code> pour les déplacements gauche et droite, respectivement.</p>
 <ul class="simple">
-<li><p>Que signifie déplacer le panier à gauche en termes de positions ? (diminuer les valeurs de ses coordonnées en <code class="docutils literal notranslate"><span class="pre">x</span></code> de 1)</p></li>
+<li><p>Que signifie déplacer le panier à gauche en termes de positions ? (diminuer la valeur de sa coordonnée en <code class="docutils literal notranslate"><span class="pre">x</span></code> de 1)</p></li>
 <li><p>Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)</p></li>
 </ul>
-<p>Utilisez les blocs <code class="docutils literal notranslate"><span class="pre">lorsque</span> <span class="pre">le</span> <span class="pre">bouton</span> <span class="pre">...</span> <span class="pre">est</span> <span class="pre">pressé</span></code> et ajoutez-y les blocs permettant de déplacer le panier. Le bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">panier</span> <span class="pre">de</span> <span class="pre">1</span></code> permet d’augmenter la valeur de la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> de 1. Changez le 1 en -1 afin de diminuer sa valeur.</p>
+<p>Utilisez les blocs <code class="docutils literal notranslate"><span class="pre">lorsque</span> <span class="pre">le</span> <span class="pre">bouton</span> <span class="pre">...</span> <span class="pre">est</span> <span class="pre">pressé</span></code> et ajoutez-y les blocs permettant de déplacer le panier. Le bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">panier</span> <span class="pre">de</span> <span class="pre">1</span></code> permet d’augmenter la valeur de la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> de 1. Changez le 1 en -1 pour diminuer sa valeur.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 (Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -516,7 +515,7 @@ Voir la solution<div class="summary-down docutils">
 </details></section>
 <section id="exercice-7">
 <h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Si on appuie de nombreuses fois sur le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code> ou <code class="docutils literal notranslate"><span class="pre">B</span></code>, le panier disparait, il sort de l’écran.<br/>
+<p>Si on appuie de nombreuses fois sur le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code> ou <code class="docutils literal notranslate"><span class="pre">B</span></code>, le panier disparait, il sort de l’écran !<br/>
 On doit empêcher le panier d’aller plus loin que les bords de l’écran.</p>
 <ul class="simple">
 <li><p>Pourquoi est-ce que le panier sort de l’écran ? (la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> continue d’être modifiée pour finalement allumer des leds à des coordonnées qui n’existent pas)</p></li>
@@ -559,9 +558,9 @@ Voir la solution<div class="summary-down docutils">
 <section id="exercice-8">
 <h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Il s’agit maintenant de détecter lorsque le fruit est attrapé par le panier, c’est-à-dire lorqu’il y a collision entre le fruit et le panier.</p>
-<p>Visuellement il est facile de <em>voir</em> quand le fruit tombe dans le panier, mais comme le micro:bit ne <em>voit</em> pas, il faut trouver une autre solution pour qu’il puisse vérifier s’il y a collision ou non.</p>
+<p>Visuellement il est facile de <em>voir</em> quand le fruit tombe dans le panier, mais comme le micro:bit ne <em>voit</em> pas, il faut trouver un moyen pour qu’il puisse vérifier s’il y a collision ou non.</p>
 <ul class="simple">
-<li><p>A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes)</p></li>
+<li><p>A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes en <code class="docutils literal notranslate"><span class="pre">x</span></code> et en <code class="docutils literal notranslate"><span class="pre">y</span></code>)</p></li>
 <li><p>Quelles sonts les coordonnées du panier et du fruit ? (comme elles changent, elles sont dans des variables. Fruit(<code class="docutils literal notranslate"><span class="pre">colonne</span></code>, <code class="docutils literal notranslate"><span class="pre">index</span></code>) et panier(<code class="docutils literal notranslate"><span class="pre">panier</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>))</p></li>
 <li><p>Comment s’écrit l’égalité des coordonnées avec ces variables ? (<code class="docutils literal notranslate"><span class="pre">colonne</span> <span class="pre">==</span> <span class="pre">panier</span> <span class="pre">ET</span> <span class="pre">index</span> <span class="pre">==</span> <span class="pre">4</span></code>)</p></li>
 </ul>
