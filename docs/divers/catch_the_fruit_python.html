@@ -1,0 +1,593 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Portes logiques" href="portes_logiques.html" /><link rel="prev" title="Simulation d’épidémie" href="epidemie.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Catch the fruit - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet.html">Projet de dessin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves.html">Projets de dessin d’élèves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/aventure.html">Histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet2.html">Projet d’histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves2.html">Projets d’histoire interactive d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web/html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css1.html">5. Introduction au CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css2.html">6. Plus de propriétés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css3.html">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/hit_the_fly.html">1. Hit the fly (shooter)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/platformer.html">2. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projets_eleves.html">Projets de jeux 2D</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Catch the fruit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets libres d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="catch-the-fruit">
+<span id="divers-catch-the-fruit-python"></span><h1>Catch the fruit<a class="headerlink" href="#catch-the-fruit" title="Lien permanent vers ce titre">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans ce TP, nous allons programmer un petit jeu sur <code class="docutils literal notranslate"><span class="pre">micro:bit</span></code> grâce au langage python. Le micro:bit est un ordinateur minimaliste qui prend la forme d’une carte sur laquelle on trouve, entre autres, un écran de diodes lumineuses et deux boutons.</p>
+<p><img alt="img" src="../_images/microbit.jpg"/></p>
+<p>Le but de l’activité est de programmer un jeu appelé <code class="docutils literal notranslate"><span class="pre">catch</span> <span class="pre">the</span> <span class="pre">fruit</span></code>.</p>
+<p>L’idée est d’utiliser la matrice de 25 leds du micro:bit comme écran sur lequel un fruit représenté par 1 led va tomber du haut de l’écran et qu’il faudra rattraper dans un panier. Le panier sera déplaçable à l’aide des boutons A et B.</p>
+<p><img alt="img" src="../_images/microbit.gif"/></p>
+</section>
+<section id="mise-en-place">
+<h2>Mise en place<a class="headerlink" href="#mise-en-place" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="etapes-a-programmer">
+<h2>Etapes à programmer<a class="headerlink" href="#etapes-a-programmer" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voici les différentes étapes que nous allons suivre afin de programmer le jeu:</p>
+<ol class="simple">
+<li><p>Faire tomber un fruit du haut de l’écran</p></li>
+<li><p>Déplacer le panier à l’aide des boutons</p></li>
+<li><p>Détecter lorsqu’un fruit est attrapé (i.e. collision fruit-panier)</p></li>
+<li><p>Gestion des échecs (i.e. fruit n’est pas attrapé)</p></li>
+<li><p>Fin du jeu et affichage du score</p></li>
+</ol>
+</section>
+<section id="etape-1-faire-tomber-un-fruit">
+<h2>Étape 1 - Faire tomber un fruit<a class="headerlink" href="#etape-1-faire-tomber-un-fruit" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons programmer un fruit qui tombe sur une des 5 colonne choisie aléatoirement.<br/>
+Dans le code fourni, vous trouverez 3 fonctions à compléter:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">on_button_pressed_a</span></code>: cette fonction est appelée lorsque le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code> est pressé.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">on_button_pressed_b</span></code>: cette fonction est appelée lorsque le bouton <code class="docutils literal notranslate"><span class="pre">B</span></code> est pressé.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">on_forever</span></code>: cette fonction est appelée en boucle.</p></li>
+</ul>
+<section id="exercice-1">
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Chaque led possède des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>. Le led tout en haut à gauche se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> tandis que celui tout en bas à droite se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>.<br/>
+Nous allons commencer par faire tomber le fruit sur la colonne en <code class="docutils literal notranslate"><span class="pre">x=1</span></code>, c’est à dire la 2ème colonne en partant de la gauche.</p>
+<p>Dans la fonction <code class="docutils literal notranslate"><span class="pre">on_forever</span></code>, ajoutez 5 instructions pour allumer les leds de la colonne en <code class="docutils literal notranslate"><span class="pre">x=1</span></code>.<br/>
+Ajoutez des instructions <code class="docutils literal notranslate"><span class="pre">pause</span></code> pour ralentir la chute du fruit.</p>
+<p><img alt="img" src="../_images/m1.gif"/></p>
+</section>
+<section id="exercice-2">
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ajoutez à présent 5 instructions <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour allumer et éteindre successivement toutes les leds de la colonne du haut vers le bas.</p>
+<p><img alt="img" src="../_images/m2.gif"/></p>
+</section>
+<section id="exercice-3">
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
+<p>En regardant de plus près les blocs utilisés, on remarque la répétition des 3 mêmes instructions : <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code>. Chaque instruction est répété 5 fois.<br/>
+Quand on a une répétition d’instructions, on veut utiliser une <strong>boucle</strong> !</p>
+<div class="question"><form><div class="admonition">
+<p class="admonition-title">Question</p>
+<div class="question-content docutils">
+<p>Dans votre code, quelle est l’unique valeur qui change à chaque répétition des 3 instructions <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> ?</p>
+<ul class="simple">
+<li><p><label class="answer incorrect"><input type="checkbox"/>La durée de la pause</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>La coordonnée horizontale x</label></p></li>
+<li><p><label class="answer correct"><input type="checkbox"/>La coordonnée verticale y</label></p></li>
+<li><p><label class="answer incorrect"><input type="checkbox"/>Aucune idée</label></p></li>
+</ul>
+</div>
+<div class="controls"><button class="reset btn btn-secondary" type="button"><i class="fa fa-repeat"></i> Effacer</button><button class="show btn btn-secondary" type="button"><i class="fa fa-eye"></i> Montrer l'explication</button><button class="check btn btn-primary" type="button"><i class="fa fa-question"></i> Vérifier</button></div><div class="question-feedback docutils">
+<p>La coordonnée verticale <code class="docutils literal notranslate"><span class="pre">y</span></code> est la seule à changer entre chaque répétition. C’est le cas car le fruit tombe du haut vers le bas, et donc la coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> est augmentée de 1 à chaque tour.</p>
+</div>
+</div>
+</form></div><p>L’idée est donc d’utiliser une boucle qui va répéter les instructions tout en augmentant <code class="docutils literal notranslate"><span class="pre">y</span></code> de 1 à chaque tour afin de faire tomber le fruit.</p>
+<p>Utilisez une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> pour répéter les 3 instructions <code class="docutils literal notranslate"><span class="pre">allumer</span></code>, <code class="docutils literal notranslate"><span class="pre">pause</span></code> et <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> 5 fois en augmentant la valeur de <code class="docutils literal notranslate"><span class="pre">y</span></code> à chaque tour.</p>
+<p>Visuellement, le résultat doit être le même que précédemment, mais le code est plus court et plus lisible.</p>
+</section>
+<section id="exercice-4">
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le fruit tombe toujours dans la même colonne (<code class="docutils literal notranslate"><span class="pre">x=1</span></code>), on veut changer aléatoirement de colonne pour chaque fruit.</p>
+<p>Donc au lieu que la coordonnée <code class="docutils literal notranslate"><span class="pre">x</span></code> soit fixée à 1, on veut qu’elle soit choisie aléatoirement avant de faire tomber le fruit.<br/>
+Déclarez une variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code> et initialisez-la à une valeur aléatoire entre 0 et 4 grâce à la fonction <code class="docutils literal notranslate"><span class="pre">randint</span></code> du module <code class="docutils literal notranslate"><span class="pre">Maths</span></code>.</p>
+<p>Utilisez ensuite cette variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code> pour faire tomber le fruit dans la bonne colonne.</p>
+<p><img alt="img" src="../_images/m3.gif"/></p>
+</section>
+</section>
+<section id="etape-2-deplacer-le-panier">
+<h2>Étape 2 - Déplacer le panier<a class="headerlink" href="#etape-2-deplacer-le-panier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons programmer le panier qui se déplace de droite à gauche à l’aide des boutons <code class="docutils literal notranslate"><span class="pre">A</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
+<section id="exercice-5">
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour commencer il faut choisir comment sera représenté le panier. Nous utiliserons 1 seule led sur la ligne tout en bas (coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> à 4).</p>
+<p>Définissez une variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> pour la coordonnée horizontale du panier qui va varier et initiez-la à <code class="docutils literal notranslate"><span class="pre">2</span></code> au début du programme (en dehors des fonctions).
+N’oubliez pas d’allumer les leds correspondantes, sinon on ne verra pas le panier !</p>
+<p><img alt="img" src="../_images/m4.gif"/></p>
+</section>
+<section id="exercice-6">
+<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le panier est fixe, il faut le faire bouger.<br/>
+Nous allons utiliser les boutons <code class="docutils literal notranslate"><span class="pre">A</span></code> et <code class="docutils literal notranslate"><span class="pre">B</span></code> pour les déplacements gauche et droite, respectivement.</p>
+<p>Dans les fonctions <code class="docutils literal notranslate"><span class="pre">on_button_pressed_a</span></code> et <code class="docutils literal notranslate"><span class="pre">on_button_pressed_b</span></code>, ajoutez des instructions pour déplacer le panier à gauche et à droite.<br/>
+Pour rappel, il faut donc modifier la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> et mettre à jour les leds correspondantes.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Pour pouvoir modifier la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> dans les fonctions <code class="docutils literal notranslate"><span class="pre">on_button_pressed_a</span></code> et <code class="docutils literal notranslate"><span class="pre">on_button_pressed_b</span></code>, il faut la déclarer comme <code class="docutils literal notranslate"><span class="pre">globale</span></code> dans ces fonctions.<br/>
+Ajoutez danc l’instruction <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">panier</span></code> au début de ces fonctions.</p>
+</div>
+<p><img alt="img" src="../_images/m5.gif"/></p>
+</section>
+<section id="exercice-7">
+<h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si on appuie de nombreuses fois sur le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code> ou <code class="docutils literal notranslate"><span class="pre">B</span></code>, le panier disparait, il sort de l’écran !<br/>
+On doit empêcher le panier d’aller plus loin que les bords de l’écran.</p>
+<p>Utilisez des instructions conditionnelles (<code class="docutils literal notranslate"><span class="pre">if</span></code>) pour empêcher le panier de sortir de l’écran.<br/>
+Plus précisément, si le panier est à la colonne <code class="docutils literal notranslate"><span class="pre">0</span></code>, il ne doit pas pouvoir aller plus à gauche, et si le panier est à la colonne <code class="docutils literal notranslate"><span class="pre">4</span></code>, il ne doit pas pouvoir aller plus à droite.</p>
+<p><img alt="img" src="../_images/m6.gif"/></p>
+</section>
+</section>
+<section id="etape-3-detecter-lorsquun-fruit-est-attrape">
+<h2>Étape 3 - Détecter lorsqu’un fruit est attrapé<a class="headerlink" href="#etape-3-detecter-lorsquun-fruit-est-attrape" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-8">
+<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il s’agit maintenant de détecter lorsque le fruit est attrapé par le panier, c’est-à-dire lorqu’il y a collision entre le fruit et le panier.<br/>
+Visuellement il est facile de <em>voir</em> quand le fruit tombe dans le panier, mais comme le micro:bit ne <em>voit</em> pas, il faut trouver un moyen pour qu’il puisse vérifier s’il y a collision ou non.</p>
+<p>Pour cela, on va utiliser les coordonnées du fruit et du panier. Il y a collision lorsque le fruit est arrivé en bas de l’écran (coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> à 4) et que sa <code class="docutils literal notranslate"><span class="pre">colonne</span></code> est la même que celle du <code class="docutils literal notranslate"><span class="pre">panier</span></code>.</p>
+<p>Juste après la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> faisant tomber le fruit, ajoutez un <code class="docutils literal notranslate"><span class="pre">if</span></code> pour faire le test de collision.</p>
+<p>En cas de collision, le jeu doit réagir de la manière suivante:</p>
+<ol class="simple">
+<li><p>Afficher une icône (par exemple un smiley heureux) pour signaler que le fruit a été attrapé (onglet BASE).</p></li>
+<li><p>Effacer l’écran pour enlever l’icône (onglet BASE).</p></li>
+<li><p>Réafficher le panier pour qu’il soit visible.</p></li>
+</ol>
+<p><img alt="img" src="../_images/m7.gif"/></p>
+</section>
+<section id="exercice-9">
+<h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On veut maintenant compter le nombre de fruits attrapés, c’est-à-dire le <code class="docutils literal notranslate"><span class="pre">score</span></code> du joueur !</p>
+<p>Déclarez une variable <code class="docutils literal notranslate"><span class="pre">score</span></code> et initialisez-la à 0 au début du programme (en dehors des fonctions).<br/>
+Faites en sorte que ce score augmente de 1 à chaque fois qu’un fruit est attrapé.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Pour pouvoir modifier la variable <code class="docutils literal notranslate"><span class="pre">score</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">on_forever</span></code>, il faut la déclarer comme <code class="docutils literal notranslate"><span class="pre">globale</span></code> dans cette fonction.<br/>
+Ajoutez danc l’instruction <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">score</span></code> au début de cette fonction.</p>
+</div>
+<p>Visuellement, il n’y a aucune différence à la fin de cette étape.</p>
+</section>
+</section>
+<section id="etape-4-gestion-des-echecs">
+<h2>Étape 4 - Gestion des échecs<a class="headerlink" href="#etape-4-gestion-des-echecs" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-10">
+<h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Un échec se produit lorsqu’un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur perd une vie.</p>
+<p>Déclarez une variable <code class="docutils literal notranslate"><span class="pre">vie</span></code> et initialisez-la à 3 au début du programme (en dehors des fonctions).</p>
+<p>Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">else</span></code> à la suite du bloc <code class="docutils literal notranslate"><span class="pre">if</span></code> de la collision. Ce bloc est exécuté si la condition de collision n’est pas respectée, c’est-à-dire si le fruit est arrivé en bas de l’écran mais n’est pas dans le panier.</p>
+<p>En cas d’échec, le jeu doit réagir de la manière suivante:</p>
+<ol class="simple">
+<li><p>Diminuer le nombre de vies de 1.</p></li>
+<li><p>Afficher une icône (par exemple un smiley triste) pour signaler que le fruit n’a pas été attrapé.</p></li>
+<li><p>Effacer l’écran pour enlever l’icône.</p></li>
+<li><p>Réafficher le panier pour qu’il soit visible.</p></li>
+</ol>
+<p><img alt="img" src="../_images/m8.gif"/></p>
+</section>
+</section>
+<section id="etape-5-fin-du-jeu">
+<h2>Étape 5 - Fin du jeu<a class="headerlink" href="#etape-5-fin-du-jeu" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="exercice-11">
+<h3>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le jeu est maintenant fonctionnel, on marque des points lorsqu’un fruit est attrapé et on perd une vie quand on le rate ! Cependant, le jeu ne s’arrête pas même si on a perdu toutes nos vies.</p>
+<p>Nous allons donc faire s’arrêter le jeu lorsque la <code class="docutils literal notranslate"><span class="pre">vie</span></code> du joueur passe à <code class="docutils literal notranslate"><span class="pre">0</span></code>, puis nous afficherons le score.</p>
+<p>Une manière simple de faire cela est d’ajouter une condition dans le bloc <code class="docutils literal notranslate"><span class="pre">on_forever</span></code> qui teste si le joueur a encore des vies. Si c’est le cas, le jeu se déroule normalement, sinon on affiche le score (onglet BASE).</p>
+<p><img alt="img" src="../_images/m9.gif"/></p>
+</section>
+</section>
+<section id="pour-aller-plus-loin-bonus-facultatif">
+<h2>Pour aller plus loin (bonus facultatif)<a class="headerlink" href="#pour-aller-plus-loin-bonus-facultatif" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour rendre le jeu plus intéressant, voici une liste de suggestions:</p>
+<ul class="simple">
+<li><p>Augmenter la vitesse de chute des fruits après un certain nombre de points</p></li>
+<li><p>Ajouter des bruitages pour signaler la collision ou l’échec</p></li>
+<li><p>Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité pour faire la distinction)</p></li>
+<li><p>Faire déplacer le panier en inclinant la carte micro:bit à gauche ou à droite au lieu des boutons A et B</p></li>
+<li><p>Faire tomber plusieurs fruits en même temps</p></li>
+<li><p>Faire tomber certains fruits légèrement en diagonal</p></li>
+<li><p>Elargir le panier à 2 leds</p></li>
+<li><p>Etc…</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="portes_logiques.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Portes logiques</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="epidemie.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Simulation d’épidémie</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/divers/catch_the_fruit_python.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Catch the fruit</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#mise-en-place">Mise en place</a></li>
+<li><a class="reference internal" href="#etapes-a-programmer">Etapes à programmer</a></li>
+<li><a class="reference internal" href="#etape-1-faire-tomber-un-fruit">Étape 1 - Faire tomber un fruit</a><ul>
+<li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
+<li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
+<li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
+<li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#etape-2-deplacer-le-panier">Étape 2 - Déplacer le panier</a><ul>
+<li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
+<li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
+<li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#etape-3-detecter-lorsquun-fruit-est-attrape">Étape 3 - Détecter lorsqu’un fruit est attrapé</a><ul>
+<li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>
+<li><a class="reference internal" href="#exercice-9">Exercice 9</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#etape-4-gestion-des-echecs">Étape 4 - Gestion des échecs</a><ul>
+<li><a class="reference internal" href="#exercice-10">Exercice 10</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#etape-5-fin-du-jeu">Étape 5 - Fin du jeu</a><ul>
+<li><a class="reference internal" href="#exercice-11">Exercice 11</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pour-aller-plus-loin-bonus-facultatif">Pour aller plus loin (bonus facultatif)</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

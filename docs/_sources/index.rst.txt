@@ -75,7 +75,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    :hidden:
 
    divers/epidemie
-   divers/catch_the_fruit
+   divers/catch_the_fruit_python
    divers/portes_logiques
    divers/projets_eleves
 
