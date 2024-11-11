@@ -398,7 +398,7 @@ Pour rappel, il faut donc modifier la variable <code class="docutils literal not
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Pour pouvoir modifier la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> dans les fonctions <code class="docutils literal notranslate"><span class="pre">on_button_pressed_a</span></code> et <code class="docutils literal notranslate"><span class="pre">on_button_pressed_b</span></code>, il faut la déclarer comme <code class="docutils literal notranslate"><span class="pre">globale</span></code> dans ces fonctions.<br/>
-Ajoutez danc l’instruction <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">panier</span></code> au début de ces fonctions.</p>
+Ajoutez donc l’instruction <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">panier</span></code> au début de ces fonctions.</p>
 </div>
 <p><img alt="img" src="../_images/m5.gif"/></p>
 </section>
@@ -421,7 +421,7 @@ Visuellement il est facile de <em>voir</em> quand le fruit tombe dans le panier,
 <p>Juste après la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> faisant tomber le fruit, ajoutez un <code class="docutils literal notranslate"><span class="pre">if</span></code> pour faire le test de collision.</p>
 <p>En cas de collision, le jeu doit réagir de la manière suivante:</p>
 <ol class="simple">
-<li><p>Afficher une icône (par exemple un smiley heureux) pour signaler que le fruit a été attrapé (onglet BASE).</p></li>
+<li><p>Afficher une icône (par exemple un coeur) pour signaler que le fruit a été attrapé (onglet BASE).</p></li>
 <li><p>Effacer l’écran pour enlever l’icône (onglet BASE).</p></li>
 <li><p>Réafficher le panier pour qu’il soit visible.</p></li>
 </ol>
@@ -450,7 +450,7 @@ Ajoutez danc l’instruction <code class="docutils literal notranslate"><span cl
 <p>En cas d’échec, le jeu doit réagir de la manière suivante:</p>
 <ol class="simple">
 <li><p>Diminuer le nombre de vies de 1.</p></li>
-<li><p>Afficher une icône (par exemple un smiley triste) pour signaler que le fruit n’a pas été attrapé.</p></li>
+<li><p>Afficher une icône (par exemple un crâne) pour signaler que le fruit n’a pas été attrapé.</p></li>
 <li><p>Effacer l’écran pour enlever l’icône.</p></li>
 <li><p>Réafficher le panier pour qu’il soit visible.</p></li>
 </ol>

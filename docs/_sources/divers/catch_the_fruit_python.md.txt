@@ -107,7 +107,7 @@ Pour rappel, il faut donc modifier la variable `panier` et mettre à jour les le
 
 ```{attention}
 Pour pouvoir modifier la variable `panier` dans les fonctions `on_button_pressed_a` et `on_button_pressed_b`, il faut la déclarer comme `globale` dans ces fonctions.  
-Ajoutez danc l'instruction `global panier` au début de ces fonctions.
+Ajoutez donc l'instruction `global panier` au début de ces fonctions.
 ```
 
 ![img](../media/microbit/m5.gif)
@@ -135,7 +135,7 @@ Juste après la boucle `for` faisant tomber le fruit, ajoutez un `if` pour faire
 
 En cas de collision, le jeu doit réagir de la manière suivante:
 
-1. Afficher une icône (par exemple un smiley heureux) pour signaler que le fruit a été attrapé (onglet BASE).
+1. Afficher une icône (par exemple un coeur) pour signaler que le fruit a été attrapé (onglet BASE).
 2. Effacer l'écran pour enlever l'icône (onglet BASE).
 3. Réafficher le panier pour qu'il soit visible.
 
@@ -168,7 +168,7 @@ Ajoutez un bloc `else` à la suite du bloc `if` de la collision. Ce bloc est ex�
 En cas d'échec, le jeu doit réagir de la manière suivante:
 
 1. Diminuer le nombre de vies de 1.
-2. Afficher une icône (par exemple un smiley triste) pour signaler que le fruit n'a pas été attrapé.
+2. Afficher une icône (par exemple un crâne) pour signaler que le fruit n'a pas été attrapé.
 3. Effacer l'écran pour enlever l'icône.
 4. Réafficher le panier pour qu'il soit visible.
 
