@@ -204,7 +204,10 @@ Et voici la liste HTML modifiée:
 ```
 ````
 `````
+
+```{raw} html
                                                                                                                                                                                                                                                 <!-- Code secret: X-MAS -->
+```
 
 ```{admonition} A retenir
 :class: note
