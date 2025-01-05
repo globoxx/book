@@ -31,7 +31,6 @@
 * <a href="sites/2024-2025/2M01/Ashraaf/teams.html" target="_blank">Ashraaf</a>
 * <a href="sites/2024-2025/2M01/David_Raphael/index.html" target="_blank">David et Raphael</a>
 * <a href="sites/2024-2025/2M01/Diogo_Marvelous/index.html" target="_blank">Diogo et Marvelous</a>
-* <a href="sites/2024-2025/2M01/Nathan_Arthur/index.html" target="_blank">Nathan et Arthur</a>
 * {download}`Nathan et Arthur<sites/2024-2025/2M01/Nathan_Arthur.zip>` (Nécessite le lancement d'un serveur local)
 * <a href="sites/2024-2025/2M01/Olivier/accueil.html" target="_blank">Olivier</a>
 * <a href="sites/2024-2025/2M01/Sebastien_Gabriel/chessMenu.html" target="_blank">Sébastien et Gabriel</a>
