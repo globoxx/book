@@ -35,7 +35,7 @@
 * <a href="sites/2024-2025/2M01/Olivier/accueil.html" target="_blank">Olivier</a>
 * <a href="sites/2024-2025/2M01/Sebastien_Gabriel/chessMenu.html" target="_blank">Sébastien et Gabriel</a>
 * <a href="sites/2024-2025/2M01/Yehia_Mio/index.html" target="_blank">Yehia et Mio</a>
-* <a href="sites/2024-2025/2M01/Zafir/index.html" target="_blank">Zafir</a>
+* <a href="sites/2024-2025/2M01/Zafir/build_site/index.html" target="_blank">Zafir</a>
 
 ### 2M04
 
