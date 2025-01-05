@@ -22,3 +22,57 @@
 * <a href="sites/2023-2024/2M02/Lucas_Lenny/index.html" target="_blank">World Cup Winners - Lucas et Lenny</a>
 * <a href="sites/2023-2024/2M02/Marie_Ketsia/index.html" target="_blank">Recettes de Ketsia et Marie - Ketsia et Marie</a>
 * <a href="sites/2023-2024/2M02/Rayan_Leo/index.html" target="_blank">Jeu du Morpion - Rayan et Léo</a>
+
+## 2024 - 2025
+
+### 2M01
+
+* <a href="sites/2024-2025/2M01/Ana_Adeline/index.html" target="_blank">Ana et Adeline</a>
+* <a href="sites/2024-2025/2M01/Ashraaf/teams.html" target="_blank">Ashraaf</a>
+* <a href="sites/2024-2025/2M01/David_Raphael/index.html" target="_blank">David et Raphael</a>
+* <a href="sites/2024-2025/2M01/Diogo_Marvelous/index.html" target="_blank">Diogo et Marvelous</a>
+* <a href="sites/2024-2025/2M01/Nathan_Arthur/index.html" target="_blank">Nathan et Arthur</a>
+* <a href="sites/2024-2025/2M01/Olivier/accueil.html" target="_blank">Olivier</a>
+* <a href="sites/2024-2025/2M01/Sebastien_Gabriel/chessMenu.html" target="_blank">Sébastien et Gabriel</a>
+* <a href="sites/2024-2025/2M01/Yehia_Mio/index.html" target="_blank">Yehia et Mio</a>
+* <a href="sites/2024-2025/2M01/Zafir/index.html" target="_blank">Zafir</a>
+
+### 2M04
+
+* <a href="sites/2024-2025/2M04/Axel_Gaetane/index.html" target="_blank">Axel et Gaétane</a>
+* <a href="sites/2024-2025/2M04/Delia_Jessie/index.html" target="_blank">Délia et Jessie</a>
+* <a href="sites/2024-2025/2M04/Dorian/comment_investir.html" target="_blank">Dorian</a>
+* <a href="sites/2024-2025/2M04/Emile/homepage.html" target="_blank">Emile</a>
+* <a href="sites/2024-2025/2M04/Hasna/index.html" target="_blank">Hasna</a>
+* <a href="sites/2024-2025/2M04/Kilian_Marco/index.html" target="_blank">Kilian et Marco</a>
+* <a href="sites/2024-2025/2M04/Lina_Arina/Accueil.html" target="_blank">Lina et Arina</a>
+* <a href="sites/2024-2025/2M04/Lina_Carolina/index.html" target="_blank">Lina et Carolina</a>
+* <a href="sites/2024-2025/2M04/Marianna_Eva/index.html" target="_blank">Marianna et Eva</a>
+* <a href="sites/2024-2025/2M04/Melanie_Tatiana/Accueil.html" target="_blank">Mélanie et Tatiana</a>
+* <a href="sites/2024-2025/2M04/Omar/index.html" target="_blank">Omar</a>
+* <a href="sites/2024-2025/2M04/Valentin/Accueil.html" target="_blank">Valentin</a>
+
+### 2M05
+
+* <a href="sites/2024-2025/2M05/Alexandre_Arthur/index.html" target="_blank">Alexandre et Arthur</a>
+* <a href="sites/2024-2025/2M05/Antoine_Corto/index.html" target="_blank">Antoine et Corto</a>
+* <a href="sites/2024-2025/2M05/Dimitri_Nina/index.html" target="_blank">Dimitri et Nina</a>
+* <a href="sites/2024-2025/2M05/Juliette_Isaac/index.html" target="_blank">Juliette et Isaac</a>
+* <a href="sites/2024-2025/2M05/Manon_Lucile/index.html" target="_blank">Manon et Lucile</a>
+* <a href="sites/2024-2025/2M05/Marie-Caroline/accueil.html" target="_blank">Marie-Caroline</a>
+* <a href="sites/2024-2025/2M05/Meline/index.html" target="_blank">Méline</a>
+* <a href="sites/2024-2025/2M05/Timothee_Eliott/index.html" target="_blank">Timothée et Eliott</a>
+
+### 2M07
+
+* <a href="sites/2024-2025/2M07/Alice_Lana/index.html" target="_blank">Alice et Lana</a>
+* <a href="sites/2024-2025/2M07/Erleta_Rimsha/index.html" target="_blank">Erleta et Rimsha</a>
+* <a href="sites/2024-2025/2M07/Julianne_Leonisa/index.html" target="_blank">Julianne et Leonisa</a>
+* <a href="sites/2024-2025/2M07/Lila_Cigdem/index.html" target="_blank">Lila et Cigdem</a>
+* <a href="sites/2024-2025/2M07/Nicole_Jasmine/index.html" target="_blank">Nicole et Jasmine</a>
+* <a href="sites/2024-2025/2M07/Noam/indexx.html" target="_blank">Noam</a>
+* <a href="sites/2024-2025/2M07/Olivia_Charline/index.html" target="_blank">Olivia et Charline</a>
+* <a href="sites/2024-2025/2M07/Pedro_Nejla/index.html" target="_blank">Pedro et Nejla</a>
+* <a href="sites/2024-2025/2M07/Radwan/index.html" target="_blank">Radwan</a>
+* <a href="sites/2024-2025/2M07/Yassine_Emma/index.html" target="_blank">Yassine et Emma</a>
+* <a href="sites/2024-2025/2M07/Zoe_Magali/index.html" target="_blank">Zoé et Magali</a>

@@ -160,6 +160,11 @@
 ```{image} ../media/dessins_eleves/Pauline_Marie.gif
 ```
 
+#### Luan et Fatema
+
+```{image} ../media/dessins_eleves/Luan_Fatema.png
+```
+
 ### 1M07
 
 #### Alice et Cigdem

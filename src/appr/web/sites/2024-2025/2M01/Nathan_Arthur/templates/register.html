@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeMarks</title>
+    <link rel="shortcut icon" href="/static/image/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar-manage">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='image/logo-without-font.png') }}" alt="Logo Safemarks" class="logo-image" href="">
+                <a href="">SafeMarks</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+            </ul>            
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Register</h1>
+        <form method="POST" action="/register">
+            <div>    
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>    
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div>    
+                <label for="mail">Mail adress</label>
+                <input type="text" id="mail" name="mail" required>
+            </div>
+            <div>    
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="{{ username or '' }}" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>   
+            </div>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div>
+                        {% for category, message in messages %}
+                            <p class="{{ category }}">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+            <button type="submit">Register</button>
+        </form>
+        <div class="a-login">
+            <p>You have already an account ? <a href="/login">Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>

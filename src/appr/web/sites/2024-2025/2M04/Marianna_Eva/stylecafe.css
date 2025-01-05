@@ -1,0 +1,281 @@
+.header {
+    text-align: center;
+    background-color: hotpink;
+    color: white;
+    padding: 16px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.header h1 {
+    color: white
+}
+
+.esprit-cafe-rose {
+    text-align: center;
+    background-color: hotpink;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+
+
+.esprit-cafe-rose p strong {
+    font-weight: bold;
+    color: white;
+}
+
+
+.menu ul {
+    background-color: deeppink;
+    color: white;
+    display: flex;
+    list-style-type: none;
+    border-radius: 20px;
+    font-family: Brush Script MT;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu li:hover {
+    background-color: hotpink;
+}
+
+.contenu {
+    display: flex;
+}
+
+.contenu-accueil {
+    background-color: hotpink;
+    color: white;
+    padding: 16px;
+    border-radius: 20px;
+    margin-right: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+
+
+
+.image-gallery img {
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.headercarte {
+
+    text-align: center;
+    background-color: hotpink;
+    color: white;
+    padding: 16px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.headercarte h1 {
+    color: white
+}
+
+.boissons {
+    background-color: deeppink;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.carte-plats-sucres {
+    background-color: deeppink;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.images-carte {
+    background-color: deeppink;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: 70%;
+    margin: 30px auto;
+    justify-content: space-between;
+}
+
+.headerhistoire {
+    text-align: center;
+    background-color: hotpink;
+    color: white;
+    padding: 16px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.rose h3 {
+    color: hotpink;
+    font-family: "Playfair Display", serif
+}
+
+.création h3 {
+    color: hotpink;
+    font-family: "Playfair Display", serif
+}
+
+.futur-du-cafe h3 {
+    color: hotpink;
+    font-family: "Playfair Display", serif
+}
+
+.rose {
+    margin: 20px;
+}
+
+.création {
+    margin: 20px;
+}
+
+.futur-du-cafe {
+    margin: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fef2f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: hotpink;
+    font-size: 2.5rem;
+    margin-top: 40px;
+}
+
+h2 {
+    color: hotpink;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.menu ul {
+    background-color: deeppink;
+    color: white;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    border-radius: 20px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.headcontact {
+    text-align: center;
+    background-color: hotpink;
+    color: white;
+    padding: 16px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.menu li {
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.menu li:hover {
+    background-color: hotpink;
+}
+
+.menu a {
+    color: white;
+}
+
+
+.contact-info {
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+
+.contact-info li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info li a {
+    color: deeppink;
+    text-decoration: none;
+}
+
+.contact-info button {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+
+.social-media {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-media img {
+    width: 50px;
+}
+
+
+
+.ouverture {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.ouverture li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: hotpink;
+    color: white;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-radius: 20px;
+}

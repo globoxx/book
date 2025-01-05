@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeMarks</title>
+    <link rel="shortcut icon" href="/static/image/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-manage">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='image/logo-without-font.png') }}" alt="Logo Safemarks" class="logo-image" href="">
+                <a href="">SafeMarks</a>
+            </div>
+            <ul class="nav-links">
+                <li><button type="button" onclick="location.href='/logout'">Log out</button></li>
+            </ul>            
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Manage Results</h1>
+        <h2>Welcome {{ name }}</h2>
+        {% if average %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Branch</th>
+                    <th>Average</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for branch in average %}
+                <tr>
+                    <td><a href="{{ url_for('view_notes', branch=branch) }}">{{ branch }}</a></td>
+                    <td>{{ average[branch] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p class="message">There is no marks here.</p>
+        {% endif %}
+        <button type="button" onclick="location.href='/add_score?origin=manage_results'">Add a note</button>
+    </div>
+</body>
+</html>

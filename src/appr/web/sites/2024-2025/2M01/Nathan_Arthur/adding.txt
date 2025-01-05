@@ -1,0 +1,7 @@
+-supprimer des notes
+-renommer une branche
+- panneau de compte avec nom prénom etc
+(- email de double authetifications)
+- les moyennes comment les calculer ajouter une règle
+- moyenne générale
+- Ajustement lors d'utilisation sur téléphone

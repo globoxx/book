@@ -1,0 +1,241 @@
+ .titre {
+      background-image: url("images/gif_InJ.gif");
+      background-size: cover;
+      height: 600px;
+      color: white;
+      font-family: futura;
+      border-radius: 50px;
+      padding: 50px;
+      width: 80%;
+      justify-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+ }
+
+ .titre h1 {
+      font-size: 3em;
+ }
+
+ .titre p {
+      font-size: 1.2em;
+ }
+
+ .menu {
+      background-color: grey;
+      justify-self: center;
+      width: 100%;
+      margin: 0;
+ }
+
+ .menu ul {
+      list-style-type: none;
+      display: flex;
+      font-family: futura;
+      font-size: 1.5em;
+      justify-content: space-evenly;
+ }
+
+ .menu li {
+      padding: 30px;
+      align-content: center;
+ }
+
+ .menu a {
+      color: white;
+      text-decoration: none;
+ }
+
+ .menu a:hover {
+      text-decoration: underline;
+ }
+
+ .menu img {
+      width: 50px;
+ }
+
+ .acceuil-moitié-prix {
+      margin-top: 100px;
+      justify-items: center;
+ }
+
+ .moitié-prix-articles {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 5px;
+ }
+
+ .moitié-prix-articles img:hover {
+      opacity: 0.7;
+      border-radius: 50%;
+      transition: 1s ease;
+ }
+
+ .moitié-prix-articles a {
+      text-decoration: none;
+      color: black;
+ }
+
+ .acceuil-moitié-prix h1 {
+      font-size: 5em;
+      margin: 0;
+ }
+
+ .acceuil-moitié-prix p {
+      font-size: 1.5em;
+      margin: 0 0 50px 0;
+ }
+
+
+
+ .article_pantalon_long {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+ }
+
+ .article_pantalon_long h1 {
+      font-family: futura;
+      font-size: 1.5em;
+ }
+
+ .article_pantalon_long img {
+      width: 400px;
+      height: 500px;
+ }
+
+ .article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+ }
+
+ .article h1 {
+      font-family: futura;
+      font-size: 1.5em;
+ }
+
+ .article img {
+      width: 400px;
+      height: 500px;
+ }
+
+ .article img:hover {
+      opacity: 0.7;
+      border-radius: 50%;
+      transition: 1s ease;
+ }
+
+ .article_left {
+      margin-left: 20px;
+ }
+
+ .article_top {
+      margin-top: 30px;
+ }
+
+ .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: grey;
+      color: white;
+      margin-top: 200px;
+ }
+
+ .contact {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      color: white;
+      align-items: center;
+ }
+
+ .contact img {
+      width: 40px;
+      height: 40px;
+ }
+
+ .photo_homme {
+      background-image: url("images/isaac..InJ.jpg");
+      background-size: cover;
+      height: 400px;
+      color: white;
+      font-family: futura;
+      border-radius: 50px;
+      padding: 50px;
+      width: 80%;
+      justify-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+ }
+
+ .article_top_homme {
+      margin-top: 100px;
+ }
+
+ .article_row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 60px;
+ }
+
+ .photo_femme {
+      background-image: url("images/juliette__InJ.jpg");
+      background-size: cover;
+      height: 400px;
+      color: white;
+      font-family: futura;
+      border-radius: 50px;
+      padding: 50px;
+      width: 80%;
+      justify-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+ }
+
+ .article_femme {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 5px;
+ }
+
+ .article_femme img:hover {
+      opacity: 0.7;
+      border-radius: 50%;
+      transition: 1s ease;
+ }
+
+
+ .article_rabais {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+
+ }
+
+ .article_rabais_photo img {
+      width: 500px;
+      height: 500px;
+      border-radius: 5%;
+ }
+
+ .article_rabais h1 {
+      text-decoration: line-through;
+      font-family: futura;
+      font-size: 1.5em;
+ }
+
+ .article_rabais h2 {
+      color: red;
+      font-family: futura;
+      font-size: 1em;
+ }
