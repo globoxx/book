@@ -1,0 +1,132 @@
+.header-accueil {
+    text-align: center;
+    background-color: #617747;
+    padding: 30px;
+}
+
+.header-20-50 {
+    text-align: center;
+    background-color: rgb(112, 134, 212);
+    padding: 30px;
+}
+
+.header-50-80 {
+    text-align: center;
+    background-color: rgb(201, 68, 24);
+    padding: 30px;
+}
+
+.header-80-00 {
+    text-align: center;
+    background-color: rgb(247, 87, 151);
+    padding: 30px;
+}
+
+.header-00-20 {
+    text-align: center;
+    background-color: rgb(247, 208, 101);
+    padding: 30px;
+}
+
+.menu ul {
+    justify-content: center;
+    background-color: rgb(249, 242, 216);
+    list-style-type: none;
+    color: burlywood;
+    display: flex;
+    margin: 0;
+}
+
+.menu li {
+    padding: 30px;
+
+}
+
+.menu li:hover {
+    background-color: rgb(224, 200, 155);
+
+}
+
+.contenu {
+    display: flex;
+}
+
+.contenu-principal-accueil {
+    background-color: rgb(129, 153, 88);
+    padding: 10px;
+}
+
+.contenu-principal-20-50 {
+    background-color: rgb(54, 72, 115);
+    padding: 10px;
+}
+
+.contenu-principal-50-80 {
+    background-color: rgb(67, 110, 52);
+    padding: 10px;
+}
+
+.contenu-principal-80-00 {
+    background-color: rgb(149, 202, 219);
+    padding: 10px;
+}
+
+.contenu-principal-00-20 {
+    background-color: rgb(201, 71, 105);
+    padding: 10px;
+}
+
+.contenu-secondaire-accueil {
+    background-color: rgb(149, 168, 117);
+    padding: 10px;
+}
+
+.contenu-secondaire-20-50 {
+    background-color: rgb(24, 24, 84);
+    padding: 10px;
+}
+
+.contenu-secondaire-50-80 {
+    background-color: rgb(232, 188, 44);
+    padding: 10px;
+}
+
+.contenu-secondaire-80-00 {
+    background-color: rgb(255, 135, 171);
+    padding: 10px;
+}
+
+.contenu-secondaire-00-20 {
+    background-color: rgb(119, 201, 200);
+    padding: 10px;
+}
+
+.footer-accueil {
+    text-align: start;
+    background-color: darkolivegreen;
+    padding: 20px;
+}
+
+.footer-20-50 {
+    text-align: end;
+    background-color: rgb(235, 180, 152);
+    padding: 20px;
+}
+
+.footer-50-80 {
+    text-align: start;
+    background-color: rgb(207, 102, 27);
+    padding: 20px;
+}
+
+.footer-80-00 {
+    text-align: start;
+    background-color: rgb(48, 63, 140);
+    padding: 20px;
+}
+
+.footer-00-20 {
+    text-align: end;
+    background-color: rgb(78, 156, 119);
+    padding: 20px;
+}

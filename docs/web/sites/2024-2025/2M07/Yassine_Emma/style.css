@@ -1,0 +1,121 @@
+h1{
+  text-align:center
+
+}
+.header{
+  background-color: rgb(219, 209, 192);
+  text-align: center;
+}
+
+.menu {
+border: 1px solid black; /* trouvé sur flexbox*/
+background-color: rgb(219, 209, 192) ;
+padding: 0;
+display: flex;
+justify-content: center;
+gap: 0.9rem;
+}
+.menu li {
+list-style-type: none; /* trouvé sur flexbox */
+flex-basis: 290px;
+text-align: center;
+margin: 0 0.3rem;
+}
+.menu a {
+display: block;
+padding: 0.5rem;
+background-color: rgb(171, 156, 156);
+text-decoration: none;
+color: #111;
+border-bottom: 3px solid #333;
+}
+.menu a:hover {
+color: #000000;
+background-color: #bbb6a0;
+border-color: #ffffff;
+}
+
+
+.contenu{
+  background-color: rgb(191, 130, 191);
+  display: flex;
+}
+
+.contenu-principal{
+  background-color: rgb(219, 209, 192);
+  padding: 10px;
+}
+
+
+.footer{
+  text-align: center;
+  background-color: rgb(171, 156, 156);
+  padding: 10px;
+  padding-bottom: 9%;
+
+}
+.centre{
+  background-color: bisque;
+  margin: auto;
+  width: 19%;
+}
+.photo{
+  width: 100%;
+  opacity: 0.9;
+}
+
+
+
+
+.emballer{
+width: 100%;
+opacity: 0.2;
+}
+
+.musee{
+width: 100%;
+opacity: 0.5;
+height:175px;
+}
+
+.bodyheritage{
+background-image: url("dossier_images/emballage.png");
+
+}
+
+.texte{
+background-color: rgb(219, 209, 192);
+padding: 40px;
+margin: 5px;
+}
+
+.dango{
+width: 65%;
+background-color:#9a9065;;
+padding: 15px;
+text-align: right;
+}
+
+.ytb{
+  width: 60px;
+}
+
+.space{
+
+
+  background-color:blanchedalmond;
+  padding:20;
+}
+
+.map{
+  padding: 30px;
+  padding-left: 30px;
+  background-color: rgb(219, 209, 192);
+}
+.ding{
+  background-color: rgb(219, 209, 192);
+}
+
+.body2{
+  background-color: rgb(219, 209, 192);
+}

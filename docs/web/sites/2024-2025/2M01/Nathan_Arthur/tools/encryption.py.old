@@ -1,0 +1,90 @@
+"""
+def mysolution(user, pwd, length_key=64):
+    def expand_string(base, target_length):
+        while len(base) < target_length:
+            base += convertNumberToLetter(len(base))
+        return base[:target_length]
+
+    user = expand_string(user, length_key)
+    pwd = expand_string(pwd, length_key)
+    
+    key_list = []
+    for i in range(len(user)):
+        num_user = convertLetterToNumber(user[i])
+        num_pwd = convertLetterToNumber(pwd[i])
+        final_num = round((num_pwd * num_user) / 10) if num_pwd * num_user <= 90 else round((num_pwd * num_user) / 26)
+        key_list.append(convertNumberToLetter(final_num))
+    
+    key = ''.join(key_list)
+    return key[:length_key]
+"""
+import hashlib
+
+special_chars = "{} !@#$%^&*()_+-=[]|;':,.<>?/éàèäöü£" # 97 au total
+def convertLetterToNumber(char):
+    if char.isdigit():
+        pos = int(char)
+    elif char.islower():
+        pos = ord(char) - ord("a") + 10
+    elif char.isupper():
+        pos = ord(char) - ord("A") + 36
+
+    else:
+        pos = int(special_chars.index(char) + 62)
+    return int(pos)
+
+def convertNumberToLetter(num):
+    num = int(num)
+    num = num % 97
+    if num <= 9:
+        return str(num)
+    elif 10 <= num < 36:
+        return chr(ord("a") + (num - 10))
+    elif 36 <= num < 62:
+        return chr(ord("A") + (num - 36))
+    else:
+        return special_chars[num - 62]
+
+def resolveUserPwdToKey(user, pwd, length_key=64):
+    combined = user + pwd
+    hashed_key = hashlib.sha256(combined.encode()).hexdigest()
+    return hashed_key[:length_key]
+
+def encryptionstrg(key, strg):
+    result = ""
+    for i in range(len(strg)):
+        num_strg = convertLetterToNumber(strg[i])
+        num_key = convertLetterToNumber(key[i % len(key)])
+        final_num = (num_key + num_strg) % 97
+        final_char = convertNumberToLetter(final_num)
+        result += final_char
+    return result
+
+def resolvestrg(key, strg):
+    result = ""
+    for i in range(len(strg)):
+        num_strg = convertLetterToNumber(strg[i])
+        num_key = convertLetterToNumber(key[i % len(key)])
+        final_num = (num_strg - num_key + 97) % 97
+        final_char = convertNumberToLetter(final_num)
+        result += final_char
+    return result
+
+def readAndDecrypteFile(key, filePath):
+    decrypted_lines = []
+    with open(filePath, 'r') as file:
+        for line in file:
+            line = line.strip()
+            if line:
+                decrypted_line = resolvestrg(key, line)
+                decrypted_lines.append(decrypted_line)
+    return decrypted_lines
+
+def encrypteAndWriteFile(key, lines, filePath):
+    encrypted_lines = []
+    for line in lines:
+        encrypted_line = encryptionstrg(key, line)
+        encrypted_lines.append(encrypted_line)
+    with open(filePath, "w") as file:
+        for line in encrypted_lines:
+            file.write(line + "\n")

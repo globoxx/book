@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeMarks</title>
+    <link rel="shortcut icon" href="/static/image/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar-manage">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='image/logo-without-font.png') }}" alt="Logo Safemarks" class="logo-image" href="">
+                <a href="">SafeMarks</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('manage_results') }}">Overall</a></li>
+                <li><button type="button" onclick="location.href='/logout'">Log out</button></li>
+            </ul>            
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Scores for the branch: {{ branch }}</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Subset</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for note in notes %}
+                    {% if request.args.get('edit') == note.name %}
+                        <tr>
+                            <form action="{{ url_for('update_note', branch=branch, name=note.name) }}" method="POST">
+                                <td><input type="text" name="name" value="{{ note.name }}" required></td>
+                                <td><input type="number" name="score" value="{{ note.score }}" min="0" max="6" step="0.5" required></td>
+                                <td><input type="text" name="subset" value="{{ note.subset }}"></td>
+                                <td>
+                                    <input type="submit" value="Register">
+                                    <a href="{{ url_for('view_notes', branch=branch) }}">Undo</a>
+                                </td>
+                            </form>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td>{{ note.name }}</td>
+                            <td>{{ note.score }}</td>
+                            <td>{{ note.subset }}</td>
+                            <td><a href="{{ url_for('view_notes', branch=branch, edit=note.name) }}">Edit</a></td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="button" onclick="location.href='{{ url_for('add_score', branch=branch) }}'">Add a note</button>       
+    </div>
+</body>
+</html>
