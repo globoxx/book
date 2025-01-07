@@ -15,7 +15,7 @@ prenom =
 ## Exercice 2
 
 Écrivez un programme qui demande combien de vies il vous reste (code donné).  
-S'il vous reste au moins une vie, le programme affiche "Vous êtes encore en vie". Sinon, il affiche "Game Over".
+S'il vous reste au moins une vie, le programme affiche "Vous êtes encore en vie".  Sinon, il affiche "Game Over".
 
 ```{codeplay}
 # On utilise int() pour convertir le texte reçu en réponse en un nombre entier
@@ -36,7 +36,8 @@ Vous pouvez utiliser une boucle `while` ou `for`.
 
 ## Exercice 4
 
-Écrivez un programme qui fait la somme des nombres de 1 à 99.
+Écrivez un programme qui fait la somme des nombres de 1 à 99.  
+Reprenez le code de l'exercice 3.
 
 ```{codeplay}
 
