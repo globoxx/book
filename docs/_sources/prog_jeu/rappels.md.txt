@@ -4,11 +4,11 @@
 
 ## Exercice 1
 
-Écrivez un programme qui demande votre nom puis l'affiche.  
+Écrivez un programme qui demande votre prénom puis l'affiche.  
 Rappel: la fonction `input` permet de demander une information à l'utilisateur.
 
 ```{codeplay}
-
+prenom =
 
 ```
 
@@ -31,6 +31,7 @@ Vous pouvez utiliser une boucle `while` ou `for`.
 ```{codeplay}
 
 
+
 ```
 
 ## Exercice 4
@@ -38,6 +39,7 @@ Vous pouvez utiliser une boucle `while` ou `for`.
 Écrivez un programme qui fait la somme des nombres de 1 à 99.
 
 ```{codeplay}
+
 
 
 ```
@@ -48,6 +50,7 @@ Vous pouvez utiliser une boucle `while` ou `for`.
 Le programme s'arrête si l'utilisateur répond "non". Sinon, il continue à l'infini.
 
 ```{codeplay}
+
 
 
 ```
@@ -66,6 +69,7 @@ import random # On importe le module random pour l'aléatoire
 Écrivez un programme qui définit une fonction `max(a, b)` qui prend 2 nombres `a` et `b` en paramètres et qui retourne le plus grand des deux.
 
 ```{codeplay}
+
 
 
 ```
