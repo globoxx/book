@@ -66,7 +66,6 @@
 ### 2M07
 
 * <a href="sites/2024-2025/2M07/Alice_Lana/index.html" target="_blank">Alice et Lana</a>
-* <a href="sites/2024-2025/2M07/Erleta_Rimsha/index.html" target="_blank">Erleta et Rimsha</a>
 * <a href="sites/2024-2025/2M07/Julianne_Leonisa/index.html" target="_blank">Julianne et Leonisa</a>
 * <a href="sites/2024-2025/2M07/Lila_Cigdem/index.html" target="_blank">Lila et Cigdem</a>
 * <a href="sites/2024-2025/2M07/Nicole_Jasmine/index.html" target="_blank">Nicole et Jasmine</a>
