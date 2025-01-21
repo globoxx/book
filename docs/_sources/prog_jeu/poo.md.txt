@@ -50,6 +50,7 @@ Pour les coordonnées `x` et `y`, vous pouvez choisir des valeurs aléatoires.
 ```
 
 ```{codeplay}
+:file: p00_1.py
 # Votre code ici
 
 ```
@@ -76,6 +77,7 @@ Créez une classe `Brawler` générique qui permet de créer n'importe quel braw
 Créez ensuite les objets `rico` et `angelo` de la classe `Brawler` avec les attributs correspondant à leur fiche de personnage.
 
 ```{codeplay}
+:file: p00_2.py
 class Brawler:
     
 
@@ -111,6 +113,7 @@ Ajoutez une méthode `attaque` à la classe `Brawler` qui prend en paramètre un
 Testez cette méthode en faisant attaquer `rico` par `angelo`, puis affichez la vie restante de `rico`.
 
 ```{codeplay}
+:file: p00_3.py
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode attaque
 ```
 
@@ -121,6 +124,7 @@ Ajoutez une méthode `deplace` à la classe `Brawler` qui prend en paramètre un
 Testez cette méthode en déplaçant `rico` à droite, puis en affichant ses nouvelles coordonnées.
 
 ```{codeplay}
+:file: p00_4.py
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode deplace
 ```
 
@@ -131,6 +135,7 @@ Ajoutez une méthode `est_mort` à la classe `Brawler` qui retourne `True` si le
 Testez cette méthode en faisant attaquer `rico` par `angelo` jusqu'à ce que `rico` soit mort.
 
 ```{codeplay}
+:file: p00_5.py
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode est_mort
 ```
 
@@ -164,6 +169,7 @@ Ecrivez le code permettant de générer 1000 cercles aléatoires et de les stock
 La position `x` et `y` de chaque cercle doit être un nombre aléatoire entre 0 et 1000. Le `rayon` doit être un nombre aléatoire entre 10 et 50.
 
 ```{codeplay}
+:file: p00_6.py
 from random import randint # Pour l'aléatoire
 
 class Cercle:
@@ -184,6 +190,7 @@ Deux cercles sont en collision si la distance entre leur centre est inférieure 
 ```
 
 ```{codeplay}
+:file: p00_7.py
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode est_en_collision
 ```
 
@@ -196,6 +203,7 @@ Utilisez une double boucle `for` pour parcourir toutes les paires de cercles.
 ```
 
 ```{codeplay}
+:file: p00_8.py
 # Reprenez votre code de l'exercice précédent et testez la méthode est_en_collision
 ```
 
