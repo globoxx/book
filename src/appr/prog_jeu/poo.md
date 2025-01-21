@@ -45,7 +45,7 @@ Voici la fiche de son personnage :
 ```{image} ../media/poo_rico.png
 ```
 
-```{code}
+```{codeplay}
 # Votre code ici
 
 ```
@@ -71,7 +71,7 @@ Créez une classe `Brawler` générique qui permet de créer n'importe quel braw
 
 Créez ensuite les objets `rico` et `angelo` de la classe `Brawler` avec les attributs correspondant à leur fiche de personnage.
 
-```{code}
+```{codeplay}
 class Brawler:
     
 
@@ -106,7 +106,7 @@ Ajoutez une méthode `attaque` à la classe `Brawler` qui prend en paramètre un
 
 Testez cette méthode en faisant attaquer `rico` par `angelo`.
 
-```{code}
+```{codeplay}
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode attaque
 ```
 
@@ -116,7 +116,7 @@ Ajoutez une méthode `deplace` à la classe `Brawler` qui prend en paramètre un
 
 Testez cette méthode en déplaçant `rico` à droite.
 
-```{code}
+```{codeplay}
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode deplace
 ```
 
@@ -126,7 +126,7 @@ Ajoutez une méthode `est_mort` à la classe `Brawler` qui retourne `True` si le
 
 Testez cette méthode en faisant attaquer `rico` par `angelo` jusqu'à ce que `rico` soit mort.
 
-```{code}
+```{codeplay}
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode est_mort
 ```
 
@@ -157,7 +157,7 @@ Ecrivez le code permettant de générer 1000 cercles aléatoires et de les stock
 
 La position `x` et `y` de chaque cercle doit être un nombre aléatoire entre 0 et 1000. Le `rayon` doit être un nombre aléatoire entre 10 et 50.
 
-```{code}
+```{codeplay}
 from random import randint # Pour l'aléatoire
 
 class Cercle:
@@ -173,7 +173,7 @@ class Cercle:
 
 Ajoutez une méthode `est_en_collision` à la classe `Cercle` qui prend en paramètre un autre cercle et qui retourne `True` si les deux cercles sont en collision et `False` sinon.
 
-```{code}
+```{codeplay}
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode est_en_collision
 ```
 
@@ -185,7 +185,7 @@ Testez la méthode `est_en_collision` en affichant toutes les paires de cercles 
 Utilisez une double boucle `for` pour parcourir toutes les paires de cercles.
 ```
 
-```{code}
+```{codeplay}
 # Reprenez votre code de l'exercice précédent et testez la méthode est_en_collision
 ```
 

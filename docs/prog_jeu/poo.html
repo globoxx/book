@@ -334,10 +334,7 @@
 <p>Créez une classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires. Créez un objet <code class="docutils literal notranslate"><span class="pre">rico</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> et affichez ses attributs.
 Voici la fiche de son personnage :</p>
 <img alt="../_images/poo_rico.png" src="../_images/poo_rico.png"/>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Votre code ici</span>
-</pre></div>
-</div>
-</section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaQo=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il n’est pas pratique de devoir créer une classe différente pour chaque brawler. Il vaudrait mieux créer une seule classe permettant de créer n’importe quel brawler.</p>
@@ -354,14 +351,7 @@ Voici la fiche de son personnage :</p>
 </div>
 <p>Créez une classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> générique qui permet de créer n’importe quel brawler. L’idée est de passer les attributs en paramètres du constructeur (méthode <code class="docutils literal notranslate"><span class="pre">init</span></code>).</p>
 <p>Créez ensuite les objets <code class="docutils literal notranslate"><span class="pre">rico</span></code> et <code class="docutils literal notranslate"><span class="pre">angelo</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> avec les attributs correspondant à leur fiche de personnage.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Brawler</span><span class="p">:</span>
-    
-
-<span class="n">rico</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">angelo</span> <span class="o">=</span> <span class="o">...</span>
-</pre></div>
-</div>
-<img alt="../_images/poo_angelo.png" src="../_images/poo_angelo.png"/>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y2xhc3MgQnJhd2xlcjoKICAgIAoKcmljbyA9IC4uLgphbmdlbG8gPSAuLi4=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><img alt="../_images/poo_angelo.png" src="../_images/poo_angelo.png"/>
 </section>
 <section id="exercice-3">
 <h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h2>
@@ -382,26 +372,17 @@ Voici la fiche de son personnage :</p>
 </div>
 <p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">attaque</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre un autre brawler et qui diminue la vie de ce brawler en fonction de l’attaque du brawler attaquant.</p>
 <p>Testez cette méthode en faisant attaquer <code class="docutils literal notranslate"><span class="pre">rico</span></code> par <code class="docutils literal notranslate"><span class="pre">angelo</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reprenez votre code de l'exercice précédent et ajoutez la méthode attaque</span>
-</pre></div>
-</div>
-</section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBhdHRhcXVl" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-4">
 <h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">deplace</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre une direction (gauche, droite, haut, bas) et qui déplace le brawler en conséquence.</p>
 <p>Testez cette méthode en déplaçant <code class="docutils literal notranslate"><span class="pre">rico</span></code> à droite.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reprenez votre code de l'exercice précédent et ajoutez la méthode deplace</span>
-</pre></div>
-</div>
-</section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBkZXBsYWNl" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-5">
 <h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">est_mort</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si le brawler est mort (vie &lt;= 0) et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p>
 <p>Testez cette méthode en faisant attaquer <code class="docutils literal notranslate"><span class="pre">rico</span></code> par <code class="docutils literal notranslate"><span class="pre">angelo</span></code> jusqu’à ce que <code class="docutils literal notranslate"><span class="pre">rico</span></code> soit mort.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reprenez votre code de l'exercice précédent et ajoutez la méthode est_mort</span>
-</pre></div>
-</div>
-</section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBlc3RfbW9ydA==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="utilisation-de-listes-de-brawlers">
 <h1>Utilisation de listes de brawlers<a class="headerlink" href="#utilisation-de-listes-de-brawlers" title="Lien permanent vers ce titre">¶</a></h1>
@@ -424,25 +405,11 @@ Voici la fiche de son personnage :</p>
 </div>
 <p>Ecrivez le code permettant de générer 1000 cercles aléatoires et de les stocker dans une liste <code class="docutils literal notranslate"><span class="pre">cercles</span></code>.</p>
 <p>La position <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> de chaque cercle doit être un nombre aléatoire entre 0 et 1000. Le <code class="docutils literal notranslate"><span class="pre">rayon</span></code> doit être un nombre aléatoire entre 10 et 50.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span> <span class="c1"># Pour l'aléatoire</span>
-
-<span class="k">class</span> <span class="nc">Cercle</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rayon</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">rayon</span> <span class="o">=</span> <span class="n">rayon</span>
-
-<span class="c1"># Votre code ici</span>
-</pre></div>
-</div>
-</section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZnJvbSByYW5kb20gaW1wb3J0IHJhbmRpbnQgIyBQb3VyIGwnYWzDqWF0b2lyZQoKY2xhc3MgQ2VyY2xlOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIHgsIHksIHJheW9uKToKICAgICAgICBzZWxmLnggPSB4CiAgICAgICAgc2VsZi55ID0geQogICAgICAgIHNlbGYucmF5b24gPSByYXlvbgoKIyBWb3RyZSBjb2RlIGljaQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-7">
 <h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">est_en_collision</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Cercle</span></code> qui prend en paramètre un autre cercle et qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si les deux cercles sont en collision et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reprenez votre code de l'exercice précédent et ajoutez la méthode est_en_collision</span>
-</pre></div>
-</div>
-</section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBlc3RfZW5fY29sbGlzaW9u" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-8">
 <h2>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Testez la méthode <code class="docutils literal notranslate"><span class="pre">est_en_collision</span></code> en affichant toutes les paires de cercles en collision dans la liste <code class="docutils literal notranslate"><span class="pre">cercles</span></code>.</p>
@@ -455,10 +422,7 @@ Indice<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Utilisez une double boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> pour parcourir toutes les paires de cercles.</p>
 </div>
-</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Reprenez votre code de l'exercice précédent et testez la méthode est_en_collision</span>
-</pre></div>
-</div>
-</section>
+</details><div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgdGVzdGV6IGxhIG3DqXRob2RlIGVzdF9lbl9jb2xsaXNpb24=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="la-suite">
 <h1>La suite<a class="headerlink" href="#la-suite" title="Lien permanent vers ce titre">¶</a></h1>
