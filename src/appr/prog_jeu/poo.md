@@ -170,7 +170,7 @@ class Cercle:
         self.rayon = rayon
 ```
 
-Ecrivez le code permettant de générer 1000 cercles aléatoires et de les stocker dans une liste `cercles`.
+Ecrivez le code permettant de générer 100 cercles aléatoires et de les stocker dans une liste `cercles`.
 
 La position `x` et `y` de chaque cercle doit être un nombre aléatoire entre 0 et 1000. Le `rayon` doit être un nombre aléatoire entre 10 et 50.
 
