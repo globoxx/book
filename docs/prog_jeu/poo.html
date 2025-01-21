@@ -379,17 +379,17 @@ Voici la fiche de son personnage :</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBhdHRhcXVl" data-file="cDAwXzMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-4">
 <h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">deplace</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre une direction (gauche, droite, haut, bas) et qui déplace le brawler en conséquence.</p>
+<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">deplace</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre une direction (gauche, droite, haut, bas) sous forme de texte et qui déplace le brawler en conséquence.</p>
 <p>Testez cette méthode en déplaçant <code class="docutils literal notranslate"><span class="pre">rico</span></code> à droite, puis en affichant ses nouvelles coordonnées.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBkZXBsYWNl" data-file="cDAwXzQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-5">
 <h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">est_mort</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si le brawler est mort (vie &lt;= 0) et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p>
+<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">est_mort</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si le brawler est mort (vie &lt;= 0) et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon. La méthode ne prend aucun paramètre.</p>
 <p>Testez cette méthode en faisant attaquer <code class="docutils literal notranslate"><span class="pre">rico</span></code> par <code class="docutils literal notranslate"><span class="pre">angelo</span></code> jusqu’à ce que <code class="docutils literal notranslate"><span class="pre">rico</span></code> soit mort.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBlc3RfbW9ydA==" data-file="cDAwXzUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="utilisation-de-listes-de-brawlers">
-<h1>Utilisation de listes de brawlers<a class="headerlink" href="#utilisation-de-listes-de-brawlers" title="Lien permanent vers ce titre">¶</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="utilisation-de-listes">
+<h1>Utilisation de listes<a class="headerlink" href="#utilisation-de-listes" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Quand on possède beaucoup de personnages dans un jeu, il est plus pratique de les stocker dans une <strong>liste</strong>. Voici un exemple de code qui crée une liste de brawlers :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">brawlers</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Crée une liste vide</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="c1"># Boucle pour créer 5 brawlers</span>
@@ -400,6 +400,7 @@ Voici la fiche de son personnage :</p>
 <section id="exercice-6">
 <h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Dans les jeux, on représente souvent les personnages par des cercles ou des rectangles pour gérer les collisions.</p>
+<img alt="../_images/poo_hitbox.png" src="../_images/poo_hitbox.png"/>
 <p>Voici le code d’une classe <code class="docutils literal notranslate"><span class="pre">Cercle</span></code> qui permet de créer des cercles en 2D :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Cercle</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rayon</span><span class="p">):</span>
@@ -422,6 +423,7 @@ Indice<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Deux cercles sont en collision si la distance entre leur centre est inférieure à la somme de leur rayon.</p>
+<img alt="../_images/circle_collision.jpg" src="../_images/circle_collision.jpg"/>
 </div>
 </details><div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBlc3RfZW5fY29sbGlzaW9u" data-file="cDAwXzcucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-8">
@@ -483,7 +485,7 @@ Indice<div class="summary-down docutils">
 <li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#utilisation-de-listes-de-brawlers">Utilisation de listes de brawlers</a><ul>
+<li><a class="reference internal" href="#utilisation-de-listes">Utilisation de listes</a><ul>
 <li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
 <li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
 <li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>

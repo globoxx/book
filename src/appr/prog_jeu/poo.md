@@ -122,7 +122,7 @@ Testez cette méthode en faisant attaquer `rico` par `angelo`, puis affichez la 
 
 ## Exercice 4
 
-Ajoutez une méthode `deplace` à la classe `Brawler` qui prend en paramètre une direction (gauche, droite, haut, bas) et qui déplace le brawler en conséquence.
+Ajoutez une méthode `deplace` à la classe `Brawler` qui prend en paramètre une direction (gauche, droite, haut, bas) sous forme de texte et qui déplace le brawler en conséquence.
 
 Testez cette méthode en déplaçant `rico` à droite, puis en affichant ses nouvelles coordonnées.
 
@@ -133,7 +133,7 @@ Testez cette méthode en déplaçant `rico` à droite, puis en affichant ses nou
 
 ## Exercice 5
 
-Ajoutez une méthode `est_mort` à la classe `Brawler` qui retourne `True` si le brawler est mort (vie <= 0) et `False` sinon.
+Ajoutez une méthode `est_mort` à la classe `Brawler` qui retourne `True` si le brawler est mort (vie <= 0) et `False` sinon. La méthode ne prend aucun paramètre.
 
 Testez cette méthode en faisant attaquer `rico` par `angelo` jusqu'à ce que `rico` soit mort.
 
@@ -142,7 +142,7 @@ Testez cette méthode en faisant attaquer `rico` par `angelo` jusqu'à ce que `r
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode est_mort
 ```
 
-# Utilisation de listes de brawlers
+# Utilisation de listes
 
 Quand on possède beaucoup de personnages dans un jeu, il est plus pratique de les stocker dans une **liste**. Voici un exemple de code qui crée une liste de brawlers :
 
@@ -156,6 +156,9 @@ for i in range(5): # Boucle pour créer 5 brawlers
 ## Exercice 6
 
 Dans les jeux, on représente souvent les personnages par des cercles ou des rectangles pour gérer les collisions.
+
+```{image} ../media/poo_hitbox.png
+```
 
 Voici le code d'une classe `Cercle` qui permet de créer des cercles en 2D :
 
@@ -188,9 +191,12 @@ class Cercle:
 
 Ajoutez une méthode `est_en_collision` à la classe `Cercle` qui prend en paramètre un autre cercle et qui retourne `True` si les deux cercles sont en collision et `False` sinon.
 
-```{dropdown} Indice
+````{dropdown} Indice
 Deux cercles sont en collision si la distance entre leur centre est inférieure à la somme de leur rayon.
+
+```{image} ../media/circle_collision.jpg
 ```
+````
 
 ```{codeplay}
 :file: p00_7.py
