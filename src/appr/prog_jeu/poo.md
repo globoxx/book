@@ -94,6 +94,9 @@ En plus des **attributs**, une classe peut aussi définir des **méthodes**. Ce 
 
 Voici un exemple pour la classe `Point` qui définit une méthode `calcule_distance` permettant de calculer la distance avec un autre point :
 
+```{image} ../media/distance_formula.svg
+```
+
 ```python
 class Point:
     def __init__(self, x, y):
@@ -101,7 +104,7 @@ class Point:
         self.y = y
 
     def calcule_distance(self, p):
-        return ((self.x - p.x)**2 + (self.y - p.y)**2)  **0.5
+        return ((self.x - p.x)**2 + (self.y - p.y)**2) ** 0.5
 
 p1 = Point(2, 3)
 p2 = Point(5, 7)
