@@ -39,10 +39,14 @@ Le mot-clé `self` est utilisé pour faire référence à l'objet lui-même.
 
 ## Exercice 1
 
-Créez une classe `Rico` qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires. Créez un objet `rico` de la classe `Rico` et affichez ses attributs.
+Créez une classe `Rico` qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires (au minimum: `vie`, `attaque`, `x` et `y`). Créez un objet `rico` de la classe `Rico` et affichez ses attributs.
 Voici la fiche de son personnage :
 
 ```{image} ../media/poo_rico.png
+```
+
+```{note}
+Pour les coordonnées `x` et `y`, vous pouvez choisir des valeurs aléatoires.
 ```
 
 ```{codeplay}
@@ -95,7 +99,7 @@ class Point:
         self.y = y
 
     def calcule_distance(self, p):
-        return ((self.x - p.x)**2 + (self.y - p.y)**2) **0.5
+        return ((self.x - p.x)**2 + (self.y - p.y)**2)  **0.5
 
 p1 = Point(2, 3)
 p2 = Point(5, 7)
@@ -104,7 +108,7 @@ print(p1.calcule_distance(p2)) # Affiche 5.0
 
 Ajoutez une méthode `attaque` à la classe `Brawler` qui prend en paramètre un autre brawler et qui diminue la vie de ce brawler en fonction de l'attaque du brawler attaquant.
 
-Testez cette méthode en faisant attaquer `rico` par `angelo`.
+Testez cette méthode en faisant attaquer `rico` par `angelo`, puis affichez la vie restante de `rico`.
 
 ```{codeplay}
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode attaque
@@ -114,7 +118,7 @@ Testez cette méthode en faisant attaquer `rico` par `angelo`.
 
 Ajoutez une méthode `deplace` à la classe `Brawler` qui prend en paramètre une direction (gauche, droite, haut, bas) et qui déplace le brawler en conséquence.
 
-Testez cette méthode en déplaçant `rico` à droite.
+Testez cette méthode en déplaçant `rico` à droite, puis en affichant ses nouvelles coordonnées.
 
 ```{codeplay}
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode deplace
@@ -142,6 +146,8 @@ for i in range(5): # Boucle pour créer 5 brawlers
 ```
 
 ## Exercice 6
+
+Dans les jeux, on représente souvent les personnages par des cercles ou des rectangles pour gérer les collisions.
 
 Voici le code d'une classe `Cercle` qui permet de créer des cercles en 2D :
 
@@ -172,6 +178,10 @@ class Cercle:
 ## Exercice 7
 
 Ajoutez une méthode `est_en_collision` à la classe `Cercle` qui prend en paramètre un autre cercle et qui retourne `True` si les deux cercles sont en collision et `False` sinon.
+
+```{dropdown} Indice
+Deux cercles sont en collision si la distance entre leur centre est inférieure à la somme de leur rayon.
+```
 
 ```{codeplay}
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode est_en_collision
