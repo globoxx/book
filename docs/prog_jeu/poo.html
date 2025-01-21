@@ -308,8 +308,9 @@
 <img alt="../_images/classe_voiture.svg" src="../_images/classe_voiture.svg"/><p>Si on imagine une classe <code class="docutils literal notranslate"><span class="pre">Avion</span></code>, elle pourra définir une méthode <code class="docutils literal notranslate"><span class="pre">voler()</span></code>. Elle pourra aussi définir une méthode <code class="docutils literal notranslate"><span class="pre">rouler()</span></code>. Par contre, la classe Voiture n’aura pas de méthode <code class="docutils literal notranslate"><span class="pre">voler()</span></code> car une voiture ne peut pas voler. De même, la classe <code class="docutils literal notranslate"><span class="pre">Avion</span></code> pourra avoir un attribut <code class="docutils literal notranslate"><span class="pre">altitude</span></code> mais ce ne sera pas le cas pour la classe <code class="docutils literal notranslate"><span class="pre">Voiture</span></code>.</p>
 <p>Après avoir présenté la notion de <strong>classe</strong>, nous allons voir la notion d’<strong>objet</strong>. On dit qu’<strong>un objet est une instance de classe</strong>. Si on revient à la classe <code class="docutils literal notranslate"><span class="pre">Voiture</span></code>, nous pourrons avoir plusieurs voitures qui seront chacune des instances bien distinctes. Par exemple, la voiture de Jonathan, qui est de couleur rouge avec une vitesse de 30 km/h, est une instance de la classe <code class="docutils literal notranslate"><span class="pre">Voiture</span></code>, c’est un <strong>objet</strong>. De même, la voiture de Denis, qui est de couleur grise avec une vitesse de 50 km/h, est un autre objet. Nous pouvons donc avoir plusieurs objects pour une même classe, en particulier ici deux objets (autrement dit : deux instances de la même classe). Chacun des objets a des valeurs qui lui sont propres pour les attributs.</p>
 <p>(Pour plus de détails théoriques sur la programmation orientée objet, vous pouvez consulter <a class="reference external" href="https://courspython.com/classes-et-objets.html">cette page</a> dont le cours est tiré.)</p>
-<section id="creation-dune-classe-pour-brawlers">
-<h2>Création d’une classe pour Brawlers<a class="headerlink" href="#creation-dune-classe-pour-brawlers" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="creation-dune-classe-pour-brawlers">
+<h1>Création d’une classe pour Brawlers<a class="headerlink" href="#creation-dune-classe-pour-brawlers" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Nous allons créer une classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> pour représenter les personnages du jeu Brawl Stars. Chaque brawler aura des attributs comme la vie, la position, l’attaque, la vitesse, etc.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Brawler</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -328,7 +329,6 @@
 <p class="admonition-title">Note</p>
 <p>Le mot-clé <code class="docutils literal notranslate"><span class="pre">self</span></code> est utilisé pour faire référence à l’objet lui-même.</p>
 </div>
-</section>
 <section id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Créez une classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires (au minimum: <code class="docutils literal notranslate"><span class="pre">vie</span></code>, <code class="docutils literal notranslate"><span class="pre">attaque</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>). Créez un objet <code class="docutils literal notranslate"><span class="pre">rico</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> et affichez ses attributs.
@@ -476,8 +476,8 @@ Indice<div class="summary-down docutils">
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Introduction à la programmation orientée objet</a><ul>
-<li><a class="reference internal" href="#creation-dune-classe-pour-brawlers">Création d’une classe pour Brawlers</a></li>
+<li><a class="reference internal" href="#">Introduction à la programmation orientée objet</a></li>
+<li><a class="reference internal" href="#creation-dune-classe-pour-brawlers">Création d’une classe pour Brawlers</a><ul>
 <li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
 <li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
 <li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>

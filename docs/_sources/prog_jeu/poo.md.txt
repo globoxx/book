@@ -15,7 +15,7 @@ Après avoir présenté la notion de **classe**, nous allons voir la notion d'**
 
 (Pour plus de détails théoriques sur la programmation orientée objet, vous pouvez consulter [cette page](https://courspython.com/classes-et-objets.html) dont le cours est tiré.)
 
-## Création d'une classe pour Brawlers
+# Création d'une classe pour Brawlers
 
 Nous allons créer une classe `Brawler` pour représenter les personnages du jeu Brawl Stars. Chaque brawler aura des attributs comme la vie, la position, l'attaque, la vitesse, etc.
 
