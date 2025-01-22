@@ -317,12 +317,12 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">vie</span> <span class="o">=</span> <span class="mi">3990</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">150</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">attaque</span> <span class="o">=</span> <span class="mi">100</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">degats</span> <span class="o">=</span> <span class="mi">100</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vitesse</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="n">brawler1</span> <span class="o">=</span> <span class="n">Brawler</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">brawler1</span><span class="o">.</span><span class="n">vie</span><span class="p">)</span> <span class="c1"># Affiche 3990</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">brawler1</span><span class="o">.</span><span class="n">attaque</span><span class="p">)</span> <span class="c1"># Affiche 100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">brawler1</span><span class="o">.</span><span class="n">degats</span><span class="p">)</span> <span class="c1"># Affiche 100</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -331,14 +331,14 @@
 </div>
 <section id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Créez une classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires (au minimum: <code class="docutils literal notranslate"><span class="pre">vie</span></code>, <code class="docutils literal notranslate"><span class="pre">attaque</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>). Créez un objet <code class="docutils literal notranslate"><span class="pre">rico</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> et affichez ses attributs.
+<p>Créez une classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires (au minimum: <code class="docutils literal notranslate"><span class="pre">vie</span></code>, <code class="docutils literal notranslate"><span class="pre">degats</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>). Créez un objet <code class="docutils literal notranslate"><span class="pre">rico</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> et affichez ses attributs.
 Voici la fiche de son personnage :</p>
 <img alt="../_images/poo_rico.png" src="../_images/poo_rico.png"/>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Pour les coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>, vous pouvez choisir des valeurs aléatoires.</p>
 </div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3RyZSBjb2RlIGljaQ==" data-file="cDAwXzEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y2xhc3MgQnJhd2xlcjoKICAgICMgVm90cmUgY29kZSBpY2k=" data-file="cDAwXzEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il n’est pas pratique de devoir créer une classe différente pour chaque brawler. Il vaudrait mieux créer une seule classe permettant de créer n’importe quel brawler.</p>
@@ -367,24 +367,30 @@ Voici la fiche de son personnage :</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
 
     <span class="k">def</span> <span class="nf">calcule_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+        <span class="c1"># self fait référence à l'objet lui-même</span>
+        <span class="c1"># p est l'autre point dont on veut calculer la distance</span>
         <span class="k">return</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+
+    <span class="k">def</span> <span class="nf">affiche_coordonnees</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Simple méthode permettant d'afficher les coordonnées x et y du point</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
 
 <span class="n">p1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">calcule_distance</span><span class="p">(</span><span class="n">p2</span><span class="p">))</span> <span class="c1"># Affiche 5.0</span>
 </pre></div>
 </div>
-<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">attaque</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre un autre brawler et qui diminue la vie de ce brawler en fonction de l’attaque du brawler attaquant.</p>
+<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">attaque</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre un autre brawler et qui diminue la vie de ce brawler en fonction des dégats du brawler attaquant.</p>
 <p>Testez cette méthode en faisant attaquer <code class="docutils literal notranslate"><span class="pre">rico</span></code> par <code class="docutils literal notranslate"><span class="pre">angelo</span></code>, puis affichez la vie restante de <code class="docutils literal notranslate"><span class="pre">rico</span></code>.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBhdHRhcXVl" data-file="cDAwXzMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-4">
 <h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">deplace</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre une direction (gauche, droite, haut, bas) sous forme de texte et qui déplace le brawler en conséquence.</p>
-<p>Testez cette méthode en déplaçant <code class="docutils literal notranslate"><span class="pre">rico</span></code> à droite, puis en affichant ses nouvelles coordonnées.</p>
+<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">deplace</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre une distance <code class="docutils literal notranslate"><span class="pre">dx</span></code> et qui déplace le brawler sur l’axe <code class="docutils literal notranslate"><span class="pre">x</span></code> en conséquence.</p>
+<p>Testez cette méthode en déplaçant <code class="docutils literal notranslate"><span class="pre">rico</span></code> à droite d’une distance de <code class="docutils literal notranslate"><span class="pre">15</span></code>, puis en affichant ses nouvelles coordonnées.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBkZXBsYWNl" data-file="cDAwXzQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-5">
 <h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">est_mort</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si le brawler est mort (vie &lt;= 0) et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon. La méthode ne prend aucun paramètre.</p>
+<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">est_mort</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si le brawler est mort (<code class="docutils literal notranslate"><span class="pre">vie</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>) et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon. La méthode ne prend aucun paramètre (à part <code class="docutils literal notranslate"><span class="pre">self</span></code>).</p>
 <p>Testez cette méthode en faisant attaquer <code class="docutils literal notranslate"><span class="pre">rico</span></code> par <code class="docutils literal notranslate"><span class="pre">angelo</span></code> jusqu’à ce que <code class="docutils literal notranslate"><span class="pre">rico</span></code> soit mort.</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBlc3RfbW9ydA==" data-file="cDAwXzUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>
@@ -436,7 +442,8 @@ Indice<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">Utilisez une double boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> pour parcourir toutes les paires de cercles.</p>
+<p class="card-text">Utilisez une double boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> pour parcourir toutes les paires de cercles.<br/>
+Pour rappel, on peut parcourir une fois la liste de cercles avec <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">cercle</span> <span class="pre">in</span> <span class="pre">cercles:</span></code>.</p>
 </div>
 </details><div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgdGVzdGV6IGxhIG3DqXRob2RlIGVzdF9lbl9jb2xsaXNpb24=" data-file="cDAwXzgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 </section>

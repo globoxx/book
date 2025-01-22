@@ -25,12 +25,12 @@ class Brawler:
         self.vie = 3990
         self.x = 50
         self.y = 150
-        self.attaque = 100
+        self.degats = 100
         self.vitesse = 10
 
 brawler1 = Brawler()
 print(brawler1.vie) # Affiche 3990
-print(brawler1.attaque) # Affiche 100
+print(brawler1.degats) # Affiche 100
 ```
 
 ```{note}
@@ -39,7 +39,7 @@ Le mot-clé `self` est utilisé pour faire référence à l'objet lui-même.
 
 ## Exercice 1
 
-Créez une classe `Rico` qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires (au minimum: `vie`, `attaque`, `x` et `y`). Créez un objet `rico` de la classe `Rico` et affichez ses attributs.
+Créez une classe `Rico` qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires (au minimum: `vie`, `degats`, `x` et `y`). Créez un objet `rico` de la classe `Rico` et affichez ses attributs.
 Voici la fiche de son personnage :
 
 ```{image} ../media/poo_rico.png
@@ -51,7 +51,8 @@ Pour les coordonnées `x` et `y`, vous pouvez choisir des valeurs aléatoires.
 
 ```{codeplay}
 :file: p00_1.py
-# Votre code ici
+class Brawler:
+    # Votre code ici
 
 ```
 
@@ -104,14 +105,20 @@ class Point:
         self.y = y
 
     def calcule_distance(self, p):
+        # self fait référence à l'objet lui-même
+        # p est l'autre point dont on veut calculer la distance
         return ((self.x - p.x)**2 + (self.y - p.y)**2) ** 0.5
+
+    def affiche_coordonnees(self):
+        # Simple méthode permettant d'afficher les coordonnées x et y du point
+        print(self.x, self.y)
 
 p1 = Point(2, 3)
 p2 = Point(5, 7)
 print(p1.calcule_distance(p2)) # Affiche 5.0
 ```
 
-Ajoutez une méthode `attaque` à la classe `Brawler` qui prend en paramètre un autre brawler et qui diminue la vie de ce brawler en fonction de l'attaque du brawler attaquant.
+Ajoutez une méthode `attaque` à la classe `Brawler` qui prend en paramètre un autre brawler et qui diminue la vie de ce brawler en fonction des dégats du brawler attaquant.
 
 Testez cette méthode en faisant attaquer `rico` par `angelo`, puis affichez la vie restante de `rico`.
 
@@ -122,9 +129,9 @@ Testez cette méthode en faisant attaquer `rico` par `angelo`, puis affichez la 
 
 ## Exercice 4
 
-Ajoutez une méthode `deplace` à la classe `Brawler` qui prend en paramètre une direction (gauche, droite, haut, bas) sous forme de texte et qui déplace le brawler en conséquence.
+Ajoutez une méthode `deplace` à la classe `Brawler` qui prend en paramètre une distance `dx` et qui déplace le brawler sur l'axe `x` en conséquence.
 
-Testez cette méthode en déplaçant `rico` à droite, puis en affichant ses nouvelles coordonnées.
+Testez cette méthode en déplaçant `rico` à droite d'une distance de `15`, puis en affichant ses nouvelles coordonnées.
 
 ```{codeplay}
 :file: p00_4.py
@@ -133,7 +140,7 @@ Testez cette méthode en déplaçant `rico` à droite, puis en affichant ses nou
 
 ## Exercice 5
 
-Ajoutez une méthode `est_mort` à la classe `Brawler` qui retourne `True` si le brawler est mort (vie <= 0) et `False` sinon. La méthode ne prend aucun paramètre.
+Ajoutez une méthode `est_mort` à la classe `Brawler` qui retourne `True` si le brawler est mort (`vie <= 0`) et `False` sinon. La méthode ne prend aucun paramètre (à part `self`).
 
 Testez cette méthode en faisant attaquer `rico` par `angelo` jusqu'à ce que `rico` soit mort.
 
@@ -208,7 +215,8 @@ Deux cercles sont en collision si la distance entre leur centre est inférieure 
 Testez la méthode `est_en_collision` en affichant toutes les paires de cercles en collision dans la liste `cercles`.
 
 ```{dropdown} Indice
-Utilisez une double boucle `for` pour parcourir toutes les paires de cercles.
+Utilisez une double boucle `for` pour parcourir toutes les paires de cercles.  
+Pour rappel, on peut parcourir une fois la liste de cercles avec `for cercle in cercles:`.
 ```
 
 ```{codeplay}
