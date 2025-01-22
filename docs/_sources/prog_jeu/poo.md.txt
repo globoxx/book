@@ -34,7 +34,8 @@ print(brawler1.degats) # Affiche 100
 ```
 
 ```{note}
-Le mot-clé `self` est utilisé pour faire référence à l'objet lui-même.
+Le mot-clé `self` est utilisé pour faire référence à l'objet lui-même au sein de la classe.  
+Le mot-clé `self` ne s'utilise jamais en dehors d'une classe.
 ```
 
 ## Exercice 1
@@ -58,9 +59,9 @@ class Brawler:
 
 ## Exercice 2
 
-Il n'est pas pratique de devoir créer une classe différente pour chaque brawler. Il vaudrait mieux créer une seule classe permettant de créer n'importe quel brawler.
+Il n'est pas pratique de devoir créer une classe différente pour chaque brawler. Il vaudrait mieux créer **une seule classe permettant de créer n'importe quel brawler**.
 
-Voici un exemple de code créant une classe Point permettant de générer des points en 2D en passant les coordonnées en paramètres du constructeur (méthode `init`) :
+Voici un exemple de code créant une classe `Point` permettant de générer des points en 2D en passant les coordonnées en paramètres du constructeur (méthode `init`) :
 
 ```python
 class Point:
@@ -91,7 +92,8 @@ angelo = ...
 
 ## Exercice 3
 
-En plus des **attributs**, une classe peut aussi définir des **méthodes**. Ce sont des fonctions qui sont définies à l'intérieur de la classe et elles représentent des actions que l'objet peut effectuer.
+En plus des **attributs**, une classe peut aussi définir des **méthodes**. Ce sont des fonctions qui sont définies à l'intérieur de la classe et elles représentent des actions que l'objet peut effectuer.  
+Par exemple, un brawler peut attaquer un autre brawler, se déplacer, etc.
 
 Voici un exemple pour la classe `Point` qui définit une méthode `calcule_distance` permettant de calculer la distance avec un autre point :
 

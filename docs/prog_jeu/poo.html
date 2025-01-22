@@ -327,7 +327,8 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Le mot-clé <code class="docutils literal notranslate"><span class="pre">self</span></code> est utilisé pour faire référence à l’objet lui-même.</p>
+<p>Le mot-clé <code class="docutils literal notranslate"><span class="pre">self</span></code> est utilisé pour faire référence à l’objet lui-même au sein de la classe.<br/>
+Le mot-clé <code class="docutils literal notranslate"><span class="pre">self</span></code> ne s’utilise jamais en dehors d’une classe.</p>
 </div>
 <section id="exercice-1">
 <h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
@@ -341,8 +342,8 @@ Voici la fiche de son personnage :</p>
 <div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y2xhc3MgQnJhd2xlcjoKICAgICMgVm90cmUgY29kZSBpY2k=" data-file="cDAwXzEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il n’est pas pratique de devoir créer une classe différente pour chaque brawler. Il vaudrait mieux créer une seule classe permettant de créer n’importe quel brawler.</p>
-<p>Voici un exemple de code créant une classe Point permettant de générer des points en 2D en passant les coordonnées en paramètres du constructeur (méthode <code class="docutils literal notranslate"><span class="pre">init</span></code>) :</p>
+<p>Il n’est pas pratique de devoir créer une classe différente pour chaque brawler. Il vaudrait mieux créer <strong>une seule classe permettant de créer n’importe quel brawler</strong>.</p>
+<p>Voici un exemple de code créant une classe <code class="docutils literal notranslate"><span class="pre">Point</span></code> permettant de générer des points en 2D en passant les coordonnées en paramètres du constructeur (méthode <code class="docutils literal notranslate"><span class="pre">init</span></code>) :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
@@ -359,7 +360,8 @@ Voici la fiche de son personnage :</p>
 </section>
 <section id="exercice-3">
 <h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h2>
-<p>En plus des <strong>attributs</strong>, une classe peut aussi définir des <strong>méthodes</strong>. Ce sont des fonctions qui sont définies à l’intérieur de la classe et elles représentent des actions que l’objet peut effectuer.</p>
+<p>En plus des <strong>attributs</strong>, une classe peut aussi définir des <strong>méthodes</strong>. Ce sont des fonctions qui sont définies à l’intérieur de la classe et elles représentent des actions que l’objet peut effectuer.<br/>
+Par exemple, un brawler peut attaquer un autre brawler, se déplacer, etc.</p>
 <p>Voici un exemple pour la classe <code class="docutils literal notranslate"><span class="pre">Point</span></code> qui définit une méthode <code class="docutils literal notranslate"><span class="pre">calcule_distance</span></code> permettant de calculer la distance avec un autre point :</p>
 <img alt="../_images/distance_formula.svg" src="../_images/distance_formula.svg"/><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
