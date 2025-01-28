@@ -149,6 +149,61 @@ pgzrun.go()
 
 ## 4. Animer le joueur
 
+Notre joueur est statique pour le moment. Nous allons donc ajouter une animation pour le faire courir. Dans un jeu, une animation est une suite d'images qui se succèdent rapidement pour donner l'illusion du mouvement.
+
+```{image} ../media/run__000.png
+```
+
+```{image} ../media/run__003.png
+```
+
+```{image} ../media/run__009.png
+```
+
+Il nous faut commencer par définir la liste des images qui composent notre animation. Nous allons donc définir l'attribut `images` de notre classe `Player` qui contiendra toutes les images de notre animation.
+
+```python
+class Player(Actor):
+    def __init__(self, image, pos, **kwargs):
+        super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)] # Liste des images de l'animation
+```
+
+Pour faire avancer l'animation, il nous faut encore appeler `player.animate()` dans la fonction `update` principale.
+
+```python
+def update():
+    player.animate() # On anime le joueur
+```
+
+````{dropdown} Voir le code complet à ce point
+```python
+import pgzrun
+from pgzhelper import *
+
+TITLE = 'Runner'
+WIDTH = 800
+HEIGHT = 600
+
+class Player(Actor):
+    def __init__(self, image, pos, **kwargs):
+        super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
+
+player = Player('run__000', (100, 400))
+
+def draw():
+    screen.fill((163, 232, 254))
+    screen.draw.filled_rect(Rect(0,400,800,200), (88, 242, 152))
+    player.draw()
+
+def update():
+    player.animate()
+
+pgzrun.go()
+```
+````
+
 ## 5. Ajouter des obstacles
 
 Nous allons ajouter des obstacles qui vont défiler de droite à gauche. Pour cela, nous allons créer une nouvelle classe `Obstacle` qui hérite de `Actor`. Les obstacles seront représentés par des cactus.
@@ -195,6 +250,7 @@ HEIGHT = 600
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
 
 class Obstacle(Actor):
     def __init__(self, image, pos, **kwargs):
@@ -215,6 +271,7 @@ def draw():
     obstacle.draw()
 
 def update():
+    player.animate()
     obstacle.update()
 
 pgzrun.go()
@@ -229,6 +286,7 @@ Pour pouvoir sauter et retomber, notre personnage doit posséder une vitesse ver
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0 # Vitesse verticale
 ```
 
@@ -240,6 +298,7 @@ Sauter correspond à une action de notre joueur. Nous allons donc devoir ajouter
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0
 
     def update(self):
@@ -247,12 +306,13 @@ class Player(Actor):
         self.vy += 1 # Augmentation de la vitesse verticale (gravité)
 ```
 
-Oups, notre personnage tombe du jeu et disparaît ! Pour éviter cela, nous allons donc ajouter une condition (`if`) pour détecter le sol (coordonnée `y` à `400`) et remettre la vitesse verticale à `0`.
+Oups, notre personnage tombe du jeu et disparaît ! Pour éviter cela, nous allons devoir ajouter une condition (`if`) pour détecter le sol (coordonnée `y` à `400`) et remettre la vitesse verticale à `0`.
 
 ```python
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0
 
     def update(self):
@@ -263,12 +323,13 @@ class Player(Actor):
             self.vy = 0 # La vitesse verticale est remise à 0
 ```
 
-Bon et maintenant il faut pouvoir sauter ! Nous allons donc ajouter une condition pour détecter si la touche `space` (espace) est pressée. Si c'est le cas, nous allons donner une vitesse verticale (`vy`) négative au joueur.
+Bon et maintenant il faut pouvoir sauter ! Nous allons donc ajouter une condition pour détecter si la touche `space` (espace) est pressée. Si c'est le cas, nous allons donner une vitesse verticale (`vy`) négative au joueur. Pygame Zero nous offre un objet `keyboard` qui nous permet de détecter les touches pressées.
 
 ```python
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0
 
     def update(self):
@@ -294,6 +355,7 @@ HEIGHT = 600
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0
 
     def update(self):
@@ -325,6 +387,7 @@ def draw():
     obstacle.draw()
 
 def update():
+    player.animate()
     player.update()
     obstacle.update()
 
@@ -344,6 +407,7 @@ Nous allons donc ajouter une condition dans la fonction `update` du `Player` pou
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0
         self.game_over = False # Ajout de l'attribut game_over
 
@@ -366,6 +430,7 @@ Bien, nous avons maintenant une variable `game_over` qui est `True` si le joueur
 ```python
 def update():
     if not player.game_over: # Si le jeu n'est pas terminé
+        player.animate()
         player.update()
         obstacle.update()
 ```
@@ -394,6 +459,7 @@ HEIGHT = 600
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0
         self.game_over = False
 
@@ -432,6 +498,7 @@ def draw():
 
 def update():
     if not player.game_over:
+        player.animate()
         player.update()
         obstacle.update()
 
@@ -447,6 +514,7 @@ Le score est important dans les jeux ! Pour en tenir un, on peut le définir dan
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0
         self.game_over = False
         self.score = 0 # Initialisation du score à 0
@@ -487,6 +555,7 @@ HEIGHT = 600
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0
         self.game_over = False
         self.score = 0
@@ -528,6 +597,7 @@ def draw():
 
 def update():
     if not player.game_over:
+        player.animate()
         player.update()
         obstacle.update()
 
@@ -545,8 +615,10 @@ Pygame nous offre l'objet `sounds` qui nous permet de facilement lancer un bruit
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
+        self.images = [f'run__00{i}' for i in range(10)]
         self.vy = 0
         self.game_over = False
+        self.score = 0
 
     def update(self):
         self.y += self.vy
