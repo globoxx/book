@@ -1,6 +1,6 @@
 (prog_jeu.runner)=
 
-# 1. Runner (Slider)
+# 1. Running Ninja (Runner)
 
 Dans cette introduction, nous allons développer un premier jeu simple étape par étape. Le jeu consiste en un ninja devant sauter par dessus des obstacles. Le jeu est terminé si le ninja touche un obstacle.
 

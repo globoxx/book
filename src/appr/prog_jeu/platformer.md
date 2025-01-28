@@ -1,6 +1,6 @@
 (prog_jeu.platformer)=
 
-# 2. Jumper (platformer)
+# 3. Jumper (platformer)
 
 Dans ce tutoriel, nous allons développer un jeu de plateforme où le personnage peut se déplacer sur des blocs pour attraper des objets et combattre des ennemis. Nous allons également devoir mettre en place un système de gravité pour permettre au joueur de sauter et de tomber des blocs.
 
