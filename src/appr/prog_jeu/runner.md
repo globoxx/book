@@ -83,10 +83,10 @@ pgzrun.go()
 
 Il est temps d'ajouter notre joueur. Il sera représenté par un `objet`. Voyez un objet comme une sorte de super variable qui peut contenir d'autres variables. Chaque objet sera également représenté par une image que nous appelerons un sprite et une position. Chaque sprite doit être sauvegardé dans le dossier `images`.
 
-```{image} ../media/run_003.png
+```{image} ../media/run__003.png
 ```
 
-Vous pouvez télécharger les images du jeu [ici](../data/prog_2d/images_ninja.zip).
+Vous pouvez télécharger les images du jeu {download}`ici<../data/prog_2d/images_ninja.zip>`.
 
 La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux.
 
@@ -439,7 +439,7 @@ pgzrun.go()
 ```
 ````
 
-## 11. Tenir et afficher un score
+## 8. Tenir et afficher un score
 
 Le score est important dans les jeux ! Pour en tenir un, on peut le définir dans les attributs de notre `player` et l'initialiser à `0`.
 
@@ -535,7 +535,7 @@ pgzrun.go()
 ```
 ````
 
-## 12. Ajouter un son de saut
+## 9. Ajouter un son de saut
 
 Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier `.wav` ou `.mp3` souhaité dans le dossier `sounds` (à créer). De nombreux bruitages et musiques gratuits peuvent être trouvés sur <a href="https://freesound.org/" target="_blank">FreeSound</a> ou <a href="https://opengameart.org/" target="_blank">OpenGameArt</a>. Priviliégiez les sons courts pour éviter des problèmes de performance.
 
@@ -565,7 +565,7 @@ class Player(Actor):
 
 `sounds.jump.play()` fait ici référence au nom du fichier son: `jump.wav`.
 
-## 13. Ajouter une musique de fond
+## 10. Ajouter une musique de fond
 
 Ajouter une musique de fond est tout aussi simple ! Il suffit d'ajouter un fichier `.mp3` ou `.wav` dans le dossier `music` (à créer) et d'utiliser l'objet `music` offert par Pygame.
 
@@ -578,7 +578,7 @@ obstacle = Obstacle('cactus', (850, 430))
 music.play('ninja_music') # Ajout de la musique ici !
 ```
 
-## 14. Améliorations possibles
+## 11. Améliorations possibles
 
 Voici plusieurs idées d'amélioration du jeu.  
 Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficulté.

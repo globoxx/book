@@ -378,8 +378,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="ajouter-le-joueur">
 <h2>3. Ajouter le joueur<a class="headerlink" href="#ajouter-le-joueur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps d’ajouter notre joueur. Il sera représenté par un <code class="docutils literal notranslate"><span class="pre">objet</span></code>. Voyez un objet comme une sorte de super variable qui peut contenir d’autres variables. Chaque objet sera également représenté par une image que nous appelerons un sprite et une position. Chaque sprite doit être sauvegardé dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>.</p>
-<img alt="media/run_003.png" src="media/run_003.png"/>
-<p>Vous pouvez télécharger les images du jeu <span class="xref myst">ici</span>.</p>
+<img alt="../_images/run__003.png" src="../_images/run__003.png"/>
+<p>Vous pouvez télécharger les images du jeu <a class="reference download internal" download="" href="../_downloads/df84c0611c8a801c06e72e9d187c8b0d/images_ninja.zip"><code class="xref download docutils literal notranslate"><span class="pre">ici</span></code></a>.</p>
 <p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux.</p>
 <p>Pour chaque nouvel objet que l’on veut ajouter à notre jeu, nous allons créer une <code class="docutils literal notranslate"><span class="pre">classe</span></code> associée. Voyez une classe comme un moule qui nous permettra de créer des objets, comme notre joueur. En <a href="https://courspython.com/classes-et-objets.html" target="_blank">programmation orientée objet</a>, une classe possède des <code class="docutils literal notranslate"><span class="pre">attributs</span></code> (des variables décrivant l’objet) et des <code class="docutils literal notranslate"><span class="pre">méthodes</span></code> (des fonctions pouvant être appelées par l’objet).</p>
 <p>Nous créons donc une classe <code class="docutils literal notranslate"><span class="pre">Player</span></code> qui hérite des attributs et méthodes d’une autre classe nommée <code class="docutils literal notranslate"><span class="pre">Actor</span></code> offerte par Pygame. En fait, tous les objets que nous allons ajouter à notre jeu sont des <code class="docutils literal notranslate"><span class="pre">acteurs</span></code>.</p>
@@ -722,7 +722,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 </details></section>
 <section id="tenir-et-afficher-un-score">
-<h2>11. Tenir et afficher un score<a class="headerlink" href="#tenir-et-afficher-un-score" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>8. Tenir et afficher un score<a class="headerlink" href="#tenir-et-afficher-un-score" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le score est important dans les jeux ! Pour en tenir un, on peut le définir dans les attributs de notre <code class="docutils literal notranslate"><span class="pre">player</span></code> et l’initialiser à <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -818,7 +818,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 </details></section>
 <section id="ajouter-un-son-de-saut">
-<h2>12. Ajouter un son de saut<a class="headerlink" href="#ajouter-un-son-de-saut" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>9. Ajouter un son de saut<a class="headerlink" href="#ajouter-un-son-de-saut" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier <code class="docutils literal notranslate"><span class="pre">.wav</span></code> ou <code class="docutils literal notranslate"><span class="pre">.mp3</span></code> souhaité dans le dossier <code class="docutils literal notranslate"><span class="pre">sounds</span></code> (à créer). De nombreux bruitages et musiques gratuits peuvent être trouvés sur <a href="https://freesound.org/" target="_blank">FreeSound</a> ou <a href="https://opengameart.org/" target="_blank">OpenGameArt</a>. Priviliégiez les sons courts pour éviter des problèmes de performance.</p>
 <p>Pygame nous offre l’objet <code class="docutils literal notranslate"><span class="pre">sounds</span></code> qui nous permet de facilement lancer un bruitage. Dans notre cas, nous souhaitons lancer un son lorsque le joueur saute. Nous allons donc ajouter une ligne <code class="docutils literal notranslate"><span class="pre">sounds.jump.play()</span></code> dans la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de notre classe <code class="docutils literal notranslate"><span class="pre">Player</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
@@ -845,7 +845,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p><code class="docutils literal notranslate"><span class="pre">sounds.jump.play()</span></code> fait ici référence au nom du fichier son: <code class="docutils literal notranslate"><span class="pre">jump.wav</span></code>.</p>
 </section>
 <section id="ajouter-une-musique-de-fond">
-<h2>13. Ajouter une musique de fond<a class="headerlink" href="#ajouter-une-musique-de-fond" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>10. Ajouter une musique de fond<a class="headerlink" href="#ajouter-une-musique-de-fond" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajouter une musique de fond est tout aussi simple ! Il suffit d’ajouter un fichier <code class="docutils literal notranslate"><span class="pre">.mp3</span></code> ou <code class="docutils literal notranslate"><span class="pre">.wav</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">music</span></code> (à créer) et d’utiliser l’objet <code class="docutils literal notranslate"><span class="pre">music</span></code> offert par Pygame.</p>
 <p>Pour lancer notre musique <code class="docutils literal notranslate"><span class="pre">ninja_music.wav</span></code> au début du jeu, il reste qu’à appeler <code class="docutils literal notranslate"><span class="pre">music.play(ninja_music)</span></code> au début du programme principal.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
@@ -856,7 +856,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 </section>
 <section id="ameliorations-possibles">
-<h2>14. Améliorations possibles<a class="headerlink" href="#ameliorations-possibles" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>11. Améliorations possibles<a class="headerlink" href="#ameliorations-possibles" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici plusieurs idées d’amélioration du jeu.<br/>
 Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur difficulté.</p>
 <p>Totalement dans vos cordes (facile):</p>
@@ -924,10 +924,10 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <li><a class="reference internal" href="#ajouter-des-obstacles">5. Ajouter des obstacles</a></li>
 <li><a class="reference internal" href="#permettre-au-joueur-de-sauter">6. Permettre au joueur de sauter</a></li>
 <li><a class="reference internal" href="#detecter-un-game-over">7. Détecter un game over</a></li>
-<li><a class="reference internal" href="#tenir-et-afficher-un-score">11. Tenir et afficher un score</a></li>
-<li><a class="reference internal" href="#ajouter-un-son-de-saut">12. Ajouter un son de saut</a></li>
-<li><a class="reference internal" href="#ajouter-une-musique-de-fond">13. Ajouter une musique de fond</a></li>
-<li><a class="reference internal" href="#ameliorations-possibles">14. Améliorations possibles</a></li>
+<li><a class="reference internal" href="#tenir-et-afficher-un-score">8. Tenir et afficher un score</a></li>
+<li><a class="reference internal" href="#ajouter-un-son-de-saut">9. Ajouter un son de saut</a></li>
+<li><a class="reference internal" href="#ajouter-une-musique-de-fond">10. Ajouter une musique de fond</a></li>
+<li><a class="reference internal" href="#ameliorations-possibles">11. Améliorations possibles</a></li>
 </ul>
 </li>
 </ul>
