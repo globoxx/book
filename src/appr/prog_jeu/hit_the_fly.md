@@ -1082,7 +1082,7 @@ def update():
 
 ## 11. Ajouter un son de collision
 
-Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier `.wav` souhaité dans le dossier `sounds`. De nombreux bruitages et musiques gratuits peuvent être trouvés sur <a href="https://opengameart.org/" target="_blank">OpenGameArt</a>. Priviliégiez les sons courts pour éviter des problèmes de performance.
+Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier `.wav` souhaité dans le dossier `sounds`. De nombreux bruitages et musiques gratuits peuvent être trouvés sur <a href="https://opengameart.org/" target="_blank">OpenGameArt</a> ou <a href="https://freesound.org/" target="_blank">FreeSound</a>. Priviliégiez les sons courts pour éviter des problèmes de performance.
 
 Pygame nous offre l'objet `sounds` qui nous permet de facilement lancer un bruitage. Dans notre cas, nous souhaitons lancer un bruit d'explosion lorsque qu'un missile touche un ennemi.
 
