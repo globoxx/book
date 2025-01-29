@@ -52,7 +52,8 @@ Pour les coordonnées `x` et `y`, vous pouvez choisir des valeurs aléatoires.
 
 ```{codeplay}
 :file: p00_1.py
-class Brawler:
+class Rico:
+    def __init__(self):
     # Votre code ici
 
 ```
@@ -108,7 +109,7 @@ class Point:
 
     def calcule_distance(self, p):
         # self fait référence à l'objet lui-même
-        # p est l'autre point dont on veut calculer la distance
+        # p est un autre point dont on veut calculer la distance
         return ((self.x - p.x)**2 + (self.y - p.y)**2) ** 0.5
 
     def affiche_coordonnees(self):
@@ -118,6 +119,8 @@ class Point:
 p1 = Point(2, 3)
 p2 = Point(5, 7)
 print(p1.calcule_distance(p2)) # Affiche 5.0
+
+p1.affiche_coordonnees() # Affiche 2 3
 ```
 
 Ajoutez une méthode `attaque` à la classe `Brawler` qui prend en paramètre un autre brawler et qui diminue la vie de ce brawler en fonction des dégats du brawler attaquant.
@@ -127,6 +130,8 @@ Testez cette méthode en faisant attaquer `rico` par `angelo`, puis affichez la 
 ```{codeplay}
 :file: p00_3.py
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode attaque
+
+rico.attaque(angelo) # rico peut attaquer angelo grâce à cette méthode
 ```
 
 ## Exercice 4

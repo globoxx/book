@@ -7,12 +7,57 @@ from docutils.statemachine import StringList
 from sphinx.util.docutils import SphinxDirective
 from sphinx.util.osutil import relative_uri, canon_path
 
+import json
+from io import StringIO
+from pyflakes.api import check
+from pyflakes.reporter import Reporter
+
+class CustomReporter(Reporter):
+    def __init__(self):
+        self.errors = []
+        super().__init__(StringIO(), StringIO())
+
+    def unexpectedError(self, filename, msg):
+        self.errors.append({
+            'type': 'error',
+            'message': msg,
+            'line': 0,
+            'column': 0
+        })
+
+    def syntaxError(self, filename, msg, lineno, offset, text):
+        self.errors.append({
+            'type': 'syntax',
+            'message': msg,
+            'line': lineno,
+            'column': offset or 0
+        })
+
+    def flake(self, message):
+        self.errors.append({
+            'type': 'warning',
+            'message': str(message),
+            'line': message.lineno,
+            'column': message.col
+        })
+
 class interactive_code(nodes.Element, nodes.General):
     pass
+
+def analyze_code(code):
+    reporter = CustomReporter()
+    check(code, 'code.py', reporter)
+    return reporter.errors
 
 def visit_interactive_code_html(self, node):
     tag = self.starttag(node, "div", CLASS="interactive_code")
     self.body.append(tag.strip())
+    
+    # Analyse du code avec Pyflakes
+    code_errors = analyze_code(node["code"])
+    analysis_attr = ""
+    if code_errors:
+        analysis_attr = 'data-analysis="' + b64encode(json.dumps(code_errors).encode("UTF-8")).decode("UTF-8") + '" '
 
     prelude_attr = ""
     if len(node["prelude"]) > 0:
@@ -29,7 +74,7 @@ def visit_interactive_code_html(self, node):
 
 
     self.body.append('<iframe src="' + node["codeplay_path"] + '" ' +
-      prelude_attr + afterword_attr + hints_attr +
+      prelude_attr + afterword_attr + hints_attr + analysis_attr +
       'data-code="' + b64encode(node["code"].encode("UTF-8")).decode("UTF-8") + '" ' +
       'data-file="' + b64encode(node["file"].encode("UTF-8")).decode("UTF-8") + '" ' +
       ('data-output-min-lines="' + str(node["min_height"]) + '" ' if node["min_height"] is not None else "") +

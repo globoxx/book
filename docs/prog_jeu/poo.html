@@ -259,8 +259,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="hit_the_fly.html">1. Hit the fly (shooter)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="platformer.html">2. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hit_the_fly.html">2. Hit the fly (shooter)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="platformer.html">3. Jumper (platformer)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets de jeux 2D</a></li>
 </ul>
@@ -339,7 +339,7 @@ Voici la fiche de son personnage :</p>
 <p class="admonition-title">Note</p>
 <p>Pour les coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>, vous pouvez choisir des valeurs aléatoires.</p>
 </div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y2xhc3MgQnJhd2xlcjoKICAgICMgVm90cmUgY29kZSBpY2k=" data-file="cDAwXzEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Y2xhc3MgUmljbzoKICAgIGRlZiBfX2luaXRfXyhzZWxmKToKICAgICMgVm90cmUgY29kZSBpY2k=" data-file="cDAwXzEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-2">
 <h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il n’est pas pratique de devoir créer une classe différente pour chaque brawler. Il vaudrait mieux créer <strong>une seule classe permettant de créer n’importe quel brawler</strong>.</p>
@@ -370,7 +370,7 @@ Par exemple, un brawler peut attaquer un autre brawler, se déplacer, etc.</p>
 
     <span class="k">def</span> <span class="nf">calcule_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
         <span class="c1"># self fait référence à l'objet lui-même</span>
-        <span class="c1"># p est l'autre point dont on veut calculer la distance</span>
+        <span class="c1"># p est un autre point dont on veut calculer la distance</span>
         <span class="k">return</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
 
     <span class="k">def</span> <span class="nf">affiche_coordonnees</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -380,11 +380,13 @@ Par exemple, un brawler peut attaquer un autre brawler, se déplacer, etc.</p>
 <span class="n">p1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">calcule_distance</span><span class="p">(</span><span class="n">p2</span><span class="p">))</span> <span class="c1"># Affiche 5.0</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">affiche_coordonnees</span><span class="p">()</span> <span class="c1"># Affiche 2 3</span>
 </pre></div>
 </div>
 <p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">attaque</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre un autre brawler et qui diminue la vie de ce brawler en fonction des dégats du brawler attaquant.</p>
 <p>Testez cette méthode en faisant attaquer <code class="docutils literal notranslate"><span class="pre">rico</span></code> par <code class="docutils literal notranslate"><span class="pre">angelo</span></code>, puis affichez la vie restante de <code class="docutils literal notranslate"><span class="pre">rico</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBhdHRhcXVl" data-file="cDAwXzMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBhdHRhcXVlCgpyaWNvLmF0dGFxdWUoYW5nZWxvKSAjIHJpY28gcGV1dCBhdHRhcXVlciBhbmdlbG8gZ3LDomNlIMOgIGNldHRlIG3DqXRob2Rl" data-file="cDAwXzMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exercice-4">
 <h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">deplace</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre une distance <code class="docutils literal notranslate"><span class="pre">dx</span></code> et qui déplace le brawler sur l’axe <code class="docutils literal notranslate"><span class="pre">x</span></code> en conséquence.</p>

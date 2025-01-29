@@ -3,3 +3,52 @@
     width: 100%;
     overflow: scroll;
 }
+
+/* Styles pour le gutter d'analyse */
+.analysis-gutter {
+    width: 20px;
+}
+
+.analysis-marker {
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.analysis-marker.error {
+    color: #ff0000;
+    content: "⚠";
+}
+
+.analysis-marker.warning {
+    color: #ffa500;
+    content: "!";
+}
+
+.analysis-marker.syntax {
+    color: #ff0000;
+    content: "×";
+}
+
+/* Styles pour le surlignage du code */
+.analysis-highlight {
+    text-decoration: wavy underline;
+}
+
+.analysis-highlight.error {
+    text-decoration-color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.analysis-highlight.warning {
+    text-decoration-color: #ffa500;
+    background-color: rgba(255, 165, 0, 0.1);
+}
+
+.analysis-highlight.syntax {
+    text-decoration-color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.1);
+}

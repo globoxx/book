@@ -42,6 +42,66 @@
   <div id="canvas-area">
     <div id="canvas"></div>
   </div>
+
+  <script>
+    function displayAnalysis(analysisData) {
+        if (!analysisData) return;
+        
+        const analysis = JSON.parse(atob(analysisData));
+        const editor = window.editor; // Votre instance CodeMirror
+
+        // Efface les marqueurs existants
+        editor.clearGutter('analysis-gutter');
+        
+        // Configure le gutter s'il n'existe pas déjà
+        if (!editor.getOption('gutters').includes('analysis-gutter')) {
+            const gutters = editor.getOption('gutters').concat(['analysis-gutter']);
+            editor.setOption('gutters', gutters);
+        }
+
+        // Efface les marqueurs de texte existants
+        if (window.analysisMarkers) {
+            window.analysisMarkers.forEach(marker => marker.clear());
+        }
+        window.analysisMarkers = [];
+
+        // Affiche les nouvelles erreurs
+        analysis.forEach(error => {
+            const line = error.line - 1;
+            const severity = error.type;
+            
+            // Crée l'icône d'erreur dans le gutter
+            const marker = document.createElement('div');
+            marker.className = `analysis-marker ${severity}`;
+            marker.title = error.message;
+            editor.setGutterMarker(line, 'analysis-gutter', marker);
+            
+            // Souligne le code problématique si on a une position de colonne
+            if (error.column > 0) {
+                const textMarker = editor.markText(
+                    {line: line, ch: error.column - 1},
+                    {line: line, ch: error.column + 1},
+                    {
+                        className: `analysis-highlight ${severity}`,
+                        title: error.message
+                    }
+                );
+                window.analysisMarkers.push(textMarker);
+            }
+        });
+    }
+
+    // Appliquer l'analyse au chargement
+    document.addEventListener('DOMContentLoaded', function() {
+        const iframe = document.querySelector('.codeframe');
+        if (iframe) {
+            const analysisData = iframe.getAttribute('data-analysis');
+            if (analysisData) {
+                displayAnalysis(analysisData);
+            }
+        }
+    });
+  </script>
 </body>
 
 </html>
