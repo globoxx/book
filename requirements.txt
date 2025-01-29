@@ -51,3 +51,4 @@ qrcode
 Pillow
 svglib
 cairosvg
+pyflakes
