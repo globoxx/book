@@ -2,7 +2,7 @@
 
 # Introduction à la programmation orientée objet
 
-Nous avons vu plusieurs types de base en Python (`int` pour les entiers, `float` pour les flottants, `str` pour les chaînes de caractères, etc.). La notion de **classe** va en quelque sorte nous permettre de généraliser la notion de « type » afin de créer de nouvelles structures de données.
+Nous avons vu plusieurs types de base en Python (`int` pour les entiers, `float` pour les nombres à virgules, `str` pour les textes, etc.). La notion de **classe** va en quelque sorte nous permettre de généraliser la notion de « type » afin de créer de nouvelles structures de données.
 
 Une classe définit des **attributs** et des **méthodes**. Par exemple, imaginons une classe `Voiture` qui servira à créer des objets qui sont des voitures. Cette classe va pouvoir définir un attribut `couleur`, un attribut `vitesse`, etc. Ces attributs correspondent à des propriétés qui peuvent exister pour une voiture. La classe `Voiture` pourra également définir une méthode `rouler()`. Une méthode correspond en quelque sorte à une action, ici l’action de rouler peut être réalisée pour une voiture.
 
@@ -11,7 +11,7 @@ Une classe définit des **attributs** et des **méthodes**. Par exemple, imagino
 
 Si on imagine une classe `Avion`, elle pourra définir une méthode `voler()`. Elle pourra aussi définir une méthode `rouler()`. Par contre, la classe Voiture n’aura pas de méthode `voler()` car une voiture ne peut pas voler. De même, la classe `Avion` pourra avoir un attribut `altitude` mais ce ne sera pas le cas pour la classe `Voiture`.
 
-Après avoir présenté la notion de **classe**, nous allons voir la notion d'**objet**. On dit qu’**un objet est une instance de classe**. Si on revient à la classe `Voiture`, nous pourrons avoir plusieurs voitures qui seront chacune des instances bien distinctes. Par exemple, la voiture de Jonathan, qui est de couleur rouge avec une vitesse de 30 km/h, est une instance de la classe `Voiture`, c’est un **objet**. De même, la voiture de Denis, qui est de couleur grise avec une vitesse de 50 km/h, est un autre objet. Nous pouvons donc avoir plusieurs objects pour une même classe, en particulier ici deux objets (autrement dit : deux instances de la même classe). Chacun des objets a des valeurs qui lui sont propres pour les attributs.
+Après avoir présenté la notion de **classe**, nous allons voir la notion d'**objet**. Si on revient à la classe `Voiture`, nous pourrons avoir plusieurs voitures qui seront chacune des objets bien distincts. Par exemple, la voiture de Jonathan, qui est de couleur rouge avec une vitesse de 30 km/h, est un objet de la classe `Voiture`. De même, la voiture de Denis, qui est de couleur grise avec une vitesse de 50 km/h, est un autre objet. Nous pouvons donc avoir plusieurs objects pour une même classe, en particulier ici deux objets. Chacun des objets a des valeurs qui lui sont propres pour les attributs.
 
 (Pour plus de détails théoriques sur la programmation orientée objet, vous pouvez consulter [cette page](https://courspython.com/classes-et-objets.html) dont le cours est tiré.)
 
@@ -182,6 +182,10 @@ class Cercle:
         self.x = x
         self.y = y
         self.rayon = rayon
+
+    def calcule_distance(self, c):
+        # calcule la distance entre le centre du cercle et un autre cercle c
+        return ((self.x - c.x)**2 + (self.y - c.y)**2) ** 0.5
 ```
 
 Ecrivez le code permettant de générer 100 cercles aléatoires et de les stocker dans une liste `cercles`.
@@ -190,7 +194,7 @@ La position `x` et `y` de chaque cercle doit être un nombre aléatoire entre 0 
 
 ```{codeplay}
 :file: p00_6.py
-from random import randint # Pour l'aléatoire
+import random # Pour l'aléatoire
 
 class Cercle:
     def __init__(self, x, y, rayon):
@@ -198,7 +202,11 @@ class Cercle:
         self.y = y
         self.rayon = rayon
 
-# Votre code ici
+    def calcule_distance(self, c):
+        # calcule la distance entre le centre du cercle et un autre cercle c
+        return ((self.x - c.x)**2 + (self.y - c.y)**2) ** 0.5
+
+# Votre code ici (basez-vous sur l'exemple avec les listes donné plus haut)
 ```
 
 ## Exercice 7
