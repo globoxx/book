@@ -171,7 +171,7 @@ class Player(Actor):
         self.images = [f'run__00{i}' for i in range(10)] # Liste des images de l'animation
 ```
 
-Pour faire avancer l'animation, il nous faut encore appeler `player.animate()` dans la fonction `update` principale.
+Pour faire avancer l'animation, il nous faut encore appeler `player.animate()` dans la fonction `update` principale. Par défaut, l'animation se fait à 5 fps (images par seconde) mais on peut choisir une autre valeur.
 
 ```python
 def update():
@@ -654,22 +654,30 @@ music.play('ninja_music') # Ajout de la musique ici !
 
 ## 11. Améliorations possibles
 
+```{admonition} Travail à rendre
+Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu:
+
+* 2 améliorations faciles
+* 1 amélioration moyenne
+```
+
 Voici plusieurs idées d'amélioration du jeu.  
 Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficulté.
 
 Totalement dans vos cordes (facile):
 
-* Régler le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s'il est au sol.
-* Changez/Stopez l'animation du joueur en cours de saut.
+* Corriger le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s'il est au sol.
+* Changer/Stoper l'animation du joueur en cours de saut.
 * Créer un vrai écran de game over dans lequel on ne voit plus le jeu.
+* Permettre de mettre le jeu en pause en appuyant sur une touche.
 * Faire en sorte que les obstacles accélèrent progressivement quand le score augmente.
-* Faire en sorte que l'on puisse changer la taille de la fenêtre de jeu et que tout s'adapte automatiquement.
+* Faire en sorte que l'on puisse changer la taille de la fenêtre de jeu dans le code (`WIDTH` et `HEIGHT`) et que tout s'adapte automatiquement.
 
 Un peu plus complexe (moyen):
 
 * Permettre de relancer le jeu après un game over en appuyant sur une touche.
 * Ajouter un nouveau type d'obstacle pour lequel il faut rester au sol pour l'éviter.
-* Changez aléatoirement l'image de l'obstacle à chaque fois qu'il réapparaît. Piochez dans les images fournies ou trouvez-en d'autres.
+* Changer aléatoirement l'image de l'obstacle à chaque fois qu'il réapparaît. Piochez dans les images fournies ou trouvez-en d'autres.
 * Plusieurs obstacles peuvent apparaître en même temps. Indice: créez une liste d'obstacles.
 * Permettre au joueur de ramasser des objets pour augmenter son score, par exemple des pièces.
 

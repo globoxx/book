@@ -449,7 +449,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span> <span class="c1"># Liste des images de l'animation</span>
 </pre></div>
 </div>
-<p>Pour faire avancer l’animation, il nous faut encore appeler <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> principale.</p>
+<p>Pour faire avancer l’animation, il nous faut encore appeler <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> principale. Par défaut, l’animation se fait à 5 fps (images par seconde) mais on peut choisir une autre valeur.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># On anime le joueur à 20 fps (images par seconde)</span>
 </pre></div>
@@ -924,21 +924,30 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </section>
 <section id="ameliorations-possibles">
 <h2>11. Améliorations possibles<a class="headerlink" href="#ameliorations-possibles" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-travail-a-rendre admonition">
+<p class="admonition-title">Travail à rendre</p>
+<p>Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu:</p>
+<ul class="simple">
+<li><p>2 améliorations faciles</p></li>
+<li><p>1 amélioration moyenne</p></li>
+</ul>
+</div>
 <p>Voici plusieurs idées d’amélioration du jeu.<br/>
 Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur difficulté.</p>
 <p>Totalement dans vos cordes (facile):</p>
 <ul class="simple">
-<li><p>Régler le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s’il est au sol.</p></li>
-<li><p>Changez/Stopez l’animation du joueur en cours de saut.</p></li>
+<li><p>Corriger le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s’il est au sol.</p></li>
+<li><p>Changer/Stoper l’animation du joueur en cours de saut.</p></li>
 <li><p>Créer un vrai écran de game over dans lequel on ne voit plus le jeu.</p></li>
+<li><p>Permettre de mettre le jeu en pause en appuyant sur une touche.</p></li>
 <li><p>Faire en sorte que les obstacles accélèrent progressivement quand le score augmente.</p></li>
-<li><p>Faire en sorte que l’on puisse changer la taille de la fenêtre de jeu et que tout s’adapte automatiquement.</p></li>
+<li><p>Faire en sorte que l’on puisse changer la taille de la fenêtre de jeu dans le code (<code class="docutils literal notranslate"><span class="pre">WIDTH</span></code> et <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code>) et que tout s’adapte automatiquement.</p></li>
 </ul>
 <p>Un peu plus complexe (moyen):</p>
 <ul class="simple">
 <li><p>Permettre de relancer le jeu après un game over en appuyant sur une touche.</p></li>
 <li><p>Ajouter un nouveau type d’obstacle pour lequel il faut rester au sol pour l’éviter.</p></li>
-<li><p>Changez aléatoirement l’image de l’obstacle à chaque fois qu’il réapparaît. Piochez dans les images fournies ou trouvez-en d’autres.</p></li>
+<li><p>Changer aléatoirement l’image de l’obstacle à chaque fois qu’il réapparaît. Piochez dans les images fournies ou trouvez-en d’autres.</p></li>
 <li><p>Plusieurs obstacles peuvent apparaître en même temps. Indice: créez une liste d’obstacles.</p></li>
 <li><p>Permettre au joueur de ramasser des objets pour augmenter son score, par exemple des pièces.</p></li>
 </ul>
