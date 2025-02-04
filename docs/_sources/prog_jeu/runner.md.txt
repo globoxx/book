@@ -664,7 +664,7 @@ Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu
 Voici plusieurs idées d'amélioration du jeu.  
 Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficulté.
 
-Totalement dans vos cordes (facile):
+**Totalement dans vos cordes (facile):**
 
 * Corriger le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s'il est au sol.
 * Changer/Stoper l'animation du joueur en cours de saut.
@@ -673,7 +673,7 @@ Totalement dans vos cordes (facile):
 * Faire en sorte que les obstacles accélèrent progressivement quand le score augmente.
 * Faire en sorte que l'on puisse changer la taille de la fenêtre de jeu dans le code (`WIDTH` et `HEIGHT`) et que tout s'adapte automatiquement.
 
-Un peu plus complexe (moyen):
+**Un peu plus complexe (moyen):**
 
 * Permettre de relancer le jeu après un game over en appuyant sur une touche.
 * Ajouter un nouveau type d'obstacle pour lequel il faut rester au sol pour l'éviter.
@@ -681,7 +681,7 @@ Un peu plus complexe (moyen):
 * Plusieurs obstacles peuvent apparaître en même temps. Indice: créez une liste d'obstacles.
 * Permettre au joueur de ramasser des objets pour augmenter son score, par exemple des pièces.
 
-Challenging (difficile):
+**Challenging (difficile):**
 
 * Permettre au joueur de tirer sur les obstacles pour les détruire.
 * Donner de la vie au joueur lui permettant de prendre un certain nombre de coups avant de mourir.
