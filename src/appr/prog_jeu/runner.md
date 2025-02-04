@@ -4,6 +4,8 @@
 
 Dans cette introduction, nous allons développer un premier jeu simple étape par étape. Le jeu consiste en un ninja devant sauter par dessus des obstacles. Le jeu est terminé si le ninja touche un obstacle.
 
+{download}`Téléchargement des ressources du jeu<../data/prog_2d/runner.zip>`.
+
 ```{image} ../media/runner.gif
 ```
 
