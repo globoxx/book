@@ -304,7 +304,7 @@
           <section class="tex2jax_ignore mathjax_ignore" id="running-ninja-runner">
 <span id="prog-jeu-runner"></span><h1>1. Running Ninja (Runner)<a class="headerlink" href="#running-ninja-runner" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Dans cette introduction, nous allons développer un premier jeu simple étape par étape. Le jeu consiste en un ninja devant sauter par dessus des obstacles. Le jeu est terminé si le ninja touche un obstacle.</p>
-<img alt="media/runner.gif" src="media/runner.gif"/>
+<img alt="../_images/runner.gif" src="../_images/runner.gif"/>
 <section id="faire-apparaitre-une-fenetre">
 <h2>1. Faire apparaître une fenêtre<a class="headerlink" href="#faire-apparaitre-une-fenetre" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La première étape est de définir le nom de notre jeu dans la variable <code class="docutils literal notranslate"><span class="pre">TITLE</span></code>, ainsi que la largeur <code class="docutils literal notranslate"><span class="pre">WIDTH</span></code> et la hauteur <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> de notre fenêtre. Nous allons également importer <code class="docutils literal notranslate"><span class="pre">pgzrun</span></code> et des fonctions de <code class="docutils literal notranslate"><span class="pre">pgzhelper</span></code> afin de nous faciliter la vie. Pygame Zero s’occupe du reste !</p>
@@ -450,7 +450,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 <p>Pour faire avancer l’animation, il nous faut encore appeler <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> principale.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span> <span class="c1"># On anime le joueur</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># On anime le joueur à 20 fps (images par seconde)</span>
 </pre></div>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -480,7 +480,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
@@ -551,7 +551,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="n">obstacle</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
     <span class="n">obstacle</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
@@ -664,7 +664,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="n">obstacle</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="n">obstacle</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
@@ -702,7 +702,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p>Bien, nous avons maintenant une variable <code class="docutils literal notranslate"><span class="pre">game_over</span></code> qui est <code class="docutils literal notranslate"><span class="pre">True</span></code> si le joueur touche un obstacle. Il ne reste plus qu’à ajouter une condition dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> du programme principal pour arrêter le jeu si <code class="docutils literal notranslate"><span class="pre">game_over</span></code> est <code class="docutils literal notranslate"><span class="pre">True</span></code>. Il suffit de faire les updates des objets uniquement si <code class="docutils literal notranslate"><span class="pre">game_over</span></code> est <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">player</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span> <span class="c1"># Si le jeu n'est pas terminé</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
         <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
         <span class="n">obstacle</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </pre></div>
@@ -773,7 +773,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">player</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
         <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
         <span class="n">obstacle</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
@@ -872,7 +872,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">player</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">()</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
         <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
         <span class="n">obstacle</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 

@@ -173,7 +173,7 @@ Pour faire avancer l'animation, il nous faut encore appeler `player.animate()` d
 
 ```python
 def update():
-    player.animate() # On anime le joueur
+    player.animate(20) # On anime le joueur à 20 fps (images par seconde)
 ```
 
 ````{dropdown} Voir le code complet à ce point
@@ -198,7 +198,7 @@ def draw():
     player.draw()
 
 def update():
-    player.animate()
+    player.animate(20)
 
 pgzrun.go()
 ```
@@ -271,7 +271,7 @@ def draw():
     obstacle.draw()
 
 def update():
-    player.animate()
+    player.animate(20)
     obstacle.update()
 
 pgzrun.go()
@@ -387,7 +387,7 @@ def draw():
     obstacle.draw()
 
 def update():
-    player.animate()
+    player.animate(20)
     player.update()
     obstacle.update()
 
@@ -430,7 +430,7 @@ Bien, nous avons maintenant une variable `game_over` qui est `True` si le joueur
 ```python
 def update():
     if not player.game_over: # Si le jeu n'est pas terminé
-        player.animate()
+        player.animate(20)
         player.update()
         obstacle.update()
 ```
@@ -498,7 +498,7 @@ def draw():
 
 def update():
     if not player.game_over:
-        player.animate()
+        player.animate(20)
         player.update()
         obstacle.update()
 
@@ -597,7 +597,7 @@ def draw():
 
 def update():
     if not player.game_over:
-        player.animate()
+        player.animate(20)
         player.update()
         obstacle.update()
 
