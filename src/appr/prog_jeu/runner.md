@@ -49,7 +49,7 @@ pgzrun.go()
 
 ## 2. S'occuper du fond d'écran
 
-Tous les dessins de notre jeu se feront via la fonction `draw` de Pygame. Il nous faut donc lui ajouter l'instruction permettant de colorier le fond.
+Tous les dessins de notre jeu se feront via la fonction `draw` de Pygame. Il nous faut donc lui ajouter l'instruction permettant de colorier le fond et faire un carré d'herbe.
 
 `screen` est un objet accessible grâce à Pygame qui représente la fenêtre de notre jeu.  
 Nous allons faire un ciel bleu ainsi que de l'herbe verte.
@@ -83,24 +83,22 @@ pgzrun.go()
 
 ## 3. Ajouter le joueur
 
-Il est temps d'ajouter notre joueur. Il sera représenté par un `objet`. Voyez un objet comme une sorte de super variable qui peut contenir d'autres variables. Chaque objet sera également représenté par une image que nous appelerons un sprite et une position. Chaque sprite doit être sauvegardé dans le dossier `images`.
+Il est temps d'ajouter notre joueur. Il sera représenté par un `objet`. Chaque objet sera également représenté par une image (que nous appelerons un sprite) et une position. Chaque sprite doit être sauvegardé dans le dossier `images`.
 
 ```{image} ../media/run__003.png
 ```
-
-Vous pouvez télécharger les images du jeu {download}`ici<../data/prog_2d/images_ninja.zip>`.
 
 La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux.
 
 Pour chaque nouvel objet que l'on veut ajouter à notre jeu, nous allons créer une `classe` associée. Voyez une classe comme un moule qui nous permettra de créer des objets, comme notre joueur. En <a href="https://courspython.com/classes-et-objets.html" target="_blank">programmation orientée objet</a>, une classe possède des `attributs` (des variables décrivant l'objet) et des `méthodes` (des fonctions pouvant être appelées par l'objet).
 
-Nous créons donc une classe `Player` qui hérite des attributs et méthodes d'une autre classe nommée `Actor` offerte par Pygame. En fait, tous les objets que nous allons ajouter à notre jeu sont des `acteurs`.
+Nous créons donc une classe `Player` qui hérite des attributs et méthodes d'une autre classe nommée `Actor` offerte par Pygame. En fait, tous les objets que nous allons ajouter à notre jeu sont des `Actor`.
 
 ```python
 class Player(Actor):
     def __init__(self, image, pos, **kwargs): # Init est le constructeur de la classe
         super().__init__(image, pos, **kwargs) # Cette ligne appelle le constructeur de la classe mère Actor
-        # Ne vous en préoccupez pas trop pour le moment
+        # Ne vous en préoccupez pas trop pour le moment mais pour faire simple, elle s'occupe d'initialiser l'objet avec la bonne image et la bonne position (et d'autres détails)
 ```
 
 Ce code crée une classe `Player` héritant de la classe `Actor`. La méthode `init` est ce que l'on appelle un **constructeur** qui est appelé lors de la création d'un objet. Ce construction prend obligatoirement une image en entrée, ainsi que des coordonnées `pos` (`x`, `y`) pour savoir où placer l'objet créé.
@@ -162,16 +160,16 @@ Notre joueur est statique pour le moment. Nous allons donc ajouter une animation
 ```{image} ../media/run__009.png
 ```
 
-Il nous faut commencer par définir la liste des images qui composent notre animation. Nous allons donc définir l'attribut `images` de notre classe `Player` qui contiendra toutes les images de notre animation.
+Il nous faut commencer par définir la liste des images qui composent notre animation. Pour cela, nous ajoutons un attribut `images` à notre classe `Player` qui contiendra toutes les images de notre animation.
 
 ```python
 class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
-        self.images = [f'run__00{i}' for i in range(10)] # Liste des images de l'animation
+        self.images = [f'run__00{i}' for i in range(10)] # Liste des images de l'animation (run__000 à run__009)
 ```
 
-Pour faire avancer l'animation, il nous faut encore appeler `player.animate()` dans la fonction `update` principale. Par défaut, l'animation se fait à 5 fps (images par seconde) mais on peut choisir une autre valeur.
+Pour faire avancer l'animation à chaque tour, il nous faut encore appeler `player.animate()` dans la fonction `update` principale. Par défaut, l'animation se fait à 5 fps (images par seconde) mais on peut choisir une autre valeur.
 
 ```python
 def update():
@@ -221,7 +219,7 @@ class Obstacle(Actor):
 obstacle = Obstacle('cactus', (850, 430)) # Création d'un obstacle en dehors de l'écran à droite
 ```
 
-Notre objet `obstacle` est créé en dehors de l'écran à droite. Nous allons le faire défiler de droite à gauche en le déplaçant de `10` pixels à chaque `tour` du jeu.
+Notre objet `obstacle` est créé en dehors de l'écran à droite (`x = 850`). Nous allons le faire défiler de droite à gauche en le déplaçant de `10` pixels à chaque tour du jeu.
 
 Pour cela, nous allons ajouter une méthode `update` à notre classe `Obstacle`. C'est dans cette méthode que nous décrivons les actions que l'obstacle doit effectuer à chaque `tour` du jeu. Dans notre cas, il doit se déplacer de `10` pixels vers la gauche et réapparaître à droite une fois qu'il est sorti de l'écran.
 
@@ -320,12 +318,12 @@ class Player(Actor):
     def update(self):
         self.y += self.vy
         self.vy += 1
-        if self.y > 400: # Si le joueur touche le sol
+        if self.y > 400: # Si le joueur touche le sol (est trop bas sur l'axe y)
             self.y = 400 # Le joueur est remis sur le sol
             self.vy = 0 # La vitesse verticale est remise à 0
 ```
 
-Bon et maintenant il faut pouvoir sauter ! Nous allons donc ajouter une condition pour détecter si la touche `space` (espace) est pressée. Si c'est le cas, nous allons donner une vitesse verticale (`vy`) négative au joueur. Pygame Zero nous offre un objet `keyboard` qui nous permet de détecter les touches pressées.
+Bon et maintenant il faut pouvoir sauter ! Nous allons donc ajouter une condition pour détecter si la touche `space` (espace) est pressée. Si c'est le cas, nous allons donner une vitesse verticale (`vy`) négative au joueur pour le faire aller vers le haut. Pygame Zero nous offre un objet `keyboard` qui nous permet de détecter les touches pressées.
 
 ```python
 class Player(Actor):
@@ -401,7 +399,7 @@ pgzrun.go()
 
 Notre joueur est invicible ! Il est temps d'ajouter la détection de collision entre le joueur et les obstacles. Si le joueur touche un obstacle, c'est la fin du jeu.
 
-Pour détecter une collision, nous allons utiliser la méthode `collides_with(actor)` héritée de `Actor`. Cette méthode retourne `True` si l'objet est en collision avec un autre `actor`.
+Pour détecter une collision, nous allons utiliser la méthode `collides_with(actor)` héritée de `Actor`. Cette méthode retourne `True` si l'objet est en collision avec un autre `Actor`.
 
 Nous allons donc ajouter une condition dans la fonction `update` du `Player` pour détecter une collision avec l'`obstacle`. Nous devons aussi créer une variable `game_over` pour savoir si le jeu est terminé. Par souci de simplicité, nous pouvons définir `game_over` comme un attribut de notre classe `Player`.
 
@@ -432,6 +430,7 @@ Bien, nous avons maintenant une variable `game_over` qui est `True` si le joueur
 ```python
 def update():
     if not player.game_over: # Si le jeu n'est pas terminé
+        # On anime le joueur et on met à jour le joueur et l'obstacle
         player.animate(20)
         player.update()
         obstacle.update()
@@ -522,7 +521,7 @@ class Player(Actor):
         self.score = 0 # Initialisation du score à 0
 ```
 
-Avant de nous occuper de l'augmentation du score, voyons déjà comment l'afficher. Afficher du texte à l'écran se fait via l'objet `screen` offert par Pygame. Nous l'utilisons dans la fonction `draw` du programme principal, juste après avoir défini l'image de fond.
+Avant de nous occuper de l'augmentation du `score`, voyons déjà comment l'afficher. Afficher du texte à l'écran se fait via l'objet `screen` offert par Pygame. Nous l'utilisons dans la fonction `draw` du programme principal, juste après avoir défini l'image de fond.
 
 ```python
 def draw():
@@ -542,7 +541,7 @@ class Obstacle(Actor):
         self.x -= 10
         if self.x < -50:
             self.x = 850
-            player.score += 1 # Augmentation du score
+            player.score += 1 # Augmentation du score car l'obstacle est sorti de l'écran
 ```
 
 ````{dropdown} Voir le code complet à ce point
@@ -643,7 +642,7 @@ class Player(Actor):
 
 Ajouter une musique de fond est tout aussi simple ! Il suffit d'ajouter un fichier `.mp3` ou `.wav` dans le dossier `music` (à créer) et d'utiliser l'objet `music` offert par Pygame.
 
-Pour lancer notre musique `ninja_music.wav` au début du jeu, il reste qu'à appeler `music.play(ninja_music)` au début du programme principal.
+Pour lancer notre musique `ninja_music.mp3` au début du jeu, il reste qu'à appeler `music.play(ninja_music)` au début du programme principal.
 
 ```python
 player = Player('run__000', (100, 400))
