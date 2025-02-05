@@ -214,7 +214,8 @@ class Cercle:
 Ajoutez une méthode `est_en_collision` à la classe `Cercle` qui prend en paramètre un autre cercle et qui retourne `True` si les deux cercles sont en collision et `False` sinon.
 
 ````{dropdown} Indice
-Deux cercles sont en collision si la distance entre leur centre est inférieure à la somme de leur rayon.
+Deux cercles sont en collision si la distance entre leur centre est inférieure à la somme de leur rayon.  
+Cette distance peut être calculée avec la méthode `calcule_distance` qui est donnée.
 
 ```{image} ../media/circle_collision.jpg
 ```
@@ -229,10 +230,18 @@ Deux cercles sont en collision si la distance entre leur centre est inférieure 
 
 Testez la méthode `est_en_collision` en affichant toutes les paires de cercles en collision dans la liste `cercles`.
 
-```{dropdown} Indice
+````{dropdown} Indice
 Utilisez une double boucle `for` pour parcourir toutes les paires de cercles.  
 Pour rappel, on peut parcourir une fois la liste de cercles avec `for cercle in cercles:`.
+
+Votre code ressemblera donc à ceci :
+```python
+# Ce code vient à la suite de la création des cercles
+for c1 in cercles:
+    for c2 in cercles:
+        # Test de collision entre c1 et c2
 ```
+````
 
 ```{codeplay}
 :file: p00_8.py
