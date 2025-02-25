@@ -63,6 +63,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    :maxdepth: 3
    :hidden:
 
+   prog_jeu/runner
    prog_jeu/hit_the_fly
    prog_jeu/platformer
    prog_jeu/projet
