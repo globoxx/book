@@ -4,6 +4,8 @@
 
 Dans cette introduction, nous allons développer un premier jeu simple étape par étape. Le jeu consiste en un personnage pouvant se déplacer librement au clavier et pouvant tirer des projectiles sur des ennemis se déplaçant aléatoirement avec des clics de souris.
 
+{download}`Téléchargement des ressources du jeu<../data/prog_2d/hit_the_fly.zip>`.
+
 ```{image} ../media/hit_the_fly.gif
 ```
 
@@ -1280,6 +1282,13 @@ def update():
 ````
 
 ## 14. Idées d'améliorations
+
+```{admonition} Travail à rendre
+Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu:
+
+* 2 améliorations faciles
+* 1 amélioration moyenne
+```
 
 Voici plusieurs idées d'amélioration du jeu.  
 Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficulté.
