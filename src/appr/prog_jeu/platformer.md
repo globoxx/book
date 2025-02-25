@@ -955,7 +955,7 @@ def update():
 Voici plusieurs idées d'amélioration du jeu.  
 Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficulté.
 
-Totalement dans vos cordes (facile):
+**Totalement dans vos cordes (facile):**
 
 * Ajouter une animation au joueur quand il se déplace.
 * Ajouter une musique de fond.
@@ -967,7 +967,7 @@ Totalement dans vos cordes (facile):
 * Ajouter un 3ème niveau.
 * Permettre de mettre le jeu en pause avec la touche espace.
 
-Un peu plus complexe (moyen):
+**Un peu plus complexe (moyen):**
 
 * Ajouter une clé dans le niveau nécessaire au déblocage du portail vers le prochain niveau.
 * Permettre au joueur de tirer des projectiles soumis à la gravité pour détruire les slimes (ex: flèches).
@@ -978,7 +978,7 @@ Un peu plus complexe (moyen):
 * Faire en sorte qu'en cas de contact avec un ennemi, le joueur perd de la vie et l'ennemi meurt. La vie du joueur est affichée sous le score.
 * Créer un nouveau type de bloc qui peut tuer le joueur au contact (ex: lave).
 
-Challenging (difficile):
+**Challenging (difficile):**
 
 * Permettre au joueur de poser des bombes pour détruire certains blocs.
 * Ajouter un système d'interupteur à activer pour détruire des blocs et donc ouvrir des passages.

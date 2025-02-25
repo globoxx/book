@@ -1293,7 +1293,7 @@ Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu
 Voici plusieurs idées d'amélioration du jeu.  
 Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficulté.
 
-Totalement dans vos cordes (facile):
+**Totalement dans vos cordes (facile):**
 
 * Ajouter une animation au joueur quand il se déplace.
 * Faire en sorte que le jeu arrête de créer des ennemis s'il y en a déjà 5 ou plus en jeu.
@@ -1304,7 +1304,7 @@ Totalement dans vos cordes (facile):
 * Faire en sorte que le personnage ne se déplace pas plus rapidement en diagonal qu'à l'horizontal ou à la verticale.
 * Permettre de mettre le jeu en pause avec la touche espace.
 
-Un peu plus complexe (moyen):
+**Un peu plus complexe (moyen):**
 
 * Faire en sorte que les ennemis suivent le joueur au lieu de se balader aléatoirement.
 * Faire en sorte qu'en cas de contact avec un ennemi, le joueur perd de la vie et l'ennemi meurt. La vie du joueur est affichée sous le score.
@@ -1315,7 +1315,7 @@ Un peu plus complexe (moyen):
 * Ajouter un boss qui apparaît seulement après un certain temps et nécessite beaucoup de dégats pour être battu mais offre un score élevé.
 * Ajouter un second joueur qui pourra se déplacer et tirer avec d'autres touches.
 
-Challenging (difficile):
+**Challenging (difficile):**
 
 * Ajouter des armes au personnage. Par exemple une attaque au corps à corps ou la possibilité de larguer des bombes qui explosent après quelques secondes.
 * Permettre au joueur de poser des pièges qui blesseront les ennemis qui passent dessus.
