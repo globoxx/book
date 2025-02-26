@@ -693,17 +693,17 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 ````{admonition} Comment travailler en dehors du TP
 :class: danger
 ```{dropdown} Depuis la maison
-1. Télécharger et installer [Python](https://www.python.org/downloads/).
-2. Télécharger et installer [Pycharm Community](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à prendre la version **Community** qui est gratuite.
+1. Téléchargez et installez [Python](https://www.python.org/downloads/).
+2. Téléchargez et installez [Pycharm Community](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à prendre la version **Community** (en bas de la page) qui est gratuite.
 3. Ouvrez Pycharm et créez un nouveau projet.
 4. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).
-5. Installer le package `pgzero`. Pour cela, ajouter la liigne `import pgzero` dans votre code et Pycharm vous proposera de l'installer en passant le curseur de la souris dessus.
-6. Programmer !
+5. Installez le package `pgzero`. Pour cela, ajoutez la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer en passant le curseur de la souris dessus.
+6. Programmez !
 ```
 ```{dropdown} Depuis l'école
 1. Ouvrez Pycharm et créez un nouveau projet.
 2. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).
-3. Installer le package `pgzero`. Pour cela, ajouter la liigne `import pgzero` dans votre code et Pycharm vous proposera de l'installer en passant le curseur de la souris dessus.
-4. Programmer !
+3. Installez le package `pgzero`. Pour cela, ajoutez la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer en passant le curseur de la souris dessus.
+4. Programmez !
 ```
 ````
