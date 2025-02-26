@@ -1,6 +1,6 @@
 (prog_jeu.projets_eleves)=
 
-# Projets de jeux 2D
+# Projets d'élèves
 
 Chacun des fichiers zippé contient un dossier contenant un fichier principal `.py` ainsi que les sous-dossiers contenant les ressources du jeu. Il vous suffit donc de télécharger un fichier zippé, de le décompresser, d'ouvrir le fichier `.py` avec `Mu Editor` et de jouer !
 
