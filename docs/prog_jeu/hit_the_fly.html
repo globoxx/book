@@ -310,17 +310,21 @@
 <section id="faire-apparaitre-une-fenetre">
 <h2>1. Faire apparaître une fenêtre<a class="headerlink" href="#faire-apparaitre-une-fenetre" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La première étape est de définir le nom de notre jeu dans la variable <code class="docutils literal notranslate"><span class="pre">TITLE</span></code>, ainsi que la largeur <code class="docutils literal notranslate"><span class="pre">WIDTH</span></code> et la hauteur <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> de notre fenêtre. Nous allons également importer des fonctions de <code class="docutils literal notranslate"><span class="pre">pgzhelper</span></code> afin de nous faciliter la vie. Pygame Zero s’occupe du reste !</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
 
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span> <span class="c1"># Lance le jeu</span>
 </pre></div>
 </div>
 <img alt="../_images/pygame_fenetre.png" src="../_images/pygame_fenetre.png"/>
 <p>Pygame Zero fonctionne avec 2 fonctions principales: <code class="docutils literal notranslate"><span class="pre">draw</span></code> et <code class="docutils literal notranslate"><span class="pre">update</span></code>. Tandis que <code class="docutils literal notranslate"><span class="pre">draw</span></code> est appelée pour afficher des choses à l’écran, <code class="docutils literal notranslate"><span class="pre">update</span></code> est appelée pour faire évoluer le jeu. Elles sont toutes 2 appelées en boucle automatiquement tant qu’on ne quitte pas le jeu.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
@@ -331,6 +335,8 @@
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span> <span class="c1"># Ajouter ici tout ce qui concerne l'évolution du jeu</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -357,7 +363,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
@@ -368,6 +375,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -404,7 +413,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
@@ -422,6 +432,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -512,7 +524,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
@@ -544,6 +557,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -601,7 +616,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
@@ -646,6 +662,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
     
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -720,7 +738,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
@@ -779,6 +798,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -816,7 +837,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
@@ -877,6 +899,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -920,7 +944,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
@@ -989,6 +1014,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">ennemy</span> <span class="ow">in</span> <span class="n">ennemies</span><span class="p">:</span>
         <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1073,7 +1100,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
@@ -1163,6 +1191,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span>
         <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1224,7 +1254,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
@@ -1314,6 +1345,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="n">ennemy</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">missile</span> <span class="ow">in</span> <span class="n">missiles</span><span class="p">:</span>
         <span class="n">missile</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1403,7 +1436,8 @@ Voir le code final<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Hit the fly'</span>
@@ -1508,6 +1542,7 @@ Voir le code final<div class="summary-down docutils">
     <span class="n">remove_actors</span><span class="p">(</span><span class="n">ennemies</span><span class="p">)</span>
     <span class="n">remove_actors</span><span class="p">(</span><span class="n">missiles</span><span class="p">)</span>
 
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1531,20 +1566,19 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <li><p>Faire en sorte que plus le score augmente, plus les ennemis se déplacent rapidement.</p></li>
 <li><p>Détruire les missiles lorsqu’ils sortent de l’écran et limiter le joueur à 3 missiles à la fois.</p></li>
 <li><p>Faire en sorte que le joueur perde de la vie à chaque contact avec un ennemi.</p></li>
-<li><p>Créer un game over sous les conditions de votre choix (par exemple au contact d’un ennemi ou après un certain temps). Cela affiche par exemple un écran noir avec écrit “Game Over” en grand.</p></li>
+<li><p>Créer un game over sous les conditions de votre choix (par exemple au contact d’un ennemi ou après un certain temps).</p></li>
 <li><p>Faire en sorte que le personnage ne se déplace pas plus rapidement en diagonal qu’à l’horizontal ou à la verticale.</p></li>
-<li><p>Permettre de mettre le jeu en pause avec la touche espace.</p></li>
 </ul>
 <p><strong>Un peu plus complexe (moyen):</strong></p>
 <ul class="simple">
-<li><p>Faire en sorte que les ennemis suivent le joueur au lieu de se balader aléatoirement.</p></li>
 <li><p>Faire en sorte qu’en cas de contact avec un ennemi, le joueur perd de la vie et l’ennemi meurt. La vie du joueur est affichée sous le score.</p></li>
 <li><p>Permettre au joueur de ramasser des objets pour augmenter son score, par exemple des pièces.</p></li>
+<li><p>Ajouter un second joueur qui pourra se déplacer et tirer avec d’autres touches.</p></li>
 <li><p>Ajouter un nouveau type d’ennemi qui se comporte différemment.</p></li>
 <li><p>Ajouter un item qui permet d’augmenter temporairement la vitesse du joueur si rammassé.</p></li>
 <li><p>Faire en sorte qu’en cas de contact avec un ennemi, le joueur perde un peu de vie et soit invincible pendant un court laps de temps (pour éviter des dégats à répétition).</p></li>
 <li><p>Ajouter un boss qui apparaît seulement après un certain temps et nécessite beaucoup de dégats pour être battu mais offre un score élevé.</p></li>
-<li><p>Ajouter un second joueur qui pourra se déplacer et tirer avec d’autres touches.</p></li>
+<li><p>Faire en sorte que les ennemis suivent le joueur au lieu de se balader aléatoirement.</p></li>
 </ul>
 <p><strong>Challenging (difficile):</strong></p>
 <ul class="simple">
@@ -1555,6 +1589,42 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <li><p>Donner aux ennemis la capacité d’essayer d’esquiver les projectiles (en se déplaçant perpendiculairement à leur trajectoire).</p></li>
 <li><p>Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d’autres options.</p></li>
 </ul>
+</section>
+<section id="travailler-en-dehors-du-tp">
+<h2>Travailler en dehors du TP<a class="headerlink" href="#travailler-en-dehors-du-tp" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="danger admonition">
+<p class="admonition-title">Comment travailler en dehors du TP</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Depuis la maison<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text">Télécharger et installer <a class="reference external" href="https://www.python.org/downloads/">Python</a>.</p></li>
+<li><p class="card-text">Télécharger et installer <a class="reference external" href="https://www.jetbrains.com/fr-fr/pycharm/download/">Pycharm Community</a>. Faites attention à prendre la version <strong>Community</strong> qui est gratuite.</p></li>
+<li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet.</p></li>
+<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).</p></li>
+<li><p class="card-text">Installer le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, ajouter la liigne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> dans votre code et Pycharm vous proposera de l’installer en passant le curseur de la souris dessus.</p></li>
+<li><p class="card-text">Programmer !</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Depuis l’école<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet.</p></li>
+<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).</p></li>
+<li><p class="card-text">Installer le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, ajouter la liigne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> dans votre code et Pycharm vous proposera de l’installer en passant le curseur de la souris dessus.</p></li>
+<li><p class="card-text">Programmer !</p></li>
+</ol>
+</div>
+</details></div>
 </section>
 </section>
 
@@ -1621,6 +1691,7 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <li><a class="reference internal" href="#ajouter-une-musique-de-fond">12. Ajouter une musique de fond</a></li>
 <li><a class="reference internal" href="#tenir-et-afficher-un-score">13. Tenir et afficher un score</a></li>
 <li><a class="reference internal" href="#idees-dameliorations">14. Idées d’améliorations</a></li>
+<li><a class="reference internal" href="#travailler-en-dehors-du-tp">Travailler en dehors du TP</a></li>
 </ul>
 </li>
 </ul>

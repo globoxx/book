@@ -14,12 +14,15 @@ Dans cette introduction, nous allons développer un premier jeu simple étape pa
 La première étape est de définir le nom de notre jeu dans la variable `TITLE`, ainsi que la largeur `WIDTH` et la hauteur `HEIGHT` de notre fenêtre. Nous allons également importer des fonctions de `pgzhelper` afin de nous faciliter la vie. Pygame Zero s'occupe du reste !
 
 ```python
+import pgzrun
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
 
 WIDTH = 800
 HEIGHT = 600
+
+pgzrun.go() # Lance le jeu
 ```
 
 ```{image} ../media/pygame_fenetre.png
@@ -28,6 +31,7 @@ HEIGHT = 600
 Pygame Zero fonctionne avec 2 fonctions principales: `draw` et `update`. Tandis que `draw` est appelée pour afficher des choses à l'écran, `update` est appelée pour faire évoluer le jeu. Elles sont toutes 2 appelées en boucle automatiquement tant qu'on ne quitte pas le jeu.
 
 ```python
+import pgzrun
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
@@ -39,6 +43,8 @@ def draw():
 
 def update():
     pass # Ajouter ici tout ce qui concerne l'évolution du jeu
+
+pgzrun.go()
 ```
 
 ## 2. S'occuper du fond d'écran
@@ -67,6 +73,7 @@ La méthode `blit(image, (x, y))` de `screen` permet de dessiner une image sur l
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzrun
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
@@ -78,6 +85,8 @@ def draw():
 
 def update():
     pass
+
+pgzrun.go()
 ```
 ````
 
@@ -124,6 +133,7 @@ def draw():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzrun
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
@@ -142,6 +152,8 @@ def draw():
 
 def update():
     pass
+
+pgzrun.go()
 ```
 ````
 
@@ -241,6 +253,7 @@ class Player(Actor):
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzrun
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
@@ -273,6 +286,8 @@ def draw():
 
 def update():
     player.update()
+
+pgzrun.go()
 ```
 ````
 
@@ -333,6 +348,7 @@ Notez ici que l'argument donné à `detect_border` est `self` car il représente
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzrun
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
@@ -378,6 +394,8 @@ def draw():
     
 def update():
     player.update()
+
+pgzrun.go()
 ```
 ````
 
@@ -459,6 +477,7 @@ class Ennemy(Actor):
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzrun
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
@@ -518,6 +537,8 @@ def draw():
 def update():
     player.update()
     ennemy.update()
+
+pgzrun.go()
 ```
 ````
 
@@ -559,6 +580,7 @@ Notez que par défaut, l'animation se déroule à `5` fps. Cela signifie que l'i
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzrun
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
@@ -620,6 +642,8 @@ def draw():
 def update():
     player.update()
     ennemy.update()
+
+pgzrun.go()
 ```
 ````
 
@@ -667,6 +691,7 @@ La méthode `schedule_interval` permet d'appeler une fonction toutes les x secon
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzrun
 from pgzhelper import *
 
 TITLE = 'Hit the fly'
@@ -736,6 +761,8 @@ def update():
     player.update()
     for ennemy in ennemies:
         ennemy.update()
+
+pgzrun.go()
 ```
 ````
 
@@ -834,6 +861,7 @@ class Missile(Actor):
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzrun
 from pgzhelper import *
 from random import *
 
@@ -924,6 +952,8 @@ def update():
         ennemy.update()
     for missile in missiles:
         missile.update()
+
+pgzrun.go()
 ```
 ````
 
@@ -989,6 +1019,7 @@ def update():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzrun
 from pgzhelper import *
 from random import *
 
@@ -1079,6 +1110,8 @@ def update():
         ennemy.update()
     for missile in missiles:
         missile.update()
+
+pgzrun.go()
 ```
 ````
 
@@ -1173,6 +1206,7 @@ class Missile(Actor):
 
 ````{dropdown} Voir le code final
 ```python
+import pgzrun
 from pgzhelper import *
 from random import *
 
@@ -1278,6 +1312,7 @@ def update():
     remove_actors(ennemies)
     remove_actors(missiles)
 
+pgzrun.go()
 ```
 ````
 
@@ -1300,20 +1335,19 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Faire en sorte que plus le score augmente, plus les ennemis se déplacent rapidement.
 * Détruire les missiles lorsqu'ils sortent de l'écran et limiter le joueur à 3 missiles à la fois.
 * Faire en sorte que le joueur perde de la vie à chaque contact avec un ennemi.
-* Créer un game over sous les conditions de votre choix (par exemple au contact d'un ennemi ou après un certain temps). Cela affiche par exemple un écran noir avec écrit "Game Over" en grand.
+* Créer un game over sous les conditions de votre choix (par exemple au contact d'un ennemi ou après un certain temps).
 * Faire en sorte que le personnage ne se déplace pas plus rapidement en diagonal qu'à l'horizontal ou à la verticale.
-* Permettre de mettre le jeu en pause avec la touche espace.
 
 **Un peu plus complexe (moyen):**
 
-* Faire en sorte que les ennemis suivent le joueur au lieu de se balader aléatoirement.
 * Faire en sorte qu'en cas de contact avec un ennemi, le joueur perd de la vie et l'ennemi meurt. La vie du joueur est affichée sous le score.
 * Permettre au joueur de ramasser des objets pour augmenter son score, par exemple des pièces.
+* Ajouter un second joueur qui pourra se déplacer et tirer avec d'autres touches.
 * Ajouter un nouveau type d'ennemi qui se comporte différemment.
 * Ajouter un item qui permet d'augmenter temporairement la vitesse du joueur si rammassé.
 * Faire en sorte qu'en cas de contact avec un ennemi, le joueur perde un peu de vie et soit invincible pendant un court laps de temps (pour éviter des dégats à répétition).
 * Ajouter un boss qui apparaît seulement après un certain temps et nécessite beaucoup de dégats pour être battu mais offre un score élevé.
-* Ajouter un second joueur qui pourra se déplacer et tirer avec d'autres touches.
+* Faire en sorte que les ennemis suivent le joueur au lieu de se balader aléatoirement.
 
 **Challenging (difficile):**
 
@@ -1323,3 +1357,23 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Créer un second niveau atteignable en passant un certain score où les ennemis sont différents et plus coriaces.
 * Donner aux ennemis la capacité d'essayer d'esquiver les projectiles (en se déplaçant perpendiculairement à leur trajectoire).
 * Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.
+
+## Travailler en dehors du TP
+
+````{admonition} Comment travailler en dehors du TP
+:class: danger
+```{dropdown} Depuis la maison
+1. Télécharger et installer [Python](https://www.python.org/downloads/).
+2. Télécharger et installer [Pycharm Community](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à prendre la version **Community** qui est gratuite.
+3. Ouvrez Pycharm et créez un nouveau projet.
+4. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).
+5. Installer le package `pgzero`. Pour cela, ajouter la liigne `import pgzero` dans votre code et Pycharm vous proposera de l'installer en passant le curseur de la souris dessus.
+6. Programmer !
+```
+```{dropdown} Depuis l'école
+1. Ouvrez Pycharm et créez un nouveau projet.
+2. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).
+3. Installer le package `pgzero`. Pour cela, ajouter la liigne `import pgzero` dans votre code et Pycharm vous proposera de l'installer en passant le curseur de la souris dessus.
+4. Programmer !
+```
+````

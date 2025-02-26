@@ -939,14 +939,14 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <ul class="simple">
 <li><p>Corriger le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s’il est au sol.</p></li>
 <li><p>Changer/Stoper l’animation du joueur en cours de saut.</p></li>
-<li><p>Créer un vrai écran de game over dans lequel on ne voit plus le jeu.</p></li>
+<li><p>Créer un vrai écran de game over dans lequel on ne voit plus le jeu derrière mais un écran noir par exemple.</p></li>
 <li><p>Permettre de mettre le jeu en pause en appuyant sur une touche.</p></li>
 <li><p>Faire en sorte que les obstacles accélèrent progressivement quand le score augmente.</p></li>
 <li><p>Faire en sorte que l’on puisse changer la taille de la fenêtre de jeu dans le code (<code class="docutils literal notranslate"><span class="pre">WIDTH</span></code> et <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code>) et que tout s’adapte automatiquement.</p></li>
 </ul>
 <p><strong>Un peu plus complexe (moyen):</strong></p>
 <ul class="simple">
-<li><p>Permettre de relancer le jeu après un game over en appuyant sur une touche.</p></li>
+<li><p>Permettre de relancer le jeu du début après un game over en appuyant sur une touche.</p></li>
 <li><p>Ajouter un nouveau type d’obstacle pour lequel il faut rester au sol pour l’éviter.</p></li>
 <li><p>Changer aléatoirement l’image de l’obstacle à chaque fois qu’il réapparaît. Piochez dans les images fournies ou trouvez-en d’autres.</p></li>
 <li><p>Plusieurs obstacles peuvent apparaître en même temps. Indice: créez une liste d’obstacles.</p></li>
@@ -960,6 +960,42 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <li><p>Créer un système de sauvegarde du score.</p></li>
 <li><p>Autres idées…?</p></li>
 </ul>
+</section>
+<section id="travailler-en-dehors-du-tp">
+<h2>Travailler en dehors du TP<a class="headerlink" href="#travailler-en-dehors-du-tp" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="danger admonition">
+<p class="admonition-title">Comment travailler en dehors du TP</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Depuis la maison<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text">Télécharger et installer <a class="reference external" href="https://www.python.org/downloads/">Python</a>.</p></li>
+<li><p class="card-text">Télécharger et installer <a class="reference external" href="https://www.jetbrains.com/fr-fr/pycharm/download/">Pycharm Community</a>. Faites attention à prendre la version <strong>Community</strong> qui est gratuite.</p></li>
+<li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet.</p></li>
+<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).</p></li>
+<li><p class="card-text">Installer le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, ajouter la liigne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> dans votre code et Pycharm vous proposera de l’installer en passant le curseur de la souris dessus.</p></li>
+<li><p class="card-text">Programmer !</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Depuis l’école<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet.</p></li>
+<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).</p></li>
+<li><p class="card-text">Installer le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, ajouter la liigne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> dans votre code et Pycharm vous proposera de l’installer en passant le curseur de la souris dessus.</p></li>
+<li><p class="card-text">Programmer !</p></li>
+</ol>
+</div>
+</details></div>
 </section>
 </section>
 
@@ -1023,6 +1059,7 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <li><a class="reference internal" href="#ajouter-un-son-de-saut">9. Ajouter un son de saut</a></li>
 <li><a class="reference internal" href="#ajouter-une-musique-de-fond">10. Ajouter une musique de fond</a></li>
 <li><a class="reference internal" href="#ameliorations-possibles">11. Améliorations possibles</a></li>
+<li><a class="reference internal" href="#travailler-en-dehors-du-tp">Travailler en dehors du TP</a></li>
 </ul>
 </li>
 </ul>

@@ -667,14 +667,14 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 
 * Corriger le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s'il est au sol.
 * Changer/Stoper l'animation du joueur en cours de saut.
-* Créer un vrai écran de game over dans lequel on ne voit plus le jeu.
+* Créer un vrai écran de game over dans lequel on ne voit plus le jeu derrière mais un écran noir par exemple.
 * Permettre de mettre le jeu en pause en appuyant sur une touche.
 * Faire en sorte que les obstacles accélèrent progressivement quand le score augmente.
 * Faire en sorte que l'on puisse changer la taille de la fenêtre de jeu dans le code (`WIDTH` et `HEIGHT`) et que tout s'adapte automatiquement.
 
 **Un peu plus complexe (moyen):**
 
-* Permettre de relancer le jeu après un game over en appuyant sur une touche.
+* Permettre de relancer le jeu du début après un game over en appuyant sur une touche.
 * Ajouter un nouveau type d'obstacle pour lequel il faut rester au sol pour l'éviter.
 * Changer aléatoirement l'image de l'obstacle à chaque fois qu'il réapparaît. Piochez dans les images fournies ou trouvez-en d'autres.
 * Plusieurs obstacles peuvent apparaître en même temps. Indice: créez une liste d'obstacles.
@@ -687,3 +687,23 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.
 * Créer un système de sauvegarde du score.
 * Autres idées..?
+
+## Travailler en dehors du TP
+
+````{admonition} Comment travailler en dehors du TP
+:class: danger
+```{dropdown} Depuis la maison
+1. Télécharger et installer [Python](https://www.python.org/downloads/).
+2. Télécharger et installer [Pycharm Community](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à prendre la version **Community** qui est gratuite.
+3. Ouvrez Pycharm et créez un nouveau projet.
+4. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).
+5. Installer le package `pgzero`. Pour cela, ajouter la liigne `import pgzero` dans votre code et Pycharm vous proposera de l'installer en passant le curseur de la souris dessus.
+6. Programmer !
+```
+```{dropdown} Depuis l'école
+1. Ouvrez Pycharm et créez un nouveau projet.
+2. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).
+3. Installer le package `pgzero`. Pour cela, ajouter la liigne `import pgzero` dans votre code et Pycharm vous proposera de l'installer en passant le curseur de la souris dessus.
+4. Programmer !
+```
+````
