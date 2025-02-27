@@ -41,11 +41,3 @@ L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d
 
 Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. L'enseignant se réserve le droit d'interroger le groupe sur le code en cas de doute. Un membre du groupe peut avoir une note différente de son binôme s'il est révélé que sa contribution est nettement inférieure.
 ```
-
-## Exemple
-
-Le logigramme suivant respecte tous les critères du cahier des charges **sauf pour la variable d'état**.
-
-![projet](../media/aventure_complexe.png)
-
-Le code associé vous sera fourni quand vous commencerez à développer votre jeu.
