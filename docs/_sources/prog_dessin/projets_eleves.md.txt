@@ -2,7 +2,8 @@
 
 # Projets de dessin d'élèves
 
-````{dropdown} 2024 - 2025
+## 2024 - 2025
+
 ### 1M02
 
 #### Alexian
@@ -12,7 +13,7 @@
 
 #### Arthur et Leo
 
-```{image} ../media/dessins_eleves/2425/Arthur_Leo.png
+```{image} ../media/dessins_eleves/2425/Arthur_Leo.gif
 ```
 
 #### Kai-Wen et Victor
@@ -117,9 +118,8 @@
 ```{image} ../media/dessins_eleves/2425/Noah_Bogdan.png
 ```
 
-````
+## 2023 - 2024
 
-````{dropdown} 2023 - 2024
 ### 1M01
 
 #### Adeline et Ana
@@ -342,4 +342,3 @@
 
 ```{image} ../media/dessins_eleves/2324/Sawyer_Pedro.png
 ```
-````
