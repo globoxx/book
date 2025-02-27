@@ -27,7 +27,7 @@ Le projet peut être réalisé par groupe de 2 ou seul.
 - (bonus) ajout d'éléments/notions non-vus en classe
 ```
 
-Vous aurez à rendre le logigramme représentant votre jeu (`.png`) et le code (`.py`) du programme.
+Vous aurez à rendre le logigramme représentant votre jeu et le code (`.py`) du programme.
 
 **Le respect de tous les critères garantit la note de 5 au minimum. Tout élément supplémentaire pourra faire monter la note jusqu'à 6.**
 
