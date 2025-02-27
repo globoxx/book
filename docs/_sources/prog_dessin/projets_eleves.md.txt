@@ -2,227 +2,344 @@
 
 # Projets de dessin d'élèves
 
-## 2023 - 2024
+````{dropdown} 2024 - 2025
+### 1M02
 
+#### Alexian
+
+```{image} ../media/dessins_eleves/2425/Alexian.png
+```
+
+#### Arthur et Leo
+
+```{image} ../media/dessins_eleves/2425/Arthur_Leo.png
+```
+
+#### Kai-Wen et Victor
+
+```{image} ../media/dessins_eleves/2425/Kai-Wen_Victor.png
+```
+
+#### Kiara et Keyshia
+
+```{image} ../media/dessins_eleves/2425/Kiara_Keyshia.png
+```
+
+#### Mateo et Antoine
+
+```{image} ../media/dessins_eleves/2425/Mateo_Antoine.png
+```
+
+#### Nadal
+
+```{image} ../media/dessins_eleves/2425/Nadal.png
+```
+
+#### Teo
+
+```{image} ../media/dessins_eleves/2425/Teo.png
+```
+
+#### Thomas
+
+```{image} ../media/dessins_eleves/2425/Thomas.png
+```
+
+### 1M07
+
+#### Aaron
+
+```{image} ../media/dessins_eleves/2425/Aaron.png
+```
+
+#### Ana
+
+```{image} ../media/dessins_eleves/2425/Ana.png
+```
+
+#### Arnaud et Dimitri
+
+```{image} ../media/dessins_eleves/2425/Arnaud_Dimitri.png
+```
+
+#### Ayana et Alicia
+
+```{image} ../media/dessins_eleves/2425/Ayana_Alicia.png
+```
+
+#### Bleart et Nastos
+
+```{image} ../media/dessins_eleves/2425/Bleart_Nastos.png
+```
+
+#### Camille et Gabriel D.
+
+```{image} ../media/dessins_eleves/2425/Camille_Gabriel.png
+```
+
+#### Céline et Zoé
+
+```{image} ../media/dessins_eleves/2425/Celine_Zoe.png
+```
+
+#### Dino
+
+```{image} ../media/dessins_eleves/2425/Dino.png
+```
+
+#### Gabriel W.
+
+```{image} ../media/dessins_eleves/2425/Gabriel.png
+```
+
+#### Iman
+
+```{image} ../media/dessins_eleves/2425/Iman.png
+```
+
+#### Ines et Tahya
+
+```{image} ../media/dessins_eleves/2425/Ines_Tahya.png
+```
+
+#### Laila et Charlotte
+
+```{image} ../media/dessins_eleves/2425/Laila_Charlotte.png
+```
+
+#### Laura et Laia
+
+```{image} ../media/dessins_eleves/2425/Laura_Laia.png
+```
+
+#### Noah et Bogdan
+
+```{image} ../media/dessins_eleves/2425/Noah_Bogdan.png
+```
+
+````
+
+````{dropdown} 2023 - 2024
 ### 1M01
 
 #### Adeline et Ana
 
-```{image} ../media/dessins_eleves/Adeline_Ana.png
+```{image} ../media/dessins_eleves/2324/Adeline_Ana.png
 ```
 
 #### Ashraaf et Olivier
 
-```{image} ../media/dessins_eleves/Ashraaf_Olivier.png
+```{image} ../media/dessins_eleves/2324/Ashraaf_Olivier.png
 ```
 
 #### Ella et Julian
 
-```{image} ../media/dessins_eleves/Ella_Julian.png
+```{image} ../media/dessins_eleves/2324/Ella_Julian.png
 ```
 
 #### Rania
 
-```{image} ../media/dessins_eleves/Rania.png
+```{image} ../media/dessins_eleves/2324/Rania.png
 ```
 
 #### Zafir
 
-```{image} ../media/dessins_eleves/Zafir.png
+```{image} ../media/dessins_eleves/2324/Zafir.png
 ```
 
 #### Diogo et Marvelous
 
-```{image} ../media/dessins_eleves/Diogo_Marvelous.png
+```{image} ../media/dessins_eleves/2324/Diogo_Marvelous.png
 ```
 
 #### Gabriel et Joannes
 
-```{image} ../media/dessins_eleves/Gabriel_Joannes.png
+```{image} ../media/dessins_eleves/2324/Gabriel_Joannes.png
 ```
 
 #### Mylan et Nalo
 
-```{image} ../media/dessins_eleves/Mylan_Nalo.png
+```{image} ../media/dessins_eleves/2324/Mylan_Nalo.png
 ```
 
 #### Yehia et Mio
 
-```{image} ../media/dessins_eleves/Yehia_Mio.png
+```{image} ../media/dessins_eleves/2324/Yehia_Mio.png
 ```
 
 ### 1M04
 
 #### Carmelo
 
-```{image} ../media/dessins_eleves/Carmelo.png
+```{image} ../media/dessins_eleves/2324/Carmelo.png
 ```
 
 #### Dorian et Axel
 
-```{image} ../media/dessins_eleves/Dorian_Axel.png
+```{image} ../media/dessins_eleves/2324/Dorian_Axel.png
 ```
 
 #### Emile et Valentin
 
-```{image} ../media/dessins_eleves/Emile_Valentin.png
+```{image} ../media/dessins_eleves/2324/Emile_Valentin.png
 ```
 
 #### Eva et Mariana
 
-```{image} ../media/dessins_eleves/Eva_Mariana.png
+```{image} ../media/dessins_eleves/2324/Eva_Mariana.png
 ```
 
 #### Gaétane et Omar
 
-```{image} ../media/dessins_eleves/Gaetane_Omar.png
+```{image} ../media/dessins_eleves/2324/Gaetane_Omar.png
 ```
 
 #### Jessie et Soline
 
-```{image} ../media/dessins_eleves/Jessie_Soline.png
+```{image} ../media/dessins_eleves/2324/Jessie_Soline.png
 ```
 
 #### Kilian et Marco
 
-```{image} ../media/dessins_eleves/Kilian_Marco.png
+```{image} ../media/dessins_eleves/2324/Kilian_Marco.png
 ```
 
 #### Delia et Ninon G.
 
-```{image} ../media/dessins_eleves/Ninon_Delia.png
+```{image} ../media/dessins_eleves/2324/Ninon_Delia.png
 ```
 
 #### Lina et Ninon B.
 
-```{image} ../media/dessins_eleves/Ninon_Lina.png
+```{image} ../media/dessins_eleves/2324/Ninon_Lina.png
 ```
 
 ### 1M05
 
 #### Antoine et Alexandre
 
-```{image} ../media/dessins_eleves/Antoine_Alexandre.png
+```{image} ../media/dessins_eleves/2324/Antoine_Alexandre.png
 ```
 
 #### Arthur et Timothée
 
-```{image} ../media/dessins_eleves/Arthur_Timothee.png
+```{image} ../media/dessins_eleves/2324/Arthur_Timothee.png
 ```
 
 #### Eva et Méline
 
-```{image} ../media/dessins_eleves/Eva_Meline.png
+```{image} ../media/dessins_eleves/2324/Eva_Meline.png
 ```
 
 #### Gabriel
 
-```{image} ../media/dessins_eleves/Gabriel.png
+```{image} ../media/dessins_eleves/2324/Gabriel.png
 ```
 
 #### Isaac
 
-```{image} ../media/dessins_eleves/Isaac.png
+```{image} ../media/dessins_eleves/2324/Isaac.png
 ```
 
 #### Juliette et Tania
 
-```{image} ../media/dessins_eleves/Juliette_Tania.png
+```{image} ../media/dessins_eleves/2324/Juliette_Tania.png
 ```
 
 #### Nathan et Eliott
 
-```{image} ../media/dessins_eleves/Nathan_Eliott.png
+```{image} ../media/dessins_eleves/2324/Nathan_Eliott.png
 ```
 
 #### Corto
 
-```{image} ../media/dessins_eleves/Corto.png
+```{image} ../media/dessins_eleves/2324/Corto.png
 ```
 
 #### Dimitri et Nina
 
-```{image} ../media/dessins_eleves/Dimitri_Nina.png
+```{image} ../media/dessins_eleves/2324/Dimitri_Nina.png
 ```
 
 #### Lucile et Cali
 
-```{image} ../media/dessins_eleves/Lucile_Cali.png
+```{image} ../media/dessins_eleves/2324/Lucile_Cali.png
 ```
 
 #### Manon et Julia
 
-```{image} ../media/dessins_eleves/Manon_Julia.png
+```{image} ../media/dessins_eleves/2324/Manon_Julia.png
 ```
 
 #### Pauline et Marie-Caroline
 
-```{image} ../media/dessins_eleves/Pauline_Marie.gif
+```{image} ../media/dessins_eleves/2324/Pauline_Marie.gif
 ```
 
 #### Luan et Fatema
 
-```{image} ../media/dessins_eleves/Luan_Fatema.png
+```{image} ../media/dessins_eleves/2324/Luan_Fatema.png
 ```
 
 ### 1M07
 
 #### Alice et Cigdem
 
-```{image} ../media/dessins_eleves/Alice_Cigdem.png
+```{image} ../media/dessins_eleves/2324/Alice_Cigdem.png
 ```
 
 #### Juliane et Léonisa
 
-```{image} ../media/dessins_eleves/Juliane_Leonisa.png
+```{image} ../media/dessins_eleves/2324/Juliane_Leonisa.png
 ```
 
 #### Loris et Lila
 
-```{image} ../media/dessins_eleves/Loris_Lila.png
+```{image} ../media/dessins_eleves/2324/Loris_Lila.png
 ```
 
 #### Magali et Emma
 
-```{image} ../media/dessins_eleves/Magali_Emma.png
+```{image} ../media/dessins_eleves/2324/Magali_Emma.png
 ```
 
 #### Yassine et Radwan
 
-```{image} ../media/dessins_eleves/Yassine_Radwan.png
+```{image} ../media/dessins_eleves/2324/Yassine_Radwan.png
 ```
 
 #### Arda
 
-```{image} ../media/dessins_eleves/Arda.png
+```{image} ../media/dessins_eleves/2324/Arda.png
 ```
 
 #### Eliot
 
-```{image} ../media/dessins_eleves/Eliot.png
+```{image} ../media/dessins_eleves/2324/Eliot.png
 ```
 
 #### Nejla et Lena
 
-```{image} ../media/dessins_eleves/Nejla_Lena.png
+```{image} ../media/dessins_eleves/2324/Nejla_Lena.png
 ```
 
 #### Noam et Leila
 
-```{image} ../media/dessins_eleves/Noam_Leila.png
+```{image} ../media/dessins_eleves/2324/Noam_Leila.png
 ```
 
 #### Olivia et Charline
 
-```{image} ../media/dessins_eleves/Olivia_Charline.png
+```{image} ../media/dessins_eleves/2324/Olivia_Charline.png
 ```
 
 #### Rimsha et Erleta
 
-```{image} ../media/dessins_eleves/Rimsha_Erleta.png
+```{image} ../media/dessins_eleves/2324/Rimsha_Erleta.png
 ```
 
 #### Sawyer et Pedro
 
-```{image} ../media/dessins_eleves/Sawyer_Pedro.png
+```{image} ../media/dessins_eleves/2324/Sawyer_Pedro.png
 ```
+````
