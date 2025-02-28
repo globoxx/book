@@ -48,10 +48,7 @@
 
 #### Yohan
 
-```{image} ../media/dessins_eleves/2425/Yohan1.gif
-```
-
-```{image} ../media/dessins_eleves/2425/Yohan2.gif
+```{image} ../media/dessins_eleves/2425/Yohan.gif
 ```
 
 ### 1M07
