@@ -106,11 +106,6 @@
 ```{image} ../media/dessins_eleves/2425/Iman.png
 ```
 
-#### Ines et Tahya
-
-```{image} ../media/dessins_eleves/2425/Ines_Tahya.png
-```
-
 #### Laila et Charlotte
 
 ```{image} ../media/dessins_eleves/2425/Laila_Charlotte.png
