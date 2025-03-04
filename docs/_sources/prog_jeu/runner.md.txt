@@ -98,7 +98,8 @@ Nous créons donc une classe `Player` qui hérite des attributs et méthodes d'u
 class Player(Actor):
     def __init__(self, image, pos, **kwargs): # Init est le constructeur de la classe
         super().__init__(image, pos, **kwargs) # Cette ligne appelle le constructeur de la classe mère Actor
-        # Ne vous en préoccupez pas trop pour le moment mais pour faire simple, elle s'occupe d'initialiser l'objet avec la bonne image et la bonne position (et d'autres détails)
+        # Ne vous en préoccupez pas trop pour le moment mais pour faire simple, elle s'occupe d'initialiser l'objet avec la bonne image et la bonne position
+        # **kwargs permet de donner d'autres paramètres optionnels comme la taille par exemple
 ```
 
 Ce code crée une classe `Player` héritant de la classe `Actor`. La méthode `init` est ce que l'on appelle un **constructeur** qui est appelé lors de la création d'un objet. Ce construction prend obligatoirement une image en entrée, ainsi que des coordonnées `pos` (`x`, `y`) pour savoir où placer l'objet créé.
@@ -167,6 +168,7 @@ class Player(Actor):
     def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
         self.images = [f'run__00{i}' for i in range(10)] # Liste des images de l'animation (run__000 à run__009)
+        # Raccourci pour ['run__000', 'run__001', ..., 'run__009']
 ```
 
 Pour faire avancer l'animation à chaque tour, il nous faut encore appeler `player.animate()` dans la fonction `update` principale. Par défaut, l'animation se fait à 5 fps (images par seconde) mais on peut choisir une autre valeur.

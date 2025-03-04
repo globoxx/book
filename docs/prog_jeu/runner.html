@@ -263,7 +263,7 @@
 <li class="toctree-l1"><a class="reference internal" href="hit_the_fly.html">2. Hit the fly (shooter)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="platformer.html">3. Jumper (platformer)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets de jeux 2D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -387,7 +387,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># Init est le constructeur de la classe</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="c1"># Cette ligne appelle le constructeur de la classe mère Actor</span>
-        <span class="c1"># Ne vous en préoccupez pas trop pour le moment mais pour faire simple, elle s'occupe d'initialiser l'objet avec la bonne image et la bonne position (et d'autres détails)</span>
+        <span class="c1"># Ne vous en préoccupez pas trop pour le moment mais pour faire simple, elle s'occupe d'initialiser l'objet avec la bonne image et la bonne position</span>
+        <span class="c1"># **kwargs permet de donner d'autres paramètres optionnels comme la taille par exemple</span>
 </pre></div>
 </div>
 <p>Ce code crée une classe <code class="docutils literal notranslate"><span class="pre">Player</span></code> héritant de la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code>. La méthode <code class="docutils literal notranslate"><span class="pre">init</span></code> est ce que l’on appelle un <strong>constructeur</strong> qui est appelé lors de la création d’un objet. Ce construction prend obligatoirement une image en entrée, ainsi que des coordonnées <code class="docutils literal notranslate"><span class="pre">pos</span></code> (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>) pour savoir où placer l’objet créé.</p>
@@ -447,6 +448,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span> <span class="c1"># Liste des images de l'animation (run__000 à run__009)</span>
+        <span class="c1"># Raccourci pour ['run__000', 'run__001', ..., 'run__009']</span>
 </pre></div>
 </div>
 <p>Pour faire avancer l’animation à chaque tour, il nous faut encore appeler <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> principale. Par défaut, l’animation se fait à 5 fps (images par seconde) mais on peut choisir une autre valeur.</p>
