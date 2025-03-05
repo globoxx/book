@@ -1370,7 +1370,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 5. Installez le package `pgzero`. Pour cela, ajoutez la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
 ```{image} ../media/pgzero.png
 ```
-6. Programmez !
+Programmez !
 ````
 ````{dropdown} Depuis l'école
 1. Ouvrez Pycharm et créez un nouveau projet.
@@ -1378,6 +1378,6 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 3. Installez le package `pgzero`. Pour cela, ajoutez la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
 ```{image} ../media/pgzero.png
 ```
-4. Programmez !
+Programmez !
 ````
 `````
