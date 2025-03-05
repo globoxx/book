@@ -943,6 +943,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 
 * Faire en sorte qu'en cas de contact avec un ennemi, le joueur perd de la vie et l'ennemi meurt. La vie du joueur est affichée à l'écran.
 * Permettre au joueur de ramasser des objets pour augmenter son score, par exemple des pièces.
+* Ajouter une image d'explosion qui apparaît lorsqu'un ennemi est détruit.
 * Ajouter un second joueur qui pourra se déplacer et tirer avec d'autres touches.
 * Ajouter un nouveau type d'ennemi qui se comporte différemment.
 * Ajouter un item qui permet d'augmenter temporairement la vitesse du joueur si rammassé.
