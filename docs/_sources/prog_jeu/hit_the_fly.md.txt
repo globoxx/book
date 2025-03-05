@@ -917,7 +917,7 @@ pgzrun.go()
 ```
 ````
 
-## 14. Idées d'améliorations
+## 10. Idées d'améliorations
 
 ```{admonition} Travail à rendre
 Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu:
