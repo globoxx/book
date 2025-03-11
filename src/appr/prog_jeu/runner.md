@@ -40,6 +40,7 @@ HEIGHT = 600
 
 def draw():
     pass # Ajouter ici tout ce qui concerne l'affichage
+    # pass est une instruction qui ne fait rien, à remplacer par du code par la suite
 
 def update():
     pass # Ajouter ici tout ce qui concerne l'évolution du jeu
@@ -685,7 +686,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 **Challenging (difficile):**
 
 * Permettre au joueur de tirer sur les obstacles pour les détruire.
-* Donner de la vie au joueur lui permettant de prendre un certain nombre de coups avant de mourir.
+* Donner de la vie au joueur lui permettant de prendre un certain nombre de coups avant de mourir. La vie du joueur est affichée et à chaque coup, le joueur est invincible pendant un cours laps de temps.
 * Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.
 * Créer un système de sauvegarde du score.
 * Autres idées..?

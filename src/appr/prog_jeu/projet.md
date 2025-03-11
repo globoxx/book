@@ -15,12 +15,15 @@ Vous avez carte blanche concernant le contenu de votre jeu. Cela concerne les im
 :class: note
 Vous avez le choix entre:
 1. Améliorer un tutoriel donné en classe et le transformer en vrai jeu
-2. Créer un jeu inédit en partant de rien
+2. Créer un jeu inédit en partant de rien (part avec un bonus car plus difficile)
 
 **Si vous améliorer un tutoriel:**
 - Implémenter au moins 3 améliorations faciles.
 - Implémenter au moins 2 améliorations moyennes.
 - Implémenter au moins 1 amélioration difficile.
+- Les améliorations faites sont clairement indiquées dans le code par des commentaires.
+- Ajout d'au moins 1 nouvel acteur ayant un impact sur le jeu.
+- Si absent du tutoriel, utilisation d'au moins 1 liste d'acteurs (ex: liste d'ennemis ou d'items à ramasser).
 - Le jeu est jouable de bout en bout et ne plante jamais.
 - Il est possible de perdre et de gagner (ou augmenter un score).
 - Le code du jeu est propre et lisible.
@@ -29,7 +32,7 @@ Vous avez le choix entre:
 - Le code du jeu est clairement différent des tutoriels.
 - Le jeu est jouable de bout en bout et ne plante jamais.
 - Le jeu comporte au moins 1 personnage ou objet déplaçable par l'utilisateur.
-- Le jeu comporte au moins 2 autres objets ou personnages différents qui se déplacent et intéragissent avec le joueur (ex: collision).
+- Le jeu comporte au moins 2 autres objets ou personnages différents qui se déplacent ou intéragissent avec le joueur.
 - Le jeu comporte au moins 1 liste d'éléments (ex: liste d'ennemis ou d'items à ramasser).
 - Le jeu comporte au moins 1 objet pouvant interagir avec le joueur par collision (ex: item ramassable)
 - Il est possible de perdre au jeu et un game over doit s'afficher.
@@ -43,6 +46,9 @@ Vous avez le choix entre:
 - Une créativité particulière au niveau du gameplay (un gameplay très différent de ce qui a été vu en tutoriel).
 - Un exploit technique dépassant le cadre du cours.
 ```
+
+Suivre le stric minimum des critères du cahier des charges vous garantira la note de 5.  
+La note maximale est atteignable en ajoutant des éléments bonus.
 
 ```{admonition} Plagiat et tricherie
 :class: attention

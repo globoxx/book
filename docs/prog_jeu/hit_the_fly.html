@@ -332,6 +332,7 @@
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="k">pass</span> <span class="c1"># Ajouter ici tout ce qui concerne l'affichage</span>
+    <span class="c1"># pass est une instruction qui ne fait rien, à remplacer par du code par la suite</span>
 
 <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span> <span class="c1"># Ajouter ici tout ce qui concerne l'évolution du jeu</span>
@@ -567,7 +568,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="k">pass</span> <span class="c1"># Ajouter ici les instructions codant le comportant de l'ennemi</span>
 </pre></div>
 </div>
-<p>Nous pouvons ensuite créer un ennemi en appelant son constructeur et en lui donnant un sprite et des coordonnées de départ <strong>aléatoires</strong>. La foncton permettant de tirer un nombre entier aléatoire entre 2 bornes <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> se nomme <code class="docutils literal notranslate"><span class="pre">randint(a,</span> <span class="pre">b)</span></code>. Pour qu’elle fonctionne, nous devons également importer le module <code class="docutils literal notranslate"><span class="pre">random</span></code> qui contient cette fonction.</p>
+<p>Nous pouvons ensuite créer un ennemi et lui donner une image et des coordonnées de départ <strong>aléatoires</strong>. La foncton permettant de tirer un nombre entier aléatoire entre 2 bornes <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> se nomme <code class="docutils literal notranslate"><span class="pre">randint(a,</span> <span class="pre">b)</span></code>. Pour qu’elle fonctionne, nous devons également importer le module <code class="docutils literal notranslate"><span class="pre">random</span></code> qui contient cette fonction.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># Importe tout un tas de fonctions pour faire de l'aléatoire</span>
 
 <span class="c1"># reste du code...</span>
@@ -599,11 +600,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="k">pass</span>
 </pre></div>
 </div>
-<p>Ecrivons à présent la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> qui va définir le comportement de notre ennemi. Nous souhaitons faire 3 choses:</p>
+<p>Ecrivons à présent la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> qui va définir le comportement de notre ennemi. Nous souhaitons faire 2 choses:</p>
 <ol class="simple">
 <li><p>Légèrement modifier la direction de manière aléatoire</p></li>
 <li><p>Avancer dans la direction (la méthode <code class="docutils literal notranslate"><span class="pre">move_in_direction(speed)</span></code> héritée de la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> permet de le faire)</p></li>
-<li><p>Détecter les bords de la fenêtre</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Ennemy</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -765,9 +765,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <h2>7. Ajouter des ennemis à intervalle régulier<a class="headerlink" href="#ajouter-des-ennemis-a-intervalle-regulier" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour avoir plusieurs ennemis en même temps dans le jeu, nous allons remplir une <strong>liste d’ennemis</strong>. Nous allons donc remplacer notre unique objet <code class="docutils literal notranslate"><span class="pre">ennemy</span></code> par une liste nommée <code class="docutils literal notranslate"><span class="pre">ennemies</span></code> qui contient initialement un seul ennemi.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ennemies</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ennemy</span><span class="p">(</span><span class="s1">'fly1'</span><span class="p">,</span> <span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">),</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)))]</span>
+<span class="c1"># Ici on utilise des crochets [] pour créer une liste contenant un seul ennemi</span>
 </pre></div>
 </div>
-<p>Evidemment, il faut mettre à jour les fonctions principales <code class="docutils literal notranslate"><span class="pre">draw</span></code> et <code class="docutils literal notranslate"><span class="pre">update</span></code> car au lieu de desinner <code class="docutils literal notranslate"><span class="pre">ennemy</span></code>, nous voulons à présent parcourir la liste <code class="docutils literal notranslate"><span class="pre">ennemies</span></code> et dessiner chacun d’eux.</p>
+<p>Evidemment, il faut mettre à jour les fonctions principales <code class="docutils literal notranslate"><span class="pre">draw</span></code> et <code class="docutils literal notranslate"><span class="pre">update</span></code> car au lieu de desinner <code class="docutils literal notranslate"><span class="pre">ennemy</span></code>, nous voulons à présent parcourir la liste <code class="docutils literal notranslate"><span class="pre">ennemies</span></code> et dessiner chacun d’eux. Un parcours de liste se fait avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'grass'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
@@ -792,7 +793,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_ennemy</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>La méthode <code class="docutils literal notranslate"><span class="pre">schedule_interval</span></code> permet d’appeler une fonction toutes les <code class="docutils literal notranslate"><span class="pre">x</span></code> secondes. Nous l’avons donc réglée pour appeler <code class="docutils literal notranslate"><span class="pre">add_ennemy</span></code> toutes les 5 secondes.</p>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">schedule_interval</span></code> permet d’appeler une fonction toutes les <code class="docutils literal notranslate"><span class="pre">x</span></code> secondes. Nous l’avons donc réglée pour appeler <code class="docutils literal notranslate"><span class="pre">add_ennemy</span></code> toutes les 5 secondes, mais essayez de modifier cette valeur.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir le code complet à ce point<div class="summary-down docutils">
@@ -1025,10 +1026,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <img alt="../_images/collision.png" src="../_images/collision.png"/>
 <p>Où ajouter le contrôle de collision ? Le plus simple est de le faire dans la classe <code class="docutils literal notranslate"><span class="pre">Missile</span></code>! Après le déplacement d’un missile, on parcourt la liste des ennemis et on contrôle si le missile est en contact avec l’un d’eux.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Missile</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1041,10 +1040,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p>Bon, on affiche <code class="docutils literal notranslate"><span class="pre">BOOOOM</span></code> quand on touche en ennemi, mais on voudrait bien qu’il soit détruit, ainsi que notre missile ! Pour détruire un acteur du jeu, il suffit de le supprimer de la liste qui le contient. C’est à dire que nous voulons supprimer le missile de <code class="docutils literal notranslate"><span class="pre">missiles</span></code> et l’ennemi touché de <code class="docutils literal notranslate"><span class="pre">ennemies</span></code>.</p>
 <p>Mais à quel moment ? En fait il existe plein de manières de faire… Une façon propre est d’utiliser l’attribut <code class="docutils literal notranslate"><span class="pre">to_remove</span></code> qui traque si un objet doit être retiré du jeu ou non (il vaut <code class="docutils literal notranslate"><span class="pre">False</span></code> par défaut). Il suffit donc de passer <code class="docutils literal notranslate"><span class="pre">to_remove</span></code> à <code class="docutils literal notranslate"><span class="pre">True</span></code> pour le missile en question et pour l’ennemi qu’il a touché.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Missile</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">direction</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
 
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1209,6 +1206,7 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <li><p>Créer un second niveau atteignable en passant un certain score où les ennemis sont différents et plus coriaces.</p></li>
 <li><p>Donner aux ennemis la capacité d’essayer d’esquiver les projectiles (en se déplaçant perpendiculairement à leur trajectoire).</p></li>
 <li><p>Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d’autres options.</p></li>
+<li><p>Autres idées…?</p></li>
 </ul>
 </section>
 <section id="travailler-en-dehors-du-tp">

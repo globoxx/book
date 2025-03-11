@@ -40,6 +40,7 @@ HEIGHT = 600
 
 def draw():
     pass # Ajouter ici tout ce qui concerne l'affichage
+    # pass est une instruction qui ne fait rien, à remplacer par du code par la suite
 
 def update():
     pass # Ajouter ici tout ce qui concerne l'évolution du jeu
@@ -290,7 +291,7 @@ class Ennemy(Actor):
         pass # Ajouter ici les instructions codant le comportant de l'ennemi
 ```
 
-Nous pouvons ensuite créer un ennemi en appelant son constructeur et en lui donnant un sprite et des coordonnées de départ **aléatoires**. La foncton permettant de tirer un nombre entier aléatoire entre 2 bornes `a` et `b` se nomme `randint(a, b)`. Pour qu'elle fonctionne, nous devons également importer le module `random` qui contient cette fonction.
+Nous pouvons ensuite créer un ennemi et lui donner une image et des coordonnées de départ **aléatoires**. La foncton permettant de tirer un nombre entier aléatoire entre 2 bornes `a` et `b` se nomme `randint(a, b)`. Pour qu'elle fonctionne, nous devons également importer le module `random` qui contient cette fonction.
 
 ```python
 from random import * # Importe tout un tas de fonctions pour faire de l'aléatoire
@@ -329,11 +330,10 @@ class Ennemy(Actor):
         pass
 ```
 
-Ecrivons à présent la méthode `update` qui va définir le comportement de notre ennemi. Nous souhaitons faire 3 choses:
+Ecrivons à présent la méthode `update` qui va définir le comportement de notre ennemi. Nous souhaitons faire 2 choses:
 
 1. Légèrement modifier la direction de manière aléatoire
 2. Avancer dans la direction (la méthode `move_in_direction(speed)` héritée de la classe `Actor` permet de le faire)
-3. Détecter les bords de la fenêtre
 
 ```python
 class Ennemy(Actor):
@@ -495,9 +495,10 @@ Pour avoir plusieurs ennemis en même temps dans le jeu, nous allons remplir une
 
 ```python
 ennemies = [Ennemy('fly1', (randint(0, WIDTH), randint(0, HEIGHT)))]
+# Ici on utilise des crochets [] pour créer une liste contenant un seul ennemi
 ```
 
-Evidemment, il faut mettre à jour les fonctions principales `draw` et `update` car au lieu de desinner `ennemy`, nous voulons à présent parcourir la liste `ennemies` et dessiner chacun d'eux.
+Evidemment, il faut mettre à jour les fonctions principales `draw` et `update` car au lieu de desinner `ennemy`, nous voulons à présent parcourir la liste `ennemies` et dessiner chacun d'eux. Un parcours de liste se fait avec une boucle `for`.
 
 ```python
 def draw():
@@ -529,7 +530,7 @@ Pygame nous offre pour ceci un objet très utile: `clock`. **Cet objet permet d'
 clock.schedule_interval(add_ennemy, 5.0)
 ```
 
-La méthode `schedule_interval` permet d'appeler une fonction toutes les `x` secondes. Nous l'avons donc réglée pour appeler `add_ennemy` toutes les 5 secondes.
+La méthode `schedule_interval` permet d'appeler une fonction toutes les `x` secondes. Nous l'avons donc réglée pour appeler `add_ennemy` toutes les 5 secondes, mais essayez de modifier cette valeur.
 
 ````{dropdown} Voir le code complet à ce point
 ```python
@@ -776,10 +777,8 @@ Où ajouter le contrôle de collision ? Le plus simple est de le faire dans la c
 
 ```python
 class Missile(Actor):
-    def __init__(self, image, pos, direction, **kwargs):
+    def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
-        self.direction = direction
-        self.angle = direction
         self.speed = 5
 
     def update(self):
@@ -795,10 +794,8 @@ Mais à quel moment ? En fait il existe plein de manières de faire... Une faço
 
 ```python
 class Missile(Actor):
-    def __init__(self, image, pos, direction, **kwargs):
+    def __init__(self, image, pos, **kwargs):
         super().__init__(image, pos, **kwargs)
-        self.direction = direction
-        self.angle = direction
         self.speed = 5
 
     def update(self):
@@ -959,6 +956,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Créer un second niveau atteignable en passant un certain score où les ennemis sont différents et plus coriaces.
 * Donner aux ennemis la capacité d'essayer d'esquiver les projectiles (en se déplaçant perpendiculairement à leur trajectoire).
 * Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.
+* Autres idées..?
 
 ## Travailler en dehors du TP
 
