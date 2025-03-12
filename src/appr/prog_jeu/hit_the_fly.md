@@ -351,6 +351,7 @@ class Ennemy(Actor):
 ```python
 import pgzrun
 from pgzhelper import *
+from random import *
 
 TITLE = 'Hit the fly'
 WIDTH = 800
@@ -437,6 +438,7 @@ def update():
 ```python
 import pgzrun
 from pgzhelper import *
+from random import *
 
 TITLE = 'Hit the fly'
 WIDTH = 800
@@ -536,6 +538,7 @@ La méthode `schedule_interval` permet d'appeler une fonction toutes les `x` sec
 ```python
 import pgzrun
 from pgzhelper import *
+from random import *
 
 TITLE = 'Hit the fly'
 WIDTH = 800
