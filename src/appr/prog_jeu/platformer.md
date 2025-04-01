@@ -4,6 +4,8 @@
 
 Dans ce tutoriel, nous allons développer un jeu de plateforme où le personnage peut se déplacer sur des blocs pour attraper des objets et combattre des ennemis. Nous allons également devoir mettre en place un système de gravité pour permettre au joueur de sauter et de tomber des blocs.
 
+{download}`Téléchargement des ressources du jeu<../data/prog_2d/jumper.zip>`.
+
 ```{image} ../media/platformer.gif
 ```
 

@@ -65,8 +65,7 @@ Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le 
 
 Voici des suggestions de plateformes pour facilement trouver vos ressources:
 
-- Musique: <a href="https://opengameart.org/art-search-advanced?keys=&field_art_type_tid%5B%5D=12&sort_by=count&sort_order=DESC" target="_blank">OpenGameArt Music</a>
-- Bruitages: <a href="https://opengameart.org/art-search-advanced?keys=&field_art_type_tid%5B0%5D=13&sort_by=count&sort_order=DESC&page=4" target="_blank">OpenGameArt Sounds</a>
+- Musiques et bruitages: <a href="https://opengameart.org/" target="_blank">OpenGameArt Music</a> ou <a href="https://freesound.org/" target="_blank">Freesound (login nécessaire)</a> ou <a href="https://universal-soundbank.com/index.html" target="_blank">Universal Soundbank</a>
 - Sprites: <a href="https://kenney.nl/assets" target="_blank">Kenny</a>
 
 Il va de soit que vous pouvez utiliser des ressources qui viennent d'ailleurs !
