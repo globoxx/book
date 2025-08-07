@@ -507,36 +507,31 @@ Vous trouverez la liste des attributs disponibles <a href="https://www.w3schools
 <li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">&lt;/title&gt;</span></code> indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu’elle contient, il s’affichera dans l’onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !</p></li>
 <li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">&lt;/body&gt;</span></code> contient tout ce qui sera affiché à l’écran sur la page web (c’est ici que vous passerez 99% de votre temps).</p></li>
 </ul>
-&lt;!--&gt;
-<div class="note admonition">
-<p class="admonition-title">Exercice 5</p>
-<p>Modifiez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> des exercices précédents pour inclure cette structure de base.<br/>
-Pour rappel, tout le contenu de votre page doit se trouver entre les balises <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">&lt;/body&gt;</span></code>.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Le titre de ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est mon premier paragraphe !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Et en voilà un autre...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtwMFGdWzPi18CbXe1mmp2vPoxMZPbaObUX5LqrX6Ezcai5nAlNp6cnpv4HWtWUsueuw&amp;usqp=CAU"</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hop encore un paragraphe après l'image !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-</details></div>
-<p>–&gt;</p>
+<!--
+`````{admonition} Exercice 5
+:class: note
+Modifiez votre fichier `.html` des exercices précédents pour inclure cette structure de base.  
+Pour rappel, tout le contenu de votre page doit se trouver entre les balises `<body> </body>`.
+
+````{dropdown} Solution
+```{code-block} html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Le titre de ma page</title>
+    </head>
+    <body>
+        <p>Ceci est mon premier paragraphe !</p>
+        <p>Et en voilà un autre...</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtwMFGdWzPi18CbXe1mmp2vPoxMZPbaObUX5LqrX6Ezcai5nAlNp6cnpv4HWtWUsueuw&usqp=CAU">
+        <p>Hop encore un paragraphe après l'image !</p>
+    </body>
+</html>
+```
+````
+`````
+-->
 <div class="attention admonition">
 <p class="admonition-title">Attention</p>
 <p>L’ordre des balises est super <strong>important</strong> ! Elles doivent s’emboiter les unes dans les autres, un peu comme des poupées russes.</p>
@@ -599,14 +594,14 @@ Faites donc attention à ne jamais mettre d’informations sensibles tel qu’un
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Titre de la page: <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code></p></li>
-<li><p>Titre de niveau 1 (très gros titre): <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h1&gt;</span></code></p></li>
-<li><p>Titre de niveau 2 (gros titre): <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h2&gt;</span></code></p></li>
+<li><p><em>Titre de la page</em>: <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code></p></li>
+<li><p><em>Titre de niveau 1</em> (titre très important): <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h1&gt;</span></code></p></li>
+<li><p><em>Titre de niveau 2</em> (titre important): <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h2&gt;</span></code></p></li>
 <li><p>…</p></li>
-<li><p>Titre de niveau 6 (très petit titre): <code class="docutils literal notranslate"><span class="pre">&lt;h6&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h6&gt;</span></code></p></li>
-<li><p>Paragraphe: <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code></p></li>
-<li><p>Image: <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src="..."&gt;</span></code></p></li>
-<li><p>Commentaire: <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">Ceci</span> <span class="pre">est</span> <span class="pre">un</span> <span class="pre">commentaire</span> <span class="pre">--&gt;</span></code></p></li>
+<li><p><em>Titre de niveau 6</em> (titre vraiment pas important): <code class="docutils literal notranslate"><span class="pre">&lt;h6&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h6&gt;</span></code></p></li>
+<li><p><em>Paragraphe</em>: <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code></p></li>
+<li><p><em>Image</em>: <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src="..."&gt;</span></code></p></li>
+<li><p><em>Commentaire</em>: <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">Ceci</span> <span class="pre">est</span> <span class="pre">un</span> <span class="pre">commentaire</span> <span class="pre">--&gt;</span></code></p></li>
 </ul>
 </section>
 <section id="exercice-recapitulatif-1">

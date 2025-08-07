@@ -219,7 +219,7 @@ Voyons à quoi servent toutes ces balises.
 - La balise en paire `<title> </title>` indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu'elle contient, il s'affichera dans l'onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !
 - La balise en paire `<body> </body>` contient tout ce qui sera affiché à l'écran sur la page web (c'est ici que vous passerez 99% de votre temps).
 
-<!-->
+<!--
 `````{admonition} Exercice 5
 :class: note
 Modifiez votre fichier `.html` des exercices précédents pour inclure cette structure de base.  
@@ -304,14 +304,14 @@ Structure de base d'une page HTML:
 </html>
 ```
 
-- Titre de la page: `<title> ... </title>`
-- Titre de niveau 1 (très gros titre): `<h1> ... </h1>`
-- Titre de niveau 2 (gros titre): `<h2> ... </h2>`
+- *Titre de la page*: `<title> ... </title>`
+- *Titre de niveau 1* (titre très important): `<h1> ... </h1>`
+- *Titre de niveau 2* (titre important): `<h2> ... </h2>`
 - ...
-- Titre de niveau 6 (très petit titre): `<h6> ... </h6>`
-- Paragraphe: `<p> ... </p>`
-- Image: `<img src="...">`
-- Commentaire: `<!-- Ceci est un commentaire -->`
+- *Titre de niveau 6* (titre vraiment pas important): `<h6> ... </h6>`
+- *Paragraphe*: `<p> ... </p>`
+- *Image*: `<img src="...">`
+- *Commentaire*: `<!-- Ceci est un commentaire -->`
 
 ## Exercice récapitulatif 1
 
