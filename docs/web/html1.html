@@ -343,47 +343,41 @@ Il permet d’ajouter du texte, des liens, des images, des tableaux, etc.</p>
 <p>Quand vous visitez un site web, le serveur du site vous transmet en réalité un fichier HTML qui sera lu et interprété par votre navigateur.</p>
 <img alt="../_images/web_html.png" src="../_images/web_html.png"/>
 <p>Ce fichier se trouve alors chez vous, sur votre ordinateur, et il est possible de le lire et le modifier depuis le navigateur en faisant un clic droit sur la page et en choisissant “Inspecter l’élément” ou “Afficher le code source de la page”.</p>
-<!-->
-<div class="note admonition">
-<p class="admonition-title">Micro-activité</p>
-<p>Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur “Enregistrez sous…” pour sauver le fichier html sur votre ordinateur.<br />
-Vous observez que votre navigateur télécharge un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> que vous pouvez ouvrir à nouveau dans votre navigateur (double clic).</p>
-<p>La page est-elle identique à tout à l’heure ? A quoi ressemble l’url de la page ?</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Réponse<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">En général, elle sera toute moche ! Car vous ne téléchargez que le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> qui contient le contenu et non le fichier <code class="docutils literal notranslate"><span class="pre">.css</span></code> qui contient son style.</p>
-<p class="card-text">Pour le contenu, cela dépend de la page que vous avez téléchargée. S’il s’agit d’une page web <strong>statique</strong> (ex: wikipedia), le contenu sera quasi identique après l’avoir téléchargé localement. En revanche, si le site est <strong>dynamique</strong> (ex: youtube), le contenu risque d’être très différent car le serveur n’est plus là pour personnaliser le contenu de la page en temps réel pour vous.</p>
-<p class="card-text">Concernant l’url, vous pouvez voir qu’il ne pointe plus vers le serveur du site, mais bien vers le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> local de votre ordinateur.</p>
-</div>
-</details></div>
-<p>–&gt;</p>
+<!--
+````{admonition} Micro-activité
+:class: note
+Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous..." pour sauver le fichier html sur votre ordinateur.  
+Vous observez que votre navigateur télécharge un fichier `.html` que vous pouvez ouvrir à nouveau dans votre navigateur (double clic).
+
+La page est-elle identique à tout à l'heure ? A quoi ressemble l'url de la page ?
+
+```{dropdown} Réponse
+En général, elle sera toute moche ! Car vous ne téléchargez que le fichier `.html` qui contient le contenu et non le fichier `.css` qui contient son style.
+
+Pour le contenu, cela dépend de la page que vous avez téléchargée. S'il s'agit d'une page web **statique** (ex: wikipedia), le contenu sera quasi identique après l'avoir téléchargé localement. En revanche, si le site est **dynamique** (ex: youtube), le contenu risque d'être très différent car le serveur n'est plus là pour personnaliser le contenu de la page en temps réel pour vous.
+
+Concernant l'url, vous pouvez voir qu'il ne pointe plus vers le serveur du site, mais bien vers le fichier `.html` local de votre ordinateur.
+```
+````
+-->
 </section>
 <section id="premier-contact-avec-un-code-html">
 <h2>Premier contact avec un code HTML<a class="headerlink" href="#premier-contact-avec-un-code-html" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Tout comme n’importe quel autre langage informatique, HTML peut être lu et édité avec n’importe quel éditeur de texte. Dans ce cours on utilisera principalement Visual Studio Code.</p>
-<!-->
-<div class="note admonition">
-<p class="admonition-title">Micro-activité</p>
-<p>Ouvrez le fichier .html de l’activité précédente avec un éditeur de texte (Visual Studio Code).<br/>
-Il est probable que le fichier ne contienne pas que du code HTML mais également du code Javascript et CSS (nous verrons cela plus tard).<br/>
-Pour trouver le code HTML, cherchez les symboles <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>. HTML est un langage basé sur des balises représentées par des chevrons <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code>.</p>
-<p>Voyez-vous des similitudes avec le langage python ?</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Réponse<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Vous ne devriez retrouver que très peu de similitudes avec python car HTML n’est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présentes dans presque tous les langages informatiques.</p>
-</div>
-</details></div>
-<p>–&gt;</p>
+<!--
+````{admonition} Micro-activité
+:class: note
+Ouvrez le fichier .html de l'activité précédente avec un éditeur de texte (Visual Studio Code).  
+Il est probable que le fichier ne contienne pas que du code HTML mais également du code Javascript et CSS (nous verrons cela plus tard).  
+Pour trouver le code HTML, cherchez les symboles `<` et `>`. HTML est un langage basé sur des balises représentées par des chevrons `<>`.  
+
+Voyez-vous des similitudes avec le langage python ?
+
+```{dropdown} Réponse
+Vous ne devriez retrouver que très peu de similitudes avec python car HTML n'est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présentes dans presque tous les langages informatiques.
+```
+````
+-->
 <p>L’HTML tout seul décrit seulement le contenu de la page, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.<br/>
 Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l’exception des images).</p>
 <img alt="../_images/html_sans_css.png" src="../_images/html_sans_css.png"/>

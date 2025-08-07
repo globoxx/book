@@ -38,7 +38,7 @@ Quand vous visitez un site web, le serveur du site vous transmet en réalité un
 
 Ce fichier se trouve alors chez vous, sur votre ordinateur, et il est possible de le lire et le modifier depuis le navigateur en faisant un clic droit sur la page et en choisissant "Inspecter l'élément" ou "Afficher le code source de la page".
 
-<!-->
+<!--
 ````{admonition} Micro-activité
 :class: note
 Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous..." pour sauver le fichier html sur votre ordinateur.  
@@ -60,7 +60,7 @@ Concernant l'url, vous pouvez voir qu'il ne pointe plus vers le serveur du site,
 
 Tout comme n'importe quel autre langage informatique, HTML peut être lu et édité avec n'importe quel éditeur de texte. Dans ce cours on utilisera principalement Visual Studio Code.
 
-<!-->
+<!--
 ````{admonition} Micro-activité
 :class: note
 Ouvrez le fichier .html de l'activité précédente avec un éditeur de texte (Visual Studio Code).  
