@@ -400,7 +400,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">submit</span></code>: quand un formulaire est soumis</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">input</span></code>: quand la valeur d’un champ de formulaire change</p></li>
 </ul>
-<p>Vous pouvez utiliser ces événements de la même manière que pour le clic, en remplaçant <code class="docutils literal notranslate"><span class="pre">"click"</span></code> par l’événement souhaité dans <code class="docutils literal notranslate"><span class="pre">addEventListener</span></code>. Une liste complète des événements disponibles est disponible <a href="https://developer.mozilla.org/fr/docs/Web/Events" target="_blank">ici</a>.</p>
+<p>Vous pouvez utiliser ces événements de la même manière que pour le clic, en remplaçant <code class="docutils literal notranslate"><span class="pre">"click"</span></code> par l’événement souhaité dans <code class="docutils literal notranslate"><span class="pre">addEventListener</span></code>. Une liste complète des événements disponibles est disponible <a href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Events#listing_des_%C3%A9v%C3%A9nements" target="_blank">ici</a>.</p>
 </section>
 <section id="quand-on-traite-un-formulaire">
 <h2>Quand on traîte un formulaire<a class="headerlink" href="#quand-on-traite-un-formulaire" title="Lien permanent vers ce titre">¶</a></h2>
@@ -464,7 +464,7 @@ Resultat: <span class="p">&lt;</span><span class="nt">span</span> <span class="n
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"additionForm"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// Empêche l'envoi du formulaire</span>
-        <span class="kd">let</span> <span class="nx">number1</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"number1"</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
+        <span class="kd">let</span> <span class="nx">number1</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"number1"</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span> <span class="c1">// parseFloat convertit le texte en nombre à virgule</span>
         <span class="kd">let</span> <span class="nx">number2</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"number2"</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
         <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">"La somme est: "</span> <span class="o">+</span> <span class="p">(</span><span class="nx">number1</span> <span class="o">+</span> <span class="nx">number2</span><span class="p">);</span>
     <span class="p">});</span>
@@ -532,9 +532,9 @@ Resultat: <span class="p">&lt;</span><span class="nt">span</span> <span class="n
 <h2>Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Si vous voulez approfondir vos connaissances en JavaScript, voici quelques ressources utiles:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/JavaScript">MDN Web Docs - JavaScript</a>: la référence incontournable pour apprendre JavaScript.</p></li>
-<li><p><a class="reference external" href="https://www.codecademy.com/learn/learn-javascript">Codecademy - Learn JavaScript</a>: un cours interactif pour apprendre les bases de JavaScript.</p></li>
-<li><p><a class="reference external" href="https://www.w3schools.com/js/">W3Schools - JavaScript Tutorial</a>: un tutoriel complet avec des exemples et des exercices.</p></li>
+<li><p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a>: la référence incontournable pour apprendre JavaScript.</p></li>
+<li><p><a href="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript-1/8204629-declarez-une-variable-1" target="_blank">OpenClassrooms</a>: un cours complet pour débuter en JavaScript.</p></li>
+<li><p><a href="https://www.w3schools.com/js/" target="_blank">W3Schools - JavaScript Tutorial</a>: un tutoriel complet avec des exemples et des exercices (en anglais).</p></li>
 </ul>
 </section>
 </section>

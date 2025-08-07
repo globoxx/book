@@ -89,7 +89,7 @@ Le clic est l'événement le plus courant, mais il en existe beaucoup d'autres. 
 - `submit`: quand un formulaire est soumis
 - `input`: quand la valeur d'un champ de formulaire change
 
-Vous pouvez utiliser ces événements de la même manière que pour le clic, en remplaçant `"click"` par l'événement souhaité dans `addEventListener`. Une liste complète des événements disponibles est disponible <a href="https://developer.mozilla.org/fr/docs/Web/Events" target="_blank">ici</a>.
+Vous pouvez utiliser ces événements de la même manière que pour le clic, en remplaçant `"click"` par l'événement souhaité dans `addEventListener`. Une liste complète des événements disponibles est disponible <a href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Events#listing_des_%C3%A9v%C3%A9nements" target="_blank">ici</a>.
 
 ## Quand on traîte un formulaire
 
@@ -154,7 +154,7 @@ Resultat: <span id="result"></span>
 <script>
     document.getElementById("additionForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Empêche l'envoi du formulaire
-        let number1 = parseFloat(document.getElementById("number1").value);
+        let number1 = parseFloat(document.getElementById("number1").value); // parseFloat convertit le texte en nombre à virgule
         let number2 = parseFloat(document.getElementById("number2").value);
         document.getElementById("result").textContent = "La somme est: " + (number1 + number2);
     });
@@ -168,6 +168,7 @@ Ce code utilise 2 champs de saisie pour entrer deux nombres, et un bouton pour s
 ### Variables
 
 En Javascript, on déclare des variables en utilisant 2 mots-clés principaux: `let` et `const`.
+
 - `let` permet de déclarer une variable dont la valeur peut changer. Par exemple: `let age = 25;`
 - `const` permet de déclarer une variable dont la valeur ne changera pas. Par exemple: `const PI = 3.14;`
 
@@ -221,6 +222,6 @@ function addition(a, b) {
 
 Si vous voulez approfondir vos connaissances en JavaScript, voici quelques ressources utiles:
 
-- [MDN Web Docs - JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript): la référence incontournable pour apprendre JavaScript.
-- [Codecademy - Learn JavaScript](https://www.codecademy.com/learn/learn-javascript): un cours interactif pour apprendre les bases de JavaScript.
-- [W3Schools - JavaScript Tutorial](https://www.w3schools.com/js/): un tutoriel complet avec des exemples et des exercices.
+- <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank">MDN Web Docs - JavaScript</a>: la référence incontournable pour apprendre JavaScript.
+- <a href="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript-1/8204629-declarez-une-variable-1" target="_blank">OpenClassrooms</a>: un cours complet pour débuter en JavaScript.
+- <a href="https://www.w3schools.com/js/" target="_blank">W3Schools - JavaScript Tutorial</a>: un tutoriel complet avec des exemples et des exercices (en anglais).
