@@ -31,28 +31,36 @@ HTML est un langage de description, pas de programmation ! Il n'est pas possible
 
 ## Le Web n'est qu'HTML (et quelques autres trucs)
 
-Quand vous visitez un site web, le serveur du site vous transmet en réalité un fichier HTML qui sera lu et interprété par votre navigateur.  
+Quand vous visitez un site web, le serveur du site vous transmet en réalité un fichier HTML qui sera lu et interprété par votre navigateur.
 
+```{image} ../media/web_html.png
+```
+
+Ce fichier se trouve alors chez vous, sur votre ordinateur, et il est possible de le lire et le modifier depuis le navigateur en faisant un clic droit sur la page et en choisissant "Inspecter l'élément" ou "Afficher le code source de la page".
+
+<!-->
 ````{admonition} Micro-activité
 :class: note
 Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur "Enregistrez sous..." pour sauver le fichier html sur votre ordinateur.  
-Vous observez que votre navigateur télécharge un fichier `.html` que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).
+Vous observez que votre navigateur télécharge un fichier `.html` que vous pouvez ouvrir à nouveau dans votre navigateur (double clic).
 
 La page est-elle identique à tout à l'heure ? A quoi ressemble l'url de la page ?
 
 ```{dropdown} Réponse
 En général, elle sera toute moche ! Car vous ne téléchargez que le fichier `.html` qui contient le contenu et non le fichier `.css` qui contient son style.
 
-Pour le contenu, cela dépend de la page que vous avez téléchargée. S'il s'agit d'une page web **statique** (ex: wikipedia), le contenu sera quasi identique après l'avoir téléchargé localement. En revanche, si le site est **dynamique** (ex: youtube), le contenu risque d'être très différent car le serveur n'est plus là pour personaliser le contenu de la page en temps réel pour vous.
+Pour le contenu, cela dépend de la page que vous avez téléchargée. S'il s'agit d'une page web **statique** (ex: wikipedia), le contenu sera quasi identique après l'avoir téléchargé localement. En revanche, si le site est **dynamique** (ex: youtube), le contenu risque d'être très différent car le serveur n'est plus là pour personnaliser le contenu de la page en temps réel pour vous.
 
 Concernant l'url, vous pouvez voir qu'il ne pointe plus vers le serveur du site, mais bien vers le fichier `.html` local de votre ordinateur.
 ```
 ````
+-->
 
 ## Premier contact avec un code HTML
 
-Tout comme n'importe quel autre langage informatique, HTML peut être lu et édité avec n'importe quel éditeur de texte.
+Tout comme n'importe quel autre langage informatique, HTML peut être lu et édité avec n'importe quel éditeur de texte. Dans ce cours on utilisera principalement Visual Studio Code.
 
+<!-->
 ````{admonition} Micro-activité
 :class: note
 Ouvrez le fichier .html de l'activité précédente avec un éditeur de texte (Visual Studio Code).  
@@ -65,10 +73,15 @@ Voyez-vous des similitudes avec le langage python ?
 Vous ne devriez retrouver que très peu de similitudes avec python car HTML n'est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présentes dans presque tous les langages informatiques.
 ```
 ````
+-->
 
-L'HTML tout seul décrit simplement le contenu, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.  
+L'HTML tout seul décrit seulement le contenu de la page, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.  
 Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l'exception des images).
 
+```{image} ../media/html_sans_css.png
+```
+
+<!--
 ```{admonition} Exercice 1
 :class: note
 Vous allez écrire votre tout premier (simplissime) fichier HTML.  
@@ -87,6 +100,7 @@ Non, les paragraphes ne seront pas visibles dans le navigateur car il faut utili
 C'est ce que nous allons voir dans la prochaine section.
 ```
 ````
+-->
 
 ## Un langage de balises
 
@@ -105,11 +119,12 @@ Sur mac, vous utilisez :
 Les balises indiquent la nature du texte qu'elles encadrent. Elles permettent au navigateur de comprendre ce qu'il faut afficher à l'écran.  
 Voici quelques exemples:
 
-- `<title> ... </title>`: Titre de la page (s'affiche dans l'onglet)
-- `<img ...>`: Image
-- `<p> ... </p>`: Paragraphe
+- `<title> ... </title>`: Titre de la page (s'affiche dans l'onglet du navigateur)
 - `<h1> ... </h1>`: Titre de niveau 1 (gros titre)
+- `<img src="...">`: Image
+- `<p> ... </p>`: Paragraphe
 
+<!--
 ```{admonition} Remarque
 :class: hint
 Vous l'aurez remarqué, certaines balises sont doublées et prennent un `/` dans leur syntaxe.  
@@ -131,6 +146,7 @@ Chaque portion de texte entouré de ces balises sera considéré comme un paragr
 ```
 ````
 `````
+-->
 
 ```{admonition} Tester facilement son code
 :class: hint
@@ -152,11 +168,12 @@ Un attribut est situé dans la balise ouvrante d'une balise en paire, ou directe
 L'attribut `src` correspond à la source de l'image. Dans l'exemple ci-dessus, l'image se trouve dans le même dossier que le fichier `.html` donc il suffit de donner le nom de l'image.  
 Il est également possible de fournir une URL en ligne. Pour cela, faites un clic droit puis cliquez sur "Copier l'adresse de l'image".
 
+<!--
 `````{admonition} Exercice 4
 :class: note
 Reprenez votre fichier `.html` de l'exercice précédent et ajoutez une image de votre choix dans la page.  
 Testez les 2 types de source différentes:
-1. Image locale: téléchargez une image en ligne et placez là dans le même dossier que votre fichier `.html`.
+1. Image locale: téléchargez une image en ligne et placez-la dans le même dossier que votre fichier `.html`.
 2. Image en ligne: copiez l'adresse de l'image en ligne.
 
 ````{dropdown} Solution
@@ -169,6 +186,7 @@ Voici un exemple de solution possible avec une source en ligne.
 ```
 ````
 `````
+-->
 
 ```{admonition} Pour aller plus loin
 :class: hint
@@ -195,12 +213,13 @@ Je peux vous l'avouer, jusqu'ici nous avons un peu triché... En réalité, tout
 Voyons à quoi servent toutes ces balises.
 
 - La première ligne `<!DOCTYPE html>` est une balise orpheline indispensable : elle indique qu'il s'agit d'une page HTML.
-- La balise en paire `<html> </html>` englobe tout le contenu de la page web. A l'intérieur, il ya les balises en paire `<head> </head>` et `<body> </body>`.
+- La balise en paire `<html> </html>` englobe tout le contenu de la page web. A l'intérieur, il y a les balises en paire `<head> </head>` et `<body> </body>`.
 - La balise en paire `<head> </head>` contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.
 - La balise orpheline `<meta charset="utf-8">` indique l'encodage utilisé dans le fichier `.html` : cela détermine comment les caractères spéciaux s'affichent (accents, idéogrammes chinois et japonais, etc.).
 - La balise en paire `<title> </title>` indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu'elle contient, il s'affichera dans l'onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !
 - La balise en paire `<body> </body>` contient tout ce qui sera affiché à l'écran sur la page web (c'est ici que vous passerez 99% de votre temps).
 
+<!-->
 `````{admonition} Exercice 5
 :class: note
 Modifiez votre fichier `.html` des exercices précédents pour inclure cette structure de base.  
@@ -224,6 +243,7 @@ Pour rappel, tout le contenu de votre page doit se trouver entre les balises `<b
 ```
 ````
 `````
+-->
 
 ```{admonition} Attention
 :class: attention
@@ -259,7 +279,7 @@ En HTML, la syntaxe est la suivante:
 <!-- Ceci est un commentaire -->
 ```
 
-```{question} Confidendialité
+```{question} Confidentialité
 Si vous mettez en ligne un site web avec des commentaires dans le code, pensez-vous que les visiteurs de votre site pourront les retrouver avec un peu d'ingéniosité ?
 * {v}`Oui`
 * {f}`Non`
@@ -268,16 +288,40 @@ Oui ! Rappelez-vous, le fichier `.html` est envoyé au visiteur et il a donc tou
 Faites donc attention à ne jamais mettre d'informations sensibles tel qu'un mot de passe dans les commentaires de votre page !
 ```
 
+## Résumé des balises de ce chapitre
+
+Structure de base d'une page HTML:
+
+```{code-block} html
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Le titre de ma page</title>
+    </head>
+    <body>
+    </body>
+</html>
+```
+
+- Titre de la page: `<title> ... </title>`
+- Titre de niveau 1 (très gros titre): `<h1> ... </h1>`
+- Titre de niveau 2 (gros titre): `<h2> ... </h2>`
+- ...
+- Titre de niveau 6 (très petit titre): `<h6> ... </h6>`
+- Paragraphe: `<p> ... </p>`
+- Image: `<img src="...">`
+- Commentaire: `<!-- Ceci est un commentaire -->`
+
 ## Exercice récapitulatif 1
 
 ```{admonition} Exercice récapitulatif 1
 :class: note
-Ecrivez la page web principale du site `jo2024.ch`. dans un fichier nommé `jo2024.html`.  
+Ecrivez la page web principale d'un site d'agence de voyage dans un fichier nommé `destination2025.html`.  
 Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:
-- Le titre "Jeux Olympiques 2024" qui doit apparaître dans l'onglet du navigateur.
-- Au moins 3 paragraphes de texte de votre choix.
-- Une image des jeux olympiques de votre choix entre 2 paragraphes.
-- Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web).
+- Le titre "Pays à visiter en 2025" qui doit apparaître dans l'onglet du navigateur.
+- Présentation de 3 pays de votre choix, avec à chaque fois un titre, un paragraphe et une image.
+- Un mot écrit en gras (à vous de chercher sur internet la balise qui permet de le faire).
 - Un commentaire indiquant le site où vous avez trouvé la balise permettant de mettre un mot en gras.
 
 Déposez votre fichier sur Moodle à l'endroit prévu.

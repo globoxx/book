@@ -259,11 +259,11 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner.html">1. Running Ninja (Runner)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner.html">1. Running Ninja (runner)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prog_jeu/hit_the_fly.html">2. Hit the fly (shooter)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prog_jeu/platformer.html">3. Jumper (platformer)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projet.html">Projet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projets_eleves.html">Projets de jeux 2D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projets_eleves.html">Projets d’élèves</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
@@ -341,27 +341,32 @@ Il permet d’ajouter du texte, des liens, des images, des tableaux, etc.</p>
 <section id="le-web-nest-quhtml-et-quelques-autres-trucs">
 <h2>Le Web n’est qu’HTML (et quelques autres trucs)<a class="headerlink" href="#le-web-nest-quhtml-et-quelques-autres-trucs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Quand vous visitez un site web, le serveur du site vous transmet en réalité un fichier HTML qui sera lu et interprété par votre navigateur.</p>
+<img alt="../_images/web_html.png" src="../_images/web_html.png"/>
+<p>Ce fichier se trouve alors chez vous, sur votre ordinateur, et il est possible de le lire et le modifier depuis le navigateur en faisant un clic droit sur la page et en choisissant “Inspecter l’élément” ou “Afficher le code source de la page”.</p>
+<!-->
 <div class="note admonition">
 <p class="admonition-title">Micro-activité</p>
-<p>Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur “Enregistrez sous…” pour sauver le fichier html sur votre ordinateur.<br/>
-Vous observez que votre navigateur télécharge un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> que vous pouvez ouvrir à nouveau dans votre navigateur (simple doublie clic).</p>
+<p>Ouvrez Firefox et rendez-vous sur un site web de votre choix, faites un clic droit sur la page et cliquez sur “Enregistrez sous…” pour sauver le fichier html sur votre ordinateur.<br />
+Vous observez que votre navigateur télécharge un fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> que vous pouvez ouvrir à nouveau dans votre navigateur (double clic).</p>
 <p>La page est-elle identique à tout à l’heure ? A quoi ressemble l’url de la page ?</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Réponse<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">En général, elle sera toute moche ! Car vous ne téléchargez que le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> qui contient le contenu et non le fichier <code class="docutils literal notranslate"><span class="pre">.css</span></code> qui contient son style.</p>
-<p class="card-text">Pour le contenu, cela dépend de la page que vous avez téléchargée. S’il s’agit d’une page web <strong>statique</strong> (ex: wikipedia), le contenu sera quasi identique après l’avoir téléchargé localement. En revanche, si le site est <strong>dynamique</strong> (ex: youtube), le contenu risque d’être très différent car le serveur n’est plus là pour personaliser le contenu de la page en temps réel pour vous.</p>
+<p class="card-text">Pour le contenu, cela dépend de la page que vous avez téléchargée. S’il s’agit d’une page web <strong>statique</strong> (ex: wikipedia), le contenu sera quasi identique après l’avoir téléchargé localement. En revanche, si le site est <strong>dynamique</strong> (ex: youtube), le contenu risque d’être très différent car le serveur n’est plus là pour personnaliser le contenu de la page en temps réel pour vous.</p>
 <p class="card-text">Concernant l’url, vous pouvez voir qu’il ne pointe plus vers le serveur du site, mais bien vers le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> local de votre ordinateur.</p>
 </div>
 </details></div>
+<p>–&gt;</p>
 </section>
 <section id="premier-contact-avec-un-code-html">
 <h2>Premier contact avec un code HTML<a class="headerlink" href="#premier-contact-avec-un-code-html" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Tout comme n’importe quel autre langage informatique, HTML peut être lu et édité avec n’importe quel éditeur de texte.</p>
+<p>Tout comme n’importe quel autre langage informatique, HTML peut être lu et édité avec n’importe quel éditeur de texte. Dans ce cours on utilisera principalement Visual Studio Code.</p>
+<!-->
 <div class="note admonition">
 <p class="admonition-title">Micro-activité</p>
 <p>Ouvrez le fichier .html de l’activité précédente avec un éditeur de texte (Visual Studio Code).<br/>
@@ -378,30 +383,30 @@ Réponse<div class="summary-down docutils">
 <p class="card-text">Vous ne devriez retrouver que très peu de similitudes avec python car HTML n’est pas un langage de programmation. La seule similitude pourrait être les indentations (décalage à droite) qui sont présentes dans presque tous les langages informatiques.</p>
 </div>
 </details></div>
-<p>L’HTML tout seul décrit simplement le contenu, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.<br/>
+<p>–&gt;</p>
+<p>L’HTML tout seul décrit seulement le contenu de la page, mais pas la forme. Le CSS est un autre langage du Web qui vient compléter le HTML pour rendre les pages plus jolies.<br/>
 Une page HTML sans CSS ne contiendra par exemple aucune couleur (à l’exception des images).</p>
-<div class="note admonition">
-<p class="admonition-title">Exercice 1</p>
-<p>Vous allez écrire votre tout premier (simplissime) fichier HTML.<br/>
-Créez un nouveau fichier et changez l’extension du fichier en <code class="docutils literal notranslate"><span class="pre">.html</span></code> (vous devriez pouvoir le faire directement depuis Visual Studio Code).<br/>
-Ouvrez votre fichier, écrivez quelques mots, sauvegardez, puis ouvrez votre fichier avec un navigateur en double-cliquant dessus.<br/>
-Vous devriez voir votre texte s’afficher !</p>
-</div>
-<div class="note admonition">
-<p class="admonition-title">Exercice 2</p>
-<p>Modifiez le texte de votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code>pour ajouter des sauts de lignes (touche <code class="docutils literal notranslate"><span class="pre">enter</span></code>) afin de faire des paragraphes séparés.<br/>
-Est-ce que cela fonctionne ? Les paragraphes sont-ils bien visibles dans le navigateur ?</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Réponse<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Non, les paragraphes ne seront pas visibles dans le navigateur car il faut utiliser des balises bien spécifiques pour dire que l’on veut faire un paragraphe.<br/>
-C’est ce que nous allons voir dans la prochaine section.</p>
-</div>
-</details></div>
+<img alt="../_images/html_sans_css.png" src="../_images/html_sans_css.png"/>
+<!--
+```{admonition} Exercice 1
+:class: note
+Vous allez écrire votre tout premier (simplissime) fichier HTML.  
+Créez un nouveau fichier et changez l'extension du fichier en `.html` (vous devriez pouvoir le faire directement depuis Visual Studio Code).  
+Ouvrez votre fichier, écrivez quelques mots, sauvegardez, puis ouvrez votre fichier avec un navigateur en double-cliquant dessus.  
+Vous devriez voir votre texte s'afficher !
+```
+
+````{admonition} Exercice 2
+:class: note
+Modifiez le texte de votre fichier `.html`pour ajouter des sauts de lignes (touche `enter`) afin de faire des paragraphes séparés.  
+Est-ce que cela fonctionne ? Les paragraphes sont-ils bien visibles dans le navigateur ?
+
+```{dropdown} Réponse
+Non, les paragraphes ne seront pas visibles dans le navigateur car il faut utiliser des balises bien spécifiques pour dire que l'on veut faire un paragraphe.  
+C'est ce que nous allons voir dans la prochaine section.
+```
+````
+-->
 </section>
 <section id="un-langage-de-balises">
 <h2>Un langage de balises<a class="headerlink" href="#un-langage-de-balises" title="Lien permanent vers ce titre">¶</a></h2>
@@ -418,37 +423,34 @@ C’est ce que nous allons voir dans la prochaine section.</p>
 <p>Les balises indiquent la nature du texte qu’elles encadrent. Elles permettent au navigateur de comprendre ce qu’il faut afficher à l’écran.<br/>
 Voici quelques exemples:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code>: Titre de la page (s’affiche dans l’onglet)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">...&gt;</span></code>: Image</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code>: Paragraphe</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code>: Titre de la page (s’affiche dans l’onglet du navigateur)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h1&gt;</span></code>: Titre de niveau 1 (gros titre)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src="..."&gt;</span></code>: Image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code>: Paragraphe</p></li>
 </ul>
-<div class="hint admonition">
-<p class="admonition-title">Remarque</p>
-<p>Vous l’aurez remarqué, certaines balises sont doublées et prennent un <code class="docutils literal notranslate"><span class="pre">/</span></code> dans leur syntaxe.</p>
-<p>On distingue 2 types de balises:</p>
-<ol class="simple">
-<li><p>Les balises <strong>en paires</strong> (une balise ouvrante et une balise fermante)</p></li>
-<li><p>Et les <strong>balises orphelines</strong> (une seule balise).</p></li>
-</ol>
-</div>
-<div class="note admonition">
-<p class="admonition-title">Exercice 3</p>
-<p>Reprenez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> de l’exercice précédent et utlisez les balises <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">&lt;/p&gt;</span></code> pour créer des paragraphes.<br/>
-Chaque portion de texte entouré de ces balises sera considéré comme un paragraphe séparé.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est mon premier paragraphe !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Et en voilà un autre...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-</details></div>
+<!--
+```{admonition} Remarque
+:class: hint
+Vous l'aurez remarqué, certaines balises sont doublées et prennent un `/` dans leur syntaxe.  
+
+On distingue 2 types de balises:
+1. Les balises **en paires** (une balise ouvrante et une balise fermante)
+2. Et les **balises orphelines** (une seule balise).
+```
+
+`````{admonition} Exercice 3
+:class: note
+Reprenez votre fichier `.html` de l'exercice précédent et utlisez les balises `<p> </p>` pour créer des paragraphes.  
+Chaque portion de texte entouré de ces balises sera considéré comme un paragraphe séparé.
+
+````{dropdown} Solution
+```{code-block} html
+<p>Ceci est mon premier paragraphe !</p>
+<p>Et en voilà un autre...</p>
+```
+````
+`````
+-->
 <div class="hint admonition">
 <p class="admonition-title">Tester facilement son code</p>
 <p>Pour faire des tests rapides, vous pouvez vous rendre sur <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro"> w3schools</a> qui permet de rapidement voir ce que donne votre code HTML.</p>
@@ -463,30 +465,25 @@ Mais alors… comment spécifier l’image que nous voulons ? Cela passe par un 
 <img alt="../_images/balise_img.jpg" src="../_images/balise_img.jpg"/>
 <p>L’attribut <code class="docutils literal notranslate"><span class="pre">src</span></code> correspond à la source de l’image. Dans l’exemple ci-dessus, l’image se trouve dans le même dossier que le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> donc il suffit de donner le nom de l’image.<br/>
 Il est également possible de fournir une URL en ligne. Pour cela, faites un clic droit puis cliquez sur “Copier l’adresse de l’image”.</p>
-<div class="note admonition">
-<p class="admonition-title">Exercice 4</p>
-<p>Reprenez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> de l’exercice précédent et ajoutez une image de votre choix dans la page.<br/>
-Testez les 2 types de source différentes:</p>
-<ol class="simple">
-<li><p>Image locale: téléchargez une image en ligne et placez là dans le même dossier que votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code>.</p></li>
-<li><p>Image en ligne: copiez l’adresse de l’image en ligne.</p></li>
-</ol>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Solution<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Voici un exemple de solution possible avec une source en ligne.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ceci est mon premier paragraphe !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Et en voilà un autre...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtwMFGdWzPi18CbXe1mmp2vPoxMZPbaObUX5LqrX6Ezcai5nAlNp6cnpv4HWtWUsueuw&amp;usqp=CAU"</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Hop encore un paragraphe après l'image !<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-</details></div>
+<!--
+`````{admonition} Exercice 4
+:class: note
+Reprenez votre fichier `.html` de l'exercice précédent et ajoutez une image de votre choix dans la page.  
+Testez les 2 types de source différentes:
+1. Image locale: téléchargez une image en ligne et placez-la dans le même dossier que votre fichier `.html`.
+2. Image en ligne: copiez l'adresse de l'image en ligne.
+
+````{dropdown} Solution
+Voici un exemple de solution possible avec une source en ligne.
+```{code-block} html
+<p>Ceci est mon premier paragraphe !</p>
+<p>Et en voilà un autre...</p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrtwMFGdWzPi18CbXe1mmp2vPoxMZPbaObUX5LqrX6Ezcai5nAlNp6cnpv4HWtWUsueuw&usqp=CAU">
+<p>Hop encore un paragraphe après l'image !</p>
+```
+````
+`````
+-->
 <div class="hint admonition">
 <p class="admonition-title">Pour aller plus loin</p>
 <p>Evidemment, il existe une multitude d’autres attributs associés à la balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code>, telle que la taille de l’image par exemple.<br/>
@@ -510,12 +507,13 @@ Vous trouverez la liste des attributs disponibles <a href="https://www.w3schools
 <p>Voyons à quoi servent toutes ces balises.</p>
 <ul class="simple">
 <li><p>La première ligne <code class="docutils literal notranslate"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code> est une balise orpheline indispensable : elle indique qu’il s’agit d’une page HTML.</p></li>
-<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span> <span class="pre">&lt;/html&gt;</span></code> englobe tout le contenu de la page web. A l’intérieur, il ya les balises en paire <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">&lt;/body&gt;</span></code>.</p></li>
+<li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span> <span class="pre">&lt;/html&gt;</span></code> englobe tout le contenu de la page web. A l’intérieur, il y a les balises en paire <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code> et <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">&lt;/body&gt;</span></code>.</p></li>
 <li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code> contient deux balises qui donnent des informations au navigateur : l’encodage et le titre de la page.</p></li>
 <li><p>La balise orpheline <code class="docutils literal notranslate"><span class="pre">&lt;meta</span> <span class="pre">charset="utf-8"&gt;</span></code> indique l’encodage utilisé dans le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> : cela détermine comment les caractères spéciaux s’affichent (accents, idéogrammes chinois et japonais, etc.).</p></li>
 <li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">&lt;/title&gt;</span></code> indique au navigateur le titre de la page web. Toute page doit avoir un titre qui décrit ce qu’elle contient, il s’affichera dans l’onglet du navigateur, et apparaîtra dans les résultats de recherche, comme sur Google. Autant vous dire que bien choisir son titre est important !</p></li>
 <li><p>La balise en paire <code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span> <span class="pre">&lt;/body&gt;</span></code> contient tout ce qui sera affiché à l’écran sur la page web (c’est ici que vous passerez 99% de votre temps).</p></li>
 </ul>
+&lt;!--&gt;
 <div class="note admonition">
 <p class="admonition-title">Exercice 5</p>
 <p>Modifiez votre fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> des exercices précédents pour inclure cette structure de base.<br/>
@@ -544,6 +542,7 @@ Solution<div class="summary-down docutils">
 </div>
 </div>
 </details></div>
+<p>–&gt;</p>
 <div class="attention admonition">
 <p class="admonition-title">Attention</p>
 <p>L’ordre des balises est super <strong>important</strong> ! Elles doivent s’emboiter les unes dans les autres, un peu comme des poupées russes.</p>
@@ -577,7 +576,7 @@ En HTML, la syntaxe est la suivante:</p>
 </pre></div>
 </div>
 <div class="question"><form><div class="admonition">
-<p class="admonition-title">Confidendialité</p>
+<p class="admonition-title">Confidentialité</p>
 <div class="question-content docutils">
 <p>Si vous mettez en ligne un site web avec des commentaires dans le code, pensez-vous que les visiteurs de votre site pourront les retrouver avec un peu d’ingéniosité ?</p>
 <ul class="simple">
@@ -591,17 +590,41 @@ Faites donc attention à ne jamais mettre d’informations sensibles tel qu’un
 </div>
 </div>
 </form></div></section>
+<section id="resume-des-balises-de-ce-chapitre">
+<h2>Résumé des balises de ce chapitre<a class="headerlink" href="#resume-des-balises-de-ce-chapitre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Structure de base d’une page HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"fr"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Le titre de ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Titre de la page: <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code></p></li>
+<li><p>Titre de niveau 1 (très gros titre): <code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h1&gt;</span></code></p></li>
+<li><p>Titre de niveau 2 (gros titre): <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h2&gt;</span></code></p></li>
+<li><p>…</p></li>
+<li><p>Titre de niveau 6 (très petit titre): <code class="docutils literal notranslate"><span class="pre">&lt;h6&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h6&gt;</span></code></p></li>
+<li><p>Paragraphe: <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code></p></li>
+<li><p>Image: <code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src="..."&gt;</span></code></p></li>
+<li><p>Commentaire: <code class="docutils literal notranslate"><span class="pre">&lt;!--</span> <span class="pre">Ceci</span> <span class="pre">est</span> <span class="pre">un</span> <span class="pre">commentaire</span> <span class="pre">--&gt;</span></code></p></li>
+</ul>
+</section>
 <section id="exercice-recapitulatif-1">
 <h2>Exercice récapitulatif 1<a class="headerlink" href="#exercice-recapitulatif-1" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
 <p class="admonition-title">Exercice récapitulatif 1</p>
-<p>Ecrivez la page web principale du site <code class="docutils literal notranslate"><span class="pre">jo2024.ch</span></code>. dans un fichier nommé <code class="docutils literal notranslate"><span class="pre">jo2024.html</span></code>.<br/>
+<p>Ecrivez la page web principale d’un site d’agence de voyage dans un fichier nommé <code class="docutils literal notranslate"><span class="pre">destination2025.html</span></code>.<br/>
 Vous êtes libre sur le contenu mais la page doit contenir les éléments suivants:</p>
 <ul class="simple">
-<li><p>Le titre “Jeux Olympiques 2024” qui doit apparaître dans l’onglet du navigateur.</p></li>
-<li><p>Au moins 3 paragraphes de texte de votre choix.</p></li>
-<li><p>Une image des jeux olympiques de votre choix entre 2 paragraphes.</p></li>
-<li><p>Un mot écrit en gras (à vous de chercher la balise qui permet de le faire sur le web).</p></li>
+<li><p>Le titre “Pays à visiter en 2025” qui doit apparaître dans l’onglet du navigateur.</p></li>
+<li><p>Présentation de 3 pays de votre choix, avec à chaque fois un titre, un paragraphe et une image.</p></li>
+<li><p>Un mot écrit en gras (à vous de chercher sur internet la balise qui permet de le faire).</p></li>
 <li><p>Un commentaire indiquant le site où vous avez trouvé la balise permettant de mettre un mot en gras.</p></li>
 </ul>
 <p>Déposez votre fichier sur Moodle à l’endroit prévu.</p>
@@ -664,6 +687,7 @@ Vous êtes libre sur le contenu mais la page doit contenir les éléments suivan
 <li><a class="reference internal" href="#parametrer-ses-balises-avec-des-attributs">Paramètrer ses balises avec des attributs</a></li>
 <li><a class="reference internal" href="#structure-dune-page-html">Structure d’une page HTML</a></li>
 <li><a class="reference internal" href="#les-commentaires">Les commentaires</a></li>
+<li><a class="reference internal" href="#resume-des-balises-de-ce-chapitre">Résumé des balises de ce chapitre</a></li>
 <li><a class="reference internal" href="#exercice-recapitulatif-1">Exercice récapitulatif 1</a></li>
 </ul>
 </li>

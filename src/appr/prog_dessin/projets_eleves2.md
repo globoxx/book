@@ -32,7 +32,7 @@ A partir de l'année scolaire 2024-2025, seuls les projets ayant eu la note de 5
 {download}`Gabriel D.<../data/projets_eleves/histoires_interactives/Gabriel.py>`
 {download}`Gabriel M. et Dino<../data/projets_eleves/histoires_interactives/Gabriel_Dino.py>`
 {download}`Iman<../data/projets_eleves/histoires_interactives/Iman.py>`
-{download}`Zoe et Celine<../data/projets_eleves/histoires_interactives/Zoe_Celine.py>`
+{download}`Zoe et Céline<../data/projets_eleves/histoires_interactives/Zoe_Celine.py>`
 
 ## 2023 - 2024
 
