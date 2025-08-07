@@ -363,7 +363,8 @@ Concernant l'url, vous pouvez voir qu'il ne pointe plus vers le serveur du site,
 </section>
 <section id="premier-contact-avec-un-code-html">
 <h2>Premier contact avec un code HTML<a class="headerlink" href="#premier-contact-avec-un-code-html" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Tout comme n’importe quel autre langage informatique, HTML peut être lu et édité avec n’importe quel éditeur de texte. Dans ce cours on utilisera principalement Visual Studio Code.</p>
+<p>Voici à quoi ressemble un fichier HTML très simple :</p>
+<img alt="../_images/tout_premier_exemple_html.png" src="../_images/tout_premier_exemple_html.png"/>
 <!--
 ````{admonition} Micro-activité
 :class: note
@@ -417,8 +418,8 @@ C'est ce que nous allons voir dans la prochaine section.
 <p>Les balises indiquent la nature du texte qu’elles encadrent. Elles permettent au navigateur de comprendre ce qu’il faut afficher à l’écran.<br/>
 Voici quelques exemples:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code>: Titre de la page (s’affiche dans l’onglet du navigateur)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h1&gt;</span></code>: Titre de niveau 1 (gros titre)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;title&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/title&gt;</span></code>: Titre de la page (s’affiche dans l’onglet du navigateur, pas sur la page)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;h1&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/h1&gt;</span></code>: Titre de niveau 1 (titre principal)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;img</span> <span class="pre">src="..."&gt;</span></code>: Image</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/p&gt;</span></code>: Paragraphe</p></li>
 </ul>
@@ -452,13 +453,13 @@ Chaque portion de texte entouré de ces balises sera considéré comme un paragr
 </section>
 <section id="parametrer-ses-balises-avec-des-attributs">
 <h2>Paramètrer ses balises avec des attributs<a class="headerlink" href="#parametrer-ses-balises-avec-des-attributs" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Dans la section précédente, nous avons vu la balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> qui permet d’insérer une image dans la page. Il s’agit d’une balise orpheline.<br/>
-Mais alors… comment spécifier l’image que nous voulons ? Cela passe par un <strong>attribut</strong>.</p>
+<p>Dans la section précédente, nous avons brièvement vu la balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> qui permet d’insérer une image dans la page. Il s’agit d’une balise orpheline.<br/>
+Mais alors… comment spécifier l’image que nous voulons ? Cela passe par un <strong>attribut</strong> (<code class="docutils literal notranslate"><span class="pre">src</span></code> dans ce cas).</p>
 <p>Les attributs sont un peu les options des balises. Ils viennent les compléter pour donner des informations supplémentaires.</p>
 <p>Un attribut est situé dans la balise ouvrante d’une balise en paire, ou directement dans une balise orpheline, comme c’est le cas ci dessous avec la balise <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code>:</p>
 <img alt="../_images/balise_img.jpg" src="../_images/balise_img.jpg"/>
 <p>L’attribut <code class="docutils literal notranslate"><span class="pre">src</span></code> correspond à la source de l’image. Dans l’exemple ci-dessus, l’image se trouve dans le même dossier que le fichier <code class="docutils literal notranslate"><span class="pre">.html</span></code> donc il suffit de donner le nom de l’image.<br/>
-Il est également possible de fournir une URL en ligne. Pour cela, faites un clic droit puis cliquez sur “Copier l’adresse de l’image”.</p>
+Il est également possible de fournir l’URL d’une image en ligne. Pour cela, faites un clic droit sur l’image que vous souhaitez utiliser puis cliquez sur “Copier l’adresse de l’image”.</p>
 <!--
 `````{admonition} Exercice 4
 :class: note

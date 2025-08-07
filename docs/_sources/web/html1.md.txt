@@ -58,7 +58,10 @@ Concernant l'url, vous pouvez voir qu'il ne pointe plus vers le serveur du site,
 
 ## Premier contact avec un code HTML
 
-Tout comme n'importe quel autre langage informatique, HTML peut être lu et édité avec n'importe quel éditeur de texte. Dans ce cours on utilisera principalement Visual Studio Code.
+Voici à quoi ressemble un fichier HTML très simple :
+
+```{image} ../media/tout_premier_exemple_html.png
+```
 
 <!--
 ````{admonition} Micro-activité
@@ -119,8 +122,8 @@ Sur mac, vous utilisez :
 Les balises indiquent la nature du texte qu'elles encadrent. Elles permettent au navigateur de comprendre ce qu'il faut afficher à l'écran.  
 Voici quelques exemples:
 
-- `<title> ... </title>`: Titre de la page (s'affiche dans l'onglet du navigateur)
-- `<h1> ... </h1>`: Titre de niveau 1 (gros titre)
+- `<title> ... </title>`: Titre de la page (s'affiche dans l'onglet du navigateur, pas sur la page)
+- `<h1> ... </h1>`: Titre de niveau 1 (titre principal)
 - `<img src="...">`: Image
 - `<p> ... </p>`: Paragraphe
 
@@ -155,8 +158,8 @@ Pour faire des tests rapides, vous pouvez vous rendre sur <a href="https://www.w
 
 ## Paramètrer ses balises avec des attributs
 
-Dans la section précédente, nous avons vu la balise `<img>` qui permet d'insérer une image dans la page. Il s'agit d'une balise orpheline.  
-Mais alors... comment spécifier l'image que nous voulons ? Cela passe par un **attribut**.
+Dans la section précédente, nous avons brièvement vu la balise `<img>` qui permet d'insérer une image dans la page. Il s'agit d'une balise orpheline.  
+Mais alors... comment spécifier l'image que nous voulons ? Cela passe par un **attribut** (`src` dans ce cas).
 
 Les attributs sont un peu les options des balises. Ils viennent les compléter pour donner des informations supplémentaires.
 
@@ -166,7 +169,7 @@ Un attribut est situé dans la balise ouvrante d'une balise en paire, ou directe
 ```
 
 L'attribut `src` correspond à la source de l'image. Dans l'exemple ci-dessus, l'image se trouve dans le même dossier que le fichier `.html` donc il suffit de donner le nom de l'image.  
-Il est également possible de fournir une URL en ligne. Pour cela, faites un clic droit puis cliquez sur "Copier l'adresse de l'image".
+Il est également possible de fournir l'URL d'une image en ligne. Pour cela, faites un clic droit sur l'image que vous souhaitez utiliser puis cliquez sur "Copier l'adresse de l'image".
 
 <!--
 `````{admonition} Exercice 4
