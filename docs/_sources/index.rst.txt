@@ -54,6 +54,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    web/css2
    web/css3
    web/css4
+   web/js1
    web/projet
    web/projets_eleves
 

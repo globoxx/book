@@ -1,0 +1,641 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Projet" href="projet.html" /><link rel="prev" title="8. Aligner ses blocs avec Flexbox" href="css4.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>9. Introduction à JavaScript - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet.html">Projet de dessin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves.html">Projets de dessin d’élèves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/aventure.html">Histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet2.html">Projet d’histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves2.html">Projets d’histoire interactive d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css1.html">5. Introduction au CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css2.html">6. Plus de propriétés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css3.html">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">9. Introduction à JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner.html">1. Running Ninja (runner)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/hit_the_fly.html">2. Hit the fly (shooter)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/platformer.html">3. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/catch_the_fruit_python.html">Catch the fruit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="introduction-a-javascript">
+<span id="web-js1"></span><h1>9. Introduction à JavaScript<a class="headerlink" href="#introduction-a-javascript" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<img alt="img-top" class="card-img-top" src="../_images/eich.jpg"/>
+<div class="card-header docutils">
+<p class="card-text">Brendan Eich 🇺🇸</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><em><strong>Né en 1961</strong></em></p>
+<p class="card-text">L’informaticien américain <a class="reference external" href="https://fr.wikipedia.org/wiki/Brendan_Eich"><strong>Brendan Eich</strong></a> est le créateur de JavaScript. Il a développé les bases du langage en seulement 10 jours en 1995 chez Netscape.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<img alt="img-top" class="card-img-top" src="../_images/js.png"/>
+<div class="card-header docutils">
+<p class="card-text">JavaScript</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><em><strong>Créé en 1995</strong></em></p>
+<p class="card-text">JavaScript est un langage de programmation qui permet d’ajouter de l’interactivité et de la logique à une page web. Il fait son apparition en 1995, développé par Brendan Eich chez Netscape. Il est aujourd’hui un des langages les plus utilisés au monde.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="ou-ecrire-le-code-javascript">
+<h2>Où écrire le code JavaScript ?<a class="headerlink" href="#ou-ecrire-le-code-javascript" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il existe principalement deux manières d’intégrer du code JavaScript dans une page web:</p>
+<ul class="simple">
+<li><p><strong>Dans un fichier externe</strong>: le code JavaScript est écrit dans un fichier séparé avec l’extension <code class="docutils literal notranslate"><span class="pre">.js</span></code>, et ce fichier est lié à la page web via une balise <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">src="..."&gt;&lt;/script&gt;</span></code>. C’est similaire à ce que nous avons fait avec les fichiers CSS.</p></li>
+<li><p><strong>Dans la balise <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code></strong>: le code JavaScript est écrit directement dans la balise <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> de la page HTML.</p></li>
+</ul>
+<p>Pour simplifier dans ce cours, nous allons utiliser la deuxième méthode, mais sachez que la première est souvent préférée pour des projets plus importants.</p>
+</section>
+<section id="quand-on-clique-sur-un-bouton">
+<h2>Quand on clique sur un bouton<a class="headerlink" href="#quand-on-clique-sur-un-bouton" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="un-bouton-qui-affiche-une-alerte">
+<h3>Un bouton qui affiche une alerte<a class="headerlink" href="#un-bouton-qui-affiche-une-alerte" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"alertButton"</span><span class="p">&gt;</span>Cliquez-moi<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"alertButton"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">"Hey tu m'as cliqué dessus !"</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Décortiquons un peu ce code:</p>
+<ul class="simple">
+<li><p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;button&gt;</span></code> crée un bouton cliquable avec l’ID <code class="docutils literal notranslate"><span class="pre">alertButton</span></code>. C’est important de lui donner un ID pour pouvoir le retrouver dans le code JavaScript.</p></li>
+<li><p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> contient le code JavaScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">document.getElementById("alertButton")</span></code> permet de récupérer le bouton en utilisant son ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.addEventListener("click",</span> <span class="pre">function()</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">})</span></code> ajoute un écouteur d’événement qui déclenche une fonction quand le bouton est cliqué. Ici l’événement est un clic de souris (<code class="docutils literal notranslate"><span class="pre">click</span></code>) et la fonction affiche simplement une alerte avec <code class="docutils literal notranslate"><span class="pre">alert()</span></code>.</p></li>
+</ul>
+</section>
+<section id="un-bouton-qui-change-le-texte-dun-paragraphe">
+<h3>Un bouton qui change le texte d’un paragraphe<a class="headerlink" href="#un-bouton-qui-change-le-texte-dun-paragraphe" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"text"</span><span class="p">&gt;</span>Texte original<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"changeTextButton"</span><span class="p">&gt;</span>Changer le texte<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"changeTextButton"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"text"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">"Texte modifié"</span><span class="p">;</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ici, nous avons un paragraphe avec l’ID <code class="docutils literal notranslate"><span class="pre">text</span></code> et un bouton pour changer son contenu. Le code JavaScript récupère le bouton et ajoute un écouteur d’événement pour changer le texte du paragraphe quand le bouton est cliqué. La propriété <code class="docutils literal notranslate"><span class="pre">innerText</span></code> permet de modifier le texte affiché dans l’élément.</p>
+</section>
+<section id="un-bouton-qui-change-la-couleur-de-fond">
+<h3>Un bouton qui change la couleur de fond<a class="headerlink" href="#un-bouton-qui-change-la-couleur-de-fond" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"changeColorButton"</span><span class="p">&gt;</span>Changer la couleur de fond<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"changeColorButton"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s2">"lightblue"</span><span class="p">;</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ici, le bouton change la couleur de fond de la page en utilisant <code class="docutils literal notranslate"><span class="pre">document.body.style.backgroundColor</span></code>. On peut mettre n’importe quelle couleur CSS valide. Si vous voulez changer la couleur de fond d’un élément spécifique, il suffit de remplacer <code class="docutils literal notranslate"><span class="pre">document.body</span></code> par l’élément ciblé (par exemple, <code class="docutils literal notranslate"><span class="pre">document.getElementById("monElement")</span></code>). Vous pouvez bien sûr modifier n’importe quelle propriété CSS de cette manière, pas seulement la couleur de fond.</p>
+</section>
+</section>
+<section id="dautres-evenements">
+<h2>D’autres évènements<a class="headerlink" href="#dautres-evenements" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le clic est l’événement le plus courant, mais il en existe beaucoup d’autres. Voici quelques exemples:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mouseover</span></code>: quand la souris passe au-dessus d’un élément</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mouseout</span></code>: quand la souris quitte un élément</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keydown</span></code>: quand une touche du clavier est pressée</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">submit</span></code>: quand un formulaire est soumis</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">input</span></code>: quand la valeur d’un champ de formulaire change</p></li>
+</ul>
+<p>Vous pouvez utiliser ces événements de la même manière que pour le clic, en remplaçant <code class="docutils literal notranslate"><span class="pre">"click"</span></code> par l’événement souhaité dans <code class="docutils literal notranslate"><span class="pre">addEventListener</span></code>. Une liste complète des événements disponibles est disponible <a href="https://developer.mozilla.org/fr/docs/Web/Events" target="_blank">ici</a>.</p>
+</section>
+<section id="quand-on-traite-un-formulaire">
+<h2>Quand on traîte un formulaire<a class="headerlink" href="#quand-on-traite-un-formulaire" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="un-formulaire-qui-affiche-une-alerte">
+<h3>Un formulaire qui affiche une alerte<a class="headerlink" href="#un-formulaire-qui-affiche-une-alerte" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">"myForm"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">id</span><span class="o">=</span><span class="s">"name"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Entrez votre nom"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Envoyer<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myForm"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// Empêche l'envoi du formulaire</span>
+        <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"name"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">"Bonjour "</span> <span class="o">+</span> <span class="nx">name</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Décortiquons ce code:</p>
+<ul class="simple">
+<li><p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;form&gt;</span></code> crée un formulaire avec un champ de texte (<code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type="text"&gt;</span></code>) pour entrer un nom et un bouton pour soumettre le formulaire.</p></li>
+<li><p>L’événement <code class="docutils literal notranslate"><span class="pre">submit</span></code> est déclenché quand le formulaire est envoyé. On utilise <code class="docutils literal notranslate"><span class="pre">event.preventDefault()</span></code> pour empêcher le comportement par défaut du formulaire (qui est de recharger la page).</p></li>
+<li><p>On récupère la valeur du champ de texte avec <code class="docutils literal notranslate"><span class="pre">document.getElementById("name").value</span></code> et on la stocke dans une variable <code class="docutils literal notranslate"><span class="pre">name</span></code>. Le mot-clé <code class="docutils literal notranslate"><span class="pre">let</span></code> permet de déclarer une variable.</p></li>
+<li><p>Enfin, on affiche une alerte avec le nom entré.</p></li>
+</ul>
+</section>
+<section id="un-formulaire-qui-permet-de-choisir-une-couleur">
+<h3>Un formulaire qui permet de choisir une couleur<a class="headerlink" href="#un-formulaire-qui-permet-de-choisir-une-couleur" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">"colorForm"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"color"</span> <span class="na">id</span><span class="o">=</span><span class="s">"color"</span> <span class="na">value</span><span class="o">=</span><span class="s">"#ff0000"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Choisir la couleur<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"colorForm"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// Empêche l'envoi du formulaire</span>
+        <span class="kd">let</span> <span class="nx">color</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"color"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Décortiquons ce code (très similaire au précédent):</p>
+<ul class="simple">
+<li><p>La balise <code class="docutils literal notranslate"><span class="pre">&lt;form&gt;</span></code> crée un formulaire avec un champ de sélection de couleur (<code class="docutils literal notranslate"><span class="pre">&lt;input</span> <span class="pre">type="color"&gt;</span></code>) et un bouton pour soumettre le formulaire.</p></li>
+<li><p>L’événement <code class="docutils literal notranslate"><span class="pre">submit</span></code> est déclenché quand le formulaire est envoyé. On utilise <code class="docutils literal notranslate"><span class="pre">event.preventDefault()</span></code> pour empêcher le comportement par défaut du formulaire (qui est de recharger la page).</p></li>
+<li><p>On récupère la valeur du champ de couleur avec <code class="docutils literal notranslate"><span class="pre">document.getElementById("color").value</span></code> et on la stocke dans une variable <code class="docutils literal notranslate"><span class="pre">color</span></code>. Le mot-clé <code class="docutils literal notranslate"><span class="pre">let</span></code> permet de déclarer une variable.</p></li>
+<li><p>Enfin, on change la couleur de fond de la page avec <code class="docutils literal notranslate"><span class="pre">document.body.style.backgroundColor</span> <span class="pre">=</span> <span class="pre">color</span></code>.</p></li>
+</ul>
+</section>
+<section id="un-formulaire-qui-additionne-deux-nombres-et-affiche-le-resultat-sur-la-page">
+<h3>Un formulaire qui additionne deux nombres et affiche le résultat sur la page<a class="headerlink" href="#un-formulaire-qui-additionne-deux-nombres-et-affiche-le-resultat-sur-la-page" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">"additionForm"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">id</span><span class="o">=</span><span class="s">"number1"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Nombre 1"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">id</span><span class="o">=</span><span class="s">"number2"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Nombre 2"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Additionner<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+Resultat: <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">"result"</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"additionForm"</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"submit"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="c1">// Empêche l'envoi du formulaire</span>
+        <span class="kd">let</span> <span class="nx">number1</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"number1"</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
+        <span class="kd">let</span> <span class="nx">number2</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"number2"</span><span class="p">).</span><span class="nx">value</span><span class="p">);</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">"La somme est: "</span> <span class="o">+</span> <span class="p">(</span><span class="nx">number1</span> <span class="o">+</span> <span class="nx">number2</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Ce code utilise 2 champs de saisie pour entrer deux nombres, et un bouton pour soumettre le formulaire. Quand le formulaire est soumis, il additionne les deux nombres et affiche le résultat dans un élément <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span></code>.</p>
+</section>
+</section>
+<section id="quelques-concepts-cles-de-javascript">
+<h2>Quelques concepts clés de Javascript<a class="headerlink" href="#quelques-concepts-cles-de-javascript" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Lien permanent vers ce titre">¶</a></h3>
+<p>En Javascript, on déclare des variables en utilisant 2 mots-clés principaux: <code class="docutils literal notranslate"><span class="pre">let</span></code> et <code class="docutils literal notranslate"><span class="pre">const</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">let</span></code> permet de déclarer une variable dont la valeur peut changer. Par exemple: <code class="docutils literal notranslate"><span class="pre">let</span> <span class="pre">age</span> <span class="pre">=</span> <span class="pre">25;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">const</span></code> permet de déclarer une variable dont la valeur ne changera pas. Par exemple: <code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">PI</span> <span class="pre">=</span> <span class="pre">3.14;</span></code></p></li>
+</ul>
+</section>
+<section id="conditions">
+<h3>Conditions<a class="headerlink" href="#conditions" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les conditions permettent d’exécuter du code seulement si une certaine condition est vraie. En Javascript, on utilise <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> et <code class="docutils literal notranslate"><span class="pre">else</span></code> pour créer des conditions.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// code à exécuter si la condition est vraie</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">autreCondition</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// code à exécuter si l'autre condition est vraie</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// code à exécuter si aucune des conditions précédentes n'est vraie</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="boucles">
+<h3>Boucles<a class="headerlink" href="#boucles" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les boucles permettent de répéter du code plusieurs fois. En Javascript, on utilise principalement <code class="docutils literal notranslate"><span class="pre">for</span></code> et <code class="docutils literal notranslate"><span class="pre">while</span></code> pour créer des boucles.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Boucle for de 0 à 4 (5 itérations)</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Itération "</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Boucle while qui s'arrête quand i atteint 5 en partant de 0 (5 itérations)</span>
+<span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Itération "</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
+    <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="fonctions">
+<h3>Fonctions<a class="headerlink" href="#fonctions" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Les fonctions permettent de regrouper du code réutilisable. En Javascript, on peut déclarer une fonction avec le mot-clé <code class="docutils literal notranslate"><span class="pre">function</span></code>.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">direBonjour</span><span class="p">(</span><span class="nx">nom</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"Bonjour "</span> <span class="o">+</span> <span class="nx">nom</span> <span class="o">+</span> <span class="s2">"!"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">addition</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span> <span class="c1">// Retourne la somme de a et b</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="pour-aller-plus-loin">
+<h2>Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si vous voulez approfondir vos connaissances en JavaScript, voici quelques ressources utiles:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.mozilla.org/fr/docs/Web/JavaScript">MDN Web Docs - JavaScript</a>: la référence incontournable pour apprendre JavaScript.</p></li>
+<li><p><a class="reference external" href="https://www.codecademy.com/learn/learn-javascript">Codecademy - Learn JavaScript</a>: un cours interactif pour apprendre les bases de JavaScript.</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/js/">W3Schools - JavaScript Tutorial</a>: un tutoriel complet avec des exemples et des exercices.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="projet.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Projet</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="css4.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">8. Aligner ses blocs avec Flexbox</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/web/js1.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">9. Introduction à JavaScript</a><ul>
+<li><a class="reference internal" href="#ou-ecrire-le-code-javascript">Où écrire le code JavaScript ?</a></li>
+<li><a class="reference internal" href="#quand-on-clique-sur-un-bouton">Quand on clique sur un bouton</a><ul>
+<li><a class="reference internal" href="#un-bouton-qui-affiche-une-alerte">Un bouton qui affiche une alerte</a></li>
+<li><a class="reference internal" href="#un-bouton-qui-change-le-texte-dun-paragraphe">Un bouton qui change le texte d’un paragraphe</a></li>
+<li><a class="reference internal" href="#un-bouton-qui-change-la-couleur-de-fond">Un bouton qui change la couleur de fond</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#dautres-evenements">D’autres évènements</a></li>
+<li><a class="reference internal" href="#quand-on-traite-un-formulaire">Quand on traîte un formulaire</a><ul>
+<li><a class="reference internal" href="#un-formulaire-qui-affiche-une-alerte">Un formulaire qui affiche une alerte</a></li>
+<li><a class="reference internal" href="#un-formulaire-qui-permet-de-choisir-une-couleur">Un formulaire qui permet de choisir une couleur</a></li>
+<li><a class="reference internal" href="#un-formulaire-qui-additionne-deux-nombres-et-affiche-le-resultat-sur-la-page">Un formulaire qui additionne deux nombres et affiche le résultat sur la page</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#quelques-concepts-cles-de-javascript">Quelques concepts clés de Javascript</a><ul>
+<li><a class="reference internal" href="#variables">Variables</a></li>
+<li><a class="reference internal" href="#conditions">Conditions</a></li>
+<li><a class="reference internal" href="#boucles">Boucles</a></li>
+<li><a class="reference internal" href="#fonctions">Fonctions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pour-aller-plus-loin">Pour aller plus loin</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>
