@@ -220,7 +220,7 @@ Pour Google Maps, ouvrez le menu en haut à gauche de la page et cliquez sur "Pa
 
 `````{admonition} Exercice 4
 :class: note
-Reprenez votre page sur les jeux olympiques (`jo2024.html`) et ajoutez 2 iframe. Une comportant une vidéo sur les jeux et une seconde affichant une carte indiquant l'endroit d'une épreuve.
+Reprenez votre page sur les meilleures destinations à visiter (`destination2025.html`) et ajoutez 2 iframe. Une comportant une vidéo sur une destination et une seconde affichant une carte (Google Maps).
 
 ````{dropdown} Solution
 ```{code-block} html

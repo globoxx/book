@@ -7,8 +7,6 @@
 
 ## Votre tout premier programme 🤩
 
-Lors de ces travaux pratiques, vous allez écrire des petits programmes Python sur l’IDE **Thonny** qui est déjà installé sur les machines de l’école.
-
 Voici un exemple d’un tout petit programme en Python qui ne contient qu’une seule instruction:
 
 ```{codeplay}
@@ -19,10 +17,9 @@ En anglais, "print" signifie “imprime". En Python, l’instruction `print` dem
 
 ````{admonition} Exercice 1
 :class: note
-Ecrivez et exécutez le programme ci-dessus sur `Thonny`.  
-Changez le texte pour que l’ordinateur écrive autre chose, par exemple "au revoir !".  
-Sauvegardez le fichier ex_1.py dans votre dossier personnel.
-
+1. Changez le texte pour que l’ordinateur écrive autre chose, par exemple "au revoir !".  
+2. Faites lui écrire un nombre (sans guillemets car ils ne sont utilisés que pour le texte)
+3. Faites lui écrire le résultat d'une opération mathématique (sans guillemets)
 ```{codeplay}
 :file: ex_1.py
 print("bonjour")
@@ -35,6 +32,8 @@ print("bonjour")
 ```{codeplay}
 :file: ex_1.py
 print('au revoir !')
+print(42)
+print(6 * 7 + 5)
 ``` 
 Assurez-vous de bien maîtriser la sauvegarde de vos fichiers !  
 Savoir sauvegarder et retrouver des fichiers dans les bons dossiers est primordial 😉
