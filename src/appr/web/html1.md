@@ -303,6 +303,9 @@ Structure de base d'une page HTML:
         <title>Le titre de ma page</title>
     </head>
     <body>
+        <h1>Bienvenue sur mon super site !</h1>
+        <p>Blablabla</p>
+        etc...
     </body>
 </html>
 ```

@@ -160,6 +160,7 @@ La balise la plus utilisée pour cela est `<strong>` mais HTML vous propose diff
 
 - `<strong> </strong>`: mets le texte en **gras**.
 - `<em> </em>`: mets le texte en _italique_.
+- `<u> </u>`: mets le texte en __souligné__.
 - `<mark> </mark>`: mets le texte en surligné.
 
 `````{admonition} Exercice 3
@@ -231,6 +232,25 @@ Reprenez votre page sur les meilleures destinations à visiter (`destination2025
 ````
 `````
 
+## Résumé des balises de ce chapitre
+
+- *Liste non ordonnée (unordered list)*: `<ul> ... </ul>`
+- *Liste ordonnée (ordered list)*: `<ol> ... </ol>`
+- *Élément de liste (list item)*: `<li> ... </li>`
+
+Exemple de liste non ordonnée:
+
+```{code-block} html
+<ul>
+    <li>Pain</li>
+    <li>Céréales</li>
+    <li>Oranges</li>
+</ul>
+```
+
+- *Mise en forme du texte*: `<strong> ... </strong>` (gras), `<em> ... </em>` (italique), `<u> ... </u>` (souligné), `<mark> ... </mark>` (surligné)
+- *Iframe*: `<iframe> ... </iframe>`
+
 ## Exercice récapitulatif 2
 
 ```{admonition} Exercice récapitulatif 2
@@ -240,12 +260,11 @@ Vous êtes le nouveau propriétaire d'un restaurant et souhaitez créer une simp
 Écrivez la page web principale de votre site dans un fichier nommé `restaurant.html`.
 Vous êtes libre sur le contenu, mais la page doit contenir les éléments suivants :
 
-- Le titre “Notre menu” qui doit apparaître dans l’onglet du navigateur.
-- Le titre principal “Notre menu” qui doit apparaître en haut de la page.
-- Un petit paragraphe expliquant quels genres de plats sont servis dans votre restaurant.
-- Un sous-titre “Plats proposés”.
-- Une liste non ordonnée de plats (au moins 3) avec images à l’appui (chaque item de la liste contient le nom du plat ainsi qu’une image).
-- Au moins un mot important (gras, italique ou surligné) sur votre page.
+- Un titre principal annonçant le nom de votre restaurant.
+- Un petit paragraphe expliquant quel type de cuisine est proposé dans votre restaurant.
+- Un sous-titre “Plats proposés” (balise `<h2>`).
+- Une liste non ordonnée de plats (au moins 3) avec images à l’appui (chaque élément de la liste contient le nom du plat ainsi qu’une image).
+- Au moins un mot important (gras, italique, souligné ou surligné) sur votre page.
 - Un iframe Google Maps pointant vers l'emplacement de votre restaurant.
 
 Déposez votre fichier sur Moodle à l'endroit prévu.
