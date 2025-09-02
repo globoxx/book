@@ -481,6 +481,7 @@ Solution<div class="summary-down docutils">
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;</span> <span class="pre">&lt;/strong&gt;</span></code>: mets le texte en <strong>gras</strong>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;em&gt;</span> <span class="pre">&lt;/em&gt;</span></code>: mets le texte en <em>italique</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;u&gt;</span> <span class="pre">&lt;/u&gt;</span></code>: mets le texte en <strong>souligné</strong>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;mark&gt;</span> <span class="pre">&lt;/mark&gt;</span></code>: mets le texte en surligné.</p></li>
 </ul>
 <div class="note admonition">
@@ -554,6 +555,26 @@ Solution<div class="summary-down docutils">
 </div>
 </details></div>
 </section>
+<section id="resume-des-balises-de-ce-chapitre">
+<h2>Résumé des balises de ce chapitre<a class="headerlink" href="#resume-des-balises-de-ce-chapitre" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p><em>Liste non ordonnée (unordered list)</em>: <code class="docutils literal notranslate"><span class="pre">&lt;ul&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/ul&gt;</span></code></p></li>
+<li><p><em>Liste ordonnée (ordered list)</em>: <code class="docutils literal notranslate"><span class="pre">&lt;ol&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/ol&gt;</span></code></p></li>
+<li><p><em>Élément de liste (list item)</em>: <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/li&gt;</span></code></p></li>
+</ul>
+<p>Exemple de liste non ordonnée:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Pain<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Céréales<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Oranges<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Mise en forme du texte</em>: <code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/strong&gt;</span></code> (gras), <code class="docutils literal notranslate"><span class="pre">&lt;em&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/em&gt;</span></code> (italique), <code class="docutils literal notranslate"><span class="pre">&lt;u&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/u&gt;</span></code> (souligné), <code class="docutils literal notranslate"><span class="pre">&lt;mark&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/mark&gt;</span></code> (surligné)</p></li>
+<li><p><em>Iframe</em>: <code class="docutils literal notranslate"><span class="pre">&lt;iframe&gt;</span> <span class="pre">...</span> <span class="pre">&lt;/iframe&gt;</span></code></p></li>
+</ul>
+</section>
 <section id="exercice-recapitulatif-2">
 <h2>Exercice récapitulatif 2<a class="headerlink" href="#exercice-recapitulatif-2" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
@@ -562,12 +583,11 @@ Solution<div class="summary-down docutils">
 <p>Écrivez la page web principale de votre site dans un fichier nommé <code class="docutils literal notranslate"><span class="pre">restaurant.html</span></code>.
 Vous êtes libre sur le contenu, mais la page doit contenir les éléments suivants :</p>
 <ul class="simple">
-<li><p>Le titre “Notre menu” qui doit apparaître dans l’onglet du navigateur.</p></li>
-<li><p>Le titre principal “Notre menu” qui doit apparaître en haut de la page.</p></li>
-<li><p>Un petit paragraphe expliquant quels genres de plats sont servis dans votre restaurant.</p></li>
-<li><p>Un sous-titre “Plats proposés”.</p></li>
-<li><p>Une liste non ordonnée de plats (au moins 3) avec images à l’appui (chaque item de la liste contient le nom du plat ainsi qu’une image).</p></li>
-<li><p>Au moins un mot important (gras, italique ou surligné) sur votre page.</p></li>
+<li><p>Un titre principal annonçant le nom de votre restaurant.</p></li>
+<li><p>Un petit paragraphe expliquant quel type de cuisine est proposé dans votre restaurant.</p></li>
+<li><p>Un sous-titre “Plats proposés” (balise <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;</span></code>).</p></li>
+<li><p>Une liste non ordonnée de plats (au moins 3) avec images à l’appui (chaque élément de la liste contient le nom du plat ainsi qu’une image).</p></li>
+<li><p>Au moins un mot important (gras, italique, souligné ou surligné) sur votre page.</p></li>
 <li><p>Un iframe Google Maps pointant vers l’emplacement de votre restaurant.</p></li>
 </ul>
 <p>Déposez votre fichier sur Moodle à l’endroit prévu.</p>
@@ -629,6 +649,7 @@ Vous êtes libre sur le contenu, mais la page doit contenir les éléments suiva
 <li><a class="reference internal" href="#les-listes">Les listes</a></li>
 <li><a class="reference internal" href="#mettre-en-valeur-du-texte">Mettre en valeur du texte</a></li>
 <li><a class="reference internal" href="#inserer-une-autre-page-dans-sa-page">Insérer une autre page dans sa page ?</a></li>
+<li><a class="reference internal" href="#resume-des-balises-de-ce-chapitre">Résumé des balises de ce chapitre</a></li>
 <li><a class="reference internal" href="#exercice-recapitulatif-2">Exercice récapitulatif 2</a></li>
 </ul>
 </li>

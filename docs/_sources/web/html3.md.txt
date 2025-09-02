@@ -201,15 +201,22 @@ Voici un exemple:
 <a href="https://mdlgb.ch/"><img src="logo.png"></a>
 ```
 
+## Résumé des balises de ce chapitre
+
+- *Lien absolu*: `<a href="https://www.example.com"> ... </a>`
+- *Lien relatif*: `<a href="page.html"> ... </a>`
+- *Lien s'ouvrant dans un nouvel onglet*: `<a href="https://www.example.com" target="_blank"> ... </a>`
+- *Image cliquable*: `<a href="https://www.example.com"><img src="image.jpg"></a>`
+
 ## Exercice récapitulatif 3
 
 ```{admonition} Exercice récapitulatif 3
 :class: note
-Vous êtes un artiste peintre qui souhaite se faire connaître. Vous avez besoin d'un site où les amateurs d'art pourraient vous contacter pour acheter vos œuvres ou pour des commandes spéciales.
+Vous êtes un·e artiste qui souhaite se faire connaître. Vous avez besoin d'un site où les amateurs d'art pourraient vous contacter pour acheter vos œuvres ou pour des commandes spéciales.
 Vous décidez alors de lancer votre propre site.
 
-Créez un nouveau dossier de travail nommé `ArtGallerie`.
-Écrivez la page d'accueil du site dans un fichier nommé `index.html`.
+Créez un nouveau **dossier** nommé `ArtGallerie`.
+Écrivez la page d'accueil de votre site dans un fichier nommé `index.html`.
 Vous êtes libre sur le contenu mais les différentes pages doivent contenir les éléments suivants :
 
 La page principale `index.html` contient :
@@ -221,7 +228,7 @@ La page principale `index.html` contient :
 
 La page `galerie.html` contient :
 - Un titre principal "Galerie".
-- Quelques-unes de vos meilleures œuvres (trouvées sur Internet mais libres de droit) (au moins 3 œuvres).
+- Quelques-unes de vos meilleures œuvres (trouvées sur Internet) (au moins 3 œuvres).
 - Un lien pour retourner à l'accueil (`index.html`).
 
 La page `contact.html` contient :
@@ -229,6 +236,6 @@ La page `contact.html` contient :
 - Une liste à puce avec votre adresse mail (fausse), un numéro de téléphone (faux) et un bouton "Contactez-moi" (à vous de chercher comment ajouter un bouton en html).
 - Un lien pour retourner à l'accueil (`index.html`).
 
-Compressez votre dossier `ArtGallerie` en `ArtGallerie.zip` (clic droit sur le dossier -> compresser).  
-Déposez le dossier compressé sur Moodle à l'endroit prévu.
+Compressez votre dossier `ArtGallerie` en fichier `ArtGallerie.zip` (clic droit sur le dossier -> compresser).  
+Déposez le fichier compressé sur Moodle à l'endroit prévu.
 ```
