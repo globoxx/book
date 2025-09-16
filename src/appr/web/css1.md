@@ -267,6 +267,40 @@ Vous vous souvenez du Mario du début de chapitre ?
 Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</a> pour voir comment ça a été fait (n'hésitez pas à essayer de modifier la couleur de sa moustache si vous vous en sentez capable !).
 ```
 
+## Résumé des éléments de ce chapitre
+
+- *Lier un fichier CSS à un fichier HTML*:
+  `<link href="style.css" rel="stylesheet">` (à placer dans la balise `<head> </head>`)
+
+- *Créer une règle CSS pour une balise*:
+
+```{code-block} css
+nom_de_la_balise {
+    propriete: valeur;
+}
+```
+
+- *Couleur du texte*: `color: nom_de_la_couleur;` (ex: `color: blue;`)
+- *Couleur de fond*: `background-color: nom_de_la_couleur;` (ex: `background-color: yellow;`)
+
+- *Créer une règle CSS pour une classe*:
+
+```{code-block} css
+.nom_de_la_classe {
+    propriete: valeur;
+}
+```
+
+- *Appliquer une classe à un élément HTML*:
+
+```{code-block} html
+<p class="nom_de_la_classe">Paragraphe à styliser</p>
+```
+
+- *Balises universelles*:
+  - `<span> </span>` pour regrouper du contenu sans provoquer de retour à la ligne;
+  - `<div> </div>` pour regrouper du contenu en provoquant un retour à la ligne (utile pour créer des blocs).
+
 ## Exercice récapitulatif 5
 
 ```{admonition} Exercice récapitulatif 5
@@ -280,7 +314,7 @@ Faites les améliorations suivantes:
 - Appliquez la couleur noire (black) à tous vos liens (balise `<a>`).
 - Appliquez une couleur et une couleur de fond à vos titres.
 - Appliquez le style `color: #A5B4FC;` à 2 mots **séparés** (pas côte-à-côte) de votre paragraphe auto-biographique. Pour ce faire, vous pouvez utiliser des balises `<span> </span>` pour entourer chacun des mots choisis puis leur donner une classe. Il ne reste alors plus qu'à appliquer la couleur à cette classe en CSS.
-- Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos. Il vous faut donc créer un bloc `<div> </div>` autour de vos images et appliquer un style CSS à ce bloc (idéalement à l'aide d'une classe).
+- Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toutes vos photos. Il vous faut donc créer un bloc `<div> </div>` autour de toutes vos images et appliquer un style CSS à ce bloc (idéalement à l'aide d'une classe).
 
 Déposez votre dossier compressé (`ArtGallerie.zip`) sur Moodle à l'endroit prévu.
 ```

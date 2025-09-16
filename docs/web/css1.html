@@ -565,6 +565,43 @@ Il vous faut définir une classe CSS et l’appliquer à vos balises <code class
 Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</a> pour voir comment ça a été fait (n’hésitez pas à essayer de modifier la couleur de sa moustache si vous vous en sentez capable !).</p>
 </div>
 </section>
+<section id="resume-des-elements-de-ce-chapitre">
+<h2>Résumé des éléments de ce chapitre<a class="headerlink" href="#resume-des-elements-de-ce-chapitre" title="Lien permanent vers ce titre">¶</a></h2>
+<ul class="simple">
+<li><p><em>Lier un fichier CSS à un fichier HTML</em>:
+<code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">href="style.css"</span> <span class="pre">rel="stylesheet"&gt;</span></code> (à placer dans la balise <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code>)</p></li>
+<li><p><em>Créer une règle CSS pour une balise</em>:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">nom_de_la_balise</span> <span class="p">{</span>
+    <span class="n">propriete</span><span class="p">:</span> <span class="n">valeur</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Couleur du texte</em>: <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">nom_de_la_couleur;</span></code> (ex: <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">blue;</span></code>)</p></li>
+<li><p><em>Couleur de fond</em>: <code class="docutils literal notranslate"><span class="pre">background-color:</span> <span class="pre">nom_de_la_couleur;</span></code> (ex: <code class="docutils literal notranslate"><span class="pre">background-color:</span> <span class="pre">yellow;</span></code>)</p></li>
+<li><p><em>Créer une règle CSS pour une classe</em>:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">nom_de_la_classe</span> <span class="p">{</span>
+    <span class="n">propriete</span><span class="p">:</span> <span class="n">valeur</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Appliquer une classe à un élément HTML</em>:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"nom_de_la_classe"</span><span class="p">&gt;</span>Paragraphe à styliser<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><em>Balises universelles</em>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> pour regrouper du contenu sans provoquer de retour à la ligne;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> pour regrouper du contenu en provoquant un retour à la ligne (utile pour créer des blocs).</p></li>
+</ul>
+</li>
+</ul>
+</section>
 <section id="exercice-recapitulatif-5">
 <h2>Exercice récapitulatif 5<a class="headerlink" href="#exercice-recapitulatif-5" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="note admonition">
@@ -577,7 +614,7 @@ Reprenez votre dossier <code class="docutils literal notranslate"><span class="p
 <li><p>Appliquez la couleur noire (black) à tous vos liens (balise <code class="docutils literal notranslate"><span class="pre">&lt;a&gt;</span></code>).</p></li>
 <li><p>Appliquez une couleur et une couleur de fond à vos titres.</p></li>
 <li><p>Appliquez le style <code class="docutils literal notranslate"><span class="pre">color:</span> <span class="pre">#A5B4FC;</span></code> à 2 mots <strong>séparés</strong> (pas côte-à-côte) de votre paragraphe auto-biographique. Pour ce faire, vous pouvez utiliser des balises <code class="docutils literal notranslate"><span class="pre">&lt;span&gt;</span> <span class="pre">&lt;/span&gt;</span></code> pour entourer chacun des mots choisis puis leur donner une classe. Il ne reste alors plus qu’à appliquer la couleur à cette classe en CSS.</p></li>
-<li><p>Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toute vos photos. Il vous faut donc créer un bloc <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> autour de vos images et appliquer un style CSS à ce bloc (idéalement à l’aide d’une classe).</p></li>
+<li><p>Dans votre page galerie, appliquez une couleur de fond à un bloc regroupant toutes vos photos. Il vous faut donc créer un bloc <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span> <span class="pre">&lt;/div&gt;</span></code> autour de toutes vos images et appliquer un style CSS à ce bloc (idéalement à l’aide d’une classe).</p></li>
 </ul>
 <p>Déposez votre dossier compressé (<code class="docutils literal notranslate"><span class="pre">ArtGallerie.zip</span></code>) sur Moodle à l’endroit prévu.</p>
 </div>
@@ -638,6 +675,7 @@ Reprenez votre dossier <code class="docutils literal notranslate"><span class="p
 <li><a class="reference internal" href="#appliquer-une-propriete-css-a-plusieurs-balises-html">Appliquer une propriété CSS à plusieurs balises HTML</a></li>
 <li><a class="reference internal" href="#appliquer-un-style-a-une-classe-delements">Appliquer un style à une classe d’éléments</a></li>
 <li><a class="reference internal" href="#les-balises-universelles-span-et-div">Les balises universelles <code class="docutils literal notranslate"><span class="pre">span</span></code> et <code class="docutils literal notranslate"><span class="pre">div</span></code></a></li>
+<li><a class="reference internal" href="#resume-des-elements-de-ce-chapitre">Résumé des éléments de ce chapitre</a></li>
 <li><a class="reference internal" href="#exercice-recapitulatif-5">Exercice récapitulatif 5</a></li>
 </ul>
 </li>

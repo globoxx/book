@@ -121,6 +121,13 @@ Voici un exemple:
 <a href="https://mdlgb.ch/"><img src="logo.png"></a>
 ```
 
+## Résumé des balises de ce chapitre
+
+- *Ajouter une alternative à une image*: `<img src="image.jpg" alt="Description de l'image">`
+- *Changer la taille d'une image*: `<img src="image.jpg" width="500" height="600">`
+- *Ajouter une infobulle*: `<img src="image.jpg" title="Texte de l'infobulle">`
+- *Image cliquable*: `<a href="https://www.example.com"><img src="image.jpg"></a>`
+
 ## Exercice récapitulatif 4
 
 ```{admonition} Exercice récapitulatif 4
@@ -128,7 +135,7 @@ Voici un exemple:
 Votre site d'artiste (`ArtGallerie`) attire déjà de nombreux clients, mais vous avez maintenant de quoi améliorer votre galerie d'images.
 Reprenez votre dossier `ArtGallerie` du chapitre précédent et faites les améliorations suivantes:
 - Ajustez les tailles des images de votre galerie pour une meilleure harmonie (les images doivent toutes avoir la même largeur).
-- Ajoutez des infobulles sur vos images afin de donner des informations sur leur origine aux utilisateurs du site. Par exemple une mini-description de l'oeuvre ou de l'artiste.
+- Ajoutez des infobulles sur vos images afin de donner des informations sur leur origine aux utilisateurs du site. Par exemple une mini-description de l'oeuvre ou de l'artiste (vous pouvez inventer).
 - Sur votre page de contact, ajoutez le logo d'instagram. (A télécharger {download}`ici<../media/instagram.png>`).
 - Faites en sorte que le logo redirige directement vers le réseau social si on clique dessus.
 
