@@ -575,7 +575,6 @@ Voir la solution<div class="summary-down docutils">
 <ul class="simple">
 <li><p>A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque le fruit est en bas de l’écran et que sa colonne est la même que celle du panier)</p></li>
 <li><p>Quelles sonts les coordonnées en <code class="docutils literal notranslate"><span class="pre">x</span></code> du panier et du fruit ? (comme elles changent, elles sont dans des variables: <code class="docutils literal notranslate"><span class="pre">colonne</span></code> pour le fruit et <code class="docutils literal notranslate"><span class="pre">panier</span></code> pour le panier)</p></li>
-<li><p>Comment s’écrit l’égalité des coordonnées avec ces variables ? (<code class="docutils literal notranslate"><span class="pre">colonne</span> <span class="pre">==</span> <span class="pre">panier</span></code>)</p></li>
 </ul>
 <p>On va donc tester si la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code> (position du fruit) est égale à la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> et on va faire ce test juste après que le fruit soit tombé en bas de l’écran (i.e. à la fin de la boucle <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code>).</p>
 <p>Utilisez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> pour faire le test de collision et afficher une icône si le fruit est attrapé avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>. Ajoutez aussi un bloc <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> pour enlever l’icône.</p>
@@ -604,7 +603,12 @@ Voir la solution<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><img alt="img" src="../_images/collision1.png"/></p>
 </div>
-</details></section>
+</details><div class="note admonition">
+<p class="admonition-title">Disparition du panier</p>
+<p>Vous remarquerez que nous avons ajouté un bloc <code class="docutils literal notranslate"><span class="pre">allumer</span> <span class="pre">x</span> <span class="pre">panier</span></code> au début du bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code>. Sans ce bloc, le panier disparaît lorsqu’il entre en collision avec un fruit.<br/>
+L’ajout de ce bloc permet de rallumer la led associée au panier avant la chute d’un fruit.</p>
+</div>
+</section>
 <section id="exercice-9">
 <h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
 <p>On aimerait maintenant compter le nombre de fruits attrapés, c’est-à-dire le <code class="docutils literal notranslate"><span class="pre">score</span></code> du joueur !</p>
@@ -639,8 +643,8 @@ Voir la solution<div class="summary-down docutils">
 </details><p>Fin de l’étape 3, le jeu détecte la collision entre le panier et le fruit et compte le score !</p>
 </section>
 </section>
-<section id="etape-4-gestion-des-echecs">
-<h2>Étape 4 - Gestion des échecs<a class="headerlink" href="#etape-4-gestion-des-echecs" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="etape-4-detecter-lorsquun-fruit-est-rate">
+<h2>Étape 4 - Détecter lorsqu’un fruit est raté<a class="headerlink" href="#etape-4-detecter-lorsquun-fruit-est-rate" title="Lien permanent vers ce titre">¶</a></h2>
 <section id="exercice-10">
 <h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Un échec se produit lorsqu’un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur pert une vie. On peut commencer par définir une variable <code class="docutils literal notranslate"><span class="pre">vie</span></code> initialisée à 3 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.</p>
@@ -795,7 +799,7 @@ Voir le code final<div class="summary-down docutils">
 <li><a class="reference internal" href="#exercice-9">Exercice 9</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#etape-4-gestion-des-echecs">Étape 4 - Gestion des échecs</a><ul>
+<li><a class="reference internal" href="#etape-4-detecter-lorsquun-fruit-est-rate">Étape 4 - Détecter lorsqu’un fruit est raté</a><ul>
 <li><a class="reference internal" href="#exercice-10">Exercice 10</a></li>
 </ul>
 </li>
