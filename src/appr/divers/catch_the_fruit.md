@@ -222,7 +222,6 @@ Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais c
 
 * A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque le fruit est en bas de l'écran et que sa colonne est la même que celle du panier)
 * Quelles sonts les coordonnées en `x` du panier et du fruit ? (comme elles changent, elles sont dans des variables: `colonne` pour le fruit et `panier` pour le panier)
-* Comment s'écrit l'égalité des coordonnées avec ces variables ? (`colonne == panier`)
 
 On va donc tester si la variable `colonne` (position du fruit) est égale à la variable `panier` et on va faire ce test juste après que le fruit soit tombé en bas de l'écran (i.e. à la fin de la boucle `pour index variant de 0 à 4`).
 
@@ -243,7 +242,7 @@ Voici les étapes à suivre:
 ![img](../media/collision1.png)
 ```
 
-``` {admonition}
+``` {admonition} Disparition du panier
 :class: note
 Vous remarquerez que nous avons ajouté un bloc `allumer x panier` au début du bloc `toujours`. Sans ce bloc, le panier disparaît lorsqu'il entre en collision avec un fruit.  
 L'ajout de ce bloc permet de rallumer la led associée au panier avant la chute d'un fruit.
@@ -272,7 +271,7 @@ Voici les étapes à suivre:
 
 Fin de l'étape 3, le jeu détecte la collision entre le panier et le fruit et compte le score !
 
-## Étape 4 - Gestion des échecs
+## Étape 4 - Détecter lorsqu'un fruit est raté
 
 ### Exercice 10
 
