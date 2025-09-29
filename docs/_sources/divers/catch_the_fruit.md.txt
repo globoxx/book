@@ -79,7 +79,7 @@ L'idée est donc d'utiliser une boucle qui va répéter les instructions tout en
 Utilisez le bloc `pour index variant de 0 à 4` qui va créer une **boucle** dans laquelle `index` va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu'il nous faut pour les valeurs de `y`.  
 `index` est ici ce que l'on appelle une `variable`. Sa valeur va **varier** de 0 à 4 à chaque tour. Il faut donc ensuite remplacer les valeurs de `y` par `index`.
 
-```{admonition}
+```{admonition} Pas de changement visuel
 :class: note
 Visuellement, le résultat doit être le même que précédemment, mais le code est plus court et plus lisible.
 ![img](../media/microbit/m2.gif)
