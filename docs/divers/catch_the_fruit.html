@@ -338,9 +338,10 @@ Sur l’interface de programmation, vous voyez 2 blocs déjà présents:</p>
 <section id="exercice-1">
 <h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Chaque led possède des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>. Le led tout en haut à gauche se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> tandis que celui tout en bas à droite se trouve aux coordonnées <code class="docutils literal notranslate"><span class="pre">(4,</span> <span class="pre">4)</span></code>.<br/>
-Nous allons commencer par faire tomber le fruit sur la colonne en x=1, c’est à dire la 2ème colonne en partant de la gauche.</p>
-<p>Ajoutez 5 blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code> pour allumer tous les blocs de la colonne en x=1.<br/>
+Nous allons commencer par faire tomber le fruit sur la colonne en <code class="docutils literal notranslate"><span class="pre">x=1</span></code>, c’est à dire la 2ème colonne en partant de la gauche.</p>
+<p>Ajoutez 5 blocs <code class="docutils literal notranslate"><span class="pre">allumer</span></code> dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code> pour allumer tous les blocs de la colonne en <code class="docutils literal notranslate"><span class="pre">x=1</span></code>.<br/>
 Ajoutez aussiun bloc <code class="docutils literal notranslate"><span class="pre">pause</span></code> de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.</p>
+<p><img alt="img" src="../_images/m1.gif"/></p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir la solution<div class="summary-down docutils">
@@ -354,6 +355,7 @@ Voir la solution<div class="summary-down docutils">
 <section id="exercice-2">
 <h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez à présent 5 blocs <code class="docutils literal notranslate"><span class="pre">éteindre</span></code> pour allumer et éteindre successivement toutes les leds de la colonne du haut vers le bas.</p>
+<p><img alt="img" src="../_images/m2.gif"/></p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir la solution<div class="summary-down docutils">
@@ -418,6 +420,7 @@ Ce bloc permet de tirer un entier aléatoire entre 2 bornes, dans notre cas de 0
 <p>Il faut donc tirer un nombre au hasard qui va être la colonne choisie et il faut pouvoir conserver ce choix tout au long de la chute du fruit.<br/>
 Dès l’instant où on veut stocker de l’information pour pouvoir la réutiliser, la solution est d’utiliser une <code class="docutils literal notranslate"><span class="pre">variable</span></code>.</p>
 <p>Utilisez le menu <code class="docutils literal notranslate"><span class="pre">Variables</span></code> pour créer une variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code> et lui donner une valeur aléatoire avant la chute de chaque fruit.</p>
+<p><img alt="img" src="../_images/m3.gif"/></p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 (Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -441,7 +444,7 @@ Voir la solution<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><img alt="img" src="../_images/tomberfruit3.png"/></p>
 </div>
-</details><p>Fin de l’étape 1, on a un fruit qui tombe dans une colonne choisie aléatoirement.</p>
+</details><p>Fin de l’étape 1, on a un fruit qui tombe dans une colonne choisie aléatoirement !</p>
 </section>
 </section>
 <section id="etape-2-deplacer-le-panier">
@@ -456,6 +459,7 @@ Voir la solution<div class="summary-down docutils">
 </ul>
 <p>Définissez une variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> pour la coordonnée horizontale du panier qui va varier et initiez-la à 0 au début du programme.
 N’oubliez pas d’allumer les leds correspondantes, sinon on ne verra pas le panier !</p>
+<p><img alt="img" src="../_images/m4.gif"/></p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 (Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -489,6 +493,7 @@ Nous allons utiliser les boutons <code class="docutils literal notranslate"><spa
 <li><p>Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)</p></li>
 </ul>
 <p>Utilisez les blocs <code class="docutils literal notranslate"><span class="pre">lorsque</span> <span class="pre">le</span> <span class="pre">bouton</span> <span class="pre">...</span> <span class="pre">est</span> <span class="pre">pressé</span></code> et ajoutez-y les blocs permettant de déplacer le panier. Le bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">panier</span> <span class="pre">de</span> <span class="pre">1</span></code> permet d’augmenter la valeur de la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> de 1. Changez le 1 en -1 pour diminuer sa valeur.</p>
+<p><img alt="img" src="../_images/m5.gif"/></p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 (Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -528,7 +533,8 @@ On doit empêcher le panier d’aller plus loin que les bords de l’écran.</p>
 <p>On introduit ici la structure de contrôle conditionnelle <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> et les tests de comparaison qui se trouvent dans le menu <code class="docutils literal notranslate"><span class="pre">Logique</span></code>.<br/>
 Dans notre cas, <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">le</span> <span class="pre">panier</span> <span class="pre">ne</span> <span class="pre">va</span> <span class="pre">pas</span> <span class="pre">sortir</span> <span class="pre">de</span> <span class="pre">l'écran,</span> <span class="pre">alors</span> <span class="pre">il</span> <span class="pre">bouge</span></code>.</p>
 <p><img alt="img" src="../_images/logique_microbit.png"/></p>
-<p>Donc pour le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code>, on exécute les blocs permettant le déplacement du panier que s’il n’est pas déjà tout à gauche.</p>
+<p>Donc pour le bouton <code class="docutils literal notranslate"><span class="pre">A</span></code>, on exécute les blocs permettant de déplacer le panier que s’il n’est pas déjà tout à gauche.</p>
+<p><img alt="img" src="../_images/m6.gif"/></p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 (Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -552,7 +558,7 @@ Voir la solution<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><img alt="img" src="../_images/panier3.png"/></p>
 </div>
-</details><p>Fin de l’étape 2, on a un panier déplaçable à l’aide des boutons.</p>
+</details><p>Fin de l’étape 2, on a un panier déplaçable à l’aide des boutons !</p>
 </section>
 </section>
 <section id="etape-3-detecter-lorsquun-fruit-est-attrape">
@@ -562,14 +568,29 @@ Voir la solution<div class="summary-down docutils">
 <p>Il s’agit maintenant de détecter lorsque le fruit est attrapé par le panier, c’est-à-dire lorqu’il y a collision entre le fruit et le panier.</p>
 <p>Visuellement il est facile de <em>voir</em> quand le fruit tombe dans le panier, mais comme le micro:bit ne <em>voit</em> pas, il faut trouver un moyen pour qu’il puisse vérifier s’il y a collision ou non.</p>
 <ul class="simple">
-<li><p>A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes en <code class="docutils literal notranslate"><span class="pre">x</span></code> et en <code class="docutils literal notranslate"><span class="pre">y</span></code>)</p></li>
-<li><p>Quelles sonts les coordonnées du panier et du fruit ? (comme elles changent, elles sont dans des variables. Fruit(<code class="docutils literal notranslate"><span class="pre">colonne</span></code>, <code class="docutils literal notranslate"><span class="pre">index</span></code>) et panier(<code class="docutils literal notranslate"><span class="pre">panier</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>))</p></li>
-<li><p>Comment s’écrit l’égalité des coordonnées avec ces variables ? (<code class="docutils literal notranslate"><span class="pre">colonne</span> <span class="pre">==</span> <span class="pre">panier</span> <span class="pre">ET</span> <span class="pre">index</span> <span class="pre">==</span> <span class="pre">4</span></code>)</p></li>
+<li><p>A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque le fruit est en bas de l’écran et que sa colonne est la même que celle du panier)</p></li>
+<li><p>Quelles sonts les coordonnées en <code class="docutils literal notranslate"><span class="pre">x</span></code> du panier et du fruit ? (comme elles changent, elles sont dans des variables: <code class="docutils literal notranslate"><span class="pre">colonne</span></code> pour le fruit et <code class="docutils literal notranslate"><span class="pre">panier</span></code> pour le panier)</p></li>
+<li><p>Comment s’écrit l’égalité des coordonnées avec ces variables ? (<code class="docutils literal notranslate"><span class="pre">colonne</span> <span class="pre">==</span> <span class="pre">panier</span></code>)</p></li>
 </ul>
-<p>Traduisez cette égalité avec les blocs de <code class="docutils literal notranslate"><span class="pre">comparaison</span></code> à votre disposition dans la section <code class="docutils literal notranslate"><span class="pre">Logique</span></code>.<br/>
-Placez ensuite le test de comparaison dans un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code>.</p>
-<p>Nous verrons ensuite où nous devrons placer ce test de collision.</p>
+<p>On va donc tester si la variable <code class="docutils literal notranslate"><span class="pre">colonne</span></code> (position du fruit) est égale à la variable <code class="docutils literal notranslate"><span class="pre">panier</span></code> et on va faire ce test juste après que le fruit soit tombé en bas de l’écran (i.e. à la fin de la boucle <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code>).</p>
+<p>Utilisez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> pour faire le test de collision et afficher une icône si le fruit est attrapé avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>. Ajoutez aussi un bloc <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> pour enlever l’icône.</p>
+<p><img alt="img" src="../_images/m7.gif"/></p>
 <details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+(Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici les étapes à suivre:</p>
+<ol class="simple">
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> juste après la boucle <code class="docutils literal notranslate"><span class="pre">pour</span> <span class="pre">index</span> <span class="pre">variant</span> <span class="pre">de</span> <span class="pre">0</span> <span class="pre">à</span> <span class="pre">4</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">si</span></code>, ajoutez un test de comparaison pour vérifier si <code class="docutils literal notranslate"><span class="pre">colonne</span> <span class="pre">==</span> <span class="pre">panier</span></code>.</p></li>
+<li><p class="card-text">Si la condition est respectée, affichez une icône avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>.</p></li>
+<li><p class="card-text">Si la condition est respectée, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> pour effacer l’icône.</p></li>
+</ol>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir la solution<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
@@ -581,17 +602,13 @@ Voir la solution<div class="summary-down docutils">
 </details></section>
 <section id="exercice-9">
 <h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
-<p>On a maintenant un test permettant de détecter la collision entre un fruit et le panier, mais on fait quoi ?<br/>
-Il s’agit de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu’il y a collision.</p>
+<p>On aimerait maintenant compter le nombre de fruits attrapés, c’est-à-dire le <code class="docutils literal notranslate"><span class="pre">score</span></code> du joueur !</p>
 <ul class="simple">
-<li><p>A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, dans la boucle <code class="docutils literal notranslate"><span class="pre">répéter</span></code>)</p></li>
 <li><p>Que doit-il se passer lorsqu’on attrape un fruit ? (on augment le score de 1)</p></li>
 <li><p>Comment faire pour tenir le score à jour ? (il faut utiliser une variable)</p></li>
 </ul>
 <p>Vous devez donc créer une nouvelle variable pour le <code class="docutils literal notranslate"><span class="pre">score</span></code> que vous allez initialiser à 0 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.<br/>
-Le test de collision doit se faire à chaque déplacement du fruit.<br/>
-Lorsqu’une collision a lieu, augmentez le score de 1.</p>
-<p>En outre, on peut également <em>fortement</em> suggérer de donner un signal visuel au joueur lorsqu’il marque un point, avec l’apparition d’un smiley par exemple.</p>
+Lorsqu’une collision a lieu, augmentez le score de 1. On s’occupera de l’affichage du score plus tard quand on fera le game over, <strong>il n’y a donc pas de nouveau visuel à cette étape</strong>.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 (Aide) Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -602,10 +619,7 @@ Lorsqu’une collision a lieu, augmentez le score de 1.</p>
 <p class="card-text">Voici les étapes à suivre:</p>
 <ol class="simple">
 <li><p class="card-text">Créez une nouvelle variable nommée <code class="docutils literal notranslate"><span class="pre">score</span></code> et définissez-la à 0 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.</p></li>
-<li><p class="card-text">Ajoutez le bloc conditionnel testant la collision à la fin de la boucle faisant tomber le fruit.</p></li>
-<li><p class="card-text">Si la condition est respectée, affichez un smiley avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>.</p></li>
-<li><p class="card-text">Si la condition est respectée, augmentez le <code class="docutils literal notranslate"><span class="pre">score</span></code> de 1.</p></li>
-<li><p class="card-text">Si la condition est respectée, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> afin d’effacer le smiley.</p></li>
+<li><p class="card-text">Si la condition de collision est respectée, augmentez le <code class="docutils literal notranslate"><span class="pre">score</span></code> de 1 avec le bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">score</span> <span class="pre">de</span> <span class="pre">1</span></code>.</p></li>
 </ol>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
@@ -617,24 +631,18 @@ Voir la solution<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><img alt="img" src="../_images/collision2.png"/></p>
 </div>
-</details><p>Vous remarquerez que nous avons ajoué un bloc <code class="docutils literal notranslate"><span class="pre">allumer</span> <span class="pre">x</span> <span class="pre">panier</span></code> au début du bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code>. Sans ce bloc, le panier disparaît lorsqu’il entre en collision avec un fruit.<br/>
-L’ajout de ce bloc permet de rallumer la led associée au panier avant la chute d’un fruit.</p>
-<p>Fin de l’étape 3, le jeu détecte la collision entre le panier et le fruit.</p>
+</details><p>Fin de l’étape 3, le jeu détecte la collision entre le panier et le fruit et compte le score !</p>
 </section>
 </section>
 <section id="etape-4-gestion-des-echecs">
 <h2>Étape 4 - Gestion des échecs<a class="headerlink" href="#etape-4-gestion-des-echecs" title="Lien permanent vers ce titre">¶</a></h2>
 <section id="exercice-10">
 <h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Un échec se produit lorsqu’un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur pert une vie.</p>
-<p>L’échec n’est pas seulement le contraire du fruit qui tombe dans le panier, car cela inclurait également tous les cas où le fruit est en train de tomber.<br/>
-On cliquant 2 fois sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code> du bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span></code> de la collision, on peut ajouter un <code class="docutils literal notranslate"><span class="pre">sinon</span> <span class="pre">si</span> <span class="pre">...</span></code> qui permet de tester si on a raté le fruit.</p>
-<ul class="simple">
-<li><p>S’il n’y a pas de collision, quelle condition doit-on avoir pour que le fruit soit tombé à côté du panier ? (index = 4)</p></li>
-<li><p>Que se passe-t-il lorsqu’on rate un fruit ? (perte de vie, par exemple)</p></li>
-</ul>
-<p>Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span> <span class="pre">si</span> <span class="pre">...</span></code>, ajoutez un test pour vérifier si le fruit a touché le sol (i.e. <code class="docutils literal notranslate"><span class="pre">index</span></code> vaut 4).<br/>
-Comme pour la collision, on peut ajouter un signal visuel pour signifier l’échec au joueur. Dans ce cas, il ne faut pas oublier d’<code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code>. Il ne faut pas non plus oublier d’initialiser le nombre de <code class="docutils literal notranslate"><span class="pre">vies</span></code> au démarrage.</p>
+<p>Un échec se produit lorsqu’un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur pert une vie. On peut commencer par définir une variable <code class="docutils literal notranslate"><span class="pre">vie</span></code> initialisée à 3 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.</p>
+<p>L’échec se produit lorsque le test de collision échoue donc quand la condition de collision n’est pas respectée.</p>
+<p>Cliquez sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code> du bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span></code> de la collision pour faire apparaître un bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>. Ce bloc est exécuté si la condition de collision n’est pas respectée, c’est-à-dire si le fruit est arrivé en bas de l’écran mais n’est pas dans le panier.</p>
+<p>Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, ajoutez les blocs permettant de diminuer le nombre de vies de 1 et d’afficher une icône (par exemple un crâne) pour signaler que le fruit n’a pas été attrapé. N’oubliez pas d’<code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> pour enlever l’icône.</p>
+<p><img alt="img" src="../_images/m8.gif"/></p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -645,11 +653,10 @@ Montrez moi les étapes à suivre<div class="summary-down docutils">
 <p class="card-text">Voici les étapes à suivre:</p>
 <ol class="simple">
 <li><p class="card-text">Créez une nouvelle variable nommée <code class="docutils literal notranslate"><span class="pre">vie</span></code> et définissez-la à 3 <code class="docutils literal notranslate"><span class="pre">au</span> <span class="pre">démarrage</span></code>.</p></li>
-<li><p class="card-text">Cliquez 2x sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code> du bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span></code> de la collision afin de faire apparaître le <code class="docutils literal notranslate"><span class="pre">sinon</span> <span class="pre">si</span> <span class="pre">...</span></code>.</p></li>
-<li><p class="card-text">Ajoutez le bloc permettant de tester l’échec dans le <code class="docutils literal notranslate"><span class="pre">sinon</span> <span class="pre">si</span> <span class="pre">...</span></code>. Pour rappel, la condition d’échec est que le fruit soit arrivé en bas de l’écran et donc que <code class="docutils literal notranslate"><span class="pre">index</span></code> vaut 4.</p></li>
-<li><p class="card-text">Si la condition d’échec est respectée, affichez un smiley triste avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>.</p></li>
-<li><p class="card-text">Si la condition d’échec est respectée, diminuez la <code class="docutils literal notranslate"><span class="pre">vie</span></code> de 1.</p></li>
-<li><p class="card-text">Si la condition d’échec est respectée, effacez l’écran.</p></li>
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code> au bloc <code class="docutils literal notranslate"><span class="pre">si</span></code> de la collision en cliquant sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, diminuez la variable <code class="docutils literal notranslate"><span class="pre">vie</span></code> de 1 avec le bloc <code class="docutils literal notranslate"><span class="pre">modifier</span> <span class="pre">vie</span> <span class="pre">de</span> <span class="pre">-1</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, affichez une icône (par exemple un crâne) avec le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">l'icône</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">effacer</span> <span class="pre">l'écran</span></code> pour effacer l’icône.</p></li>
 </ol>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
@@ -661,7 +668,7 @@ Voir la solution<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><img alt="img" src="../_images/echec1.png"/></p>
 </div>
-</details><p>Fin de l’étape 4, le jeu détecte quand le joueur rate un fruit.</p>
+</details><p>Fin de l’étape 4, le jeu détecte quand le joueur rate un fruit et le joueur perd une vie !</p>
 </section>
 </section>
 <section id="etape-5-fin-du-jeu">
@@ -677,6 +684,7 @@ Voir la solution<div class="summary-down docutils">
 <li><p>Que doit-on faire lorsque le jeu est fini ? (afficher le score)</p></li>
 </ul>
 <p>L’arrêt du jeu s’implémente simplement en conditionnant la chute des fruits au fait d’avoir au moins une vie, l’alternative (sinon) étant la fin de partie avec affichage du score.</p>
+<p><img alt="img" src="../_images/m9.gif"/></p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Montrez moi les étapes à suivre<div class="summary-down docutils">
@@ -686,8 +694,10 @@ Montrez moi les étapes à suivre<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Voici les étapes à suivre:</p>
 <ol class="simple">
-<li><p class="card-text">Ajoutez la condition testant que <code class="docutils literal notranslate"><span class="pre">vie</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> tout autour du code se trouvant dans le bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code>. Ainsi les fruits ne tomberont que s’il reste des vies au joueur.</p></li>
-<li><p class="card-text">Si la condition n’est <strong>pas</strong> respectée (c’est à dire s’il reste des vies), alors ajoutez le bloc <code class="docutils literal notranslate"><span class="pre">montrer</span> <span class="pre">nombre</span></code> afin d’afficher le score.</p></li>
+<li><p class="card-text">Ajoutez un bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span> <span class="pre">alors</span> <span class="pre">...</span></code> <strong>autour</strong> de tout votre code (tout le contenu du bloc <code class="docutils literal notranslate"><span class="pre">toujours</span></code>).</p></li>
+<li><p class="card-text">Remplacez <code class="docutils literal notranslate"><span class="pre">vrai</span></code> par le <strong>test de comparaison</strong> qui permet de contrôler que le nombre de vies est &gt; 0.</p></li>
+<li><p class="card-text">Cliquez sur le petit <code class="docutils literal notranslate"><span class="pre">+</span></code> du bloc <code class="docutils literal notranslate"><span class="pre">si</span> <span class="pre">...</span></code> pour faire apparaître un bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>.</p></li>
+<li><p class="card-text">Dans le bloc <code class="docutils literal notranslate"><span class="pre">sinon</span></code>, affichez le score avec le bloc <code class="docutils literal notranslate"><span class="pre">afficher</span> <span class="pre">le</span> <span class="pre">nombre</span></code> (onglet BASE).</p></li>
 </ol>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
@@ -697,7 +707,7 @@ Voir la solution<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><img alt="img" src="../_images/gameover1.png"/></p>
+<p class="card-text"><img alt="img" src="../_images/game_over1.png"/></p>
 </div>
 </details><p>Ceci termine l’implémentation de base de ce jeu sur micro:bit.</p>
 <details class="sphinx-bs dropdown card mb-3">
@@ -717,14 +727,14 @@ Voir le code final<div class="summary-down docutils">
 <p>Pour rendre le jeu plus intéressant, voici une liste de suggestions:</p>
 <ul class="simple">
 <li><p>Augmenter la vitesse de chute des fruits après un certain nombre de points</p></li>
-<li><p>Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité pour faire la distinction)</p></li>
+<li><p>Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité des leds pour faire la distinction)</p></li>
 <li><p>Faire déplacer le panier en inclinant la carte micro:bit au lieu des boutons A et B</p></li>
 <li><p>Faire tomber plusieurs fruits en même temps</p></li>
 <li><p>Faire tomber certains fruits légèrement en diagonal</p></li>
 <li><p>Elargir le panier à 2 leds</p></li>
 <li><p>Etc…</p></li>
 </ul>
-<p>Nous n’avons fait que gratouiller la surface de ce qu’il est possible de programmer sur un micro:bit. Rendez-vous <a class="reference external" href="https://makecode.microbit.org/">ici</a> et explorez les différents projets.</p>
+<p>Nous n’avons fait que gratouiller la surface de ce qu’il est possible de programmer sur un micro:bit. Rendez-vous <a class="reference external" href="https://makecode.microbit.org/">ici</a> pour explorer les différents projets.</p>
 </section>
 </section>
 

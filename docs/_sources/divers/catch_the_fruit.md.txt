@@ -37,10 +37,12 @@ Sur l'interface de programmation, vous voyez 2 blocs déjà présents:
 ### Exercice 1
 
 Chaque led possède des coordonnées `x` et `y`. Le led tout en haut à gauche se trouve aux coordonnées `(0, 0)` tandis que celui tout en bas à droite se trouve aux coordonnées `(4, 4)`.  
-Nous allons commencer par faire tomber le fruit sur la colonne en x=1, c'est à dire la 2ème colonne en partant de la gauche.  
+Nous allons commencer par faire tomber le fruit sur la colonne en `x=1`, c'est à dire la 2ème colonne en partant de la gauche.
 
-Ajoutez 5 blocs `allumer` dans le bloc `toujours` pour allumer tous les blocs de la colonne en x=1.  
+Ajoutez 5 blocs `allumer` dans le bloc `toujours` pour allumer tous les blocs de la colonne en `x=1`.  
 Ajoutez aussiun bloc `pause` de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.
+
+![img](../media/microbit/m1.gif)
 
 ```{dropdown} Voir la solution
 ![img](../media/tomberfruit0.png)
@@ -49,6 +51,8 @@ Ajoutez aussiun bloc `pause` de 500ms après chaque allumage pour que le fruit n
 ### Exercice 2
 
 Ajoutez à présent 5 blocs `éteindre` pour allumer et éteindre successivement toutes les leds de la colonne du haut vers le bas.
+
+![img](../media/microbit/m2.gif)
 
 ```{dropdown} Voir la solution
 ![img](../media/tomberfruit1.png)
@@ -75,6 +79,12 @@ L'idée est donc d'utiliser une boucle qui va répéter les instructions tout en
 Utilisez le bloc `pour index variant de 0 à 4` qui va créer une **boucle** dans laquelle `index` va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu'il nous faut pour les valeurs de `y`.  
 `index` est ici ce que l'on appelle une `variable`. Sa valeur va **varier** de 0 à 4 à chaque tour. Il faut donc ensuite remplacer les valeurs de `y` par `index`.
 
+```{admonition}
+:class: note
+Visuellement, le résultat doit être le même que précédemment, mais le code est plus court et plus lisible.
+![img](../media/microbit/m2.gif)
+```
+
 ```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
@@ -99,6 +109,8 @@ Dès l'instant où on veut stocker de l'information pour pouvoir la réutiliser,
 
 Utilisez le menu `Variables` pour créer une variable `colonne` et lui donner une valeur aléatoire avant la chute de chaque fruit.
 
+![img](../media/microbit/m3.gif)
+
 ```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
@@ -111,7 +123,7 @@ Voici les étapes à suivre:
 ![img](../media/tomberfruit3.png)
 ```
 
-Fin de l'étape 1, on a un fruit qui tombe dans une colonne choisie aléatoirement.
+Fin de l'étape 1, on a un fruit qui tombe dans une colonne choisie aléatoirement !
 
 ## Étape 2 - Déplacer le panier
 
@@ -126,6 +138,8 @@ Pour commencer il faut choisir comment sera représenté le panier. Nous utilise
 
 Définissez une variable `panier` pour la coordonnée horizontale du panier qui va varier et initiez-la à 0 au début du programme.
 N'oubliez pas d'allumer les leds correspondantes, sinon on ne verra pas le panier !
+
+![img](../media/microbit/m4.gif)
 
 ```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
@@ -148,6 +162,8 @@ Nous allons utiliser les boutons `A` et `B` pour les déplacements gauche et dro
 * Que doit-il se passer visuellement ? (éteindre les leds de la positon actuelle, faire le déplacement, allumer les leds de la nouvelle position)
 
 Utilisez les blocs `lorsque le bouton ... est pressé` et ajoutez-y les blocs permettant de déplacer le panier. Le bloc `modifier panier de 1` permet d'augmenter la valeur de la variable `panier` de 1. Changez le 1 en -1 pour diminuer sa valeur.
+
+![img](../media/microbit/m5.gif)
 
 ```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
@@ -178,7 +194,9 @@ Dans notre cas, `si le panier ne va pas sortir de l'écran, alors il bouge`.
 
 ![img](../media/logique_microbit.png)
 
-Donc pour le bouton `A`, on exécute les blocs permettant le déplacement du panier que s'il n'est pas déjà tout à gauche.
+Donc pour le bouton `A`, on exécute les blocs permettant de déplacer le panier que s'il n'est pas déjà tout à gauche.
+
+![img](../media/microbit/m6.gif)
 
 ```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
@@ -192,7 +210,7 @@ Voici les étapes à suivre:
 ![img](../media/panier3.png)
 ```
 
-Fin de l'étape 2, on a un panier déplaçable à l'aide des boutons.
+Fin de l'étape 2, on a un panier déplaçable à l'aide des boutons !
 
 ## Étape 3 - Détecter lorsqu'un fruit est attrapé
 
@@ -202,84 +220,87 @@ Il s'agit maintenant de détecter lorsque le fruit est attrapé par le panier, c
 
 Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais comme le micro:bit ne *voit* pas, il faut trouver un moyen pour qu'il puisse vérifier s'il y a collision ou non.
 
-* A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque les coordonnées du fruit et du panier sont les mêmes en `x` et en `y`)
-* Quelles sonts les coordonnées du panier et du fruit ? (comme elles changent, elles sont dans des variables. Fruit(`colonne`, `index`) et panier(`panier`, `4`))
-* Comment s'écrit l'égalité des coordonnées avec ces variables ? (`colonne == panier ET index == 4`)
+* A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque le fruit est en bas de l'écran et que sa colonne est la même que celle du panier)
+* Quelles sonts les coordonnées en `x` du panier et du fruit ? (comme elles changent, elles sont dans des variables: `colonne` pour le fruit et `panier` pour le panier)
+* Comment s'écrit l'égalité des coordonnées avec ces variables ? (`colonne == panier`)
 
-Traduisez cette égalité avec les blocs de `comparaison` à votre disposition dans la section `Logique`.  
-Placez ensuite le test de comparaison dans un bloc `si ... alors ...`.
+On va donc tester si la variable `colonne` (position du fruit) est égale à la variable `panier` et on va faire ce test juste après que le fruit soit tombé en bas de l'écran (i.e. à la fin de la boucle `pour index variant de 0 à 4`).
 
-Nous verrons ensuite où nous devrons placer ce test de collision.
+Utilisez un bloc `si ... alors ...` pour faire le test de collision et afficher une icône si le fruit est attrapé avec le bloc `montrer l'icône`. Ajoutez aussi un bloc `effacer l'écran` pour enlever l'icône.
+
+![img](../media/microbit/m7.gif)
+
+```{dropdown} (Aide) Montrez moi les étapes à suivre
+Voici les étapes à suivre:
+
+1. Ajoutez un bloc `si ... alors ...` juste après la boucle `pour index variant de 0 à 4`.
+2. Dans le bloc `si`, ajoutez un test de comparaison pour vérifier si `colonne == panier`.
+3. Si la condition est respectée, affichez une icône avec le bloc `montrer l'icône`.
+4. Si la condition est respectée, ajoutez un bloc `effacer l'écran` pour effacer l'icône.
+```
 
 ```{dropdown} Voir la solution
 ![img](../media/collision1.png)
 ```
 
+``` {admonition}
+:class: note
+Vous remarquerez que nous avons ajouté un bloc `allumer x panier` au début du bloc `toujours`. Sans ce bloc, le panier disparaît lorsqu'il entre en collision avec un fruit.  
+L'ajout de ce bloc permet de rallumer la led associée au panier avant la chute d'un fruit.
+```
+
 ### Exercice 9
 
-On a maintenant un test permettant de détecter la collision entre un fruit et le panier, mais on fait quoi ?  
-Il s'agit de déterminer à quel moment du jeu il faut faire ce test, mais aussi quelles sont les actions à réaliser lorsqu'il y a collision.
+On aimerait maintenant compter le nombre de fruits attrapés, c'est-à-dire le `score` du joueur !
 
-* A quel moment veut-on tester la collision ? (après chaque déplacement du fruit, dans la boucle `répéter`)
 * Que doit-il se passer lorsqu'on attrape un fruit ? (on augment le score de 1)
 * Comment faire pour tenir le score à jour ? (il faut utiliser une variable)
 
 Vous devez donc créer une nouvelle variable pour le `score` que vous allez initialiser à 0 `au démarrage`.  
-Le test de collision doit se faire à chaque déplacement du fruit.  
-Lorsqu'une collision a lieu, augmentez le score de 1.
-
-En outre, on peut également *fortement* suggérer de donner un signal visuel au joueur lorsqu'il marque un point, avec l'apparition d'un smiley par exemple.
+Lorsqu'une collision a lieu, augmentez le score de 1. On s'occupera de l'affichage du score plus tard quand on fera le game over, **il n'y a donc pas de nouveau visuel à cette étape**.
 
 ```{dropdown} (Aide) Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Créez une nouvelle variable nommée `score` et définissez-la à 0 `au démarrage`.
-2. Ajoutez le bloc conditionnel testant la collision à la fin de la boucle faisant tomber le fruit.
-3. Si la condition est respectée, affichez un smiley avec le bloc `montrer l'icône`.
-4. Si la condition est respectée, augmentez le `score` de 1.
-5. Si la condition est respectée, ajoutez un bloc `effacer l'écran` afin d'effacer le smiley.
+2. Si la condition de collision est respectée, augmentez le `score` de 1 avec le bloc `modifier score de 1`.
 ```
 
 ```{dropdown} Voir la solution
 ![img](../media/collision2.png)
 ```
 
-Vous remarquerez que nous avons ajoué un bloc `allumer x panier` au début du bloc `toujours`. Sans ce bloc, le panier disparaît lorsqu'il entre en collision avec un fruit.  
-L'ajout de ce bloc permet de rallumer la led associée au panier avant la chute d'un fruit.
-
-Fin de l'étape 3, le jeu détecte la collision entre le panier et le fruit.
+Fin de l'étape 3, le jeu détecte la collision entre le panier et le fruit et compte le score !
 
 ## Étape 4 - Gestion des échecs
 
 ### Exercice 10
 
-Un échec se produit lorsqu'un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur pert une vie.
+Un échec se produit lorsqu'un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur pert une vie. On peut commencer par définir une variable `vie` initialisée à 3 `au démarrage`.
 
-L'échec n'est pas seulement le contraire du fruit qui tombe dans le panier, car cela inclurait également tous les cas où le fruit est en train de tomber.  
-On cliquant 2 fois sur le petit `+` du bloc `si ...` de la collision, on peut ajouter un `sinon si ...` qui permet de tester si on a raté le fruit.
+L'échec se produit lorsque le test de collision échoue donc quand la condition de collision n'est pas respectée.
 
-* S'il n'y a pas de collision, quelle condition doit-on avoir pour que le fruit soit tombé à côté du panier ? (index = 4)
-* Que se passe-t-il lorsqu'on rate un fruit ? (perte de vie, par exemple)
+Cliquez sur le petit `+` du bloc `si ...` de la collision pour faire apparaître un bloc `sinon`. Ce bloc est exécuté si la condition de collision n'est pas respectée, c'est-à-dire si le fruit est arrivé en bas de l'écran mais n'est pas dans le panier.
 
-Dans le bloc `sinon si ...`, ajoutez un test pour vérifier si le fruit a touché le sol (i.e. `index` vaut 4).  
-Comme pour la collision, on peut ajouter un signal visuel pour signifier l'échec au joueur. Dans ce cas, il ne faut pas oublier d'`effacer l'écran`. Il ne faut pas non plus oublier d'initialiser le nombre de `vies` au démarrage.
+Dans le bloc `sinon`, ajoutez les blocs permettant de diminuer le nombre de vies de 1 et d'afficher une icône (par exemple un crâne) pour signaler que le fruit n'a pas été attrapé. N'oubliez pas d'`effacer l'écran` pour enlever l'icône.
+
+![img](../media/microbit/m8.gif)
 
 ```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
 1. Créez une nouvelle variable nommée `vie` et définissez-la à 3 `au démarrage`.
-2. Cliquez 2x sur le petit `+` du bloc `si ...` de la collision afin de faire apparaître le `sinon si ...`.
-3. Ajoutez le bloc permettant de tester l'échec dans le `sinon si ...`. Pour rappel, la condition d'échec est que le fruit soit arrivé en bas de l'écran et donc que `index` vaut 4.
-4. Si la condition d'échec est respectée, affichez un smiley triste avec le bloc `montrer l'icône`.
-5. Si la condition d'échec est respectée, diminuez la `vie` de 1.
-6. Si la condition d'échec est respectée, effacez l'écran.
+2. Ajoutez un bloc `sinon` au bloc `si` de la collision en cliquant sur le petit `+`.
+3. Dans le bloc `sinon`, diminuez la variable `vie` de 1 avec le bloc `modifier vie de -1`.
+4. Dans le bloc `sinon`, affichez une icône (par exemple un crâne) avec le bloc `montrer l'icône`.
+5. Dans le bloc `sinon`, ajoutez un bloc `effacer l'écran` pour effacer l'icône.
 ```
 
 ```{dropdown} Voir la solution
 ![img](../media/echec1.png)
 ```
 
-Fin de l'étape 4, le jeu détecte quand le joueur rate un fruit.
+Fin de l'étape 4, le jeu détecte quand le joueur rate un fruit et le joueur perd une vie !
 
 ## Étape 5 - Fin du jeu
 
@@ -296,15 +317,19 @@ Nous allons donc faire s'arrêter le jeu selon une condition à déterminer, pui
 
 L'arrêt du jeu s'implémente simplement en conditionnant la chute des fruits au fait d'avoir au moins une vie, l'alternative (sinon) étant la fin de partie avec affichage du score.
 
+![img](../media/microbit/m9.gif)
+
 ```{dropdown} Montrez moi les étapes à suivre
 Voici les étapes à suivre:
 
-1. Ajoutez la condition testant que `vie > 0` tout autour du code se trouvant dans le bloc `toujours`. Ainsi les fruits ne tomberont que s'il reste des vies au joueur.
-2. Si la condition n'est **pas** respectée (c'est à dire s'il reste des vies), alors ajoutez le bloc `montrer nombre` afin d'afficher le score.
+1. Ajoutez un bloc `si ... alors ...` **autour** de tout votre code (tout le contenu du bloc `toujours`).
+2. Remplacez `vrai` par le **test de comparaison** qui permet de contrôler que le nombre de vies est > 0.
+3. Cliquez sur le petit `+` du bloc `si ...` pour faire apparaître un bloc `sinon`. 
+4. Dans le bloc `sinon`, affichez le score avec le bloc `afficher le nombre` (onglet BASE).
 ```
 
 ```{dropdown} Voir la solution
-![img](../media/gameover1.png)
+![img](../media/game_over1.png)
 ```
 
 Ceci termine l'implémentation de base de ce jeu sur micro:bit.
@@ -320,11 +345,11 @@ Une version du jeu complet est disponible {download}`ici<../data/microbit-catch-
 Pour rendre le jeu plus intéressant, voici une liste de suggestions:
 
 * Augmenter la vitesse de chute des fruits après un certain nombre de points
-* Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité pour faire la distinction)
+* Faire tomber de manière aléatoire des fruits pourris / bombes qui font perdre une vie si atttrapés (on peut jouer avec la luminosité des leds pour faire la distinction)
 * Faire déplacer le panier en inclinant la carte micro:bit au lieu des boutons A et B
 * Faire tomber plusieurs fruits en même temps
 * Faire tomber certains fruits légèrement en diagonal
 * Elargir le panier à 2 leds
 * Etc...
 
-Nous n'avons fait que gratouiller la surface de ce qu'il est possible de programmer sur un micro:bit. Rendez-vous [ici](https://makecode.microbit.org/) et explorez les différents projets.
+Nous n'avons fait que gratouiller la surface de ce qu'il est possible de programmer sur un micro:bit. Rendez-vous [ici](https://makecode.microbit.org/) pour explorer les différents projets.
