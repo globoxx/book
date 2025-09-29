@@ -40,7 +40,7 @@ Chaque led possède des coordonnées `x` et `y`. Le led tout en haut à gauche s
 Nous allons commencer par faire tomber le fruit sur la colonne en `x=1`, c'est à dire la 2ème colonne en partant de la gauche.
 
 Ajoutez 5 blocs `allumer` dans le bloc `toujours` pour allumer tous les blocs de la colonne en `x=1`.  
-Ajoutez aussiun bloc `pause` de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.
+Ajoutez aussi un bloc `pause` de 500ms après chaque allumage pour que le fruit ne tombe pas trop vite.
 
 ![img](../media/microbit/m1.gif)
 
@@ -74,7 +74,7 @@ Dans votre code, quelle est l'unique valeur qui change à chaque répétition de
 La coordonnée verticale `y` est la seule à changer entre chaque répétition. C'est le cas car le fruit tombe du haut vers le bas, et donc la coordonnée `y` est augmentée de 1 à chaque tour.
 ```
 
-L'idée est donc d'utiliser une boucle qui va répéter les instructions tout en augmentant `y` de 1 à chaque tour afin de faire tomber le fruit.
+L'idée est donc d'utiliser **une boucle** qui va répéter les instructions tout en augmentant `y` de 1 à chaque tour afin de faire tomber le fruit.
 
 Utilisez le bloc `pour index variant de 0 à 4` qui va créer une **boucle** dans laquelle `index` va prendre successivement les valeurs de 0 à 4, ce qui est exactement ce qu'il nous faut pour les valeurs de `y`.  
 `index` est ici ce que l'on appelle une `variable`. Sa valeur va **varier** de 0 à 4 à chaque tour. Il faut donc ensuite remplacer les valeurs de `y` par `index`.
@@ -185,7 +185,6 @@ Si on appuie de nombreuses fois sur le bouton `A` ou `B`, le panier disparait, i
 On doit empêcher le panier d'aller plus loin que les bords de l'écran.
 
 * Pourquoi est-ce que le panier sort de l'écran ? (la variable `panier` continue d'être modifiée pour finalement allumer des leds à des coordonnées qui n'existent pas)
-* Comment empêcher la modification des variables ? (conditionner les modifications selon la position du panier)
 * Sous quelle condition le panier peut-il se déplacer à gauche ? (si sa position en `x` est > 0)
 * Sous quelle condition le panier peut-il se déplacer à droite ? (si sa position en `x` est < 4)
 
@@ -193,8 +192,6 @@ On introduit ici la structure de contrôle conditionnelle `si ... alors ...` et 
 Dans notre cas, `si le panier ne va pas sortir de l'écran, alors il bouge`.
 
 ![img](../media/logique_microbit.png)
-
-Donc pour le bouton `A`, on exécute les blocs permettant de déplacer le panier que s'il n'est pas déjà tout à gauche.
 
 ![img](../media/microbit/m6.gif)
 
@@ -218,12 +215,12 @@ Fin de l'étape 2, on a un panier déplaçable à l'aide des boutons !
 
 Il s'agit maintenant de détecter lorsque le fruit est attrapé par le panier, c'est-à-dire lorqu'il y a collision entre le fruit et le panier.
 
-Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais comme le micro:bit ne *voit* pas, il faut trouver un moyen pour qu'il puisse vérifier s'il y a collision ou non.
+Visuellement il est facile de *voir* quand le fruit tombe dans le panier, mais comme **le micro:bit ne *voit* pas**, il faut trouver un moyen pour qu'il puisse vérifier s'il y a collision ou non.
 
 * A quelle condition y a-t-il collision entre le fruit et le panier ? (lorsque le fruit est en bas de l'écran et que sa colonne est la même que celle du panier)
-* Quelles sonts les coordonnées en `x` du panier et du fruit ? (comme elles changent, elles sont dans des variables: `colonne` pour le fruit et `panier` pour le panier)
+* Quelles sont les coordonnées en `x` du panier et du fruit ? (comme elles changent, elles sont dans des variables: `colonne` pour le fruit et `panier` pour le panier)
 
-On va donc tester si la variable `colonne` (position du fruit) est égale à la variable `panier` et on va faire ce test juste après que le fruit soit tombé en bas de l'écran (i.e. à la fin de la boucle `pour index variant de 0 à 4`).
+On va donc tester si la variable `colonne` est égale à la variable `panier` et on va faire ce test juste après que le fruit soit tombé en bas de l'écran (i.e. à la fin de la boucle `pour index variant de 0 à 4`).
 
 Utilisez un bloc `si ... alors ...` pour faire le test de collision et afficher une icône si le fruit est attrapé avec le bloc `montrer l'icône`. Ajoutez aussi un bloc `effacer l'écran` pour enlever l'icône.
 
@@ -252,7 +249,7 @@ L'ajout de ce bloc permet de rallumer la led associée au panier avant la chute 
 
 On aimerait maintenant compter le nombre de fruits attrapés, c'est-à-dire le `score` du joueur !
 
-* Que doit-il se passer lorsqu'on attrape un fruit ? (on augment le score de 1)
+* Que doit-il se passer lorsqu'on attrape un fruit ? (on augmente le score de 1)
 * Comment faire pour tenir le score à jour ? (il faut utiliser une variable)
 
 Vous devez donc créer une nouvelle variable pour le `score` que vous allez initialiser à 0 `au démarrage`.  
@@ -275,7 +272,7 @@ Fin de l'étape 3, le jeu détecte la collision entre le panier et le fruit et c
 
 ### Exercice 10
 
-Un échec se produit lorsqu'un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur pert une vie. On peut commencer par définir une variable `vie` initialisée à 3 `au démarrage`.
+Un échec se produit lorsqu'un fruit finit sa chute en dehors du panier. Dans ce cas, le joueur perd une vie. On peut commencer par définir une variable `vie` initialisée à 3 `au démarrage`.
 
 L'échec se produit lorsque le test de collision échoue donc quand la condition de collision n'est pas respectée.
 
