@@ -18,29 +18,30 @@ Sachez par contre que votre site **sera hébergé et accessible pour le reste du
 ```{admonition} Pour ce qui est de la forme, voici les contraintes à respecter:
 :class: note
 
-**Structure et contenu de base:**
-- Au minimum 4 pages HTML liées entre elles par des liens hypertextes
+**Consignes de base:**
+- Au minimum 3 pages HTML liées entre elles par des liens hypertextes (2 pages pour les projets en solo)
 - Un seul fichier `.css` est utilisé pour l'ensemble de votre site
-- Les 4 pages ont toutes une structure différente (pas de copié collé avec simplement le texte qui change)
-- Les 4 pages ont suffisamment de contenu visuel et textuel (elles ne semblent pas vides)
+- Les 3 pages ont toutes une structure différente (pas de copié collé avec simplement le texte ou les images qui changent)
+- Les 3 pages ont suffisamment de contenu visuel et textuel (elles ne semblent pas vides)
 - Un menu vertical ou horizontal permet de passer sur les différentes pages du site
 - Un logo cliquable permet de revenir à l'accueil du site depuis n'importe quelle page
+- Une interaction inédite est présente sur le site (ex: un formulaire, un bouton qui fait quelque chose, etc.)
+- **Un travail régulier a été constaté lors des TPs** (ex: pas de site fait juste avant le rendu sans que j'ai pu en voir l'évolution)
 
 **Design et ergonomie:**
 - Le design et le style des pages sont cohérents et consistants
 - Le site est facile d'utilisation, il est agréable de naviguer dessus (ex: les liens sont bien visibles)
-- Les images du site sont de bonne qualité
+- Les visuels sont de bonne qualité
 - La syntaxe et l'orthographe des textes sont correctes
 
 **Utilisation pertinente de balises html:**
-- Le nom du site doit apparaître dans l'onglet du navigateur
+- Le nom du site doit apparaître dans l'onglet du navigateur pour chaque page
 - Votre site doit au minimum avoir un titre bien visible en page d'accueil
 - Tous vos paragraphes doivent être dans des balises `<p>`
-- Au moins un mot de votre site doit être important et apparaître en gras
-- Au moins une liste (ordonnée ou non) doit être présente
-- Au moins un lien absolu vers un site externe doit être présent
+- Au moins un lien vers un site externe doit être présent
+- Au moins une liste ordonnée ou non ordonnée est présente
 - Des images doivent être présentes et avoir des tailles adaptées
-- Au moins une infobulle est présente sur une image ou un lien
+- Au moins une infobulle est présente sur toute le site
 
 **Utilisation pertinente de propriétés css:**
 - Des classes css pertinentes sont utilisées avec les balises `<span>` et `<div>`
@@ -48,20 +49,21 @@ Sachez par contre que votre site **sera hébergé et accessible pour le reste du
 - Au moins une propriété de style de texte est utilisée (ex: `text-align`)
 - Des bordures et ombres sont présentes
 - Des blocs `div` sont utilisés de manière pertinente pour regrouper des éléments
-- Des marges intérieures et extérieures sont utilisées
-- Des blocs sont alignés horizontalement avec Flexbox
+- Des marges intérieures et/ou extérieures sont présentes
+- Des blocs sont alignés horizontalement avec Flexbox (ex: menu horizontal)
 - Au moins un élément change de style au survol de la souris
 
 **Structure du code et du projet:**
 - Toutes les images sont regroupées dans un sous-dossier `images`
-- Le code ne doit pas contenir d'erreurs de syntaxe (ex: balises mal formattées)
+- Le code ne contient pas trop d'erreurs de syntaxe (ex: balises mal formattées)
 - Le code doit être propre et facilement lisible (indentations/décalages à droite corrects)
 
 **Bonus:**
 - Le site contient plus d'éléments que le minimum requis
-- Le design du site est particulièrement beau ou original
-- Le site contient un élément css particulièrement complexe non vu en classe
-- Un exploit technique dépassant le cadre du cours est présent (ex: utilisation de JavaScript)
+- Le site est particulièrement beau ou original
+- Le site contient un élément css ou javascript particulièrement complexe non vu en classe
+- Le site contient des éléments créés par vous-même (ex: images, logo, videos, etc.)
+- Un exploit technique dépassant le cadre du cours est présent
 ```
 
 Suivre le stric minimum des critères du cahier des charges vous garantira la note de 5.  
