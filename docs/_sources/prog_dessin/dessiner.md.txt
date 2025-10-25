@@ -2,7 +2,7 @@
 
 # 1. Dessiner
 
-Dans ce chapitre, nous allons explorer la programmation par le dessin. Dans ce contexte, un programme est une séquence d’instructions permettant de générer un image.  
+Dans ce chapitre, nous allons explorer la programmation par le dessin. Dans ce contexte, **un programme est une séquence d’instructions** permettant de générer un image.  
 Nous allons voir que:
 
 - l’expression `from turtle import *` met à disposition les fonctions de dessin,
@@ -34,7 +34,7 @@ Ci-dessous, vous trouvez notre premier programme de trois lignes:
 - avec `forward(150)`, nous faisons avancer la tortue de 150 pixels.
 
 ````{exercise}
-Ajoutez d'autres instructions telles que `backward()`, `left()` et `right()` pour faire un dessin.
+Ajoutez d'autres instructions telles que `backward()`, `left()` et `right()` pour faire un dessin et voir un peu comment cela fonctionne. Appuyez sur bouton bleu "Exécuter" pour lancer le programme.
 
 ```{codeplay}
 :file: forward1.py
@@ -73,7 +73,7 @@ Ce rectangle a les propriétés suivantes :
 - l'axe vertical y, s'étend de -200 à +200 (en haut).
 
 `````{exercise}
-Ajoutez une instruction dans le code ci-dessous pour mener la tortue tout en bas du canevas. Ensuite, ajoutez une diagonale.
+Ajoutez une instruction dans le code ci-dessous pour mener la tortue tout en bas à droite du canevas. Ajoutez ensuite une diagonale passant par le centre (l'angle est de 33.7 degrés avec l'horizontale).
 
 ```{codeplay}
 :file: forward2.py
@@ -93,26 +93,17 @@ forward(200)
 ...
 
 backward(400)
-right(90)
-forward(300)
-right(45)
-backward(500)
+left(90)
+backward(300)
+right(33.7)
+forward(722)
 ```
 ````
 `````
 
-```{question}
-La largeur de la zone de dessin de la tortue est de
-
-{f}`200 pixels`   
-{f}`400 pixels`  
-{v}`600 pixels`  
-{f}`800 pixels`  
-```
-
 ## Une séquence
 
-Un programme est une séquence d'instructions. Le bloc de 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner, etc.
+Un programme est une **séquence d'instructions**. Le bloc de 8 instructions ci-dessous indique comment dessiner un carré. La tortue doit avancer, tourner, avancer, tourner, etc.
 
 `````{exercise}
 Modifiez ce code pour en faire un rectangle, au lieu d'un carré.
@@ -150,17 +141,17 @@ Une séquence d'instructions d'un bloc est exécutée
 
 {f}`selon la priorité`  
 {f}`simultanément`  
-{v}`dans l'ordre`  
+{v}`dans l'ordre de haut en bas`  
 {f}`aléatoirement`   
 ```
 
 ## Épaisseur de ligne
 
-La fonction `width(d)` (épaisseur en anglais) permet de définir l'épaisseur de la ligne.  
+La fonction `width(d)` (largeur en anglais) permet de définir l'épaisseur du trait.  
 
 ````{exercise}
 Voici un triangle où chaque côté a une épaisseur différente.  
-Explorez différentes épaisseurs de ligne.
+Explorez différentes épaisseurs de trait.
 
 ```{codeplay}
 :file: forward5.py
@@ -180,8 +171,8 @@ forward(200)
 
 ## Couleurs
 
-La fonction `color(c)` permet de définir la couleur de ligne `c`.
-Entre les parenthèses de la fonction, vous devez écrire le nom d'une couleur en anglais, entouré d'apostrophes — par exemple `color('red')` pour dessiner une ligne rouge.
+La fonction `color(c)` permet de définir la couleur de trait `c`.
+Entre les parenthèses de la fonction, vous devez écrire le nom d'une couleur en anglais, entouré d'apostrophes — par exemple `color('red')` pour dessiner un trait rouge.
 
 La fonction `dot(d, c)` dessine un cercle de diamètre `d` et de couleur `c`. En mettant un diamètre très grand, on peut l'utiliser pour mettre une couleur de fond.
 
@@ -228,10 +219,12 @@ left(90)
 forward(60)
 left(45)
 width(5)
+color('brown')
 forward(71)
 left(90)
 forward(71)
 width(1)
+color('black')
 left(45)
 forward(60)
 left(90)
@@ -257,7 +250,7 @@ left(90)
 
 ## Raquette de ping-pong
 
-L'épaisseur de ligne est très utile dans le dessin.
+L'épaisseur de trait est très utile dans le dessin.
 
 `````{exercise}
 Transformez la raquette de ping-pong en haltères de musculation.
@@ -288,7 +281,7 @@ backward(20)
 
 ## Lunettes de soleil
 
-Voici encore un exemple où, avec un simple changement d'épaisseur, vous obtenez un effet très intéressant.
+Voici encore un exemple permettant de faire facilement des lunettes de soleil en modifiant l'épaisseur du trait.
 
 ```{codeplay}
 :file: forward8.py
@@ -324,8 +317,8 @@ Ajoutez un commentaire pour chaque ligne du programme suivant.
 ```{codeplay}
 from turtle import *
 
-width(10)       # mettre l'épaisseur du trait à 10
-forward(20)     # avancer de 20 pixels
+width(10)       # met l'épaisseur du trait à 10
+forward(20)     # avance de 20 pixels
 left(90)
 backward(60)
 ```
@@ -372,7 +365,9 @@ L'expression `left(90)` est équivalent à
 ## Exercice récapitulatif
 
 ````{exercise}
-Dessinez une chaise en faisant varier l'épaisseur du trait (les pieds sont plus fins que le reste).  
+Dessinez une simple chaise en respectant les critères suivants:
+- Utilisez au moins deux épaisseurs de trait différentes (ex: les pieds plus fins que l'assise)
+- Utilisez au moins deux couleurs différentes
 Le plus simple est de la dessiner de profil, mais si vous avez l'âme courageuse, vous pouvez tenter de la faire sous un autre angle !
 
 ```{codeplay}
@@ -382,7 +377,7 @@ from turtle import *
 # Votre code ici
 ```
 
-Téléchargez le fichier `.py`, faites une capture d'écran de votre dessin et déposez les fichiers sur Moodle à l'endroit prévu.
+Téléchargez le fichier `.py` et déposez-le sur Moodle à l'endroit prévu.
 ````
 
 <!--
