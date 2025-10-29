@@ -267,7 +267,7 @@ Voici le code HTML d'une page présentant un restaurant pour le moins douteux.
 ```
 
 En utilisant la structure en blocs vue dans ce chapitre, écrivez le fichier `style.css` permettant d'obtenir un résultat aussi proche que possible de l'image ci-dessous.  
-Vous pouvez faire l'exercice directement sur CodePen si vous le souhaitez.
+Vous pouvez faire l'exercice directement sur <a href="https://codepen.io/pen/" target="_blank">CodePen</a> si vous le souhaitez.
 
 ```{image} ../media/restaurant_boites_css.png
 ```
