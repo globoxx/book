@@ -368,6 +368,7 @@ L'expression `left(90)` est équivalent à
 Dessinez une simple chaise en respectant les critères suivants:
 - Utilisez au moins deux épaisseurs de trait différentes (ex: les pieds plus fins que l'assise)  
 - Utilisez au moins deux couleurs différentes  
+
 Le plus simple est de la dessiner de profil, mais si vous avez l'âme courageuse, vous pouvez tenter de la faire sous un autre angle !
 
 ```{codeplay}
