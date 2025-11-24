@@ -371,7 +371,7 @@ Lesquels des noms de variable sont valides ?
 
 ````{exercise}
 Reprenez l'exercice récapitulatif du chapitre 3 `répéter` et créez une fonction `spirale` pour dessiner votre spirale.
-La fonction doit avoir les paramètres suivants:
+La fonction doit avoir les 3 paramètres suivants:
 - `a`: angle entre chaque segment
 - `c`: couleur de la spirale
 - `n`: nombre de segments
@@ -390,7 +390,7 @@ def spirale(...):
     # Code de l'exercice 3
 ```
 
-Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu avec une capture d'écran du dessin.
+Téléchargez le fichier `.py` et déposez le fichier sur Moodle à l'endroit prévu.
 ````
 <!--
 from turtle import *

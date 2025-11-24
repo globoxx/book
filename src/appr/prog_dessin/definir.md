@@ -524,7 +524,7 @@ left(90)
 
 ```
 
-Téléchargez le fichier `.py`, faites une capture d'écran et déposez les fichiers sur Moodle à l'endroit prévu.
+Téléchargez le fichier `.py` et déposez le fichier sur Moodle à l'endroit prévu.
 ````
 
 <!--

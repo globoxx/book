@@ -367,18 +367,32 @@ for i in range(3):
 
 ````{exercise}
 
-Réalisez une forme inédite de votre choix à l'aide d'une boucle `for ... in [...]`.
-Le dessin que vous réalisez dans cet exercice pourra être ré-utilisé dans le projet.  
-Si vous êtes en panne d'inspiration, vous pouvez aller trouver des exemples de dessins dans le chapitre `projet`.
+Voici une fonction `star(c, d)` qui dessine une étoile de couleur `c` et de diamètre `d`.  
+Utilisez des boucles `for` pour dessiner des étoiles de différentes couleurs et tailles, afin de créer une jolie composition.
+
+Il n'est pas nécessaire d'utiliser de l'aléatoire, vous pouvez définir vous-même des listes de couleurs et de diamètres à parcourir.
 
 ```{codeplay}
 :file: ex5.py
 from turtle import *
+from random import *
+
+def star(c, d):
+    color(c)
+    for i in range(5):
+        forward(d) 
+        right(144)
+
+dot('black', 1000) # Fond noir
+up()
+goto(randint(-300, 300), randint(-200, 200)) # Position aléatoire
+down()
+star('yellow', 50)
 
 # Votre code ici...
 ```
 
-Téléchargez le fichier `.py` et déposez le sur Moodle à l'endroit prévu avec une capture d'écran du dessin.
+Téléchargez le fichier `.py` et déposez le fichier sur Moodle à l'endroit prévu.
 ````
 
 ## Et à part le dessin ?
@@ -406,7 +420,7 @@ La fonction prend donc un paramètre `notes` qui est une liste de nombres. La fo
 def calcul_moyenne(notes):
     somme = 0
     for n in notes:
-        somme += n
+        somme = somme + n
     moyenne = somme / len(notes)
     return moyenne
 
