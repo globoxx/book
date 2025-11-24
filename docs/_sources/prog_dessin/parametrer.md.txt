@@ -376,7 +376,7 @@ La fonction doit avoir les 3 paramètres suivants:
 - `c`: couleur de la spirale
 - `n`: nombre de segments
 
-Appelez votre fonction 3 fois avec des paramètres différents pour `a`, `c` et `n`, afin d'obtenir 3 spirales différentes:
+Appelez votre fonction 3 fois avec des valeurs différentes pour les paramètres `a`, `c` et `n`, afin d'obtenir 3 spirales différentes:
 
 ![spirale](../media/spirale_parametree.png)
 

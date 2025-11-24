@@ -383,7 +383,7 @@ def star(c, d):
         forward(d) 
         right(144)
 
-dot('black', 1000) # Fond noir
+dot(1000, 'black') # Fond noir
 up()
 goto(randint(-300, 300), randint(-200, 200)) # Position aléatoire
 down()
