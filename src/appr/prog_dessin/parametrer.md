@@ -156,7 +156,7 @@ def maison(d, c):
 
 backward(200)
 maison(70, 'lightblue')
-forward(100)
+forward(200)
 maison(50, 'yellow')
 ```
 ````
