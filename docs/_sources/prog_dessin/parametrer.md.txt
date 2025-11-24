@@ -124,46 +124,10 @@ maison(70)      # maison de taille 70
 ```
 ````
 
-## Positionner la maison
-
-La fonction `goto(x, y)` place la tortue à la position `(x, y)`. Cette fonction permet de positionner notre maison à un endroit précis.
-Pour désigner cette position, nous utilisons la variable `p` qui consiste en une paire `(x, y)` de coordonnées.
-
-La fonction `write(p)` écrit la position `p` sur le canevas, à la position actuelle de la tortue. Pour marquer ce point de positionnement, nous ajoutons un point (dot) comme marqueur.
-
-````{exercise}
-Aujoutez deux autres maisons de taille différente à des endroits différents.
-
-```{codeplay}
-from turtle import *
-
-def maison(p, d):
-    goto(p)     # aller à la position p
-    write(p)    # afficher cette position p
-    dot()       # ajouter un marquer (dot)
-    down()
-    forward (1.41*d)  # sol
-    left(90)
-    forward(d)  # mur droit
-    left(45)
-    forward(d)  # toit droit
-    left(90)
-    forward(d)  # toit gauche
-    left(45)
-    forward(d)  # mur gauche
-    left(90)
-    up()
-    
-maison((0, 0), 50)          # maison à la position (0, 0)
-maison((-150, 50), 70)      # maison à la position (-150, 50)
-```
-````
-
 ## Colorier la maison
 
-Maintenant nous modifions la fonction pour inclure non seulement la position, la taille, mais également la couleur de la maison comme paramètres. Les arguments de la fonction sont :
+Maintenant nous modifions la fonction pour inclure non seulement la taille mais également la couleur de la maison comme paramètres. Les arguments de la fonction sont :
 
-- `p` -- position de la maison
 - `d` -- dimension de la maison
 - `c` -- couleur de la maison
 
@@ -173,10 +137,8 @@ Aujoutez deux autres maisons de taille et couleur différente.
 ```{codeplay}
 from turtle import *
 
-def maison(p, d, c):
-    goto(p)
+def maison(d, c):
     dot()
-    down()
     fillcolor(c)
     begin_fill()
     forward (1.41*d)  # sol
@@ -190,10 +152,12 @@ def maison(p, d, c):
     forward(d)  # mur gauche
     left(90)
     end_fill()
-    up()
+    color('black')
 
-maison((0, 0), 70, 'lightblue')
-maison((150, 30), 50, 'yellow')
+backward(200)
+maison(70, 'lightblue')
+forward(100)
+maison(50, 'yellow')
 ```
 ````
 
