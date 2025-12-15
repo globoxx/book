@@ -4,8 +4,9 @@
 
 Le but de ce challenge est de retrouver des mots de passe en clair à partir de leur hash.
 
-Pour rappel, un hash est une chaîne de caractères obtenue en appliquant une fonction de hachage à un texte. Cette fonction transforme le texte en une chaîne de longueur fixe, souvent utilisée pour stocker les mots de passe de manière sécurisée.  
-Exemple: le mot de passe "chat" peut donner la chaîne "f96890c6" une fois haché.
+Pour rappel, **un hash est une chaîne de caractères obtenue en appliquant une fonction de hachage à un texte**. Cette fonction transforme le texte en une chaîne irréversible de longueur fixe.
+
+Exemple: le mot de passe `chat` donnera toujours la chaîne `a24bf9ab` une fois haché (avec la fonction de hachage utilisée dans ce challenge).
 
 ## Code fourni
 
