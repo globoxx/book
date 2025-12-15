@@ -46,7 +46,7 @@ Ce type d'attaque est appelé une attaque par force brute. Elle consiste à test
 
 ## Etoile 2
 
-Retrouver un mot de passe à 4 chiffres se fait quasi instantanément. Vous vous demandez... à partir de combien de chiffres le cassage du code prend-il plus de 1 minute ? A partir de là, **estimez après combien de chiffres le cassage du code prendra plus d'une année**.
+Retrouver un mot de passe à 4 chiffres se fait quasi instantanément. Vous vous demandez... à partir de combien de chiffres le cassage du code prend-il plus de 10 secondes ? A partir de là, **estimez après combien de chiffres le cassage du code prendra plus d'une année**.
 
 ```{codeplay}
 import time
@@ -68,7 +68,9 @@ print("Temps écoulé:", end - start, "secondes")
 ```
 
 ```{dropdown} Le temps c'est précieux !
-En pratique, les fonctions de hachages sont conçues pour être lentes, afin de ralentir les attaques par force brute. Contre-intuitif dans un monde numérique où on essaie de tout accélérer ! Cela signifie que le temps nécessaire pour casser un mot de passe peut être considérablement plus long que dans cet exercice où nous utilisons une fonction de hachage "simple" comme SHA-256.
+Sachez que le code ci-dessus tourne dans le navigateur, ce qui le rend plus lent qu'un code exécuté directement sur un ordinateur.
+
+En pratique, les fonctions de hachages sont conçues pour être lentes, afin de ralentir les attaques par force brute. Contre-intuitif dans un monde numérique où on essaie de tout accélérer ! Cela signifie que le temps nécessaire pour casser un mot de passe peut être considérablement plus long que dans cet exercice où nous utilisons une fonction de hachage très simple.
 ```
 
 ## Etoile 3
@@ -445,7 +447,7 @@ Cette attaque est une variante de l'attaque par dictionnaire. Elle combine des m
 
 # Etoile 5
 
-Voici le boss ultime ! Le mot de passe est constitué d'un mot, suivi de 2 chiffres, d'un autre mot, et finalement un caractère spécial parmi `!@#$%&*`. Exemple: chat21chien!. **Retrouvez le mot de passe en clair à partir de son hash**.
+Voici le boss ultime ! Le mot de passe est constitué d'un mot, suivi de 1 chiffre, d'un autre mot, et finalement un caractère spécial parmi `!@#$%&*`. Exemple: chat8chien!. **Retrouvez le mot de passe en clair à partir de son hash**.
 
 ```{codeplay}
 dictionary = [
@@ -619,7 +621,7 @@ def compute_hash(text):
 def get_words():
     return dictionary # Retourne la liste des mots de dico.txt (prête à l'emploi)
 
-mdp_hash = "7337e562"
+mdp_hash = "5bfcfc03"
 
 # Votre code ici
 ```
