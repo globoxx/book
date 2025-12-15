@@ -10,10 +10,15 @@ Vous trouverez ci-dessous du code python très utile. Il vous sera donné avec c
 import hashlib # Librairie pour hacher des textes
 import time # Librairie pour mesurer le temps d'exécution d'un programme
 
-# Cette fonction permet de retourner le hash (SHA-256) d'un texte
+# Cette fonction permet de retourner le hash (FNV-1a) d'un texte
+# Cette fonction n'est pas cryptographiquement sûre
 def compute_hash(text):
-    text = str(text)
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+    s = str(text)
+    h = 2166136261
+    for ch in s:
+        h ^= ord(ch)
+        h = (h * 16777619) & 0xFFFFFFFF  # modulo 2^32
+    return f"{h:08x}"  # 8 caractères hexadécimaux
 ```
 
 ## Etoile 1
@@ -25,10 +30,14 @@ import hashlib
 import time
 
 def compute_hash(text):
-    text = str(text)
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+    s = str(text)
+    h = 2166136261
+    for ch in s:
+        h ^= ord(ch)
+        h = (h * 16777619) & 0xFFFFFFFF
+    return f"{h:08x}"
 
-mdp_hash = "40dd2b010d461c24e48783a18bd6d051d7e24c8b32079bb913a27860f83295e9"
+mdp_hash = "ed1e2bc7"
 
 # Votre code ici
 ```
@@ -46,8 +55,12 @@ import hashlib
 import time
 
 def compute_hash(text):
-    text = str(text)
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+    s = str(text)
+    h = 2166136261
+    for ch in s:
+        h ^= ord(ch)
+        h = (h * 16777619) & 0xFFFFFFFF
+    return f"{h:08x}"
 
 start = time.time()
 
@@ -230,13 +243,17 @@ import hashlib
 import time
 
 def compute_hash(text):
-    text = str(text)
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+    s = str(text)
+    h = 2166136261
+    for ch in s:
+        h ^= ord(ch)
+        h = (h * 16777619) & 0xFFFFFFFF
+    return f"{h:08x}"
 
 def get_words():
     return dictionary # Retourne la liste des mots de dico.txt (prête à l'emploi)
 
-mdp_hash = "8d16498453b03d4420d90362d71e6c36bb1564aeea53f36f206746e7cb5a5175"
+mdp_hash = "f96890c6"
 
 # Votre code ici
 ```
@@ -412,13 +429,17 @@ import hashlib
 import time
 
 def compute_hash(text):
-    text = str(text)
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+    s = str(text)
+    h = 2166136261
+    for ch in s:
+        h ^= ord(ch)
+        h = (h * 16777619) & 0xFFFFFFFF
+    return f"{h:08x}"
 
 def get_words():
     return dictionary # Retourne la liste des mots de dico.txt (prête à l'emploi)
 
-mdp_hash = "b79c562eeeab1220665be1d8d5a92da0239830147987369eea1d1d8ab84efb7c"
+mdp_hash = "f0fa6b08"
 
 # Votre code ici
 ```
@@ -594,13 +615,17 @@ import hashlib
 import time
 
 def compute_hash(text):
-    text = str(text)
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+    s = str(text)
+    h = 2166136261
+    for ch in s:
+        h ^= ord(ch)
+        h = (h * 16777619) & 0xFFFFFFFF
+    return f"{h:08x}"
 
 def get_words():
     return dictionary # Retourne la liste des mots de dico.txt (prête à l'emploi)
 
-mdp_hash = "03ffe66c510435eec32d31ee00f27e0ae0ae9ca7aca907cb524fc46f7ff56b55"
+mdp_hash = "7337e562"
 
 # Votre code ici
 ```
