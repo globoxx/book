@@ -20,7 +20,7 @@ def compute_hash(text):
 
 Une base de données a fuité. Elle contient des mots de passe hachés avec l'algorithme SHA-256. **Vous devez retrouver le mot de passe en clair à partir de son hash**. Heureusement, vous savez que le mot de passe est un code à 4 chiffres.
 
-```{code-block}
+```{codeplay}
 import hashlib
 import time
 
@@ -41,7 +41,7 @@ Ce type d'attaque est appelé une attaque par force brute. Elle consiste à test
 
 Retrouver un mot de passe à 4 chiffres se fait quasi instantanément. Vous vous demandez... à partir de combien de chiffres le cassage du code prend-il plus de 1 minute ? A partir de là, **estimez après combien de chiffres le cassage du code prendra plus d'une année**.
 
-```{code-block}
+```{codeplay}
 import hashlib
 import time
 
@@ -67,18 +67,7 @@ Cette fois, le mot de passe est un mot de la langue française. Heureusement, vo
 
 Généralement, on utilise une librairie pour importer les lignes d'un fichier texte en python. Cependant, vu que vous codez ici dans un navigateur, je vous fournis directement la liste de mots via la fonction `get_words()` ci-dessous.
 
-```python
-dictionnaire = [
-    "abaisser",
-    "abandon",
-    "abattre",
-    "abcès",
-    "abeille",
-    ...
-]
-```
-
-```{code-block}
+```{codeplay}
 dictionary = [
     "chat",
     "chien",
@@ -260,7 +249,7 @@ Cette attaque est plus efficace que la force brute car elle se base sur une list
 
 Notre cobaye a appris de ces erreurs et désormais son mot de passe est consistitué d'un mot de la langue française suivi de 2 chiffres. Exemple: chat21. Utilisez le dictionnaire précédent pour **retrouver le mot de passe en clair à partir de son hash**.
 
-```{code-block}
+```{codeplay}
 dictionary = [
     "chat",
     "chien",
@@ -442,7 +431,7 @@ Cette attaque est une variante de l'attaque par dictionnaire. Elle combine des m
 
 Voici le boss ultime ! Le mot de passe est constitué d'un mot, suivi de 2 chiffres, d'un autre mot, et finalement un caractère spécial parmi `!@#$%&*`. Exemple: chat21chien!. **Retrouvez le mot de passe en clair à partir de son hash**.
 
-```{code-block}
+```{codeplay}
 dictionary = [
     "chat",
     "chien",
