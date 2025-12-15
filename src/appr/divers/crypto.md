@@ -7,7 +7,6 @@
 Vous trouverez ci-dessous du code python très utile. Il vous sera donné avec chaque challenge mais vous pouvez déjà y jeter un œil.
 
 ```python
-import hashlib # Librairie pour hacher des textes
 import time # Librairie pour mesurer le temps d'exécution d'un programme
 
 # Cette fonction permet de retourner le hash (FNV-1a) d'un texte
@@ -26,7 +25,6 @@ def compute_hash(text):
 Une base de données a fuité. Elle contient des mots de passe hachés avec l'algorithme SHA-256. **Vous devez retrouver le mot de passe en clair à partir de son hash**. Heureusement, vous savez que le mot de passe est un code à 4 chiffres.
 
 ```{codeplay}
-import hashlib
 import time
 
 def compute_hash(text):
@@ -51,7 +49,6 @@ Ce type d'attaque est appelé une attaque par force brute. Elle consiste à test
 Retrouver un mot de passe à 4 chiffres se fait quasi instantanément. Vous vous demandez... à partir de combien de chiffres le cassage du code prend-il plus de 1 minute ? A partir de là, **estimez après combien de chiffres le cassage du code prendra plus d'une année**.
 
 ```{codeplay}
-import hashlib
 import time
 
 def compute_hash(text):
@@ -239,7 +236,6 @@ dictionary = [
     "secure"
 ]
 ===
-import hashlib
 import time
 
 def compute_hash(text):
@@ -425,7 +421,6 @@ dictionary = [
     "secure"
 ]
 ===
-import hashlib
 import time
 
 def compute_hash(text):
@@ -611,7 +606,6 @@ dictionary = [
     "secure"
 ]
 ===
-import hashlib
 import time
 
 def compute_hash(text):
