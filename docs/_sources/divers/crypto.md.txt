@@ -2,6 +2,11 @@
 
 # Challenge de cryptographie : Cassage de mot de passe
 
+Le but de ce challenge est de retrouver des mots de passe en clair à partir de leur hash.
+
+Pour rappel, un hash est une chaîne de caractères obtenue en appliquant une fonction de hachage à un texte. Cette fonction transforme le texte en une chaîne de longueur fixe, souvent utilisée pour stocker les mots de passe de manière sécurisée.  
+Exemple: le mot de passe "chat" peut donner la chaîne "f96890c6" une fois haché.
+
 ## Code fourni
 
 Vous trouverez ci-dessous du code python très utile. Il vous sera donné avec chaque challenge mais vous pouvez déjà y jeter un œil.
@@ -22,7 +27,7 @@ def compute_hash(text):
 
 ## Etoile 1
 
-Une base de données a fuité. Elle contient des mots de passe hachés avec l'algorithme SHA-256. **Vous devez retrouver le mot de passe en clair à partir de son hash**. Heureusement, vous savez que le mot de passe est un code à 4 chiffres.
+Une base de données a fuité. Elle contient des mots de passe hachés. **Vous devez retrouver le mot de passe en clair à partir de son hash**. Heureusement, vous savez que le mot de passe est un code à 4 chiffres.
 
 ```{codeplay}
 import time
