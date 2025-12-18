@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -310,11 +310,11 @@
 <section id="code-fourni">
 <h2>Code fourni<a class="headerlink" href="#code-fourni" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vous trouverez ci-dessous du code python très utile. Il vous sera donné avec chaque challenge mais vous pouvez déjà y jeter un œil.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span> <span class="c1"># Librairie pour mesurer le temps d'exécution d'un programme</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span> <span class="c1"># Librairie pour mesurer le temps d'exécution d'un programme</span>
 
 <span class="c1"># Cette fonction permet de retourner le hash (FNV-1a) d'un texte</span>
 <span class="c1"># Cette fonction n'est pas cryptographiquement sûre</span>
-<span class="k">def</span> <span class="nf">compute_hash</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_hash</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
     <span class="n">h</span> <span class="o">=</span> <span class="mi">2166136261</span>
     <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>

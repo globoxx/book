@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -269,7 +269,6 @@
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../divers/catch_the_fruit_python.html">Catch the fruit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
 </ul>
@@ -312,7 +311,7 @@
 <h2>1. Faire apparaître des blocs<a class="headerlink" href="#faire-apparaitre-des-blocs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Dans un jeu de plateforme, il faut des blocs (<code class="docutils literal notranslate"><span class="pre">tile</span></code> en anglais) ! Heureusement pour vous, je vous ai préparé un acteur qui va prendre ce rôle, l’acteur <code class="docutils literal notranslate"><span class="pre">Plateform</span></code>.<br/>
 Commençons par initialiser notre jeu et faire apparaître un bloc au centre de notre fenêtre.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Platformer'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
@@ -320,11 +319,11 @@ Commençons par initialiser notre jeu et faire apparaître un bloc au centre de 
 
 <span class="n">platform</span> <span class="o">=</span> <span class="n">Platform</span><span class="p">(</span><span class="s1">'grass_tile'</span><span class="p">,</span> <span class="p">(</span><span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">'sky blue'</span><span class="p">)</span> <span class="c1"># Ajout d'un background bleu pour faire le ciel</span>
     <span class="n">platform</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span> <span class="c1"># Notre acteur platform n'a pas de fonction update à appeler, il doit juste s'afficher, donc on ne fait rien ici</span>
 </pre></div>
 </div>
@@ -333,23 +332,23 @@ Commençons par initialiser notre jeu et faire apparaître un bloc au centre de 
 <section id="faire-apparaitre-notre-joueur">
 <h2>2. Faire apparaître notre joueur<a class="headerlink" href="#faire-apparaitre-notre-joueur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Faisons à présent apparaître notre personnage au-dessus de ce bloc. Comme pour le jeu précédent, nous allons implémenter une classe <code class="docutils literal notranslate"><span class="pre">Player</span></code> qui va représenter notre joueur.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span> <span class="c1"># Ne fait rien pour le moment</span>
 </pre></div>
 </div>
 <p>Nous allons ensuite pouvoir le créer dans le programme principal et appeler sa méthode <code class="docutils literal notranslate"><span class="pre">draw</span></code> et <code class="docutils literal notranslate"><span class="pre">update</span></code> dans les fonctions principales du même nom. On place notre joueur de telle sorte à ce qu’il se trouve juste un peu au dessus de notre bloc.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="s1">'alien_walk1'</span><span class="p">,</span> <span class="p">(</span><span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="mi">100</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">'sky blue'</span><span class="p">)</span>
     <span class="n">platform</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span> <span class="c1"># Ne fait rien pour le moment</span>
 </pre></div>
 </div>
@@ -359,22 +358,22 @@ Commençons par initialiser notre jeu et faire apparaître un bloc au centre de 
 <h2>3. Déplacer le joueur horiontalement<a class="headerlink" href="#deplacer-le-joueur-horiontalement" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Commençons de manière simple par implémenter les déplacements horizontaux de notre personnage avec les touches <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">d</span></code>.<br/>
 Comme pour le jeu précédent, nous allons définir une vitesse pour notre personnage (ex: <code class="docutils literal notranslate"><span class="pre">speed</span> <span class="pre">=</span> <span class="pre">3</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span> <span class="c1"># Ne fait rien pour le moment</span>
 </pre></div>
 </div>
 <p>La logique du déplacement doit être codée dans la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code>. Il suffit de vérifier si la touche <code class="docutils literal notranslate"><span class="pre">a</span></code> ou <code class="docutils literal notranslate"><span class="pre">d</span></code> est enfoncée et si c’est le cas, mettre à jour la position <code class="docutils literal notranslate"><span class="pre">x</span></code> du joueur en tenant compte de sa vitesse. On en profite également pour retourner l’image si le déplacement se fait vers la gauche.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">speed</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">flip_x</span> <span class="o">=</span> <span class="kc">True</span>
@@ -391,15 +390,15 @@ Comme pour le jeu précédent, nous allons définir une vitesse pour notre perso
 <p>La première chose à faire est de fixer notre constante de gravité à l’aide d’une variable. Elle vaut 9.81 m/s^2 sur Terre mais cela serait trop pour notre petit jeu. Fixons-la à 0.3 pour le moment. Il nous faut aussi déclarer une vitesse verticale <code class="docutils literal notranslate"><span class="pre">vy</span></code> pour notre personnage, qui est nulle par défaut.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">GRAVITY</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="c1"># Une constante s'écrit en majuscule par convention</span>
 
-<span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># vitesse verticale du personnage</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
 </pre></div>
 </div>
 <p>Bien, à présent il nous faut ajouter cette accélération à la vitesse verticale <code class="docutils literal notranslate"><span class="pre">vy</span></code> de notre personnage à chaque <code class="docutils literal notranslate"><span class="pre">tick</span></code> du jeu et faire évoluer sa position verticale <code class="docutils literal notranslate"><span class="pre">y</span></code>. Tout ceci se passe dans la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Player</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="n">GRAVITY</span> <span class="c1"># Augmente la vitesse verticale du joueur</span>
 
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
@@ -418,13 +417,13 @@ Comme pour le jeu précédent, nous allons définir une vitesse pour notre perso
 <h2>5. Se poser sur une plateforme<a class="headerlink" href="#se-poser-sur-une-plateforme" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il faut maintenant s’occuper de faire tenir notre personnage sur le bloc afin de l’empêcher de passer au travers. En temps normal, c’est une implémentation difficile car il y a beaucoup de petits détails à prendre en compte mais je vous ai un peu facilité le travail. Notre acteur <code class="docutils literal notranslate"><span class="pre">Plateform</span></code> contient une méthode qui permet de gérer les collisions avec les autres acteurs: <code class="docutils literal notranslate"><span class="pre">check_collision_with(actor)</span></code>.<br/>
 Il nous suffit de l’appeler dans la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de notre joueur pour l’empêcher de passer au travers.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="n">GRAVITY</span>
         
         <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
@@ -450,13 +449,13 @@ Quand on y pense, faire sauter notre personnage revient à modifier sa vitesse v
 <p class="admonition-title">Pas de saut dans le vide !</p>
 <p>Attention, il faut également que le personnage se trouve sur une plateforme pour pouvoir sauter ! Cela se vérifie si la vitesse verticale de notre personange est nulle au moment du saut ! (<code class="docutils literal notranslate"><span class="pre">vy</span> <span class="pre">==</span> <span class="pre">0</span></code>)</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="n">GRAVITY</span>
         
         <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
@@ -534,13 +533,13 @@ Enfin, définissons également la taille que prendra chacun de nos blocs avec la
 </div>
 <p>Notez que l’on utilise l’argument <code class="docutils literal notranslate"><span class="pre">width</span></code> de l’acteur <code class="docutils literal notranslate"><span class="pre">Platform</span></code> pour lui donner la taille que l’on a définit avec notre constante <code class="docutils literal notranslate"><span class="pre">TILE_SIZE</span></code>.</p>
 <p>Il ne reste à présent plus qu’à modifier notre code pour afficher toutes les plateformes de notre liste ainsi que faire le contrôle de collision de notre joueur avec toutes les plateformes également.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="n">GRAVITY</span>
         
         <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
@@ -560,7 +559,7 @@ Enfin, définissons également la taille que prendra chacun de nos blocs avec la
 
 <span class="c1"># ...</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">'sky blue'</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">platform</span> <span class="ow">in</span> <span class="n">platforms</span><span class="p">:</span> <span class="c1"># On dessine toutes nos plateformes</span>
         <span class="n">platform</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
@@ -630,14 +629,14 @@ Un bloc avec <code class="docutils literal notranslate"><span class="pre">sticky
 <p>Notre personnage se sent un peu seul dans son niveau. Pourquoi ne pas ajouter un slime qui se balade de gauche à droite sur les blocs ?</p>
 <img alt="../_images/platformer_slime.png" src="../_images/platformer_slime.png"/>
 <p>Commençons par créer une classe <code class="docutils literal notranslate"><span class="pre">Slime</span></code> pour notre ami. Il aura également besoin d’une vitesse de déplacement (<code class="docutils literal notranslate"><span class="pre">speed</span></code>) ainsi qu’une vitesse verticale <code class="docutils literal notranslate"><span class="pre">vy</span></code> si l’on veut qu’il soit soumis à la gravité. On en profite pour également lui donner des images pour son animation (<code class="docutils literal notranslate"><span class="pre">images</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Slime</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Slime</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'slime_green1'</span><span class="p">,</span> <span class="s1">'slime_green2'</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">2</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span> <span class="c1"># Ne fait rien pour l'instant</span>
 </pre></div>
 </div>
@@ -676,7 +675,7 @@ N’oublions finalement pas de mettre à jour les fonctions principale <code cla
             <span class="n">slime</span> <span class="o">=</span> <span class="n">Slime</span><span class="p">(</span><span class="s1">'slime_green1'</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">max_distance_x</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
             <span class="n">slimes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slime</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">'sky blue'</span><span class="p">)</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
@@ -684,14 +683,14 @@ N’oublions finalement pas de mettre à jour les fonctions principale <code cla
     <span class="k">for</span> <span class="n">platform</span> <span class="ow">in</span> <span class="n">platforms</span><span class="p">:</span>
         <span class="n">platform</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
         <span class="n">slime</span><span class="o">.</span><span class="n">update</span><span class="p">()</span> <span class="c1"># Ne fait rien pour le moment</span>
 </pre></div>
 </div>
 <p>Occupons nous à présent de la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de notre ami afin qu’il puisse se déplacer. Nous allons simplement le faire se déplacer vers la droite selon sa vitesse (<code class="docutils literal notranslate"><span class="pre">speed</span></code>). Nous allons également lui appliquer la gravité et contrôler sa collision avec les blocs de la même manière qu’on l’a fait pour notre joueur.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="n">GRAVITY</span> <span class="c1"># On augmente sa vitesse verticale avec la gravité</span>
 
     <span class="k">for</span> <span class="n">platform</span> <span class="ow">in</span> <span class="n">platforms</span><span class="p">:</span> <span class="c1"># On teste sa collision avec chaque bloc</span>
@@ -704,8 +703,8 @@ N’oublions finalement pas de mettre à jour les fonctions principale <code cla
 <p>Testez votre jeu ! Le slime devrait à présent tomber de sa position initiale puis se déplacer vers la droite à l’infini.<br/>
 Il serait intéressant de faire en sorte que notre slime reste dans une zone choisie et qu’il se retourne lorsqu’il dépasse cette zone.</p>
 <p>On peut ajouter ce comportement en passant à son constructeur une distance horizontale maximale à parcourir avant de repartir dans l’autre sens. Nous allons ajouter l’argument <code class="docutils literal notranslate"><span class="pre">max_distance_x</span></code> à son constructeur. Nous devons également déclarer une nouvelle variable <code class="docutils literal notranslate"><span class="pre">distance_x</span></code> qui nous servira à connaître la distance parcourure par notre slime depuis son lieu d’origine.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Slime</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">max_distance_x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># Ajout de l'argument max_distance_x</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Slime</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">max_distance_x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># Ajout de l'argument max_distance_x</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'slime_green1'</span><span class="p">,</span> <span class="s1">'slime_green2'</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
@@ -715,7 +714,7 @@ Il serait intéressant de faire en sorte que notre slime reste dans une zone cho
 </pre></div>
 </div>
 <p>Enfin, il ne reste plus qu’à mettre à jour la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> pour augmenter <code class="docutils literal notranslate"><span class="pre">distance_x</span></code> à chaque déplacement et contrôler si <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">distance_x</span> <span class="pre">&lt;=</span> <span class="pre">max_distance_x</span></code> pour savoir si notre ami est toujours dans sa zone. Si ce n’est pas le cas, on inverse sa vitesse <code class="docutils literal notranslate"><span class="pre">speed</span></code> pour qu’il reparte dans l’autre sens et on change l’orientation de son sprite (<code class="docutils literal notranslate"><span class="pre">flip_x</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="n">GRAVITY</span>
 
     <span class="k">for</span> <span class="n">platform</span> <span class="ow">in</span> <span class="n">platforms</span><span class="p">:</span>
@@ -737,11 +736,11 @@ Il serait intéressant de faire en sorte que notre slime reste dans une zone cho
 <p>Nous n’avons aucun objectif dans le jeu ! Il serait bien d’ajouter des objets à ramasser pour le joueur. Pourquoi pas des pièces ? C’est très classique mais ça fonctionne toujours.</p>
 <img alt="../_images/platformer_coin.png" src="../_images/platformer_coin.png"/>
 <p>Comme d’habitude, commençons par créer une classe pour notre nouvel acteur <code class="docutils literal notranslate"><span class="pre">Coin</span></code>. Les pièces n’auront rien d’autre à faire que de s’afficher et de disparaître au contact du joueur, son implémentation sera donc relativement simple.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Coin</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Coin</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span> <span class="c1"># Ne fait rien pour l'instant</span>
 </pre></div>
 </div>
@@ -783,7 +782,7 @@ Il serait intéressant de faire en sorte que notre slime reste dans une zone cho
             <span class="n">coin</span> <span class="o">=</span> <span class="n">Coin</span><span class="p">(</span><span class="s1">'coin'</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
             <span class="n">coins</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">coin</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">'sky blue'</span><span class="p">)</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
@@ -793,7 +792,7 @@ Il serait intéressant de faire en sorte que notre slime reste dans une zone cho
     <span class="k">for</span> <span class="n">coin</span> <span class="ow">in</span> <span class="n">coins</span><span class="p">:</span>
         <span class="n">coin</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
         <span class="n">slime</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
@@ -808,17 +807,17 @@ Il serait intéressant de faire en sorte que notre slime reste dans une zone cho
 </ul>
 <p>Je vous propose la 2ème solution, qui a pour avantage de ne pas ajouter plus de code à la classe <code class="docutils literal notranslate"><span class="pre">Player</span></code> qui est déjà complexe.<br/>
 Il suffit alos de tester s’il y a collision avec le <code class="docutils literal notranslate"><span class="pre">player</span></code> et, le cas échéant, marquer le <code class="docutils literal notranslate"><span class="pre">coin</span></code> pour qu’il soit supprimé.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Coin</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Coin</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># Test de collision avec le joueur</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># On marque la pièce en question pour la supprimer</span>
 
 <span class="c1"># ...</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
         <span class="n">slime</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
@@ -849,11 +848,11 @@ Il suffit alos de tester s’il y a collision avec le <code class="docutils lite
 
 <span class="c1"># ...</span>
 
-<span class="k">class</span> <span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span> <span class="c1"># Création de la classe Portal</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span> <span class="c1"># Création de la classe Portal</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span> <span class="c1"># Ne fait rien pour le moment</span>
 
 <span class="c1"># ...</span>
@@ -884,7 +883,7 @@ Il suffit alos de tester s’il y a collision avec le <code class="docutils lite
             <span class="n">portal</span> <span class="o">=</span> <span class="n">Portal</span><span class="p">(</span><span class="s1">'portal'</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">TILE_SIZE</span><span class="p">)</span>
             <span class="n">portals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">portal</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">'sky blue'</span><span class="p">)</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
@@ -896,7 +895,7 @@ Il suffit alos de tester s’il y a collision avec le <code class="docutils lite
     <span class="k">for</span> <span class="n">portal</span> <span class="ow">in</span> <span class="n">portals</span><span class="p">:</span>
         <span class="n">portal</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
         <span class="n">slime</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
@@ -909,11 +908,11 @@ Il suffit alos de tester s’il y a collision avec le <code class="docutils lite
 </pre></div>
 </div>
 <p>Vous devriez voir le portail apparaître à l’endroit indiqué. Voyons à présent comment modifier le niveau lorsque le joueur est en contact avec le portail et qu’il appuie sur la touche <code class="docutils literal notranslate"><span class="pre">e</span></code>. On va commencer par modifier la méthode <code class="docutils literal notranslate"><span class="pre">update</span></code> de <code class="docutils literal notranslate"><span class="pre">Portal</span></code> pour qu’il puisse détecter cet évenement. Pour le moment, affichons simplement l’activation du niveau 2 sous forme de texte dans la console avec <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span> <span class="c1"># Création de la classe Portal</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span> <span class="c1"># Création de la classe Portal</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="ow">and</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">'Niveau 2 !'</span><span class="p">)</span>
 </pre></div>
@@ -947,7 +946,7 @@ Il suffit alos de tester s’il y a collision avec le <code class="docutils lite
 </pre></div>
 </div>
 <p>Définissons ensuite une fonction <code class="docutils literal notranslate"><span class="pre">load_level(world_map)</span></code> qui va s’occuper de créer toutes les objets du jeu en fonction de la <code class="docutils literal notranslate"><span class="pre">world_map</span></code> qu’on lui passe et qui les <strong>retourne</strong> au programme principal. Donc l’idée est simplement de déplacer tout notre code qui remplit les listes d’objets dans une fonction. On part du principe que tous les niveaux vont contenir autant de lignes et de colonnes.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_level</span><span class="p">(</span><span class="n">world_map</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_level</span><span class="p">(</span><span class="n">world_map</span><span class="p">):</span>
     <span class="n">platforms</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">slimes</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">coins</span> <span class="o">=</span> <span class="p">[]</span>
@@ -984,11 +983,11 @@ Il suffit alos de tester s’il y a collision avec le <code class="docutils lite
 </div>
 <p>Si tout a fonctionné, vous ne devriez voir aucun changement par rapport à tout à l’heure, on a simplement déplacé du code, mais il fait la même chose.<br/>
 Il ne reste plus à présent d’appeler la fonction <code class="docutils literal notranslate"><span class="pre">load_level</span></code> lorsque l’on passe le portail mais en lui passant <code class="docutils literal notranslate"><span class="pre">WORLD_MAP_2</span></code> ! Cependant, comme nous souhaitons ici <strong>modifier</strong> les listes des objets (<code class="docutils literal notranslate"><span class="pre">platforms</span></code>, <code class="docutils literal notranslate"><span class="pre">coins</span></code>, etc) depuis une fonction, nous devons déclarer ces variables <code class="docutils literal notranslate"><span class="pre">global</span></code> avant de pouvoir les toucher.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span> <span class="c1"># Création de la classe Portal</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span> <span class="c1"># Création de la classe Portal</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="ow">and</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">e</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">'Niveau 2 !'</span><span class="p">)</span>
             <span class="k">global</span> <span class="n">platforms</span> <span class="c1"># On déclare les variables externes que l'on veut modifier comme globales</span>
@@ -1007,7 +1006,7 @@ Voir le code final<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Mon premier platformer'</span>
 
@@ -1046,13 +1045,13 @@ Voir le code final<div class="summary-down docutils">
 
 <span class="n">GRAVITY</span> <span class="o">=</span> <span class="mf">0.3</span>
 
-<span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="n">GRAVITY</span>
 
         <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
@@ -1070,8 +1069,8 @@ Voir le code final<div class="summary-down docutils">
 
         <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vy</span>
 
-<span class="k">class</span> <span class="nc">Slime</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">max_distance_x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Slime</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">max_distance_x</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'slime_green1'</span><span class="p">,</span> <span class="s1">'slime_green2'</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
@@ -1080,7 +1079,7 @@ Voir le code final<div class="summary-down docutils">
         <span class="bp">self</span><span class="o">.</span><span class="n">max_distance_x</span> <span class="o">=</span> <span class="n">max_distance_x</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">distance_x</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="n">GRAVITY</span>
 
         <span class="k">for</span> <span class="n">platform</span> <span class="ow">in</span> <span class="n">platforms</span><span class="p">:</span>
@@ -1094,19 +1093,19 @@ Voir le code final<div class="summary-down docutils">
             <span class="bp">self</span><span class="o">.</span><span class="n">flip_x</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">flip_x</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">speed</span>
             
-<span class="k">class</span> <span class="nc">Coin</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Coin</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">to_remove</span> <span class="o">=</span> <span class="kc">True</span>
 
-<span class="k">class</span> <span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Portal</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="ow">and</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">e</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">'Niveau 2 !'</span><span class="p">)</span>
             <span class="k">global</span> <span class="n">platforms</span>
@@ -1115,7 +1114,7 @@ Voir le code final<div class="summary-down docutils">
             <span class="k">global</span> <span class="n">portals</span>
             <span class="n">platforms</span><span class="p">,</span> <span class="n">slimes</span><span class="p">,</span> <span class="n">coins</span><span class="p">,</span> <span class="n">portals</span> <span class="o">=</span> <span class="n">load_level</span><span class="p">(</span><span class="n">WORLD_MAP_2</span><span class="p">)</span>
             
-<span class="k">def</span> <span class="nf">load_level</span><span class="p">(</span><span class="n">world_map</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_level</span><span class="p">(</span><span class="n">world_map</span><span class="p">):</span>
     <span class="n">platforms</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">slimes</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">coins</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1148,7 +1147,7 @@ Voir le code final<div class="summary-down docutils">
 
 <span class="n">platforms</span><span class="p">,</span> <span class="n">slimes</span><span class="p">,</span> <span class="n">coins</span><span class="p">,</span> <span class="n">portals</span> <span class="o">=</span> <span class="n">load_level</span><span class="p">(</span><span class="n">WORLD_MAP</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s1">'sky blue'</span><span class="p">)</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
@@ -1160,7 +1159,7 @@ Voir le code final<div class="summary-down docutils">
     <span class="k">for</span> <span class="n">portal</span> <span class="ow">in</span> <span class="n">portals</span><span class="p">:</span>
         <span class="n">portal</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">slime</span> <span class="ow">in</span> <span class="n">slimes</span><span class="p">:</span>
         <span class="n">slime</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>

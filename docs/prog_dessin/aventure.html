@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -269,7 +269,6 @@
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../divers/catch_the_fruit_python.html">Catch the fruit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
 </ul>
@@ -328,8 +327,8 @@ C’est-à-dire une <strong>histoire durant laquelle le lecteur peut faire des c
 <h2>Ajouter des images et du son<a class="headerlink" href="#ajouter-des-images-et-du-son" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le code suivant permet d’ouvrir une image affichant un game over tout en jouant un petit bruitage qui va bien avec.<br/>
 Notez qu’il faut importer 2 librairies <code class="docutils literal notranslate"><span class="pre">PIL</span></code> et <code class="docutils literal notranslate"><span class="pre">playsound</span></code> pour que cela fonctionne.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">from</span> <span class="nn">playsound</span> <span class="kn">import</span> <span class="n">playsound</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">playsound</span><span class="w"> </span><span class="kn">import</span> <span class="n">playsound</span>
 
 <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'game_over.jpg'</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># L'image game_over.jpg doit se trouver dans le même dossier que le code</span>
 <span class="n">playsound</span><span class="p">(</span><span class="s1">'game_over.wav'</span><span class="p">)</span> <span class="c1"># .wav et .mp3 devraient fonctionner</span>

@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Catch the fruit" href="catch_the_fruit_python.html" /><link rel="prev" title="Projets d’élèves" href="../prog_jeu/projets_eleves.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Portes logiques" href="portes_logiques.html" /><link rel="prev" title="Projets d’élèves" href="../prog_jeu/projets_eleves.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>Simulation d’épidémie - Travaux pratiques</title>
@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -269,7 +269,6 @@
 <p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Simulation d’épidémie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catch_the_fruit_python.html">Catch the fruit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="portes_logiques.html">Portes logiques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets libres d’élèves</a></li>
 </ul>
@@ -453,7 +452,7 @@ Définissez les valeurs de ces variables <strong>au jour 0</strong> de l’épid
 <h2>(7. Pour les plus rapides) Covid-19<a class="headerlink" href="#pour-les-plus-rapides-covid-19" title="Lien permanent vers ce titre">¶</a></h2>
 <p>On souhaite comparer notre modèle à l’épidémie de Covid-19. Le code suivant vous permet de lire le fichier <a class="reference download internal" download="" href="../_downloads/5f8d80d9333a18a7675bce43ac23022e/covid.csv"><code class="xref download docutils literal notranslate"><span class="pre">covid.csv</span></code></a> et d’obtenir une liste contenant le nombre de cas journaliers en Suisse (<a href="https://www.coronavirus-statistiques.com/stats-pays/coronavirus-nombre-de-cas-suisse/" target="_blank">source</a>).<br/>
 Placez le fichier <code class="docutils literal notranslate"><span class="pre">covid.csv</span></code> dans le même répertoire/dossier que votre fichier python.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
 <span class="n">ncas</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"covid.csv"</span><span class="p">)</span> <span class="k">as</span> <span class="n">covid_file</span><span class="p">:</span>
@@ -491,12 +490,12 @@ Que faudrait-il modifier dans notre modèle pour le rendre plus proche de ce qui
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="catch_the_fruit_python.html">
+          <a class="next-page" href="portes_logiques.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Catch the fruit</div>
+                <div class="title">Portes logiques</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
