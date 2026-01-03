@@ -196,7 +196,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -298,7 +298,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -306,171 +306,9 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="introduction-a-pygame">
 <span id="prog-jeu-intro-pygame"></span><h1>2. Introduction à Pygame<a class="headerlink" href="#introduction-a-pygame" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Nous avons vu plusieurs types de base en Python (<code class="docutils literal notranslate"><span class="pre">int</span></code> pour les entiers, <code class="docutils literal notranslate"><span class="pre">float</span></code> pour les nombres à virgules, <code class="docutils literal notranslate"><span class="pre">str</span></code> pour les textes, etc.). La notion de <strong>classe</strong> va en quelque sorte nous permettre de généraliser la notion de « type » afin de créer de nouvelles structures de données.</p>
-<p>Une classe définit des <strong>attributs</strong> et des <strong>méthodes</strong>. Par exemple, imaginons une classe <code class="docutils literal notranslate"><span class="pre">Voiture</span></code> qui servira à créer des objets qui sont des voitures. Cette classe va pouvoir définir un attribut <code class="docutils literal notranslate"><span class="pre">couleur</span></code>, un attribut <code class="docutils literal notranslate"><span class="pre">vitesse</span></code>, etc. Ces attributs correspondent à des propriétés qui peuvent exister pour une voiture. La classe <code class="docutils literal notranslate"><span class="pre">Voiture</span></code> pourra également définir une méthode <code class="docutils literal notranslate"><span class="pre">rouler()</span></code>. Une méthode correspond en quelque sorte à une action, ici l’action de rouler peut être réalisée pour une voiture.</p>
-<img alt="../_images/classe_voiture.svg" src="../_images/classe_voiture.svg"/><p>Si on imagine une classe <code class="docutils literal notranslate"><span class="pre">Avion</span></code>, elle pourra définir une méthode <code class="docutils literal notranslate"><span class="pre">voler()</span></code>. Elle pourra aussi définir une méthode <code class="docutils literal notranslate"><span class="pre">rouler()</span></code>. Par contre, la classe Voiture n’aura pas de méthode <code class="docutils literal notranslate"><span class="pre">voler()</span></code> car une voiture ne peut pas voler. De même, la classe <code class="docutils literal notranslate"><span class="pre">Avion</span></code> pourra avoir un attribut <code class="docutils literal notranslate"><span class="pre">altitude</span></code> mais ce ne sera pas le cas pour la classe <code class="docutils literal notranslate"><span class="pre">Voiture</span></code>.</p>
-<p>Après avoir présenté la notion de <strong>classe</strong>, nous allons voir la notion d’<strong>objet</strong>. Si on revient à la classe <code class="docutils literal notranslate"><span class="pre">Voiture</span></code>, nous pourrons avoir plusieurs voitures qui seront chacune des objets bien distincts. Par exemple, la voiture de Jonathan, qui est de couleur rouge avec une vitesse de 30 km/h, est un objet de la classe <code class="docutils literal notranslate"><span class="pre">Voiture</span></code>. De même, la voiture de Denis, qui est de couleur grise avec une vitesse de 50 km/h, est un autre objet. Nous pouvons donc avoir plusieurs objects pour une même classe, en particulier ici deux objets. Chacun des objets a des valeurs qui lui sont propres pour les attributs.</p>
-<p>(Pour plus de détails théoriques sur la programmation orientée objet, vous pouvez consulter <a class="reference external" href="https://courspython.com/classes-et-objets.html">cette page</a> dont le cours est tiré.)</p>
-<section id="creation-dune-classe-pour-brawlers">
-<h2>Création d’une classe pour Brawlers<a class="headerlink" href="#creation-dune-classe-pour-brawlers" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous allons créer une classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> pour représenter les personnages du jeu Brawl Stars. Chaque brawler aura des attributs comme la vie, la position, l’attaque, la vitesse, etc.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Brawler</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">vie</span> <span class="o">=</span> <span class="mi">3990</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">150</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">degats</span> <span class="o">=</span> <span class="mi">100</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">vitesse</span> <span class="o">=</span> <span class="mi">10</span>
-
-<span class="n">brawler1</span> <span class="o">=</span> <span class="n">Brawler</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">brawler1</span><span class="o">.</span><span class="n">vie</span><span class="p">)</span> <span class="c1"># Affiche 3990</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">brawler1</span><span class="o">.</span><span class="n">degats</span><span class="p">)</span> <span class="c1"># Affiche 100</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Le mot-clé <code class="docutils literal notranslate"><span class="pre">self</span></code> est utilisé pour faire référence à l’objet lui-même au sein de la classe.<br/>
-Le mot-clé <code class="docutils literal notranslate"><span class="pre">self</span></code> ne s’utilise jamais en dehors d’une classe.</p>
-</div>
-<section id="exercice-1">
-<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Créez une classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires (au minimum: <code class="docutils literal notranslate"><span class="pre">vie</span></code>, <code class="docutils literal notranslate"><span class="pre">degats</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>). Créez un objet <code class="docutils literal notranslate"><span class="pre">rico</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Rico</span></code> et affichez ses attributs.
-Voici la fiche de son personnage :</p>
-<img alt="../_images/poo_rico.png" src="../_images/poo_rico.png"/>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Pour les coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>, vous pouvez choisir des valeurs aléatoires.</p>
-</div>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJleHBlY3RlZCBhbiBpbmRlbnRlZCBibG9jayBhZnRlciBmdW5jdGlvbiBkZWZpbml0aW9uIG9uIGxpbmUgMiIsICJsaW5lIjogMywgImNvbHVtbiI6IDIxfV0=" data-code="Y2xhc3MgUmljbzoKICAgIGRlZiBfX2luaXRfXyhzZWxmKToKICAgICMgVm90cmUgY29kZSBpY2k=" data-file="cDAwXzEucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-2">
-<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Il n’est pas pratique de devoir créer une classe différente pour chaque brawler. Il vaudrait mieux créer <strong>une seule classe permettant de créer n’importe quel brawler</strong>.</p>
-<p>Voici un exemple de code créant une classe <code class="docutils literal notranslate"><span class="pre">Point</span></code> permettant de générer des points en 2D en passant les coordonnées en paramètres du constructeur (méthode <code class="docutils literal notranslate"><span class="pre">init</span></code>) :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
-
-<span class="n">p1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-<span class="n">p3</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Créez une classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> générique qui permet de créer n’importe quel brawler. L’idée est de passer les attributs en paramètres du constructeur (méthode <code class="docutils literal notranslate"><span class="pre">init</span></code>).</p>
-<p>Créez ensuite les objets <code class="docutils literal notranslate"><span class="pre">rico</span></code> et <code class="docutils literal notranslate"><span class="pre">angelo</span></code> de la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> avec les attributs correspondant à leur fiche de personnage.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJleHBlY3RlZCBhbiBpbmRlbnRlZCBibG9jayBhZnRlciBjbGFzcyBkZWZpbml0aW9uIG9uIGxpbmUgMSIsICJsaW5lIjogNCwgImNvbHVtbiI6IDF9XQ==" data-code="Y2xhc3MgQnJhd2xlcjoKICAgIAoKcmljbyA9IC4uLgphbmdlbG8gPSAuLi4=" data-file="cDAwXzIucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><img alt="../_images/poo_angelo.png" src="../_images/poo_angelo.png"/>
-</section>
-<section id="exercice-3">
-<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
-<p>En plus des <strong>attributs</strong>, une classe peut aussi définir des <strong>méthodes</strong>. Ce sont des fonctions qui sont définies à l’intérieur de la classe et elles représentent des actions que l’objet peut effectuer.<br/>
-Par exemple, un brawler peut attaquer un autre brawler, se déplacer, etc.</p>
-<p>Voici un exemple pour la classe <code class="docutils literal notranslate"><span class="pre">Point</span></code> qui définit une méthode <code class="docutils literal notranslate"><span class="pre">calcule_distance</span></code> permettant de calculer la distance avec un autre point :</p>
-<img alt="../_images/distance_formula.svg" src="../_images/distance_formula.svg"/><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">calcule_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
-        <span class="c1"># self fait référence à l'objet lui-même</span>
-        <span class="c1"># p est un autre point dont on veut calculer la distance</span>
-        <span class="k">return</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">affiche_coordonnees</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="c1"># Simple méthode permettant d'afficher les coordonnées x et y du point</span>
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
-
-<span class="n">p1</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">p2</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">calcule_distance</span><span class="p">(</span><span class="n">p2</span><span class="p">))</span> <span class="c1"># Affiche 5.0</span>
-
-<span class="n">p1</span><span class="o">.</span><span class="n">affiche_coordonnees</span><span class="p">()</span> <span class="c1"># Affiche 2 3</span>
-</pre></div>
-</div>
-<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">attaque</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre un autre brawler et qui diminue la vie de ce brawler en fonction des dégats du brawler attaquant.</p>
-<p>Testez cette méthode en faisant attaquer <code class="docutils literal notranslate"><span class="pre">rico</span></code> par <code class="docutils literal notranslate"><span class="pre">angelo</span></code>, puis affichez la vie restante de <code class="docutils literal notranslate"><span class="pre">rico</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTozOjE6IHVuZGVmaW5lZCBuYW1lICdyaWNvJyIsICJsaW5lIjogMywgImNvbHVtbiI6IDB9LCB7InR5cGUiOiAid2FybmluZyIsICJtZXNzYWdlIjogImNvZGUucHk6MzoxNDogdW5kZWZpbmVkIG5hbWUgJ2FuZ2VsbyciLCAibGluZSI6IDMsICJjb2x1bW4iOiAxM31d" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBhdHRhcXVlCgpyaWNvLmF0dGFxdWUoYW5nZWxvKSAjIHJpY28gcGV1dCBhdHRhcXVlciBhbmdlbG8gZ3LDomNlIMOgIGNldHRlIG3DqXRob2Rl" data-file="cDAwXzMucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-4">
-<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">deplace</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui prend en paramètre une distance <code class="docutils literal notranslate"><span class="pre">dx</span></code> et qui déplace le brawler sur l’axe <code class="docutils literal notranslate"><span class="pre">x</span></code> en conséquence.</p>
-<p>Testez cette méthode en déplaçant <code class="docutils literal notranslate"><span class="pre">rico</span></code> à droite d’une distance de <code class="docutils literal notranslate"><span class="pre">15</span></code>, puis en affichant ses nouvelles coordonnées.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBkZXBsYWNl" data-file="cDAwXzQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-5">
-<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">est_mort</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Brawler</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si le brawler est mort (<code class="docutils literal notranslate"><span class="pre">vie</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>) et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon. La méthode ne prend aucun paramètre (à part <code class="docutils literal notranslate"><span class="pre">self</span></code>).</p>
-<p>Testez cette méthode en faisant attaquer <code class="docutils literal notranslate"><span class="pre">rico</span></code> par <code class="docutils literal notranslate"><span class="pre">angelo</span></code> jusqu’à ce que <code class="docutils literal notranslate"><span class="pre">rico</span></code> soit mort.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBlc3RfbW9ydA==" data-file="cDAwXzUucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-</section>
-<section id="utilisation-de-listes">
-<h2>Utilisation de listes<a class="headerlink" href="#utilisation-de-listes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Quand on possède beaucoup de personnages dans un jeu, il est plus pratique de les stocker dans une <strong>liste</strong>. Voici un exemple de code qui crée une liste de brawlers :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">brawlers</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Crée une liste vide</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="c1"># Boucle pour créer 5 brawlers</span>
-    <span class="n">brawler</span> <span class="o">=</span> <span class="n">Brawler</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="c1"># Crée un brawler avec des attributs spécifiques</span>
-    <span class="n">brawlers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">brawler</span><span class="p">)</span> <span class="c1"># Ajoute un brawler à la liste</span>
-</pre></div>
-</div>
-<section id="exercice-6">
-<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Dans les jeux, on représente souvent les personnages par des cercles ou des rectangles pour gérer les collisions.</p>
-<img alt="../_images/poo_hitbox.png" src="../_images/poo_hitbox.png"/>
-<p>Voici le code d’une classe <code class="docutils literal notranslate"><span class="pre">Cercle</span></code> qui permet de créer des cercles en 2D :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Cercle</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">rayon</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">rayon</span> <span class="o">=</span> <span class="n">rayon</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="nf">calcule_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-        <span class="c1"># calcule la distance entre le centre du cercle et un autre cercle c</span>
-        <span class="k">return</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">c</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
-</pre></div>
-</div>
-<p>Ecrivez le code permettant de générer 100 cercles aléatoires et de les stocker dans une liste <code class="docutils literal notranslate"><span class="pre">cercles</span></code>.</p>
-<p>La position <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> de chaque cercle doit être un nombre aléatoire entre 0 et 1000. Le <code class="docutils literal notranslate"><span class="pre">rayon</span></code> doit être un nombre aléatoire entre 10 et 50.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdyYW5kb20nIGltcG9ydGVkIGJ1dCB1bnVzZWQiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfV0=" data-code="aW1wb3J0IHJhbmRvbSAjIFBvdXIgbCdhbMOpYXRvaXJlCgpjbGFzcyBDZXJjbGU6CiAgICBkZWYgX19pbml0X18oc2VsZiwgeCwgeSwgcmF5b24pOgogICAgICAgIHNlbGYueCA9IHgKICAgICAgICBzZWxmLnkgPSB5CiAgICAgICAgc2VsZi5yYXlvbiA9IHJheW9uCgogICAgZGVmIGNhbGN1bGVfZGlzdGFuY2Uoc2VsZiwgYyk6CiAgICAgICAgIyBjYWxjdWxlIGxhIGRpc3RhbmNlIGVudHJlIGxlIGNlbnRyZSBkdSBjZXJjbGUgZXQgdW4gYXV0cmUgY2VyY2xlIGMKICAgICAgICByZXR1cm4gKChzZWxmLnggLSBjLngpKioyICsgKHNlbGYueSAtIGMueSkqKjIpICoqIDAuNQoKIyBWb3RyZSBjb2RlIGljaSAoYmFzZXotdm91cyBzdXIgbCdleGVtcGxlIGF2ZWMgbGVzIGxpc3RlcyBkb25uw6kgcGx1cyBoYXV0KQ==" data-file="cDAwXzYucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-7">
-<h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Ajoutez une méthode <code class="docutils literal notranslate"><span class="pre">est_en_collision</span></code> à la classe <code class="docutils literal notranslate"><span class="pre">Cercle</span></code> qui prend en paramètre un autre cercle et qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si les deux cercles sont en collision et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Indice<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Deux cercles sont en collision si la distance entre leur centre est inférieure à la somme de leur rayon.<br/>
-Cette distance peut être calculée avec la méthode <code class="docutils literal notranslate"><span class="pre">calcule_distance</span></code> qui est donnée.</p>
-<img alt="../_images/circle_collision.jpg" src="../_images/circle_collision.jpg"/>
-</div>
-</details><div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgYWpvdXRleiBsYSBtw6l0aG9kZSBlc3RfZW5fY29sbGlzaW9u" data-file="cDAwXzcucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-8">
-<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Testez la méthode <code class="docutils literal notranslate"><span class="pre">est_en_collision</span></code> en affichant toutes les paires de cercles en collision dans la liste <code class="docutils literal notranslate"><span class="pre">cercles</span></code>.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Indice<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Utilisez une double boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> pour parcourir toutes les paires de cercles.<br/>
-Pour rappel, on peut parcourir une fois la liste de cercles avec <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">cercle</span> <span class="pre">in</span> <span class="pre">cercles:</span></code>.</p>
-<p class="card-text">Votre code ressemblera donc à ceci :</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ce code vient à la suite de la création des cercles</span>
-<span class="k">for</span> <span class="n">c1</span> <span class="ow">in</span> <span class="n">cercles</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">c2</span> <span class="ow">in</span> <span class="n">cercles</span><span class="p">:</span>
-        <span class="c1"># Test de collision entre c1 et c2</span>
-</pre></div>
-</div>
-</div>
-</details><div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBSZXByZW5leiB2b3RyZSBjb2RlIGRlIGwnZXhlcmNpY2UgcHLDqWPDqWRlbnQgZXQgdGVzdGV6IGxhIG3DqXRob2RlIGVzdF9lbl9jb2xsaXNpb24=" data-file="cDAwXzgucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-</section>
-<section id="la-suite">
-<h2>La suite<a class="headerlink" href="#la-suite" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Si vous êtes arrivé jusqu’ici, vous avez déjà une bonne compréhension de la programmation orientée objet.</p>
-<p>Pour la suite, vous pouvez vous rendre sur <a class="reference external" href="https://quirkycort.github.io/tutorials/20-Pygame-Zero-Basics/20-Gem/10-first.html">cette page</a> pour voir les bases de Pygame Zero, la librairie que nous allons utiliser dès la prochaine séance. Appelez-moi pour vous aider à mettre en place la librairie.</p>
-</section>
-</section>
+<p>Pygame est une bibliothèque Python permettant de créer des jeux vidéo en 2D. Elle fournit des fonctionnalités pour gérer les fenêtres, les événements, les images, les sons, et bien plus encore.
+Voici un exemple simple de code Pygame qui dessine un paysage avec des montagnes, un soleil, des nuages et des fleurs aléatoires.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTozOjE6ICdmcm9tIHB5Z2FtZS5sb2NhbHMgaW1wb3J0IConIHVzZWQ7IHVuYWJsZSB0byBkZXRlY3QgdW5kZWZpbmVkIG5hbWVzIiwgImxpbmUiOiAzLCAiY29sdW1uIjogMH0sIHsidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weTo0NDoyNjogJ1FVSVQnIG1heSBiZSB1bmRlZmluZWQsIG9yIGRlZmluZWQgZnJvbSBzdGFyIGltcG9ydHM6IHB5Z2FtZS5sb2NhbHMiLCAibGluZSI6IDQ0LCAiY29sdW1uIjogMjV9XQ==" data-code="aW1wb3J0IHB5Z2FtZQppbXBvcnQgcmFuZG9tCmZyb20gcHlnYW1lLmxvY2FscyBpbXBvcnQgKgpmcm9tIHN5cyBpbXBvcnQgZXhpdAojIEluaXRpYWxpc2F0aW9uIGRlIFB5Z2FtZQpweWdhbWUuaW5pdCgpCiMgQ3LDqWF0aW9uIGRlIGxhIGZlbsOqdHJlCnNjcmVlbiA9IHB5Z2FtZS5kaXNwbGF5LnNldF9tb2RlKCg4MDAsIDYwMCkpCnB5Z2FtZS5kaXNwbGF5LnNldF9jYXB0aW9uKCJQYXlzYWdlIGF2ZWMgUHlnYW1lIikKIyBGb25jdGlvbiBwb3VyIGRlc3NpbmVyIHVuIHJlY3RhbmdsZQpkZWYgcmVjdGFuZ2xlKHgsIHksIHcsIGgsIGNvbG9yKToKICAgIHB5Z2FtZS5kcmF3LnJlY3Qoc2NyZWVuLCBjb2xvciwgKHgsIHksIHcsIGgpKQojIEZvbmN0aW9uIHBvdXIgZGVzc2luZXIgdW5lIG1vbnRhZ25lCmRlZiBtb250YWduZShiYXNlLCBjb2xvcik6CiAgICBwb2ludHMgPSBbKDAsIDYwMCksIChiYXNlLzIsIDYwMCAtIGJhc2UpLCAoYmFzZSwgNjAwKV0KICAgIHB5Z2FtZS5kcmF3LnBvbHlnb24oc2NyZWVuLCBjb2xvciwgcG9pbnRzKQojIEZvbmN0aW9uIHBvdXIgZGVzc2luZXIgbGUgc29sZWlsCmRlZiBzb2xlaWwocmFkaXVzLCByYXlvbnMsIGRpc3RhbmNlKToKICAgIHB5Z2FtZS5kcmF3LmNpcmNsZShzY3JlZW4sICgyNTUsIDI1NSwgMCksICg3MDAsIDEwMCksIHJhZGl1cykKICAgIGZvciBpIGluIHJhbmdlKHJheW9ucyk6CiAgICAgICAgYW5nbGUgPSBpICogKDM2MCAvIHJheW9ucykKICAgICAgICB4X2VuZCA9IDcwMCArIGRpc3RhbmNlICogcHlnYW1lLm1hdGguY29zKHB5Z2FtZS5tYXRoLnJhZGlhbnMoYW5nbGUpKQogICAgICAgIHlfZW5kID0gMTAwICsgZGlzdGFuY2UgKiBweWdhbWUubWF0aC5zaW4ocHlnYW1lLm1hdGgucmFkaWFucyhhbmdsZSkpCiAgICAgICAgcHlnYW1lLmRyYXcubGluZShzY3JlZW4sICgyNTUsIDI1NSwgMCksICg3MDAsIDEwMCksICh4X2VuZCwgeV9lbmQpLCAyKQojIEZvbmN0aW9uIHBvdXIgZGVzc2luZXIgdW4gbnVhZ2UKZGVmIG51YWdlKHJhZGl1cywgbik6CiAgICBmb3IgaSBpbiByYW5nZShuKToKICAgICAgICBvZmZzZXRfeCA9IHJhbmRvbS5yYW5kaW50KC1yYWRpdXMsIHJhZGl1cykKICAgICAgICBvZmZzZXRfeSA9IHJhbmRvbS5yYW5kaW50KC1yYWRpdXMvLzIsIHJhZGl1cy8vMikKICAgICAgICBweWdhbWUuZHJhdy5jaXJjbGUoc2NyZWVuLCAoMjU1LCAyNTUsIDI1NSksIChvZmZzZXRfeCArIDAsIG9mZnNldF95ICsgMCksIHJhZGl1cykKIyBGb25jdGlvbiBwb3VyIGRlc3NpbmVyIHVuZSBmbGV1cgpkZWYgZmxldXIoZCwgbiwgY19jZW50cmUsIGNfcGV0YWxlKToKICAgICMgRGVzc2luZSB1bmUgZmxldXIgYXZlYyB1biBjZW50cmUgZGUgZGlhbcOodHJlIGQgZXQgZGUgY291bGV1ciBjX2NlbnRyZSBhdmVjIG4gcMOpdGFsZXMgZGUgY291bGV1ciBjX3BldGFsZQogICAgY2VudGVyX3gsIGNlbnRlcl95ID0gNDAwLCA1MDAKICAgIGZvciBpIGluIHJhbmdlKG4pOgogICAgICAgIGFuZ2xlID0gaSAqICgzNjAgLyBuKQogICAgICAgIHBldGFsX3ggPSBjZW50ZXJfeCArIChkICogMC44KSAqIHB5Z2FtZS5tYXRoLmNvcyhweWdhbWUubWF0aC5yYWRpYW5zKGFuZ2xlKSkKICAgICAgICBwZXRhbF95ID0gY2VudGVyX3kgKyAoZCAqIDAuOCkgKiBweWdhbWUubWF0aC5zaW4ocHlnYW1lLm1hdGgucmFkaWFucyhhbmdsZSkpCiAgICAgICAgcHlnYW1lLmRyYXcuY2lyY2xlKHNjcmVlbiwgY19wZXRhbGUsIChpbnQocGV0YWxfeCksIGludChwZXRhbF95KSksIGQgLy8gMikKICAgIHB5Z2FtZS5kcmF3LmNpcmNsZShzY3JlZW4sIGNfY2VudHJlLCAoY2VudGVyX3gsIGNlbnRlcl95KSwgZCAvLyAyKQojIEJvdWNsZSBwcmluY2lwYWxlCndoaWxlIFRydWU6CiAgICBmb3IgZXZlbnQgaW4gcHlnYW1lLmV2ZW50LmdldCgpOgogICAgICAgIGlmIGV2ZW50LnR5cGUgPT0gUVVJVDoKICAgICAgICAgICAgcHlnYW1lLnF1aXQoKQogICAgICAgICAgICBleGl0KCkKICAgICMgRGVzc2luIGR1IHBheXNhZ2UKICAgIHNjcmVlbi5maWxsKCgxMzUsIDIwNiwgMjM1KSkgICMgQ2llbCBibGV1CiAgICByZWN0YW5nbGUoMCwgNDAwLCA4MDAsIDIwMCwgKDM0LCAxMzksIDM0KSkgICMgSGVyYmUgdmVydGUKICAgIG1vbnRhZ25lKDIwMCwgKDE2OSwgMTY5LCAxNjkpKSAgIyBNb250YWduZSBncmlzZQogICAgbW9udGFnbmUoMTUwLCAoMjExLCAyMTEsIDIxMSkpICAjIE1vbnRhZ25lIGNsYWlyZQogICAgbW9udGFnbmUoMjUwLCAoMTkyLCAxOTIsIDE5MikpICAjIE1vbnRhZ25lIGFyZ2VudMOpZQogICAgc29sZWlsKDUwLCAxMCwgODApICAjIFNvbGVpbAogICAgbnVhZ2UoNDAsIDUpICAjIE51YWdlCiAgICBmb3IgaSBpbiByYW5nZSg1MCk6ICAjIDUwIGZsZXVycyBhbMOpYXRvaXJlcwogICAgICAgIHggPSByYW5kb20ucmFuZGludCgwLCA4MDApCiAgICAgICAgeSA9IHJhbmRvbS5yYW5kaW50KDQwMCwgNjAwKQogICAgICAgIGZsZXVyKDIwLCA2LCAoMjU1LCAyMTUsIDApLCAoMjU1LCAwLCAyNTUpKQogICAgcHlnYW1lLmRpc3BsYXkudXBkYXRlKCk=" data-file="cDAwXzQucHk=" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 
         </article>
       </div>
@@ -508,41 +346,8 @@ Pour rappel, on peut parcourir une fois la liste de cercles avec <code class="do
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contenu
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">2. Introduction à Pygame</a><ul>
-<li><a class="reference internal" href="#creation-dune-classe-pour-brawlers">Création d’une classe pour Brawlers</a><ul>
-<li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
-<li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
-<li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
-<li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
-<li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#utilisation-de-listes">Utilisation de listes</a><ul>
-<li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
-<li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
-<li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#la-suite">La suite</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
