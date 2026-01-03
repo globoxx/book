@@ -28,7 +28,7 @@ La note maximale est n'atteignable qu'en ajoutant des éléments bonus.
 
 - (bonus) dessiner plus d'objets que le minimum requis
 - (bonus) intégrer un objet particulièrement bien réalisé ou complexe
-- (bonus) ajouter un mécanisme interactif (ex: demander des entrées utilisateur pour modifier le dessin)
+- (bonus) ajouter des animations ou des mécanismes interactifs
 - (bonus) utiliser des concepts avancés de programmation non vus en cours
 
 ```{admonition} Plagiat et tricherie
