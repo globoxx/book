@@ -123,7 +123,6 @@ On peut aussi combiner plusieurs comparaisons avec les opérateurs logiques:
 - `and` : et
 - `or`  : ou
 - `not` : non   
-```
 
 ```{codeplay}
 age = int(input("Quel âge avez-vous ? "))
@@ -197,7 +196,6 @@ for mot in mots:  # Pour chaque élément mot dans la liste mots
 
 ```{codeplay}
 prenoms = ["Alice", "Bob", "Charlie", "Diana", "Eve"]
-
 
 ```
 
