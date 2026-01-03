@@ -260,7 +260,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner.html">1. Running Ninja (runner)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_jeu/runner_new.html">1. Running Ninja (runner)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prog_jeu/hit_the_fly.html">2. Hit the fly (shooter)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prog_jeu/platformer.html">3. Jumper (platformer)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prog_jeu/projet.html">Projet</a></li>
@@ -308,8 +308,7 @@
 Le projet peut être réalisé par groupe de 2 ou seul.</p>
 <section id="template">
 <h2>Template<a class="headerlink" href="#template" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Voici le template (fichier de base) à utiliser pour votre projet. Il vous aidera à structurer correctement votre code.
-Vous travaillerez sur l’application <code class="docutils literal notranslate"><span class="pre">Thonny</span></code> afin de pouvoir sauvegarder votre travail.</p>
+<p>Voici le template (fichier de base) à utiliser pour votre projet. Il vous aidera à structurer correctement votre code.</p>
 <p><a class="reference download internal" download="" href="../_downloads/8d101e6494771ed89d73df83b57e9f82/template_projet_dessin.py"><code class="xref download docutils literal notranslate"><span class="pre">Télécharger</span> <span class="pre">ici</span></code></a></p>
 </section>
 <section id="consignes">
@@ -317,34 +316,30 @@ Vous travaillerez sur l’application <code class="docutils literal notranslate"
 <p>Le cahier des charges est le suivant:</p>
 <ul class="simple">
 <li><p>créer un dessin concret et cohérent (pas juste des formes abstraites) sur un sujet libre</p></li>
-<li><p>au moins 4 (3 si élève seul) objets <strong>différents</strong> et <strong>inédits</strong> auxquels on peut donner au moins 2 paramètres (ex: taille et couleur)</p></li>
-<li><p>chaque objet est défini à l’aide d’une fonction</p></li>
-<li><p>chaque fonction est décrite en 1-2 lignes de commentaires (voir exemple plus bas)</p></li>
-<li><p>les objets complexes (plus de 15 lignes de code) sont découpés en sous-fonctions</p></li>
-<li><p>utiliser des boucles pour répéter des instructions</p></li>
-<li><p>utiliser des boucles pour parcourir des valeurs (ex: couleurs, tailles, emplacements, etc)</p></li>
-<li><p>utiliser des dots, cercles, lignes et couleurs</p></li>
-<li><p>varier l’épaisseur du trait</p></li>
-<li><p>lever et baisser le stylo entre les objects</p></li>
-<li><p>utiliser des variables pour nommer les entités (ex: largeur, hauteur, rayon, couleur)</p></li>
-<li><p>intégrer au moins un élément aléatoire (module <code class="docutils literal notranslate"><span class="pre">random</span></code>) dans votre dessin</p></li>
-<li><p>le code est bien structuré (ex: les définitions de fonctions d’abord, puis les appels sont faits en dessous)</p></li>
-<li><p>(bonus) intégrer un objet particulièrement complexe</p></li>
+<li><p>au moins 4 (3 si élève seul) objets <strong>différents</strong> et <strong>inédits</strong> (par rapport aux démos et exemples donnés)</p></li>
+<li><p>chaque objet est défini à l’aide d’une fonction possédant au minimum 2 paramètres (ex: taille, couleur, position, etc)</p></li>
+<li><p>les objets complexes sont découpés en sous-fonctions (ex: un objet “maison” peut être découpé en fonctions “toit”, “porte”, “fenêtre”, etc)</p></li>
+<li><p>des boucles sont utilisées pour répéter des instructions</p></li>
+<li><p>au moins un élément aléatoire (module <code class="docutils literal notranslate"><span class="pre">random</span></code>) est présent dans votre dessin</p></li>
+<li><p>le code est bien structuré (les définitions de fonctions d’abord, puis les appels sont faits en dessous)</p></li>
+<li><p>(bonus) dessiner plus d’objets que le minimum requis</p></li>
+<li><p>(bonus) intégrer un objet particulièrement bien réalisé ou complexe</p></li>
+<li><p>(bonus) utiliser des concepts avancés de programmation non vus en cours</p></li>
 </ul>
-<p>Comme pour les exercices récapitulatifs, vous rendrez sur Moodle un fichier <code class="docutils literal notranslate"><span class="pre">.py</span></code> et une capture d’écran <code class="docutils literal notranslate"><span class="pre">.png</span></code>.</p>
+<p>Suivre l’ensemble des critères du cahier des charges vous donnera la note de 5.5.
+La note maximale est n’atteignable qu’en ajoutant des éléments bonus.</p>
 <div class="attention admonition">
 <p class="admonition-title">Plagiat et tricherie</p>
 <p>Vous n’êtes pas autorisé à simplement copier-coller du code trouvé dans les exercices, sur Internet où dans d’autres groupes.</p>
-<p>Il est cependant autorisé de s’inspirer de code d’autrui et de le modifier pour le faire sien. Dans ce cas, il vous est demandé d’ajouter un commentaire dans le code indiquant sa source. Attention vos objets ne doivent cependant pas être de simples légères modifications (ex: couleur) d’un objet présent dans les exercices.</p>
+<p>Il est cependant autorisé de s’inspirer de code d’autrui et de le modifier pour le faire sien. Dans ce cas, il vous est demandé d’ajouter un commentaire dans le code indiquant sa source. Attention, vos objets ne doivent cependant pas être de légères modifications (ex: couleur ou taille) d’un objet présent dans les exercices.</p>
 <p>L’utilisation d’IA génératives telles que ChatGPT est autorisée à des fins d’assistance uniquement. Tout code produit par une IA doit être compris par les membres du groupe et indiqué comme tel dans un commentaire.</p>
-<p>Enfin, <strong>chaque ligne de code doit pouvoir être expliquée et défendue par le groupe</strong>. L’enseignant se réserve le droit d’interroger le groupe sur le code en cas de doute. Un membre du groupe peut avoir une note différente de son binôme s’il est révélé que sa contribution est nettement inférieure.</p>
+<p>Enfin, <strong>chaque ligne de code doit pouvoir être expliquée et défendue par le groupe</strong>. L’enseignant se réserve le droit d’interroger le groupe sur leur code en cas de doute. Un membre du groupe peut avoir une note différente de son binôme s’il est révélé que sa contribution est nettement inférieure.</p>
 </div>
 </section>
 <section id="exemple">
 <h2>Exemple<a class="headerlink" href="#exemple" title="Lien permanent vers ce titre">¶</a></h2>
 <p>L’exemple ci-dessous satisfait toutes les contraintes du cahier des charges.</p>
 <p><img alt="projet" src="../_images/dessin_exemple.png"/></p>
-<p>Copiez-collez le code du dessin dans l’application <code class="docutils literal notranslate"><span class="pre">Thonny</span></code> pour visualiser comment il est réalisé.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir le code<div class="summary-down docutils">

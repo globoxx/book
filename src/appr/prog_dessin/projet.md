@@ -8,7 +8,6 @@ Le projet peut être réalisé par groupe de 2 ou seul.
 ## Template
 
 Voici le template (fichier de base) à utiliser pour votre projet. Il vous aidera à structurer correctement votre code.
-Vous travaillerez sur l'application `Thonny` afin de pouvoir sauvegarder votre travail.
 
 {download}`Télécharger ici<../data/template_projet_dessin.py>`
 
@@ -17,31 +16,28 @@ Vous travaillerez sur l'application `Thonny` afin de pouvoir sauvegarder votre t
 Le cahier des charges est le suivant:
 
 - créer un dessin concret et cohérent (pas juste des formes abstraites) sur un sujet libre
-- au moins 4 (3 si élève seul) objets **différents** et **inédits** auxquels on peut donner au moins 2 paramètres (ex: taille et couleur)
-- chaque objet est défini à l'aide d'une fonction
-- chaque fonction est décrite en 1-2 lignes de commentaires (voir exemple plus bas)
-- les objets complexes (plus de 15 lignes de code) sont découpés en sous-fonctions
-- utiliser des boucles pour répéter des instructions
-- utiliser des boucles pour parcourir des valeurs (ex: couleurs, tailles, emplacements, etc)
-- utiliser des dots, cercles, lignes et couleurs
-- varier l'épaisseur du trait
-- lever et baisser le stylo entre les objects
-- utiliser des variables pour nommer les entités (ex: largeur, hauteur, rayon, couleur)
-- intégrer au moins un élément aléatoire (module `random`) dans votre dessin
-- le code est bien structuré (ex: les définitions de fonctions d'abord, puis les appels sont faits en dessous)
-- (bonus) intégrer un objet particulièrement complexe
+- au moins 4 (3 si élève seul) objets **différents** et **inédits** (par rapport aux démos et exemples donnés)
+- chaque objet est défini à l'aide d'une fonction possédant au minimum 2 paramètres (ex: taille, couleur, position, etc)
+- les objets complexes sont découpés en sous-fonctions (ex: un objet "maison" peut être découpé en fonctions "toit", "porte", "fenêtre", etc)
+- des boucles sont utilisées pour répéter des instructions
+- au moins un élément aléatoire (module `random`) est présent dans votre dessin
+- le code est bien structuré (les définitions de fonctions d'abord, puis les appels sont faits en dessous)
+- (bonus) dessiner plus d'objets que le minimum requis
+- (bonus) intégrer un objet particulièrement bien réalisé ou complexe
+- (bonus) utiliser des concepts avancés de programmation non vus en cours
 
-Comme pour les exercices récapitulatifs, vous rendrez sur Moodle un fichier `.py` et une capture d'écran `.png`.
+Suivre l'ensemble des critères du cahier des charges vous donnera la note de 5.5.
+La note maximale est n'atteignable qu'en ajoutant des éléments bonus.
 
 ```{admonition} Plagiat et tricherie
 :class: attention
 Vous n'êtes pas autorisé à simplement copier-coller du code trouvé dans les exercices, sur Internet où dans d'autres groupes.
 
-Il est cependant autorisé de s'inspirer de code d'autrui et de le modifier pour le faire sien. Dans ce cas, il vous est demandé d'ajouter un commentaire dans le code indiquant sa source. Attention vos objets ne doivent cependant pas être de simples légères modifications (ex: couleur) d'un objet présent dans les exercices.
+Il est cependant autorisé de s'inspirer de code d'autrui et de le modifier pour le faire sien. Dans ce cas, il vous est demandé d'ajouter un commentaire dans le code indiquant sa source. Attention, vos objets ne doivent cependant pas être de légères modifications (ex: couleur ou taille) d'un objet présent dans les exercices.
 
 L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d'assistance uniquement. Tout code produit par une IA doit être compris par les membres du groupe et indiqué comme tel dans un commentaire.
 
-Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. L'enseignant se réserve le droit d'interroger le groupe sur le code en cas de doute. Un membre du groupe peut avoir une note différente de son binôme s'il est révélé que sa contribution est nettement inférieure.
+Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. L'enseignant se réserve le droit d'interroger le groupe sur leur code en cas de doute. Un membre du groupe peut avoir une note différente de son binôme s'il est révélé que sa contribution est nettement inférieure.
 ```
 
 ## Exemple
@@ -49,8 +45,6 @@ Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le 
 L'exemple ci-dessous satisfait toutes les contraintes du cahier des charges.
 
 ![projet](../media/dessin_exemple.png)
-
-Copiez-collez le code du dessin dans l'application `Thonny` pour visualiser comment il est réalisé.
 
 ````{dropdown} Voir le code
 ```python
