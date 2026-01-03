@@ -1,6 +1,6 @@
 (prog_jeu.rappels)=
 
-# Exercices de remise en forme
+# 1. Rappels de programmation
 
 ## Exercice 1 - Afficher du texte
 

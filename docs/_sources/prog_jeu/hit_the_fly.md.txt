@@ -1,6 +1,6 @@
 (prog_jeu.hit_the_fly)=
 
-# 2. Hit the fly (shooter)
+# 4. Hit the fly (shooter)
 
 Le jeu consiste en un personnage pouvant se déplacer librement au clavier et pouvant tirer des projectiles sur des ennemis se déplaçant aléatoirement avec des clics de souris.
 

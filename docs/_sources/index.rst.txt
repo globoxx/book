@@ -64,6 +64,8 @@ Bienvenue sur la plateforme de TP d'informatique !
    :maxdepth: 3
    :hidden:
 
+   prog_jeu/rappels
+   prog_jeu/intro_pygame
    prog_jeu/runner_new
    prog_jeu/hit_the_fly
    prog_jeu/platformer
