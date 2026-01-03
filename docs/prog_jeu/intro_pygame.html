@@ -196,7 +196,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -299,7 +299,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -308,6 +308,89 @@
           <section class="tex2jax_ignore mathjax_ignore" id="introduction-a-pygame">
 <span id="prog-jeu-intro-pygame"></span><h1>2. Introduction à Pygame<a class="headerlink" href="#introduction-a-pygame" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Pygame est une bibliothèque Python permettant de créer des jeux vidéo en 2D. Elle fournit des fonctionnalités pour gérer les fenêtres, les événements, les images, les sons, et bien plus encore.</p>
+<p>Vous trouverez ci-dessous le code minimal pour faire apparaître la fenêtre de votre jeu.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Premier test !'</span> <span class="c1"># Titre de votre jeu</span>
+
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span> <span class="c1"># Largeur de la fenêtre</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span> <span class="c1"># Hauteur de la fenêtre</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span> <span class="c1"># Lance le jeu</span>
+</pre></div>
+</div>
+<section id="fond-et-formes">
+<h2>Fond et formes<a class="headerlink" href="#fond-et-formes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ajoutons un fond bleu et quelques formes géométriques à l’écran. Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># Efface l'écran avant de dessiner</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s2">"blue"</span><span class="p">)</span> <span class="c1"># Remplit le fond en bleu</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">((</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">"white"</span><span class="p">)</span> <span class="c1"># Dessine un cercle blanc de centre (250, 250) et de rayon 50</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_circle</span><span class="p">((</span><span class="mi">250</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">)</span> <span class="c1"># Dessine un cercle rouge rempli de centre (250, 100) et de rayon 50</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">((</span><span class="mi">150</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">450</span><span class="p">),</span> <span class="s2">"purple"</span><span class="p">)</span> <span class="c1"># Dessine une ligne verticale violette de (150, 20) à (150, 450)</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">((</span><span class="mi">150</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">350</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="s2">"purple"</span><span class="p">)</span> <span class="c1"># Dessine une ligne horizontale violette de (150, 20) à (350, 20)</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="exercice-1">
+<h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Complétez la forme.</p>
+</section>
+</section>
+<section id="faire-bouger-les-formes">
+<h2>Faire bouger les formes<a class="headerlink" href="#faire-bouger-les-formes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour faire bouger les objets, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Nous allons faire bouger un carré rouge horizontalement.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="n">box</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span> <span class="c1"># Crée un carré rouge de position (20, 20) et de taille (50, 50)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
+        <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<section id="exercice-2">
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Faites bouger le carré plus rapidement.</p>
+</section>
+<section id="exercice-3">
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Faites bouger le carré en diagonale.</p>
+</section>
+<section id="exercice-4">
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ajoutez un deuxième carré d’une autre couleur qui se déplace également.</p>
+</section>
+</section>
+<section id="ajouter-des-acteurs-avec-des-images">
+<h2>Ajouter des acteurs (avec des images)<a class="headerlink" href="#ajouter-des-acteurs-avec-des-images" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour ajouter des images, nous allons utiliser la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> de Pygame Zero. Assurez-vous d’avoir une image nommée <code class="docutils literal notranslate"><span class="pre">ninja.png</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> de votre projet.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="n">alien</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span>
+<span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alien</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
+        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</section>
 </section>
 
         </article>
@@ -346,8 +429,37 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">2. Introduction à Pygame</a><ul>
+<li><a class="reference internal" href="#fond-et-formes">Fond et formes</a><ul>
+<li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#faire-bouger-les-formes">Faire bouger les formes</a><ul>
+<li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
+<li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
+<li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ajouter-des-acteurs-avec-des-images">Ajouter des acteurs (avec des images)</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
