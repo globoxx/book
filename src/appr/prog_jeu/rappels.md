@@ -25,6 +25,8 @@ Ecrivez un programme qui affiche le résultat de la multiplication de 15 et 27.
 
 ```{codeplay}
 
+
+
 ```
 
 ````{dropdown} Solution possible
@@ -59,6 +61,8 @@ print(nombre)  # Affiche 15
 
 ```{codeplay}
 
+
+
 ```
 
 ````{dropdown} Solution possible
@@ -74,6 +78,8 @@ print("J'ai", age, "ans")
 Le programme doit ensuite calculer l'aire du rectangle (largeur × hauteur) et l'afficher. 
 
 ```{codeplay}
+
+
 
 ```
 
@@ -159,6 +165,8 @@ La fonction `range(a, b)` génère les nombres de `a` à `b-1`.
 
 ```{codeplay}
 
+
+
 ```
 
 ````{dropdown} Solution possible
@@ -228,6 +236,7 @@ saluer("Alice")  # Appel de la fonction saluer avec "Alice" comme paramètre
 ```{codeplay}
 
 
+
 ```
 
 ````{dropdown} Solution possible
@@ -277,6 +286,7 @@ Vous pouvez utiliser une boucle `for` pour parcourir les entiers de 1 à `n`.
 Testez la fonction `somme(n)` en l'appelant avec différentes valeurs pour `n`.
 
 ```{codeplay}
+
 
 
 ```
