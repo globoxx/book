@@ -230,7 +230,7 @@ Elle est utile lorsque l'on ne sait pas à l'avance combien de fois on devra ré
 ```
 
 ````{dropdown} Solution possible
-```python
+```{codeplay}
 mot_de_passe = ""
 while mot_de_passe != "42":          # Tant que le mot de passe est incorrect
     mot_de_passe = input("Entrez le mot de passe : ")  # On demande un nouveau mot de passe
@@ -337,7 +337,7 @@ print(somme(1000))  # Affiche 500500
 ````
 
 ## Exercice 12 - Utiliser l'aléatoire
-Ecrivez un programme qui tire un nombre entier aléatoire entre 1 et 100 (inclus) et qui demande à l'utilisateur de deviner ce nombre. Le programme doit continuer à demander tant que l'utilisateur n'a pas trouvé le bon nombre. Lorsqu'il trouve le bon, le programme doit afficher "Bravo !".
+Ecrivez un programme qui tire un nombre entier aléatoire entre 1 et 10 (inclus) et qui demande à l'utilisateur de deviner ce nombre. Le programme doit continuer à demander tant que l'utilisateur n'a pas trouvé le bon nombre. Lorsqu'il trouve le bon, le programme doit afficher "Bravo !".
 
 ````{dropdown} Aide sur l'aléatoire
 Le module `random` permet de faire de l'aléatoire. Pour tirer un nombre entier aléatoire entre `a` et `b` (inclus), on utilise la fonction `random.randint(a, b)`.
@@ -363,7 +363,7 @@ import random  # Pour utiliser l'aléatoire
 ````{dropdown} Solution possible
 ```{codeplay}
 import random  # Pour utiliser l'aléatoire
-nombre_a_deviner = random.randint(1, 100)  # Tire un nombre aléatoire entre 1 et 100
+nombre_a_deviner = random.randint(1, 10)  # Tire un nombre aléatoire entre 1 et 10
 nombre_devine = 0
 while nombre_devine != nombre_a_deviner:
     nombre_devine = int(input("Devinez le nombre (entre 1 et 100) : "))
