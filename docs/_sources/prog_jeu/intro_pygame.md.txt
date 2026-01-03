@@ -15,7 +15,7 @@ Après avoir présenté la notion de **classe**, nous allons voir la notion d'**
 
 (Pour plus de détails théoriques sur la programmation orientée objet, vous pouvez consulter [cette page](https://courspython.com/classes-et-objets.html) dont le cours est tiré.)
 
-# Création d'une classe pour Brawlers
+## Création d'une classe pour Brawlers
 
 Nous allons créer une classe `Brawler` pour représenter les personnages du jeu Brawl Stars. Chaque brawler aura des attributs comme la vie, la position, l'attaque, la vitesse, etc.
 
@@ -38,7 +38,7 @@ Le mot-clé `self` est utilisé pour faire référence à l'objet lui-même au s
 Le mot-clé `self` ne s'utilise jamais en dehors d'une classe.
 ```
 
-## Exercice 1
+### Exercice 1
 
 Créez une classe `Rico` qui représente le brawler Rico. Ajoutez tous les attributs que vous pensez nécessaires (au minimum: `vie`, `degats`, `x` et `y`). Créez un objet `rico` de la classe `Rico` et affichez ses attributs.
 Voici la fiche de son personnage :
@@ -58,7 +58,7 @@ class Rico:
 
 ```
 
-## Exercice 2
+### Exercice 2
 
 Il n'est pas pratique de devoir créer une classe différente pour chaque brawler. Il vaudrait mieux créer **une seule classe permettant de créer n'importe quel brawler**.
 
@@ -91,7 +91,7 @@ angelo = ...
 ```{image} ../media/poo_angelo.png
 ```
 
-## Exercice 3
+### Exercice 3
 
 En plus des **attributs**, une classe peut aussi définir des **méthodes**. Ce sont des fonctions qui sont définies à l'intérieur de la classe et elles représentent des actions que l'objet peut effectuer.  
 Par exemple, un brawler peut attaquer un autre brawler, se déplacer, etc.
@@ -134,7 +134,7 @@ Testez cette méthode en faisant attaquer `rico` par `angelo`, puis affichez la 
 rico.attaque(angelo) # rico peut attaquer angelo grâce à cette méthode
 ```
 
-## Exercice 4
+### Exercice 4
 
 Ajoutez une méthode `deplace` à la classe `Brawler` qui prend en paramètre une distance `dx` et qui déplace le brawler sur l'axe `x` en conséquence.
 
@@ -145,7 +145,7 @@ Testez cette méthode en déplaçant `rico` à droite d'une distance de `15`, pu
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode deplace
 ```
 
-## Exercice 5
+### Exercice 5
 
 Ajoutez une méthode `est_mort` à la classe `Brawler` qui retourne `True` si le brawler est mort (`vie <= 0`) et `False` sinon. La méthode ne prend aucun paramètre (à part `self`).
 
@@ -156,7 +156,7 @@ Testez cette méthode en faisant attaquer `rico` par `angelo` jusqu'à ce que `r
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode est_mort
 ```
 
-# Utilisation de listes
+## Utilisation de listes
 
 Quand on possède beaucoup de personnages dans un jeu, il est plus pratique de les stocker dans une **liste**. Voici un exemple de code qui crée une liste de brawlers :
 
@@ -167,7 +167,7 @@ for i in range(5): # Boucle pour créer 5 brawlers
     brawlers.append(brawler) # Ajoute un brawler à la liste
 ```
 
-## Exercice 6
+### Exercice 6
 
 Dans les jeux, on représente souvent les personnages par des cercles ou des rectangles pour gérer les collisions.
 
@@ -209,7 +209,7 @@ class Cercle:
 # Votre code ici (basez-vous sur l'exemple avec les listes donné plus haut)
 ```
 
-## Exercice 7
+### Exercice 7
 
 Ajoutez une méthode `est_en_collision` à la classe `Cercle` qui prend en paramètre un autre cercle et qui retourne `True` si les deux cercles sont en collision et `False` sinon.
 
@@ -226,7 +226,7 @@ Cette distance peut être calculée avec la méthode `calcule_distance` qui est 
 # Reprenez votre code de l'exercice précédent et ajoutez la méthode est_en_collision
 ```
 
-## Exercice 8
+### Exercice 8
 
 Testez la méthode `est_en_collision` en affichant toutes les paires de cercles en collision dans la liste `cercles`.
 
@@ -248,7 +248,7 @@ for c1 in cercles:
 # Reprenez votre code de l'exercice précédent et testez la méthode est_en_collision
 ```
 
-# La suite
+## La suite
 
 Si vous êtes arrivé jusqu'ici, vous avez déjà une bonne compréhension de la programmation orientée objet.
 

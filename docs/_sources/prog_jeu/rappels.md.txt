@@ -227,6 +227,7 @@ Elle est utile lorsque l'on ne sait pas à l'avance combien de fois on devra ré
 ```{codeplay}
 
 
+
 ```
 
 ````{dropdown} Solution possible
