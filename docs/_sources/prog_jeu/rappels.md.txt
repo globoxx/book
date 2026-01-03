@@ -374,6 +374,10 @@ print("Bravo ! Vous avez trouvé le nombre", nombre_a_deviner)
 
 ## Challenges sans solution
 
+Les exercices suivants sont plus difficiles. Ils n'ont pas de solution fournie, mais vous pouvez demander de l'aide à votre enseignant·e ou à une IA.
+
+Si vous pensez être à l'aise avec toutes les notions de l'année passée, vous pouvez faire la page <a href="https://globox.pythonanywhere.com/static/prog_jeu/poo.html" target="_blank">suivante</a> qui introduit la programmation orientée objet (POO).
+
 ### Choix 1 - Plus ou Moins
 Ecrivez un programme permettant de jouer au jeu du "Plus ou Moins". Le programme doit générer un nombre aléatoire entre 1 et 100 (inclus), puis demander à l'utilisateur de deviner ce nombre.  
 Après chaque proposition de l'utilisateur, le programme doit indiquer si le nombre à deviner est plus grand ou plus petit que la proposition. Le jeu continue jusqu'à ce que l'utilisateur trouve le bon nombre.  
