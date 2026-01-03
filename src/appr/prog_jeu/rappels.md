@@ -9,6 +9,8 @@ Rappel: la fonction `print(texte)` permet d'afficher un `texte` donné.
 
 ```{codeplay}
 
+
+
 ```
 
 ````{dropdown} Solution possible
