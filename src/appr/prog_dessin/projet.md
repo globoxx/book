@@ -15,8 +15,8 @@ Voici le template (fichier de base) à utiliser pour votre projet. Il vous aider
 
 Le cahier des charges est le suivant:
 
-- créer un dessin concret et cohérent (pas juste des formes abstraites) sur un sujet libre
-- au moins 4 (3 si élève seul) objets **différents** et **inédits** (par rapport aux démos et exemples donnés)
+- créer un dessin concret (pas juste des formes abstraites) sur un sujet libre
+- au moins 4 objets **différents** et **inédits** (3 si élève seul)
 - chaque objet est défini à l'aide d'une fonction possédant au minimum 2 paramètres (ex: taille, couleur, position, etc)
 - les objets complexes sont découpés en sous-fonctions (ex: un objet "maison" peut être découpé en fonctions "toit", "porte", "fenêtre", etc)
 - des boucles sont utilisées pour répéter des instructions
@@ -24,6 +24,7 @@ Le cahier des charges est le suivant:
 - le code est bien structuré (les définitions de fonctions d'abord, puis les appels sont faits en dessous)
 - (bonus) dessiner plus d'objets que le minimum requis
 - (bonus) intégrer un objet particulièrement bien réalisé ou complexe
+- (bonus) ajouter un mécanisme interactif (ex: demander des entrées utilisateur pour modifier le dessin)
 - (bonus) utiliser des concepts avancés de programmation non vus en cours
 
 Suivre l'ensemble des critères du cahier des charges vous donnera la note de 5.5.
