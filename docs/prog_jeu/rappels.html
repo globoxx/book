@@ -260,7 +260,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="runner.html">1. Running Ninja (runner)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runner_new.html">1. Running Ninja (runner)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hit_the_fly.html">2. Hit the fly (shooter)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="platformer.html">3. Jumper (platformer)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
@@ -304,39 +304,253 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="exercices-de-remise-en-forme">
 <span id="prog-jeu-rappels"></span><h1>Exercices de remise en forme<a class="headerlink" href="#exercices-de-remise-en-forme" title="Lien permanent vers ce titre">¶</a></h1>
-<section id="exercice-1">
-<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Écrivez un programme qui demande votre prénom puis l’affiche.<br/>
-Rappel: la fonction <code class="docutils literal notranslate"><span class="pre">input</span></code> permet de demander une information à l’utilisateur.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJzeW50YXgiLCAibWVzc2FnZSI6ICJpbnZhbGlkIHN5bnRheCIsICJsaW5lIjogMSwgImNvbHVtbiI6IDl9XQ==" data-code="cHJlbm9tID0K" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-2">
-<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Écrivez un programme qui demande combien de vies il vous reste (code donné).<br/>
-S’il vous reste au moins une vie, le programme affiche “Vous êtes encore en vie”.  Sinon, il affiche “Game Over”.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBPbiB1dGlsaXNlIGludCgpIHBvdXIgY29udmVydGlyIGxlIHRleHRlIHJlw6d1IGVuIHLDqXBvbnNlIGVuIHVuIG5vbWJyZSBlbnRpZXIKdmllcyA9IGludChpbnB1dCgiQ29tYmllbiBkZSB2aWVzIHZvdXMgcmVzdGUtdC1pbCA/ICIpKQo=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-3">
-<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Écrivez un programme qui affiche les nombres de 1 à 99.<br/>
-Vous pouvez utiliser une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> ou <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Cg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-4">
-<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Écrivez un programme qui fait la somme des nombres de 1 à 99.<br/>
-Reprenez le code de l’exercice 3.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Cg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-5">
-<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Écrivez un programme qui demande en boucle à l’utilisateur s’il souhaite continuer.<br/>
-Le programme s’arrête si l’utilisateur répond “non”. Sinon, il continue à l’infini.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Cg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-6">
-<h2>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Écrivez un programme qui affiche 100 nombres aléatoires entre 1 et 99.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-analysis="W3sidHlwZSI6ICJ3YXJuaW5nIiwgIm1lc3NhZ2UiOiAiY29kZS5weToxOjE6ICdyYW5kb20nIGltcG9ydGVkIGJ1dCB1bnVzZWQiLCAibGluZSI6IDEsICJjb2x1bW4iOiAwfV0=" data-code="aW1wb3J0IHJhbmRvbSAjIE9uIGltcG9ydGUgbGUgbW9kdWxlIHJhbmRvbSBwb3VyIGwnYWzDqWF0b2lyZQo=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="exercice-7">
-<h2>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Écrivez un programme qui définit une fonction <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> qui prend 2 nombres <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> en paramètres et qui retourne le plus grand des deux.</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Cg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<section id="exercice-1-afficher-du-texte">
+<h2>Exercice 1 - Afficher du texte<a class="headerlink" href="#exercice-1-afficher-du-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Écrivez un programme qui affiche “Salut” suivi de votre prénom.
+Rappel: la fonction <code class="docutils literal notranslate"><span class="pre">print(texte)</span></code> permet d’afficher un <code class="docutils literal notranslate"><span class="pre">texte</span></code> donné.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoIlNhbHV0IEFsaWNlIikgICMgUmVtcGxhY2V6ICJBbGljZSIgcGFyIHZvdHJlIHByw6lub20=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
+<section id="exercice-2-afficher-le-resultat-dun-calcul">
+<h2>Exercice 2 - Afficher le résultat d’un calcul<a class="headerlink" href="#exercice-2-afficher-le-resultat-dun-calcul" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ecrivez un programme qui affiche le résultat de la multiplication de 15 et 27.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJpbnQoMTUgKiAyNyk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
+<section id="exercice-3-utiliser-une-variable">
+<h2>Exercice 3 - Utiliser une variable<a class="headerlink" href="#exercice-3-utiliser-une-variable" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Écrivez un programme qui stocke votre âge dans une variable <code class="docutils literal notranslate"><span class="pre">age</span></code> et qui affiche “J’ai X ans”, où X est la valeur de la variable <code class="docutils literal notranslate"><span class="pre">age</span></code>.</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code> peut afficher plusieurs éléments séparés par des virgules. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Bonjour"</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">,</span> <span class="s2">"!"</span><span class="p">)</span>  <span class="c1"># Affiche "Bonjour Bob !"</span>
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Aide sur les variables<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Une variable est un nom qui permet de stocker une valeur. Par exemple, pour stocker le nombre 10 dans une variable nommée <code class="docutils literal notranslate"><span class="pre">nombre</span></code>, on écrit:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span> <span class="c1"># Affiche 10</span>
+</pre></div>
+</div>
+<p class="card-text">Cette variable peut ensuite évoluer dans le programme:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="o">+</span> <span class="mi">5</span>  <span class="c1"># On ajoute 5 à la valeur actuelle de la variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>  <span class="c1"># Affiche 15</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YWdlID0gMjUgICMgUmVtcGxhY2V6IDI1IHBhciB2b3RyZSDDomdlCnByaW50KCJKJ2FpIiwgYWdlLCAiYW5zIik=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
+<section id="exercice-4-faire-un-calcul-avec-des-variables">
+<h2>Exercice 4 - Faire un calcul avec des variables<a class="headerlink" href="#exercice-4-faire-un-calcul-avec-des-variables" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Écrivez un programme qui stocke dans une variable <code class="docutils literal notranslate"><span class="pre">largeur</span></code> la valeur 5 et dans une variable <code class="docutils literal notranslate"><span class="pre">hauteur</span></code> la valeur 10.<br/>
+Le programme doit ensuite calculer l’aire du rectangle (largeur × hauteur) et l’afficher.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="bGFyZ2V1ciA9IDUKaGF1dGV1ciA9IDEwCmFpcmUgPSBsYXJnZXVyICogaGF1dGV1cgpwcmludCgiTCdhaXJlIGR1IHJlY3RhbmdsZSBlc3QiLCBhaXJlKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
+<section id="exercice-5-ajouter-une-condition">
+<h2>Exercice 5 - Ajouter une condition<a class="headerlink" href="#exercice-5-ajouter-une-condition" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Écrivez un programme qui demande à l’utilisateur son âge et qui affiche “Vous êtes majeur” si l’âge est au moins 18 ans, ou “Vous êtes mineur” sinon.</p>
+<p>La partie du code qui demande l’âge et stocke la réponsedans une variable <code class="docutils literal notranslate"><span class="pre">age</span></code> vous est fournie.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Aide sur les conditions<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Une condition permet d’exécuter un bout de code seulement si une certaine situation est vraie. Par exemple, pour vérifier si un nombre est positif:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">if</span> <span class="n">nombre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Si le nombre est supérieur à 0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre est positif"</span><span class="p">)</span>  <span class="c1"># On affiche ce message</span>
+<span class="k">elif</span> <span class="n">nombre</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># Sinon si le nombre est inférieur à 0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre est négatif"</span><span class="p">)</span>  <span class="c1"># On affiche un autre message</span>
+<span class="k">else</span><span class="p">:</span>  <span class="c1"># Sinon (le nombre est forcément égal à 0)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre est nul"</span><span class="p">)</span>  <span class="c1"># On affiche un autre message</span>
+</pre></div>
+</div>
+</div>
+</details><p>On peut utiliser les opérateurs de comparaison suivants:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code> : égal à</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code> : différent de</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>  : inférieur à</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>  : supérieur à</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> : inférieur ou égal à</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> : supérieur ou égal à</p></li>
+</ul>
+<p>On peut aussi combiner plusieurs comparaisons avec les opérateurs logiques:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">and</span></code> : et</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">or</span></code>  : ou</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">not</span></code> : non</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+```{codeplay}
+age = int(input("Quel âge avez-vous ? "))
+
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="YWdlID0gaW50KGlucHV0KCJRdWVsIMOiZ2UgYXZlei12b3VzID8gIikpCmlmIGFnZSA+PSAxODoKICAgIHByaW50KCJWb3VzIMOqdGVzIG1hamV1ciIpCmVsc2U6CiAgICBwcmludCgiVm91cyDDqnRlcyBtaW5ldXIiKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
+<section id="exercice-6-utiliser-une-boucle-pour-parcourir-des-nombres">
+<h2>Exercice 6 - Utiliser une boucle pour parcourir des nombres<a class="headerlink" href="#exercice-6-utiliser-une-boucle-pour-parcourir-des-nombres" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ecrivez un programme qui affiche les nombres de <code class="docutils literal notranslate"><span class="pre">0</span></code> à <code class="docutils literal notranslate"><span class="pre">49</span></code> en utilisant une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Aide sur les boucles qui parcourent des nombres<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Une boucle permet de répéter un bout de code plusieurs fois. Par exemple, pour afficher les nombres de 0 à 4:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>  <span class="c1"># Pour chaque nombre i de 0 à 4</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>        <span class="c1"># On affiche i</span>
+</pre></div>
+</div>
+<p class="card-text">La fonction <code class="docutils literal notranslate"><span class="pre">range(n)</span></code> génère les nombres de <code class="docutils literal notranslate"><span class="pre">0</span></code> à <code class="docutils literal notranslate"><span class="pre">n-1</span></code>.<br/>
+On peut aussi spécifier plus précisément un début et une fin:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">):</span>  <span class="c1"># Pour chaque nombre i de 3 à 7</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>           <span class="c1"># On affiche i</span>
+</pre></div>
+</div>
+<p class="card-text">La fonction <code class="docutils literal notranslate"><span class="pre">range(a,</span> <span class="pre">b)</span></code> génère les nombres de <code class="docutils literal notranslate"><span class="pre">a</span></code> à <code class="docutils literal notranslate"><span class="pre">b-1</span></code>.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Zm9yIGkgaW4gcmFuZ2UoNTApOgogICAgcHJpbnQoaSk=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
+<section id="exercice-7-utiliser-une-boucle-pour-parcourir-une-liste">
+<h2>Exercice 7 - Utiliser une boucle pour parcourir une liste<a class="headerlink" href="#exercice-7-utiliser-une-boucle-pour-parcourir-une-liste" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ecrivez un programme qui affiche chaque prénom d’une liste de prénoms. La liste est fournie dans la variable <code class="docutils literal notranslate"><span class="pre">prenoms</span></code>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Aide sur les boucles qui parcourent des listes<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Une liste est une collection ordonnée d’éléments. Par exemple, pour créer une liste de mots:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mots</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"pomme"</span><span class="p">,</span> <span class="s2">"banane"</span><span class="p">,</span> <span class="s2">"cerise"</span><span class="p">]</span>
+</pre></div>
+</div>
+<p class="card-text">On peut parcourir chaque élément d’une liste avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">mot</span> <span class="ow">in</span> <span class="n">mots</span><span class="p">:</span>  <span class="c1"># Pour chaque élément mot dans la liste mots</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>    <span class="c1"># On affiche mot</span>
+</pre></div>
+</div>
+</div>
+</details><div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJlbm9tcyA9IFsiQWxpY2UiLCAiQm9iIiwgIkNoYXJsaWUiLCAiRGlhbmEiLCAiRXZlIl0K" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="cHJlbm9tcyA9IFsiQWxpY2UiLCAiQm9iIiwgIkNoYXJsaWUiLCAiRGlhbmEiLCAiRXZlIl0KZm9yIHByZW5vbSBpbiBwcmVub21zOgogICAgcHJpbnQocHJlbm9tKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
+<section id="exercice-8-utiliser-une-fonction">
+<h2>Exercice 8 - Utiliser une fonction<a class="headerlink" href="#exercice-8-utiliser-une-fonction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ecrivez un programme qui définit une fonction <code class="docutils literal notranslate"><span class="pre">carre(x)</span></code> qui prend un nombre <code class="docutils literal notranslate"><span class="pre">x</span></code> en paramètre et qui affiche le carré de ce nombre (c’est-à-dire <code class="docutils literal notranslate"><span class="pre">x</span></code> multiplié par lui-même).</p>
+<p>Testez la fonction <code class="docutils literal notranslate"><span class="pre">carre(x)</span></code> en l’appelant avec différentes valeurs pour <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Aide sur les fonctions<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Une fonction est un bout de code que l’on peut réutiliser plusieurs fois. Par exemple, pour définir une fonction qui affiche un message de bienvenue:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bienvenue</span><span class="p">():</span>  <span class="c1"># Définition de la fonction bienvenue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Bienvenue dans le programme !"</span><span class="p">)</span>
+
+<span class="n">bienvenue</span><span class="p">()</span>  <span class="c1"># Appel de la fonction bienvenue</span>
+</pre></div>
+</div>
+<p class="card-text">Pour définir une fonction qui prend des paramètres:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">saluer</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>  <span class="c1"># Définition de la fonction saluer avec un paramètre</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Bonjour"</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
+
+<span class="n">saluer</span><span class="p">(</span><span class="s2">"Alice"</span><span class="p">)</span>  <span class="c1"># Appel de la fonction saluer avec "Alice" comme paramètre</span>
+</pre></div>
+</div>
+</div>
+</details><div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGNhcnJlKHgpOgogICAgcHJpbnQoeCAqIHgpCgpjYXJyZSgzKSAgIyBBZmZpY2hlIDkKY2FycmUoNSkgICMgQWZmaWNoZSAyNQpjYXJyZSgxMCkgIyBBZmZpY2hlIDEwMA==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
+<section id="exercice-9-ecrire-la-fonction-max">
+<h2>Exercice 9 - Ecrire la fonction max<a class="headerlink" href="#exercice-9-ecrire-la-fonction-max" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Écrivez un programme qui définit une fonction <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> qui prend 2 nombres <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> en paramètres et qui affiche le plus grand des deux.</p>
+<p>Testez la fonction <code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> en l’appelant avec différentes valeurs pour <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="Cg==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIG1heChhLCBiKToKICAgIGlmIGEgPiBiOgogICAgICAgIHByaW50KGEpCiAgICBlbHNlOgogICAgICAgIHByaW50KGIpCgptYXgoMTAsIDUpICAjIEFmZmljaGUgMTAKbWF4KC0zLCAtNykgICAjIEFmZmljaGUgLTMKbWF4KDQsIDQpICAgIyBBZmZpY2hlIDQ=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
+<section id="exercice-10-ecrire-la-fonction-somme">
+<h2>Exercice 10 - Ecrire la fonction somme<a class="headerlink" href="#exercice-10-ecrire-la-fonction-somme" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ecrivez un programme qui définit une fonction <code class="docutils literal notranslate"><span class="pre">somme(n)</span></code> qui prend un nombre entier <code class="docutils literal notranslate"><span class="pre">n</span></code> en paramètre et qui retourne la somme des entiers de 1 à <code class="docutils literal notranslate"><span class="pre">n</span></code>. Par exemple, <code class="docutils literal notranslate"><span class="pre">somme(5)</span></code> doit retourner <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">3</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">15</span></code>.</p>
+<p>Vous pouvez utiliser une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> pour parcourir les entiers de 1 à <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<p>Testez la fonction <code class="docutils literal notranslate"><span class="pre">somme(n)</span></code> en l’appelant avec différentes valeurs pour <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Solution possible<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIHNvbW1lKG4pOgogICAgdG90YWwgPSAwCiAgICBmb3IgaSBpbiByYW5nZSgxLCBuICsgMSk6CiAgICAgICAgdG90YWwgKz0gaQogICAgcmV0dXJuIHRvdGFsCgpwcmludChzb21tZSg1KSkgICMgQWZmaWNoZSAxNQpwcmludChzb21tZSgxMCkpICMgQWZmaWNoZSA1NQpwcmludChzb21tZSgxMDAwKSkgICMgQWZmaWNoZSA1MDA1MDA=" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></div>
+</details></section>
 </section>
 
         </article>
@@ -370,13 +584,16 @@ Le programme s’arrête si l’utilisateur répond “non”. Sinon, il continu
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Exercices de remise en forme</a><ul>
-<li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
-<li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
-<li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
-<li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
-<li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
-<li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
-<li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
+<li><a class="reference internal" href="#exercice-1-afficher-du-texte">Exercice 1 - Afficher du texte</a></li>
+<li><a class="reference internal" href="#exercice-2-afficher-le-resultat-dun-calcul">Exercice 2 - Afficher le résultat d’un calcul</a></li>
+<li><a class="reference internal" href="#exercice-3-utiliser-une-variable">Exercice 3 - Utiliser une variable</a></li>
+<li><a class="reference internal" href="#exercice-4-faire-un-calcul-avec-des-variables">Exercice 4 - Faire un calcul avec des variables</a></li>
+<li><a class="reference internal" href="#exercice-5-ajouter-une-condition">Exercice 5 - Ajouter une condition</a></li>
+<li><a class="reference internal" href="#exercice-6-utiliser-une-boucle-pour-parcourir-des-nombres">Exercice 6 - Utiliser une boucle pour parcourir des nombres</a></li>
+<li><a class="reference internal" href="#exercice-7-utiliser-une-boucle-pour-parcourir-une-liste">Exercice 7 - Utiliser une boucle pour parcourir une liste</a></li>
+<li><a class="reference internal" href="#exercice-8-utiliser-une-fonction">Exercice 8 - Utiliser une fonction</a></li>
+<li><a class="reference internal" href="#exercice-9-ecrire-la-fonction-max">Exercice 9 - Ecrire la fonction max</a></li>
+<li><a class="reference internal" href="#exercice-10-ecrire-la-fonction-somme">Exercice 10 - Ecrire la fonction somme</a></li>
 </ul>
 </li>
 </ul>
