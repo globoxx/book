@@ -22,13 +22,14 @@ Le cahier des charges est le suivant:
 - des boucles sont utilisées pour répéter des instructions
 - au moins un élément aléatoire (module `random`) est présent dans votre dessin
 - le code est bien structuré (les définitions de fonctions d'abord, puis les appels sont faits en dessous)
+
+Suivre l'ensemble des critères du cahier des charges vous donnera la note de 5.5.
+La note maximale est n'atteignable qu'en ajoutant des éléments bonus.
+
 - (bonus) dessiner plus d'objets que le minimum requis
 - (bonus) intégrer un objet particulièrement bien réalisé ou complexe
 - (bonus) ajouter un mécanisme interactif (ex: demander des entrées utilisateur pour modifier le dessin)
 - (bonus) utiliser des concepts avancés de programmation non vus en cours
-
-Suivre l'ensemble des critères du cahier des charges vous donnera la note de 5.5.
-La note maximale est n'atteignable qu'en ajoutant des éléments bonus.
 
 ```{admonition} Plagiat et tricherie
 :class: attention
