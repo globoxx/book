@@ -14,6 +14,7 @@ Le jeu consiste en un personnage pouvant se déplacer librement au clavier et po
 La première étape est de définir le nom de notre jeu dans la variable `TITLE`, ainsi que la largeur `WIDTH` et la hauteur `HEIGHT` de notre fenêtre. Nous allons également importer des fonctions de `pgzhelper` afin de nous faciliter la vie. Pygame Zero s'occupe du reste !
 
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 

@@ -6,6 +6,7 @@ Pygame est une bibliothèque Python permettant de créer des jeux vidéo en 2D. 
 Vous trouverez ci-dessous le code minimal pour faire apparaître la fenêtre de votre jeu.
 
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -83,3 +84,6 @@ def update():
     alien.x += 2
     if alien.x > WIDTH:
         alien.x = 0
+```
+
+## En cours d'écriture...

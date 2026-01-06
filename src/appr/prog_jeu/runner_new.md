@@ -14,6 +14,7 @@ Dans cette introduction, nous allons développer un premier jeu simple étape pa
 La première étape est de définir le nom de notre jeu dans la variable `TITLE`, ainsi que la largeur `WIDTH` et la hauteur `HEIGHT` de notre fenêtre. Nous allons également importer `pgzrun` et des fonctions de `pgzhelper` afin de nous faciliter la vie. Pygame Zero s'occupe du reste !
 
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 

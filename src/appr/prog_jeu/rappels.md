@@ -374,9 +374,9 @@ print("Bravo ! Vous avez trouvé le nombre", nombre_a_deviner)
 
 ## Challenges sans solution
 
-Les exercices suivants sont plus difficiles. Ils n'ont pas de solution fournie, mais vous pouvez demander de l'aide à votre enseignant·e ou à une IA.
+Les exercices suivants sont un peu plus difficiles. Ils n'ont pas de solution fournie, mais vous pouvez me demander de vérifier votre solution en cas de doute.
 
-Si vous pensez être à l'aise avec toutes les notions de l'année passée, vous pouvez parcourir la page sur la <a href="https://globox.pythonanywhere.com/static/prog_jeu/poo.html" target="_blank">programmation orientée objet (POO)</a>.
+Si vous pensez être à l'aise avec toutes les notions de l'année passée, vous pouvez parcourir la page sur la <a href="https://globox.pythonanywhere.com/static/prog_jeu/poo.html" target="_blank">programmation orientée objet (POO)</a> ou faire vos premiers pas avec <a href="https://globox.pythonanywhere.com/static/prog_jeu/runner_new.html" target="_blank">Pygame</a>.
 
 ### Choix 1 - Plus ou Moins
 Ecrivez un programme permettant de jouer au jeu du "Plus ou Moins". Le programme doit générer un nombre aléatoire entre 1 et 100 (inclus), puis demander à l'utilisateur de deviner ce nombre.  
@@ -399,7 +399,7 @@ Après chaque proposition de lettre, le programme doit indiquer si la lettre est
 Le jeu se termine lorsque le joueur devine le mot complet ou lorsqu'il n'a plus de tentatives restantes. Le programme doit afficher un message de victoire ou de défaite en conséquence.
 
 ### Choix 4 - Simulateur de Blackjack 21
-Ecrivez un programme qui simule une partie simplifiée de Blackjack 21. Le joueur commence avec un score de 0 et peut choisir de "tirer" une carte (ajouter un nombre aléatoire entre 1 et 11 à son score) ou de "rester" (terminer son tour). Le but est d'atteindre un score aussi proche que possible de 21 sans le dépasser. S'il est dépassé, le score tombe à 0 et la partie s'arrête. Le programme doit afficher le score actuel du joueur après chaque tirage de carte. Le joueur doit pouvoir jouer plusieurs parties et vous pouvez également implémenter un système de score cumulatif ou de mise.
+Ecrivez un programme qui simule une partie simplifiée de Blackjack 21. Le joueur commence avec un score de 0 et, à chaque tour de jeu, il peut choisir de "tirer" une carte (ajouter un nombre aléatoire entre 1 et 11 à son score) ou de "rester" (terminer la manche). Le but est d'atteindre un score total aussi proche que possible de 21 sans le dépasser. S'il est dépassé, le score retombe à 0 et la manche s'arrête. Le score est alors converti en jetons et donné aux joueurs qui peut choisir de rejouer en misant par exemple 15 jetons.
 
 ### Zone de codage (ou utilisez un éditeur externe)
 ```{codeplay}
