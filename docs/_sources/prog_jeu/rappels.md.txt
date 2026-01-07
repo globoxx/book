@@ -14,7 +14,7 @@ Rappel: la fonction `print(texte)` permet d'afficher un `texte` donné.
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 print("Salut Alice")  # Remplacez "Alice" par votre prénom
 ```
 ````
@@ -30,7 +30,7 @@ Ecrivez un programme qui affiche le résultat de la multiplication de 15 et 27.
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 print(15 * 27)
 ```
 ````
@@ -66,7 +66,7 @@ print(nombre)  # Affiche 15
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 age = 25  # Remplacez 25 par votre âge
 print("J'ai", age, "ans")
 ```
@@ -84,7 +84,7 @@ Le programme doit ensuite calculer l'aire du rectangle (largeur × hauteur) et l
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 largeur = 5
 hauteur = 10
 aire = largeur * hauteur
@@ -131,7 +131,7 @@ age = int(input("Quel âge avez-vous ? "))
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 age = int(input("Quel âge avez-vous ? "))
 if age >= 18:
     print("Vous êtes majeur")
@@ -170,7 +170,7 @@ La fonction `range(a, b)` génère les nombres de `a` à `b-1`.
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 for i in range(50):
     print(i)
 ```
@@ -200,7 +200,7 @@ prenoms = ["Alice", "Bob", "Charlie", "Diana", "Eve"]
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 prenoms = ["Alice", "Bob", "Charlie", "Diana", "Eve"]
 for prenom in prenoms:
     print(prenom)
@@ -231,7 +231,7 @@ Elle est utile lorsque l'on ne sait pas à l'avance combien de fois on devra ré
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 mot_de_passe = ""
 while mot_de_passe != "42":          # Tant que le mot de passe est incorrect
     mot_de_passe = input("Entrez le mot de passe : ")  # On demande un nouveau mot de passe
@@ -272,7 +272,7 @@ saluer("Alice")  # Appel de la fonction saluer avec "Alice" comme paramètre
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 def carre(x):
     print(x * x)
 
@@ -295,7 +295,7 @@ Testez la fonction `max(a, b)` en l'appelant avec différentes valeurs pour `a` 
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 def max(a, b):
     if a > b:
         print(a)
@@ -324,7 +324,7 @@ Testez la fonction `somme(n)` en l'appelant avec différentes valeurs pour `n`.
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 def somme(n):
     total = 0
     for i in range(1, n + 1):
@@ -362,7 +362,7 @@ import random  # Pour utiliser l'aléatoire
 ```
 
 ````{dropdown} Solution possible
-```{codeplay}
+```python
 import random  # Pour utiliser l'aléatoire
 nombre_a_deviner = random.randint(1, 10)  # Tire un nombre aléatoire entre 1 et 10
 nombre_devine = 0
