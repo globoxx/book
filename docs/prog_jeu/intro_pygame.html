@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -309,9 +309,9 @@
 <span id="prog-jeu-intro-pygame"></span><h1>2. Introduction à Pygame<a class="headerlink" href="#introduction-a-pygame" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Pygame est une bibliothèque Python permettant de créer des jeux vidéo en 2D. Elle fournit des fonctionnalités pour gérer les fenêtres, les événements, les images, les sons, et bien plus encore.</p>
 <p>Vous trouverez ci-dessous le code minimal pour faire apparaître la fenêtre de votre jeu.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
+<span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Premier test !'</span> <span class="c1"># Titre de votre jeu</span>
 
@@ -326,7 +326,7 @@
 <p>Ajoutons un fond bleu et quelques formes géométriques à l’écran. Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># Efface l'écran avant de dessiner</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s2">"blue"</span><span class="p">)</span> <span class="c1"># Remplit le fond en bleu</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">((</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">"white"</span><span class="p">)</span> <span class="c1"># Dessine un cercle blanc de centre (250, 250) et de rayon 50</span>
@@ -349,11 +349,11 @@
 
 <span class="n">box</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span> <span class="c1"># Crée un carré rouge de position (20, 20) et de taille (50, 50)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
     <span class="k">if</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
         <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
@@ -381,11 +381,11 @@
 <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">alien</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
     <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
         <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
