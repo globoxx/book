@@ -1,0 +1,32 @@
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="Button_Container">
+        <a class="ab" href="./Accueil.html">
+          <button class="Button_Accueil" title="Cliquez pour retourner à l'Accueil"><p class="texte_accueil_button">Accueil</p></button>
+        </a>
+        <a class="ab" href="./Conseils.html">
+          <button class="Button_Conseils" title="Cliquez pour aller aux Conseils"><p class="texte_conseils_button">Conseils</p></button>
+        </a>
+      </div>
+      <label for="conso">Consommation [L/100km] :</label>
+      <input type="range" id="conso" min="0" max="10" step="0.1" value="5">
+      <span id="consoValue">5</span> L/100km
+      <br><br>
+      <p>Choisissez votre village:</p>
+      <select id="villageSelect"></select>
+      <br><br>
+    <label for="litres">Quantité d'essence à acheter :</label>
+    <input type="range" id="litres" min="0" max="150" step="1" value="75">
+    <span id="litresValue">40</span> L
+    <br><br>
+    <button id="lancer le calcul" onclick="montrerStation()">Trouver la station</button>
+    <div id="resultat"></div>
+    <script src="script.js"></script>
+    </div>
+  </body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Météo - echallens</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <ul, id="j">
+        <li>Lundi</li>
+        <li>Mardi</li>
+        <li>Mercredi</li>
+        <li>Jeudi</li>
+        <li>Vendredi</li>
+        <li>Samedi</li>
+        <li>Dimanche</li>
+    </ul>
+    <br>
+    <a href="0main.html"><img src="logo.png" width="100" height="100"></a>
+    <a href="https://www.instagram.com/"><img src="insta.png" width="170" height="100"></a>
+    <script>
+        const meteos = ["❄️ Neige", "☀️ Soleil", "🌧️ Pluie", "⛅ Nuageux", "🌩️ Orage"];
+        const jours = document.querySelectorAll("#j li");
+        jours.forEach(jour => {
+            const randomMeteo = meteos[Math.floor(Math.random() * meteos.length)];
+            jour.textContent += " - " + randomMeteo;
+        });
+    </script>
+</body>
+</html>

@@ -75,3 +75,19 @@
 * <a href="sites/2024-2025/2M07/Radwan/index.html" target="_blank">Radwan</a>
 * <a href="sites/2024-2025/2M07/Yassine_Emma/index.html" target="_blank">Yassine et Emma</a>
 * <a href="sites/2024-2025/2M07/Zoe_Magali/index.html" target="_blank">Zoé et Magali</a>
+
+## 2025 - 2026
+
+### 2M02
+
+* <a href="sites/2025-2026/2M02/Alexian/Phil Foden.html" target="_blank">Alexian</a>
+* <a href="sites/2025-2026/2M02/Antoine/Accueil.html" target="_blank">Antoine</a>
+* <a href="sites/2025-2026/2M02/Artur_Leo/main_page.html" target="_blank">Artur et Leo</a>
+* <a href="sites/2025-2026/2M02/Basile/menu.html" target="_blank">Basile</a>
+* <a href="sites/2025-2026/2M02/Ella/ALBOH.html" target="_blank">Ella-Marie</a>
+* <a href="sites/2025-2026/2M02/Keyshia/automne.html" target="_blank">Keyshia<a>
+* {download}`Nadal<sites/2025-2026/2M02/Nadal/Nadal.zip>` (Nécessite le lancement d'un serveur local)
+* <a href="https://wikigalaxy.vercel.app/" target="_blank">Nathan<a>
+* <a href="sites/2025-2026/2M02/Noah/index.html" target="_blank">Noah<a>
+* <a href="sites/2025-2026/2M02/Teo_Mateo/index.html" target="_blank">Teo et Mateo<a>
+* <a href="sites/2025-2026/2M02/Yohan/html/home.html" target="_blank">Yohan<a>
