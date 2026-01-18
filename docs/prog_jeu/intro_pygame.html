@@ -322,8 +322,8 @@
 </pre></div>
 </div>
 <section id="fond-et-formes">
-<h2>Fond et formes<a class="headerlink" href="#fond-et-formes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajoutons un fond bleu et quelques formes géométriques à l’écran. Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu.</p>
+<h2>1. Fond et formes<a class="headerlink" href="#fond-et-formes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ajoutons un fond bleu et quelques formes géométriques à l’écran. Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu pour dessiner les éléments à l’écran.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
@@ -341,26 +341,32 @@
 <h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Complétez la forme.</p>
 </section>
+<section id="exercice-2">
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Changez le fond en mettant une image de votre choix. Trouvez-en une et déposez-la dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> de votre projet. Changez la ligne <code class="docutils literal notranslate"><span class="pre">screen.fill("blue")</span></code> par <code class="docutils literal notranslate"><span class="pre">screen.blit('nom_de_votre_image',</span> <span class="pre">(0,</span> <span class="pre">0))</span></code>.</p>
+<p>Attention, l’image devrait être de la même taille que la fenêtre (800x600 pixels) pour qu’elle s’affiche correctement.</p>
+</section>
 </section>
 <section id="faire-bouger-les-formes">
-<h2>Faire bouger les formes<a class="headerlink" href="#faire-bouger-les-formes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour faire bouger les objets, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Nous allons faire bouger un carré rouge horizontalement.</p>
+<h2>2. Faire bouger les formes<a class="headerlink" href="#faire-bouger-les-formes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour faire bouger les objets, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour <strong>mettre à jour la logique du jeu</strong>, comme la position des objets.</p>
+<p>Nous allons faire bouger un carré rouge horizontalement.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
-<span class="n">box</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span> <span class="c1"># Crée un carré rouge de position (20, 20) et de taille (50, 50)</span>
+<span class="n">box</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span> <span class="c1"># Crée un rectangle de position (20, 20) et de taille (50, 50)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">)</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">)</span> <span class="c1"># Dessine le rectangle et le remplit en rouge</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
-    <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
-        <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span> <span class="c1"># Déplace le rectangle de 2 pixels vers la droite</span>
+    <span class="k">if</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span> <span class="c1"># Si le rectangle dépasse la largeur de la fenêtre</span>
+        <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Remet le rectangle à gauche</span>
 </pre></div>
 </div>
-<section id="exercice-2">
-<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="id1">
+<h3>Exercice 2<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Faites bouger le carré plus rapidement.</p>
 </section>
 <section id="exercice-3">
@@ -369,31 +375,242 @@
 </section>
 <section id="exercice-4">
 <h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Ajoutez un deuxième carré d’une autre couleur qui se déplace également.</p>
+<p>Ajoutez un deuxième rectangle d’une autre couleur qui se déplace également (de la manière que vous voulez).</p>
 </section>
 </section>
 <section id="ajouter-des-acteurs-avec-des-images">
-<h2>Ajouter des acteurs (avec des images)<a class="headerlink" href="#ajouter-des-acteurs-avec-des-images" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour ajouter des images, nous allons utiliser la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> de Pygame Zero. Assurez-vous d’avoir une image nommée <code class="docutils literal notranslate"><span class="pre">ninja.png</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> de votre projet.</p>
+<h2>3. Ajouter des acteurs (avec des images)<a class="headerlink" href="#ajouter-des-acteurs-avec-des-images" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour ajouter des acteurs, nous allons utiliser la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> de Pygame Zero. Assurez-vous d’avoir une image nommée <code class="docutils literal notranslate"><span class="pre">alien.png</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> de votre projet.</p>
+<p>Voyez <code class="docutils literal notranslate"><span class="pre">Actor</span></code> comme un nouveau type de variable qui représente un acteur dans votre jeu, avec des propriétés comme une position (x, y) et une image.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
-<span class="n">alien</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">alien</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span> <span class="c1"># Crée un acteur (nommé player) avec l'image 'alien.png'</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Positionne l'acteur à x = 0</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># Positionne l'acteur à y = 50</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine l'acteur à sa position actuelle</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
-    <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
-        <span class="n">alien</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span> <span class="c1"># Déplace l'acteur de 2 pixels vers la droite</span>
+    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span> <span class="c1"># Si l'acteur dépasse la largeur de la fenêtre</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Remet l'acteur à gauche</span>
+</pre></div>
+</div>
+<section id="exercice-5">
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Changez l’image de l’acteur en utilisant une autre image de votre choix (assurez-vous de l’ajouter au dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>).</p>
+</section>
+</section>
+<section id="gestion-du-clavier">
+<h2>4. Gestion du clavier<a class="headerlink" href="#gestion-du-clavier" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est temps de faire bouger notre acteur nous-mêmes ! Nous allons utiliser la variable spéciale <code class="docutils literal notranslate"><span class="pre">keyboard</span></code> fournie par Pygame Zero pour détecter les touches pressées.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span> <span class="c1"># Si la touche flèche droite est pressée</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span> <span class="c1"># Déplace l'acteur de 5 pixels vers la droite</span>
+    <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span> <span class="c1"># Si la touche flèche gauche est pressée</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="mi">5</span> <span class="c1"># Déplace l'acteur de 5 pixels vers la gauche</span>
+</pre></div>
+</div>
+<section id="exercice-6">
+<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Permettez à l’acteur de se déplacer également vers le haut et vers le bas.</p>
+</section>
+<section id="exercice-7">
+<h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Empêchez l’acteur de sortir de l’écran (ou faites-le réapparaître de l’autre côté).</p>
+</section>
+<section id="exercice-8">
+<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si ce n’est pas déjà fait, permettez à l’acteur de se déplacer en diagonale en appuyant sur deux touches en même temps (par exemple, flèche droite + flèche haut).</p>
+</section>
+</section>
+<section id="animation-des-acteurs">
+<h2>5. Animation des acteurs<a class="headerlink" href="#animation-des-acteurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pygame Zero permet également d’animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente, par exemple <code class="docutils literal notranslate"><span class="pre">alien1.png</span></code>, <code class="docutils literal notranslate"><span class="pre">alien2.png</span></code>, etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="o">...</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien1'</span><span class="p">)</span> <span class="c1"># Crée un acteur avec l'image 'alien1.png'</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'alien1'</span><span class="p">,</span> <span class="s1">'alien2'</span><span class="p">,</span> <span class="s1">'alien3'</span><span class="p">]</span> <span class="c1"># Liste des images pour l'animation</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Change l'image de l'acteur toutes les 5 frames (5 fps)</span>
+
+</pre></div>
+</div>
+<section id="exercice-9">
+<h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Modifiez la vitesse de l’animation en changeant le nombre passé à <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code>.</p>
+</section>
+<section id="exercice-10">
+<h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Rendez-vous sur <a href="https://kenney.nl/assets" target="_blank">Kenny</a> pour télécharger un ensemble d’images d’animation gratuites. Ajoutez-les à votre projet (dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>) et utilisez-les pour animer votre acteur.</p>
+</section>
+</section>
+<section id="ajouter-un-ennemi-rebondissant">
+<h2>6. Ajouter un ennemi rebondissant<a class="headerlink" href="#ajouter-un-ennemi-rebondissant" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les coins. Il s’agira donc d’un nouvel <code class="docutils literal notranslate"><span class="pre">acteur</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">enemy</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien2'</span><span class="p">)</span> <span class="c1"># Crée un acteur ennemi avec l'image 'alien2.png'</span>
+<span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Vitesse horizontale</span>
+<span class="n">enemy</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Vitesse verticale</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine l'ennemi</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="c1"># Met à jour la position de l'ennemi</span>
+    <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span>
+
+    <span class="c1"># Vérifie les collisions avec les bords de la fenêtre</span>
+    <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
+        <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="o">=</span> <span class="o">-</span><span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="c1"># Inverse la vitesse horizontale</span>
+</pre></div>
+</div>
+<section id="exercice-11">
+<h3>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Complétez le code pour que l’ennemi se déplace diagonalement et rebondisse également sur les bords supérieur et inférieur de la fenêtre.</p>
+</section>
+</section>
+<section id="des-collisions-entre-acteurs">
+<h2>7. Des collisions entre acteurs<a class="headerlink" href="#des-collisions-entre-acteurs" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour détecter les collisions entre deux acteurs, vous pouvez utiliser la méthode <code class="docutils literal notranslate"><span class="pre">collides_with(actor)</span></code> qui vérifie si un acteur entre en collision avec un autre.</p>
+<p>Le but est de détecter une collision entre le joueur et l’ennemi. Si une collision est détectée, le jeu se termine.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="c1"># Vérifie la collision entre le joueur et l'ennemi</span>
+    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Collision détectée ! Jeu terminé."</span><span class="p">)</span>
+        <span class="n">exit</span><span class="p">()</span> <span class="c1"># Termine le jeu</span>
+</pre></div>
+</div>
+<section id="exercice-12">
+<h3>Exercice 12<a class="headerlink" href="#exercice-12" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Changez la difficulté du jeu en modifiant la vitesse de l’ennemi (ou celle du joueur).</p>
+</section>
+</section>
+<section id="musique-et-sons">
+<h2>8. Musique et sons<a class="headerlink" href="#musique-et-sons" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pygame Zero permet également d’ajouter de la musique de fond et des effets sonores à votre jeu. Pour cela, vous devez avoir des fichiers audio dans le dossier <code class="docutils literal notranslate"><span class="pre">sounds</span></code> de votre projet.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s1">'background_music'</span><span class="p">)</span> <span class="c1"># Joue la musique de fond (fichier 'background_music.mp3' dans le dossier sounds)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
+        <span class="n">sounds</span><span class="o">.</span><span class="n">explosion</span><span class="o">.</span><span class="n">play</span><span class="p">()</span> <span class="c1"># Joue un son d'explosion (fichier 'explosion.wav' dans le dossier sounds)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Collision détectée ! Jeu terminé."</span><span class="p">)</span>
+        <span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="exercice-13">
+<h3>Exercice 13<a class="headerlink" href="#exercice-13" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Changez la musique de fond et les effets sonores en utilisant vos propres fichiers audio (assurez-vous de les ajouter au dossier <code class="docutils literal notranslate"><span class="pre">sounds</span></code>).</p>
+</section>
+</section>
+<section id="et-quoi-dautre">
+<h2>Et quoi d’autre ?<a class="headerlink" href="#et-quoi-dautre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pygame Zero offre de nombreuses autres fonctionnalités. N’hésitez pas à explorer la <a class="reference external" href="https://pygame-zero.readthedocs.io/en/stable/">documentation officielle de Pygame Zero</a> pour en savoir plus et continuer à développer vos compétences en programmation de jeux vidéo !</p>
+<p>Voici une liste non exhaustive de ce que vous pouvez explorer ensuite :</p>
+<section id="afficher-du-texte-a-lecran">
+<h3>Afficher du texte à l’écran<a class="headerlink" href="#afficher-du-texte-a-lecran" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Utilisez <code class="docutils literal notranslate"><span class="pre">screen.draw.text()</span></code> pour afficher du texte à l’écran, comme des scores ou des messages.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">"Salut !"</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
-<section id="en-cours-decriture">
-<h2>En cours d’écriture…<a class="headerlink" href="#en-cours-decriture" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="donner-de-la-vie-a-vos-acteurs">
+<h3>Donner de la vie à vos acteurs<a class="headerlink" href="#donner-de-la-vie-a-vos-acteurs" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Utilisez des variables pour gérer la santé ou l’énergie de vos acteurs, et modifiez-les en fonction des événements du jeu.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">vie</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># Initialise la vie du joueur à 100</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">vie</span> <span class="o">-=</span> <span class="mi">10</span> <span class="c1"># Réduit la santé du joueur de 10 en cas de collision</span>
+        <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">vie</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Le joueur est mort ! Jeu terminé."</span><span class="p">)</span>
+            <span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="gerer-le-temps-qui-secoule">
+<h3>Gérer le temps qui s’écoule<a class="headerlink" href="#gerer-le-temps-qui-secoule" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Utilisez la variable spéciale <code class="docutils literal notranslate"><span class="pre">clock</span></code> pour gérer des événements basés sur le temps, comme des délais ou des minuteries.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">clock</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span> <span class="o">%</span> <span class="mi">5000</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Toutes les 5 secondes</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"5 secondes se sont écoulées !"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Il est aussi possible de créer des minuteries personnalisées avec <code class="docutils literal notranslate"><span class="pre">clock.schedule()</span></code> et <code class="docutils literal notranslate"><span class="pre">clock.schedule_unique()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">def</span><span class="w"> </span><span class="nf">spawn_enemy</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Un nouvel ennemi apparaît !"</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">spawn_boss</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Un boss apparaît !"</span><span class="p">)</span>
+
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule</span><span class="p">(</span><span class="n">spawn_enemy</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span> <span class="c1"># Appelle spawn_enemy toutes les 10 secondes</span>
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule_unique</span><span class="p">(</span><span class="n">spawn_boss</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">)</span> <span class="c1"># Appelle spawn_boss une seule fois après 15 secondes</span>
+</pre></div>
+</div>
+</section>
+<section id="gestion-de-la-souris">
+<h3>Gestion de la souris<a class="headerlink" href="#gestion-de-la-souris" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Utilisez la fonction spéciale <code class="docutils literal notranslate"><span class="pre">on_mouse_down</span></code> pour décrire ce qui se passe lorsqu’un clic de souris est détecté à une position (<code class="docutils literal notranslate"><span class="pre">pos</span></code>) donnée.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Souris cliquée en position </span><span class="si">{</span><span class="n">pos</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="gerer-la-rotation-des-acteurs">
+<h3>Gérer la rotation des acteurs<a class="headerlink" href="#gerer-la-rotation-des-acteurs" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous pouvez faire pivoter les acteurs en modifiant leur propriété <code class="docutils literal notranslate"><span class="pre">angle</span></code>. Cela modifie uniquement l’image de l’acteur, pas sa direction de déplacement.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span> <span class="c1"># Fait pivoter l'acteur de 5 degrés à chaque frame</span>
+</pre></div>
+</div>
+</section>
+<section id="gerer-des-deplacements-plus-complexes">
+<h3>Gérer des déplacements plus complexes<a class="headerlink" href="#gerer-des-deplacements-plus-complexes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Parfois, il est nécessaire de déplacer un acteur dans une direction spécifique plutôt que simplement à gauche, à droite, en haut ou en bas.</p>
+<p>Utilisez la propriété <code class="docutils literal notranslate"><span class="pre">direction</span></code> pour définir la direction de déplacement d’un acteur en degrés (0° vers la droite, 90° vers le haut, etc.). Ensuite, utilisez la méthode <code class="docutils literal notranslate"><span class="pre">move_in_direction(speed)</span></code> pour déplacer l’acteur dans cette <code class="docutils literal notranslate"><span class="pre">direction</span></code> à une vitesse donnée.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="mi">45</span> <span class="c1"># Définit la direction de l'acteur à 45 degrés (diagonale haut-droite)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Déplace l'acteur de 5 pixels dans la direction définie</span>
+</pre></div>
+</div>
+</section>
+<section id="gerer-des-listes-dacteurs">
+<h3>Gérer des listes d’acteurs<a class="headerlink" href="#gerer-des-listes-dacteurs" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous pouvez créer et gérer plusieurs acteurs en utilisant des listes Python. Cela est utile pour gérer des groupes d’ennemis, des projectiles, etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enemies</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Liste pour stocker les ennemis</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">enemy</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien2'</span><span class="p">)</span>
+    <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+    <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)</span>
+    <span class="n">enemies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">enemy</span><span class="p">)</span> <span class="c1"># Ajoute l'ennemi à la liste</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">enemy</span> <span class="ow">in</span> <span class="n">enemies</span><span class="p">:</span>
+        <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine chaque ennemi dans la liste</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">enemy</span> <span class="ow">in</span> <span class="n">enemies</span><span class="p">:</span>
+        <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Déplace chaque ennemi vers la droite</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -446,18 +663,54 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">2. Introduction à Pygame</a><ul>
-<li><a class="reference internal" href="#fond-et-formes">Fond et formes</a><ul>
+<li><a class="reference internal" href="#fond-et-formes">1. Fond et formes</a><ul>
 <li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
+<li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#faire-bouger-les-formes">Faire bouger les formes</a><ul>
-<li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
+<li><a class="reference internal" href="#faire-bouger-les-formes">2. Faire bouger les formes</a><ul>
+<li><a class="reference internal" href="#id1">Exercice 2</a></li>
 <li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
 <li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ajouter-des-acteurs-avec-des-images">Ajouter des acteurs (avec des images)</a></li>
-<li><a class="reference internal" href="#en-cours-decriture">En cours d’écriture…</a></li>
+<li><a class="reference internal" href="#ajouter-des-acteurs-avec-des-images">3. Ajouter des acteurs (avec des images)</a><ul>
+<li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gestion-du-clavier">4. Gestion du clavier</a><ul>
+<li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
+<li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
+<li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#animation-des-acteurs">5. Animation des acteurs</a><ul>
+<li><a class="reference internal" href="#exercice-9">Exercice 9</a></li>
+<li><a class="reference internal" href="#exercice-10">Exercice 10</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ajouter-un-ennemi-rebondissant">6. Ajouter un ennemi rebondissant</a><ul>
+<li><a class="reference internal" href="#exercice-11">Exercice 11</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#des-collisions-entre-acteurs">7. Des collisions entre acteurs</a><ul>
+<li><a class="reference internal" href="#exercice-12">Exercice 12</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#musique-et-sons">8. Musique et sons</a><ul>
+<li><a class="reference internal" href="#exercice-13">Exercice 13</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#et-quoi-dautre">Et quoi d’autre ?</a><ul>
+<li><a class="reference internal" href="#afficher-du-texte-a-lecran">Afficher du texte à l’écran</a></li>
+<li><a class="reference internal" href="#donner-de-la-vie-a-vos-acteurs">Donner de la vie à vos acteurs</a></li>
+<li><a class="reference internal" href="#gerer-le-temps-qui-secoule">Gérer le temps qui s’écoule</a></li>
+<li><a class="reference internal" href="#gestion-de-la-souris">Gestion de la souris</a></li>
+<li><a class="reference internal" href="#gerer-la-rotation-des-acteurs">Gérer la rotation des acteurs</a></li>
+<li><a class="reference internal" href="#gerer-des-deplacements-plus-complexes">Gérer des déplacements plus complexes</a></li>
+<li><a class="reference internal" href="#gerer-des-listes-dacteurs">Gérer des listes d’acteurs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
