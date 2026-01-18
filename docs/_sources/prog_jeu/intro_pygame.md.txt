@@ -1,6 +1,11 @@
 (prog_jeu.intro_pygame)=
 
 # 2. Introduction à Pygame
+
+Cette activité consiste à prendre en main les notions de base de Pygame Zero en jouant avec ses fonctionalités.
+
+{download}`Téléchargement des ressources nécessaires<../data/prog_2d/intro_pygame.zip>`.
+
 Pygame est une bibliothèque Python permettant de créer des jeux vidéo en 2D. Elle fournit des fonctionnalités pour gérer les fenêtres, les événements, les images, les sons, et bien plus encore.
 
 Vous trouverez ci-dessous le code minimal pour faire apparaître la fenêtre de votre jeu.
