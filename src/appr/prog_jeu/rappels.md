@@ -21,7 +21,7 @@ print("Salut Alice")  # Remplacez "Alice" par votre prénom
 
 ## Exercice 2 - Afficher le résultat d'un calcul
 
-Ecrivez un programme qui affiche le résultat de la multiplication de 15 et 27.
+Écrivez un programme qui affiche le résultat de la multiplication de 15 et 27.
 
 ```{codeplay}
 
@@ -98,7 +98,7 @@ print("L'aire du rectangle est", aire)
 
 La partie du code qui demande l'âge et stocke la réponsedans une variable `age` vous est fournie.
 
-```{dropdown} Aide sur les conditions
+````{dropdown} Aide sur les conditions
 Une condition permet d'exécuter un bout de code seulement si une certaine situation est vraie. Par exemple, pour vérifier si un nombre est positif:
 
 ```python
@@ -123,6 +123,7 @@ On peut aussi combiner plusieurs comparaisons avec les opérateurs logiques:
 - `and` : et
 - `or`  : ou
 - `not` : non   
+````
 
 ```{codeplay}
 age = int(input("Quel âge avez-vous ? "))
@@ -142,7 +143,7 @@ else:
 
 ## Exercice 6 - Utiliser une boucle pour parcourir des nombres
 
-Ecrivez un programme qui affiche les nombres de `0` à `49` en utilisant une boucle `for`.
+Écrivez un programme qui affiche les nombres de `0` à `49` en utilisant une boucle `for`.
 
 ````{dropdown} Aide sur les boucles qui parcourent des nombres
 Une boucle permet de répéter un bout de code plusieurs fois. Par exemple, pour afficher les nombres de 0 à 4:
@@ -178,7 +179,7 @@ for i in range(50):
 
 ## Exercice 7 - Utiliser une boucle pour parcourir une liste
 
-Ecrivez un programme qui affiche chaque prénom d'une liste de prénoms. La liste est fournie dans la variable `prenoms`.
+Écrivez un programme qui affiche chaque prénom d'une liste de prénoms. La liste est fournie dans la variable `prenoms`.
 
 ````{dropdown} Aide sur les boucles qui parcourent des listes
 Une liste est une collection ordonnée d'éléments. Par exemple, pour créer une liste de mots:
@@ -209,7 +210,7 @@ for prenom in prenoms:
 
 ## Exercice 8 - Utiliser une boucle while
 
-Ecrivez un programme qui demande à l'utilisateur de deviner un mot de passe (par exemple, "42"). Le programme doit continuer à demander tant que l'utilisateur n'a pas trouvé le bon mot de passe. Lorsqu'il trouve le bon, le programme doit afficher "Tu peux passer !".
+Écrivez un programme qui demande à l'utilisateur de deviner un mot de passe (par exemple, "42"). Le programme doit continuer à demander tant que l'utilisateur n'a pas trouvé le bon mot de passe. Lorsqu'il trouve le bon, le programme doit afficher "Tu peux passer !".
 
 ````{dropdown} Aide sur les boucles while
 Une boucle `while` permet de répéter un bout de code tant qu'une certaine condition est vraie. Par exemple, pour afficher les nombres de 0 à 4:
@@ -241,7 +242,7 @@ print("Bravo")  # On affiche un message de félicitation
 
 ## Exercice 9 - Utiliser une fonction
 
-Ecrivez un programme qui définit une fonction `carre(x)` qui prend un nombre `x` en paramètre et qui affiche le carré de ce nombre (c'est-à-dire `x` multiplié par lui-même).
+Écrivez un programme qui définit une fonction `carre(x)` qui prend un nombre `x` en paramètre et qui affiche le carré de ce nombre (c'est-à-dire `x` multiplié par lui-même).
 
 Testez la fonction `carre(x)` en l'appelant avec différentes valeurs pour `x`.
 
@@ -311,7 +312,7 @@ max(4, 4)   # Affiche 4
 
 ## Exercice 11 - Ecrire la fonction somme
 
-Ecrivez un programme qui définit une fonction `somme(n)` qui prend un nombre entier `n` en paramètre et qui retourne la somme des entiers de 1 à `n`. Par exemple, `somme(5)` doit retourner `1 + 2 + 3 + 4 + 5 = 15`.
+Écrivez un programme qui définit une fonction `somme(n)` qui prend un nombre entier `n` en paramètre et qui retourne la somme des entiers de 1 à `n`. Par exemple, `somme(5)` doit retourner `1 + 2 + 3 + 4 + 5 = 15`.
 
 Vous pouvez utiliser une boucle `for` pour parcourir les entiers de 1 à `n`.
 
@@ -338,7 +339,7 @@ print(somme(1000))  # Affiche 500500
 ````
 
 ## Exercice 12 - Utiliser l'aléatoire
-Ecrivez un programme qui tire un nombre entier aléatoire entre 1 et 10 (inclus) et qui demande à l'utilisateur de deviner ce nombre. Le programme doit continuer à demander tant que l'utilisateur n'a pas trouvé le bon nombre. Lorsqu'il trouve le bon, le programme doit afficher "Bravo !".
+Écrivez un programme qui tire un nombre entier aléatoire entre 1 et 10 (inclus) et qui demande à l'utilisateur de deviner ce nombre. Le programme doit continuer à demander tant que l'utilisateur n'a pas trouvé le bon nombre. Lorsqu'il trouve le bon, le programme doit afficher "Bravo !".
 
 ````{dropdown} Aide sur l'aléatoire
 Le module `random` permet de faire de l'aléatoire. Pour tirer un nombre entier aléatoire entre `a` et `b` (inclus), on utilise la fonction `random.randint(a, b)`.
@@ -374,17 +375,17 @@ print("Bravo ! Vous avez trouvé le nombre", nombre_a_deviner)
 
 ## Challenges sans solution
 
-Les exercices suivants sont un peu plus difficiles. Ils n'ont pas de solution fournie, mais vous pouvez me demander de vérifier votre solution en cas de doute.
+Si vous pensez être à l'aise avec toutes les notions de l'année passée, vous pouvez faire vos premiers pas avec <a href="https://globox.pythonanywhere.com/static/prog_jeu/runner_new.html" target="_blank">Pygame</a>.
 
-Si vous pensez être à l'aise avec toutes les notions de l'année passée, vous pouvez parcourir la page sur la <a href="https://globox.pythonanywhere.com/static/prog_jeu/poo.html" target="_blank">programmation orientée objet (POO)</a> ou faire vos premiers pas avec <a href="https://globox.pythonanywhere.com/static/prog_jeu/runner_new.html" target="_blank">Pygame</a>.
+Sinon si vous cherchez des challenges plus intéressants, les exercices suivants sont un peu plus difficiles. Ils n'ont pas de solution fournie, mais vous pouvez me demander de vérifier votre solution en cas de doute.
 
 ### Choix 1 - Plus ou Moins
-Ecrivez un programme permettant de jouer au jeu du "Plus ou Moins". Le programme doit générer un nombre aléatoire entre 1 et 100 (inclus), puis demander à l'utilisateur de deviner ce nombre.  
+Écrivez un programme permettant de jouer au jeu du "Plus ou Moins". Le programme doit générer un nombre aléatoire entre 1 et 100 (inclus), puis demander à l'utilisateur de deviner ce nombre.  
 Après chaque proposition de l'utilisateur, le programme doit indiquer si le nombre à deviner est plus grand ou plus petit que la proposition. Le jeu continue jusqu'à ce que l'utilisateur trouve le bon nombre.  
 À la fin, le programme doit afficher le nombre de tentatives effectuées par l'utilisateur pour trouver le bon nombre.
 
 ### Choix 2 - Pierre, Feuille, Ciseaux
-Ecrivez un programme permettant de jouer au jeu du "Pierre, Feuille, Ciseaux" contre l'ordinateur. Le programme doit demander à l'utilisateur de choisir entre "pierre", "feuille" ou "ciseaux". L'ordinateur doit faire un choix aléatoire parmi ces trois options.  
+Écrivez un programme permettant de jouer au jeu du "Pierre, Feuille, Ciseaux" contre l'ordinateur. Le programme doit demander à l'utilisateur de choisir entre "pierre", "feuille" ou "ciseaux". L'ordinateur doit faire un choix aléatoire parmi ces trois options.  
 Le programme doit ensuite déterminer le gagnant selon les règles suivantes:
 - La pierre écrase les ciseaux (la pierre gagne)
 - Les ciseaux coupent la feuille (les ciseaux gagnent)
@@ -393,13 +394,13 @@ Le programme doit afficher le choix de l'utilisateur, le choix de l'ordinateur, 
 Le jeu peut être répété autant de fois que l'utilisateur le souhaite et compte les points pour chaque joueur.
 
 ### Choix 3 - Jeu du pendu
-Ecrivez un programme permettant de jouer au jeu du pendu. Le programme doit choisir un mot aléatoire dans une liste prédéfinie de mots. Le joueur doit deviner le mot en proposant des lettres une par une.  
+Écrivez un programme permettant de jouer au jeu du pendu. Le programme doit choisir un mot aléatoire dans une liste prédéfinie de mots. Le joueur doit deviner le mot en proposant des lettres une par une.  
 Le programme doit afficher l'état actuel du mot à deviner, en remplaçant les lettres non encore devinées par des underscores (_). Le joueur a un nombre limité de tentatives (par exemple, 6) pour deviner toutes les lettres du mot.  
 Après chaque proposition de lettre, le programme doit indiquer si la lettre est présente dans le mot ou non, et mettre à jour l'état du mot en conséquence.  
 Le jeu se termine lorsque le joueur devine le mot complet ou lorsqu'il n'a plus de tentatives restantes. Le programme doit afficher un message de victoire ou de défaite en conséquence.
 
 ### Choix 4 - Simulateur de Blackjack 21
-Ecrivez un programme qui simule une partie simplifiée de Blackjack 21. Le joueur commence avec un score de 0 et, à chaque tour de jeu, il peut choisir de "tirer" une carte (ajouter un nombre aléatoire entre 1 et 11 à son score) ou de "rester" (terminer la manche). Le but est d'atteindre un score total aussi proche que possible de 21 sans le dépasser. S'il est dépassé, le score retombe à 0 et la manche s'arrête. Le score est alors converti en jetons et donné aux joueurs qui peut choisir de rejouer en misant par exemple 15 jetons.
+Écrivez un programme qui simule une partie simplifiée de Blackjack 21. Le joueur commence avec un score de 0 et, à chaque tour de jeu, il peut choisir de "tirer" une carte (ajouter un nombre aléatoire entre 1 et 11 à son score) ou de "rester" (terminer la manche). Le but est d'atteindre un score total aussi proche que possible de 21 sans le dépasser. S'il est dépassé, le score retombe à 0 et la manche s'arrête. Le score est alors converti en jetons et donné aux joueurs qui peut choisir de rejouer en misant par exemple 15 jetons.
 
 ### Zone de codage (ou utilisez un éditeur externe)
 ```{codeplay}
