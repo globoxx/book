@@ -215,15 +215,6 @@ def update():
 ### Exercice 13
 Changez la musique de fond et les effets sonores en utilisant vos propres fichiers audio (assurez-vous de les ajouter aux dossiers `music` et `sounds`).
 
-### Exercice 14 (optionnel)
-Ajoutez un second joueur contrôlé par d'autres touches du clavier (par exemple, WASD) et faites en sorte que le jeu se termine si l'un des deux joueurs entre en collision avec l'ennemi. Le but étant de survivre plus longtemps que l'autre joueur !
-
-### Exercie 15 (optionnel)
-Ajoutez plus d'ennemis pour augmenter la difficulté du jeu.
-
-### Exercice 16 (optionnel)
-Ajoutez un système de score qui augmente avec le temps passé sans collision. Affichez le score à l'écran. (Cela devient un jeu coopératif de survie !)
-
 ## A rendre
 
 ```{Admonition} À rendre sur Moodle
@@ -233,6 +224,15 @@ Déposez sur Moodle le fichier `jeu.py` sur lequel vous avez travaillé, contena
 
 Il n'est pas nécessaire de déposer les ressources (images, sons, musiques).
 ```
+
+### Exercice 14 (optionnel)
+Ajoutez un second joueur contrôlé par d'autres touches du clavier (par exemple, WASD) et faites en sorte que le jeu se termine si l'un des deux joueurs entre en collision avec l'ennemi. Le but étant de survivre plus longtemps que l'autre joueur !
+
+### Exercie 15 (optionnel)
+Ajoutez plus d'ennemis pour augmenter la difficulté du jeu.
+
+### Exercice 16 (optionnel)
+Ajoutez un système de score qui augmente avec le temps passé sans collision. Affichez le score à l'écran. (Cela devient un jeu coopératif de survie !)
 
 ## Et quoi d'autre ?
 Pygame Zero offre de nombreuses autres fonctionnalités. N'hésitez pas à explorer la [documentation officielle de Pygame Zero](https://pygame-zero.readthedocs.io/en/stable/) pour en savoir plus et continuer à développer vos compétences en programmation de jeux vidéo !
