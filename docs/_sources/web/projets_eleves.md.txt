@@ -84,10 +84,26 @@
 * <a href="sites/2025-2026/2M02/Antoine/Accueil.html" target="_blank">Antoine</a>
 * <a href="sites/2025-2026/2M02/Artur_Leo/main_page.html" target="_blank">Artur et Leo</a>
 * <a href="sites/2025-2026/2M02/Basile/menu.html" target="_blank">Basile</a>
-* <a href="sites/2025-2026/2M02/Ella/ALBOH.html" target="_blank">Ella-Marie</a>
 * <a href="sites/2025-2026/2M02/Keyshia/automne.html" target="_blank">Keyshia<a>
 * {download}`Nadal<sites/2025-2026/2M02/Nadal/Nadal.zip>` (Nécessite le lancement d'un serveur local)
 * <a href="https://wikigalaxy.vercel.app/" target="_blank">Nathan<a>
 * <a href="sites/2025-2026/2M02/Noah/index.html" target="_blank">Noah<a>
 * <a href="sites/2025-2026/2M02/Teo_Mateo/index.html" target="_blank">Teo et Mateo<a>
 * <a href="sites/2025-2026/2M02/Yohan/html/home.html" target="_blank">Yohan<a>
+
+### 2M07
+
+* <a href="sites/2025-2026/2M07/Aaron/page1.html" target="_blank">Aaron</a>
+* <a href="sites/2025-2026/2M07/Alison_Beatriz/projetBeali.html" target="_blank">Alison et Beatriz</a>
+* <a href="sites/2025-2026/2M07/Arnaud/acceuil.html" target="_blank">Arnaud</a>
+* <a href="sites/2025-2026/2M07/Ayana_Alicia/acceuil.html" target="_blank">Ayana et Alicica</a>
+* <a href="sites/2025-2026/2M07/Camille/Accueil.html" target="_blank">Camille</a>
+* <a href="sites/2025-2026/2M07/Charlotte_Laila/page1.html" target="_blank">Charlotte et Laïla</a>
+* <a href="sites/2025-2026/2M07/Gabriel_Bogdan/projet.html" target="_blank">Gabriel D. et Bogdan</a>
+* <a href="sites/2025-2026/2M07/Gabriel_Dino/warthundergroundbattle.html" target="_blank">Gabriel W. et Dino</a>
+* <a href="sites/2025-2026/2M07/Iman/accueil.html" target="_blank">Iman</a>
+* <a href="sites/2025-2026/2M07/Ines/acceuil.html" target="_blank">Inès</a>
+* <a href="sites/2025-2026/2M07/Laia_Laura/Astro_pr_les_nuls.html" target="_blank">Laia et Laura</a>
+* <a href="sites/2025-2026/2M07/Magali/Mythologie_grecque.html" target="_blank">Magali</a>
+* <a href="sites/2025-2026/2M07/Tahya_Ana/itineraire.html" target="_blank">Tahya et Ana</a>
+* <a href="sites/2025-2026/2M07/Zoe_Celine/Introduction.html" target="_blank">Zoé et Céline</a>
