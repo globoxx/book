@@ -1,0 +1,116 @@
+.header {
+    text-align: center;
+    background-size: cover;
+}
+
+.menu ul {
+    background-color: rgb(119, 111, 111);
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+
+.menu a {
+    color: black;
+}
+
+.intro{
+    background-color: rgb(102, 18, 18);
+    padding: 20px;
+    font-size: x-large;
+    color: white;
+}
+
+.USA{
+    
+}
+
+body {
+    background-image: url("https://images5.alphacoders.com/130/1304484.jpg");
+    background-size: cover;
+    height: 1000px;
+}
+
+.footer {
+    background-image: url();
+    background-size: cover;
+    
+}
+
+.france {
+    background-color: azure;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.GB {
+    background-color: azure;
+    padding: 20px;
+    font-size: x-large;
+}
+.churchill {
+   width: 50%;
+    margin: auto;
+}
+    
+.allemagne {
+    background-color: azure;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.italie {
+    background-color: azure;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.japon {
+    background-color: azure;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.USA {
+    background-color: azure;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.urss {
+    background-color: azure;
+    padding: 20px;
+    font-size: x-large;
+}
+
+.Funfact_urss {
+    color: blue;
+    background-color: #f3d5f5;
+    border: dashed red;
+    text-align: justify;
+    width: 50%;
+    padding: 10px;
+    font-size: large;
+}
+
+.Funfact_usa {
+    color: blue;
+    background-color: #f3d5f5;
+    border: dashed red;
+    text-align: justify;
+    width: 50%;
+    padding: 10px;
+    font-size: large;
+}
+
+.Funfact_allemagne {
+    color: blue;
+    background-color: #f3d5f5;
+    border: dashed red;
+    text-align: justify;
+    width: 50%;
+    padding: 10px;
+    font-size: large;
+}
