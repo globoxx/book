@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -564,14 +564,14 @@ Aide sur les fonctions<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Une fonction est un bout de code que l’on peut réutiliser plusieurs fois. Par exemple, pour définir une fonction qui affiche un message de bienvenue:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">bienvenue</span><span class="p">():</span>  <span class="c1"># Définition de la fonction bienvenue</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bienvenue</span><span class="p">():</span>  <span class="c1"># Définition de la fonction bienvenue</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Bienvenue dans le programme !"</span><span class="p">)</span>
 
 <span class="n">bienvenue</span><span class="p">()</span>  <span class="c1"># Appel de la fonction bienvenue</span>
 </pre></div>
 </div>
 <p class="card-text">Pour définir une fonction qui prend des paramètres:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">saluer</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>  <span class="c1"># Définition de la fonction saluer avec un paramètre</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">saluer</span><span class="p">(</span><span class="n">nom</span><span class="p">):</span>  <span class="c1"># Définition de la fonction saluer avec un paramètre</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Bonjour"</span><span class="p">,</span> <span class="n">nom</span><span class="p">)</span>
 
 <span class="n">saluer</span><span class="p">(</span><span class="s2">"Alice"</span><span class="p">)</span>  <span class="c1"># Appel de la fonction saluer avec "Alice" comme paramètre</span>
@@ -585,7 +585,7 @@ Solution possible<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">carre</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">carre</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
 
 <span class="n">carre</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Affiche 9</span>
@@ -606,7 +606,7 @@ Solution possible<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -631,7 +631,7 @@ Solution possible<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">somme</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
         <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>
@@ -655,12 +655,12 @@ Aide sur l’aléatoire<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Le module <code class="docutils literal notranslate"><span class="pre">random</span></code> permet de faire de l’aléatoire. Pour tirer un nombre entier aléatoire entre <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> (inclus), on utilise la fonction <code class="docutils literal notranslate"><span class="pre">random.randint(a,</span> <span class="pre">b)</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>  <span class="c1"># Pour utiliser l'aléatoire</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>  <span class="c1"># Pour utiliser l'aléatoire</span>
 <span class="n">nombre_aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Tire un nombre aléatoire entre 1 et 100</span>
 </pre></div>
 </div>
 <p class="card-text">Pour tirer un élément aléatoire dans une liste, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">random.choice(liste)</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>  <span class="c1"># Pour utiliser l'aléatoire</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>  <span class="c1"># Pour utiliser l'aléatoire</span>
 <span class="n">couleurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"rouge"</span><span class="p">,</span> <span class="s2">"vert"</span><span class="p">,</span> <span class="s2">"bleu"</span><span class="p">]</span>
 <span class="n">couleur_aleatoire</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">couleurs</span><span class="p">)</span>  <span class="c1"># Tire une couleur aléatoire dans la liste</span>
 </pre></div>
@@ -673,7 +673,7 @@ Solution possible<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>  <span class="c1"># Pour utiliser l'aléatoire</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>  <span class="c1"># Pour utiliser l'aléatoire</span>
 <span class="n">nombre_a_deviner</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Tire un nombre aléatoire entre 1 et 10</span>
 <span class="n">nombre_devine</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">nombre_devine</span> <span class="o">!=</span> <span class="n">nombre_a_deviner</span><span class="p">:</span>

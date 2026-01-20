@@ -522,7 +522,7 @@ pgzrun.go()
 
 ## 9. Ajouter un son de saut
 
-Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier `.wav` ou `.mp3` souhaité dans le dossier `sounds` (à créer si nécessaire). De nombreux bruitages et musiques gratuits peuvent être trouvés sur <a href="https://freesound.org/" target="_blank">FreeSound</a> ou <a href="https://opengameart.org/" target="_blank">OpenGameArt</a>. Privilégiez les sons courts pour éviter des problèmes de performance.
+Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier `.wav` souhaité dans le dossier `sounds` (à créer si nécessaire). Vous trouverez des sons `wav` sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a>. Privilégiez les sons courts pour éviter des problèmes de performance.
 
 Pygame nous offre l'objet `sounds` qui nous permet de facilement lancer un bruitage. Dans notre cas, nous souhaitons lancer un son lorsque le joueur saute. Nous allons donc ajouter une ligne `sounds.jump.play()` quand on appuie sur la touche espace.
 
@@ -539,7 +539,7 @@ def update():
 
 ## 10. Ajouter une musique de fond
 
-Ajouter une musique de fond est tout aussi simple ! Il suffit d'ajouter un fichier `.mp3` ou `.wav` dans le dossier `music` (à créer) et d'utiliser l'objet `music` offert par Pygame.
+Ajouter une musique de fond est tout aussi simple ! Il suffit d'ajouter un fichier `.mp3` dans le dossier `music` (à créer) et d'utiliser l'objet `music` offert par Pygame. Vous trouverez des musiques `mp3` libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.
 
 Pour lancer notre musique `ninja_music.mp3` au début du jeu, il reste qu'à appeler `music.play('ninja_music')` au début du programme principal.
 

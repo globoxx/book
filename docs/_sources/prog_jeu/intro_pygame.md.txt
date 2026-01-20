@@ -42,12 +42,12 @@ pgzrun.go()
 ```
 
 ### Exercice 1
-Changez le fond en mettant une image de votre choix. Trouvez-en une et déposez-la dans le dossier `images` de votre projet. Changez la ligne `screen.fill(...)` par `screen.blit('nom_de_votre_image', (0, 0))`.
+Changez le fond en mettant une image de votre choix. Trouvez-en une et déposez-la dans le dossier `images` de votre projet. Changez la ligne `screen.fill(...)` par `screen.blit('nom_de_votre_image', (0, 0))`. Le `(0, 0)` indique que l'image doit être dessinée à partir du coin supérieur gauche de la fenêtre.
 
 Attention, l'image devrait idéalement être de la même taille que la fenêtre (800x600 pixels) pour qu'elle s'affiche correctement.
 
 ## 2. Faire bouger les formes
-Pour faire bouger les objets, nous allons utiliser la fonction `update()` qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour **mettre à jour la logique du jeu**, comme la position des objets.
+Pour faire bouger les objets, nous allons utiliser la fonction `update()` qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour **mettre à jour l'état du jeu**, comme la position des objets.
 
 Nous allons faire bouger un carré rouge horizontalement.
 
@@ -79,9 +79,7 @@ Ajoutez un deuxième rectangle d'une autre couleur qui se déplace également (d
 
 ## 3. Ajouter des acteurs (avec des images)
 
-Pour ajouter des acteurs, nous allons utiliser la classe `Actor` de Pygame Zero. Assurez-vous d'avoir une image nommée `alien.png` dans le dossier `images` de votre projet.
-
-Voyez `Actor` comme un nouveau type de variable qui représente un acteur dans votre jeu, avec des propriétés comme une position (x, y) et une image.
+Pour ajouter des acteurs, nous allons utiliser la classe `Actor` de Pygame Zero. Voyez `Actor` comme un nouveau type de variable qui représente un acteur dans votre jeu, avec des propriétés/attributs comme une position (x, y) et une image.
 
 **Vous pouvez retirer le carré rouge dessiné précédemment pour ne garder que l'acteur.**
 
@@ -102,6 +100,22 @@ def update():
         player.x = 0 # Remet l'acteur à gauche
 ```
 
+````{admonition} Remarque sur les acteurs
+:class: tip
+Il est important de noter que l'on peut ajouter toute sorte d'attributs à un acteur, comme par exemple une vitesse, une direction, une vie, etc. Ce sont des variables attachées à l'acteur qui permettent de stocker des informations supplémentaires le concernant.
+
+Par exemple, on pourrait ajouter une vitesse à notre acteur `player` comme ceci :
+
+```python
+player.vitesse = 2 # Ajoute un attribut vitesse à l'acteur
+
+def update():
+    player.x += player.vitesse # Utilise l'attribut vitesse pour déplacer l'acteur
+```
+
+Si vous souhaitez en savoir plus (car cela ouvre en grand les portes de la programmation plus complexe), vous pouvez consulter [cette ressource](https://courspython.com/classes-et-objets.html) sur la programmation orientée objet (POO).
+````
+
 ### Exercice 5
 Changez l'image de l'acteur en utilisant une autre image de votre choix (assurez-vous de l'ajouter au dossier `images` si vous la téléchargez sur Internet).
 
@@ -120,7 +134,7 @@ def update():
 ```
 
 ### Exercice 6
-Permettez à l'acteur de se déplacer également vers le haut et vers le bas.
+Permettez à l'acteur de se déplacer également vers le haut et vers le bas avec les flèches haut et bas.
 
 ### Exercice 7
 Empêchez l'acteur de sortir de l'écran (ou faites-le réapparaître de l'autre côté).
@@ -150,7 +164,7 @@ Modifiez la vitesse de l'animation en changeant le nombre passé à `player.anim
 Rendez-vous sur <a href="https://kenney.nl/assets" target="_blank">Kenny</a> pour télécharger un ensemble d'images d'animation gratuites. Ajoutez-les à votre projet (dans le dossier `images`) et utilisez-les pour animer votre acteur.
 
 ## 6. Ajouter un ennemi rebondissant
-Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les coins. Il s'agira donc d'un nouvel `acteur`.
+Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l'écran. Il s'agira donc d'un nouvel `acteur`.
 
 ```python
 ...
@@ -197,7 +211,7 @@ def update():
 Changez la difficulté du jeu en modifiant la vitesse de l'ennemi (ou celle du joueur).
 
 ## 8. Musique et sons
-Pygame Zero permet également d'ajouter de la musique de fond et des effets sonores à votre jeu. Pour cela, vous devez avoir des fichiers audio dans les dossiers `music` et `sounds` de votre projet.
+Pygame Zero permet également d'ajouter de la musique et des effets sonores à votre jeu. Pour cela, vous devez avoir des fichiers audio dans les dossiers `music` et `sounds` de votre projet.
 
 ```python
 ...
@@ -213,7 +227,7 @@ def update():
 ```
 
 ### Exercice 13
-Changez la musique de fond et les effets sonores en utilisant vos propres fichiers audio (assurez-vous de les ajouter aux dossiers `music` et `sounds`).
+Changez la musique de fond et les effets sonores en utilisant vos propres fichiers audio (assurez-vous de les ajouter aux dossiers `music` et `sounds`). Vous trouverez des sons `wav` sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a> et des musiques `mp3` libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.
 
 ## A rendre
 
