@@ -1,0 +1,412 @@
+.basic_grid {
+    display: grid;
+    grid-template-columns: 
+      40px 40px 50px  
+      40px 40px 50px  
+      40px 40px 50px;
+    grid-template-rows: 
+      40px 40px 50px  
+      40px 40px 50px  
+      40px 40px 50px;
+    margin: auto;
+    gap: inherit;
+    width: fit-content;
+}
+.basic_sudoku_cell {
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #999; 
+    
+}
+.basic_sudoku_cell:focus {
+    transform: scale(1.05);
+    transition: 200ms ease;
+    background-color: aliceblue;
+}
+.basic_sudoku_cell:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    transition: 200ms ease;
+    outline: black solid 2px;
+}
+#submit_btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: black solid 1px;
+    border-radius: 8px;
+}
+.big_grid {
+    display: grid;
+    grid-template-columns: 
+      50px 50px 50px 60px
+      50px 50px 50px 60px
+      50px 50px 50px 60px;
+    grid-template-rows:
+      50px 50px 60px
+      50px 50px 60px
+      50px 50px 60px
+      50px 50px 60px;
+    margin: auto;
+    width: fit-content;
+    gap: 2px;
+}
+.big_sudoku_cell {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 22px;
+    border: 1px solid #999;
+}
+.big_sudoku_cell:focus {
+    transform: scale(1.05);
+    transition: 200ms ease;
+    background-color: aliceblue;
+}
+.big_sudoku_cell:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    transition: 200ms ease;
+    outline: black solid 2px;
+}
+#big_submit_btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: black solid 1px;
+    border-radius: 8px;
+}
+.head {
+    text-align: center;
+}
+.sub_head {
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #555;
+    font-style: italic;
+}
+.sub_head_part2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #555;
+    font-style: italic;
+}
+.submit_btn {
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    gap: 25px;
+}
+#clear_btn {
+     margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: black solid 1px;
+    border-radius: 8px;
+}
+.tip {
+    text-align: center;
+}
+.all_the_resolvers {
+  margin: auto;
+  width:fit-content;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 0 16px;
+}
+.basic_one {
+  outline: black solid 2px;
+  max-width: 350px;
+  width: auto;
+  padding: 16px 32px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  transform-origin: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.big_one {
+  outline: black solid 2px;
+  max-width: 350px;
+  width: auto;
+  padding: 16px 32px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  transform-origin: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.killer_sudoku {
+  outline: black solid 2px;
+  max-width: 350px;
+  width: auto;
+  padding: 16px 32px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  transform-origin: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.samurai_sudoku {
+  outline: black solid 2px;
+  max-width: 350px;
+  width: auto;
+  padding: 16px 32px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  transform-origin: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.sudoku_X {
+  outline: black solid 2px;
+  max-width: 350px;
+  width: auto;
+  padding: 16px 32px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  transform-origin: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.irregular_sudoku {
+  outline: black solid 2px;
+  max-width: 350px;
+  width: auto;
+  padding: 16px 32px;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  transform-origin: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.basic_one:hover,
+.big_one:hover,
+.killer_sudoku:hover,
+.samurai_sudoku:hover,
+.sudoku_X:hover,
+.irregular_sudoku:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+.basic_one img,
+.big_one img,
+.killer_sudoku img,
+.samurai_sudoku img,
+.sudoku_X img,
+.irregular_sudoku img {
+  transition: transform 200ms ease;
+}
+.basic_one:hover img,
+.big_one:hover img,
+.killer_sudoku:hover img,
+.samurai_sudoku:hover img,
+.sudoku_X:hover img,
+.irregular_sudoku:hover img {
+  transform: scale(1.02);
+}
+.home_header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1100px) {
+  .all_the_resolvers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .all_the_resolvers { grid-template-columns: 1fr; }
+}
+.home_footer{
+  color:black;
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  margin-left:auto;
+  margin-right: auto;
+  padding-left:10%;
+  padding-right: 10%;
+}
+.menu-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+#menu-toggle {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  font-size: 24px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 220px;
+  height: 100vh;
+  background: #f9f9f9;
+  border-right: 1px solid #ddd;
+  padding-top: 60px;
+  transition: left 0.25s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+#side-menu.open {
+  left: 0;
+}
+#side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 91vh;
+}
+#side-menu li {
+  margin: 0;
+}
+#side-menu a {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px;
+  color: #222;
+  text-decoration: none;
+  font-size: 20px;
+}
+#side-menu a.active {
+  background: #959090;
+  font-weight: bold;
+}
+#side-menu a:hover {
+  background: #eaeaea;
+}
+#menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 999;
+}
+#menu-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+#side-menu {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.menu_footer {
+  font-size: 11px;
+  text-align: center;
+  color: #979696;
+  border-top: 1px solid #ddd;
+}
+.coming_soon {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 100px;
+    font-weight: bold;
+    font-style: italic;
+    color: red;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.rules {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: auto;
+  margin-top: 20px;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  justify-items: center; /* center cards inside each cell */
+  padding: 0 16px;
+  outline: black solid 2px;
+}
+
+.rules h2 {
+  margin-top: 0;
+}
+
+.rules h3 {
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+
+.rules ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rules ul li::before {
+  content: "• ";
+}
+
+.rules .example {
+  font-style: italic;
+  color: #555;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.special_box {
+  border: 2px solid #ccc;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  text-align: center;
+}

@@ -1,0 +1,295 @@
+<!--
+  Des commentaires ont été ajoutés une seule fois dans la page index mais qui s'appliquent également aux mêmes commandes des autres pages. 
+  
+  Des charactères spéciaux ASCII sont copié d'un site qui est une bibliothèque de charactères unicode (https://read.pubwriter.com/fancy).
+
+  Les textes japonais sont intégralement traduit par Google Translate.
+
+  Le code est formatte automatiquement avec l'extension Prettier de VS Code.
+
+  "Le site contient des éléments créés par vous-même (ex: images, logo, videos, etc.)" de https://globox.pythonanywhere.com/static/web/projet.html
+  pour ce point, j'ai dessiné moi-même la carte
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Goth Styles Encyclopedia</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Police Quintessential : utilisée pour les titres -->
+  </head>
+
+  <body class="theme-modern">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="site">
+      <!-- Conteneur principal du site -->
+      <header class="site-header">
+        <div class="header-inner">
+          <h1 class="quintessential-title">The Goth Styles Encyclopedia</h1>
+          <div class="header-actions">
+            <!-- Boutons traduction et themes -->
+            <button
+              id="translateToggle"
+              class="theme-toggle translate-toggle"
+              type="button"
+              aria-pressed="false"
+            >
+              JP→EN
+            </button>
+            <button
+              id="themeToggle"
+              class="theme-toggle"
+              type="button"
+              aria-pressed="false"
+            >
+              J-Web mode
+            </button>
+          </div>
+        </div>
+        <div class="jp-marquee jp-only" aria-hidden="true">
+          <marquee behavior="alternate" scrollamount="6"
+            ><span
+              data-ja="★ ようこそ ★ WELCOME ★ 広告なし ★ 最終更新: 2026-01-03 ★"
+              data-en="★ Welcome ★ WELCOME ★ ADs free ★ Last update: 2026-01-03 ★"
+              >★ ようこそ ★ WELCOME ★ 広告なし ★ 最終更新: 2026-01-03 ★</span
+            ></marquee
+          >
+        </div>
+      </header>
+
+      <nav class="site-nav" aria-label="Primary">
+        <!-- Navigation principale  -->
+        <a href="index.html">Home <span class="tag">MAP</span></a>
+        <a href="page2.html">Pastel Goth</a>
+        <a href="page3.html">Romantic Goth</a>
+        <a href="page4.html">Industrial Goth</a>
+        <a href="page5.html">Cyber Goth</a>
+        <a href="page6.html">Trad Goth</a>
+        <a href="page7.html"
+          ><span class="blink jp-only">Monkeys</span
+          ><span class="modern-only">Monkeys</span></a
+        >
+      </nav>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Left sidebar">
+          <div class="modern-only">
+            <div class="side-title">Quick links</div>
+            <ul class="side-list">
+              <li><a href="page2.html">Pastel Goth</a></li>
+              <li><a href="page3.html">Romantic Goth</a></li>
+              <li><a href="page4.html">Industrial Goth</a></li>
+              <li><a href="page5.html">Cyber Goth</a></li>
+              <li><a href="page6.html">Trad Goth</a></li>
+              <li><a href="page7.html">Monkeys</a></li>
+            </ul>
+            <div class="side-divider"></div>
+            <div class="muted">Tip: use the map on this page to navigate.</div>
+          </div>
+
+          <div class="jp-only">
+            <div class="jp-box">
+              <div class="muted" data-ja="管理人:" data-en="Webmaster:">
+                管理人:
+              </div>
+              <div><strong>MonkeyLeader_1345</strong></div>
+              <div class="muted">Mail:</div>
+              <div>
+                <a href="mailto:SupremeLeader@haha.com">SupremeLeader★haha.com</a>
+              </div>
+              <div style="margin-top: 10px">
+                <span class="blink">!!! NEW !!!</span>
+              </div>
+            </div>
+
+            <div class="jp-box" style="margin-top: 12px">
+              <div>
+                <strong data-ja="おすすめリンク" data-en="Recommended links"
+                  >おすすめリンク</strong
+                >
+              </div>
+              <ul class="jp-list">
+                <li>
+                  <!-- Ouverture des sites dans un nouveau onglet + securite avec no opener (NOOPENER CONSEILLE PAR CHATGPT)  -->
+                  →
+                  <a
+                    href="https://en.wikipedia.org/wiki/Gothic_fashion"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Gothic fashion (wiki)</a
+                  >
+                </li>
+                <li>
+                  →
+                  <a
+                    href="https://www.cameronsworld.net/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Cameron's World</a
+                  >
+                </li>
+                <li>
+                  →
+                  <a
+                    href="https://web.archive.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Wayback Machine</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <main class="content" id="main">
+          <h2>Different goth fashion styles and their origins</h2>
+          <img
+            src="images/skeleton-026.gif"
+            alt="Skeleton"
+            style="height: 180px; display: block; margin: 10px auto 12px"
+          />
+          <p>
+            Goth is a clothing subgenre derived from late 1970s-1980s post-punk
+            scenes. In mainstream media today, it's often presented as all
+            fishnets, tight leather, and a sexualized vibe. Historically, the
+            look was more about mood, artistic darkness, and identity
+            experimentation. Dramatic makeup, layered clothing, and androgynous
+            silhouettes were used to challenge norms, not to be “sexy.” The
+            modern emphasis on sexuality is largely commercialization. See more
+            <!-- Ouverture des sites dans un nouveau onglet + securite avec no opener (NOOPENER DE CHATGPT)  -->
+            <a
+              href="https://en.wikipedia.org/wiki/Gothic_fashion"
+              target="_blank"
+              rel="noopener noreferrer"
+              >here</a
+            >.
+          </p>
+
+          <!-- Carte cliquable -->
+          <div class="map" aria-label="Clickable map">
+            <img
+              src="images/map.png"
+              alt="Navigation map to goth style pages"
+              class="mapimg"
+            />
+            <a
+              href="page2.html"
+              class="hotspot one"
+              title="Pastel goth"
+              aria-label="Go to Pastel goth"
+            ></a>
+            <a
+              href="page3.html"
+              class="hotspot two"
+              title="Romantic goth"
+              aria-label="Go to Romantic goth"
+            ></a>
+            <a
+              href="page4.html"
+              class="hotspot three"
+              title="Industrial goth"
+              aria-label="Go to Industrial goth"
+            ></a>
+            <a
+              href="page5.html"
+              class="hotspot four"
+              title="Cyber goth"
+              aria-label="Go to Cyber goth"
+            ></a>
+            <a
+              href="page6.html"
+              class="hotspot five"
+              title="Trad goth"
+              aria-label="Go to Trad goth"
+            ></a>
+            <a
+              href="page7.html"
+              class="hotspot six"
+              title="Monkeys"
+              aria-label="Go to Monkeys"
+            ></a>
+          </div>
+        </main>
+
+        <!-- Sidebar moderne -->
+        <aside class="sidebar" aria-label="Right sidebar">
+          <div class="modern-only">
+            <div class="side-title">Notes</div>
+            <div class="muted">Modern mode. Very modern and boring.</div>
+            <div class="side-divider"></div>
+            <div class="muted">Japan-Web mode adds soul to the website.</div>
+          </div>
+
+          <!-- Sidebar Version JP -->
+          <div class="jp-only">
+            <div class="jp-box">
+              <div>
+                <strong data-ja="アクセスカウンター" data-en="Visitor counter"
+                  >アクセスカウンター</strong
+                >
+              </div>
+              <div class="counter" aria-label="Visitor counter">
+                <span data-ja="訪問者:" data-en="Visitors:">訪問者:</span>
+                <span>1</span><span>8</span><span>4</span><span>2</span
+                ><span>1</span><span>9</span>
+              </div>
+              <div
+                class="muted"
+                style="margin-top: 8px"
+                data-ja="マイルストーンの数字に到達したら、私にメールを送ってください!"
+                data-en="If you hit a milestone number, send me an email !"
+              >
+                マイルストーンの数字に到達したら、私にメールを送ってください!!
+              </div>
+            </div>
+
+            <div class="jp-box" style="margin-top: 12px">
+              <div>
+                <strong data-ja="バナー置き場" data-en="Banners"
+                  >バナー置き場</strong
+                >
+              </div>
+              <div style="margin-top: 10px">
+                <div class="tag" style="background: rgba(255, 255, 0, 0.18)">
+                  UNDER CONSTRUCTION
+                </div>
+                <div class="tag" style="background: rgba(0, 255, 255, 0.18)">
+                  BEST VIEWED 800x600
+                </div>
+                <div class="tag" style="background: rgba(255, 0, 255, 0.18)">
+                  IE 5.5 / Netscape
+                </div>
+              </div>
+              <div
+                class="muted"
+                style="margin-top: 10px"
+                data-ja="※ バナーは雰囲気です"
+                data-en="(Banners are just for vibe)"
+              >
+                ※ バナーは雰囲気です
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer class="site-footer">
+        <div class="muted">Last updated: 2026-01-03</div>
+      </footer>
+    </div>
+
+    <script src="scripts.js" defer></script>
+    <!-- defer pour s'assurer que la page est correct  -->
+    <!-- scripts.js : toggle thème + traduction JP↔EN  -->
+  </body>
+</html>

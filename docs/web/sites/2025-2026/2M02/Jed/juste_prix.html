@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juste prix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <ul id="menu_header">
+            <li class="menu_header">
+                <a href="index.html">
+                    <img src="images/game-controller.png" alt="" title="logo du site">
+                </a>
+            </li> <!--logo du site-->
+            <ol id="menu">
+                <li class="menu_header" ><a href="index.html">accueil</a></li>
+                <li class="menu_header" style="background-color: #CE8F8A;"><a href=juste_prix.html>Juste prix</a></li>
+                <li class="menu_header"><a href="react.html">Reaction</a></li>
+            </ol>
+            <li class="menu_header">
+                <div id="round">
+                    <img src="images/telephone.png" alt="">
+                    +41 90 200 10
+                </div>
+            </li> <!--numero de telephone du site-->
+        </ul>
+    </header>
+
+    <div id="game">
+        <h1>Ecrivez un nombre entre 1 et 100 ci-dessous puis appuyer sur le bouton vérifier</h1>
+        <div id="box_game">
+            <h1 id="result">Ecrivez...</h1>
+        <form>
+            <input type="text" id="user_number" value="">
+        </form>
+        <div class="buttons">
+            <button id="check_button" onclick="check(
+            document.getElementById('user_number').value,
+            random_number
+        )">Check</button>
+        <button id="restart_button" onclick="restart()" id="restart_button">recommencer</button>
+        </div>
+        <p id="tentatives">Il vous reste 5 tentatives</p>
+        <p id="timer">Il vous reste 20 secondes</p>
+        </div>
+        
+    </div>
+
+    <script src="juste_prix.js"></script>
+</body>
+</html>

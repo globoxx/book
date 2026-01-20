@@ -1,0 +1,60 @@
+h1 {
+    color: rgb(0, 24, 56);
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+}
+body {
+    margin: 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+img {
+    border-radius: 40px;
+}
+
+p {
+    font-size: large;
+}
+
+li {
+    font-size: 20px;
+}
+.Titre {
+    background-color: rgb(163, 196, 230);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ville {
+    margin: 23px;
+}
+.imgville {
+    display: flex;
+    justify-content: space-between
+}
+
+.imgstade {
+    margin: 23px;
+    display: flex;
+    justify-content: space-between
+}
+
+.histoire {
+    margin: 23px;
+}
+
+.video{
+    margin: 23px;
+    display: flex;
+    justify-content: center;
+}

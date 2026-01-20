@@ -1,0 +1,94 @@
+.entête{
+    background-color: lightblue;
+    padding: 10px;
+    display: flex;    
+    justify-content: center;
+}
+
+.entête_texte{
+    gap: 50px
+}
+
+.entête_image {
+    gap: 100px;
+    width: 100px;
+}
+
+.menu ul {
+    background-color: #fff2d5;
+    display: flex;
+    list-style-type: none;
+    border-radius: 40px;
+    justify-content: space-evenly;
+  }
+  
+.menu li{
+    padding: 15px;    
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+}
+
+.menu li:hover {
+    background-color: lightgray;
+    padding: 15px;
+}
+
+.contenu_index{
+    display: flex;
+    gap: 10px;
+    background-color: #fff2d5;
+    border-radius: 40px;
+    text-align: right;
+}
+.image_index{
+    width: 1000px;
+}
+
+.image_index img {
+    width: 100%;
+}
+
+.contenu_parcours {
+    gap: 10px;
+    display: flex;
+    text-align: left;
+    background-color: #d6efff;
+    justify-content: space-evenly;
+}
+
+.contenu_histoire{
+    
+}
+.contenu_histoire_2{
+
+}
+
+.image_histoire{
+    width: 200px;
+}
+
+.image_histoire img{
+    width: 100%;
+}
+
+.contenu_bateau{
+
+}
+
+.contenu_bateau_2{
+    
+}
+
+.image_bateau{
+    width: 500px
+}
+
+.image_bateau img{
+    width: 90%;
+}
+.image_foil img{
+    width: 60%;
+}
