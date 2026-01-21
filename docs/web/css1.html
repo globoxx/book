@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -353,7 +353,7 @@ Ce visage de Mario a été fait en pur CSS ! C’est inutile mais plutôt impres
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ma page<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span> <span class="c">&lt;!-- Nouvelle ligne --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span><span class="p">&gt;</span> <span class="cm">&lt;!-- Nouvelle ligne --&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -366,8 +366,8 @@ Ce visage de Mario a été fait en pur CSS ! C’est inutile mais plutôt impres
 <section id="appliquer-une-propriete-css-a-une-balise-html">
 <h2>Appliquer une propriété CSS à une balise HTML<a class="headerlink" href="#appliquer-une-propriete-css-a-une-balise-html" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voici à quoi ressemble un bout de code CSS:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -411,16 +411,16 @@ Solution<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">h1</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">li</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+<span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -431,8 +431,8 @@ Solution<div class="summary-down docutils">
 <h2>Appliquer une propriété CSS à plusieurs balises HTML<a class="headerlink" href="#appliquer-une-propriete-css-a-plusieurs-balises-html" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Et si je veux appliquer la couleur bleue aux paragraphes et aux titres ?<br/>
 Il suffit de donner la liste des balises qui seront affectées par ce changement de propriété (séparées par des <code class="docutils literal notranslate"><span class="pre">,</span></code>):</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="o">,</span> <span class="nt">h1</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="o">,</span><span class="w"> </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -457,8 +457,8 @@ Il suffit de donner la liste des balises qui seront affectées par ce changement
 <h2>Appliquer un style à une classe d’éléments<a class="headerlink" href="#appliquer-un-style-a-une-classe-delements" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Imaginez que vous voulez appliquer la couleur violette à certains éléments de votre page, indépendemment de leur type (titre, paragraphe, liens, etc).</p>
 <p>Pour ce faire, vous allez commencer par créer une classe CSS:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">ma-classe</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">purple</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">ma-classe</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">purple</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -485,20 +485,20 @@ Solution<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Voici le code CSS:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">h1</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="nt">li</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+<span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="p">.</span><span class="nc">classe-rouge</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">.</span><span class="nc">classe-rouge</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -556,8 +556,8 @@ Il vous faut définir une classe CSS et l’appliquer à vos balises <code class
 </pre></div>
 </div>
 <p>Code CSS:</p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">classe-rouge</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">classe-rouge</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -574,8 +574,8 @@ Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</
 <code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">href="style.css"</span> <span class="pre">rel="stylesheet"&gt;</span></code> (à placer dans la balise <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span> <span class="pre">&lt;/head&gt;</span></code>)</p></li>
 <li><p><em>Créer une règle CSS pour une balise</em>:</p></li>
 </ul>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">nom_de_la_balise</span> <span class="p">{</span>
-    <span class="n">propriete</span><span class="p">:</span> <span class="n">valeur</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">nom_de_la_balise</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">propriete</span><span class="p">:</span><span class="w"> </span><span class="n">valeur</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -584,8 +584,8 @@ Voici le <a href="https://codepen.io/louflan/pen/BaoJpwX" target="_blank">lien</
 <li><p><em>Couleur de fond</em>: <code class="docutils literal notranslate"><span class="pre">background-color:</span> <span class="pre">nom_de_la_couleur;</span></code> (ex: <code class="docutils literal notranslate"><span class="pre">background-color:</span> <span class="pre">yellow;</span></code>)</p></li>
 <li><p><em>Créer une règle CSS pour une classe</em>:</p></li>
 </ul>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">nom_de_la_classe</span> <span class="p">{</span>
-    <span class="n">propriete</span><span class="p">:</span> <span class="n">valeur</span><span class="p">;</span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">nom_de_la_classe</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">propriete</span><span class="p">:</span><span class="w"> </span><span class="n">valeur</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>

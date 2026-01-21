@@ -84,6 +84,7 @@
 * <a href="sites/2025-2026/2M02/Antoine/Accueil.html" target="_blank">Antoine</a>
 * <a href="sites/2025-2026/2M02/Artur_Leo/main_page.html" target="_blank">Artur et Leo</a>
 * <a href="sites/2025-2026/2M02/Basile/menu.html" target="_blank">Basile</a>
+* <a href="sites/2025-2026/2M02/Jed/index.html" target="_blank">Jed<a>
 * <a href="sites/2025-2026/2M02/Keyshia/automne.html" target="_blank">Keyshia<a>
 * {download}`Nadal<sites/2025-2026/2M02/Nadal/Nadal.zip>` (Nécessite le lancement d'un serveur local)
 * <a href="https://wikigalaxy.vercel.app/" target="_blank">Nathan<a>
