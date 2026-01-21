@@ -166,7 +166,9 @@ def update():
 Modifiez la vitesse de l'animation en changeant le nombre passé à `player.animate()`.
 
 ### Exercice 10
-Rendez-vous sur <a href="https://kenney.nl/assets" target="_blank">Kenny</a> pour télécharger un ensemble d'images d'animation gratuites. Ajoutez-les à votre projet (dans le dossier `images`) et utilisez-les pour animer votre acteur.
+Changez les images d'animation de votre personnage. Piochez dans celles fournies dans le dossier `images` ou récupérez les votres sur Internet.  
+
+Vous pouvez vous rendre sur <a href="https://kenney.nl/assets" target="_blank">Kenny</a> pour télécharger un ensemble d'images d'animation gratuites. Ajoutez-les à votre projet (dans le dossier `images`) et utilisez-les pour animer votre acteur.
 
 ## 6. Ajouter un ennemi rebondissant
 Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l'écran. Il s'agira donc d'un nouvel `acteur`.
