@@ -323,9 +323,14 @@
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span> <span class="c1"># Lance le jeu</span>
 </pre></div>
 </div>
+<img alt="../_images/pygame_fenetre.png" src="../_images/pygame_fenetre.png"/>
 <section id="fond-et-formes">
 <h2>1. Fond et formes<a class="headerlink" href="#fond-et-formes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajoutons un fond bleu et quelques formes géométriques à l’écran. Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu pour dessiner les éléments à l’écran.</p>
+<p>Ajoutons un fond bleu et quelques formes géométriques à l’écran.</p>
+<div class="warning admonition">
+<p class="admonition-title">Important</p>
+<p>Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu pour <strong>mettre à jour l’affichage du jeu</strong>.</p>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
@@ -342,7 +347,7 @@
 </div>
 <section id="exercice-1">
 <h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Changez le fond en mettant une image de votre choix. Trouvez-en une et déposez-la dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> de votre projet. Changez la ligne <code class="docutils literal notranslate"><span class="pre">screen.fill(...)</span></code> par</p>
+<p>Changez le fond en mettant une image de votre choix. Vous en trouverez dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> ou trouvez-en une sur Internet et déposez-la dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>. Changez la ligne <code class="docutils literal notranslate"><span class="pre">screen.fill(...)</span></code> par</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'nom_de_votre_image'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -352,7 +357,11 @@
 </section>
 <section id="faire-bouger-les-formes">
 <h2>2. Faire bouger les formes<a class="headerlink" href="#faire-bouger-les-formes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour faire bouger les objets, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour <strong>mettre à jour l’état du jeu</strong>, comme la position des objets.</p>
+<p>Nous allons faire bouger des objets.</p>
+<div class="warning admonition">
+<p class="admonition-title">Important</p>
+<p>Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour <strong>mettre à jour l’état du jeu</strong>, comme la position des objets.</p>
+</div>
 <p>Nous allons faire bouger un carré rouge horizontalement.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
@@ -372,15 +381,50 @@
 <section id="exercice-2">
 <h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Faites bouger le carré plus rapidement.</p>
-</section>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Tout objet en Pygame Zero a une position définie par des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> (horizontale) et <code class="docutils literal notranslate"><span class="pre">y</span></code> (verticale). <code class="docutils literal notranslate"><span class="pre">box</span></code> est un rectangle, et <code class="docutils literal notranslate"><span class="pre">box.x</span></code> représente sa position horizontale. En augmentant <code class="docutils literal notranslate"><span class="pre">box.x</span></code>, on déplace le rectangle vers la droite.</p>
+<p class="card-text">La ligne</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p class="card-text">ajoute <code class="docutils literal notranslate"><span class="pre">2</span></code> à la position <code class="docutils literal notranslate"><span class="pre">x</span></code> du rectangle à chaque frame, ce qui le fait bouger vers la droite.
+Vous pouvez augmenter la valeur <code class="docutils literal notranslate"><span class="pre">2</span></code> pour le faire bouger plus rapidement, par exemple en la changeant en <code class="docutils literal notranslate"><span class="pre">5</span></code> ou <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
+</div>
+</details></section>
 <section id="exercice-3">
 <h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Faites bouger le carré en diagonale.</p>
-</section>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Pour faire bouger le carré en diagonale, vous devez modifier à la fois sa position horizontale (<code class="docutils literal notranslate"><span class="pre">box.x</span></code>) et sa position verticale (<code class="docutils literal notranslate"><span class="pre">box.y</span></code>).</p>
+<p class="card-text">Ajoutez une ligne dans la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> pour augmenter <code class="docutils literal notranslate"><span class="pre">box.y</span></code> de la même manière que vous avez augmenté <code class="docutils literal notranslate"><span class="pre">box.x</span></code>.</p>
+</div>
+</details></section>
 <section id="exercice-4">
 <h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez un deuxième rectangle d’une autre couleur qui se déplace également (de la manière que vous voulez).</p>
-</section>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Vous pouvez créer un deuxième rectangle en utilisant une autre variable, par exemple <code class="docutils literal notranslate"><span class="pre">box2</span></code>. Définissez-le de la même manière que <code class="docutils literal notranslate"><span class="pre">box</span></code>, mais avec une position et une taille différentes.</p>
+<p class="card-text">Ensuite, dans la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code>, dessinez ce deuxième rectangle en utilisant <code class="docutils literal notranslate"><span class="pre">screen.draw.filled_rect(box2,</span> <span class="pre">"couleur")</span></code>.</p>
+</div>
+</details></section>
 </section>
 <section id="ajouter-des-acteurs-avec-des-images">
 <h2>3. Ajouter des acteurs (avec des images)<a class="headerlink" href="#ajouter-des-acteurs-avec-des-images" title="Lien permanent vers ce titre">¶</a></h2>
@@ -417,7 +461,20 @@
 <section id="exercice-5">
 <h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Changez l’image de l’acteur en utilisant une autre image de votre choix (assurez-vous de l’ajouter au dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> si vous la téléchargez sur Internet).</p>
-</section>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Pour changer l’image de l’acteur, modifiez la ligne où l’acteur est créé :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'nom_de_votre_image'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="card-text">Assurez-vous que le nom de l’image correspond au nom du fichier image (sans l’extension) que vous avez ajouté dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> de votre projet.</p>
+</div>
+</details></section>
 </section>
 <section id="gestion-du-clavier">
 <h2>4. Gestion du clavier<a class="headerlink" href="#gestion-du-clavier" title="Lien permanent vers ce titre">¶</a></h2>
@@ -434,19 +491,41 @@
 <section id="exercice-6">
 <h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Permettez à l’acteur de se déplacer également vers le haut et vers le bas avec les flèches haut et bas.</p>
-</section>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Ajoutez des conditions supplémentaires dans la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> pour vérifier si les touches flèche haut (<code class="docutils literal notranslate"><span class="pre">up</span></code>) et flèche bas (<code class="docutils literal notranslate"><span class="pre">down</span></code>) sont pressées, et modifiez la position verticale (<code class="docutils literal notranslate"><span class="pre">player.y</span></code>) de l’acteur en conséquence.</p>
+</div>
+</details></section>
 <section id="exercice-7">
 <h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Empêchez l’acteur de sortir de l’écran (ou faites-le réapparaître de l’autre côté).</p>
-</section>
-<section id="exercice-8">
-<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Si ce n’est pas déjà fait, permettez à l’acteur de se déplacer en diagonale en appuyant sur deux touches en même temps (par exemple, flèche droite + flèche haut).</p>
-</section>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Pour empêcher l’acteur de sortir de l’écran, vous pouvez ajouter des conditions après avoir mis à jour sa position pour vérifier si <code class="docutils literal notranslate"><span class="pre">player.x</span></code> ou <code class="docutils literal notranslate"><span class="pre">player.y</span></code> sont en dehors des limites de la fenêtre (0 à WIDTH pour x, 0 à HEIGHT pour y). Si cela se produit, vous pouvez par exemple le faire réapparaître de l’autre côté.</p>
+<p class="card-text">Par exemple, pour la position horizontale :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span> <span class="c1"># Si l'acteur dépasse la largeur de la fenêtre</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Remet l'acteur à gauche</span>
+<span class="k">elif</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># Si l'acteur dépasse le côté gauche</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span> <span class="c1"># Remet l'acteur à droite</span>
+</pre></div>
+</div>
+<p class="card-text">Vous pouvez faire de même pour la position verticale (<code class="docutils literal notranslate"><span class="pre">player.y</span></code>).</p>
+</div>
+</details></section>
 </section>
 <section id="animation-des-acteurs">
 <h2>5. Animation des acteurs<a class="headerlink" href="#animation-des-acteurs" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pygame Zero permet également d’animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente, par exemple <code class="docutils literal notranslate"><span class="pre">alien_walk1.png</span></code>, <code class="docutils literal notranslate"><span class="pre">alien_walk2.png</span></code>, etc.</p>
+<p>Pygame Zero permet également d’animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente (ex: <code class="docutils literal notranslate"><span class="pre">alien_walk1.png</span></code>, <code class="docutils literal notranslate"><span class="pre">alien_walk2.png</span></code>, etc.) et les stocker dans l’attribut <code class="docutils literal notranslate"><span class="pre">images</span></code> de l’acteur.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="o">...</span>
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span> <span class="c1"># Crée un acteur avec l'image 'alien.png'</span>
@@ -458,19 +537,19 @@
 
 </pre></div>
 </div>
+<section id="exercice-8">
+<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Modifiez la vitesse de l’animation en changeant le nombre passé à <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code> et observez l’effet.</p>
+</section>
 <section id="exercice-9">
 <h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Modifiez la vitesse de l’animation en changeant le nombre passé à <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code>.</p>
-</section>
-<section id="exercice-10">
-<h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Changez les images d’animation de votre personnage. Piochez dans celles fournies dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> ou récupérez les votres sur Internet.</p>
-<p>Vous pouvez vous rendre sur <a href="https://kenney.nl/assets" target="_blank">Kenny</a> pour télécharger un ensemble d’images d’animation gratuites. Ajoutez-les à votre projet (dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>) et utilisez-les pour animer votre acteur.</p>
+<p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> propose une grande quantité d’ensembles d’images gratuites et libres de droit que vous pouvez utiliser pour vos jeux.</p>
 </section>
 </section>
 <section id="ajouter-un-ennemi-rebondissant">
 <h2>6. Ajouter un ennemi rebondissant<a class="headerlink" href="#ajouter-un-ennemi-rebondissant" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l’écran. Il s’agira donc d’un nouvel <code class="docutils literal notranslate"><span class="pre">acteur</span></code>.</p>
+<p>Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l’écran. Il s’agira donc d’un nouvel <code class="docutils literal notranslate"><span class="pre">acteur</span></code> que nous appelerons <code class="docutils literal notranslate"><span class="pre">enemy</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 <span class="n">enemy</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'bird0'</span><span class="p">)</span> <span class="c1"># Crée un acteur ennemi avec l'image 'bird0.png'</span>
 <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">400</span>
@@ -484,7 +563,7 @@
 
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
-    <span class="c1"># Met à jour la position de l'ennemi</span>
+    <span class="c1"># Met à jour la position de l'ennemi </span>
     <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span>
 
     <span class="c1"># Vérifie les collisions avec les bords de la fenêtre</span>
@@ -492,10 +571,25 @@
         <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="o">=</span> <span class="o">-</span><span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="c1"># Inverse la vitesse horizontale</span>
 </pre></div>
 </div>
-<section id="exercice-11">
-<h3>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-10">
+<h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Complétez le code pour que l’ennemi se déplace diagonalement et rebondisse également sur les bords supérieur et inférieur de la fenêtre.</p>
-</section>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Votre ennemi va tout droit ! Il faut commencer par ajouter la mise à jour de la position verticale de l’ennemi dans la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code>.</p>
+<p class="card-text">La ligne</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span>
+</pre></div>
+</div>
+<p class="card-text">permet de déplacer l’ennemi horizontalement. De la même manière, vous devez ajouter une ligne pour déplacer l’ennemi verticalement en utilisant <code class="docutils literal notranslate"><span class="pre">ennemy.y</span></code> et <code class="docutils literal notranslate"><span class="pre">ennemy.vy</span></code>.</p>
+<p class="card-text">Ensuite, vous devez ajouter une condition pour vérifier si l’ennemi touche le bord supérieur ou inférieur de la fenêtre. Si <code class="docutils literal notranslate"><span class="pre">enemy.y</span></code> est inférieur à <code class="docutils literal notranslate"><span class="pre">0</span></code> (bord supérieur) ou supérieur à <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> (bord inférieur), vous devez inverser la vitesse verticale <code class="docutils literal notranslate"><span class="pre">enemy.vy</span></code> pour faire rebondir l’ennemi.</p>
+</div>
+</details></section>
 </section>
 <section id="des-collisions-entre-acteurs">
 <h2>7. Des collisions entre acteurs<a class="headerlink" href="#des-collisions-entre-acteurs" title="Lien permanent vers ce titre">¶</a></h2>
@@ -507,14 +601,23 @@
     <span class="o">...</span>
     <span class="c1"># Vérifie la collision entre le joueur et l'ennemi</span>
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Collision détectée ! Jeu terminé."</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Collision détectée ! Terminé !"</span><span class="p">)</span>
         <span class="n">exit</span><span class="p">()</span> <span class="c1"># Termine le jeu</span>
 </pre></div>
 </div>
-<section id="exercice-12">
-<h3>Exercice 12<a class="headerlink" href="#exercice-12" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-11">
+<h3>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Changez la difficulté du jeu en modifiant la vitesse de l’ennemi (ou celle du joueur).</p>
-</section>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">La vitesse de l’ennemi est définie par les variables <code class="docutils literal notranslate"><span class="pre">enemy.vx</span></code> (vitesse horizontale) et <code class="docutils literal notranslate"><span class="pre">enemy.vy</span></code> (vitesse verticale).</p>
+</div>
+</details></section>
 </section>
 <section id="musique-et-sons">
 <h2>8. Musique et sons<a class="headerlink" href="#musique-et-sons" title="Lien permanent vers ce titre">¶</a></h2>
@@ -526,14 +629,15 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
-        <span class="n">sounds</span><span class="o">.</span><span class="n">die</span><span class="o">.</span><span class="n">play</span><span class="p">()</span> <span class="c1"># Joue un son d'explosion (fichier 'die.wav' dans le dossier sounds)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Collision détectée ! Jeu terminé."</span><span class="p">)</span>
+        <span class="n">sounds</span><span class="o">.</span><span class="n">die</span><span class="o">.</span><span class="n">play</span><span class="p">()</span> <span class="c1"># Joue un son de game over (fichier 'die.wav' dans le dossier sounds)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Collision détectée ! Terminé !"</span><span class="p">)</span>
         <span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<section id="exercice-13">
-<h3>Exercice 13<a class="headerlink" href="#exercice-13" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Changez la musique de fond et les effets sonores en utilisant vos propres fichiers audio (assurez-vous de les ajouter aux dossiers <code class="docutils literal notranslate"><span class="pre">music</span></code> et <code class="docutils literal notranslate"><span class="pre">sounds</span></code>). Vous trouverez des sons <code class="docutils literal notranslate"><span class="pre">wav</span></code> sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a> et des musiques <code class="docutils literal notranslate"><span class="pre">mp3</span></code> libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.</p>
+<section id="exercice-12">
+<h3>Exercice 12<a class="headerlink" href="#exercice-12" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Changez la musique de fond et les effets sonores en piochant dans ceux disponibles dans les dossiers <code class="docutils literal notranslate"><span class="pre">music</span></code> et <code class="docutils literal notranslate"><span class="pre">sounds</span></code> ou trouvez vos propres bruitages sur Internet.</p>
+<p>Vous trouverez des sons <code class="docutils literal notranslate"><span class="pre">wav</span></code> sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a> et des musiques <code class="docutils literal notranslate"><span class="pre">mp3</span></code> libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.</p>
 </section>
 </section>
 <section id="a-rendre">
@@ -543,16 +647,16 @@
 <p>Déposez sur Moodle le fichier <code class="docutils literal notranslate"><span class="pre">jeu.py</span></code> sur lequel vous avez travaillé, contenant toutes les fonctionnalités que vous avez implémentées.</p>
 <p>Il n’est pas nécessaire de déposer les ressources (images, sons, musiques).</p>
 </div>
-<section id="exercice-14-optionnel">
-<h3>Exercice 14 (optionnel)<a class="headerlink" href="#exercice-14-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-13-optionnel">
+<h3>Exercice 13 (optionnel)<a class="headerlink" href="#exercice-13-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez un second joueur contrôlé par d’autres touches du clavier (par exemple, WASD) et faites en sorte que le jeu se termine si l’un des deux joueurs entre en collision avec l’ennemi. Le but étant de survivre plus longtemps que l’autre joueur !</p>
 </section>
-<section id="exercie-15-optionnel">
-<h3>Exercie 15 (optionnel)<a class="headerlink" href="#exercie-15-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercie-14-optionnel">
+<h3>Exercie 14 (optionnel)<a class="headerlink" href="#exercie-14-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez plus d’ennemis pour augmenter la difficulté du jeu.</p>
 </section>
-<section id="exercice-16-optionnel">
-<h3>Exercice 16 (optionnel)<a class="headerlink" href="#exercice-16-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-15-optionnel">
+<h3>Exercice 15 (optionnel)<a class="headerlink" href="#exercice-15-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez un système de score qui augmente avec le temps passé sans collision. Affichez le score à l’écran. (Cela devient un jeu coopératif de survie !)</p>
 </section>
 </section>
@@ -733,30 +837,29 @@
 <li><a class="reference internal" href="#gestion-du-clavier">4. Gestion du clavier</a><ul>
 <li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
 <li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
-<li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#animation-des-acteurs">5. Animation des acteurs</a><ul>
+<li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>
 <li><a class="reference internal" href="#exercice-9">Exercice 9</a></li>
-<li><a class="reference internal" href="#exercice-10">Exercice 10</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ajouter-un-ennemi-rebondissant">6. Ajouter un ennemi rebondissant</a><ul>
-<li><a class="reference internal" href="#exercice-11">Exercice 11</a></li>
+<li><a class="reference internal" href="#exercice-10">Exercice 10</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#des-collisions-entre-acteurs">7. Des collisions entre acteurs</a><ul>
-<li><a class="reference internal" href="#exercice-12">Exercice 12</a></li>
+<li><a class="reference internal" href="#exercice-11">Exercice 11</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#musique-et-sons">8. Musique et sons</a><ul>
-<li><a class="reference internal" href="#exercice-13">Exercice 13</a></li>
+<li><a class="reference internal" href="#exercice-12">Exercice 12</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#a-rendre">A rendre</a><ul>
-<li><a class="reference internal" href="#exercice-14-optionnel">Exercice 14 (optionnel)</a></li>
-<li><a class="reference internal" href="#exercie-15-optionnel">Exercie 15 (optionnel)</a></li>
-<li><a class="reference internal" href="#exercice-16-optionnel">Exercice 16 (optionnel)</a></li>
+<li><a class="reference internal" href="#exercice-13-optionnel">Exercice 13 (optionnel)</a></li>
+<li><a class="reference internal" href="#exercie-14-optionnel">Exercie 14 (optionnel)</a></li>
+<li><a class="reference internal" href="#exercice-15-optionnel">Exercice 15 (optionnel)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#et-quoi-dautre">Et quoi d’autre ?</a><ul>

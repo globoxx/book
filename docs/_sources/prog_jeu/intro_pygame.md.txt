@@ -23,8 +23,16 @@ HEIGHT = 600 # Hauteur de la fenêtre
 pgzrun.go() # Lance le jeu
 ```
 
+```{image} ../media/pygame_fenetre.png
+```
+
 ## 1. Fond et formes
-Ajoutons un fond bleu et quelques formes géométriques à l'écran. Pour cela, nous allons utiliser la fonction `draw()` qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu pour dessiner les éléments à l'écran.
+Ajoutons un fond bleu et quelques formes géométriques à l'écran. 
+
+```{admonition} Important
+:class: warning
+Pour cela, nous allons utiliser la fonction `draw()` qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu pour **mettre à jour l'affichage du jeu**.
+```
 
 ```python
 ...
@@ -42,7 +50,7 @@ pgzrun.go()
 ```
 
 ### Exercice 1
-Changez le fond en mettant une image de votre choix. Trouvez-en une et déposez-la dans le dossier `images` de votre projet. Changez la ligne `screen.fill(...)` par 
+Changez le fond en mettant une image de votre choix. Vous en trouverez dans le dossier `images` ou trouvez-en une sur Internet et déposez-la dans le dossier `images`. Changez la ligne `screen.fill(...)` par 
 
 ```python
 screen.blit('nom_de_votre_image', (0, 0))
@@ -53,7 +61,12 @@ Le `(0, 0)` indique que l'image doit être dessinée à partir du coin supérieu
 Attention, l'image devrait idéalement être de la même taille que la fenêtre (800x600 pixels) pour qu'elle s'affiche correctement.
 
 ## 2. Faire bouger les formes
-Pour faire bouger les objets, nous allons utiliser la fonction `update()` qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour **mettre à jour l'état du jeu**, comme la position des objets.
+Nous allons faire bouger des objets. 
+
+```{admonition} Important
+:class: warning
+Pour cela, nous allons utiliser la fonction `update()` qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour **mettre à jour l'état du jeu**, comme la position des objets.
+```
 
 Nous allons faire bouger un carré rouge horizontalement.
 
@@ -76,11 +89,34 @@ def update():
 ### Exercice 2
 Faites bouger le carré plus rapidement.
 
+````{dropdown} J'ai besoin d'aide !
+Tout objet en Pygame Zero a une position définie par des coordonnées `x` (horizontale) et `y` (verticale). `box` est un rectangle, et `box.x` représente sa position horizontale. En augmentant `box.x`, on déplace le rectangle vers la droite.
+
+La ligne 
+```python
+box.x += 2
+```
+ajoute `2` à la position `x` du rectangle à chaque frame, ce qui le fait bouger vers la droite.
+Vous pouvez augmenter la valeur `2` pour le faire bouger plus rapidement, par exemple en la changeant en `5` ou `10`.
+````
+
 ### Exercice 3
 Faites bouger le carré en diagonale.
 
+```{dropdown} J'ai besoin d'aide !
+Pour faire bouger le carré en diagonale, vous devez modifier à la fois sa position horizontale (`box.x`) et sa position verticale (`box.y`).
+
+Ajoutez une ligne dans la fonction `update()` pour augmenter `box.y` de la même manière que vous avez augmenté `box.x`.
+```
+
 ### Exercice 4
 Ajoutez un deuxième rectangle d'une autre couleur qui se déplace également (de la manière que vous voulez).
+
+```{dropdown} J'ai besoin d'aide !
+Vous pouvez créer un deuxième rectangle en utilisant une autre variable, par exemple `box2`. Définissez-le de la même manière que `box`, mais avec une position et une taille différentes.
+
+Ensuite, dans la fonction `draw()`, dessinez ce deuxième rectangle en utilisant `screen.draw.filled_rect(box2, "couleur")`.
+```
 
 ## 3. Ajouter des acteurs (avec des images)
 
@@ -124,6 +160,14 @@ Si vous souhaitez en savoir plus (car cela ouvre en grand les portes de la progr
 ### Exercice 5
 Changez l'image de l'acteur en utilisant une autre image de votre choix (assurez-vous de l'ajouter au dossier `images` si vous la téléchargez sur Internet).
 
+````{dropdown} J'ai besoin d'aide !
+Pour changer l'image de l'acteur, modifiez la ligne où l'acteur est créé :
+```python
+player = Actor('nom_de_votre_image')
+```
+Assurez-vous que le nom de l'image correspond au nom du fichier image (sans l'extension) que vous avez ajouté dans le dossier `images` de votre projet.
+````
+
 ## 4. Gestion du clavier
 
 Il est temps de faire bouger notre acteur nous-mêmes ! Nous allons utiliser la variable spéciale `keyboard` fournie par Pygame Zero pour détecter les touches pressées.
@@ -141,14 +185,30 @@ def update():
 ### Exercice 6
 Permettez à l'acteur de se déplacer également vers le haut et vers le bas avec les flèches haut et bas.
 
+```{dropdown} J'ai besoin d'aide !
+Ajoutez des conditions supplémentaires dans la fonction `update()` pour vérifier si les touches flèche haut (`up`) et flèche bas (`down`) sont pressées, et modifiez la position verticale (`player.y`) de l'acteur en conséquence.
+```
+
 ### Exercice 7
 Empêchez l'acteur de sortir de l'écran (ou faites-le réapparaître de l'autre côté).
 
-### Exercice 8
-Si ce n'est pas déjà fait, permettez à l'acteur de se déplacer en diagonale en appuyant sur deux touches en même temps (par exemple, flèche droite + flèche haut).
+````{dropdown} J'ai besoin d'aide !
+Pour empêcher l'acteur de sortir de l'écran, vous pouvez ajouter des conditions après avoir mis à jour sa position pour vérifier si `player.x` ou `player.y` sont en dehors des limites de la fenêtre (0 à WIDTH pour x, 0 à HEIGHT pour y). Si cela se produit, vous pouvez par exemple le faire réapparaître de l'autre côté.
+
+Par exemple, pour la position horizontale :
+```python
+if player.x > WIDTH: # Si l'acteur dépasse la largeur de la fenêtre
+    player.x = 0 # Remet l'acteur à gauche
+elif player.x < 0: # Si l'acteur dépasse le côté gauche
+    player.x = WIDTH # Remet l'acteur à droite
+```
+
+Vous pouvez faire de même pour la position verticale (`player.y`).
+````
+
 
 ## 5. Animation des acteurs
-Pygame Zero permet également d'animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente, par exemple `alien_walk1.png`, `alien_walk2.png`, etc.
+Pygame Zero permet également d'animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente (ex: `alien_walk1.png`, `alien_walk2.png`, etc.) et les stocker dans l'attribut `images` de l'acteur.
 
 ```python
 
@@ -162,16 +222,16 @@ def update():
 
 ```
 
-### Exercice 9
-Modifiez la vitesse de l'animation en changeant le nombre passé à `player.animate()`.
+### Exercice 8
+Modifiez la vitesse de l'animation en changeant le nombre passé à `player.animate()` et observez l'effet.
 
-### Exercice 10
+### Exercice 9
 Changez les images d'animation de votre personnage. Piochez dans celles fournies dans le dossier `images` ou récupérez les votres sur Internet.  
 
-Vous pouvez vous rendre sur <a href="https://kenney.nl/assets" target="_blank">Kenny</a> pour télécharger un ensemble d'images d'animation gratuites. Ajoutez-les à votre projet (dans le dossier `images`) et utilisez-les pour animer votre acteur.
+La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> propose une grande quantité d'ensembles d'images gratuites et libres de droit que vous pouvez utiliser pour vos jeux.
 
 ## 6. Ajouter un ennemi rebondissant
-Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l'écran. Il s'agira donc d'un nouvel `acteur`.
+Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l'écran. Il s'agira donc d'un nouvel `acteur` que nous appelerons `enemy`.
 
 ```python
 ...
@@ -187,7 +247,7 @@ def draw():
 
 def update():
     ...
-    # Met à jour la position de l'ennemi
+    # Met à jour la position de l'ennemi 
     enemy.x += enemy.vx
 
     # Vérifie les collisions avec les bords de la fenêtre
@@ -195,8 +255,21 @@ def update():
         enemy.vx = -enemy.vx # Inverse la vitesse horizontale
 ```
 
-#### Exercice 11
+#### Exercice 10
 Complétez le code pour que l'ennemi se déplace diagonalement et rebondisse également sur les bords supérieur et inférieur de la fenêtre.
+
+````{dropdown} J'ai besoin d'aide !
+Votre ennemi va tout droit ! Il faut commencer par ajouter la mise à jour de la position verticale de l'ennemi dans la fonction `update()`.
+
+La ligne
+```python
+enemy.x += enemy.vx
+```
+permet de déplacer l'ennemi horizontalement. De la même manière, vous devez ajouter une ligne pour déplacer l'ennemi verticalement en utilisant `ennemy.y` et `ennemy.vy`.
+
+Ensuite, vous devez ajouter une condition pour vérifier si l'ennemi touche le bord supérieur ou inférieur de la fenêtre. Si `enemy.y` est inférieur à `0` (bord supérieur) ou supérieur à `HEIGHT` (bord inférieur), vous devez inverser la vitesse verticale `enemy.vy` pour faire rebondir l'ennemi.
+````
+
 
 ## 7. Des collisions entre acteurs
 Pour détecter les collisions entre deux acteurs, vous pouvez utiliser la méthode `collides_with(actor)` qui vérifie si un acteur entre en collision avec un autre.
@@ -210,12 +283,16 @@ def update():
     ...
     # Vérifie la collision entre le joueur et l'ennemi
     if player.collides_with(enemy):
-        print("Collision détectée ! Jeu terminé.")
+        print("Collision détectée ! Terminé !")
         exit() # Termine le jeu
 ```
 
-### Exercice 12
+### Exercice 11
 Changez la difficulté du jeu en modifiant la vitesse de l'ennemi (ou celle du joueur).
+
+```{dropdown} J'ai besoin d'aide !
+La vitesse de l'ennemi est définie par les variables `enemy.vx` (vitesse horizontale) et `enemy.vy` (vitesse verticale).
+```
 
 ## 8. Musique et sons
 Pygame Zero permet également d'ajouter de la musique et des effets sonores à votre jeu. Pour cela, vous devez avoir des fichiers audio dans les dossiers `music` et `sounds` de votre projet.
@@ -228,13 +305,15 @@ music.play('adventure') # Joue la musique de fond (fichier 'adventure.mp3' dans 
 def update():
     ...
     if player.collides_with(enemy):
-        sounds.die.play() # Joue un son d'explosion (fichier 'die.wav' dans le dossier sounds)
-        print("Collision détectée ! Jeu terminé.")
+        sounds.die.play() # Joue un son de game over (fichier 'die.wav' dans le dossier sounds)
+        print("Collision détectée ! Terminé !")
         exit()
 ```
 
-### Exercice 13
-Changez la musique de fond et les effets sonores en utilisant vos propres fichiers audio (assurez-vous de les ajouter aux dossiers `music` et `sounds`). Vous trouverez des sons `wav` sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a> et des musiques `mp3` libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.
+### Exercice 12
+Changez la musique de fond et les effets sonores en piochant dans ceux disponibles dans les dossiers `music` et `sounds` ou trouvez vos propres bruitages sur Internet.
+
+Vous trouverez des sons `wav` sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a> et des musiques `mp3` libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.
 
 ## A rendre
 
@@ -246,13 +325,13 @@ Déposez sur Moodle le fichier `jeu.py` sur lequel vous avez travaillé, contena
 Il n'est pas nécessaire de déposer les ressources (images, sons, musiques).
 ```
 
-### Exercice 14 (optionnel)
+### Exercice 13 (optionnel)
 Ajoutez un second joueur contrôlé par d'autres touches du clavier (par exemple, WASD) et faites en sorte que le jeu se termine si l'un des deux joueurs entre en collision avec l'ennemi. Le but étant de survivre plus longtemps que l'autre joueur !
 
-### Exercie 15 (optionnel)
+### Exercie 14 (optionnel)
 Ajoutez plus d'ennemis pour augmenter la difficulté du jeu.
 
-### Exercice 16 (optionnel)
+### Exercice 15 (optionnel)
 Ajoutez un système de score qui augmente avec le temps passé sans collision. Affichez le score à l'écran. (Cela devient un jeu coopératif de survie !)
 
 ## Et quoi d'autre ?
