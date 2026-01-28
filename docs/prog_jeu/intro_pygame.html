@@ -429,7 +429,8 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <section id="ajouter-des-acteurs-avec-des-images">
 <h2>3. Ajouter des acteurs (avec des images)<a class="headerlink" href="#ajouter-des-acteurs-avec-des-images" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour ajouter des acteurs, nous allons utiliser la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> de Pygame Zero. Voyez <code class="docutils literal notranslate"><span class="pre">Actor</span></code> comme un nouveau type de variable qui représente un acteur dans votre jeu, avec des propriétés/attributs comme une position (x, y) et une image.</p>
-<p><strong>Vous pouvez retirer le carré rouge dessiné précédemment pour ne garder que l’acteur.</strong></p>
+<img alt="media/player.png" src="media/player.png"/>
+<p><strong>Vous pouvez retirer les carrés dessinés précédemment pour ne garder que l’acteur.</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span> <span class="c1"># Crée un acteur (nommé player) avec l'image 'alien.png'</span>
@@ -460,7 +461,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 </div>
 <section id="exercice-5">
 <h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Changez l’image de l’acteur en utilisant une autre image de votre choix (assurez-vous de l’ajouter au dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> si vous la téléchargez sur Internet).</p>
+<p>Changez l’image de l’acteur en utilisant une autre image de votre choix. Vous pouvez la piocher dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> ou la télécharger sur Internet. Assurez-vous de l’ajouter au dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> si vous la téléchargez sur Internet !</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 J’ai besoin d’aide !<div class="summary-down docutils">
@@ -472,7 +473,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'nom_de_votre_image'</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="card-text">Assurez-vous que le nom de l’image correspond au nom du fichier image (sans l’extension) que vous avez ajouté dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> de votre projet.</p>
+<p class="card-text">Assurez-vous que le nom de l’image corresponde au nom du fichier image (sans l’extension) que vous avez ajouté dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> de votre projet.</p>
 </div>
 </details></section>
 </section>
@@ -526,6 +527,8 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <section id="animation-des-acteurs">
 <h2>5. Animation des acteurs<a class="headerlink" href="#animation-des-acteurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pygame Zero permet également d’animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente (ex: <code class="docutils literal notranslate"><span class="pre">alien_walk1.png</span></code>, <code class="docutils literal notranslate"><span class="pre">alien_walk2.png</span></code>, etc.) et les stocker dans l’attribut <code class="docutils literal notranslate"><span class="pre">images</span></code> de l’acteur.</p>
+<img alt="../_images/zombie_walk1.png" src="../_images/zombie_walk1.png"/>
+<img alt="../_images/zombie_walk2.png" src="../_images/zombie_walk2.png"/>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="o">...</span>
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span> <span class="c1"># Crée un acteur avec l'image 'alien.png'</span>
@@ -550,6 +553,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <section id="ajouter-un-ennemi-rebondissant">
 <h2>6. Ajouter un ennemi rebondissant<a class="headerlink" href="#ajouter-un-ennemi-rebondissant" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l’écran. Il s’agira donc d’un nouvel <code class="docutils literal notranslate"><span class="pre">acteur</span></code> que nous appelerons <code class="docutils literal notranslate"><span class="pre">enemy</span></code>.</p>
+<img alt="../_images/bird0.png" src="../_images/bird0.png"/>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 <span class="n">enemy</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'bird0'</span><span class="p">)</span> <span class="c1"># Crée un acteur ennemi avec l'image 'bird0.png'</span>
 <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">400</span>

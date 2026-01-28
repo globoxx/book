@@ -122,7 +122,10 @@ Ensuite, dans la fonction `draw()`, dessinez ce deuxième rectangle en utilisant
 
 Pour ajouter des acteurs, nous allons utiliser la classe `Actor` de Pygame Zero. Voyez `Actor` comme un nouveau type de variable qui représente un acteur dans votre jeu, avec des propriétés/attributs comme une position (x, y) et une image.
 
-**Vous pouvez retirer le carré rouge dessiné précédemment pour ne garder que l'acteur.**
+```{image} ../media/player.png
+```
+
+**Vous pouvez retirer les carrés dessinés précédemment pour ne garder que l'acteur.**
 
 ```python
 ...
@@ -158,14 +161,14 @@ Si vous souhaitez en savoir plus (car cela ouvre en grand les portes de la progr
 ````
 
 ### Exercice 5
-Changez l'image de l'acteur en utilisant une autre image de votre choix (assurez-vous de l'ajouter au dossier `images` si vous la téléchargez sur Internet).
+Changez l'image de l'acteur en utilisant une autre image de votre choix. Vous pouvez la piocher dans le dossier `images` ou la télécharger sur Internet. Assurez-vous de l'ajouter au dossier `images` si vous la téléchargez sur Internet !
 
 ````{dropdown} J'ai besoin d'aide !
 Pour changer l'image de l'acteur, modifiez la ligne où l'acteur est créé :
 ```python
 player = Actor('nom_de_votre_image')
 ```
-Assurez-vous que le nom de l'image correspond au nom du fichier image (sans l'extension) que vous avez ajouté dans le dossier `images` de votre projet.
+Assurez-vous que le nom de l'image corresponde au nom du fichier image (sans l'extension) que vous avez ajouté dans le dossier `images` de votre projet.
 ````
 
 ## 4. Gestion du clavier
@@ -210,6 +213,12 @@ Vous pouvez faire de même pour la position verticale (`player.y`).
 ## 5. Animation des acteurs
 Pygame Zero permet également d'animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente (ex: `alien_walk1.png`, `alien_walk2.png`, etc.) et les stocker dans l'attribut `images` de l'acteur.
 
+```{image} ../media/zombie_walk1.png
+```
+
+```{image} ../media/zombie_walk2.png
+```
+
 ```python
 
 ...
@@ -232,6 +241,9 @@ La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> propo
 
 ## 6. Ajouter un ennemi rebondissant
 Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l'écran. Il s'agira donc d'un nouvel `acteur` que nous appelerons `enemy`.
+
+```{image} ../media/bird0.png
+```
 
 ```python
 ...
