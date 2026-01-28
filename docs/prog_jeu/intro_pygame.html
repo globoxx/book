@@ -307,7 +307,7 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="introduction-a-pygame">
 <span id="prog-jeu-intro-pygame"></span><h1>2. Introduction à Pygame<a class="headerlink" href="#introduction-a-pygame" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Cette activité consiste à prendre en main les notions de base de Pygame Zero en jouant avec ses fonctionalités.</p>
+<p>Cette activité consiste à prendre en main les notions de base de Pygame Zero en jouant avec ses fonctionnalités.</p>
 <p><a class="reference download internal" download="" href="../_downloads/ca6c3644fbe0762a19154ad8f4b0e352/intro_pygame.zip"><code class="xref download docutils literal notranslate"><span class="pre">Téléchargement</span> <span class="pre">des</span> <span class="pre">ressources</span> <span class="pre">nécessaires</span></code></a>.</p>
 <p>Pygame est une bibliothèque Python permettant de créer des jeux vidéo en 2D. Elle fournit des fonctionnalités pour gérer les fenêtres, les événements, les images, les sons, et bien plus encore.</p>
 <p>Vous trouverez ci-dessous le code minimal pour faire apparaître la fenêtre de votre jeu.</p>
@@ -546,8 +546,8 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 </section>
 <section id="exercice-9">
 <h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Changez les images d’animation de votre personnage. Piochez dans celles fournies dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> ou récupérez les votres sur Internet.</p>
-<p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> propose une grande quantité d’ensembles d’images gratuites et libres de droit que vous pouvez utiliser pour vos jeux.</p>
+<p>Changez les images d’animation de votre personnage. Piochez dans celles fournies dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> ou récupérez les vôtres sur Internet.</p>
+<p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> propose une grande quantité d’ensembles d’images gratuites et libres de droit que vous pouvez utiliser pour vos jeux.</p>
 </section>
 </section>
 <section id="ajouter-un-ennemi-rebondissant">
@@ -590,7 +590,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span>
 </pre></div>
 </div>
-<p class="card-text">permet de déplacer l’ennemi horizontalement. De la même manière, vous devez ajouter une ligne pour déplacer l’ennemi verticalement en utilisant <code class="docutils literal notranslate"><span class="pre">ennemy.y</span></code> et <code class="docutils literal notranslate"><span class="pre">ennemy.vy</span></code>.</p>
+<p class="card-text">permet de déplacer l’ennemi horizontalement. De la même manière, vous devez ajouter une ligne pour déplacer l’ennemi verticalement en utilisant <code class="docutils literal notranslate"><span class="pre">enemy.y</span></code> et <code class="docutils literal notranslate"><span class="pre">enemy.vy</span></code>.</p>
 <p class="card-text">Ensuite, vous devez ajouter une condition pour vérifier si l’ennemi touche le bord supérieur ou inférieur de la fenêtre. Si <code class="docutils literal notranslate"><span class="pre">enemy.y</span></code> est inférieur à <code class="docutils literal notranslate"><span class="pre">0</span></code> (bord supérieur) ou supérieur à <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> (bord inférieur), vous devez inverser la vitesse verticale <code class="docutils literal notranslate"><span class="pre">enemy.vy</span></code> pour faire rebondir l’ennemi.</p>
 </div>
 </details></section>
@@ -655,8 +655,8 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <h3>Exercice 13 (optionnel)<a class="headerlink" href="#exercice-13-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez un second joueur contrôlé par d’autres touches du clavier (par exemple, WASD) et faites en sorte que le jeu se termine si l’un des deux joueurs entre en collision avec l’ennemi. Le but étant de survivre plus longtemps que l’autre joueur !</p>
 </section>
-<section id="exercie-14-optionnel">
-<h3>Exercie 14 (optionnel)<a class="headerlink" href="#exercie-14-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-14-optionnel">
+<h3>Exercice 14 (optionnel)<a class="headerlink" href="#exercice-14-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez plus d’ennemis pour augmenter la difficulté du jeu.</p>
 </section>
 <section id="exercice-15-optionnel">
@@ -756,7 +756,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <h3>Gérer des listes d’acteurs<a class="headerlink" href="#gerer-des-listes-dacteurs" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Vous pouvez créer et gérer plusieurs acteurs en utilisant des listes Python. Cela est utile pour gérer des groupes d’ennemis, des projectiles, etc.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enemies</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Liste pour stocker les ennemis</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="c1"># In crée 5 ennemis</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="c1"># On crée 5 ennemis donc on boucle 5 fois</span>
     <span class="n">enemy</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'spider'</span><span class="p">)</span>
     <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
     <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)</span>
@@ -862,7 +862,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 </li>
 <li><a class="reference internal" href="#a-rendre">A rendre</a><ul>
 <li><a class="reference internal" href="#exercice-13-optionnel">Exercice 13 (optionnel)</a></li>
-<li><a class="reference internal" href="#exercie-14-optionnel">Exercie 14 (optionnel)</a></li>
+<li><a class="reference internal" href="#exercice-14-optionnel">Exercice 14 (optionnel)</a></li>
 <li><a class="reference internal" href="#exercice-15-optionnel">Exercice 15 (optionnel)</a></li>
 </ul>
 </li>

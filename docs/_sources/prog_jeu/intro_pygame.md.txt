@@ -2,7 +2,7 @@
 
 # 2. Introduction à Pygame
 
-Cette activité consiste à prendre en main les notions de base de Pygame Zero en jouant avec ses fonctionalités.
+Cette activité consiste à prendre en main les notions de base de Pygame Zero en jouant avec ses fonctionnalités.
 
 {download}`Téléchargement des ressources nécessaires<../data/prog_2d/intro_pygame.zip>`.
 
@@ -235,9 +235,9 @@ def update():
 Modifiez la vitesse de l'animation en changeant le nombre passé à `player.animate()` et observez l'effet.
 
 ### Exercice 9
-Changez les images d'animation de votre personnage. Piochez dans celles fournies dans le dossier `images` ou récupérez les votres sur Internet.  
+Changez les images d'animation de votre personnage. Piochez dans celles fournies dans le dossier `images` ou récupérez les vôtres sur Internet.  
 
-La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> propose une grande quantité d'ensembles d'images gratuites et libres de droit que vous pouvez utiliser pour vos jeux.
+La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> propose une grande quantité d'ensembles d'images gratuites et libres de droit que vous pouvez utiliser pour vos jeux.
 
 ## 6. Ajouter un ennemi rebondissant
 Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l'écran. Il s'agira donc d'un nouvel `acteur` que nous appelerons `enemy`.
@@ -277,7 +277,7 @@ La ligne
 ```python
 enemy.x += enemy.vx
 ```
-permet de déplacer l'ennemi horizontalement. De la même manière, vous devez ajouter une ligne pour déplacer l'ennemi verticalement en utilisant `ennemy.y` et `ennemy.vy`.
+permet de déplacer l'ennemi horizontalement. De la même manière, vous devez ajouter une ligne pour déplacer l'ennemi verticalement en utilisant `enemy.y` et `enemy.vy`.
 
 Ensuite, vous devez ajouter une condition pour vérifier si l'ennemi touche le bord supérieur ou inférieur de la fenêtre. Si `enemy.y` est inférieur à `0` (bord supérieur) ou supérieur à `HEIGHT` (bord inférieur), vous devez inverser la vitesse verticale `enemy.vy` pour faire rebondir l'ennemi.
 ````
@@ -329,7 +329,7 @@ Vous trouverez des sons `wav` sur <a href="https://mixkit.co/free-sound-effects/
 
 ## A rendre
 
-```{Admonition} À rendre sur Moodle
+```{admonition} À rendre sur Moodle
 :class: tip
 
 Déposez sur Moodle le fichier `jeu.py` sur lequel vous avez travaillé, contenant toutes les fonctionnalités que vous avez implémentées.
@@ -340,7 +340,7 @@ Il n'est pas nécessaire de déposer les ressources (images, sons, musiques).
 ### Exercice 13 (optionnel)
 Ajoutez un second joueur contrôlé par d'autres touches du clavier (par exemple, WASD) et faites en sorte que le jeu se termine si l'un des deux joueurs entre en collision avec l'ennemi. Le but étant de survivre plus longtemps que l'autre joueur !
 
-### Exercie 14 (optionnel)
+### Exercice 14 (optionnel)
 Ajoutez plus d'ennemis pour augmenter la difficulté du jeu.
 
 ### Exercice 15 (optionnel)
@@ -444,7 +444,7 @@ Vous pouvez créer et gérer plusieurs acteurs en utilisant des listes Python. C
 
 ```python
 enemies = [] # Liste pour stocker les ennemis
-for i in range(5): # In crée 5 ennemis
+for i in range(5): # On crée 5 ennemis donc on boucle 5 fois
     enemy = Actor('spider')
     enemy.x = random.randint(0, WIDTH)
     enemy.y = random.randint(0, HEIGHT)
