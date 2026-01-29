@@ -15,7 +15,7 @@ import pgzero
 import pgzrun
 from pgzhelper import *
 
-TITLE = 'Premier test !' # Titre de votre jeu
+TITLE = 'Mon premier jeu !' # Titre de votre jeu
 
 WIDTH = 800 # Largeur de la fenêtre
 HEIGHT = 600 # Hauteur de la fenêtre
