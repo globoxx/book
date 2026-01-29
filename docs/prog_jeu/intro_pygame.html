@@ -324,30 +324,28 @@
 </pre></div>
 </div>
 <img alt="../_images/pygame_fenetre.png" src="../_images/pygame_fenetre.png"/>
-<section id="fond-et-formes">
-<h2>1. Fond et formes<a class="headerlink" href="#fond-et-formes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajoutons un fond bleu et quelques formes géométriques à l’écran.</p>
+<section id="ajouter-une-image-de-fond">
+<h2>1. Ajouter une image de fond<a class="headerlink" href="#ajouter-une-image-de-fond" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ajoutons un image de fond bleu à notre jeu !</p>
 <div class="warning admonition">
 <p class="admonition-title">Important</p>
 <p>Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu pour <strong>mettre à jour l’affichage du jeu</strong>.</p>
+<p>Vous n’aurez toujours qu’une seule fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code> dans votre code !</p>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># Efface l'écran avant de dessiner</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s2">"blue"</span><span class="p">)</span> <span class="c1"># Remplit le fond en bleu</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">circle</span><span class="p">((</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">"white"</span><span class="p">)</span> <span class="c1"># Cercle blanc de centre (250, 250) et de rayon 50</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_circle</span><span class="p">((</span><span class="mi">250</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">)</span> <span class="c1"># Cercle rouge rempli de centre (250, 100) et de rayon 50</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">((</span><span class="mi">400</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">100</span><span class="p">)),</span> <span class="s2">"green"</span><span class="p">)</span> <span class="c1"># Rectangle vert avec le coin supérieur gauche en (400, 200) et de taille (150, 100)</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">((</span><span class="mi">150</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">450</span><span class="p">),</span> <span class="s2">"purple"</span><span class="p">)</span> <span class="c1"># Ligne verticale violette de (150, 20) à (150, 450)</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">"Bonjour Pygame Zero!"</span><span class="p">,</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"yellow"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span> <span class="c1"># Texte jaune à la position (400, 50)</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s2">"skyblue"</span><span class="p">)</span> <span class="c1"># Remplit le fond en bleu</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">"Mon premier jeu !"</span><span class="p">,</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"yellow"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span> <span class="c1"># Texte jaune à la position (400, 50)</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
 <section id="exercice-1">
 <h3>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Changez le fond en mettant une image de votre choix. Vous en trouverez dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> ou trouvez-en une sur Internet et déposez-la dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>. Changez la ligne <code class="docutils literal notranslate"><span class="pre">screen.fill(...)</span></code> par</p>
+<p>Changez le fond en mettant une image de votre choix. Vous en trouverez dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> ou trouvez-en une sur Internet et déposez-la dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>.</p>
+<p>Changez la ligne <code class="docutils literal notranslate"><span class="pre">screen.fill(...)</span></code> par</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'nom_de_votre_image'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -355,96 +353,19 @@
 <p>Attention, l’image devrait idéalement être de la même taille que la fenêtre (800x600 pixels) pour qu’elle s’affiche correctement.</p>
 </section>
 </section>
-<section id="faire-bouger-les-formes">
-<h2>2. Faire bouger les formes<a class="headerlink" href="#faire-bouger-les-formes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous allons faire bouger des objets.</p>
-<div class="warning admonition">
-<p class="admonition-title">Important</p>
-<p>Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour <strong>mettre à jour l’état du jeu</strong>, comme la position des objets.</p>
-</div>
-<p>Nous allons faire bouger un carré rouge horizontalement.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
-
-<span class="n">box</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span> <span class="c1"># Crée un rectangle de position (20, 20) et de taille (50, 50)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-    <span class="c1"># Vous pouvez garder le fond d'écran si vous le souhaitez mais retirez les autres formes</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">)</span> <span class="c1"># Dessine le rectangle et le remplit en rouge</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
-    <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span> <span class="c1"># Déplace le rectangle de 2 pixels vers la droite</span>
-    <span class="k">if</span> <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span> <span class="c1"># Si le rectangle dépasse la largeur de la fenêtre</span>
-        <span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Remet le rectangle à gauche</span>
-</pre></div>
-</div>
-<section id="exercice-2">
-<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Faites bouger le carré plus rapidement.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-J’ai besoin d’aide !<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Tout objet en Pygame Zero a une position définie par des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> (horizontale) et <code class="docutils literal notranslate"><span class="pre">y</span></code> (verticale). <code class="docutils literal notranslate"><span class="pre">box</span></code> est un rectangle, et <code class="docutils literal notranslate"><span class="pre">box.x</span></code> représente sa position horizontale. En augmentant <code class="docutils literal notranslate"><span class="pre">box.x</span></code>, on déplace le rectangle vers la droite.</p>
-<p class="card-text">La ligne</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
-</pre></div>
-</div>
-<p class="card-text">ajoute <code class="docutils literal notranslate"><span class="pre">2</span></code> à la position <code class="docutils literal notranslate"><span class="pre">x</span></code> du rectangle à chaque frame, ce qui le fait bouger vers la droite.
-Vous pouvez augmenter la valeur <code class="docutils literal notranslate"><span class="pre">2</span></code> pour le faire bouger plus rapidement, par exemple en la changeant en <code class="docutils literal notranslate"><span class="pre">5</span></code> ou <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
-</div>
-</details></section>
-<section id="exercice-3">
-<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Faites bouger le carré en diagonale.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-J’ai besoin d’aide !<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Pour faire bouger le carré en diagonale, vous devez modifier à la fois sa position horizontale (<code class="docutils literal notranslate"><span class="pre">box.x</span></code>) et sa position verticale (<code class="docutils literal notranslate"><span class="pre">box.y</span></code>).</p>
-<p class="card-text">Ajoutez une ligne dans la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> pour augmenter <code class="docutils literal notranslate"><span class="pre">box.y</span></code> de la même manière que vous avez augmenté <code class="docutils literal notranslate"><span class="pre">box.x</span></code>.</p>
-</div>
-</details></section>
-<section id="exercice-4">
-<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Ajoutez un deuxième rectangle d’une autre couleur qui se déplace également (de la manière que vous voulez).</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-J’ai besoin d’aide !<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Vous pouvez créer un deuxième rectangle en utilisant une autre variable, par exemple <code class="docutils literal notranslate"><span class="pre">box2</span></code>. Définissez-le de la même manière que <code class="docutils literal notranslate"><span class="pre">box</span></code>, mais avec une position et une taille différentes.</p>
-<p class="card-text">Ensuite, dans la fonction <code class="docutils literal notranslate"><span class="pre">draw()</span></code>, dessinez ce deuxième rectangle en utilisant <code class="docutils literal notranslate"><span class="pre">screen.draw.filled_rect(box2,</span> <span class="pre">"couleur")</span></code>.</p>
-</div>
-</details></section>
-</section>
-<section id="ajouter-des-acteurs-avec-des-images">
-<h2>3. Ajouter des acteurs (avec des images)<a class="headerlink" href="#ajouter-des-acteurs-avec-des-images" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="ajouter-un-acteur">
+<h2>2. Ajouter un acteur<a class="headerlink" href="#ajouter-un-acteur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour ajouter des acteurs, nous allons utiliser la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> de Pygame Zero. Voyez <code class="docutils literal notranslate"><span class="pre">Actor</span></code> comme un nouveau type de variable qui représente un acteur dans votre jeu, avec des propriétés/attributs comme une position (x, y) et une image.</p>
 <img alt="../_images/player.png" src="../_images/player.png"/>
-<p><strong>Vous pouvez retirer les carrés dessinés précédemment pour ne garder que l’acteur.</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span> <span class="c1"># Crée un acteur (nommé player) avec l'image 'alien.png'</span>
-<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Positionne l'acteur à x = 0</span>
-<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># Positionne l'acteur à y = 50</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">400</span> <span class="c1"># Positionne l'acteur à x = 400</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">300</span> <span class="c1"># Positionne l'acteur à y = 300</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine l'acteur à sa position actuelle</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span> <span class="c1"># Déplace l'acteur de 2 pixels vers la droite</span>
-    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span> <span class="c1"># Si l'acteur dépasse la largeur de la fenêtre</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Remet l'acteur à gauche</span>
 </pre></div>
 </div>
 <div class="tip admonition">
@@ -452,15 +373,12 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <p>Il est important de noter que l’on peut ajouter toute sorte d’attributs à un acteur, comme par exemple une vitesse, une direction, une vie, etc. Ce sont des variables attachées à l’acteur qui permettent de stocker des informations supplémentaires le concernant.</p>
 <p>Par exemple, on pourrait ajouter une vitesse à notre acteur <code class="docutils literal notranslate"><span class="pre">player</span></code> comme ceci :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span><span class="o">.</span><span class="n">vitesse</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Ajoute un attribut vitesse à l'acteur</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">vitesse</span> <span class="c1"># Utilise l'attribut vitesse pour déplacer l'acteur</span>
 </pre></div>
 </div>
 <p>Si vous souhaitez en savoir plus (car cela ouvre en grand les portes de la programmation plus complexe), vous pouvez consulter <a href="https://courspython.com/classes-et-objets.html" target="_blank">cette ressource</a> sur la programmation orientée objet (POO).</p>
 </div>
-<section id="exercice-5">
-<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-2">
+<h3>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Changez l’image de l’acteur en utilisant une autre image de votre choix. Vous pouvez la piocher dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> ou la télécharger sur Internet. Assurez-vous de l’ajouter au dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> si vous la téléchargez sur Internet !</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -477,9 +395,66 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 </div>
 </details></section>
 </section>
+<section id="faire-bouger-notre-acteur">
+<h2>3. Faire bouger notre acteur<a class="headerlink" href="#faire-bouger-notre-acteur" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons faire bouger notre acteur dans le jeu.</p>
+<div class="warning admonition">
+<p class="admonition-title">Important</p>
+<p>Pour cela, nous allons utiliser la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour <strong>mettre à jour l’état du jeu</strong>, comme la position des objets.</p>
+<p>Vous n’aurez toujours qu’une seule fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> dans votre code !</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span> <span class="c1"># Déplace le joueur de 2 pixels vers la droite</span>
+
+    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span> <span class="c1"># Si le joueur dépasse la largeur de la fenêtre</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Remet le joueur à gauche</span>
+    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">HEIGHT</span><span class="p">:</span> <span class="c1"># Si le joueur dépasse la hauteur de la fenêtre</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Remet le joueur en haut</span>
+</pre></div>
+</div>
+<section id="exercice-3">
+<h3>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Faites bouger le joueur plus rapidement.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Tout objet en Pygame Zero a une position définie par des coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> (horizontale) et <code class="docutils literal notranslate"><span class="pre">y</span></code> (verticale). <code class="docutils literal notranslate"><span class="pre">player</span></code> est un acteur, et <code class="docutils literal notranslate"><span class="pre">player.x</span></code> représente sa position horizontale. En augmentant <code class="docutils literal notranslate"><span class="pre">player.x</span></code>, on déplace le joueur vers la droite.</p>
+<p class="card-text">La ligne</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p class="card-text">ajoute <code class="docutils literal notranslate"><span class="pre">2</span></code> à la position <code class="docutils literal notranslate"><span class="pre">x</span></code> du joueur à chaque frame, ce qui le fait bouger vers la droite.
+Vous pouvez augmenter la valeur <code class="docutils literal notranslate"><span class="pre">2</span></code> pour le faire bouger plus rapidement, par exemple en la changeant en <code class="docutils literal notranslate"><span class="pre">5</span></code> ou <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
+</div>
+</details></section>
+<section id="exercice-4">
+<h3>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Faites bouger le joueur en diagonale.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+J’ai besoin d’aide !<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Pour faire bouger le joueur en diagonale, vous devez modifier à la fois sa position horizontale (<code class="docutils literal notranslate"><span class="pre">player.x</span></code>) et sa position verticale (<code class="docutils literal notranslate"><span class="pre">player.y</span></code>).</p>
+<p class="card-text">Ajoutez une ligne dans la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> pour augmenter <code class="docutils literal notranslate"><span class="pre">player.y</span></code> de la même manière que vous avez augmenté <code class="docutils literal notranslate"><span class="pre">player.x</span></code>.</p>
+</div>
+</details></section>
+</section>
 <section id="gestion-du-clavier">
 <h2>4. Gestion du clavier<a class="headerlink" href="#gestion-du-clavier" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps de faire bouger notre acteur nous-mêmes ! Nous allons utiliser la variable spéciale <code class="docutils literal notranslate"><span class="pre">keyboard</span></code> fournie par Pygame Zero pour détecter les touches pressées.</p>
+<div class="note admonition">
+<p class="admonition-title">Le personnage ne doit plus bouger tout seul !</p>
+<p>Assurez-vous de supprimer les lignes du type <code class="docutils literal notranslate"><span class="pre">player.x</span> <span class="pre">+=</span> <span class="pre">...</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> pour que le personnage ne bouge plus automatiquement.</p>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
@@ -489,8 +464,8 @@ J’ai besoin d’aide !<div class="summary-down docutils">
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="mi">5</span> <span class="c1"># Déplace l'acteur de 5 pixels vers la gauche</span>
 </pre></div>
 </div>
-<section id="exercice-6">
-<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-5">
+<h3>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Permettez à l’acteur de se déplacer également vers le haut et vers le bas avec les flèches haut et bas.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -502,8 +477,8 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <p class="card-text">Ajoutez des conditions supplémentaires dans la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code> pour vérifier si les touches flèche haut (<code class="docutils literal notranslate"><span class="pre">up</span></code>) et flèche bas (<code class="docutils literal notranslate"><span class="pre">down</span></code>) sont pressées, et modifiez la position verticale (<code class="docutils literal notranslate"><span class="pre">player.y</span></code>) de l’acteur en conséquence.</p>
 </div>
 </details></section>
-<section id="exercice-7">
-<h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-6">
+<h3>Exercice 6<a class="headerlink" href="#exercice-6" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Empêchez l’acteur de sortir de l’écran (ou faites-le réapparaître de l’autre côté).</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -824,23 +799,22 @@ J’ai besoin d’aide !<div class="summary-down docutils">
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">2. Introduction à Pygame</a><ul>
-<li><a class="reference internal" href="#fond-et-formes">1. Fond et formes</a><ul>
+<li><a class="reference internal" href="#ajouter-une-image-de-fond">1. Ajouter une image de fond</a><ul>
 <li><a class="reference internal" href="#exercice-1">Exercice 1</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#faire-bouger-les-formes">2. Faire bouger les formes</a><ul>
+<li><a class="reference internal" href="#ajouter-un-acteur">2. Ajouter un acteur</a><ul>
 <li><a class="reference internal" href="#exercice-2">Exercice 2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#faire-bouger-notre-acteur">3. Faire bouger notre acteur</a><ul>
 <li><a class="reference internal" href="#exercice-3">Exercice 3</a></li>
 <li><a class="reference internal" href="#exercice-4">Exercice 4</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#ajouter-des-acteurs-avec-des-images">3. Ajouter des acteurs (avec des images)</a><ul>
-<li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#gestion-du-clavier">4. Gestion du clavier</a><ul>
+<li><a class="reference internal" href="#exercice-5">Exercice 5</a></li>
 <li><a class="reference internal" href="#exercice-6">Exercice 6</a></li>
-<li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#animation-des-acteurs">5. Animation des acteurs</a><ul>

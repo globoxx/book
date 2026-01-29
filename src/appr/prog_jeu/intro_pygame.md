@@ -26,12 +26,14 @@ pgzrun.go() # Lance le jeu
 ```{image} ../media/pygame_fenetre.png
 ```
 
-## 1. Fond et formes
-Ajoutons un fond bleu et quelques formes géométriques à l'écran. 
+## 1. Ajouter une image de fond
+Ajoutons un image de fond bleu à notre jeu !
 
 ```{admonition} Important
 :class: warning
 Pour cela, nous allons utiliser la fonction `draw()` qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu pour **mettre à jour l'affichage du jeu**.
+
+Vous n'aurez toujours qu'une seule fonction `draw()` dans votre code !
 ```
 
 ```python
@@ -39,19 +41,16 @@ Pour cela, nous allons utiliser la fonction `draw()` qui est appelée automatiqu
 
 def draw():
     screen.clear() # Efface l'écran avant de dessiner
-    screen.fill("blue") # Remplit le fond en bleu
-    screen.draw.circle((250, 250), 50, "white") # Cercle blanc de centre (250, 250) et de rayon 50
-    screen.draw.filled_circle((250, 100), 50, "red") # Cercle rouge rempli de centre (250, 100) et de rayon 50
-    screen.draw.rect(Rect((400, 200), (150, 100)), "green") # Rectangle vert avec le coin supérieur gauche en (400, 200) et de taille (150, 100)
-    screen.draw.line((150, 20), (150, 450), "purple") # Ligne verticale violette de (150, 20) à (150, 450)
-    screen.draw.text("Bonjour Pygame Zero!", (400, 50), color="yellow", fontsize=40) # Texte jaune à la position (400, 50)
+    screen.fill("skyblue") # Remplit le fond en bleu
+    screen.draw.text("Mon premier jeu !", (400, 50), color="yellow", fontsize=40) # Texte jaune à la position (400, 50)
 
 pgzrun.go()
 ```
 
 ### Exercice 1
-Changez le fond en mettant une image de votre choix. Vous en trouverez dans le dossier `images` ou trouvez-en une sur Internet et déposez-la dans le dossier `images`. Changez la ligne `screen.fill(...)` par 
+Changez le fond en mettant une image de votre choix. Vous en trouverez dans le dossier `images` ou trouvez-en une sur Internet et déposez-la dans le dossier `images`. 
 
+Changez la ligne `screen.fill(...)` par 
 ```python
 screen.blit('nom_de_votre_image', (0, 0))
 ```
@@ -60,88 +59,23 @@ Le `(0, 0)` indique que l'image doit être dessinée à partir du coin supérieu
 
 Attention, l'image devrait idéalement être de la même taille que la fenêtre (800x600 pixels) pour qu'elle s'affiche correctement.
 
-## 2. Faire bouger les formes
-Nous allons faire bouger des objets. 
-
-```{admonition} Important
-:class: warning
-Pour cela, nous allons utiliser la fonction `update()` qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour **mettre à jour l'état du jeu**, comme la position des objets.
-```
-
-Nous allons faire bouger un carré rouge horizontalement.
-
-```python
-...
-
-box = Rect((20, 20), (50, 50)) # Crée un rectangle de position (20, 20) et de taille (50, 50)
-
-def draw():
-    screen.clear()
-    # Vous pouvez garder le fond d'écran si vous le souhaitez mais retirez les autres formes
-    screen.draw.filled_rect(box, "red") # Dessine le rectangle et le remplit en rouge
-
-def update():
-    box.x += 2 # Déplace le rectangle de 2 pixels vers la droite
-    if box.x > WIDTH: # Si le rectangle dépasse la largeur de la fenêtre
-        box.x = 0 # Remet le rectangle à gauche
-```
-
-### Exercice 2
-Faites bouger le carré plus rapidement.
-
-````{dropdown} J'ai besoin d'aide !
-Tout objet en Pygame Zero a une position définie par des coordonnées `x` (horizontale) et `y` (verticale). `box` est un rectangle, et `box.x` représente sa position horizontale. En augmentant `box.x`, on déplace le rectangle vers la droite.
-
-La ligne 
-```python
-box.x += 2
-```
-ajoute `2` à la position `x` du rectangle à chaque frame, ce qui le fait bouger vers la droite.
-Vous pouvez augmenter la valeur `2` pour le faire bouger plus rapidement, par exemple en la changeant en `5` ou `10`.
-````
-
-### Exercice 3
-Faites bouger le carré en diagonale.
-
-```{dropdown} J'ai besoin d'aide !
-Pour faire bouger le carré en diagonale, vous devez modifier à la fois sa position horizontale (`box.x`) et sa position verticale (`box.y`).
-
-Ajoutez une ligne dans la fonction `update()` pour augmenter `box.y` de la même manière que vous avez augmenté `box.x`.
-```
-
-### Exercice 4
-Ajoutez un deuxième rectangle d'une autre couleur qui se déplace également (de la manière que vous voulez).
-
-```{dropdown} J'ai besoin d'aide !
-Vous pouvez créer un deuxième rectangle en utilisant une autre variable, par exemple `box2`. Définissez-le de la même manière que `box`, mais avec une position et une taille différentes.
-
-Ensuite, dans la fonction `draw()`, dessinez ce deuxième rectangle en utilisant `screen.draw.filled_rect(box2, "couleur")`.
-```
-
-## 3. Ajouter des acteurs (avec des images)
+## 2. Ajouter un acteur
 
 Pour ajouter des acteurs, nous allons utiliser la classe `Actor` de Pygame Zero. Voyez `Actor` comme un nouveau type de variable qui représente un acteur dans votre jeu, avec des propriétés/attributs comme une position (x, y) et une image.
 
 ```{image} ../media/player.png
 ```
 
-**Vous pouvez retirer les carrés dessinés précédemment pour ne garder que l'acteur.**
-
 ```python
 ...
 
 player = Actor('alien') # Crée un acteur (nommé player) avec l'image 'alien.png'
-player.x = 0 # Positionne l'acteur à x = 0
-player.y = 50 # Positionne l'acteur à y = 50
+player.x = 400 # Positionne l'acteur à x = 400
+player.y = 300 # Positionne l'acteur à y = 300
 
 def draw():
     screen.clear()
     player.draw() # Dessine l'acteur à sa position actuelle
-
-def update():
-    player.x += 2 # Déplace l'acteur de 2 pixels vers la droite
-    if player.x > WIDTH: # Si l'acteur dépasse la largeur de la fenêtre
-        player.x = 0 # Remet l'acteur à gauche
 ```
 
 ````{admonition} Remarque sur les acteurs
@@ -152,15 +86,12 @@ Par exemple, on pourrait ajouter une vitesse à notre acteur `player` comme ceci
 
 ```python
 player.vitesse = 2 # Ajoute un attribut vitesse à l'acteur
-
-def update():
-    player.x += player.vitesse # Utilise l'attribut vitesse pour déplacer l'acteur
 ```
 
 Si vous souhaitez en savoir plus (car cela ouvre en grand les portes de la programmation plus complexe), vous pouvez consulter <a href="https://courspython.com/classes-et-objets.html" target="_blank">cette ressource</a> sur la programmation orientée objet (POO).
 ````
 
-### Exercice 5
+### Exercice 2
 Changez l'image de l'acteur en utilisant une autre image de votre choix. Vous pouvez la piocher dans le dossier `images` ou la télécharger sur Internet. Assurez-vous de l'ajouter au dossier `images` si vous la téléchargez sur Internet !
 
 ````{dropdown} J'ai besoin d'aide !
@@ -171,9 +102,59 @@ player = Actor('nom_de_votre_image')
 Assurez-vous que le nom de l'image corresponde au nom du fichier image (sans l'extension) que vous avez ajouté dans le dossier `images` de votre projet.
 ````
 
+## 3. Faire bouger notre acteur
+Nous allons faire bouger notre acteur dans le jeu. 
+
+```{admonition} Important
+:class: warning
+Pour cela, nous allons utiliser la fonction `update()` qui est appelée automatiquement par Pygame Zero à chaque frame (tour) du jeu. Cette fonction est utilisée pour **mettre à jour l'état du jeu**, comme la position des objets.
+
+Vous n'aurez toujours qu'une seule fonction `update()` dans votre code !
+```
+
+```python
+...
+
+def update():
+    player.x += 2 # Déplace le joueur de 2 pixels vers la droite
+
+    if player.x > WIDTH: # Si le joueur dépasse la largeur de la fenêtre
+        player.x = 0 # Remet le joueur à gauche
+    if player.y > HEIGHT: # Si le joueur dépasse la hauteur de la fenêtre
+        player.y = 0 # Remet le joueur en haut
+```
+
+### Exercice 3
+Faites bouger le joueur plus rapidement.
+
+````{dropdown} J'ai besoin d'aide !
+Tout objet en Pygame Zero a une position définie par des coordonnées `x` (horizontale) et `y` (verticale). `player` est un acteur, et `player.x` représente sa position horizontale. En augmentant `player.x`, on déplace le joueur vers la droite.
+
+La ligne 
+```python
+player.x += 2
+```
+ajoute `2` à la position `x` du joueur à chaque frame, ce qui le fait bouger vers la droite.
+Vous pouvez augmenter la valeur `2` pour le faire bouger plus rapidement, par exemple en la changeant en `5` ou `10`.
+````
+
+### Exercice 4
+Faites bouger le joueur en diagonale.
+
+```{dropdown} J'ai besoin d'aide !
+Pour faire bouger le joueur en diagonale, vous devez modifier à la fois sa position horizontale (`player.x`) et sa position verticale (`player.y`).
+
+Ajoutez une ligne dans la fonction `update()` pour augmenter `player.y` de la même manière que vous avez augmenté `player.x`.
+```
+
 ## 4. Gestion du clavier
 
 Il est temps de faire bouger notre acteur nous-mêmes ! Nous allons utiliser la variable spéciale `keyboard` fournie par Pygame Zero pour détecter les touches pressées.
+
+```{admonition} Le personnage ne doit plus bouger tout seul !
+:class: note
+Assurez-vous de supprimer les lignes du type `player.x += ...` dans la fonction `update()` pour que le personnage ne bouge plus automatiquement.
+```
 
 ```python
 ...
@@ -185,14 +166,14 @@ def update():
         player.x -= 5 # Déplace l'acteur de 5 pixels vers la gauche
 ```
 
-### Exercice 6
+### Exercice 5
 Permettez à l'acteur de se déplacer également vers le haut et vers le bas avec les flèches haut et bas.
 
 ```{dropdown} J'ai besoin d'aide !
 Ajoutez des conditions supplémentaires dans la fonction `update()` pour vérifier si les touches flèche haut (`up`) et flèche bas (`down`) sont pressées, et modifiez la position verticale (`player.y`) de l'acteur en conséquence.
 ```
 
-### Exercice 7
+### Exercice 6
 Empêchez l'acteur de sortir de l'écran (ou faites-le réapparaître de l'autre côté).
 
 ````{dropdown} J'ai besoin d'aide !
