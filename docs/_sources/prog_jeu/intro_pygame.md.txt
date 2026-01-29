@@ -197,11 +197,20 @@ Pygame Zero permet également d'animer les acteurs en utilisant des images diff�
 ```{image} ../media/zombie_animated.gif
 ```
 
+```{admonition} Je dois modifier l'image de mon joueur ?
+:class: note
+Si vous avez modifié l'image de votre joueur lors de l'exercice 2, cette partie va la remplacer par l'image `alien.png` et ses images d'animation associées.
+
+Vous pourrez par la suite remodifier l'image de votre joueur si vous le souhaitez.
+```
+
 ```python
 
 ...
 player = Actor('alien') # Crée un acteur avec l'image 'alien.png'
 player.images = ['alien_walk1', 'alien_walk2'] # Liste des images pour l'animation
+player.x = 400
+player.y = 300
 
 def update():
     ...
@@ -262,7 +271,7 @@ enemy.x += enemy.vx
 ```
 permet de déplacer l'ennemi horizontalement. De la même manière, vous devez ajouter une ligne pour déplacer l'ennemi verticalement en utilisant `enemy.y` et `enemy.vy`.
 
-Ensuite, vous devez ajouter une condition pour vérifier si l'ennemi touche le bord supérieur ou inférieur de la fenêtre. Si `enemy.y` est inférieur à `0` (bord supérieur) ou supérieur à `HEIGHT` (bord inférieur), vous devez inverser la vitesse verticale `enemy.vy` pour faire rebondir l'ennemi.
+Ensuite, vous devez ajouter une condition pour vérifier si l'ennemi touche le bord supérieur ou inférieur de la fenêtre. Si `enemy.y` est inférieur à `0` (bord supérieur) ou supérieur à `HEIGHT` (bord inférieur), vous devez inverser la vitesse verticale `enemy.vy` pour le faire rebondir.
 ````
 
 

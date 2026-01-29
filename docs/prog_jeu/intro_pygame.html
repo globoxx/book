@@ -503,10 +503,17 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <h2>5. Animation des acteurs<a class="headerlink" href="#animation-des-acteurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pygame Zero permet également d’animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente (ex: <code class="docutils literal notranslate"><span class="pre">alien_walk1.png</span></code>, <code class="docutils literal notranslate"><span class="pre">alien_walk2.png</span></code>, etc.) et les stocker dans l’attribut <code class="docutils literal notranslate"><span class="pre">images</span></code> de l’acteur.</p>
 <img alt="../_images/zombie_animated.gif" src="../_images/zombie_animated.gif"/>
+<div class="note admonition">
+<p class="admonition-title">Je dois modifier l’image de mon joueur ?</p>
+<p>Si vous avez modifié l’image de votre joueur lors de l’exercice 2, cette partie va la remplacer par l’image <code class="docutils literal notranslate"><span class="pre">alien.png</span></code> et ses images d’animation associées.</p>
+<p>Vous pourrez par la suite remodifier l’image de votre joueur si vous le souhaitez.</p>
+</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="o">...</span>
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span> <span class="c1"># Crée un acteur avec l'image 'alien.png'</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'alien_walk1'</span><span class="p">,</span> <span class="s1">'alien_walk2'</span><span class="p">]</span> <span class="c1"># Liste des images pour l'animation</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">300</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
@@ -569,7 +576,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 </pre></div>
 </div>
 <p class="card-text">permet de déplacer l’ennemi horizontalement. De la même manière, vous devez ajouter une ligne pour déplacer l’ennemi verticalement en utilisant <code class="docutils literal notranslate"><span class="pre">enemy.y</span></code> et <code class="docutils literal notranslate"><span class="pre">enemy.vy</span></code>.</p>
-<p class="card-text">Ensuite, vous devez ajouter une condition pour vérifier si l’ennemi touche le bord supérieur ou inférieur de la fenêtre. Si <code class="docutils literal notranslate"><span class="pre">enemy.y</span></code> est inférieur à <code class="docutils literal notranslate"><span class="pre">0</span></code> (bord supérieur) ou supérieur à <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> (bord inférieur), vous devez inverser la vitesse verticale <code class="docutils literal notranslate"><span class="pre">enemy.vy</span></code> pour faire rebondir l’ennemi.</p>
+<p class="card-text">Ensuite, vous devez ajouter une condition pour vérifier si l’ennemi touche le bord supérieur ou inférieur de la fenêtre. Si <code class="docutils literal notranslate"><span class="pre">enemy.y</span></code> est inférieur à <code class="docutils literal notranslate"><span class="pre">0</span></code> (bord supérieur) ou supérieur à <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> (bord inférieur), vous devez inverser la vitesse verticale <code class="docutils literal notranslate"><span class="pre">enemy.vy</span></code> pour le faire rebondir.</p>
 </div>
 </details></section>
 </section>
