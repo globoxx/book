@@ -194,10 +194,7 @@ Vous pouvez faire de même pour la position verticale (`player.y`).
 ## 5. Animation des acteurs
 Pygame Zero permet également d'animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente (ex: `alien_walk1.png`, `alien_walk2.png`, etc.) et les stocker dans l'attribut `images` de l'acteur.
 
-```{image} ../media/zombie_walk1.png
-```
-
-```{image} ../media/zombie_walk2.png
+```{image} ../media/zombie_animated.gif
 ```
 
 ```python
@@ -208,20 +205,25 @@ player.images = ['alien_walk1', 'alien_walk2'] # Liste des images pour l'animati
 
 def update():
     ...
-    player.animate(5) # Change l'image de l'acteur 5 fois par seconde (5 fps)
+    player.animate(5) # Fait avancer l'animation de l'acteur à une vitesse de 5 images par seconde (5 fps)
 
 ```
 
-### Exercice 8
+### Exercice 7
 Modifiez la vitesse de l'animation en changeant le nombre passé à `player.animate()` et observez l'effet.
 
-### Exercice 9
+### Exercice facultatif
 Changez les images d'animation de votre personnage. Piochez dans celles fournies dans le dossier `images` ou récupérez les vôtres sur Internet.  
 
 La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> propose une grande quantité d'ensembles d'images gratuites et libres de droit que vous pouvez utiliser pour vos jeux.
 
 ## 6. Ajouter un ennemi rebondissant
 Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l'écran. Il s'agira donc d'un nouvel `acteur` que nous appelerons `enemy`.
+
+```{admonition} Où écrire ce code ?
+:class: note
+C'est généralement une bonne idée de créer tous vos acteurs au début de votre code, avant les fonctions `draw()` et `update()`. Vous pouvez donc ajouter le code de création de l'acteur `enemy` juste après la création de l'acteur `player`.
+```
 
 ```{image} ../media/bird0.png
 ```
@@ -243,12 +245,12 @@ def update():
     # Met à jour la position de l'ennemi 
     enemy.x += enemy.vx
 
-    # Vérifie les collisions avec les bords de la fenêtre
+    # Si l'ennemi touche les bords gauche ou droit de la fenêtre
     if enemy.x < 0 or enemy.x > WIDTH:
-        enemy.vx = -enemy.vx # Inverse la vitesse horizontale
+        enemy.vx = -enemy.vx # On inverse sa vitesse horizontale pour qu'il rebondisse
 ```
 
-#### Exercice 10
+#### Exercice 8
 Complétez le code pour que l'ennemi se déplace diagonalement et rebondisse également sur les bords supérieur et inférieur de la fenêtre.
 
 ````{dropdown} J'ai besoin d'aide !
@@ -280,7 +282,7 @@ def update():
         exit() # Termine le jeu
 ```
 
-### Exercice 11
+### Exercice 9
 Changez la difficulté du jeu en modifiant la vitesse de l'ennemi (ou celle du joueur).
 
 ```{dropdown} J'ai besoin d'aide !
@@ -303,7 +305,7 @@ def update():
         exit()
 ```
 
-### Exercice 12
+### Exercice 10
 Changez la musique de fond et les effets sonores en piochant dans ceux disponibles dans les dossiers `music` et `sounds` ou trouvez vos propres bruitages sur Internet.
 
 Vous trouverez des sons `wav` sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a> et des musiques `mp3` libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.
@@ -318,14 +320,16 @@ Déposez sur Moodle le fichier `jeu.py` sur lequel vous avez travaillé, contena
 Il n'est pas nécessaire de déposer les ressources (images, sons, musiques).
 ```
 
-### Exercice 13 (optionnel)
+### Exercice 11 (optionnel)
 Ajoutez un second joueur contrôlé par d'autres touches du clavier (par exemple, WASD) et faites en sorte que le jeu se termine si l'un des deux joueurs entre en collision avec l'ennemi. Le but étant de survivre plus longtemps que l'autre joueur !
 
-### Exercice 14 (optionnel)
+### Exercice 12 (optionnel)
 Ajoutez plus d'ennemis pour augmenter la difficulté du jeu.
 
-### Exercice 15 (optionnel)
+### Exercice 13 (optionnel)
 Ajoutez un système de score qui augmente avec le temps passé sans collision. Affichez le score à l'écran. (Cela devient un jeu coopératif de survie !)
+
+Vous trouvez des exemples de code pour mesure le temps et afficher du texte à l'écran dans la section suivante.
 
 ## Et quoi d'autre ?
 Pygame Zero offre de nombreuses autres fonctionnalités. N'hésitez pas à explorer la [documentation officielle de Pygame Zero](https://pygame-zero.readthedocs.io/en/stable/) pour en savoir plus et continuer à développer vos compétences en programmation de jeux vidéo !

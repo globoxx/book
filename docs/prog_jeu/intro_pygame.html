@@ -502,8 +502,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <section id="animation-des-acteurs">
 <h2>5. Animation des acteurs<a class="headerlink" href="#animation-des-acteurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pygame Zero permet également d’animer les acteurs en utilisant des images différentes pour représenter différentes poses ou états. Pour cela, vous devez avoir plusieurs images nommées de manière cohérente (ex: <code class="docutils literal notranslate"><span class="pre">alien_walk1.png</span></code>, <code class="docutils literal notranslate"><span class="pre">alien_walk2.png</span></code>, etc.) et les stocker dans l’attribut <code class="docutils literal notranslate"><span class="pre">images</span></code> de l’acteur.</p>
-<img alt="../_images/zombie_walk1.png" src="../_images/zombie_walk1.png"/>
-<img alt="../_images/zombie_walk2.png" src="../_images/zombie_walk2.png"/>
+<img alt="../_images/zombie_animated.gif" src="../_images/zombie_animated.gif"/>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="o">...</span>
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span> <span class="c1"># Crée un acteur avec l'image 'alien.png'</span>
@@ -511,16 +510,16 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Change l'image de l'acteur 5 fois par seconde (5 fps)</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Fait avancer l'animation de l'acteur à une vitesse de 5 images par seconde (5 fps)</span>
 
 </pre></div>
 </div>
-<section id="exercice-8">
-<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-7">
+<h3>Exercice 7<a class="headerlink" href="#exercice-7" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Modifiez la vitesse de l’animation en changeant le nombre passé à <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code> et observez l’effet.</p>
 </section>
-<section id="exercice-9">
-<h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-facultatif">
+<h3>Exercice facultatif<a class="headerlink" href="#exercice-facultatif" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Changez les images d’animation de votre personnage. Piochez dans celles fournies dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> ou récupérez les vôtres sur Internet.</p>
 <p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> propose une grande quantité d’ensembles d’images gratuites et libres de droit que vous pouvez utiliser pour vos jeux.</p>
 </section>
@@ -528,6 +527,10 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <section id="ajouter-un-ennemi-rebondissant">
 <h2>6. Ajouter un ennemi rebondissant<a class="headerlink" href="#ajouter-un-ennemi-rebondissant" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajoutons un ennemi qui se déplace diagonalement dans le jeu en rebondissant sur les bords de l’écran. Il s’agira donc d’un nouvel <code class="docutils literal notranslate"><span class="pre">acteur</span></code> que nous appelerons <code class="docutils literal notranslate"><span class="pre">enemy</span></code>.</p>
+<div class="note admonition">
+<p class="admonition-title">Où écrire ce code ?</p>
+<p>C’est généralement une bonne idée de créer tous vos acteurs au début de votre code, avant les fonctions <code class="docutils literal notranslate"><span class="pre">draw()</span></code> et <code class="docutils literal notranslate"><span class="pre">update()</span></code>. Vous pouvez donc ajouter le code de création de l’acteur <code class="docutils literal notranslate"><span class="pre">enemy</span></code> juste après la création de l’acteur <code class="docutils literal notranslate"><span class="pre">player</span></code>.</p>
+</div>
 <img alt="../_images/bird0.png" src="../_images/bird0.png"/>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 <span class="n">enemy</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'bird0'</span><span class="p">)</span> <span class="c1"># Crée un acteur ennemi avec l'image 'bird0.png'</span>
@@ -545,13 +548,13 @@ J’ai besoin d’aide !<div class="summary-down docutils">
     <span class="c1"># Met à jour la position de l'ennemi </span>
     <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span>
 
-    <span class="c1"># Vérifie les collisions avec les bords de la fenêtre</span>
+    <span class="c1"># Si l'ennemi touche les bords gauche ou droit de la fenêtre</span>
     <span class="k">if</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span>
-        <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="o">=</span> <span class="o">-</span><span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="c1"># Inverse la vitesse horizontale</span>
+        <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="o">=</span> <span class="o">-</span><span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="c1"># On inverse sa vitesse horizontale pour qu'il rebondisse</span>
 </pre></div>
 </div>
-<section id="exercice-10">
-<h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-8">
+<h3>Exercice 8<a class="headerlink" href="#exercice-8" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Complétez le code pour que l’ennemi se déplace diagonalement et rebondisse également sur les bords supérieur et inférieur de la fenêtre.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -584,8 +587,8 @@ J’ai besoin d’aide !<div class="summary-down docutils">
         <span class="n">exit</span><span class="p">()</span> <span class="c1"># Termine le jeu</span>
 </pre></div>
 </div>
-<section id="exercice-11">
-<h3>Exercice 11<a class="headerlink" href="#exercice-11" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-9">
+<h3>Exercice 9<a class="headerlink" href="#exercice-9" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Changez la difficulté du jeu en modifiant la vitesse de l’ennemi (ou celle du joueur).</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -613,8 +616,8 @@ J’ai besoin d’aide !<div class="summary-down docutils">
         <span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<section id="exercice-12">
-<h3>Exercice 12<a class="headerlink" href="#exercice-12" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-10">
+<h3>Exercice 10<a class="headerlink" href="#exercice-10" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Changez la musique de fond et les effets sonores en piochant dans ceux disponibles dans les dossiers <code class="docutils literal notranslate"><span class="pre">music</span></code> et <code class="docutils literal notranslate"><span class="pre">sounds</span></code> ou trouvez vos propres bruitages sur Internet.</p>
 <p>Vous trouverez des sons <code class="docutils literal notranslate"><span class="pre">wav</span></code> sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a> et des musiques <code class="docutils literal notranslate"><span class="pre">mp3</span></code> libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.</p>
 </section>
@@ -626,17 +629,18 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <p>Déposez sur Moodle le fichier <code class="docutils literal notranslate"><span class="pre">jeu.py</span></code> sur lequel vous avez travaillé, contenant toutes les fonctionnalités que vous avez implémentées.</p>
 <p>Il n’est pas nécessaire de déposer les ressources (images, sons, musiques).</p>
 </div>
-<section id="exercice-13-optionnel">
-<h3>Exercice 13 (optionnel)<a class="headerlink" href="#exercice-13-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-11-optionnel">
+<h3>Exercice 11 (optionnel)<a class="headerlink" href="#exercice-11-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez un second joueur contrôlé par d’autres touches du clavier (par exemple, WASD) et faites en sorte que le jeu se termine si l’un des deux joueurs entre en collision avec l’ennemi. Le but étant de survivre plus longtemps que l’autre joueur !</p>
 </section>
-<section id="exercice-14-optionnel">
-<h3>Exercice 14 (optionnel)<a class="headerlink" href="#exercice-14-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-12-optionnel">
+<h3>Exercice 12 (optionnel)<a class="headerlink" href="#exercice-12-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez plus d’ennemis pour augmenter la difficulté du jeu.</p>
 </section>
-<section id="exercice-15-optionnel">
-<h3>Exercice 15 (optionnel)<a class="headerlink" href="#exercice-15-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="exercice-13-optionnel">
+<h3>Exercice 13 (optionnel)<a class="headerlink" href="#exercice-13-optionnel" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ajoutez un système de score qui augmente avec le temps passé sans collision. Affichez le score à l’écran. (Cela devient un jeu coopératif de survie !)</p>
+<p>Vous trouvez des exemples de code pour mesure le temps et afficher du texte à l’écran dans la section suivante.</p>
 </section>
 </section>
 <section id="et-quoi-dautre">
@@ -818,26 +822,26 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 </ul>
 </li>
 <li><a class="reference internal" href="#animation-des-acteurs">5. Animation des acteurs</a><ul>
-<li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>
-<li><a class="reference internal" href="#exercice-9">Exercice 9</a></li>
+<li><a class="reference internal" href="#exercice-7">Exercice 7</a></li>
+<li><a class="reference internal" href="#exercice-facultatif">Exercice facultatif</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ajouter-un-ennemi-rebondissant">6. Ajouter un ennemi rebondissant</a><ul>
-<li><a class="reference internal" href="#exercice-10">Exercice 10</a></li>
+<li><a class="reference internal" href="#exercice-8">Exercice 8</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#des-collisions-entre-acteurs">7. Des collisions entre acteurs</a><ul>
-<li><a class="reference internal" href="#exercice-11">Exercice 11</a></li>
+<li><a class="reference internal" href="#exercice-9">Exercice 9</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#musique-et-sons">8. Musique et sons</a><ul>
-<li><a class="reference internal" href="#exercice-12">Exercice 12</a></li>
+<li><a class="reference internal" href="#exercice-10">Exercice 10</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#a-rendre">A rendre</a><ul>
+<li><a class="reference internal" href="#exercice-11-optionnel">Exercice 11 (optionnel)</a></li>
+<li><a class="reference internal" href="#exercice-12-optionnel">Exercice 12 (optionnel)</a></li>
 <li><a class="reference internal" href="#exercice-13-optionnel">Exercice 13 (optionnel)</a></li>
-<li><a class="reference internal" href="#exercice-14-optionnel">Exercice 14 (optionnel)</a></li>
-<li><a class="reference internal" href="#exercice-15-optionnel">Exercice 15 (optionnel)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#et-quoi-dautre">Et quoi d’autre ?</a><ul>
