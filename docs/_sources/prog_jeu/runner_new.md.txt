@@ -2,7 +2,7 @@
 
 # 3. Running Ninja (runner)
 
-Dans cette introduction, nous allons développer un premier jeu simple étape par étape. Le jeu consiste en un ninja devant sauter par dessus des obstacles. Le jeu est terminé si le ninja touche un obstacle.
+Dans cette introduction, nous allons développer un premier jeu simple étape par étape. Le jeu consiste en un ninja devant sauter par-dessus des obstacles. Le jeu est terminé si le ninja touche un obstacle.
 
 {download}`Téléchargement des ressources du jeu<../data/prog_2d/runner.zip>`.
 
@@ -31,7 +31,7 @@ pgzrun.go() # Lance le jeu
 
 Pygame Zero fonctionne avec 2 fonctions principales:
 - `draw` s'occupe **d'afficher des choses à l'écran du jeu**
-- `update` s'occupe de **faire évoluer la logique jeu**
+- `update` s'occupe de **faire évoluer la logique du jeu**
 
 Elles sont toutes deux exécutées en boucle automatiquement dès qu'on lance le jeu.
 
@@ -55,17 +55,28 @@ pgzrun.go()
 
 ## 2. S'occuper du fond d'écran
 
-Tous les dessins de notre jeu se feront via la fonction `draw` de Pygame. Il nous faut donc lui ajouter l'instruction permettant de colorier le fond et faire un carré d'herbe.
+Tous les dessins de notre jeu se feront via la fonction `draw` de Pygame Zero. Il nous faut donc lui ajouter l'instruction permettant de colorier le fond et faire un carré d'herbe.
 
-`screen` est un objet accessible grâce à Pygame qui représente la fenêtre de notre jeu.  
+`screen` est un objet accessible grâce à Pygame Zero qui représente la fenêtre de notre jeu.  
 Nous allons faire un ciel bleu ainsi que de l'herbe verte.
 
 ```python
 def draw():
     screen.fill((163, 232, 254)) # Colorie le fond en bleu ciel (valeurs RGB)
     screen.draw.filled_rect(Rect(0,400,800,200), (88, 242, 152)) # Dessine un rectangle vert
-    # Rect(x, y, largeur, hauteur)
+    # Rect(x, y, largeur, hauteur) définit un rectangle à la position (x,y) avec une certaine largeur et hauteur
+    # (88, 242, 152) sont les valeurs RGB de la couleur verte
 ```
+
+````{admonition} Utiliser un autre fond
+:class: tip
+A ce stade, sentez-vous libre d'utiliser une image de fond à la place du ciel bleu et de l'herbe verte. Pour cela, ajoutez une image dans le dossier `images` et utilisez la ligne suivante dans la fonction `draw`:
+```python
+screen.blit('nom_image', (0,0)) # Dessine l'image de fond à la position (0,0)
+```
+
+Attention, vous devrez peut-être ajuster certains éléments de la suite du tutoriel.
+````
 
 ````{dropdown} Voir le code complet à ce point
 ```python
@@ -94,16 +105,17 @@ Il est temps d'ajouter notre joueur. Il sera représenté par un `acteur`. Chaqu
 ```{image} ../media/run__003.png
 ```
 
-La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux.
+La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> contient énormément de sprites gratuits à utiliser pour vos jeux.
 
-Pour créer un `acteur`, nous allons utiliser la classe `Actor` fournie par Pygame. Voyez un `acteur` comme une super variable pouvant contenir ses propres variables (que l'on appelle `attributs`) et ses propres fonctions (que l'on appelle `méthodes`).
+Pour créer un `acteur`, nous allons utiliser la classe `Actor` fournie par Pygame Zero. Voyez un `acteur` comme une super variable pouvant contenir ses propres variables (que l'on appelle `attributs`) et ses propres fonctions (que l'on appelle `méthodes`).
 
 ```python
-player = Actor('run__000', (100, 400)) # Création du joueur
-# A sa création, on lui fournit le nom de son image et sa position (x, y)
+player = Actor('run__000') # Création du joueur
+player.x = 100 # Position en x du joueur
+player.y = 400 # Position en y du joueur
 ```
 
-Afin de dessiner notre joueur (qui est donc représenté par la variable `player`), il faut appeler la méthode `player.draw()` dans la fonction principale `draw` de Pygame.
+Afin de dessiner notre joueur (qui est donc représenté par la variable `player`), il faut appeler la méthode `player.draw()` dans la fonction principale `draw` de Pygame Zero.
 
 ```python
 def draw():
@@ -112,7 +124,12 @@ def draw():
     player.draw() # On dessine le joueur ici !
 ```
 
-`draw` est une méthode possèdée par tous les `acteurs`.
+`draw` est une méthode possédée par tous les `acteurs`.
+
+```{admonition} Changer l'apparence du joueur
+:class: tip
+Vous pouvez bien sûr changer l'apparence du joueur en utilisant une autre image. Attention, dans la section suivante nous allons animer le joueur en utilisant plusieurs images. Il est donc préférable d'utiliser une image de joueur avec plusieurs sprites/images d'animation.
+```
 
 ````{dropdown} Voir le code complet à ce point
 ```python
@@ -123,7 +140,9 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 
 def draw():
     screen.fill((163, 232, 254))
@@ -153,7 +172,9 @@ Notre joueur est statique pour le moment. Nous allons donc ajouter une animation
 Il nous faut commencer par définir la liste des images qui composent notre animation. Pour cela, nous ajoutons un attribut `images` à notre `player` qui contiendra toutes les images de notre animation.
 
 ```python
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 player.images = [f'run__00{i}' for i in range(10)] # Liste des images de l'animation (run__000 à run__009)
 # Raccourci pour ['run__000', 'run__001', ..., 'run__009']
 ```
@@ -174,7 +195,9 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 player.images = [f'run__00{i}' for i in range(10)]
 
 def draw():
@@ -197,7 +220,9 @@ Nous allons ajouter des obstacles qui vont défiler de droite à gauche. Pour ce
 ```
 
 ```python
-obstacle = Actor('cactus', (850, 430)) # Création d'un obstacle en dehors de l'écran à droite
+obstacle = Actor('cactus') # Création d'un obstacle
+obstacle.x = 850 # Position en x de l'obstacle (en dehors de l'écran à droite)
+obstacle.y = 430 # Position en y de l'obstacle
 ```
 
 Notre `obstacle` est créé en dehors de l'écran à droite (`x = 850`). Nous allons le faire défiler de droite à gauche en le déplaçant de `10` pixels à chaque tour du jeu.
@@ -215,7 +240,7 @@ def update():
         obstacle.x = 850 # Il réapparaît à droite
 ```
 
-A ce point, il ne reste plus qu'à appeler la méthode `obstacle.draw()` dans la fonction `draw` et le tour est joué !
+À ce point, il ne reste plus qu'à appeler la méthode `obstacle.draw()` dans la fonction `draw` et le tour est joué !
 
 ````{dropdown} Voir le code complet à ce point
 ```python
@@ -226,10 +251,14 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 player.images = [f'run__00{i}' for i in range(10)]
 
-obstacle = Actor('cactus', (850, 430))
+obstacle = Actor('cactus')
+obstacle.x = 850
+obstacle.y = 430
 
 def draw():
     screen.fill((163, 232, 254))
@@ -250,20 +279,22 @@ pgzrun.go()
 
 ## 6. Permettre au joueur de sauter
 
-Pour pouvoir sauter et retomber, notre personnage doit posséder une vitesse verticale. Nous allons donc ajouter un attribut `vy` à notre  `player` qui représente la vitesse verticale du joueur.
+Pour pouvoir sauter et retomber, notre personnage doit posséder une vitesse verticale. Nous allons donc ajouter un attribut `vy` à notre  `player` qui représente donc la vitesse verticale du joueur.
 
 ```python
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 player.images = [f'run__00{i}' for i in range(10)]
 player.vy = 0 # Vitesse verticale à 0 par défaut
 ```
 
-Sauter correspond à une action de notre joueur que nous allons coder dans la fonction `update`. Mais avant de s'occuper du saut, occupons nous d'appliquer la **gravité**. La gravité augmente la vitesse verticale `vy` du joueur. Ensuite, il faut appliquer cette vitesse verticale pour mettre à jour la position verticale `y` du joueur.
+Sauter correspond à une action de notre joueur que nous allons coder dans la fonction `update`. Mais avant de s'occuper du saut, occupons-nous d'appliquer la **gravité**. La gravité augmente la vitesse verticale `vy` du joueur. Ensuite, il faut appliquer cette vitesse verticale pour mettre à jour la position verticale `y` du joueur.
 
 ```python
 def update():
     ...
-    player.vy += 1 # Augmentation de la vitesse verticale (gravité)
+    player.vy += 1 # Augmentation de la vitesse verticale (gravité à 1 ici)
     player.y += player.vy # Mise à jour de la position verticale du joueur
     ...
 ```
@@ -281,7 +312,7 @@ def update():
     ...
 ```
 
-Bon et maintenant il faut pouvoir sauter ! Nous allons donc ajouter une condition pour détecter si la touche `space` (espace) est pressée. Si c'est le cas, nous allons donner une vitesse verticale (`vy`) négative au joueur pour le faire aller vers le haut. Pygame Zero nous offre un objet `keyboard` qui nous permet de détecter les touches pressées.
+Bon et maintenant il faut pouvoir sauter ! Nous allons donc ajouter une condition pour détecter si la touche `space` (espace) est pressée. Si c'est le cas, nous donnons une vitesse verticale (`vy`) négative au joueur pour le faire aller vers le haut. Pygame Zero nous offre un objet `keyboard` qui nous permet de détecter les touches pressées.
 
 ```python
 def update():
@@ -306,11 +337,15 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 player.images = [f'run__00{i}' for i in range(10)]
 player.vy = 0
 
-obstacle = Actor('cactus', (850, 430))
+obstacle = Actor('cactus')
+obstacle.x = 850
+obstacle.y = 430
 
 def draw():
     screen.fill((163, 232, 254))
@@ -347,7 +382,9 @@ Pour détecter une collision, nous allons utiliser la méthode `collides_with(ac
 Nous allons l'utiliser pour détecter une collision entre le `player` et l'`obstacle`. Nous devons aussi créer une variable `game_over` pour savoir si le jeu est terminé. Par souci de simplicité, nous pouvons définir `game_over` comme un attribut de notre `player`.
 
 ```python
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 player.images = [f'run__00{i}' for i in range(10)]
 player.vy = 0
 player.game_over = False # Ajout de l'attribut game_over
@@ -368,7 +405,7 @@ def update():
     ...
 ```
 
-Bien, nous avons maintenant un attribut `game_over` qui est `True` si le joueur touche un obstacle. Il ne reste plus qu'à ajouter une condition dans la fonction `update` du programme principal pour arrêter le jeu si `game_over` est `True`. Il suffit de faire les mises à jours des acteurs **uniquement si** `game_over` est `False`.
+Bien, nous avons maintenant un attribut `game_over` qui passe à `True` si le joueur touche un obstacle. Il ne reste plus qu'à ajouter une condition dans la fonction `update` du programme principal pour arrêter le jeu si `game_over` est `True`. Il suffit de faire les mises à jour des acteurs **uniquement si** `game_over` est `False`.
 
 ```python
 def update():
@@ -385,7 +422,8 @@ def draw():
     player.draw()
     obstacle.draw()
     if player.game_over: # Si le jeu est terminé
-        screen.draw.text('Game Over', centerx=400, centery=270, color=(255,255,255), fontsize=60)
+        # Affichage du message de game over
+        screen.draw.text('Game Over', center=(WIDTH // 2, HEIGHT // 2 - 30), color=(255,255,255), fontsize=60)
 ```
 
 ````{dropdown} Voir le code complet à ce point
@@ -397,12 +435,16 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 player.images = [f'run__00{i}' for i in range(10)]
 player.vy = 0
 player.game_over = False
 
-obstacle = Actor('cactus', (850, 430))
+obstacle = Actor('cactus')
+obstacle.x = 850
+obstacle.y = 430
 
 def draw():
     screen.fill((163, 232, 254))
@@ -410,7 +452,7 @@ def draw():
     player.draw()
     obstacle.draw()
     if player.game_over:
-        screen.draw.text('Game Over', centerx=400, centery=270, color=(255,255,255), fontsize=60)
+        screen.draw.text('Game Over', center=(WIDTH // 2, HEIGHT // 2 - 30), color=(255,255,255), fontsize=60)
 
 def update():
     if not player.game_over:
@@ -441,14 +483,16 @@ pgzrun.go()
 Le score est important dans les jeux ! Pour en tenir un, on peut définir un attribut `score` à notre `player` et l'initialiser à `0`.
 
 ```python
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 player.images = [f'run__00{i}' for i in range(10)]
 player.vy = 0
 player.game_over = False
 player.score = 0 # Initialisation du score à 0
 ```
 
-Avant de nous occuper de l'augmentation du `score`, voyons déjà comment l'afficher. Afficher du texte à l'écran se fait via l'objet `screen` offert par Pygame. Nous l'utilisons dans la fonction `draw` du programme principal, juste après avoir défini l'image de fond.
+Avant de nous occuper de l'augmentation du `score`, voyons déjà comment l'afficher. Afficher du texte à l'écran se fait via l'objet `screen` offert par Pygame Zero. Nous l'utilisons dans la fonction `draw` du programme principal, juste après avoir défini l'image de fond.
 
 ```python
 def draw():
@@ -478,13 +522,17 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 player.images = [f'run__00{i}' for i in range(10)]
 player.vy = 0
 player.game_over = False
 player.score = 0
 
-obstacle = Actor('cactus', (850, 430))
+obstacle = Actor('cactus')
+obstacle.x = 850
+obstacle.y = 430
 
 def draw():
     screen.fill((163, 232, 254))
@@ -493,7 +541,7 @@ def draw():
     player.draw()
     obstacle.draw()
     if player.game_over:
-        screen.draw.text('Game Over', centerx=400, centery=270, color=(255,255,255), fontsize=60)
+        screen.draw.text('Game Over', center=(WIDTH // 2, HEIGHT // 2 - 30), color=(255,255,255), fontsize=60)
 
 def update():
     if not player.game_over:
@@ -524,7 +572,7 @@ pgzrun.go()
 
 Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier `.wav` souhaité dans le dossier `sounds` (à créer si nécessaire). Vous trouverez des sons `wav` sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a>. Privilégiez les sons courts pour éviter des problèmes de performance.
 
-Pygame nous offre l'objet `sounds` qui nous permet de facilement lancer un bruitage. Dans notre cas, nous souhaitons lancer un son lorsque le joueur saute. Nous allons donc ajouter une ligne `sounds.jump.play()` quand on appuie sur la touche espace.
+Pygame Zero nous offre l'objet `sounds` qui nous permet de facilement lancer un bruitage. Dans notre cas, nous souhaitons lancer un son lorsque le joueur saute. Nous allons donc ajouter une ligne `sounds.jump.play()` quand on appuie sur la touche espace.
 
 ```python
 def update():
@@ -539,13 +587,15 @@ def update():
 
 ## 10. Ajouter une musique de fond
 
-Ajouter une musique de fond est tout aussi simple ! Il suffit d'ajouter un fichier `.mp3` dans le dossier `music` (à créer) et d'utiliser l'objet `music` offert par Pygame. Vous trouverez des musiques `mp3` libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.
+Ajouter une musique de fond est tout aussi simple ! Il suffit d'ajouter un fichier `.mp3` dans le dossier `music` (à créer) et d'utiliser l'objet `music` offert par Pygame Zero. Vous trouverez des musiques `mp3` libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.
 
 Pour lancer notre musique `ninja_music.mp3` au début du jeu, il reste qu'à appeler `music.play('ninja_music')` au début du programme principal.
 
 ```python
 music.play('ninja_music') # Ajout de la musique ici !
-player = Actor('run__000', (100, 400))
+player = Actor('run__000')
+player.x = 100
+player.y = 400
 ...
 ```
 
@@ -586,24 +636,24 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Créer un système de sauvegarde du score.
 * Autres idées..?
 
-## Travailler en dehors du TP
+## Travailler en dehors des TP
 
 `````{admonition} Comment travailler en dehors du TP
 :class: danger
 ````{dropdown} Depuis la maison
 1. Téléchargez et installez [Python](https://www.python.org/downloads/).
-2. Téléchargez et installez [Pycharm Community](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à prendre la version **Community** (en bas de la page) qui est gratuite.
-3. Ouvrez Pycharm et créez un nouveau projet.
-4. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).
-5. Installez le package `pgzero`. Pour cela, ajoutez la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
+2. Téléchargez et installez [Pycharm](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à sélectionner la version qui correspond à votre système d'exploitation (Windows, MacOS, Linux).
+3. Ouvrez Pycharm et créez un nouveau projet. (Bouton "New Project" sur l'écran d'accueil ou via le menu "File" -> "New Project").
+4. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PythonProject par défaut).
+5. Installez le package `pgzero`. Pour cela, assurez-vous d'avoir la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
 ```{image} ../media/pgzero.png
 ```
 Programmez !
 ````
 ````{dropdown} Depuis l'école
 1. Ouvrez Pycharm et créez un nouveau projet.
-2. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject). **Attention**, si vous prenez votre dossier de travail depuis votre disque réseau (pxxxxx), il faudra le copier sur le bureau avant de le déplacer dans Pycharm.
-3. Installez le package `pgzero`. Pour cela, ajoutez la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
+2. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet. **Attention**, si vous prenez votre dossier de travail depuis votre disque réseau (pxxxxx), il faudra le copier sur le bureau avant de le déplacer dans Pycharm.
+3. Installez le package `pgzero`. Pour cela, assurez-vous d'avoir la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
 ```{image} ../media/pgzero.png
 ```
 Programmez !

@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -307,15 +307,15 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="running-ninja-runner">
 <span id="prog-jeu-runner-new"></span><h1>3. Running Ninja (runner)<a class="headerlink" href="#running-ninja-runner" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Dans cette introduction, nous allons développer un premier jeu simple étape par étape. Le jeu consiste en un ninja devant sauter par dessus des obstacles. Le jeu est terminé si le ninja touche un obstacle.</p>
+<p>Dans cette introduction, nous allons développer un premier jeu simple étape par étape. Le jeu consiste en un ninja devant sauter par-dessus des obstacles. Le jeu est terminé si le ninja touche un obstacle.</p>
 <p><a class="reference download internal" download="" href="../_downloads/4ae7c1e6698ffbeedc1f649c63e46a06/runner.zip"><code class="xref download docutils literal notranslate"><span class="pre">Téléchargement</span> <span class="pre">des</span> <span class="pre">ressources</span> <span class="pre">du</span> <span class="pre">jeu</span></code></a>.</p>
 <img alt="../_images/runner.gif" src="../_images/runner.gif"/>
 <section id="faire-apparaitre-une-fenetre">
 <h2>1. Faire apparaître une fenêtre<a class="headerlink" href="#faire-apparaitre-une-fenetre" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La première étape est de définir le nom de notre jeu dans la variable <code class="docutils literal notranslate"><span class="pre">TITLE</span></code>, ainsi que la largeur <code class="docutils literal notranslate"><span class="pre">WIDTH</span></code> et la hauteur <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> de notre fenêtre. Nous allons également importer <code class="docutils literal notranslate"><span class="pre">pgzrun</span></code> et des fonctions de <code class="docutils literal notranslate"><span class="pre">pgzhelper</span></code> afin de nous faciliter la vie. Pygame Zero s’occupe du reste !</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
+<span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Runner'</span>
 
@@ -329,21 +329,21 @@
 <p>Pygame Zero fonctionne avec 2 fonctions principales:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">draw</span></code> s’occupe <strong>d’afficher des choses à l’écran du jeu</strong></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code> s’occupe de <strong>faire évoluer la logique jeu</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code> s’occupe de <strong>faire évoluer la logique du jeu</strong></p></li>
 </ul>
 <p>Elles sont toutes deux exécutées en boucle automatiquement dès qu’on lance le jeu.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Runner'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="k">pass</span> <span class="c1"># Ajouter ici tout ce qui concerne l'affichage</span>
     <span class="c1"># pass est une instruction qui ne fait rien, à remplacer par du code par la suite</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span> <span class="c1"># Ajouter ici tout ce qui concerne l'évolution du jeu</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
@@ -352,14 +352,23 @@
 </section>
 <section id="soccuper-du-fond-decran">
 <h2>2. S’occuper du fond d’écran<a class="headerlink" href="#soccuper-du-fond-decran" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Tous les dessins de notre jeu se feront via la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> de Pygame. Il nous faut donc lui ajouter l’instruction permettant de colorier le fond et faire un carré d’herbe.</p>
-<p><code class="docutils literal notranslate"><span class="pre">screen</span></code> est un objet accessible grâce à Pygame qui représente la fenêtre de notre jeu.<br/>
+<p>Tous les dessins de notre jeu se feront via la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> de Pygame Zero. Il nous faut donc lui ajouter l’instruction permettant de colorier le fond et faire un carré d’herbe.</p>
+<p><code class="docutils literal notranslate"><span class="pre">screen</span></code> est un objet accessible grâce à Pygame Zero qui représente la fenêtre de notre jeu.<br/>
 Nous allons faire un ciel bleu ainsi que de l’herbe verte.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span> <span class="c1"># Colorie le fond en bleu ciel (valeurs RGB)</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span> <span class="c1"># Dessine un rectangle vert</span>
-    <span class="c1"># Rect(x, y, largeur, hauteur)</span>
+    <span class="c1"># Rect(x, y, largeur, hauteur) définit un rectangle à la position (x,y) avec une certaine largeur et hauteur</span>
+    <span class="c1"># (88, 242, 152) sont les valeurs RGB de la couleur verte</span>
 </pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Utiliser un autre fond</p>
+<p>A ce stade, sentez-vous libre d’utiliser une image de fond à la place du ciel bleu et de l’herbe verte. Pour cela, ajoutez une image dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code> et utilisez la ligne suivante dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'nom_image'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># Dessine l'image de fond à la position (0,0)</span>
+</pre></div>
+</div>
+<p>Attention, vous devrez peut-être ajuster certains éléments de la suite du tutoriel.</p>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -368,18 +377,18 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Runner'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
@@ -391,20 +400,25 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <h2>3. Ajouter le joueur<a class="headerlink" href="#ajouter-le-joueur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps d’ajouter notre joueur. Il sera représenté par un <code class="docutils literal notranslate"><span class="pre">acteur</span></code>. Chaque <code class="docutils literal notranslate"><span class="pre">acteur</span></code> sera également représenté par une image (que nous appelerons un sprite) et une position (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>). Chaque sprite doit être sauvegardé dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>.</p>
 <img alt="../_images/run__003.png" src="../_images/run__003.png"/>
-<p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux.</p>
-<p>Pour créer un <code class="docutils literal notranslate"><span class="pre">acteur</span></code>, nous allons utiliser la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> fournie par Pygame. Voyez un <code class="docutils literal notranslate"><span class="pre">acteur</span></code> comme une super variable pouvant contenir ses propres variables (que l’on appelle <code class="docutils literal notranslate"><span class="pre">attributs</span></code>) et ses propres fonctions (que l’on appelle <code class="docutils literal notranslate"><span class="pre">méthodes</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span> <span class="c1"># Création du joueur</span>
-<span class="c1"># A sa création, on lui fournit le nom de son image et sa position (x, y)</span>
+<p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> contient énormément de sprites gratuits à utiliser pour vos jeux.</p>
+<p>Pour créer un <code class="docutils literal notranslate"><span class="pre">acteur</span></code>, nous allons utiliser la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> fournie par Pygame Zero. Voyez un <code class="docutils literal notranslate"><span class="pre">acteur</span></code> comme une super variable pouvant contenir ses propres variables (que l’on appelle <code class="docutils literal notranslate"><span class="pre">attributs</span></code>) et ses propres fonctions (que l’on appelle <code class="docutils literal notranslate"><span class="pre">méthodes</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span> <span class="c1"># Création du joueur</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># Position en x du joueur</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span> <span class="c1"># Position en y du joueur</span>
 </pre></div>
 </div>
-<p>Afin de dessiner notre joueur (qui est donc représenté par la variable <code class="docutils literal notranslate"><span class="pre">player</span></code>), il faut appeler la méthode <code class="docutils literal notranslate"><span class="pre">player.draw()</span></code> dans la fonction principale <code class="docutils literal notranslate"><span class="pre">draw</span></code> de Pygame.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<p>Afin de dessiner notre joueur (qui est donc représenté par la variable <code class="docutils literal notranslate"><span class="pre">player</span></code>), il faut appeler la méthode <code class="docutils literal notranslate"><span class="pre">player.draw()</span></code> dans la fonction principale <code class="docutils literal notranslate"><span class="pre">draw</span></code> de Pygame Zero.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine le joueur ici !</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">draw</span></code> est une méthode possèdée par tous les <code class="docutils literal notranslate"><span class="pre">acteurs</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">draw</span></code> est une méthode possédée par tous les <code class="docutils literal notranslate"><span class="pre">acteurs</span></code>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Changer l’apparence du joueur</p>
+<p>Vous pouvez bien sûr changer l’apparence du joueur en utilisant une autre image. Attention, dans la section suivante nous allons animer le joueur en utilisant plusieurs images. Il est donc préférable d’utiliser une image de joueur avec plusieurs sprites/images d’animation.</p>
+</div>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir le code complet à ce point<div class="summary-down docutils">
@@ -412,21 +426,23 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Runner'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
@@ -441,13 +457,15 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <img alt="../_images/run__003.png" src="../_images/run__003.png"/>
 <img alt="../_images/run__009.png" src="../_images/run__009.png"/>
 <p>Il nous faut commencer par définir la liste des images qui composent notre animation. Pour cela, nous ajoutons un attribut <code class="docutils literal notranslate"><span class="pre">images</span></code> à notre <code class="docutils literal notranslate"><span class="pre">player</span></code> qui contiendra toutes les images de notre animation.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span> <span class="c1"># Liste des images de l'animation (run__000 à run__009)</span>
 <span class="c1"># Raccourci pour ['run__000', 'run__001', ..., 'run__009']</span>
 </pre></div>
 </div>
 <p>Pour faire avancer l’animation à chaque tour, il nous faut encore appeler <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> principale. Par défaut, l’animation se fait à 5 fps (images par seconde) mais on peut choisir une autre valeur.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># On anime le joueur à 20 fps (images par seconde)</span>
 </pre></div>
 </div>
@@ -458,22 +476,24 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Runner'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
@@ -485,13 +505,15 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <h2>5. Ajouter des obstacles<a class="headerlink" href="#ajouter-des-obstacles" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous allons ajouter des obstacles qui vont défiler de droite à gauche. Pour cela, nous allons créer un nouvel <code class="docutils literal notranslate"><span class="pre">acteur</span></code> nommé <code class="docutils literal notranslate"><span class="pre">obstacle</span></code>. Les obstacles seront représentés par des cactus.</p>
 <img alt="../_images/cactus.png" src="../_images/cactus.png"/>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">,</span> <span class="p">(</span><span class="mi">850</span><span class="p">,</span> <span class="mi">430</span><span class="p">))</span> <span class="c1"># Création d'un obstacle en dehors de l'écran à droite</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">)</span> <span class="c1"># Création d'un obstacle</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">850</span> <span class="c1"># Position en x de l'obstacle (en dehors de l'écran à droite)</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">430</span> <span class="c1"># Position en y de l'obstacle</span>
 </pre></div>
 </div>
 <p>Notre <code class="docutils literal notranslate"><span class="pre">obstacle</span></code> est créé en dehors de l’écran à droite (<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">850</span></code>). Nous allons le faire défiler de droite à gauche en le déplaçant de <code class="docutils literal notranslate"><span class="pre">10</span></code> pixels à chaque tour du jeu.</p>
 <p><strong>Il s’agit de logique de jeu !</strong> C’est donc du code que l’on écrira dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p>
 <p>Dans notre cas, il faut déplacer l’<code class="docutils literal notranslate"><span class="pre">obstacle</span></code> de quelques pixels vers la gauche (disons <code class="docutils literal notranslate"><span class="pre">10</span></code>) et le faire réapparaître à droite une fois qu’il est sorti de l’écran.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
     <span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="mi">10</span> <span class="c1"># Déplacement de l'obstacle de 10 pixels vers la gauche en diminuant sa position en x</span>
@@ -499,7 +521,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">850</span> <span class="c1"># Il réapparaît à droite</span>
 </pre></div>
 </div>
-<p>A ce point, il ne reste plus qu’à appeler la méthode <code class="docutils literal notranslate"><span class="pre">obstacle.draw()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> et le tour est joué !</p>
+<p>À ce point, il ne reste plus qu’à appeler la méthode <code class="docutils literal notranslate"><span class="pre">obstacle.draw()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> et le tour est joué !</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir le code complet à ce point<div class="summary-down docutils">
@@ -507,25 +529,29 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Runner'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 
-<span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">,</span> <span class="p">(</span><span class="mi">850</span><span class="p">,</span> <span class="mi">430</span><span class="p">))</span>
+<span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">)</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">850</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">430</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">obstacle</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
     <span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="mi">10</span>
@@ -539,22 +565,24 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </details></section>
 <section id="permettre-au-joueur-de-sauter">
 <h2>6. Permettre au joueur de sauter<a class="headerlink" href="#permettre-au-joueur-de-sauter" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour pouvoir sauter et retomber, notre personnage doit posséder une vitesse verticale. Nous allons donc ajouter un attribut <code class="docutils literal notranslate"><span class="pre">vy</span></code> à notre  <code class="docutils literal notranslate"><span class="pre">player</span></code> qui représente la vitesse verticale du joueur.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<p>Pour pouvoir sauter et retomber, notre personnage doit posséder une vitesse verticale. Nous allons donc ajouter un attribut <code class="docutils literal notranslate"><span class="pre">vy</span></code> à notre  <code class="docutils literal notranslate"><span class="pre">player</span></code> qui représente donc la vitesse verticale du joueur.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Vitesse verticale à 0 par défaut</span>
 </pre></div>
 </div>
-<p>Sauter correspond à une action de notre joueur que nous allons coder dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>. Mais avant de s’occuper du saut, occupons nous d’appliquer la <strong>gravité</strong>. La gravité augmente la vitesse verticale <code class="docutils literal notranslate"><span class="pre">vy</span></code> du joueur. Ensuite, il faut appliquer cette vitesse verticale pour mettre à jour la position verticale <code class="docutils literal notranslate"><span class="pre">y</span></code> du joueur.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<p>Sauter correspond à une action de notre joueur que nous allons coder dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>. Mais avant de s’occuper du saut, occupons-nous d’appliquer la <strong>gravité</strong>. La gravité augmente la vitesse verticale <code class="docutils literal notranslate"><span class="pre">vy</span></code> du joueur. Ensuite, il faut appliquer cette vitesse verticale pour mettre à jour la position verticale <code class="docutils literal notranslate"><span class="pre">y</span></code> du joueur.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Augmentation de la vitesse verticale (gravité)</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Augmentation de la vitesse verticale (gravité à 1 ici)</span>
     <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="c1"># Mise à jour de la position verticale du joueur</span>
     <span class="o">...</span>
 </pre></div>
 </div>
 <p>Oups, notre personnage tombe du jeu et disparaît ! Pour éviter cela, nous allons devoir ajouter une condition (<code class="docutils literal notranslate"><span class="pre">if</span></code>) pour détecter le sol (coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> à <code class="docutils literal notranslate"><span class="pre">400</span></code>) et remettre la vitesse verticale à <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">vy</span>
@@ -564,8 +592,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>Bon et maintenant il faut pouvoir sauter ! Nous allons donc ajouter une condition pour détecter si la touche <code class="docutils literal notranslate"><span class="pre">space</span></code> (espace) est pressée. Si c’est le cas, nous allons donner une vitesse verticale (<code class="docutils literal notranslate"><span class="pre">vy</span></code>) négative au joueur pour le faire aller vers le haut. Pygame Zero nous offre un objet <code class="docutils literal notranslate"><span class="pre">keyboard</span></code> qui nous permet de détecter les touches pressées.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<p>Bon et maintenant il faut pouvoir sauter ! Nous allons donc ajouter une condition pour détecter si la touche <code class="docutils literal notranslate"><span class="pre">space</span></code> (espace) est pressée. Si c’est le cas, nous donnons une vitesse verticale (<code class="docutils literal notranslate"><span class="pre">vy</span></code>) négative au joueur pour le faire aller vers le haut. Pygame Zero nous offre un objet <code class="docutils literal notranslate"><span class="pre">keyboard</span></code> qui nous permet de détecter les touches pressées.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">vy</span>
@@ -585,26 +613,30 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Runner'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">,</span> <span class="p">(</span><span class="mi">850</span><span class="p">,</span> <span class="mi">430</span><span class="p">))</span>
+<span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">)</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">850</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">430</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">obstacle</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
     <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -630,12 +662,14 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p>Notre joueur est invincible ! Il est temps d’ajouter la détection de collision entre le joueur et les obstacles. Si le joueur touche un obstacle, c’est la fin du jeu.</p>
 <p>Pour détecter une collision, nous allons utiliser la méthode <code class="docutils literal notranslate"><span class="pre">collides_with(actor)</span></code> que tous les <code class="docutils literal notranslate"><span class="pre">acteurs</span></code> possèdent. Cette méthode retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si l’<code class="docutils literal notranslate"><span class="pre">acteur</span></code> est en collision avec un autre <code class="docutils literal notranslate"><span class="pre">acteur</span></code>.</p>
 <p>Nous allons l’utiliser pour détecter une collision entre le <code class="docutils literal notranslate"><span class="pre">player</span></code> et l’<code class="docutils literal notranslate"><span class="pre">obstacle</span></code>. Nous devons aussi créer une variable <code class="docutils literal notranslate"><span class="pre">game_over</span></code> pour savoir si le jeu est terminé. Par souci de simplicité, nous pouvons définir <code class="docutils literal notranslate"><span class="pre">game_over</span></code> comme un attribut de notre <code class="docutils literal notranslate"><span class="pre">player</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">player</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># Ajout de l'attribut game_over</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">vy</span>
@@ -651,20 +685,21 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>Bien, nous avons maintenant un attribut <code class="docutils literal notranslate"><span class="pre">game_over</span></code> qui est <code class="docutils literal notranslate"><span class="pre">True</span></code> si le joueur touche un obstacle. Il ne reste plus qu’à ajouter une condition dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> du programme principal pour arrêter le jeu si <code class="docutils literal notranslate"><span class="pre">game_over</span></code> est <code class="docutils literal notranslate"><span class="pre">True</span></code>. Il suffit de faire les mises à jours des acteurs <strong>uniquement si</strong> <code class="docutils literal notranslate"><span class="pre">game_over</span></code> est <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<p>Bien, nous avons maintenant un attribut <code class="docutils literal notranslate"><span class="pre">game_over</span></code> qui passe à <code class="docutils literal notranslate"><span class="pre">True</span></code> si le joueur touche un obstacle. Il ne reste plus qu’à ajouter une condition dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> du programme principal pour arrêter le jeu si <code class="docutils literal notranslate"><span class="pre">game_over</span></code> est <code class="docutils literal notranslate"><span class="pre">True</span></code>. Il suffit de faire les mises à jour des acteurs <strong>uniquement si</strong> <code class="docutils literal notranslate"><span class="pre">game_over</span></code> est <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">player</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span> <span class="c1"># Si le jeu n'est pas terminé</span>
         <span class="c1"># Reste du code que l'on a fait jusqu'ici</span>
 </pre></div>
 </div>
 <p>Nous pouvons également ajouter un message de game over à l’écran si <code class="docutils literal notranslate"><span class="pre">game_over</span></code> est <code class="docutils literal notranslate"><span class="pre">True</span></code>. C’est de l’affichage, cela se fait donc dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">obstacle</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span> <span class="c1"># Si le jeu est terminé</span>
-        <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Game Over'</span><span class="p">,</span> <span class="n">centerx</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">centery</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+        <span class="c1"># Affichage du message de game over</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Game Over'</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">30</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
 </pre></div>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -674,29 +709,33 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Runner'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">player</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">False</span>
 
-<span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">,</span> <span class="p">(</span><span class="mi">850</span><span class="p">,</span> <span class="mi">430</span><span class="p">))</span>
+<span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">)</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">850</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">430</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">obstacle</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
-        <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Game Over'</span><span class="p">,</span> <span class="n">centerx</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">centery</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Game Over'</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">30</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">player</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
@@ -724,22 +763,24 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="tenir-et-afficher-un-score">
 <h2>8. Tenir et afficher un score<a class="headerlink" href="#tenir-et-afficher-un-score" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le score est important dans les jeux ! Pour en tenir un, on peut définir un attribut <code class="docutils literal notranslate"><span class="pre">score</span></code> à notre <code class="docutils literal notranslate"><span class="pre">player</span></code> et l’initialiser à <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">player</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Initialisation du score à 0</span>
 </pre></div>
 </div>
-<p>Avant de nous occuper de l’augmentation du <code class="docutils literal notranslate"><span class="pre">score</span></code>, voyons déjà comment l’afficher. Afficher du texte à l’écran se fait via l’objet <code class="docutils literal notranslate"><span class="pre">screen</span></code> offert par Pygame. Nous l’utilisons dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> du programme principal, juste après avoir défini l’image de fond.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<p>Avant de nous occuper de l’augmentation du <code class="docutils literal notranslate"><span class="pre">score</span></code>, voyons déjà comment l’afficher. Afficher du texte à l’écran se fait via l’objet <code class="docutils literal notranslate"><span class="pre">screen</span></code> offert par Pygame Zero. Nous l’utilisons dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> du programme principal, juste après avoir défini l’image de fond.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Score: </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">score</span><span class="si">}</span><span class="s1">'</span><span class="p">,</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span> <span class="c1"># Affichage du score</span>
     <span class="o">...</span>
 </pre></div>
 </div>
 <p>Le score va augmenter à chaque fois qu’un obstacle sort de l’écran. Il suffit donc de l’augmenter de <code class="docutils literal notranslate"><span class="pre">1</span></code> à chaque fois que cela se produit dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="mi">10</span>
     <span class="k">if</span> <span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">50</span><span class="p">:</span>
@@ -755,31 +796,35 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Runner'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">player</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">,</span> <span class="p">(</span><span class="mi">850</span><span class="p">,</span> <span class="mi">430</span><span class="p">))</span>
+<span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">)</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">850</span>
+<span class="n">obstacle</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">430</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">filled_rect</span><span class="p">(</span><span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">400</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span> <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">242</span><span class="p">,</span> <span class="mi">152</span><span class="p">))</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Score: </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">score</span><span class="si">}</span><span class="s1">'</span><span class="p">,</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">obstacle</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
-        <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Game Over'</span><span class="p">,</span> <span class="n">centerx</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">centery</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">'Game Over'</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">30</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">player</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
@@ -808,8 +853,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="ajouter-un-son-de-saut">
 <h2>9. Ajouter un son de saut<a class="headerlink" href="#ajouter-un-son-de-saut" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ajouter un bruitage est très simple. La première étape consiste à ajouter le fichier <code class="docutils literal notranslate"><span class="pre">.wav</span></code> souhaité dans le dossier <code class="docutils literal notranslate"><span class="pre">sounds</span></code> (à créer si nécessaire). Vous trouverez des sons <code class="docutils literal notranslate"><span class="pre">wav</span></code> sur <a href="https://mixkit.co/free-sound-effects/game/" target="_blank">Mixkit</a>. Privilégiez les sons courts pour éviter des problèmes de performance.</p>
-<p>Pygame nous offre l’objet <code class="docutils literal notranslate"><span class="pre">sounds</span></code> qui nous permet de facilement lancer un bruitage. Dans notre cas, nous souhaitons lancer un son lorsque le joueur saute. Nous allons donc ajouter une ligne <code class="docutils literal notranslate"><span class="pre">sounds.jump.play()</span></code> quand on appuie sur la touche espace.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<p>Pygame Zero nous offre l’objet <code class="docutils literal notranslate"><span class="pre">sounds</span></code> qui nous permet de facilement lancer un bruitage. Dans notre cas, nous souhaitons lancer un son lorsque le joueur saute. Nous allons donc ajouter une ligne <code class="docutils literal notranslate"><span class="pre">sounds.jump.play()</span></code> quand on appuie sur la touche espace.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="o">-</span><span class="mi">15</span>
@@ -821,10 +866,12 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </section>
 <section id="ajouter-une-musique-de-fond">
 <h2>10. Ajouter une musique de fond<a class="headerlink" href="#ajouter-une-musique-de-fond" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Ajouter une musique de fond est tout aussi simple ! Il suffit d’ajouter un fichier <code class="docutils literal notranslate"><span class="pre">.mp3</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">music</span></code> (à créer) et d’utiliser l’objet <code class="docutils literal notranslate"><span class="pre">music</span></code> offert par Pygame. Vous trouverez des musiques <code class="docutils literal notranslate"><span class="pre">mp3</span></code> libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.</p>
+<p>Ajouter une musique de fond est tout aussi simple ! Il suffit d’ajouter un fichier <code class="docutils literal notranslate"><span class="pre">.mp3</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">music</span></code> (à créer) et d’utiliser l’objet <code class="docutils literal notranslate"><span class="pre">music</span></code> offert par Pygame Zero. Vous trouverez des musiques <code class="docutils literal notranslate"><span class="pre">mp3</span></code> libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.</p>
 <p>Pour lancer notre musique <code class="docutils literal notranslate"><span class="pre">ninja_music.mp3</span></code> au début du jeu, il reste qu’à appeler <code class="docutils literal notranslate"><span class="pre">music.play('ninja_music')</span></code> au début du programme principal.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s1">'ninja_music'</span><span class="p">)</span> <span class="c1"># Ajout de la musique ici !</span>
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="o">...</span>
 </pre></div>
 </div>
@@ -867,8 +914,8 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <li><p>Autres idées…?</p></li>
 </ul>
 </section>
-<section id="travailler-en-dehors-du-tp">
-<h2>Travailler en dehors du TP<a class="headerlink" href="#travailler-en-dehors-du-tp" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="travailler-en-dehors-des-tp">
+<h2>Travailler en dehors des TP<a class="headerlink" href="#travailler-en-dehors-des-tp" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="danger admonition">
 <p class="admonition-title">Comment travailler en dehors du TP</p>
 <details class="sphinx-bs dropdown card mb-3">
@@ -880,10 +927,10 @@ Depuis la maison<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <ol class="simple">
 <li><p class="card-text">Téléchargez et installez <a class="reference external" href="https://www.python.org/downloads/">Python</a>.</p></li>
-<li><p class="card-text">Téléchargez et installez <a class="reference external" href="https://www.jetbrains.com/fr-fr/pycharm/download/">Pycharm Community</a>. Faites attention à prendre la version <strong>Community</strong> (en bas de la page) qui est gratuite.</p></li>
-<li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet.</p></li>
-<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).</p></li>
-<li><p class="card-text">Installez le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, ajoutez la ligne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> tout en haut de votre code et Pycharm vous proposera de l’installer <strong>en passant le curseur de la souris dessus</strong> (sur <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>).</p></li>
+<li><p class="card-text">Téléchargez et installez <a class="reference external" href="https://www.jetbrains.com/fr-fr/pycharm/download/">Pycharm</a>. Faites attention à sélectionner la version qui correspond à votre système d’exploitation (Windows, MacOS, Linux).</p></li>
+<li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet. (Bouton “New Project” sur l’écran d’accueil ou via le menu “File” -&gt; “New Project”).</p></li>
+<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PythonProject par défaut).</p></li>
+<li><p class="card-text">Installez le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, assurez-vous d’avoir la ligne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> tout en haut de votre code et Pycharm vous proposera de l’installer <strong>en passant le curseur de la souris dessus</strong> (sur <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>).</p></li>
 </ol>
 <img alt="../_images/pgzero.png" src="../_images/pgzero.png"/>
 <p class="card-text">Programmez !</p>
@@ -897,8 +944,8 @@ Depuis l’école<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <ol class="simple">
 <li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet.</p></li>
-<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject). <strong>Attention</strong>, si vous prenez votre dossier de travail depuis votre disque réseau (pxxxxx), il faudra le copier sur le bureau avant de le déplacer dans Pycharm.</p></li>
-<li><p class="card-text">Installez le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, ajoutez la ligne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> tout en haut de votre code et Pycharm vous proposera de l’installer <strong>en passant le curseur de la souris dessus</strong> (sur <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>).</p></li>
+<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet. <strong>Attention</strong>, si vous prenez votre dossier de travail depuis votre disque réseau (pxxxxx), il faudra le copier sur le bureau avant de le déplacer dans Pycharm.</p></li>
+<li><p class="card-text">Installez le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, assurez-vous d’avoir la ligne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> tout en haut de votre code et Pycharm vous proposera de l’installer <strong>en passant le curseur de la souris dessus</strong> (sur <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>).</p></li>
 </ol>
 <img alt="../_images/pgzero.png" src="../_images/pgzero.png"/>
 <p class="card-text">Programmez !</p>
@@ -967,7 +1014,7 @@ Depuis l’école<div class="summary-down docutils">
 <li><a class="reference internal" href="#ajouter-un-son-de-saut">9. Ajouter un son de saut</a></li>
 <li><a class="reference internal" href="#ajouter-une-musique-de-fond">10. Ajouter une musique de fond</a></li>
 <li><a class="reference internal" href="#ameliorations-possibles">11. Améliorations possibles</a></li>
-<li><a class="reference internal" href="#travailler-en-dehors-du-tp">Travailler en dehors du TP</a></li>
+<li><a class="reference internal" href="#travailler-en-dehors-des-tp">Travailler en dehors des TP</a></li>
 </ul>
 </li>
 </ul>

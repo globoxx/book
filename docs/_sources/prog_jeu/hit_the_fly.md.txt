@@ -962,24 +962,24 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.
 * Autres idées..?
 
-## Travailler en dehors du TP
+## Travailler en dehors des TP
 
 `````{admonition} Comment travailler en dehors du TP
 :class: danger
 ````{dropdown} Depuis la maison
 1. Téléchargez et installez [Python](https://www.python.org/downloads/).
-2. Téléchargez et installez [Pycharm Community](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à prendre la version **Community** (en bas de la page) qui est gratuite.
-3. Ouvrez Pycharm et créez un nouveau projet.
-4. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject).
-5. Installez le package `pgzero`. Pour cela, ajoutez la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
+2. Téléchargez et installez [Pycharm](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à sélectionner la version qui correspond à votre système d'exploitation (Windows, MacOS, Linux).
+3. Ouvrez Pycharm et créez un nouveau projet. (Bouton "New Project" sur l'écran d'accueil ou via le menu "File" -> "New Project").
+4. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PythonProject par défaut).
+5. Installez le package `pgzero`. Pour cela, assurez-vous d'avoir la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
 ```{image} ../media/pgzero.png
 ```
 Programmez !
 ````
 ````{dropdown} Depuis l'école
 1. Ouvrez Pycharm et créez un nouveau projet.
-2. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PycharmProject). **Attention**, si vous prenez votre dossier de travail depuis votre disque réseau (pxxxxx), il faudra le copier sur le bureau avant de le déplacer dans Pycharm.
-3. Installez le package `pgzero`. Pour cela, ajoutez la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
+2. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet. **Attention**, si vous prenez votre dossier de travail depuis votre disque réseau (pxxxxx), il faudra le copier sur le bureau avant de le déplacer dans Pycharm.
+3. Installez le package `pgzero`. Pour cela, assurez-vous d'avoir la ligne `import pgzero` tout en haut de votre code et Pycharm vous proposera de l'installer **en passant le curseur de la souris dessus** (sur `pgzero`).
 ```{image} ../media/pgzero.png
 ```
 Programmez !
