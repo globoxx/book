@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -311,9 +311,9 @@
 <p><a class="reference download internal" download="" href="../_downloads/ca6c3644fbe0762a19154ad8f4b0e352/intro_pygame.zip"><code class="xref download docutils literal notranslate"><span class="pre">Téléchargement</span> <span class="pre">des</span> <span class="pre">ressources</span> <span class="pre">nécessaires</span></code></a>.</p>
 <p>Pygame est une bibliothèque Python permettant de créer des jeux vidéo en 2D. Elle fournit des fonctionnalités pour gérer les fenêtres, les événements, les images, les sons, et bien plus encore.</p>
 <p>Vous trouverez ci-dessous le code minimal pour faire apparaître la fenêtre de votre jeu.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
+<span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Mon premier jeu !'</span> <span class="c1"># Titre de votre jeu</span>
 
@@ -334,7 +334,7 @@
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> <span class="c1"># Efface l'écran avant de dessiner</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s2">"skyblue"</span><span class="p">)</span> <span class="c1"># Remplit le fond en bleu</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">"Mon premier jeu !"</span><span class="p">,</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"yellow"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span> <span class="c1"># Texte jaune à la position (400, 50)</span>
@@ -363,8 +363,9 @@
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">400</span> <span class="c1"># Positionne l'acteur à x = 400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">300</span> <span class="c1"># Positionne l'acteur à y = 300</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="c1"># Gardez ici le code qui dessine le fond</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine l'acteur à sa position actuelle</span>
 </pre></div>
 </div>
@@ -405,7 +406,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span> <span class="c1"># Déplace le joueur de 2 pixels vers la droite</span>
 
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">WIDTH</span><span class="p">:</span> <span class="c1"># Si le joueur dépasse la largeur de la fenêtre</span>
@@ -457,7 +458,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">right</span><span class="p">:</span> <span class="c1"># Si la touche flèche droite est pressée</span>
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span> <span class="c1"># Déplace l'acteur de 5 pixels vers la droite</span>
     <span class="k">elif</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">left</span><span class="p">:</span> <span class="c1"># Si la touche flèche gauche est pressée</span>
@@ -515,7 +516,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">300</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># Fait avancer l'animation de l'acteur à une vitesse de 5 images par seconde (5 fps)</span>
 
@@ -546,11 +547,11 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Vitesse horizontale</span>
 <span class="n">enemy</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Vitesse verticale</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine l'ennemi</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="c1"># Met à jour la position de l'ennemi </span>
     <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">enemy</span><span class="o">.</span><span class="n">vx</span>
@@ -586,7 +587,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <p>Le but est de détecter une collision entre le joueur et l’ennemi. Si une collision est détectée, le jeu se termine.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="c1"># Vérifie la collision entre le joueur et l'ennemi</span>
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
@@ -604,7 +605,8 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">La vitesse de l’ennemi est définie par les variables <code class="docutils literal notranslate"><span class="pre">enemy.vx</span></code> (vitesse horizontale) et <code class="docutils literal notranslate"><span class="pre">enemy.vy</span></code> (vitesse verticale).</p>
+<p class="card-text">La vitesse de l’ennemi est définie par les variables <code class="docutils literal notranslate"><span class="pre">enemy.vx</span></code> (vitesse horizontale) et <code class="docutils literal notranslate"><span class="pre">enemy.vy</span></code> (vitesse verticale). Vous pouvez augmenter ces valeurs pour rendre l’ennemi plus rapide.</p>
+<p class="card-text">Ou bien, vous pouvez modifier la vitesse du joueur en changeant la valeur ajoutée à <code class="docutils literal notranslate"><span class="pre">player.x</span></code> et <code class="docutils literal notranslate"><span class="pre">player.y</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">update()</span></code>.</p>
 </div>
 </details></section>
 </section>
@@ -615,7 +617,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 
 <span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s1">'adventure'</span><span class="p">)</span> <span class="c1"># Joue la musique de fond (fichier 'adventure.mp3' dans le dossier music)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
         <span class="n">sounds</span><span class="o">.</span><span class="n">die</span><span class="o">.</span><span class="n">play</span><span class="p">()</span> <span class="c1"># Joue un son de game over (fichier 'die.wav' dans le dossier sounds)</span>
@@ -660,7 +662,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'alien'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vie</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># Initialise la vie du joueur à 100</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">enemy</span><span class="p">):</span>
         <span class="n">player</span><span class="o">.</span><span class="n">vie</span> <span class="o">-=</span> <span class="mi">10</span> <span class="c1"># Réduit la santé du joueur de 10 en cas de collision</span>
         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">vie</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
@@ -672,7 +674,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <section id="afficher-la-valeur-dune-variable-a-lecran">
 <h3>Afficher la valeur d’une variable à l’écran<a class="headerlink" href="#afficher-la-valeur-dune-variable-a-lecran" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Utilisez <code class="docutils literal notranslate"><span class="pre">screen.draw.text()</span></code> pour afficher du texte à l’écran, comme des scores ou de la vie.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">"Vie : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">vie</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -682,13 +684,13 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <p>Vous pouvez créer des boutons en utilisant la classe <code class="docutils literal notranslate"><span class="pre">Button</span></code> fournie par <code class="docutils literal notranslate"><span class="pre">pgzhelper</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">start_button</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="s2">"Start"</span><span class="p">,</span> <span class="p">(</span><span class="n">WIDTH</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="o">//</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span> <span class="c1"># Bouton centré de taille 100x50</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">start_button</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine le bouton</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">start_button</span><span class="o">.</span><span class="n">update</span><span class="p">()</span> <span class="c1"># Met à jour l'état du bouton pour le hover</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">start_button</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Bouton Start cliqué !"</span><span class="p">)</span>
 </pre></div>
@@ -697,16 +699,16 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <section id="gerer-le-temps-qui-secoule">
 <h3>Gérer le temps qui s’écoule<a class="headerlink" href="#gerer-le-temps-qui-secoule" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Il est possible de vérifier le temps écoulé depuis le début du jeu avec <code class="docutils literal notranslate"><span class="pre">pygame.time.get_ticks()</span></code>, qui retourne le nombre de millisecondes écoulées.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="n">temps_ecoule</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">get_ticks</span><span class="p">()</span> <span class="o">/</span> <span class="mi">1000</span> <span class="c1"># Temps écoulé en secondes</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Temps écoulé depuis le début du jeu : </span><span class="si">{</span><span class="n">temps_ecoule</span><span class="si">}</span><span class="s2"> secondes"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Il est aussi possible de créer des événements programmés avec l’objet <code class="docutils literal notranslate"><span class="pre">clock</span></code>. Cela permet d’exécuter des fonctions à intervalles réguliers ou après un certain délai.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">spawn_enemy</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">spawn_enemy</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Un nouvel ennemi apparaît !"</span><span class="p">)</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">spawn_boss</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">spawn_boss</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Un boss apparaît !"</span><span class="p">)</span>
 
 <span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">spawn_enemy</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">)</span> <span class="c1"># Appelle spawn_enemy toutes les 10 secondes</span>
@@ -717,7 +719,7 @@ J’ai besoin d’aide !<div class="summary-down docutils">
 <section id="gestion-de-la-souris">
 <h3>Gestion de la souris<a class="headerlink" href="#gestion-de-la-souris" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Utilisez la fonction spéciale <code class="docutils literal notranslate"><span class="pre">on_mouse_down</span></code> pour décrire ce qui se passe lorsqu’un clic de souris est détecté à une position (<code class="docutils literal notranslate"><span class="pre">pos</span></code>) donnée.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Souris cliquée en position </span><span class="si">{</span><span class="n">pos</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -748,11 +750,11 @@ J’ai besoin d’aide !<div class="summary-down docutils">
     <span class="n">enemy</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">)</span>
     <span class="n">enemies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">enemy</span><span class="p">)</span> <span class="c1"># Ajoute l'ennemi à la liste</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">enemy</span> <span class="ow">in</span> <span class="n">enemies</span><span class="p">:</span>
         <span class="n">enemy</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine chaque ennemi dans la liste</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">enemy</span> <span class="ow">in</span> <span class="n">enemies</span><span class="p">:</span>
         <span class="n">enemy</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Déplace chaque ennemi vers la droite</span>
 </pre></div>

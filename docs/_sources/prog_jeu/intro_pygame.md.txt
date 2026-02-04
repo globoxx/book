@@ -75,6 +75,7 @@ player.y = 300 # Positionne l'acteur à y = 300
 
 def draw():
     screen.clear()
+    # Gardez ici le code qui dessine le fond
     player.draw() # Dessine l'acteur à sa position actuelle
 ```
 
@@ -295,7 +296,9 @@ def update():
 Changez la difficulté du jeu en modifiant la vitesse de l'ennemi (ou celle du joueur).
 
 ```{dropdown} J'ai besoin d'aide !
-La vitesse de l'ennemi est définie par les variables `enemy.vx` (vitesse horizontale) et `enemy.vy` (vitesse verticale).
+La vitesse de l'ennemi est définie par les variables `enemy.vx` (vitesse horizontale) et `enemy.vy` (vitesse verticale). Vous pouvez augmenter ces valeurs pour rendre l'ennemi plus rapide.
+
+Ou bien, vous pouvez modifier la vitesse du joueur en changeant la valeur ajoutée à `player.x` et `player.y` dans la fonction `update()`.
 ```
 
 ## 8. Musique et sons
