@@ -11,7 +11,7 @@ Dans cette introduction, nous allons développer un premier jeu simple étape pa
 
 ## 1. Faire apparaître une fenêtre
 
-La première étape est de définir le nom de notre jeu dans la variable `TITLE`, ainsi que la largeur `WIDTH` et la hauteur `HEIGHT` de notre fenêtre. Nous allons également importer `pgzrun` et des fonctions de `pgzhelper` afin de nous faciliter la vie. Pygame Zero s'occupe du reste !
+La première étape est de définir le nom de notre jeu dans la variable `TITLE`, ainsi que la largeur `WIDTH` et la hauteur `HEIGHT` de notre fenêtre. Nous allons également importer `pgzero`, `pgzrun` et des fonctions de `pgzhelper` afin de nous faciliter la vie. Pygame Zero s'occupe du reste !
 
 ```python
 import pgzero
@@ -36,6 +36,7 @@ Pygame Zero fonctionne avec 2 fonctions principales:
 Elles sont toutes deux exécutées en boucle automatiquement dès qu'on lance le jeu.
 
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -70,7 +71,7 @@ def draw():
 
 ````{admonition} Utiliser un autre fond
 :class: tip
-A ce stade, sentez-vous libre d'utiliser une image de fond à la place du ciel bleu et de l'herbe verte. Pour cela, ajoutez une image dans le dossier `images` et utilisez la ligne suivante dans la fonction `draw`:
+À ce stade, sentez-vous libre d'utiliser une image de fond à la place du ciel bleu et de l'herbe verte. Pour cela, ajoutez une image dans le dossier `images` et utilisez la ligne suivante dans la fonction `draw`:
 ```python
 screen.blit('nom_image', (0,0)) # Dessine l'image de fond à la position (0,0)
 ```
@@ -133,6 +134,7 @@ Vous pouvez bien sûr changer l'apparence du joueur en utilisant une autre image
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -188,6 +190,7 @@ def update():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -244,6 +247,7 @@ def update():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -330,6 +334,7 @@ def update():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -428,6 +433,7 @@ def draw():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -515,6 +521,7 @@ def update():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -589,7 +596,7 @@ def update():
 
 Ajouter une musique de fond est tout aussi simple ! Il suffit d'ajouter un fichier `.mp3` dans le dossier `music` (à créer) et d'utiliser l'objet `music` offert par Pygame Zero. Vous trouverez des musiques `mp3` libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.
 
-Pour lancer notre musique `ninja_music.mp3` au début du jeu, il reste qu'à appeler `music.play('ninja_music')` au début du programme principal.
+Pour lancer notre musique `ninja_music.mp3` au début du jeu, il ne reste qu'à appeler `music.play('ninja_music')` au début du programme principal.
 
 ```python
 music.play('ninja_music') # Ajout de la musique ici !
@@ -631,7 +638,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 **Challenging (difficile):**
 
 * Permettre au joueur de tirer sur les obstacles pour les détruire.
-* Donner de la vie au joueur lui permettant de prendre un certain nombre de coups avant de mourir. La vie du joueur est affichée et à chaque coup, le joueur est invincible pendant un courts laps de temps.
+* Donner de la vie au joueur lui permettant de prendre un certain nombre de coups avant de mourir. La vie du joueur est affichée et à chaque coup, le joueur est invincible pendant un court laps de temps.
 * Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.
 * Créer un système de sauvegarde du score.
 * Autres idées..?

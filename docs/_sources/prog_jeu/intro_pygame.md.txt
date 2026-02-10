@@ -241,7 +241,7 @@ C'est généralement une bonne idée de créer tous vos acteurs au début de vot
 ```python
 ...
 enemy = Actor('bird0') # Crée un acteur ennemi avec l'image 'bird0.png'
-enemy.x = 400
+enemy.x = 700
 enemy.y = 300
 enemy.vx = 3 # Vitesse horizontale
 enemy.vy = 2 # Vitesse verticale
