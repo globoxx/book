@@ -1,0 +1,1211 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="5. Jumper (platformer)" href="platformer.html" /><link rel="prev" title="3. Running Ninja (runner)" href="runner_new.html" />
+
+    <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>4. Star wars (shooter) - Travaux pratiques</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../_static/codeplay.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/glossary.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/questions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/videos.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/reactions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/progress.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: black;
+  --color-foreground-secondary: #5a5c63;
+  --color-foreground-muted: #646776;
+  --color-foreground-border: #878787;
+  --color-background-primary: white;
+  --color-background-secondary: #f8f9fb;
+  --color-background-hover: #efeff4ff;
+  --color-background-over--transparent: #efeff400;
+  --color-background-border: #eeebee;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #8044FF;
+  --color-brand-content: #8044FF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --font-stack: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-foreground-primary: #ffffffcc;
+  --color-foreground-secondary: #9ca0a5;
+  --color-foreground-muted: #81868d;
+  --color-foreground-border: #666666;
+  --color-background-primary: #131416;
+  --color-background-secondary: #131416;
+  --color-background-hover: #1e2124ff;
+  --color-background-over--transparent: #1e212400;
+  --color-background-border: #303335;
+  --color-announcement-background: #000000dd;
+  --color-announcement-text: #eeebee;
+  --color-brand-primary: #7C3EFF;
+  --color-brand-content: #7C3EFF;
+  --admonition-font-size: 0.9rem;
+  --admonition-title-font-size: 0.9rem;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Travaux pratiques</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/modulo-logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/modulo-logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Travaux pratiques</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Recherche name="q" aria-label="Recherche">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Programmation (parcours formel)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/variables.html">2. Les variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/fonctions.html">3. Les fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/definitions.html">4. Définition de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/conditions.html">5. Les structures conditionnelles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/sequences.html">6. Les types séquentiels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_formel/algo.html">7. Les algorithmes</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation (parcours dessin et aventure)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/dessiner.html">1. Dessiner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/definir.html">2. Définir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/repeter.html">3. Répéter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parametrer.html">4. Paramétrer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/parcourir.html">5. Parcourir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/randomiser.html">6. Randomiser (exemples)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet.html">Projet de dessin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves.html">Projets de dessin d’élèves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/aventure.html">Histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projet2.html">Projet d’histoire interactive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prog_dessin/projets_eleves2.html">Projets d’histoire interactive d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web/html1.html">1. Introduction à l’HTML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html2.html">2. Structurer son texte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html3.html">3. Faire des liens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/html4.html">4. Plus sur les images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css1.html">5. Introduction au CSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css2.html">6. Plus de propriétés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css3.html">7. Structurer sa page en blocs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/css4.html">8. Aligner ses blocs avec Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/js1.html">9. Introduction à JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web/projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rappels.html">1. Rappels de programmation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro_pygame.html">2. Introduction à Pygame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runner_new.html">3. Running Ninja (runner)</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">4. Star wars (shooter)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#ajouter-des-asteroides-au-cours-du-jeu">8. Ajouter des astéroïdes au cours du jeu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="platformer.html">5. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Autres activités</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../divers/epidemie.html">Simulation d’épidémie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/catch_the_fruit.html">Catch the fruit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/portes_logiques.html">Portes logiques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../divers/projets_eleves.html">Projets libres d’élèves</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Outils</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../outils/code_libre.html">Zone de code libre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outils/glossaire.html">Glossaire</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section class="tex2jax_ignore mathjax_ignore" id="star-wars-shooter">
+<span id="prog-jeu-star-wars"></span><h1>4. Star wars (shooter)<a class="headerlink" href="#star-wars-shooter" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Le jeu consiste en un vaisseau pouvant se déplacer dans une fenêtre et tirer des projectiles vers des astéroïdes qui se déplacent vers le bas de l’écran. Le but est de détruire les astéroïdes en les touchant avec les projectiles tout en les évitant.</p>
+<p><a class="reference download internal" download="" href="../_downloads/b08b822bce5b558f4c4e46f0768270ca/star_wars.zip"><code class="xref download docutils literal notranslate"><span class="pre">Téléchargement</span> <span class="pre">des</span> <span class="pre">ressources</span> <span class="pre">du</span> <span class="pre">jeu</span></code></a>.</p>
+<img alt="media/star_wars.gif" src="media/star_wars.gif"/>
+<section id="faire-apparaitre-une-fenetre">
+<h2>1. Faire apparaître une fenêtre<a class="headerlink" href="#faire-apparaitre-une-fenetre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>La première étape est de définir le nom de notre jeu dans la variable <code class="docutils literal notranslate"><span class="pre">TITLE</span></code>, ainsi que la largeur <code class="docutils literal notranslate"><span class="pre">WIDTH</span></code> et la hauteur <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> de notre fenêtre. Nous allons également importer des fonctions de <code class="docutils literal notranslate"><span class="pre">pgzhelper</span></code> afin de nous faciliter la vie. Pygame Zero s’occupe du reste !</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
+<span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span> <span class="c1"># Lance le jeu</span>
+</pre></div>
+</div>
+<img alt="../_images/pygame_fenetre.png" src="../_images/pygame_fenetre.png"/>
+<p>Pygame Zero fonctionne avec 2 fonctions principales: <code class="docutils literal notranslate"><span class="pre">draw</span></code> et <code class="docutils literal notranslate"><span class="pre">update</span></code>. Tandis que <code class="docutils literal notranslate"><span class="pre">draw</span></code> est appelée pour afficher des choses à l’écran, <code class="docutils literal notranslate"><span class="pre">update</span></code> est appelée pour faire évoluer le jeu. Elles sont toutes 2 appelées en boucle automatiquement.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="k">pass</span> <span class="c1"># Ajouter ici tout ce qui concerne l'affichage</span>
+    <span class="c1"># pass est une instruction qui ne fait rien, à remplacer par du code par la suite</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">pass</span> <span class="c1"># Ajouter ici tout ce qui concerne l'évolution du jeu</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="soccuper-du-fond-decran">
+<h2>2. S’occuper du fond d’écran<a class="headerlink" href="#soccuper-du-fond-decran" title="Lien permanent vers ce titre">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">screen</span></code> est un objet accessible grâce à Pygame qui représente la fenêtre de notre jeu.<br/>
+On va y attacher cette image de fond.</p>
+<img alt="../_images/space_background.png" src="../_images/space_background.png"/>
+<p>Voici comment faire:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="c1"># Dessine l'image 'space_background' aux coordonnées (0, 0)</span>
+</pre></div>
+</div>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">blit(image,</span> <span class="pre">(x,</span> <span class="pre">y))</span></code> de <code class="docutils literal notranslate"><span class="pre">screen</span></code> permet de dessiner une image sur la fenêtre aux coordonnées (x, y) correspondant au coin supérieur gauche de l’image. Comme l’image est plus grande que la fenêtre, elle la recouvre entièrement.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code complet à ce point<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="ajouter-le-vaisseau">
+<h2>3. Ajouter le vaisseau<a class="headerlink" href="#ajouter-le-vaisseau" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est temps d’ajouter notre vaisseau (que nous continuerons d’appeler <code class="docutils literal notranslate"><span class="pre">player</span></code>). Il s’agit bien sûr du Faucon Millenium, le vaisseau emblématique de Han Solo !</p>
+<img alt="../_images/ship.png" src="../_images/ship.png"/>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span> <span class="c1"># Création du vaisseau</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># Positionnement du vaisseau au centre de l'écran en x</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span> <span class="c1"># Positionnement du vaisseau au centre de l'écran en y</span>
+</pre></div>
+</div>
+<p>Afin de dessiner notre vaisseau, il faut en dernier lieu appeler la méthode <code class="docutils literal notranslate"><span class="pre">player.draw()</span></code> dans la fonction principale <code class="docutils literal notranslate"><span class="pre">draw</span></code> de Pygame.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine le vaisseau ici !</span>
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code complet à ce point<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="deplacer-le-vaisseau">
+<h2>4. Déplacer le vaisseau<a class="headerlink" href="#deplacer-le-vaisseau" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons déplacer le vaisseau grâce aux touches <code class="docutils literal notranslate"><span class="pre">w,</span> <span class="pre">a,</span> <span class="pre">s,</span> <span class="pre">d</span></code>. On va utiliser l’objet <code class="docutils literal notranslate"><span class="pre">keyboard</span></code> pour récupérer les touches enfoncées par l’utilisateur et modifier les coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> du vaisseau.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span> <span class="c1"># Si la touche a est enfoncée</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="mi">3</span> <span class="c1"># Déplace le vaisseau à gauche</span>
+</pre></div>
+</div>
+<p>Il nous suffit donc de contrôler quelles touches sont enfoncées et de modifier les coordonnées de notre vaisseau en conséquence:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="mi">3</span> <span class="c1"># Déplacement à gauche</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="mi">3</span> <span class="c1"># Déplacement à droite</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="mi">3</span> <span class="c1"># Déplacement en haut</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="mi">3</span> <span class="c1"># Déplacement en bas</span>
+</pre></div>
+</div>
+<p>Vous remarquez que nous bougeons de <code class="docutils literal notranslate"><span class="pre">3</span></code> pixels par “tour de jeu”. Afin de pouvoir facilement modifier la vitesse de notre vaisseau par la suite, il serait plus judicieux de lui définir une vitesse.</p>
+<p>Nous pouvons ajouter un attribut <code class="docutils literal notranslate"><span class="pre">speed</span></code> à notre objet <code class="docutils literal notranslate"><span class="pre">player</span></code> et lui donner la valeur <code class="docutils literal notranslate"><span class="pre">3</span></code>. Ainsi, nous n’aurons ensuite plus qu’à modifier cette valeur pour accélérer ou ralentir notre personnage à notre guise.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">,</span> <span class="p">(</span><span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Nouvel attribut speed pour régler la vitesse du vaisseau</span>
+
+<span class="o">...</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code complet à ce point<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="ajouter-un-asteroide">
+<h2>5. Ajouter un astéroide<a class="headerlink" href="#ajouter-un-asteroide" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est temps d’ajouter des astéroïdes pour pimenter un peu notre jeu. Ils apparaîtront en haut de l’écran et descendront vers le bas.</p>
+<img alt="../_images/asteroid.png" src="../_images/asteroid.png"/>
+<p>Nous pouvons ensuite créer un objet <code class="docutils literal notranslate"><span class="pre">asteroid</span></code> et lui donner des coordonnées de départ (<code class="docutils literal notranslate"><span class="pre">x</span></code> aléatoire et <code class="docutils literal notranslate"><span class="pre">y</span></code> fixe en haut de l’écran). La foncton permettant de tirer un nombre entier aléatoire entre 2 bornes <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> se nomme <code class="docutils literal notranslate"><span class="pre">randint(a,</span> <span class="pre">b)</span></code>. Pour qu’elle fonctionne, nous devons également importer le module <code class="docutils literal notranslate"><span class="pre">random</span></code> qui contient cette fonction.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># Importe tout un tas de fonctions pour faire de l'aléatoire</span>
+
+<span class="o">...</span>
+
+<span class="n">asteroid</span> <span class="o">=</span> <span class="n">Ennemy</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span> <span class="c1"># Création de l'ennemi aux coordonnées aléatoires</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span> <span class="c1"># Positionnement aléatoire en x</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span> <span class="c1"># Positionnement en haut de l'écran</span>
+</pre></div>
+</div>
+<p>N’oublions pas d’appeler la méthode <code class="docutils literal notranslate"><span class="pre">asteroid.draw()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine l'astéroïde !</span>
+</pre></div>
+</div>
+<p>Occupons nous à présent du déplacement de notre astéroïde. Il va simplement “tomber” vers le bas de l’écran, c’est à dire que sa coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> va augmenter au cours du temps tandis que sa coordonnée <code class="docutils literal notranslate"><span class="pre">x</span></code> restera fixe. Nous allons lui donner une vitesse de déplacement <code class="docutils literal notranslate"><span class="pre">speed</span></code> comme pour le vaisseau.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Vitesse de déplacement de l'astéroïde</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="c1"># Déplacement de l'astéroïde vers le bas</span>
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">L’astéroïde sort de l’écran ?</p>
+<p>Une fois arrivé en bas de l’écran, l’astéroïde disparaît pour toujours. C’est voulu dans ce tutoriel, mais vous pourriez faire réapparaître l’astéroïde en haut de l’écran quand il sort (comme dans le jeu du running ninja de la dernière fois).</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code complet à ce point<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="faire-tourner-lasteroide-sur-lui-meme">
+<h2>6. Faire tourner l’astéroïde sur lui-même<a class="headerlink" href="#faire-tourner-lasteroide-sur-lui-meme" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons tenter d’ajouter un peu de mouvement à notre jeu en faisant tournoyer notre astéroïde sur lui même. Pour cela, nous allons progressivement modifier l’<code class="docutils literal notranslate"><span class="pre">angle</span></code> de l’image représentant notre astéroïde. Cet attribut <code class="docutils literal notranslate"><span class="pre">angle</span></code> vaut <code class="docutils literal notranslate"><span class="pre">0</span></code> par défaut et correspond à l’angle de rotation de l’image. En modifiant cette valeur jusqu’à <code class="docutils literal notranslate"><span class="pre">360</span></code> degrés, on fait tourner l’image.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span> <span class="c1"># Fait tourner l'astéroïde de 5 degrés à chaque tour de jeu</span>
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code complet à ce point<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="ajouter-plusieurs-asteroides">
+<h2>7. Ajouter plusieurs astéroïdes<a class="headerlink" href="#ajouter-plusieurs-asteroides" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Partie importante</p>
+<p>Ce chapitre et le suivant sont particulièrement importants car ils expliquent comment gérer une grande quantité d’acteurs dans votre jeu. Jusqu’ici, nous avons créé un seul astéroïde que nous avons appelé <code class="docutils literal notranslate"><span class="pre">asteroid</span></code> et un <code class="docutils literal notranslate"><span class="pre">player</span></code>. Mais dans un vrai jeu, il y a souvent des dizaines d’acteurs à gérer en même temps. Comment faire pour les gérer tous ? Avec des <em>listes</em> !</p>
+</div>
+<p>Pour avoir plusieurs astéroïdes en même temps dans le jeu, nous pourrions créer <code class="docutils literal notranslate"><span class="pre">asteroid1</span></code>, <code class="docutils literal notranslate"><span class="pre">asteroid2</span></code>, <code class="docutils literal notranslate"><span class="pre">asteroid3</span></code>, etc. mais cela deviendrait rapidement ingérable. A la place, nous allons remplir une <strong>liste d’astéroïdes</strong>. Nous allons donc remplacer notre unique objet <code class="docutils literal notranslate"><span class="pre">asteroid</span></code> par une liste nommée <code class="docutils literal notranslate"><span class="pre">asteroids</span></code> que nous remplirons au départ avec 3 astéroïdes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Création de la liste d'astéroïdes, elle est vide au départ (d'où les crochets vides)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span> <span class="c1"># On crée une boucle qui tourne 3 fois pour créer 3 astéroïdes</span>
+    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span> <span class="c1"># On ajoute l'astéroïde créé à la liste des astéroïdes</span>
+</pre></div>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Attention</p>
+<p>Il faut mettre à jour les fonctions <code class="docutils literal notranslate"><span class="pre">draw</span></code> et <code class="docutils literal notranslate"><span class="pre">update</span></code> car au lieu de dessiner <code class="docutils literal notranslate"><span class="pre">asteroid</span></code>, nous voulons à présent parcourir la liste <code class="docutils literal notranslate"><span class="pre">asteroids</span></code> et dessiner chacun d’eux. Un parcours de liste se fait avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span> <span class="c1"># Parcourt la liste des astéroïdes</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine chacun d'eux</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span> <span class="c1"># Parcourt la liste des astéroïdes</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="c1"># Fait descendre chacun d'eux</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span> <span class="c1"># Fait tourner chacun d'eux</span>
+</pre></div>
+</div>
+</div>
+<p>Nous avons à présent une liste d’astéroïdes qui contient <code class="docutils literal notranslate"><span class="pre">3</span></code> astéroïdes. Mais comment remplir cette liste au cours du jeu ?</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code complet à ce point<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="ajouter-des-asteroides-au-cours-du-jeu">
+<h1>8. Ajouter des astéroïdes au cours du jeu<a class="headerlink" href="#ajouter-des-asteroides-au-cours-du-jeu" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Commençons par définir une nouvelle fonction qui va s’occuper d’ajouter un nouvel astéroïde à la liste. Dans cet exemple, je vais la nommer <code class="docutils literal notranslate"><span class="pre">add_asteroid</span></code>, mais vous pouvez lui donner le nom que vous voulez car ce n’est pas une fonction spéciale comme <code class="docutils literal notranslate"><span class="pre">update</span></code> ou <code class="docutils literal notranslate"><span class="pre">draw</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">add_asteroid</span><span class="p">()</span> <span class="c1"># Appelle la fonction add_asteroid 3 fois pour ajouter 3 astéroïdes au départ</span>
+
+<span class="k">def</span> <span class="nf">add_asteroid</span><span class="p">():</span>
+    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span> <span class="c1"># Ajoute l'astéroïde à la liste des astéroïdes</span>
+</pre></div>
+</div>
+<p>La question est: quand appeler cette fonction ? Quand voulons-nous ajouter un astéroïde ? Ici, disons que nous aimerions ajouter un astéroïde toutes les 5 secondes. (Mais nous pourrions aussi choisir d’en ajouter un à chaque fois qu’un astéroïde est détruit ou sort de l’écran, ou à chaque fois que le joueur atteint un certain score, etc.)</p>
+<p>Pour appler notre fonction toutes les 5 secondes, Pygame nous offre pour ceci un objet très utile: <code class="docutils literal notranslate"><span class="pre">clock</span></code>. <strong>Cet objet permet d’agender des appels de fonction dans le temps</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">add_asteroid</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">schedule_interval(f,</span> <span class="pre">x)</span></code> permet d’appeler automatiquement une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">x</span></code> secondes. Nous l’avons donc réglée pour appeler <code class="docutils literal notranslate"><span class="pre">add_asteroid</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">5</span></code> secondes, mais vous pouvez modifier cette valeur.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code complet à ce point<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">add_asteroid</span><span class="p">()</span>
+
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">add_asteroid</span><span class="p">():</span>
+    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details><section id="tirer-des-lasers">
+<h2>9. Tirer des lasers<a class="headerlink" href="#tirer-des-lasers" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est temps de pouvoir tirer sur les astéroïdes ! Nous allons créer un nouvel acteur pour représenter un laser qui sera tiré en appuyant sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code> et qui partira vers le haut.</p>
+<p>Commençons par créer une liste de lasers (vide au départ) qui se remplira à chaque fois que le joueur appuiera sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code> pour tirer.  Il nous faut également une fonction <code class="docutils literal notranslate"><span class="pre">add_laser</span></code> qui s’occupera de créer un nouveau laser et de l’ajouter à la liste.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+
+<span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Création de la liste vide de lasers</span>
+
+<span class="k">def</span> <span class="nf">add_laser</span><span class="p">():</span>
+    <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span> <span class="c1"># Création du laser</span>
+    <span class="n">laser</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="c1"># Positionnement du laser à l'emplacement du joueur en x</span>
+    <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="c1"># Positionnement du laser à l'emplacement du joueur en y</span>
+    <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Vitesse de déplacement du laser</span>
+    <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span> <span class="c1"># Ajout du laser à la liste des lasers</span>
+</pre></div>
+</div>
+<p>Nous voulons appeler cette fonction <code class="docutils literal notranslate"><span class="pre">add_laser</span></code> à chaque fois que le joueur appuie sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code>. Cette détection doit se faire dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span> <span class="c1"># Si la touche espace est enfoncée</span>
+        <span class="n">add_laser</span><span class="p">()</span> <span class="c1"># On ajoute un laser</span>
+</pre></div>
+</div>
+<p>Il nous reste à afficher nos lasers en les ajoutant à la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> et à les faire avancer dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> en modifiant leur coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> pour les faire monter vers le haut de l’écran.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Parcourt les lasers</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine chacun d'eux</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Parcourt les lasers</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="c1"># Fait monter chacun d'eux</span>
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code complet à ce point<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">add_asteroid</span><span class="p">()</span>
+
+<span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">add_asteroid</span><span class="p">():</span>
+    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">add_laser</span><span class="p">():</span>
+    <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span>
+    <span class="n">laser</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span>
+    <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
+        <span class="n">add_laser</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="gerer-les-collisions">
+<h2>10. Gérer les collisions<a class="headerlink" href="#gerer-les-collisions" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est temps de donner du pouvoir à nos lasers pour détruire les astéroïdes ! Mais également à nos astéroïdes pour détruire notre vaisseau !</p>
+<img alt="../_images/collision.png" src="../_images/collision.png"/>
+<div class="note admonition">
+<p class="admonition-title">Rappel</p>
+<p>Un check de collision entre un acteur et un autre acteur se fait avec la méthode <code class="docutils literal notranslate"><span class="pre">acteur.collides_with(autre_acteur)</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> s’il y a collision entre les deux acteurs et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p>
+</div>
+<p>Commençons par les collisions entre le vaisseau et les astéroïdes. Où ajouter ce check de collision ? Nous allons parcourir la liste des astéroïdes et contrôler si l’un d’eux est en contact avec le vaisseau.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span> <span class="c1"># Si le joueur est en contact avec un astéroïde</span>
+            <span class="n">exit</span><span class="p">()</span> <span class="c1"># On quitte le jeu</span>
+</pre></div>
+</div>
+<p>Passons à présent aux collisions entre les lasers et les astéroïdes. Où ajouter le contrôle de collision ? Le plus simple est de le faire après le déplacement d’un laser: on parcourt la liste des astéroïdes et on contrôle si le laser est en contact avec l’un d’eux.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span>
+        <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">laser</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span> <span class="c1"># Si le laser est en contact avec un astéroïde</span>
+                <span class="n">asteroids</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span> <span class="c1"># On supprime l'astéroïde de la liste des astéroïdes</span>
+                <span class="n">lasers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span> <span class="c1"># On supprime le laser de la liste des lasers</span>
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Supprimer des acteurs</p>
+<p>Notez que l’on peut supprimer un acteur d’une liste avec la méthode <code class="docutils literal notranslate"><span class="pre">remove</span></code> de la liste.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Voir le code complet à ce point<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzrun</span>
+<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
+
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
+<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">add_asteroid</span><span class="p">()</span>
+
+<span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">add_asteroid</span><span class="p">():</span>
+    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">add_laser</span><span class="p">():</span>
+    <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span>
+    <span class="n">laser</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span>
+    <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
+
+    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
+        <span class="n">add_laser</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span>
+
+<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="idees-dameliorations">
+<h2>10. Idées d’améliorations<a class="headerlink" href="#idees-dameliorations" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="admonition-travail-a-rendre admonition">
+<p class="admonition-title">Travail à rendre</p>
+<p>Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu:</p>
+<ul class="simple">
+<li><p>2 améliorations faciles</p></li>
+<li><p>1 amélioration moyenne</p></li>
+</ul>
+</div>
+<p>Voici plusieurs idées d’amélioration du jeu.<br/>
+Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur difficulté.</p>
+<p><strong>Totalement dans vos cordes (facile):</strong></p>
+<ul class="simple">
+<li><p>Ajouter des bruitages (ex: tir + destruction d’astéroïde) et de la musique.</p></li>
+<li><p>Faire en sorte que le vaisseau ne puisse pas sortir de l’écran.</p></li>
+<li><p>Ajouter un compteur d’astéroïdes détruits (score) et l’afficher à l’écran.</p></li>
+<li><p>Les astéroïdes ne se déplacent pas tous à la même vitesse, certains sont plus rapides que d’autres (aléatoirement).</p></li>
+<li><p>Détruire automatiquement les lasers et astéroïdes qui sortent de l’écran pour éviter d’avoir des listes qui se remplissent à l’infini et qui ralentissent le jeu.</p></li>
+<li><p>Les astéroïdes n’ont pas tous la même taille ou image (aléatoirement).</p></li>
+</ul>
+<p><strong>Un peu plus complexe (moyen):</strong></p>
+<ul class="simple">
+<li><p>Faire en sorte qu’en cas de collision avec un astéroïde, le vaisseau perd de la vie et l’astéroïde est détruit. La vie du vaisseau est affichée à l’écran.</p></li>
+<li><p>Faire en sorte que les astéroïdes doivent recevoir plusieurs tirs avant d’être détruits (en leur donnant une vie qui diminue à chaque tir).</p></li>
+<li><p>Permettre au vaisseau de ramasser des objets pour augmenter son score ou sa vitesse.</p></li>
+<li><p>Ajouter une image d’explosion qui apparaît puis disparaît lorsqu’un astéroïde est détruit.</p></li>
+<li><p>Ajouter un second joueur qui pourra se déplacer et tirer avec d’autres touches.</p></li>
+<li><p>Ajouter un nouveau type d’ennemi qui se comporte différemment que les astéroïdes.</p></li>
+<li><p>Faire en sorte que le personnage ne se déplace pas plus rapidement en diagonal qu’à l’horizontal ou à la verticale.</p></li>
+</ul>
+<p><strong>Challenging (difficile):</strong></p>
+<ul class="simple">
+<li><p>Faire en sorte que le monde bouge autour du personnage afin qu’il puisse se balader librement dans toutes les directions sans jamais toucher un bord. Indice: le joueur ne se déplace plus, mais déplacez tous les acteurs du jeu dans la direction inverse au déplacement du joueur.</p></li>
+<li><p>Ajouter un ennemi capable de tirer des lasers vers le joueur.</p></li>
+<li><p>Créer un second niveau atteignable en passant un certain score où les ennemis sont différents et plus coriaces.</p></li>
+<li><p>Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d’autres options.</p></li>
+<li><p>Autres idées…?</p></li>
+</ul>
+</section>
+<section id="travailler-en-dehors-des-tp">
+<h2>Travailler en dehors des TP<a class="headerlink" href="#travailler-en-dehors-des-tp" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="danger admonition">
+<p class="admonition-title">Comment travailler en dehors du TP</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Depuis la maison<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text">Téléchargez et installez <a class="reference external" href="https://www.python.org/downloads/">Python</a>.</p></li>
+<li><p class="card-text">Téléchargez et installez <a class="reference external" href="https://www.jetbrains.com/fr-fr/pycharm/download/">Pycharm</a>. Faites attention à sélectionner la version qui correspond à votre système d’exploitation (Windows, MacOS, Linux).</p></li>
+<li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet. (Bouton “New Project” sur l’écran d’accueil ou via le menu “File” -&gt; “New Project”).</p></li>
+<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PythonProject par défaut).</p></li>
+<li><p class="card-text">Installez le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, assurez-vous d’avoir la ligne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> tout en haut de votre code et Pycharm vous proposera de l’installer <strong>en passant le curseur de la souris dessus</strong> (sur <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>).</p></li>
+</ol>
+<img alt="../_images/pgzero.png" src="../_images/pgzero.png"/>
+<p class="card-text">Programmez !</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Depuis l’école<div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet.</p></li>
+<li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet. <strong>Attention</strong>, si vous prenez votre dossier de travail depuis votre disque réseau (pxxxxx), il faudra le copier sur le bureau avant de le déplacer dans Pycharm.</p></li>
+<li><p class="card-text">Installez le package <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>. Pour cela, assurez-vous d’avoir la ligne <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pgzero</span></code> tout en haut de votre code et Pycharm vous proposera de l’installer <strong>en passant le curseur de la souris dessus</strong> (sur <code class="docutils literal notranslate"><span class="pre">pgzero</span></code>).</p></li>
+</ol>
+<img alt="../_images/pgzero.png" src="../_images/pgzero.png"/>
+<p class="card-text">Programmez !</p>
+</div>
+</details></div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="platformer.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">5. Jumper (platformer)</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="runner_new.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">3. Running Ninja (runner)</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+            <a class="muted-link" href="../_sources/prog_jeu/star_wars.md.txt"
+               rel="nofollow">
+              Montrer le code source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contenu
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">4. Star wars (shooter)</a><ul>
+<li><a class="reference internal" href="#faire-apparaitre-une-fenetre">1. Faire apparaître une fenêtre</a></li>
+<li><a class="reference internal" href="#soccuper-du-fond-decran">2. S’occuper du fond d’écran</a></li>
+<li><a class="reference internal" href="#ajouter-le-vaisseau">3. Ajouter le vaisseau</a></li>
+<li><a class="reference internal" href="#deplacer-le-vaisseau">4. Déplacer le vaisseau</a></li>
+<li><a class="reference internal" href="#ajouter-un-asteroide">5. Ajouter un astéroide</a></li>
+<li><a class="reference internal" href="#faire-tourner-lasteroide-sur-lui-meme">6. Faire tourner l’astéroïde sur lui-même</a></li>
+<li><a class="reference internal" href="#ajouter-plusieurs-asteroides">7. Ajouter plusieurs astéroïdes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ajouter-des-asteroides-au-cours-du-jeu">8. Ajouter des astéroïdes au cours du jeu</a><ul>
+<li><a class="reference internal" href="#tirer-des-lasers">9. Tirer des lasers</a></li>
+<li><a class="reference internal" href="#gerer-les-collisions">10. Gérer les collisions</a></li>
+<li><a class="reference internal" href="#idees-dameliorations">10. Idées d’améliorations</a></li>
+<li><a class="reference internal" href="#travailler-en-dehors-des-tp">Travailler en dehors des TP</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/glossary.js"></script>
+    <script src="../_static/questions.js"></script>
+    <script src="https://logic.modulo-info.ch/simulator/lib/bundle.js"></script>
+    <script src="../_static/blanks.js"></script>
+    <script src="../_static/timeline.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../_static/scripts/reactions.js"></script>
+    <script src="../_static/scripts/progress.js"></script>
+    <script src="../_static/scripts/dark.js"></script>
+    <script src="../_static/scripts/frames.js"></script>
+    </body>
+</html>

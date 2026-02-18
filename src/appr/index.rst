@@ -67,7 +67,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog_jeu/rappels
    prog_jeu/intro_pygame
    prog_jeu/runner_new
-   prog_jeu/hit_the_fly
+   prog_jeu/star_wars
    prog_jeu/platformer
    prog_jeu/projet
    prog_jeu/projets_eleves
