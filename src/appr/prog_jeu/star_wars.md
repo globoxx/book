@@ -210,21 +210,21 @@ pgzrun.go()
 ```
 ````
 
-## 5. Ajouter un astéroide
+## 5. Ajouter un astéroïde
 
 Il est temps d'ajouter des astéroïdes pour pimenter un peu notre jeu. Ils apparaîtront en haut de l'écran et descendront vers le bas.
 
 ```{image} ../media/asteroid.png
 ```
 
-Nous pouvons ensuite créer un objet `asteroid` et lui donner des coordonnées de départ (`x` aléatoire et `y` fixe en haut de l'écran). La foncton permettant de tirer un nombre entier aléatoire entre 2 bornes `a` et `b` se nomme `randint(a, b)`. Pour qu'elle fonctionne, nous devons également importer le module `random` qui contient cette fonction.
+Nous pouvons ensuite créer un objet `asteroid` et lui donner des coordonnées de départ (`x` aléatoire et `y` fixe en haut de l'écran). La fonction permettant de tirer un nombre entier aléatoire entre 2 bornes `a` et `b` se nomme `randint(a, b)`. Pour qu'elle fonctionne, nous devons également importer le module `random` qui contient cette fonction.
 
 ```python
 from random import * # Importe tout un tas de fonctions pour faire de l'aléatoire
 
 ...
 
-asteroid = Ennemy('asteroid') # Création de l'ennemi aux coordonnées aléatoires
+asteroid = Actor('asteroid') # Création de l'ennemi aux coordonnées aléatoires
 asteroid.x = randint(0, WIDTH) # Positionnement aléatoire en x
 asteroid.y = -50 # Positionnement en haut de l'écran
 ```
@@ -238,7 +238,7 @@ def draw():
     asteroid.draw() # On dessine l'astéroïde !
 ```
 
-Occupons nous à présent du déplacement de notre astéroïde. Il va simplement "tomber" vers le bas de l'écran, c'est à dire que sa coordonnée `y` va augmenter au cours du temps tandis que sa coordonnée `x` restera fixe. Nous allons lui donner une vitesse de déplacement `speed` comme pour le vaisseau.
+Occupons-nous à présent du déplacement de notre astéroïde. Il va simplement "tomber" vers le bas de l'écran, c'est à dire que sa coordonnée `y` va augmenter au cours du temps tandis que sa coordonnée `x` restera fixe. Nous allons lui donner une vitesse de déplacement `speed` comme pour le vaisseau.
 
 ```python
 ...
@@ -443,29 +443,34 @@ pgzrun.go()
 
 Commençons par définir une nouvelle fonction qui va s'occuper d'ajouter un nouvel astéroïde à la liste. Dans cet exemple, je vais la nommer `add_asteroid`, mais vous pouvez lui donner le nom que vous voulez car ce n'est pas une fonction spéciale comme `update` ou `draw`.
 
-```python
-for i in range(3):
-    add_asteroid() # Appelle la fonction add_asteroid 3 fois pour ajouter 3 astéroïdes au départ
+```{admonition} Où écrire cette fonction ?
+:class: warning
+Il faut écrire cette fonction assez haut dans le code, par exemple juste après avoir défini le titre et la taille de la fenêtre de jeu. En effet, nous allons devoir appeler la fonction et elle doit être définie avant son appel.
+```
 
+```python
 def add_asteroid():
     asteroid = Actor('asteroid')
     asteroid.x = randint(0, WIDTH)
     asteroid.y = -50
     asteroid.speed = 5
     asteroids.append(asteroid) # Ajoute l'astéroïde à la liste des astéroïdes
+
+...
+
+for i in range(3):
+    add_asteroid() # Appelle la fonction add_asteroid 3 fois pour ajouter 3 astéroïdes au départ
+    # Cet appel remplace le code de création d'astéroïde que nous avions avant
 ```
 
 La question est: quand appeler cette fonction ? Quand voulons-nous ajouter un astéroïde ? Ici, disons que nous aimerions ajouter un astéroïde toutes les 5 secondes. (Mais nous pourrions aussi choisir d'en ajouter un à chaque fois qu'un astéroïde est détruit ou sort de l'écran, ou à chaque fois que le joueur atteint un certain score, etc.)
 
-Pour appler notre fonction toutes les 5 secondes, Pygame nous offre pour ceci un objet très utile: `clock`. **Cet objet permet d'agender des appels de fonction dans le temps**.
+Pour appeler notre fonction toutes les 5 secondes, Pygame nous offre pour ceci un objet très utile: `clock`. **Cet objet permet d'agender des appels de fonction dans le temps**.
 
 ```python
 ...
 
 clock.schedule_interval(add_asteroid, 5.0)
-
-def add_asteroid():
-    ...
 ```
 
 La méthode `schedule_interval(f, x)` permet d'appeler automatiquement une fonction `f` toutes les `x` secondes. Nous l'avons donc réglée pour appeler `add_asteroid` toutes les `5` secondes, mais vous pouvez modifier cette valeur.
@@ -480,6 +485,13 @@ TITLE = 'Star Wars'
 WIDTH = 1000
 HEIGHT = 800
 
+def add_asteroid():
+    asteroid = Actor('asteroid')
+    asteroid.x = randint(0, WIDTH)
+    asteroid.y = -50
+    asteroid.speed = 5
+    asteroids.append(asteroid)
+
 player = Actor('ship')
 player.x = WIDTH/2
 player.y = HEIGHT/2
@@ -490,13 +502,6 @@ for i in range(3):
     add_asteroid()
 
 clock.schedule_interval(add_asteroid, 5.0)
-
-def add_asteroid():
-    asteroid = Actor('asteroid')
-    asteroid.x = randint(0, WIDTH)
-    asteroid.y = -50
-    asteroid.speed = 5
-    asteroids.append(asteroid)
 
 def draw():
     screen.blit('space_background', (0, 0))
@@ -527,12 +532,13 @@ pgzrun.go()
 
 Il est temps de pouvoir tirer sur les astéroïdes ! Nous allons créer un nouvel acteur pour représenter un laser qui sera tiré en appuyant sur la touche `espace` et qui partira vers le haut.
 
-Commençons par créer une liste de lasers (vide au départ) qui se remplira à chaque fois que le joueur appuiera sur la touche `espace` pour tirer.  Il nous faut également une fonction `add_laser` qui s'occupera de créer un nouveau laser et de l'ajouter à la liste.
+Commençons par créer une liste de lasers (vide au départ) qui se remplira à chaque fois que le joueur appuiera sur la touche `espace` pour tirer.  Il nous faut également une fonction `add_laser` qui s'occupera de créer un nouveau laser et de l'ajouter à la liste (très similaire à `add_asteroid`).
 
 ```python
 ...
 
-lasers = [] # Création de la liste vide de lasers
+def add_asteroid():
+    ...
 
 def add_laser():
     laser = Actor('laser') # Création du laser
@@ -540,6 +546,8 @@ def add_laser():
     laser.y = player.y # Positionnement du laser à l'emplacement du joueur en y
     laser.speed = 10 # Vitesse de déplacement du laser
     lasers.append(laser) # Ajout du laser à la liste des lasers
+
+lasers = [] # Création de la liste de lasers, elle est vide au départ
 ```
 
 Nous voulons appeler cette fonction `add_laser` à chaque fois que le joueur appuie sur la touche `espace`. Cette détection doit se faire dans la fonction `update`.
@@ -575,19 +583,6 @@ TITLE = 'Star Wars'
 WIDTH = 1000
 HEIGHT = 800
 
-player = Actor('ship')
-player.x = WIDTH/2
-player.y = HEIGHT/2
-player.speed = 3
-
-asteroids = []
-for i in range(3):
-    add_asteroid()
-
-lasers = []
-
-clock.schedule_interval(add_asteroid, 5.0)
-
 def add_asteroid():
     asteroid = Actor('asteroid')
     asteroid.x = randint(0, WIDTH)
@@ -601,6 +596,19 @@ def add_laser():
     laser.y = player.y
     laser.speed = 10
     lasers.append(laser)
+
+player = Actor('ship')
+player.x = WIDTH/2
+player.y = HEIGHT/2
+player.speed = 3
+
+asteroids = []
+for i in range(3):
+    add_asteroid()
+
+lasers = []
+
+clock.schedule_interval(add_asteroid, 5.0)
 
 def draw():
     screen.blit('space_background', (0, 0))
@@ -676,7 +684,6 @@ def update():
 Notez que l'on peut supprimer un acteur d'une liste avec la méthode `remove` de la liste.
 ```
 
-
 ````{dropdown} Voir le code complet à ce point
 ```python
 import pgzrun
@@ -686,19 +693,6 @@ from random import *
 TITLE = 'Star Wars'
 WIDTH = 1000
 HEIGHT = 800
-
-player = Actor('ship')
-player.x = WIDTH/2
-player.y = HEIGHT/2
-player.speed = 3
-
-asteroids = []
-for i in range(3):
-    add_asteroid()
-
-lasers = []
-
-clock.schedule_interval(add_asteroid, 5.0)
 
 def add_asteroid():
     asteroid = Actor('asteroid')
@@ -713,6 +707,19 @@ def add_laser():
     laser.y = player.y
     laser.speed = 10
     lasers.append(laser)
+
+player = Actor('ship')
+player.x = WIDTH/2
+player.y = HEIGHT/2
+player.speed = 3
+
+asteroids = []
+for i in range(3):
+    add_asteroid()
+
+lasers = []
+
+clock.schedule_interval(add_asteroid, 5.0)
 
 def draw():
     screen.blit('space_background', (0, 0))
@@ -736,13 +743,18 @@ def update():
     for asteroid in asteroids:
         asteroid.y += asteroid.speed
         asteroid.angle += 5
+        if player.collides_with(asteroid):
+            exit()
 
     if keyboard.space:
         add_laser()
 
     for laser in lasers:
         laser.y -= laser.speed
-
+        for asteroid in asteroids:
+            if laser.collides_with(asteroid):
+                asteroids.remove(asteroid)
+                lasers.remove(laser)
 pgzrun.go()
 ```
 ````
