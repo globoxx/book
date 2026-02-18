@@ -264,7 +264,6 @@
 <li class="toctree-l1"><a class="reference internal" href="intro_pygame.html">2. Introduction à Pygame</a></li>
 <li class="toctree-l1"><a class="reference internal" href="runner_new.html">3. Running Ninja (runner)</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">4. Star wars (shooter)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#ajouter-des-asteroides-au-cours-du-jeu">8. Ajouter des astéroïdes au cours du jeu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="platformer.html">5. Jumper (platformer)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
@@ -735,9 +734,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 </div>
 </details></section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="ajouter-des-asteroides-au-cours-du-jeu">
-<h1>8. Ajouter des astéroïdes au cours du jeu<a class="headerlink" href="#ajouter-des-asteroides-au-cours-du-jeu" title="Lien permanent vers ce titre">¶</a></h1>
+<section id="ajouter-des-asteroides-au-cours-du-jeu">
+<h2>8. Ajouter des astéroïdes au cours du jeu<a class="headerlink" href="#ajouter-des-asteroides-au-cours-du-jeu" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Commençons par définir une nouvelle fonction qui va s’occuper d’ajouter un nouvel astéroïde à la liste. Dans cet exemple, je vais la nommer <code class="docutils literal notranslate"><span class="pre">add_asteroid</span></code>, mais vous pouvez lui donner le nom que vous voulez car ce n’est pas une fonction spéciale comme <code class="docutils literal notranslate"><span class="pre">update</span></code> ou <code class="docutils literal notranslate"><span class="pre">draw</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">add_asteroid</span><span class="p">()</span> <span class="c1"># Appelle la fonction add_asteroid 3 fois pour ajouter 3 astéroïdes au départ</span>
@@ -819,7 +817,8 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </pre></div>
 </div>
 </div>
-</details><section id="tirer-des-lasers">
+</details></section>
+<section id="tirer-des-lasers">
 <h2>9. Tirer des lasers<a class="headerlink" href="#tirer-des-lasers" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps de pouvoir tirer sur les astéroïdes ! Nous allons créer un nouvel acteur pour représenter un laser qui sera tiré en appuyant sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code> et qui partira vers le haut.</p>
 <p>Commençons par créer une liste de lasers (vide au départ) qui se remplira à chaque fois que le joueur appuiera sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code> pour tirer.  Il nous faut également une fonction <code class="docutils literal notranslate"><span class="pre">add_laser</span></code> qui s’occupera de créer un nouveau laser et de l’ajouter à la liste.</p>
@@ -1038,7 +1037,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 </details></section>
 <section id="idees-dameliorations">
-<h2>10. Idées d’améliorations<a class="headerlink" href="#idees-dameliorations" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Idées d’améliorations<a class="headerlink" href="#idees-dameliorations" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition-travail-a-rendre admonition">
 <p class="admonition-title">Travail à rendre</p>
 <p>Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu:</p>
@@ -1173,12 +1172,10 @@ Depuis l’école<div class="summary-down docutils">
 <li><a class="reference internal" href="#ajouter-un-asteroide">5. Ajouter un astéroide</a></li>
 <li><a class="reference internal" href="#faire-tourner-lasteroide-sur-lui-meme">6. Faire tourner l’astéroïde sur lui-même</a></li>
 <li><a class="reference internal" href="#ajouter-plusieurs-asteroides">7. Ajouter plusieurs astéroïdes</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ajouter-des-asteroides-au-cours-du-jeu">8. Ajouter des astéroïdes au cours du jeu</a><ul>
+<li><a class="reference internal" href="#ajouter-des-asteroides-au-cours-du-jeu">8. Ajouter des astéroïdes au cours du jeu</a></li>
 <li><a class="reference internal" href="#tirer-des-lasers">9. Tirer des lasers</a></li>
 <li><a class="reference internal" href="#gerer-les-collisions">10. Gérer les collisions</a></li>
-<li><a class="reference internal" href="#idees-dameliorations">10. Idées d’améliorations</a></li>
+<li><a class="reference internal" href="#idees-dameliorations">Idées d’améliorations</a></li>
 <li><a class="reference internal" href="#travailler-en-dehors-des-tp">Travailler en dehors des TP</a></li>
 </ul>
 </li>

@@ -439,7 +439,7 @@ pgzrun.go()
 ```
 ````
 
-# 8. Ajouter des astéroïdes au cours du jeu
+## 8. Ajouter des astéroïdes au cours du jeu
 
 Commençons par définir une nouvelle fonction qui va s'occuper d'ajouter un nouvel astéroïde à la liste. Dans cet exemple, je vais la nommer `add_asteroid`, mais vous pouvez lui donner le nom que vous voulez car ce n'est pas une fonction spéciale comme `update` ou `draw`.
 
@@ -747,7 +747,7 @@ pgzrun.go()
 ```
 ````
 
-## 10. Idées d'améliorations
+## Idées d'améliorations
 
 ```{admonition} Travail à rendre
 Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu:
