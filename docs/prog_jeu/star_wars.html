@@ -455,7 +455,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </pre></div>
 </div>
 <p>Vous remarquez que nous bougeons de <code class="docutils literal notranslate"><span class="pre">3</span></code> pixels par “tour de jeu”. Afin de pouvoir facilement modifier la vitesse de notre vaisseau par la suite, il serait plus judicieux de lui définir une vitesse.</p>
-<p>Nous pouvons ajouter un attribut <code class="docutils literal notranslate"><span class="pre">speed</span></code> à notre objet <code class="docutils literal notranslate"><span class="pre">player</span></code> et lui donner la valeur <code class="docutils literal notranslate"><span class="pre">3</span></code>. Ainsi, nous n’aurons ensuite plus qu’à modifier cette valeur pour accélérer ou ralentir notre personnage à notre guise.</p>
+<p>Nous pouvons ajouter un attribut <code class="docutils literal notranslate"><span class="pre">speed</span></code> à notre objet <code class="docutils literal notranslate"><span class="pre">player</span></code> et lui donner la valeur <code class="docutils literal notranslate"><span class="pre">3</span></code>. Ainsi, vous n’avez ensuite plus qu’à modifier cette valeur pour accélérer ou ralentir votre vaisseau à votre guise.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">,</span> <span class="p">(</span><span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Nouvel attribut speed pour régler la vitesse du vaisseau</span>
 
@@ -767,16 +767,16 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </pre></div>
 </div>
 <p>La question est: quand appeler cette fonction ? Quand voulons-nous ajouter un astéroïde ? Ici, disons que nous aimerions ajouter un astéroïde toutes les 5 secondes. (Mais nous pourrions aussi choisir d’en ajouter un à chaque fois qu’un astéroïde est détruit ou sort de l’écran, ou à chaque fois que le joueur atteint un certain score, etc.)</p>
-<p>Pour appeler notre fonction toutes les 5 secondes, Pygame nous offre pour ceci un objet très utile: <code class="docutils literal notranslate"><span class="pre">clock</span></code>. <strong>Cet objet permet d’agender des appels de fonction dans le temps</strong>.</p>
+<p>Pour appeler notre fonction toutes les 2 secondes, Pygame nous offre pour ceci un objet très utile: <code class="docutils literal notranslate"><span class="pre">clock</span></code>. <strong>Cet objet permet d’agender des appels de fonction dans le temps</strong>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
-<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>La méthode <code class="docutils literal notranslate"><span class="pre">schedule_interval(f,</span> <span class="pre">x)</span></code> permet d’appeler automatiquement une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">x</span></code> secondes. Nous l’avons donc réglée pour appeler <code class="docutils literal notranslate"><span class="pre">add_asteroid</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">5</span></code> secondes, mais vous pouvez modifier cette valeur.</p>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">schedule_interval(f,</span> <span class="pre">x)</span></code> permet d’appeler automatiquement une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">x</span></code> secondes. Nous l’avons donc réglée pour appeler <code class="docutils literal notranslate"><span class="pre">add_asteroid</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">2</span></code> secondes, mais vous pouvez modifier cette valeur.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir le code complet à ce point<div class="summary-down docutils">
@@ -809,7 +809,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">add_asteroid</span><span class="p">()</span>
 
-<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -916,7 +916,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -1024,7 +1024,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -1124,10 +1124,6 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <h3>Mesurer le temps entre 2 événements ?<a class="headerlink" href="#mesurer-le-temps-entre-2-evenements" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">time.time()</span></code> du module <code class="docutils literal notranslate"><span class="pre">time</span></code> pour mesurer le temps écoulé entre 2 événements. Par exemple, vous pouvez stocker le temps du dernier tir dans une variable <code class="docutils literal notranslate"><span class="pre">last_shot_time</span> <span class="pre">=</span> <span class="pre">time.time()</span></code> et ensuite vérifier si suffisamment de temps s’est écoulé avant de permettre un nouveau tir avec <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">time.time()</span> <span class="pre">-</span> <span class="pre">last_shot_time</span> <span class="pre">&gt;</span> <span class="pre">0.5:</span></code>.</p>
 </section>
-<section id="deplacer-un-acteur-dans-une-direction-donnee">
-<h3>Déplacer un acteur dans une direction donnée ?<a class="headerlink" href="#deplacer-un-acteur-dans-une-direction-donnee" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Si vous voulez déplacer un acteur dans une direction donnée, vous pouvez lui donner un attribut <code class="docutils literal notranslate"><span class="pre">direction</span></code> qui correspond à un angle en degrés (0 = vers la droite, 90 = vers le bas, 180 = vers la gauche, 270 = vers le haut). Ensuite, dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>, vous pouvez simplement appeler <code class="docutils literal notranslate"><span class="pre">acteur.move_in_direction(speed)</span></code> qui déplacera l’acteur à la vitesse <code class="docutils literal notranslate"><span class="pre">speed</span></code> dans la direction indiquée par son attribut <code class="docutils literal notranslate"><span class="pre">direction</span></code>. Cela remplace donc <code class="docutils literal notranslate"><span class="pre">acteur.x</span> <span class="pre">+=</span> <span class="pre">...</span></code> et <code class="docutils literal notranslate"><span class="pre">acteur.y</span> <span class="pre">+=</span> <span class="pre">...</span></code>.</p>
-</section>
 <section id="detecter-un-clic-de-souris">
 <h3>Détecter un clic de souris ?<a class="headerlink" href="#detecter-un-clic-de-souris" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pygame Zero offre une fonction spéciale <code class="docutils literal notranslate"><span class="pre">on_mouse_down(pos)</span></code> qui est appelée automatiquement à chaque fois que l’utilisateur clique avec la souris. La variable <code class="docutils literal notranslate"><span class="pre">pos</span></code> correspond aux coordonnées du clic de souris. Vous pouvez donc ajouter cette fonction à votre code et y mettre le code que vous voulez exécuter à chaque clic de souris.
@@ -1150,6 +1146,10 @@ Exemple:</p>
     <span class="n">button</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Affiche le bouton</span>
 </pre></div>
 </div>
+</section>
+<section id="deplacer-un-acteur-dans-une-direction-donnee">
+<h3>Déplacer un acteur dans une direction donnée ?<a class="headerlink" href="#deplacer-un-acteur-dans-une-direction-donnee" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si vous voulez déplacer un acteur dans une direction donnée, vous pouvez lui donner un attribut <code class="docutils literal notranslate"><span class="pre">direction</span></code> qui correspond à un angle en degrés (0 = vers la droite, 90 = vers le bas, 180 = vers la gauche, 270 = vers le haut). Ensuite, dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>, vous pouvez simplement appeler <code class="docutils literal notranslate"><span class="pre">acteur.move_in_direction(speed)</span></code> qui déplacera l’acteur à la vitesse <code class="docutils literal notranslate"><span class="pre">speed</span></code> dans la direction indiquée par son attribut <code class="docutils literal notranslate"><span class="pre">direction</span></code>. Cela remplace donc <code class="docutils literal notranslate"><span class="pre">acteur.x</span> <span class="pre">+=</span> <span class="pre">...</span></code> et <code class="docutils literal notranslate"><span class="pre">acteur.y</span> <span class="pre">+=</span> <span class="pre">...</span></code>.</p>
 </section>
 <section id="calculer-langle-la-direction-entre-2-acteurs">
 <h3>Calculer l’angle / la direction entre 2 acteurs ?<a class="headerlink" href="#calculer-langle-la-direction-entre-2-acteurs" title="Lien permanent vers ce titre">¶</a></h3>
@@ -1266,9 +1266,9 @@ Depuis l’école<div class="summary-down docutils">
 <li><a class="reference internal" href="#ajouter-une-variable-dans-du-texte-affiche-a-lecran">Ajouter une variable dans du texte affiché à l’écran ?</a></li>
 <li><a class="reference internal" href="#tirer-un-nom-dimage-aleatoire">Tirer un nom d’image aléatoire ?</a></li>
 <li><a class="reference internal" href="#mesurer-le-temps-entre-2-evenements">Mesurer le temps entre 2 événements ?</a></li>
-<li><a class="reference internal" href="#deplacer-un-acteur-dans-une-direction-donnee">Déplacer un acteur dans une direction donnée ?</a></li>
 <li><a class="reference internal" href="#detecter-un-clic-de-souris">Détecter un clic de souris ?</a></li>
 <li><a class="reference internal" href="#ajouter-un-bouton">Ajouter un bouton ?</a></li>
+<li><a class="reference internal" href="#deplacer-un-acteur-dans-une-direction-donnee">Déplacer un acteur dans une direction donnée ?</a></li>
 <li><a class="reference internal" href="#calculer-langle-la-direction-entre-2-acteurs">Calculer l’angle / la direction entre 2 acteurs ?</a></li>
 </ul>
 </li>

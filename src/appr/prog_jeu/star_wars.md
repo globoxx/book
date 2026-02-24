@@ -165,7 +165,7 @@ def update():
 
 Vous remarquez que nous bougeons de `3` pixels par "tour de jeu". Afin de pouvoir facilement modifier la vitesse de notre vaisseau par la suite, il serait plus judicieux de lui définir une vitesse.
 
-Nous pouvons ajouter un attribut `speed` à notre objet `player` et lui donner la valeur `3`. Ainsi, nous n'aurons ensuite plus qu'à modifier cette valeur pour accélérer ou ralentir notre personnage à notre guise.
+Nous pouvons ajouter un attribut `speed` à notre objet `player` et lui donner la valeur `3`. Ainsi, vous n'avez ensuite plus qu'à modifier cette valeur pour accélérer ou ralentir votre vaisseau à votre guise.
 
 ```python
 player = Actor('ship', (WIDTH/2, HEIGHT/2))
@@ -477,18 +477,18 @@ for i in range(3):
 
 La question est: quand appeler cette fonction ? Quand voulons-nous ajouter un astéroïde ? Ici, disons que nous aimerions ajouter un astéroïde toutes les 5 secondes. (Mais nous pourrions aussi choisir d'en ajouter un à chaque fois qu'un astéroïde est détruit ou sort de l'écran, ou à chaque fois que le joueur atteint un certain score, etc.)
 
-Pour appeler notre fonction toutes les 5 secondes, Pygame nous offre pour ceci un objet très utile: `clock`. **Cet objet permet d'agender des appels de fonction dans le temps**.
+Pour appeler notre fonction toutes les 2 secondes, Pygame nous offre pour ceci un objet très utile: `clock`. **Cet objet permet d'agender des appels de fonction dans le temps**.
 
 ```python
 ...
 
-clock.schedule_interval(add_asteroid, 5.0)
+clock.schedule_interval(add_asteroid, 2.0)
 
 def draw():
     ...
 ```
 
-La méthode `schedule_interval(f, x)` permet d'appeler automatiquement une fonction `f` toutes les `x` secondes. Nous l'avons donc réglée pour appeler `add_asteroid` toutes les `5` secondes, mais vous pouvez modifier cette valeur.
+La méthode `schedule_interval(f, x)` permet d'appeler automatiquement une fonction `f` toutes les `x` secondes. Nous l'avons donc réglée pour appeler `add_asteroid` toutes les `2` secondes, mais vous pouvez modifier cette valeur.
 
 ````{dropdown} Voir le code complet à ce point
 ```python
@@ -517,7 +517,7 @@ asteroids = []
 for i in range(3):
     add_asteroid()
 
-clock.schedule_interval(add_asteroid, 5.0)
+clock.schedule_interval(add_asteroid, 2.0)
 
 def draw():
     screen.blit('space_background', (0, 0))
@@ -625,7 +625,7 @@ for i in range(3):
 
 lasers = []
 
-clock.schedule_interval(add_asteroid, 5.0)
+clock.schedule_interval(add_asteroid, 2.0)
 
 def draw():
     screen.blit('space_background', (0, 0))
@@ -737,7 +737,7 @@ for i in range(3):
 
 lasers = []
 
-clock.schedule_interval(add_asteroid, 5.0)
+clock.schedule_interval(add_asteroid, 2.0)
 
 def draw():
     screen.blit('space_background', (0, 0))
@@ -831,9 +831,6 @@ Vous pouvez utiliser le module `random` de Python pour tirer un nom d'image alé
 ### Mesurer le temps entre 2 événements ?
 Vous pouvez utiliser la fonction `time.time()` du module `time` pour mesurer le temps écoulé entre 2 événements. Par exemple, vous pouvez stocker le temps du dernier tir dans une variable `last_shot_time = time.time()` et ensuite vérifier si suffisamment de temps s'est écoulé avant de permettre un nouveau tir avec `if time.time() - last_shot_time > 0.5:`.
 
-### Déplacer un acteur dans une direction donnée ?
-Si vous voulez déplacer un acteur dans une direction donnée, vous pouvez lui donner un attribut `direction` qui correspond à un angle en degrés (0 = vers la droite, 90 = vers le bas, 180 = vers la gauche, 270 = vers le haut). Ensuite, dans la fonction `update`, vous pouvez simplement appeler `acteur.move_in_direction(speed)` qui déplacera l'acteur à la vitesse `speed` dans la direction indiquée par son attribut `direction`. Cela remplace donc `acteur.x += ...` et `acteur.y += ...`.
-
 ### Détecter un clic de souris ?
 Pygame Zero offre une fonction spéciale `on_mouse_down(pos)` qui est appelée automatiquement à chaque fois que l'utilisateur clique avec la souris. La variable `pos` correspond aux coordonnées du clic de souris. Vous pouvez donc ajouter cette fonction à votre code et y mettre le code que vous voulez exécuter à chaque clic de souris.
 Exemple:
@@ -854,6 +851,9 @@ def on_mouse_down(pos):
 def draw():
     button.draw() # Affiche le bouton
 ```
+
+### Déplacer un acteur dans une direction donnée ?
+Si vous voulez déplacer un acteur dans une direction donnée, vous pouvez lui donner un attribut `direction` qui correspond à un angle en degrés (0 = vers la droite, 90 = vers le bas, 180 = vers la gauche, 270 = vers le haut). Ensuite, dans la fonction `update`, vous pouvez simplement appeler `acteur.move_in_direction(speed)` qui déplacera l'acteur à la vitesse `speed` dans la direction indiquée par son attribut `direction`. Cela remplace donc `acteur.x += ...` et `acteur.y += ...`.
 
 ### Calculer l'angle / la direction entre 2 acteurs ?
 Vous pouvez utiliser la fonction `angle_to` d'un acteur pour calculer l'angle entre lui et un autre acteur. Par exemple, `player.angle_to(asteroid)` vous donnera l'angle en degrés entre le joueur et l'astéroïde. Cela peut être utile pour faire un ennemi qui poursuit le joueur ou pour faire des tirs qui partent dans la direction du joueur.
