@@ -32,6 +32,7 @@ pgzrun.go() # Lance le jeu
 Pygame Zero fonctionne avec 2 fonctions principales: `draw` et `update`. Tandis que `draw` est appelée pour afficher des choses à l'écran, `update` est appelée pour faire évoluer le jeu. Elles sont toutes 2 appelées en boucle automatiquement.
 
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -68,6 +69,7 @@ La méthode `blit(image, (x, y))` de `screen` permet de dessiner une image sur l
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -113,6 +115,7 @@ Il est possible de redimensionner une image d'acteur en lui donnant une échelle
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -184,6 +187,7 @@ def update():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 
@@ -261,6 +265,7 @@ Une fois arrivé en bas de l'écran, l'astéroïde disparaît pour toujours. C'e
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 from random import *
@@ -314,6 +319,7 @@ def update():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 from random import *
@@ -398,6 +404,7 @@ Nous avons à présent une liste d'astéroïdes qui contient `3` astéroïdes. M
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 from random import *
@@ -485,6 +492,7 @@ La méthode `schedule_interval(f, x)` permet d'appeler automatiquement une fonct
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 from random import *
@@ -583,6 +591,7 @@ def update():
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 from random import *
@@ -694,6 +703,7 @@ Notez que l'on peut supprimer un acteur d'une liste avec la méthode `remove` de
 
 ````{dropdown} Voir le code complet à ce point
 ```python
+import pgzero
 import pgzrun
 from pgzhelper import *
 from random import *
@@ -786,7 +796,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Ajouter un compteur d'astéroïdes détruits (score) et l'afficher à l'écran.
 * Les astéroïdes ne se déplacent pas tous à la même vitesse, certains sont plus rapides que d'autres (aléatoirement).
 * Détruire automatiquement les lasers et astéroïdes qui sortent de l'écran pour éviter d'avoir des listes qui se remplissent à l'infini et qui ralentissent le jeu.
-* Les astéroïdes n'ont pas tous la même taille ou image (aléatoirement).
+* Les astéroïdes n'ont pas tous la même taille ou la même image.
 
 **Un peu plus complexe (moyen):**
 
@@ -806,6 +816,52 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Créer un second niveau atteignable en passant un certain score où les ennemis sont différents et plus coriaces.
 * Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.
 * Autres idées..?
+
+## Comment faire pour ... ?
+
+### Afficher du texte à l'écran ?
+Il existe une fonction `screen.draw.text` qui permet d'afficher du texte à l'écran. Par exemple, `screen.draw.text('Score: 10', (10, 10), fontsize=30, color='white')` affichera le texte "Score: 10" en blanc avec une taille de police de 30 aux coordonnées (10, 10) de la fenêtre.
+
+### Ajouter une variable dans du texte affiché à l'écran ?
+Si vous voulez afficher une variable dans du texte, vous pouvez utiliser les f-strings de Python. Par exemple, si vous avez une variable `score` qui vaut 10, vous pouvez l'afficher avec le texte "Score: 10" en écrivant `screen.draw.text(f'Score: {score}', (10, 10), fontsize=30, color='white')`.
+
+### Tirer un nom d'image aléatoire ?
+Vous pouvez utiliser le module `random` de Python pour tirer un nom d'image aléatoire. Par exemple, si vous avez plusieurs images d'astéroïdes nommées `asteroid1.png`, `asteroid2.png`, etc., vous pouvez choisir une image aléatoire avec `random.choice(['asteroid1', 'asteroid2', 'asteroid3'])`.
+
+### Mesurer le temps entre 2 événements ?
+Vous pouvez utiliser la fonction `time.time()` du module `time` pour mesurer le temps écoulé entre 2 événements. Par exemple, vous pouvez stocker le temps du dernier tir dans une variable `last_shot_time = time.time()` et ensuite vérifier si suffisamment de temps s'est écoulé avant de permettre un nouveau tir avec `if time.time() - last_shot_time > 0.5:`.
+
+### Déplacer un acteur dans une direction donnée ?
+Si vous voulez déplacer un acteur dans une direction donnée, vous pouvez lui donner un attribut `direction` qui correspond à un angle en degrés (0 = vers la droite, 90 = vers le bas, 180 = vers la gauche, 270 = vers le haut). Ensuite, dans la fonction `update`, vous pouvez simplement appeler `acteur.move_in_direction(speed)` qui déplacera l'acteur à la vitesse `speed` dans la direction indiquée par son attribut `direction`. Cela remplace donc `acteur.x += ...` et `acteur.y += ...`.
+
+### Détecter un clic de souris ?
+Pygame Zero offre une fonction spéciale `on_mouse_down(pos)` qui est appelée automatiquement à chaque fois que l'utilisateur clique avec la souris. La variable `pos` correspond aux coordonnées du clic de souris. Vous pouvez donc ajouter cette fonction à votre code et y mettre le code que vous voulez exécuter à chaque clic de souris.
+Exemple:
+```python
+def on_mouse_down(pos):
+    print(f'Vous avez cliqué aux coordonnées {pos}')    
+```
+
+### Ajouter un bouton ?
+Pgzhelper vous fournit une classe `Button` qui permet de créer facilement des boutons cliquables. Vous pouvez créer un bouton avec `button = Button('mon_texte', (x, y), (largeur, hauteur))` et ensuite vérifier s'il a été cliqué dans la fonction `on_mouse_down(pos)` avec `if button.collidepoint(pos):`. Important: n'oubliez pas d'appeler la méthode `button.draw()` dans la fonction `draw` pour que le bouton soit visible à l'écran.
+Exemple:
+```python
+button = Button('Cliquez-moi', (100, 100), (200, 50))
+def on_mouse_down(pos):
+    if button.collidepoint(pos):
+        print('Le bouton a été cliqué !')
+
+def draw():
+    button.draw() # Affiche le bouton
+```
+
+### Calculer l'angle / la direction entre 2 acteurs ?
+Vous pouvez utiliser la fonction `angle_to` d'un acteur pour calculer l'angle entre lui et un autre acteur. Par exemple, `player.angle_to(asteroid)` vous donnera l'angle en degrés entre le joueur et l'astéroïde. Cela peut être utile pour faire un ennemi qui poursuit le joueur ou pour faire des tirs qui partent dans la direction du joueur.
+Exemple:
+```python
+laser_enemi.direction = laser_enemi.angle_to(player)
+laser_enemi.move_in_direction(speed)
+```
 
 ## Travailler en dehors des TP
 
