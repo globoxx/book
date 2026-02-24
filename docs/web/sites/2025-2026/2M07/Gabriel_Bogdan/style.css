@@ -1,0 +1,79 @@
+h1 {
+    text-align: center;
+    color: white;
+    opacity: 1;
+}
+body {
+    background-color:brown ;
+    opacity: 1;
+}
+p {
+    color: white;
+    opacity: 1;
+    font-size: 20px;
+}
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+h3 {
+    text-align: center;
+    color: white;
+}
+.liens ul { 
+border-radius: 10px;
+text-align: center;
+justify-content: space-evenly;
+display: flex;
+color: white;
+font-size: 25px;
+}
+
+.contenu {
+    display: flex;
+}
+
+.police {
+    text-align: center;
+    color: white;
+    font-family: Blippo, fantasy
+}
+
+
+.gauchedroite {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+
+.mascottetacos {
+    
+}
+
+.liens li {
+  border-radius: 10px;
+text-align: center;
+justify-content: space-evenly;
+display: flex;
+color: white;
+font-size: 25px;
+}
+
+.image-style {
+    border: 10px;
+    border-radius: 20px;
+    box-shadow:
+  3px 3px red,
+  -1em 0 0.4em white;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}

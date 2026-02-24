@@ -1,0 +1,385 @@
+.header {
+    text-align: center;
+    background-color: rgb(112, 181, 181);
+    padding: 16px;
+}
+
+.menu ul {
+    background-color: rgb(155, 225, 230);
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu li {
+    padding: 15px;
+}
+
+.menu li:hover {
+    background-color: rgb(176, 228, 228);
+}
+
+.contenu {
+    text-align: center;
+}
+
+.map-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.map {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.footer-index {
+    text-align: center;
+    background-color:rgb(112, 181, 181);
+    padding-bottom: 10px;
+    
+}
+
+.bouton-amerique {
+    position: absolute;
+    width: 110px;
+    height: 200px;
+    cursor: pointer;
+    left: 15%;
+    top: 15%;
+}
+
+.bouton-afrique {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    left: 45%;
+    top: 48%;
+}
+
+.bouton-asie {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+    left: 67%;
+    top: 25%;
+}
+
+.bouton-europe {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    left: 45%;
+    top: 21%;
+}
+
+.bouton-océanie {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    left: 78%;
+    top: 63%;
+}
+
+.header-afrique {
+    text-align: center;
+    background-color: orange;
+    padding: 16px;
+}
+
+.menu-afrique ul {
+    background-color: moccasin;
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.menu-afrique li {
+    padding: 15px;
+}
+
+.menu-afrique li:hover {
+    background-color: orange
+}
+
+.contenu-afrique {
+    text-align: center;
+}
+
+.contenu-secondaire-afrique {
+    text-align: left;
+    
+
+}
+.contenu-secondaire-afrique h3{
+ color: black;
+ text-align: center;
+}
+
+.contenu-secondaire-afrique h4{
+    color: darkorange;
+    font-size: 30px;
+}
+.footer-afrique {
+    text-align: center;
+    background-color: orange;
+    padding: 2px;
+}
+
+
+.header-asie {
+    text-align: center;
+     background-color: hotpink;
+    padding: 16px;
+}
+
+.menu-asie ul {
+background-color: #FBD3E9;
+list-style-type: none;
+color: rgb(0, 0, 0);
+display: flex;
+justify-content: space-evenly;
+}
+
+.menu-asie li{
+padding: 15px;
+}
+
+.menu-asie li:hover{
+background-color:#BB377D;
+}
+
+.contenu-asie{
+text-align: center;
+background: linear-gradient(#FBD3E9,#BB377D);
+}
+
+.contenu-secondaire-asie{
+ align-items: center;
+ }
+    
+
+
+.contenu-secondaire-asie h3{
+ color: deeppink;
+ text-align: center;
+ font-size: 35px;
+ padding: 2%;
+}
+
+.footer-asie{
+text-align: center;
+background-color: #BB377D;
+padding: 2px;
+}
+
+
+.header-europe {
+    text-align: center;
+    background-color:goldenrod;
+    padding: 16px;
+}
+
+.menu-europe ul{
+    background-color: palegoldenrod;
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu-europe li{
+    padding: 15px;
+}
+.menu-europe li:hover{
+    background-color: lightgoldenrodyellow;
+}
+
+.contenu-europe{
+    text-align: right;
+}
+.contenu-secondaire-europe{
+    text-align: left;
+}
+.contenu-secondaire-europe h3{
+    color: goldenrod;
+    text-align: center;
+    font-size: 35px;
+}
+
+.container {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+}
+
+.item {
+    text-align: center; 
+    width: 400px; 
+}
+
+.image {
+    width: 100%;
+    height: auto; 
+}
+
+img {
+    width: 100%; 
+    height: auto; 
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 19px; 
+    color: goldenrod;
+}
+
+.footer-europe{
+    text-align: center;
+    background-color: goldenrod;
+    padding: 2px;
+    }
+
+
+.header-amerique {
+    text-align: center;
+    background-color: #FF416C;
+    padding: 16px;
+}
+
+.menu-amerique ul {
+    background-color:#FF4B2B;
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu-amerique li {
+    padding: 15px;
+    text-align: center;
+}
+.menu-amerique li:hover {
+    background-color: #FF416C;
+    text-align:center;
+}
+.contenu-amerique {
+    text-align: center;
+    display:flex;
+    background:linear-gradient(#FF416C,#FF4B2B);
+}
+.contenu-secondaire-amerique {
+    text-align: left;
+    padding: 15%;
+    font-size: 30px;
+}
+
+.contenu-principal-amerique{
+   padding-inline-start: 20px;
+}
+
+.contenu-principal-amerique ul{
+    text-align: center;
+    display: flex;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.contenu-secondaire-amerique h3{
+ color: black;
+text-align: center;
+ font-size:40px;
+    
+}
+.footer-amerique {
+    text-align: center;
+    background-color: #FF4B2B;
+    padding: 2px;
+}
+
+
+.header-océanie {
+    text-align: center;
+    background: linear-gradient(#1D976C, #93F9B9);
+    padding: 16px;
+}
+
+.menu-océanie ul {
+    background-color: #93F9B9;
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu-océanie li {
+    padding: 15px;
+}
+.menu-océanie li:hover {
+    background-color: #1D976C;
+}
+.contenu-océanie {
+    text-align: center;
+}
+.contenu-secondaire-océanie {
+    text-align: center;
+    font-size: 30px;
+    
+
+}
+.contenu-secondaire-océanie h3{
+ color: darkgreen;
+    font-size: 40px;
+    
+}
+
+.footer-océanie {
+    text-align: center;
+    background-color: #1D976C;
+    padding: 2px;
+}
+
+.header-contact {
+    text-align: center;
+    background-color: purple;
+    padding: 8px;
+}
+
+.menu-contact ul{
+    background-color: Thistle;
+    list-style-type: none;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu-contact li {
+    padding: 15px;
+}
+.menu-contact li:hover {
+    background-color: purple
+}
+
+.contact-info h2{
+  color: purple;  
+    text-align: center;
+} 
+.contact-form h2{
+     color: purple;
+    text-align: center;
+    
+}
+.footer-contact{
+    text-align: center;
+    background-color: purple;
+    padding: 4px;
+    
+}

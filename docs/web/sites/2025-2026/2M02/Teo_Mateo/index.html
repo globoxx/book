@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Test</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class=" align-header">
+        <!-- Conteneur principal pour l'en-tête et la navigation (aligner navigation1, header, navigation2 au même niveau) -->
+
+        <div class="navigation1">
+            <!-- Navigation à gauche (lien vers la page html: "a-propos.html")-->
+            <a href="a-propos.html">À propos</a>
+        </div>
+
+        <header>
+            <!-- Titre principal du site -->
+            <h1>Click Second</h1>
+        </header>
+
+        <div class="navigation2">
+            <!-- Navigation à droite (lien vers la page html: "resultat.html")-->
+            <a href="resultat.html">Résultat</a>
+        </div>
+    </div>
+
+    <div class="game-box">
+        <!-- Conteneur principal du jeu (stats, carré cliquable, changement de temps)-->
+
+        <div class="stats">
+            <!-- Zone affichant les statistiques du jeu (time, hits, cps)-->
+
+            <div class="time">
+                <!-- Affichage du temps écoulé (avec id pour javascript)-->
+                Time: <span id="time">0s</span> 
+            </div>
+
+            <div class="hits">
+                <!-- Nombre total de clics (avec id pour javascript)-->
+                Hits: <span id="hits">0</span>
+            </div>
+
+            <div class="cps">
+                <!-- Clicks par seconde: hits/time (avec id pour javascript)-->
+                CPS: <span id="cps">0</span>
+            </div>
+        </div>
+
+        <div class="center-box-wrapper">
+            <!-- Permet de centrer la zone de clic -->
+            <div class="center-box" id="center-box">
+                <!-- Zone principale où l'utilisateur clique (avec id pour javascript)-->
+                Click ici             
+            </div>
+        </div>
+
+        <div class="change-setup">
+            <!-- Zone pour choisir la durée du test -->
+
+            <div class="cinqsecond-click" id="5-click">
+                <!-- Bouton pour un test de 5 secondes (avec id pour javascript)-->
+                5 Second            
+            </div>
+
+            <div class="dixsecond-click" id="10-click">
+                <!-- Bouton pour un test de 10 secondes (avec id pour javascript)-->
+                10 Second    
+            </div>           
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+.header {
+  text-align: center;
+  background-color: mistyrose;
+  padding: 2px;
+  border-radius: 20px;
+  font-family: cursive;
+}
+
+.gauchedroite1 {
+  display: flex;
+  font-family: genv, Courier, monospace;
+}
+
+.fav {
+  text-align: center;
+}
+
+.gauchedroite2 {
+  display: flex;
+  text-align: left;
+  font-family: genv, Courier, monospace;
+
+}
+
+
+.accueil {
+  border: solid 5px;
+
+  border-color: lightpink;
+  padding: 5px;
+}
+
+.accueil2 {
+  border: solid 5px;
+
+  border-color: deeppink;
+  padding: 5px;
+}
+
+.info {
+  bottom: 15px;
+}
+
+.nav ul {
+  justify-content: space-evenly;
+  background-color: lightpink;
+  display: flex;
+  list-style-type: none;
+  border-radius: 40px;
+  font-family: cursive;
+  color: black;
+  text-decoration: none;
+}
+
+.nav li {
+  padding: 16px;
+}
+
+.nav li:hover {
+  background-color: mistyrose;
+}
+
+.souligner a {
+  color: black;
+  text-decoration: none;
+}
+
+.titre-page {
+  font-family: cursive;
+  background-color: lightpink;
+  padding: 0px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  text-align: center;
+
+}
+
+p {
+  text-align: center;
+  background-color: pink;
+  padding: 10px;
+  border-radius: 7px;
+  width: 50%;
+}
+
+.aside li {
+  padding: 0px;
+}
+
+.aside ul {
+  border: solid 10px;
+  border-color: mediumpurple;
+}
+
+
+.aside-secondaire li {
+  padding: 0px;
+}
+
+.aside-secondaire ul {
+  border: solid 10px;
+  border-color: rosybrown;
+}
+
+.aside-tertiaire li {
+  padding: 0px;
+}
+
+.aside-tertiaire ul {
+  border: solid 10px;
+  border-color: blue;
+}
+
+.team1 {
+  display: flex;
+}
+
+.team2 {
+  display: flex;
+}
+
+.team3 {
+  display: flex;
+}
+
+.choix-backround {
+  background-color: mistyrose;
+}
+
+
+.ul {
+  font-family: cursive;
+}
+
+.titre2 {
+  font-family: cursive;
+  text-align: center;
+}
+
+.description1 {
+  font-family: genv, Courier, monospace;
+  background-color: mistyrose
+}
+
+.photo2 {
+  background-color: #ff4081;
+  padding: 10px;
+  border-radius: 7px;
+  width: 50%;
+}
+
+.page-style2 {
+  font-family: genv, Courier, monospace;
+  line-height: 1.6;
+  margin: 20px;
+  background-color: mistyrose;
+  color: deeppink;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.store-list {
+  margin-top: 20px;
+}
+
+.page-style {
+  font-family: genv, Courier, monospace;
+  line-height: 1.6;
+  margin: 10px;
+  background-color: mistyrose;
+  color: #333;
+  text-align: center;
+
+  h1,
+  h2 {
+    color: rosybrown;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .photo3 {
+    background-color: rosybrown;
+    padding: 10px;
+    border-radius: 7px;
+    width: 50%;
+  }
+
+  .photo4 {
+    background-color: rosybrown;
+    padding: 10px;
+    border-radius: 7px;
+    width: 50%;
+  }
+
+  body {
+    font-family: genv, Courier, monospace;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: mistyrose;
+    color: black;
+    text-align: center;
+  }

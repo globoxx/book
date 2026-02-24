@@ -1,0 +1,182 @@
+.body-accueil {
+    background-image: url("Shingeki\ No\ Kyojin.jpg");
+
+}
+
+
+.header {
+    text-align: center;
+   padding: 16px;
+}
+.header-titans {
+    text-align: center;
+    color: white;
+    padding: 16px;
+}
+
+.menu ul {
+    list-style-type: none;
+    color: black;
+    display: flex;
+}
+
+.menu li {
+    padding: 16px;
+}
+
+.menu li:hover {
+    background-color: white;
+}
+
+.contenu {
+    display: flex;
+}
+
+.contenu-principal {
+    background-color: white;
+    padding: 10px;
+}
+
+.contenu-secondaire {
+    background-color: floralwhite;
+    padding: 10px;
+    align-items:img;
+}
+
+.contenu-secondaire p {
+    color: red;
+    font-weight: bold;
+}
+
+.menu {
+    border: 1px beige;
+    background-color: beige;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.menu li {
+    list-style-type: none;
+    flex-basis: 120px;
+    text-align: center;
+    margin: 0 0.3rem;
+}
+
+.menu a {
+    display:block ;
+    padding: 0.5rem;
+    background-color: beige;
+    text-decoration: none;
+    color:saddlebrown;
+    border-bottom: 3px solid #333;
+}
+
+.menu a:hover {
+    color:#9e7f02;
+    background-color:whitesmoke;
+    border-color: whitesmoke;
+
+}
+
+
+.body-résumé {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url("Shingeki\ No\ Kyojin.jpg");
+    background-color: #f9f9f9;
+}
+.body-isayama {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url("Shingeki\ No\ Kyojin.jpg");
+    background-color: #f9f9f9;
+}
+.body-acceuil {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url("Shingeki\ No\ Kyojin.jpg");
+    background-color: #f9f9f9;
+}
+
+.body-détails {
+     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+     padding: 0;
+    background-image: url("image/erenback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white; 
+   
+}
+header {
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: beige;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: black;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+section p {
+    text-align: justify;
+    color: black;
+}
+
+.body-titans {
+     background-color: black ;
+}
+.contenu-titans h2 {
+    color: white;
+}
+.contenu-titans h3 {
+    color: white;
+}
+.contenu-titans p {
+    color: white;
+}
+
+.encadre {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto; 
+    max-width: 800px; 
+}

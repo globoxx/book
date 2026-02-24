@@ -1,0 +1,72 @@
+.accueil {
+  background-image: url("IMG_7143\ 3.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+h1{
+  color: black;
+  text-align: center;
+  font-size: 500%;
+}
+    
+.menu {
+  display: flex;
+  padding: 0;
+  gap: 0.3rem;
+  text-align: center;
+}
+.menu li {
+  font-size: 200%;
+  list-style-type: none;
+  flex-basis: 150px;
+  text-align: center;
+  margin: 0 0.3rem;
+}
+
+.menu li:hover{
+  background-color: black;
+}
+
+.menu a{
+  text-decoration: none;
+  color:bisque;
+}
+
+.myVideo {
+  background-image:url(défilé\ haute\ couture\ iris\ van\ herpen\ printemps\ été\ 2021.mp4);
+}
+
+h2 {
+  color:bisque;
+  text-align: center;
+  font-size: 500%;
+}
+.contact {
+  display: flex;
+  padding: 0;
+  gap: 0.3rem;
+  list-style-type: none;
+  flex-basis: 150px;
+  margin: 0 0.3rem;
+}
+
+.fond {
+  background-image: url("");
+  background-position: center;
+  background-size: cover;
+}
+
+.gras {
+  font-weight: bold;
+}
+
+span{
+  font-style: oblique;
+}
+
+div{
+  border-width: 2px;
+  border-color: black;
+  border-radius: 20px;
+  box-shadow: 10px;
+}

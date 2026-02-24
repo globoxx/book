@@ -396,6 +396,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine le vaisseau ici !</span>
 </pre></div>
 </div>
+<div class="note admonition">
+<p class="admonition-title">Changer la taille d’un acteur ?</p>
+<p>Il est possible de redimensionner une image d’acteur en lui donnant une échelle (scale). Par exemple, <code class="docutils literal notranslate"><span class="pre">player.scale</span> <span class="pre">=</span> <span class="pre">2</span></code> rendrait le vaisseau deux fois plus grand que sa taille d’origine. A l’inverse, <code class="docutils literal notranslate"><span class="pre">player.scale</span> <span class="pre">=</span> <span class="pre">0.5</span></code> le rendrait deux fois plus petit que sa taille d’origine.</p>
+</div>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Voir le code complet à ce point<div class="summary-down docutils">
@@ -760,6 +764,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 
 <span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+    <span class="o">...</span>
 </pre></div>
 </div>
 <p>La méthode <code class="docutils literal notranslate"><span class="pre">schedule_interval(f,</span> <span class="pre">x)</span></code> permet d’appeler automatiquement une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">x</span></code> secondes. Nous l’avons donc réglée pour appeler <code class="docutils literal notranslate"><span class="pre">add_asteroid</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">5</span></code> secondes, mais vous pouvez modifier cette valeur.</p>
@@ -1077,6 +1084,7 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <li><p>Ajouter une image d’explosion qui apparaît puis disparaît lorsqu’un astéroïde est détruit.</p></li>
 <li><p>Ajouter un second joueur qui pourra se déplacer et tirer avec d’autres touches.</p></li>
 <li><p>Ajouter un nouveau type d’ennemi qui se comporte différemment que les astéroïdes.</p></li>
+<li><p>Empêcher le spam de lasers en faisant en sorte que le joueur ne puisse tirer qu’une fois tous les 0.5 secondes par exemple.</p></li>
 <li><p>Faire en sorte que le personnage ne se déplace pas plus rapidement en diagonal qu’à l’horizontal ou à la verticale.</p></li>
 </ul>
 <p><strong>Challenging (difficile):</strong></p>
@@ -1100,7 +1108,7 @@ Depuis la maison<div class="summary-down docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <ol class="simple">
-<li><p class="card-text">Téléchargez et installez <a class="reference external" href="https://www.python.org/downloads/">Python</a>.</p></li>
+<li><p class="card-text">Téléchargez et installez <a class="reference external" href="https://www.python.org/downloads/">Python 3.12</a>. Prenez bien la version 3.12 car les versions plus récentes ne sont pas encore compatibles avec Pygame Zero.</p></li>
 <li><p class="card-text">Téléchargez et installez <a class="reference external" href="https://www.jetbrains.com/fr-fr/pycharm/download/">Pycharm</a>. Faites attention à sélectionner la version qui correspond à votre système d’exploitation (Windows, MacOS, Linux).</p></li>
 <li><p class="card-text">Ouvrez Pycharm et créez un nouveau projet. (Bouton “New Project” sur l’écran d’accueil ou via le menu “File” -&gt; “New Project”).</p></li>
 <li><p class="card-text">Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PythonProject par défaut).</p></li>

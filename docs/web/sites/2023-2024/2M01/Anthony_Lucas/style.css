@@ -1,0 +1,283 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  padding-left: 2%;
+}
+
+li {
+  font-size: 150%;
+}
+
+.titre {
+  text-align: center;
+}
+
+.bloc1 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.bloc1 img {
+  width: 30%;
+}
+
+.pilotes {
+  padding: 20px;
+}
+
+.ecuries {
+  padding: 20px;
+}
+
+.bloc2 {
+  display: flex;
+  align-items: center;
+  margin-left: 20%;
+}
+
+
+.bloc2 img {
+  width: 25%
+}
+
+h2 {
+  font-size: 250%;
+}
+
+.titreindex {
+  text-align: center;
+  background-color: #ffdbdb;
+  border-radius: 5px;
+  margin-left: 600px;
+  margin-right: 600px;
+}
+
+.photoindex {
+  width: 750px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.annexes ul {
+  border: 1px solid black;
+  background-color: #d3caca;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  border-radius: 5px;
+  margin: 25px;
+  margin-left: 450px;
+  margin-right: 450px;
+}
+
+.annexes li {
+  list-style-type: none;
+  /* Enlève les puces */
+  flex-basis: 120px;
+  text-align: center;
+  margin: 0 0.3rem;
+}
+
+.annexes a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+.annexes a:hover {
+  color: black;
+  background-color: #ffdbdb;
+  border-color: black;
+  transition: 1s;
+}
+
+.calendrier {
+  text-align: center;
+}
+
+.paragrapheindex {
+  font-size: 20px;
+  margin-right: 7%;
+  margin-left: 3%;
+  width: 30%;
+  background-color: #ffdbdb;
+  padding: 40px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.bodyindex {
+  display: flex;
+  margin-top: 6%;
+  margin-left: 10%;
+}
+
+.imagemenu {
+  width: 50px;
+
+}
+
+.nomscontact {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+  gap: 10%;
+  font-size: 26px;
+  color: black;
+}
+
+
+.imagescaroussel {
+  display: flex;
+  animation-duration: 140s;
+  animation-name: mesimages;
+  animation-iteration-count: infinite;
+}
+
+
+.caroussel {
+  width: 800px;
+  height: 345px;
+  overflow: hidden;
+  margin-left: 6%;
+  border: 2px solid black;
+  margin-top: 9%;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes mesimages {
+  0% {
+    transform: translateX(0);
+  }
+
+  5% {
+    transform: translateX(-800px);
+  }
+
+  10% {
+    transform: translateX(-1600px);
+  }
+
+  15% {
+    transform: translateX(-2400px);
+  }
+
+  20% {
+    transform: translateX(-3200px);
+  }
+
+  25% {
+    transform: translateX(-4000px);
+  }
+
+  30% {
+    transform: translateX(-4800px);
+  }
+
+  35% {
+    transform: translateX(-5600px);
+  }
+
+  40% {
+    transform: translateX(-6400px);
+  }
+
+  45% {
+    transform: translateX(-7200px);
+  }
+
+  50% {
+    transform: translateX(-8000px);
+  }
+
+  55% {
+    transform: translateX(-8800px);
+  }
+
+  60% {
+    transform: translateX(-9600px);
+  }
+
+  65% {
+    transform: translateX(-10400px);
+  }
+
+  70% {
+    transform: translateX(-11200px);
+  }
+
+  75% {
+    transform: translateX(-12000px);
+  }
+
+  80% {
+    transform: translateX(-12800px);
+  }
+
+  85% {
+    transform: translateX(-13600px);
+  }
+
+  90% {
+    transform: translateX(-14400px);
+  }
+
+  95% {
+    transform: translateX(-15200px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+
+.textcircuits {
+  margin-left: 80px;
+  font-size: 30px;
+  width: 350px;
+  margin-top: 100px;
+  background-color: #ffdbdb;
+  border-radius: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 125px;
+
+}
+
+.bodycircuit {
+  display: flex;
+}
+
+.text1contact {
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 25%;
+  font-size: 25px;
+  background-color: #ffdbdb;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.infoscontact {
+  margin-top: 150px;
+  display: flex;
+  gap: 10%;
+  margin-left: 7%;
+  font-size: 24px;
+  color: white;
+}
+
+.infoscontact p:hover {
+  color: black;
+  background-color: #ffdbdb;
+  border-color: black;
+  transition: 2s;
+  padding: 10px;
+  border-radius: 7px;
+}

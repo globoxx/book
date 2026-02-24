@@ -1,0 +1,710 @@
+ body {
+      background-color: #201E27;
+ }
+
+ p,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ li {
+      color: white;
+ }
+
+ .header {
+      text-align: center;
+      background-image: url("images/undertale.jpg");
+      color: white;
+      padding-bottom: 5px;
+      padding-top: 10px
+ }
+
+ audio {
+      background-color: white;
+      width: 200px;
+      height: 30px;
+ }
+
+ .menu a {
+      display: block;
+      min-width: 120px;
+      margin: 0px;
+      padding: 15px;
+      text-align: center;
+      background-color: #5a3e7a;
+      color: #fff;
+      text-decoration: none;
+      border: 3px solid #5a3e7d;
+      border-radius: 12px;
+ }
+
+ .menu {
+      display: flex;
+      padding: 0;
+      background-color: #5a3e7a;
+      justify-content: space-around;
+ }
+
+ .menu ul {
+      list-style-type: none;
+      background-color: #5a3e7a;
+      display: flex;
+      border-radius: 5px;
+      scroll-margin-bottom: 5px;
+ }
+
+ .menu li {
+      list-style-type: none;
+ }
+
+ .menu a:hover {
+      background-color: #7848b0;
+      color: white;
+      border-color: #7848b0;
+ }
+
+ .photos {
+      display: flex;
+      flex-direction: row;
+ }
+
+ .photos img {
+      margin: 20px;
+ }
+
+ .ruines {
+      .soustitresr {
+           background-image: url("images/fondruines1.png");
+           background-repeat: round space;
+           padding: 10px;
+           margin: 15px;
+           display: flex;
+           background-color: #5a3e7a;
+           justify-content: space-around;
+           align-items: center;
+      }
+
+      .ruinees {
+           text-align: center;
+           border: 3px solid #5a3e7d;
+           border-radius: 15px;
+           padding: 10px;
+           margin: 20px;
+           width: 100%;
+
+      }
+ }
+
+ .snowdin {
+      .soustitress {
+           background-image: url("images/fondsnowdin.png");
+           background-repeat: round space;
+           padding: 10px;
+           margin: 20px;
+           display: flex;
+           background-color: #5a3e7a;
+           justify-content: space-around;
+           align-items: center;
+      }
+
+      .snowdiin {
+           text-align: center;
+           border: 3px solid #707099;
+           border-radius: 15px;
+           padding: 10px;
+           margin: 20px;
+           width: 100%;
+      }
+ }
+
+ .waterfall {
+      .soustitresw {
+           background-image: url("images/fondwaterfalls.png");
+           background-repeat: round space;
+           padding: 10px;
+           margin: 20px;
+           display: flex;
+           background-color: #5a3e7a;
+           justify-content: space-around;
+           align-items: center;
+      }
+
+      .waterfaall {
+           text-align: center;
+           border: 3px solid #1F1F75;
+           border-radius: 15px;
+           padding: 10px;
+           margin: 20px;
+           width: 100%;
+      }
+ }
+
+ .hotland {
+      .soustitresh {
+           background-image: url("images/fondhotland.png");
+           background-repeat: round space;
+           padding: 10px;
+           margin: 20px;
+           display: flex;
+           background-color: #c6401c;
+           justify-content: space-around;
+           align-items: center;
+      }
+
+      .hotlaand {
+           text-align: center;
+           border: 3px solid #c6401c;
+           border-radius: 15px;
+           padding: 10px;
+           margin: 20px;
+           width: 100%;
+      }
+ }
+
+
+ .personnages {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+ }
+
+ .flowey,
+ .toriel,
+ .papyrus,
+ .undyne,
+ .asgore,
+ .sans,
+ .asriel,
+ .muffet,
+ .alphys,
+ .mettaton,
+ .temmie,
+ .gaster {
+      margin-top: 20px;
+      display: flex;
+      width: 150px;
+      height: 150px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 2px solid white;
+      padding: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: height .5s;
+      transition: width .5s;
+ }
+
+ .flowey:hover,
+ .toriel:hover,
+ .papyrus:hover,
+ .undyne:hover,
+ .asgore:hover,
+ .sans:hover,
+ .asriel:hover,
+ .muffet:hover,
+ .alphys:hover,
+ .mettaton:hover,
+ .temmie:hover,
+ .gaster:hover {
+      height: 260px;
+      width: 200px;
+      transition: height .5s, width .5s;
+ }
+
+ .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 55px;
+      margin: 20px;
+      justify-content: center;
+ }
+
+ .biomes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 55px;
+      margin: 20px;
+ }
+
+ .photos {
+      display: flex;
+      flex-direction: row;
+ }
+
+ .papyrustxt {
+      font-family: "papyrus";
+ }
+
+ .sanstxt {
+      font-family: "Comic Sans MS", "Comic Sans", "cursive";
+ }
+
+
+ .main {
+      margin-top: 50px;
+      background-color: #5a3e7a;
+      width: 65%;
+      padding: 2%;
+      margin-left: 20%;
+      border-radius: 15px;
+      box-shadow: 0px 10px 20px rgba(62, 42, 85, 0.5);
+      color: white;
+      transition: all 0.3s ease;
+ }
+
+ .main:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 20px rgba(62, 42, 85, 0.5);
+      background-color: #4B2D63;
+ }
+
+ .lien {
+      height: 40px;
+ }
+
+ .aames img {
+      height: 200px;
+
+ }
+
+ .lienn {
+      height: 320px;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 10px 20px black;
+      transition: 0.5s;
+ }
+
+ .routes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px;
+ }
+
+ .lienn:hover {
+      transform: translateY(-8px);
+      transition: 0.5s;
+ }
+
+ .gen {
+      color: #C32545;
+ }
+
+ .det,
+ .bra,
+ .jus,
+ .kin,
+ .pat,
+ .int,
+ .per {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 70px;
+      width: 70px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      filter: drop-shadow(0px 16px 20px black);
+ }
+
+ .det {
+      transform: rotate(0deg) translateY(-120px);
+ }
+ .bra {
+      transform: rotate(51.43deg) translateY(-120px);
+ }
+ .jus {
+      transform: rotate(102.86deg) translateY(-120px);
+ }
+ .kin {
+      transform: rotate(154.29deg) translateY(-120px);
+ }
+ .pat {
+      transform: rotate(205.71deg) translateY(-120px);
+ }
+ .int {
+      transform: rotate(257.14deg) translateY(-120px);
+ }
+ .per {
+      transform: rotate(308.57deg) translateY(-120px);
+ }
+
+ .det:hover,
+ .bra:hover,
+ .jus:hover,
+ .kin:hover,
+ .pat:hover,
+ .int:hover,
+ .per:hover {
+      transform: scale(9) translate(0%, 0%);
+      opacity: 1;
+      z-index: 10;
+ }
+
+ .det:not(:hover),
+ .jus:not(:hover),
+ .bra:not(:hover),
+ .kin:not(:hover),
+ .pat:not(:hover),
+ .int:not(:hover),
+ .per:not(:hover) {
+      opacity: 1;
+ }
+
+ .text:not(:hover) {
+      opacity: 0;
+ }
+
+ .container:hover .text {
+      opacity: 1;
+      /* Le texte devient visible au survol */
+ }
+
+ .pac1,
+ .pac2,
+ .pac3,
+ .pac4,
+ .pac5 {
+      position: relative;
+      margin: 30px;
+      padding: 10px;
+      border-radius: 10px;
+      width: 90%;
+      box-shadow: 0px 10px 20px black;
+ }
+
+ .pac1::before,
+ .pac2::before,
+ .pac3::before,
+ .pac4::before,
+ .pac5::before {
+      content: "";
+      /*utilisé avec la balise ::before*/
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/pac.png");
+      background-size: contain;
+      border-radius: 10px;
+      opacity: 0.7;
+      z-index: -1;
+ }
+
+ .gen1,
+ .gen2,
+ .gen3,
+ .gen4,
+ .gen5 {
+      position: relative;
+      margin: 30px;
+      padding: 10px;
+      border-radius: 10px;
+      width: 90%;
+      box-shadow: 0px 10px 20px black;
+ }
+
+ .gen1::before,
+ .gen2::before,
+ .gen3::before,
+ .gen4::before,
+ .gen5::before {
+      content: ""; /*utilisé avec la balise ::before*/
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/gen.png");
+      background-size: contain;
+      border-radius: 10px;
+      opacity: 0.4;
+      z-index: -1;
+ }
+
+.amestxt{
+      display: flex;
+      border: 3px solid white;
+      padding: 12px;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+}
+
+/*determination*/
+.determination {
+    background-color: #4f1d27;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 10px 20px black;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+}
+
+.determination h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.determination p:hover {
+    color: #c97183;
+    transition: color 0.3s ease; 
+}
+
+.determination p {
+    border-left: 4px solid #c97183;
+    padding-left: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.determination p:hover {
+    border-left: 4px solid #c97183;
+}
+
+.dett,
+.braa,
+.juss,
+.genn,
+.patt,
+.intt,
+.perr{
+      display: flex;
+      align-items: baseline;
+      padding: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-between;
+}
+
+.dett img,
+.braa img,
+.juss img,
+.genn img,
+.patt img,
+.intt img,
+.perr img{
+      height: 70px;
+      width: 70px; 
+}
+
+/*bravoure*/
+.bravoure {
+    background-color: #7d472e;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 10px 20px black;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+}
+
+.bravoure h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.bravoure p:hover {
+    color: #ff8c00;
+    transition: color 0.3s ease;
+}
+
+.bravoure p {
+    border-left: 4px solid #ff6f00;
+    padding-left: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.bravoure p:hover {
+    border-left: 4px solid #ff8c00;
+}
+
+/*justice*/
+.justice {
+    background-color: #996f06;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 10px 20px black;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+}
+
+.justice h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.justice p:hover {
+    color: #ffc021;
+    transition: color 0.3s ease;
+}
+
+.justice p {
+    border-left: 4px solid #ffc021;
+    padding-left: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.justice p:hover {
+    border-left: 4px solid #ffc021;
+}
+
+/*gentillesse*/
+.gentillesse {
+    background-color: #0a5419;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 10px 20px black;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+}
+
+.gentillesse h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.gentillesse p:hover {
+    color: #66bb6a;
+    transition: color 0.3s ease;
+}
+
+.gentillesse p {
+    border-left: 4px solid #66bb6a;
+    padding-left: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.gentillesse p:hover {
+    border-left: 4px solid #66bb6a;
+}
+
+/*patience*/
+.patience {
+    background-color: #0b6873;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 10px 20px black;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+}
+
+.patience h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.patience p:hover {
+    color: #81d4fa;
+    transition: color 0.3s ease;
+}
+
+.patience p {
+    border-left: 4px solid #81d4fa;
+    padding-left: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.patience p:hover {
+    border-left: 4px solid #81d4fa;
+}
+
+/*intégrité*/
+.integrite {
+    background-color: #0b1561;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 10px 20px black;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+}
+
+.integrite h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.integrite p:hover {
+    color: #4d5fe8;
+    transition: color 0.3s ease;
+}
+
+.integrite p {
+    border-left: 4px solid #4d5fe8;
+    padding-left: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.integrite p:hover {
+    border-left: 4px solid #4d5fe8;
+}
+
+/*persévérance*/
+.perseverance {
+    background-color: #370e40;
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    box-shadow: 0px 10px 20px black;
+    text-align: justify;
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+}
+
+.perseverance h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.perseverance p:hover {
+    color: #dc7ff5;
+    transition: color 0.3s ease;
+}
+
+.perseverance p {
+    border-left: 4px solid #dc7ff5;
+    padding-left: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.perseverance p:hover {
+    border-left: 4px solid #dc7ff5;
+}

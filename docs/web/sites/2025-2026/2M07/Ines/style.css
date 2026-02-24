@@ -1,0 +1,76 @@
+.header{
+    background-color: rgb(234, 112, 133);
+border-radius: 35px;
+text-align: center;
+}
+
+body{
+    background-color:  rgb(234, 112, 133);
+}
+
+.menu1 ul{
+     background-color: rgb(213, 93, 93);
+   display: flex;
+   list-style-type: none;
+   justify-content: space-evenly;
+    
+    border-radius: 50px;
+}
+.menu1 li{
+    padding: 20px;
+}
+
+.menu1 li:hover{
+    background-color: rgb(130, 194, 66);
+}
+
+.principal{
+text-align: center;
+
+}
+
+.menu2{
+    text-align: center;
+    background-color: rgb(83, 141, 183);
+    border-radius: 37px;
+    padding: 30px;
+}
+
+
+.photo{
+    flex-direction: column;
+    display: flex;
+    padding: 33px;
+    margin-bottom: 50px;
+}
+.photo2{
+    flex-direction: row;
+}
+
+.contenu{
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 5px 5px 5px rgb(137, 208, 207);
+
+} 
+
+.secondaire{
+
+width: 550px;
+margin: auto;
+
+}
+
+.temoignages{
+    font-size: 20px;
+
+    
+font-family: Brush Script MT (cursive) (serif);
+}
+
+
+
+
+.informations{
+    font-family: Times New Roman (serif);
+}

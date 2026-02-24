@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+   
+ text-align: center;
+background-color: thistle;
+padding: 50px;
+color: blue;
+
+}
+
+.bloc1{
+ margin-top: 1cm;
+    width: 90%; 
+    height: auto;
+  
+   
+}
+.bloc2{
+    position: relative; text-align: center;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    background-attachment: scroll;
+}
+/* vient de chat gpt*/
+.bloc3 {
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 10px ;
+    color: #ffffff;
+    font-size: 150%;
+ }
+
+ nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.contenu-principal {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu {
+    width: 600px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.description {     
+     text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.contenu-special {
+    margin-bottom: 100px;
+}

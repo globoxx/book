@@ -1,0 +1,438 @@
+.header{
+    text-align: center;
+    color: #5f4fa5da;
+    font-size: 30px; /* permet de modifier la taille du texte*/
+}
+
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+
+}
+
+.menu li{
+    padding: 16px;
+}
+
+.menu li:hover {
+    background-color: #796ea8;
+}
+
+.contenu{
+    display: flex;
+    font-size: 20px ;
+}
+
+.contenu-principal{
+    background: linear-gradient(180deg,#d9c8ed,#f4efff);
+    padding: 20px;
+    font-size: 20px ;
+}
+
+.contenu-secondaire{
+    background: linear-gradient(180deg,#d9c8ed, #c9b9de);
+    padding: 20px;
+    width: 50%;
+
+    
+}
+.contenu-secondaire ul{
+    list-style-type:circle;
+    font-size: 20px ;
+        
+}
+
+.contenu-secondaire li{
+    padding: 7px;
+}
+.contenu-secondaire a{
+    color: #392e6bda;
+}
+
+a{
+    color: #392e6bda;
+}
+
+.contacts{
+    background: linear-gradient(180deg, #d9c8ed ,rgb(221, 170, 238) );
+    padding: 16px;
+    font-size: 20px ;
+}
+
+.instagram{
+    text-align: center;
+    background: linear-gradient(180deg, rgb(221, 170, 238), #5a4882);
+    padding: 10px;
+}
+
+.gauche_droite{
+    display: flex;
+    background: linear-gradient(180deg, #bb7da5, #d9c8ed ,#bb7da5 );
+    font-size: 20px ;
+    
+}
+
+.bélier{
+    margin-right:20px ;
+}
+
+.titres_astro{
+    text-align: center;
+    background-color:#bb7da5;
+    color: white;
+    padding: 5px;
+    font-size: 20px ;
+    
+}
+
+.lion{
+    margin-left: 10px; /* permet de marger les images de la page "signes astros" */ 
+}
+
+.sagittaire{
+    margin-right:20px ;
+}
+
+.taureau{
+    margin-left: 20px;
+}
+
+.vierge{
+    margin-right: 20px;
+}
+
+.capricorne{
+    margin-left: 30px;
+}
+
+.gémeaux{
+    margin-right: 20px;
+}
+
+.balance{
+    margin-left: 30px;
+}
+
+.verseau{
+    margin-right: 20px;
+}
+
+.cancer{
+    margin-left: 30px;
+}
+
+.scorpion{
+    margin-right: 20px;
+}
+
+.poisson{
+    margin-left: 30px;
+}
+
+.header{
+    background-image: url(./images/banniere.JPG); padding: 200px;
+    background-size: cover; /* permet de couvrir l'entièreté de la longueur*/
+    background-position: center; /* permet de centrer l'image de fond */
+    background-repeat: no-repeat; /* empeche l'image de se répéter pour couvrir la longueur de la page*/
+    display: block;
+}
+
+.menu{
+    background-color: #d9c8ed; padding-top: 3px; padding-bottom: 3px;
+}
+
+.intro_signes{
+    background-color: #bb7da5;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background: linear-gradient(180deg, #d9c8ed ,#bb7da5 );
+    font-size: 20px ;
+}
+
+.intro_calendrier{
+    background: linear-gradient(180deg, #d9c8ed, #e0d8f2 );padding-top: 3px; padding-bottom: 3px;
+    font-size: 20px ;
+}
+
+.dates_decans{
+    background: linear-gradient(180deg, #e0d8f2,#c9b9de );padding-top: 3px; padding-bottom: 3px;
+    font-size: 20px ;
+}
+
+.bélier_dates{
+    background: linear-gradient(180deg,#c9b9de   ,#ffffff); padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.bélier_dates ul{
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.taureau_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.taureau_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.gemeaux_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.gemeaux_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.cancer_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.cancer_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.lion_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.lion_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.vierge_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.vierge_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.balance_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.balance_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.scorpion_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.scorpion_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.sagittaire_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.sagittaire_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.capricorne_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.capricorne_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.verseau_dates{
+    padding: 10px; text-align: center;
+    font-size: 20px ;
+}
+
+.verseau_dates ul {
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.poisson_dates{
+    background: linear-gradient(180deg, #ffffff  ,#c9b9de); padding: 10px;text-align: center;
+    font-size: 20px ;
+}
+
+.poisson_dates ul {
+    list-style-type: none;font-size: 20px ;
+}
+
+.ascendant_lunaire{
+    background: linear-gradient(180deg, #c9b9de ,rgb(221, 170, 238) );padding-top: 3px;text-align: center;
+    font-size: 20px ; padding: 20px;
+    border: 0.3em double;
+}
+
+.titre_proprietes{
+    text-align: center;
+    background: linear-gradient(180deg, #d9c8ed ,#ccadf0 );
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 20px ;
+}
+
+.jaspe_belier{
+    text-align: center;
+    background: linear-gradient(180deg,#ccadf0,  #fdfcff);
+    padding-top: 3px; 
+    font-size: 20px ;
+}
+
+.jaspe_belier img{
+    border: 1em double;
+}
+
+.emeraude_taureau{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.emeraude_taureau img{
+    border: 1em double;
+}
+
+.topaze_gemeaux{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.topaze_gemeaux img{
+    border: 1em double;
+}
+
+.quartz_vert_cancer{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.quartz_vert_cancer img{
+    border: 1em double;
+}
+
+.ambre_lion{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.ambre_lion img{
+    border: 1em double;
+}
+
+.onyx_vierge{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.onyx_vierge img{
+    border: 1em double;
+}
+
+.citrine_balance{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.citrine_balance img{
+    border: 1em double;
+}
+
+.opale_scorpion{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.opale_scorpion img{
+    border: 1em double;
+}
+
+.amethyste_sagittaire{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.amethyste_sagittaire img{
+    border: 1em double;
+}
+
+.saphir_capricorne{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.saphir_capricorne img{
+    border: 1em double;
+}
+
+.turquoise_verseau{
+    text-align: center;
+    background-color:  #fdfcff;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.turquoise_verseau img{
+    border: 1em double;
+}
+
+.aigue_marine_poisson{
+    text-align: center;
+    background: linear-gradient(180deg,  #fdfcff, #ccadf0);
+    padding-top: 3px;
+    font-size: 20px ;
+}
+
+.aigue_marine_poisson img{
+    border: 1em double;
+    font-size: 20px ;
+}
+
+.contacts ul{
+    text-align: center;
+    list-style-type: none;
+    font-size: 20px ;
+}
+
+.instagram{
+    padding-top: 40px; padding-bottom: 40px;
+}

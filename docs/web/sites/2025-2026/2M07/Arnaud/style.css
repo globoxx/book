@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+    color: blue;
+    opacity: 0.75;
+ }
+ h2{ color: rgb(52, 52, 131);
+    
+
+ }
+ h3{ color:rgb(52, 52, 131);
+
+ }
+ h4{ color: rgb(52, 52, 131) ;
+
+ }
+ h5{ color: rgb(52, 52, 131) ;
+
+
+ }
+ ul{
+   text-align: right;
+ }
+
+ ul li {
+   margin: 100px;
+ }
+.block2{
+    font-size: large;
+    display: inline-block;
+    margin: 10px;
+}
+.block3{
+      display: flex;
+
+}
+ p{
+    font-size: 20;
+
+ }
+
+ body{
+    background-color: darkgrey;
+    opacity: 1;
+ }
+
+ ol li{
+ margin: 15;
+ }
+ .block3{
+     display: flex;
+ }
+
+ .block2{
+   margin-top: 180;
+ }

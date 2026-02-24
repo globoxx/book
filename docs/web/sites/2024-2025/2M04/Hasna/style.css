@@ -1,0 +1,112 @@
+.jeux {
+    display: flex;
+}
+
+.description {
+    margin: 20px;
+}
+
+.jeux-photo {
+    margin: 10px;
+}
+
+body {
+    background: rgba(148, 150, 150, 0.902);
+}
+
+.Tout ul{
+    background-color: rgba(148, 150, 150, 0.902);
+    list-style-type: none;
+    display: flex;
+}
+
+.Tout li {
+    padding: 20px;
+}
+
+.Tout li:hover {
+    background-color: rgb(86, 88, 88);
+}
+
+.tenu1 {
+    display: flex;
+    margin: 90px;
+}
+
+.chose {
+    background-color: rgba(144, 143, 143, 0.975);
+    text-align: center;
+    padding: 10px;
+}
+
+.tenu {
+    background-color: rgb(139, 142, 143);
+    text-align: center;
+    padding:20px;
+}
+
+.idee {
+    background-color: rgb(132, 134, 136);
+    padding: 20px;
+    text-align: center;
+}
+
+.games {
+    background-color: rgb(135, 137, 139);
+    text-align: center;
+    padding: 20px
+}
+
+.Comment {
+    background-color: rgba(135, 135, 135, 0.815);
+    text-align: center;
+    padding: 20px;
+}
+
+.index {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(119, 120, 121, 0.84);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Roblox {
+    background-color: rgba(148, 149, 150, 0.635);
+    text-align: center;
+    padding: 20px;
+}
+
+.tuto {
+    padding: 10px;
+    background-color: rgb(100, 101, 102);
+    text-align: center;
+}
+
+.chose2 {
+    background-color: rgb(127, 128, 128);
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    padding: 10px;
+}
+
+.voicechat {
+    background-color: rgb(121, 122, 123);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.video {
+    background-color: rgb(112, 112, 113);
+    padding: 10px;
+    text-align: center;
+}
+
+.Type {
+    margin: 20px;
+}

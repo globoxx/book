@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Chess</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<nav>
+    <div class="burger-menu">
+        <a href="chessMenu.html" class="menu-link">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </a>
+    </div>
+
+    <div class="menu">
+        <a href="chessHistory.html">histoire</a>
+        <a href="chessRules.html">règles</a>
+        <a href="chessOuverture.html">ouvertures</a>
+    </div>
+    <button class="cta" onclick="location.href='chessBoard.html'">Play Now</button>
+</nav>
+
+<body class="playableChessBody">
+    <section class="menuChessBoard">
+        <div><h1 id="indicateur" class="indicateur">white to play</h1></div>
+    </section>
+        <div class="board">
+            <div class="prefix">8</div>
+            <div class="whiteCell" id="a8"></div>
+            <div class="blackCell" id="b8"></div>
+            <div class="whiteCell" id="c8"></div>
+            <div class="blackCell" id="d8"></div>
+            <div class="whiteCell" id="e8"></div>
+            <div class="blackCell" id="f8"></div>
+            <div class="whiteCell" id="g8"></div>
+            <div class="blackCell" id="h8"></div>
+            <div class="prefix">7</div>
+            <div class="blackCell" id="a7"></div>
+            <div class="whiteCell" id="b7"></div>
+            <div class="blackCell" id="c7"></div>
+            <div class="whiteCell" id="d7"></div>
+            <div class="blackCell" id="e7"></div>
+            <div class="whiteCell" id="f7"></div>
+            <div class="blackCell" id="g7"></div>
+            <div class="whiteCell" id="h7"></div>
+            <div class="prefix">6</div>
+            <div class="whiteCell" id="a6"></div>
+            <div class="blackCell" id="b6"></div>
+            <div class="whiteCell" id="c6"></div>
+            <div class="blackCell" id="d6"></div>
+            <div class="whiteCell" id="e6"></div>
+            <div class="blackCell" id="f6"></div>
+            <div class="whiteCell" id="g6"></div>
+            <div class="blackCell" id="h6"></div>
+            <div class="prefix">5</div>
+            <div class="blackCell" id="a5"></div>
+            <div class="whiteCell" id="b5"></div>
+            <div class="blackCell" id="c5"></div>
+            <div class="whiteCell" id="d5"></div>
+            <div class="blackCell" id="e5"></div>
+            <div class="whiteCell" id="f5"></div>
+            <div class="blackCell" id="g5"></div>
+            <div class="whiteCell" id="h5"></div>
+            <div class="prefix">4</div>
+            <div class="whiteCell" id="a4"></div>
+            <div class="blackCell" id="b4"></div>
+            <div class="whiteCell" id="c4"></div>
+            <div class="blackCell" id="d4"></div>
+            <div class="whiteCell" id="e4"></div>
+            <div class="blackCell" id="f4"></div>
+            <div class="whiteCell" id="g4"></div>
+            <div class="blackCell" id="h4"></div>
+            <div class="prefix">3</div>
+            <div class="blackCell" id="a3"></div>
+            <div class="whiteCell" id="b3"></div>
+            <div class="blackCell" id="c3"></div>
+            <div class="whiteCell" id="d3"></div>
+            <div class="blackCell" id="e3"></div>
+            <div class="whiteCell" id="f3"></div>
+            <div class="blackCell" id="g3"></div>
+            <div class="whiteCell" id="h3"></div>
+            <div class="prefix">2</div>
+            <div class="whiteCell" id="a2"></div>
+            <div class="blackCell" id="b2"></div>
+            <div class="whiteCell" id="c2"></div>
+            <div class="blackCell" id="d2"></div>
+            <div class="whiteCell" id="e2"></div>
+            <div class="blackCell" id="f2"></div>
+            <div class="whiteCell" id="g2"></div>
+            <div class="blackCell" id="h2"></div>
+            <div class="prefix">1</div>
+            <div class="blackCell" id="a1"></div>
+            <div class="whiteCell" id="b1"></div>
+            <div class="blackCell" id="c1"></div>
+            <div class="whiteCell" id="d1"></div>
+            <div class="blackCell" id="e1"></div>
+            <div class="whiteCell" id="f1"></div>
+            <div class="blackCell" id="g1"></div>
+            <div class="whiteCell" id="h1"></div>
+            <div class="prefix"></div> <!--sert à bien placer les lettres dans une table css-->
+            <div class="prefix">a</div>
+            <div class="prefix">b</div>
+            <div class="prefix">c</div>
+            <div class="prefix">d</div>
+            <div class="prefix">e</div>
+            <div class="prefix">f</div>
+            <div class="prefix">g</div>
+            <div class="prefix">h</div>
+        </div>
+
+        <section class="menuChessBoard">
+            <div class="awesomeDiv"><button class="awesome" onclick="cycleThemes()">awesome effect</button></div>
+        </section>
+</body>
+</html>

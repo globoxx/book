@@ -1,0 +1,376 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #222020;  
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-top: 80px; 
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000052;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #6bbf4486;
+    z-index: 1000;
+}
+
+.burger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger-menu .menu-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.burger-menu .line {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 11px auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.burger-menu:hover .line {
+    background-color: #58b909;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color: #6ABF44; 
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+.cta {
+    background-color: #6ABF44;
+    color: #0d0d0d;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-color 0.9s ease;
+}
+
+.cta:hover {
+    background-color: #7de25e;
+}
+
+.mainn {
+    padding: 20px;
+    text-align: center;
+}
+
+.mainn h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.mainn p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+header p {
+    font-size: 18px;
+    color: #cccccc;
+    font-style: italic;
+}
+
+.opening-section {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.opening-section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #bf4444;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.openings-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+
+}
+
+.opening-card {
+    background-color: #1a1a1a;
+    border: 1px solid #332;
+    border-radius: 7px;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opening-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.opening-card:hover h3 {
+    background-color:#00000000;
+    color: #ffffff;
+}
+
+.opening-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.opening-card h3 {
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    padding: 10px;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    background-color: #ffffff00; 
+}
+
+.opening-card p {
+    font-size: 14px;
+    margin: 10px;
+    color: #cccccc;
+}
+
+.opening-card a {
+    text-align: center;
+    padding: 10px;
+    background-color: #b89f5d;
+    color: #0d0d0d;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-top: 1px solid #333;
+    transition: background-color 0.3s ease;
+}
+
+.opening-card a:hover {
+    background-color: #d6b679;
+}
+.opening-link {
+    text-decoration: none;
+    display: inline-block;
+}
+h6 {
+    flex: auto;
+    color: #ffffff;
+    font-size: 18px;
+    margin-block: 8px;;
+
+}
+.histoire{
+    padding: 5%;
+    width: 95%;
+    margin: auto;
+    text-align: justify;
+}
+
+ol { 
+    list-style-type: none; 
+}
+
+.paragraphe {
+    padding-bottom: 16px;
+}
+
+.source{
+    font-style: italic;
+    font-size: 10px;
+}
+
+.citationOpenings{
+    font-style: italic;
+}
+
+#chessPage {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.678), black), 
+                url('image/chess-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.playableChessBody{
+    background-color: #222020;
+}
+
+.menuChessBoard{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(9, 90px); 
+    grid-template-rows: repeat(9, 90px);
+    justify-content: center;
+    padding-right: 6%;
+}
+
+.board div{
+    margin: 1px;
+}
+
+.whiteCell{
+    background-color: #eeeed2;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 60px;
+}
+
+.blackCell{
+    background-color:  	#769656;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 60px;
+    
+}
+
+.prefix{
+    line-height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    color: #eeeed2;
+}
+
+@keyframes transitionButton{
+    0% {background-color: #ffadad;} /*les couleurs viennent de https://colorkit.co/palette/ffadad-ffd6a5-fdffb6-caffbf-96e8ff-a0c4ff-bdb2ff-debcff-ffc6ff-ffa7dc/*/
+    11% {background-color: #ffd6a5;} /*et la doc. de https://www.w3schools.com/css/css3_animations.asp*/
+    22% {background-color: #fdffb6; }
+    33% {background-color: #caffbf;}
+    44% {background-color: #96e8ff;}
+    55% {background-color: #a0c4ff;}
+    66% {background-color: #bdb2ff;}
+    77% {background-color: #debcff; }
+    88% {background-color: #ffc6ff;}
+    100% {background-color: #ffa7dc;}
+}
+
+.awesome{
+    height: 50px;
+    width: 120px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation-name: transitionButton;
+    animation-timing-function:ease-in-out;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    margin: auto;
+}
+
+.awesomeDiv{
+    padding-right: 25%;
+}
+
+.indicateur{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: beige;
+    align-items: center;
+    margin: auto;
+    padding-right: 17px;
+}
+
+header.header {
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1.main-title {
+    color: #6bbf4486;
+}
+
+h2.section-title {
+    color: #6bbf4486;
+    margin-top: 20px;
+}
+
+ul.list {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+li.list-item {
+    margin-bottom: 10px;
+}
+
+footer.footer {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    margin-top: 20px;
+}
+
+.textColor {
+    color: #ffffff;
+}

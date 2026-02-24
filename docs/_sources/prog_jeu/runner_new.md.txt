@@ -648,7 +648,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 `````{admonition} Comment travailler en dehors du TP
 :class: danger
 ````{dropdown} Depuis la maison
-1. Téléchargez et installez [Python](https://www.python.org/downloads/).
+1. Téléchargez et installez [Python 3.12](https://www.python.org/downloads/). Prenez bien la version 3.12 car les versions plus récentes ne sont pas encore compatibles avec Pygame Zero.
 2. Téléchargez et installez [Pycharm](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à sélectionner la version qui correspond à votre système d'exploitation (Windows, MacOS, Linux).
 3. Ouvrez Pycharm et créez un nouveau projet. (Bouton "New Project" sur l'écran d'accueil ou via le menu "File" -> "New Project").
 4. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PythonProject par défaut).

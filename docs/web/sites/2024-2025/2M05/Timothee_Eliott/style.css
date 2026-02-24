@@ -1,0 +1,466 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.bodyindex {
+  background-image: url("images/paysagelotr.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  background-size: cover;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 25px;
+  border-bottom: 3px solid black;
+}
+
+.Titresgentils {
+  color: blue;
+}
+
+.Titresméchants {
+  color: red;
+}
+
+.bodypersonnages {
+  background-image: url("images/parchemin.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  margin: 0;
+  background-size: cover;
+}
+
+.bodyraces {
+  background-image: url("images/pierre2.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  margin: 0;
+  background-size: cover;
+}
+
+.Racesbloc {
+  display: flex;
+  align-items: center;
+}
+
+.Personnagesbloc {
+  display: felx;
+  flex-direction: column;
+}
+
+.intro {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  position: relative;
+  top: 225px;
+}
+
+.biographie {
+  margin: 10px;
+  text-align: center;
+}
+
+.Régionsbloc {
+  margin: 10px;
+  text-align: center;
+}
+
+.Liensrégions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: dimgrey ;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.Liensrégions a {
+  display: block;
+  padding: 5px;
+  background-color: darkgrey;
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.Liensindex {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: none ;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.Liensindex a {
+  display: block;
+  padding: 5px;
+  background-color: darkgrey;
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.Liensauteur {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: dimgrey ;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.Liensauteur a {
+  display: block;
+  padding: 5px;
+  background-color: darkgrey;
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.Liensmonde {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: dimgrey ;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.Liensmonde a {
+  display: block;
+  padding: 5px;
+  background-color: darkgrey;
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.listerégions {
+  float: right;
+  margin-right: 15%;
+  position: relative;
+  top: 150px;
+}
+
+.Lienspersonnages {
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  background-color: dimgrey ;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.Lienspersonnages a {
+  display: block;
+  padding: 5px;
+  background-color: darkgrey;
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.Liensraces {
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
+  background-color: dimgrey ;
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.Liensraces a {
+  display: block;
+  padding: 5px;
+  background-color: darkgrey;
+  text-decoration: none;
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.Hobbits {
+  color: black;
+  background-color: lightgrey;
+  width: 250px;
+  border: 5px solid blue;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  left: 40px;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Hommes {
+  color: black;
+  background-color: lightgrey;
+  width: 250px;
+  border: 5px solid blue;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  left: 40px;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Elfes {
+  color: black;
+  background-color: lightgrey;
+  width: 250px;
+  border: 5px solid blue;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  left: 40px;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Nains {
+  color: black;
+  background-color: lightgrey;
+  width: 250px;
+  border: 5px solid blue;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  left: 40px;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Orcs {
+  color: black;
+  background-color: lightgrey;
+  width: 250px;
+  border: 5px solid red;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  left: 40px;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Hobbitsbloc {
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 2.5%;
+}
+
+.Hommesbloc {
+  text-align: center;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.Elfesbloc {
+  text-align: center;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.Nainsbloc {
+  text-align: center;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.Orcsbloc {
+  text-align: center;
+  margin-left: 2.5%;
+  margin-right: 5%;
+}
+
+.Liensrégions a:hover {
+  background-color: grey;
+}
+
+.Liensauteur a:hover {
+  background-color: grey;
+}
+
+.Liensmonde a:hover {
+  background-color: grey;
+}
+
+.Liensraces a:hover {
+  background-color: grey;
+}
+
+.Lienspersonnages a:hover {
+  background-color: grey;
+}
+
+.Liensindex a:hover {
+  background-color: grey;
+}
+
+.Frodo {
+  margin-left: 17.5%;
+  color: black;
+  background-color: beige;
+  width: 450px;
+  border: 5px solid blue;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  left: 5%;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Gollum {
+  margin-left: 18%;
+  color: black;
+  background-color: beige;
+  width: 450px;
+  border: 5px solid red;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  left: 5%;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Aragorn {
+  margin-left: 11.5%;
+  color: black;
+  background-color: beige;
+  width: 450px;
+  border: 5px solid blue;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  left: 12%;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Gandalf {
+  margin-left: 21%;
+  color: black;
+  background-color: beige;
+  width: 450px;
+  border: 5px solid blue;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  left: 1.25%;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Legolas {
+  margin-left: 17.5%;
+  color: black;
+  background-color:beige;
+  width: 450px;
+  border: 5px solid blue;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  left: 5%;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Gimli {
+  margin-left: 21%;
+  color: black;
+  background-color: beige;
+  width: 450px;
+  border: 5px solid blue;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  left: 1.25%;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Saruman {
+  margin-left: 10.5%;
+  color: black;
+  background-color: beige;
+  width: 450px;
+  border: 5px solid red;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  left: 12%;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Sauron {
+  margin-left: 19.5%;
+  color: black;
+  background-color: beige;
+  width: 450px;
+  border: 5px solid red;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  left: 3%;
+  box-shadow: 6px 6px 10px black;
+}
+
+.Frodobloc {
+  text-align: center;
+  margin-left: 40%;
+}
+
+.Gollumbloc {
+  text-align: center;
+  margin-right: 40%;
+}
+
+.Aragornbloc {
+  text-align: center;
+  margin-left: 38.6%;
+}
+
+.Gandalfbloc {
+  text-align: center;
+  margin-right: 41.4%;
+}
+
+.Legolasbloc {
+  text-align: center;
+  margin-left: 40%;
+}
+
+.Gimlibloc {
+  text-align: center;
+  margin-right: 40%;
+}
+
+.Sarumanbloc {
+  text-align: center;
+  margin-left: 40%;
+}
+
+.Sauronbloc {
+  text-align: center;
+  margin-right: 40%;
+}
+
+

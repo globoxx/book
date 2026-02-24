@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big Sudoku Resolver</title>
+  <link rel="stylesheet" href="../css/da_css.css">
+</head>
+<div class="menu-container">
+  <button id="menu-toggle" aria-label="Open menu">
+    ☰
+  </button>
+  <nav id="side-menu">
+    <ul>
+      <li title="Go back to home page"><a href="home.html"><ion-icon name="home-outline"></ion-icon></a></li>
+      <li title="Go to Basic Sudoku resolver"><a href="basic_sudoku.html">Basic</a></li>
+      <li title="Go to Big Sudoku resolver"><a href="big_sudoku.html">Big</a></li>
+      <li title="Go to Samurai Sudoku resolver"><a href="samurai_sudoku.html">Samurai</a></li>
+      <li title="Go to X Sudoku resolver"><a href="sudoku_X.html">X</a></li>
+      <li title="Go to Killer Sudoku resolver"><a href="killer_sudoku.html">Killer</a></li>
+      <li title="Go to Irregular Sudoku resolver"><a href="irregular_sudoku.html">Irregular</a></li>
+      <li title="Go to an external website to get puzzles"><a href="https://sudoku-puzzles.net/" target="_blank">Puzzles</a></li>
+    </ul>
+  </nav>
+  <div id="menu-overlay"></div>
+</div>
+<script src="../js/menu_script.js"></script>
+<body>
+  <h1 class="head">Big Sudoku Resolver</h1>
+  <h3 class="sub_head">Due to some issues with the solver, it can currently only solve easy/medium sudokus.</h3>
+  <form id="big_sudoku_form" class="big_grid">
+    <script src="../js/generator_big.js"></script>
+  </form>
+  <div class="submit_btn">
+    <button id="big_submit_btn">Resolve</button>
+    <button id="clear_btn" onclick="location.reload()">Clear Grid</button>
+  </div>
+  <h3 class="sub_head_part2"> If at a point the resolver can't resolve what you told him to resolve, consider what you gave him too hard.</h3>
+  <div class="tip"></div>
+    <p class="tip">Tip : A = 10, B = 11, C = 12 (this resolver doesn't take letters as inputs).</p>
+  </div>
+  <script src="../js/resolver_big.js"></script>
+  <div class="rules">
+  <div class="special_box">
+  <h2>How the Solver Works</h2>
+  <p>
+    The solver uses logical Sudoku techniques.  
+    It never guesses — it only places a number when it is guaranteed to be correct.
+  </p>
+  </div>
+  <div class="box">
+  <h3>1. Single Candidate (Lone Cell)</h3>
+  <p>
+    If a cell can only contain <strong>one number</strong>, that number is placed.
+  </p>
+  <p class="example">
+    Example: A cell can only be <em>7</em> → the solver places 7.
+  </p>
+  </div>
+  <div class="box">
+  <h3>2. Lone Number in a Row</h3>
+  <p>
+    If a number can only appear in <strong>one cell of a row</strong>, it is placed there.
+  </p>
+  <p class="example">
+    Example: In a row, the number <em>5</em> fits in only one cell → 5 is placed.
+  </p>
+  </div>
+  <div class="box">
+  <h3>3. Lone Number in a Column</h3>
+  <p>
+    If a number can only appear in <strong>one cell of a column</strong>, it is placed there.
+  </p>
+  </div>
+  <div class="box">
+  <h3>4. Lone Number in a Box</h3>
+  <p>
+    If a number can only appear in <strong>one cell of a box</strong>, it is placed there.
+  </p>
+  </div>
+  <div class="box">
+  <h3>5. Naked Pairs</h3>
+  <p>
+    If <strong>two cells</strong> in the same row, column, or box contain
+    the <strong>same two possible numbers</strong>, then:
+  </p>
+  <ul>
+    <li>Those two numbers must go in those two cells</li>
+    <li>They are removed from all other cells in that group</li>
+  </ul>
+  <p class="example">
+    Example: Two cells contain only {3, 8} → other cells can no longer use 3 or 8.
+  </p>
+  </div>
+  <div class="box">
+  <h3>6. Pointing Pairs</h3>
+  <p>
+    If all possible positions for a number inside a box are:
+  </p>
+  <ul>
+    <li>in the <strong>same row</strong>, or</li>
+    <li>in the <strong>same column</strong></li>
+  </ul>
+  <p>
+    then that number can be removed from the rest of that row or column
+    outside the box.
+  </p>
+  </div>
+  <div class="box">
+  <h3>7. Validation Rules</h3>
+  <p>
+    The solver checks for errors before and after solving:
+  </p>
+  <ul>
+    <li>No duplicate numbers are allowed in a row</li>
+    <li>No duplicate numbers are allowed in a column</li>
+    <li>No duplicate numbers are allowed in a box</li>
+  </ul>
+  <p>
+    If an invalid number or a contradiction is detected, solving is stopped.
+  </p>
+  </div>
+</div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

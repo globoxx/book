@@ -1,0 +1,610 @@
+body {
+  background: url('Images/marbre.jpg');
+  margin: 0;
+  background-size: cover;
+  position: relative;
+}
+
+.title {
+  color: navy;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.paragraphe_1 {
+  padding-left: 300px;
+  padding-right: 300px;
+  color: darkblue;
+  font-size: 20px;
+}
+
+.basketball {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  transform: translate(20%, 130%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+}
+
+.volleyball {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  transform: translate(145%, 100%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+}
+
+.handball {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  transform: translate(260%, 125%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+}
+
+.nike1_gt {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  transform: translate(25%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.nike2_gt {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  transform: translate(175%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.nike3_gt {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  transform: translate(350%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+ul {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.bouton_nike {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  padding-left: 100px;
+}
+
+.bouton_adidas {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  padding-left: 150px;
+}
+
+.bouton_puma {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  padding-left: 250px;
+}
+
+.bouton_nike1 {
+  padding-left: 100px;
+}
+
+.bouton_adidas1 {
+  padding-left: 500px;
+}
+
+.bouton_puma1 {
+  padding-left: 550px;
+}
+
+.titre_gt_hustle {
+  color: navy;
+  text-align: center;
+  font-size: 40px;
+}
+
+.gt_hustle_paragraphe {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.titre_ja_1 {
+  padding-top: 600px;
+  color: navy;
+  text-align: center;
+  font-size: 40px;
+}
+
+.ja_1_paragraphe {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.titre_precision_6 {
+  padding-top: 700px;
+  color: navy;
+  text-align: center;
+  font-size: 40px;
+}
+
+.precision_6_paragraphe {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.nike4_ja {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(35%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.nike5_ja {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(150%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.nike6_ja {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(300%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+}
+
+.nike7_precision {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(35%, 45%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.nike8_precision {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(150%, 45%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.nike9_precision {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(300%, 45%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.titre_mb_02 {
+  color: navy;
+  text-align: center;
+  font-size: 40px;
+}
+
+.mb_02_paragraphe {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.puma1_mb02 {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(25%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+
+}
+
+.puma2_mb02 {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(250%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.puma3_mb02 {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(350%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+}
+
+.titre_all_pro_nitro {
+  padding-top: 600px;
+  color: navy;
+  text-align: center;
+  font-size: 40px;
+}
+
+.all_pro_nitro_paragraphe {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.titre_scoot_zero {
+  padding-top: 700px;
+  color: navy;
+  text-align: center;
+  font-size: 40px;
+}
+
+.scoot_zero_paragraphe {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.titre_anthony_edwards_1 {
+  color: navy;
+  text-align: center;
+  font-size: 40px;
+}
+
+.anthony_edwards_1_paragraphe {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.titre_harden_8 {
+  padding-top: 600px;
+  color: navy;
+  text-align: center;
+  font-size: 40px;
+}
+
+.harden_8_paragraphe {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.titre_dame_9 {
+  padding-top: 700px;
+  color: navy;
+  text-align: center;
+  font-size: 40px;
+}
+
+.dame_9_paragraphe {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.adidas1_ae1 {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  transform: translate(25%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.adidas2_ae1 {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  transform: translate(175%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.adidas3_ae1 {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  transform: translate(350%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+}
+
+.adidas4_harden {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(20%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.adidas5_harden {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(175%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.adidas6_harden {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(500%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+}
+
+.adidas7_dame {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(20%, 45%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.adidas8_dame {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(250%, 45%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.adidas9_dame {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(300%, 45%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+
+.puma4_apn {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(35%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.puma5_apn {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(250%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.puma6_apn {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(600%, 30%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+}
+
+.puma7_sz {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(35%, 45%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.puma8_sz {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  transform: translate(150%, 90%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box
+}
+
+.puma9_sz {
+  width: auto;
+  height: 300px;
+  position: absolute;
+  transform: translate(475%, 45%);
+  border-radius: 5px;
+  border: 3px solid navy;
+  box-sizing: border-box;
+}
+
+.bouton_tier_liste {
+  width: 400px;
+  height: auto;
+  padding-top: 500px;
+  position: absolute;
+  transform: translateX(-185px);
+}
+
+.bouton_accueil {
+  text-align: center;
+  font-size: 40px;
+  transform: translateY(500px);
+  position: absolute;
+  padding-left: 42%;
+}
+
+.nike7_precision {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nike8_precision {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nike9_precision {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.basketball {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.volleyball {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.handball {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nike1_gt {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+ .nike2_gt{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+ .nike3_gt{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.nike4_ja{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.nike5_ja {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.nike6_ja {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.adidas1_ae1 {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.adidas2_ae1 {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.adidas3_ae1 {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.adidas4_harden {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.adidas5_harden {
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.adidas6_harden{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.adidas8_dame{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.adidas9_dame{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.puma1_mb02{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.puma2_mb02{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.puma3_mb02{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.puma4_apn{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.puma5_apn{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.puma6_apn{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.puma7_sz{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.puma8_sz{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.puma9_sz{
+   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.lien_nike{
+  text-align: center;
+  font-size: 40px;
+  transform: translateY(600px);
+  position: absolute;
+  padding-left: 600px;
+}
+
+.lien_adidas{
+  text-align: center;
+  font-size: 40px;
+  transform: translateY(600px);
+  position: absolute;
+  padding-left: 600px;
+}
+
+.lien_puma{
+  text-align: center;
+  font-size: 40px;
+  transform: translateY(600px);
+  position: absolute;
+  padding-left: 600px;
+}

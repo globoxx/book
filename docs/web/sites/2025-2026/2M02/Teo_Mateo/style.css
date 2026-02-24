@@ -1,0 +1,321 @@
+    body {background-image: url('https://images.unsplash.com/photo-1591960028610-17925389af25?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8biVDMyVBOW9uJTIwdmVydHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000');
+    /* Image de fond appliquée à toute la page */
+    background-size: cover; /* L’image couvre toute la surface sans déformation */
+    background-position: center;  
+    background-color: rgba(0,0,0);
+    /* Couleur de secours si l’image ne charge pas */
+    color: #00ff00; /* Couleur du texte par défaut */
+    background-attachment: fixed; /* Effet "parallax" : le fond reste fixe lors du scroll */
+    }
+    
+    .align-header{color:#00ff00;
+    display: flex; /* Flexbox utilisé pour aligner les éléments horizontalement */
+    justify-content: center; /* Centre les éléments sur l’axe horizontal */
+    align-items: center; /* Centre les éléments sur l’axe vertical */
+    gap: 40px; /* Espace uniforme entre les éléments flex */
+    margin-top: 100px;}
+
+     header {color: #00ff00;
+    background-color: rgba(17, 17, 17, 0.75); /* 0.75 --> effet flou sur la couleur*/
+    border: 2px solid white; /* Ajoute un contour blanc de 2px à la boxe*/
+    box-shadow: 0 0 10px white; /* Effet lumineux autour du header */
+    width: 750px;
+    height: 150px;;
+    border-radius: 100px;  /* Arrondi les bords */
+    font-size: 3em;
+    display: flex;  /* Flex pour centrer le texte */            
+    justify-content: center;
+    align-items: center;   
+    text-align: center;
+    }
+      
+    .navigation1 {color: #00ff00;
+    background-color: rgba(17, 17, 17, 0.75);
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    border-radius: 50%; /* width = height + border-radius 50% → cercle parfait */
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 1em;
+    }
+
+    .navigation2 {color: #00ff00;
+    background-color: rgba(17, 17, 17, 0.75);
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white; /* width = height + border-radius 50% → cercle parfait */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 1em;
+    }
+    
+    /* ce qui contrôle le lien (à-propos, résultats, cliqueur) */
+    .navigation1 a {color: #00ff00;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+    }
+
+    .navigation2 a {color: #00ff00;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+    }
+
+    /* ce qui contrôle le passage SUR le lien (à-propos, résultats, cliqueur) */
+    .navigation1:hover, 
+    .navigation2:hover {
+    background-color: rgba(50, 50, 50, 0.85); /* devient plus clair */
+    box-shadow: 0 0 15px rgba(255,255,255,0.7); /* effet lumineux */
+    transform: translateY(-3px); /* léger déplacement vers le haut de la boite*/   
+    }
+    
+    .game-box {background-image: url("https://img.freepik.com/photos-premium/resume-fumee-verte-fond-noir-concept-obscurite_55716-2893.jpg");
+    background-size: cover;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 40px;
+    width: 1000px;
+    height: 450px;
+    box-shadow: 0 0 10px white;
+    margin: auto ; /* Centre horizontalement le bloc */
+    margin-top: 75px;}
+       
+    .stats { color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    margin-top: 10px;
+    gap: 20px; /* Répartition uniforme des stats (time,hits,cps)*/
+     }
+    
+    .center-box-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36vh; /* vh = pourcentage de la hauteur de l’écran */
+    }
+    
+    .center-box {
+    background-color: #111;
+    border: 2px solid #00ff00;
+    border-radius: 15px;
+    padding: 40px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 0 10px #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none; /* Empêche la sélection du texte lors des clics */
+    }
+    
+    .center-box p {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;}
+
+    .change-setup{background-color: #111;
+    border: 2px solid #00ff00;
+    border-radius: 50px;
+    width: 300px;
+    height: 75px;
+    box-shadow: 0 0 10px #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;}
+
+    .cinqsecond-click{background-color: #111;
+    color: white;
+    font-size: 1em;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 150px;
+    height:  75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .dixsecond-click{background-color: #111;
+    color: white;
+    font-size: 1em;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 150px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .cinqsecond-click:hover, 
+    .dixsecond-click:hover {color: black;
+    background-color: #00ff00;  /* Changement de la couleur original*/
+    box-shadow: 0 15px 15px #00ff00; 
+    transform: translateY(-5px);  /* Effet bouton "qui saute" au survol */
+    }
+    
+    .intro {color: white;
+    background-color: rgba(17, 17, 17, 0.75);
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 1em;
+    width: 1000px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    }
+
+    .result-analyse {display: flex;
+    flex-direction: row; /* Les différents boite de résultats sont alignées horizontalement */
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 40px;
+    }
+
+    
+
+    .text-turtle {background-color: rgba(17, 17, 17, 0.75);
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    width: 150px;
+    height: 500px;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px; /* Forme arrondie uniquement en haut */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    }
+
+    .turtle {color: white;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2911/2911472.png'); /* Image png */
+    background-size: 140px;
+    background-position: center;
+    background-color: rgba(0, 255, 0, 0.75);
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 1em;
+    margin-top: -45px;
+    }
+
+    .text-rabbit {background-color: rgba(17, 17, 17, 0.75);
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    width: 150px;
+    height: 500px;
+    border-top-right-radius: 150px; /* Forme arrondie uniquement en haut */
+    border-top-left-radius: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    }
+
+    .rabbit {color: white;
+    background-image: url('https://png.pngtree.com/png-vector/20250122/ourmid/pngtree-rabbit-icon-design-png-image_15297369.png'); /* Image png */
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 255, 0, 0.75);
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 1em;
+    margin-top: -100px;
+    }
+
+    .text-falcon {background-color: rgba(17, 17, 17, 0.75);
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    width: 150px;
+    height: 500px;
+    border-top-right-radius: 150px; /* Forme arrondie uniquement en haut */
+    border-top-left-radius: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    }
+
+    .falcon {color: white;
+    background-image: url('https://static.thenounproject.com/png/152486-200.png'); /* Image png */
+    background-size: 120px;
+    background-position: center;
+    background-color: rgba(0, 255, 0, 0.75);
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 1em;
+    margin-top: -80px;
+    }
+
+    .turtle:hover,
+    .rabbit:hover,
+    .falcon:hover {color: white;
+    font-size: 2.5em; /* Augmentation de la taille du texte */
+    background-color: #00ff00; 
+    box-shadow: 0 15px 15px #00ff00;
+    }
+
+
+    .text-wrapper {color: #00ff00;
+    background-color: rgba(17, 17, 17, 0.75);
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    width: 750px;
+    border-radius: 15px;
+    margin-top: 100px;
+    margin-left: auto; /* Centre horizontalement le bloc */
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
+
+    .footer {color: white;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 1em;
+    }
+
+
+
+    
+     
+    
+
+    

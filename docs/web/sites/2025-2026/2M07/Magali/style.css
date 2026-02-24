@@ -1,0 +1,168 @@
+
+.header{
+	background-color: rgb(240, 219, 126);
+    text-align: center;
+    font-family: "Herculanum", sans-serif;
+
+}
+
+.menu1 ul {
+    background-color: rgb(240, 219, 126);
+	display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    font-family: "Herculanum", sans-serif;
+}
+.menu1 li {
+	padding: 20px;
+}
+.menu1 li:hover {
+    background-color: rgb(255, 136, 0);
+	
+	
+}
+.contenu {
+    display: flex;
+
+}
+.contenu-principal {
+    background-color: rgb(226, 152, 78);
+    padding: 10px;
+   
+}
+img{
+    width: 300px;
+}
+.contenu-secondaire {
+    background-color: rgb(216, 81, 18);
+    padding: 10px;
+}
+.logo{
+	background-color: rgb(227, 195, 135);
+	flex-direction: row;
+     margin: 15px;
+     border-radius: 5px;
+    
+}
+.header2{
+	background-color: rgb(240, 219, 126);
+    text-align: center;
+    font-family: "Herculanum", sans-serif;
+
+}
+.menu2 ul {
+    background-color: rgb(240, 219, 126);
+	display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    font-family: "Herculanum", sans-serif;
+
+}
+.menu2 li {
+	padding: 20px;
+}
+.menu2 li:hover {
+    background-color: rgb(255, 136, 0);
+}
+
+.contenu2 {
+    display: flex;
+}
+.contenu-principal2 {
+    background-color:  rgb(226, 152, 78);
+    padding: 10px;
+    
+
+}
+.img img {
+   width: 50%;
+}
+.contenu-secondaire2 {
+    background-color:rgb(216, 81, 18);
+    padding: 10px;
+}
+.img2 img {
+   width: 50%;
+   flex-direction: row-reverse;
+}
+
+.tooltip-container {
+  position: relative; 
+  cursor: help;
+  display: inline-block;
+}
+
+
+.tooltip-container:hover::after {
+  content: attr(data-text); /* Prend le contenu de l'attribut data-text */
+  position: absolute;
+  background-color: #333; 
+  color: #fff; 
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  /* Positionnement */
+  bottom: 125%; /* Au-dessus du conteneur */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Transition douce */
+}
+
+
+.tooltip-container::after {
+  content: "";
+  position: absolute;
+  bottom: 125%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.header3{
+	background-color: rgb(240, 219, 126);
+    text-align: center;
+    font-family: "Herculanum", sans-serif;
+
+}
+
+.menu3 ul {
+    background-color: rgb(240, 219, 126);
+	display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    font-family: "Herculanum", sans-serif;
+}
+.menu3 li {
+	padding: 20px;
+}
+.menu3 li:hover {
+    background-color: rgb(255, 136, 0);
+	
+	
+}
+.contenu3 {
+    display: flex;
+}
+.contenu-principal3 {
+    background-color:  rgb(226, 152, 78);
+    padding: 10px;
+}
+.contenu-secondaire3 {
+    background-color: rgb(216, 81, 18);
+    padding: 10px;
+}
+	
+
+
+
+
+

@@ -106,6 +106,11 @@ def draw():
     player.draw() # On dessine le vaisseau ici !
 ```
 
+```{admonition} Changer la taille d'un acteur ?
+:class: note
+Il est possible de redimensionner une image d'acteur en lui donnant une échelle (scale). Par exemple, `player.scale = 2` rendrait le vaisseau deux fois plus grand que sa taille d'origine. A l'inverse, `player.scale = 0.5` le rendrait deux fois plus petit que sa taille d'origine.
+```
+
 ````{dropdown} Voir le code complet à ce point
 ```python
 import pgzrun
@@ -471,6 +476,9 @@ Pour appeler notre fonction toutes les 5 secondes, Pygame nous offre pour ceci u
 ...
 
 clock.schedule_interval(add_asteroid, 5.0)
+
+def draw():
+    ...
 ```
 
 La méthode `schedule_interval(f, x)` permet d'appeler automatiquement une fonction `f` toutes les `x` secondes. Nous l'avons donc réglée pour appeler `add_asteroid` toutes les `5` secondes, mais vous pouvez modifier cette valeur.
@@ -788,6 +796,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Ajouter une image d'explosion qui apparaît puis disparaît lorsqu'un astéroïde est détruit.
 * Ajouter un second joueur qui pourra se déplacer et tirer avec d'autres touches.
 * Ajouter un nouveau type d'ennemi qui se comporte différemment que les astéroïdes.
+* Empêcher le spam de lasers en faisant en sorte que le joueur ne puisse tirer qu'une fois tous les 0.5 secondes par exemple.
 * Faire en sorte que le personnage ne se déplace pas plus rapidement en diagonal qu'à l'horizontal ou à la verticale.
 
 **Challenging (difficile):**
@@ -803,7 +812,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 `````{admonition} Comment travailler en dehors du TP
 :class: danger
 ````{dropdown} Depuis la maison
-1. Téléchargez et installez [Python](https://www.python.org/downloads/).
+1. Téléchargez et installez [Python 3.12](https://www.python.org/downloads/). Prenez bien la version 3.12 car les versions plus récentes ne sont pas encore compatibles avec Pygame Zero.
 2. Téléchargez et installez [Pycharm](https://www.jetbrains.com/fr-fr/pycharm/download/). Faites attention à sélectionner la version qui correspond à votre système d'exploitation (Windows, MacOS, Linux).
 3. Ouvrez Pycharm et créez un nouveau projet. (Bouton "New Project" sur l'écran d'accueil ou via le menu "File" -> "New Project").
 4. Déplacez les fichiers et dossiers du jeu dans le dossier de votre projet (PythonProject par défaut).

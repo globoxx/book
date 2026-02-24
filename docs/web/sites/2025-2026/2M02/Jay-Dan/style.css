@@ -1,0 +1,21 @@
+nav.menu {
+    background-color: #8bcdfc;
+    padding: 1px;
+}
+nav.menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 55px
+}
+nav.menu ul a li {
+    background-color: #e4e9ed;
+    border-radius: 20px;
+    padding: 10px;
+    color: #33f016
+}
+nav.menu ul a {
+    text-decoration: none;
+}
+nav.menu li:hover{
+    background-color: #7ef7f5
+}
