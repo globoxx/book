@@ -400,10 +400,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="ajouter-le-joueur">
 <h2>3. Ajouter le joueur<a class="headerlink" href="#ajouter-le-joueur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps d’ajouter notre joueur. Il sera représenté par un <code class="docutils literal notranslate"><span class="pre">acteur</span></code>. Chaque <code class="docutils literal notranslate"><span class="pre">acteur</span></code> sera également représenté par une image (que nous appelerons un sprite) et une position (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>). Chaque sprite doit être sauvegardé dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>.</p>
-<img alt="../_images/run__003.png" src="../_images/run__003.png"/>
+<img alt="media/run_003.png" src="media/run_003.png"/>
 <p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> contient énormément de sprites gratuits à utiliser pour vos jeux.</p>
 <p>Pour créer un <code class="docutils literal notranslate"><span class="pre">acteur</span></code>, nous allons utiliser la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> fournie par Pygame Zero. Voyez un <code class="docutils literal notranslate"><span class="pre">acteur</span></code> comme une super variable pouvant contenir ses propres variables (que l’on appelle <code class="docutils literal notranslate"><span class="pre">attributs</span></code>) et ses propres fonctions (que l’on appelle <code class="docutils literal notranslate"><span class="pre">méthodes</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span> <span class="c1"># Création du joueur</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span> <span class="c1"># Création du joueur</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># Position en x du joueur</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span> <span class="c1"># Position en y du joueur</span>
 </pre></div>
@@ -435,7 +435,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 
@@ -455,20 +455,20 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="animer-le-joueur">
 <h2>4. Animer le joueur<a class="headerlink" href="#animer-le-joueur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Notre joueur est statique pour le moment. Nous allons donc ajouter une animation pour le faire courir. Dans un jeu, une animation est une suite d’images qui se succèdent rapidement pour donner l’illusion du mouvement.</p>
-<img alt="../_images/run__000.png" src="../_images/run__000.png"/>
-<img alt="../_images/run__003.png" src="../_images/run__003.png"/>
-<img alt="../_images/run__009.png" src="../_images/run__009.png"/>
-<p>Il nous faut commencer par définir la liste des images qui composent notre animation. Pour cela, nous ajoutons un attribut <code class="docutils literal notranslate"><span class="pre">images</span></code> à notre <code class="docutils literal notranslate"><span class="pre">player</span></code> qui contiendra toutes les images de notre animation.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<img alt="media/run_000.png" src="media/run_000.png"/>
+<img alt="media/run_003.png" src="media/run_003.png"/>
+<img alt="media/run_009.png" src="media/run_009.png"/>
+<p>Il nous faut commencer par définir la liste des images qui composent notre animation. Pour cela, nous ajoutons un attribut <code class="docutils literal notranslate"><span class="pre">images</span></code> à notre <code class="docutils literal notranslate"><span class="pre">player</span></code> qui contiendra toutes les images de notre animation. Il s’agit des images <code class="docutils literal notranslate"><span class="pre">run_000</span></code> à <code class="docutils literal notranslate"><span class="pre">run_009</span></code> que nous avons dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span> <span class="c1"># Liste des images de l'animation (run__000 à run__009)</span>
-<span class="c1"># Raccourci pour ['run__000', 'run__001', ..., 'run__009']</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run_00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span> <span class="c1"># Liste des images de l'animation (run_000 à run_009)</span>
+<span class="c1"># Raccourci pour ['run_000', 'run_001', ..., 'run_009']</span>
 </pre></div>
 </div>
 <p>Pour faire avancer l’animation à chaque tour, il nous faut encore appeler <code class="docutils literal notranslate"><span class="pre">player.animate()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> principale. Par défaut, l’animation se fait à 5 fps (images par seconde) mais on peut choisir une autre valeur.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># On anime le joueur à 20 fps (images par seconde)</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">animate</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># On anime le joueur à 20 fps (20 images par seconde)</span>
 </pre></div>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -486,10 +486,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run_00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 
 <span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">163</span><span class="p">,</span> <span class="mi">232</span><span class="p">,</span> <span class="mi">254</span><span class="p">))</span>
@@ -540,10 +540,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run_00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 
 <span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">)</span>
 <span class="n">obstacle</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">850</span>
@@ -569,23 +569,23 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </details></section>
 <section id="permettre-au-joueur-de-sauter">
 <h2>6. Permettre au joueur de sauter<a class="headerlink" href="#permettre-au-joueur-de-sauter" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour pouvoir sauter et retomber, notre personnage doit posséder une vitesse verticale. Nous allons donc ajouter un attribut <code class="docutils literal notranslate"><span class="pre">vy</span></code> à notre  <code class="docutils literal notranslate"><span class="pre">player</span></code> qui représente donc la vitesse verticale du joueur.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<p>Pour pouvoir sauter et retomber, notre personnage doit posséder une vitesse verticale. Nous allons donc ajouter un attribut <code class="docutils literal notranslate"><span class="pre">vy</span></code> à notre  <code class="docutils literal notranslate"><span class="pre">player</span></code> qui représente la vitesse verticale du joueur. (Nous aurions pu la nommer <code class="docutils literal notranslate"><span class="pre">vitesse_y</span></code> ou n’importe quoi d’autre, mais <code class="docutils literal notranslate"><span class="pre">vy</span></code> est plus court et plus facile à écrire).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run_00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Vitesse verticale à 0 par défaut</span>
 </pre></div>
 </div>
-<p>Sauter correspond à une action de notre joueur que nous allons coder dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>. Mais avant de s’occuper du saut, occupons-nous d’appliquer la <strong>gravité</strong>. La gravité augmente la vitesse verticale <code class="docutils literal notranslate"><span class="pre">vy</span></code> du joueur. Ensuite, il faut appliquer cette vitesse verticale pour mettre à jour la position verticale <code class="docutils literal notranslate"><span class="pre">y</span></code> du joueur.</p>
+<p>Sauter correspond à une action de notre joueur que nous allons coder dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>. Mais avant de s’occuper du saut, occupons-nous d’appliquer la <strong>gravité</strong>. La gravité augmente la vitesse verticale <code class="docutils literal notranslate"><span class="pre">vy</span></code> du joueur pour le faire tomber vers le bas. Ensuite, il faut appliquer cette vitesse verticale pour mettre à jour la position verticale <code class="docutils literal notranslate"><span class="pre">y</span></code> du joueur.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Augmentation de la vitesse verticale (gravité à 1 ici)</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># Augmentation positive de la vitesse verticale (gravité à 1 ici)</span>
     <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="c1"># Mise à jour de la position verticale du joueur</span>
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>Oups, notre personnage tombe du jeu et disparaît ! Pour éviter cela, nous allons devoir ajouter une condition (<code class="docutils literal notranslate"><span class="pre">if</span></code>) pour détecter le sol (coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> à <code class="docutils literal notranslate"><span class="pre">400</span></code>) et remettre la vitesse verticale à <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>Oups ! Notre personnage tombe du jeu et disparaît ! Pour éviter cela, nous allons devoir ajouter une condition (<code class="docutils literal notranslate"><span class="pre">if</span></code>) pour détecter le sol (coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> à <code class="docutils literal notranslate"><span class="pre">400</span></code>) et remettre la vitesse verticale à <code class="docutils literal notranslate"><span class="pre">0</span></code> s’il touche ce sol.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -625,10 +625,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run_00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="n">obstacle</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'cactus'</span><span class="p">)</span>
@@ -667,10 +667,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p>Notre joueur est invincible ! Il est temps d’ajouter la détection de collision entre le joueur et les obstacles. Si le joueur touche un obstacle, c’est la fin du jeu.</p>
 <p>Pour détecter une collision, nous allons utiliser la méthode <code class="docutils literal notranslate"><span class="pre">collides_with(actor)</span></code> que tous les <code class="docutils literal notranslate"><span class="pre">acteurs</span></code> possèdent. Cette méthode retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> si l’<code class="docutils literal notranslate"><span class="pre">acteur</span></code> est en collision avec un autre <code class="docutils literal notranslate"><span class="pre">acteur</span></code>.</p>
 <p>Nous allons l’utiliser pour détecter une collision entre le <code class="docutils literal notranslate"><span class="pre">player</span></code> et l’<code class="docutils literal notranslate"><span class="pre">obstacle</span></code>. Nous devons aussi créer une variable <code class="docutils literal notranslate"><span class="pre">game_over</span></code> pour savoir si le jeu est terminé. Par souci de simplicité, nous pouvons définir <code class="docutils literal notranslate"><span class="pre">game_over</span></code> comme un attribut de notre <code class="docutils literal notranslate"><span class="pre">player</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run_00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">player</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># Ajout de l'attribut game_over</span>
 
@@ -722,10 +722,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run_00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">player</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">False</span>
 
@@ -769,10 +769,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="tenir-et-afficher-un-score">
 <h2>8. Tenir et afficher un score<a class="headerlink" href="#tenir-et-afficher-un-score" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le score est important dans les jeux ! Pour en tenir un, on peut définir un attribut <code class="docutils literal notranslate"><span class="pre">score</span></code> à notre <code class="docutils literal notranslate"><span class="pre">player</span></code> et l’initialiser à <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run_00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">player</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Initialisation du score à 0</span>
@@ -810,10 +810,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">800</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">600</span>
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
-<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run__00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="n">player</span><span class="o">.</span><span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">'run_00</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">player</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">player</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">player</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
@@ -876,7 +876,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p>Ajouter une musique de fond est tout aussi simple ! Il suffit d’ajouter un fichier <code class="docutils literal notranslate"><span class="pre">.mp3</span></code> dans le dossier <code class="docutils literal notranslate"><span class="pre">music</span></code> (à créer) et d’utiliser l’objet <code class="docutils literal notranslate"><span class="pre">music</span></code> offert par Pygame Zero. Vous trouverez des musiques <code class="docutils literal notranslate"><span class="pre">mp3</span></code> libres de droits sur <a href="https://incompetech.com/music/royalty-free/music.html" target="_blank">Incompetech</a>.</p>
 <p>Pour lancer notre musique <code class="docutils literal notranslate"><span class="pre">ninja_music.mp3</span></code> au début du jeu, il ne reste qu’à appeler <code class="docutils literal notranslate"><span class="pre">music.play('ninja_music')</span></code> au début du programme principal.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s1">'ninja_music'</span><span class="p">)</span> <span class="c1"># Ajout de la musique ici !</span>
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run__000'</span><span class="p">)</span>
+<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">400</span>
 <span class="o">...</span>
@@ -897,25 +897,25 @@ Voir le code complet à ce point<div class="summary-down docutils">
 Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur difficulté.</p>
 <p><strong>Totalement dans vos cordes (facile):</strong></p>
 <ul class="simple">
-<li><p>Corriger le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s’il est au sol.</p></li>
-<li><p>Changer/Stopper l’animation du joueur en cours de saut.</p></li>
+<li><p>Corriger le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s’il touche le sol.</p></li>
+<li><p>Faire en sorte que les obstacles accélèrent progressivement quand le score augmente.</p></li>
+<li><p>Ajouter un deuxième obstacle décalé horizontalement par rapport au premier pour rendre le jeu plus difficile.</p></li>
 <li><p>Créer un vrai écran de game over dans lequel on ne voit plus le jeu derrière mais un écran noir par exemple.</p></li>
 <li><p>Permettre de mettre le jeu en pause en appuyant sur une touche.</p></li>
-<li><p>Faire en sorte que les obstacles accélèrent progressivement quand le score augmente.</p></li>
-<li><p>Faire en sorte que l’on puisse changer la taille de la fenêtre de jeu dans le code (<code class="docutils literal notranslate"><span class="pre">WIDTH</span></code> et <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code>) et que tout s’adapte automatiquement.</p></li>
+<li><p>Changer/Stopper l’animation du joueur en cours de saut.</p></li>
 </ul>
 <p><strong>Un peu plus complexe (moyen):</strong></p>
 <ul class="simple">
-<li><p>Permettre de relancer le jeu du début après un game over en appuyant sur une touche.</p></li>
 <li><p>Ajouter un nouveau type d’obstacle pour lequel il faut rester au sol pour l’éviter.</p></li>
-<li><p>Changer aléatoirement l’image de l’obstacle à chaque fois qu’il réapparaît. Piochez dans les images fournies ou trouvez-en d’autres.</p></li>
-<li><p>Plusieurs obstacles peuvent apparaître en même temps. Indice: créez une liste d’obstacles.</p></li>
 <li><p>Permettre au joueur de ramasser des objets pour augmenter son score, par exemple des pièces.</p></li>
+<li><p>Donner de la vie au joueur lui permettant de prendre quelques coups avant de mourir. La vie du joueur est affichée et à chaque collision, l’obstacle disparaît et réapparaît à droite.</p></li>
+<li><p>Permettre de relancer le jeu du début après un game over en appuyant sur une touche.</p></li>
+<li><p>Changer aléatoirement l’image de l’obstacle à chaque fois qu’il réapparaît. Piochez dans les images fournies ou trouvez-en d’autres.</p></li>
 </ul>
 <p><strong>Challenging (difficile):</strong></p>
 <ul class="simple">
 <li><p>Permettre au joueur de tirer sur les obstacles pour les détruire.</p></li>
-<li><p>Donner de la vie au joueur lui permettant de prendre un certain nombre de coups avant de mourir. La vie du joueur est affichée et à chaque coup, le joueur est invincible pendant un court laps de temps.</p></li>
+<li><p>Donner de la vie au joueur lui permettant de prendre un certain nombre de coups avant de mourir. La vie du joueur est affichée et à chaque coup, le joueur est invincible pendant un court laps de temps (l’obstacle ne disparaît pas au moment de la collision).</p></li>
 <li><p>Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d’autres options.</p></li>
 <li><p>Créer un système de sauvegarde du score.</p></li>
 <li><p>Autres idées…?</p></li>

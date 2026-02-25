@@ -103,7 +103,7 @@ pgzrun.go()
 
 Il est temps d'ajouter notre joueur. Il sera représenté par un `acteur`. Chaque `acteur` sera également représenté par une image (que nous appelerons un sprite) et une position (`x`, `y`). Chaque sprite doit être sauvegardé dans le dossier `images`.
 
-```{image} ../media/run__003.png
+```{image} ../media/run_003.png
 ```
 
 La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> contient énormément de sprites gratuits à utiliser pour vos jeux.
@@ -111,7 +111,7 @@ La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> cont
 Pour créer un `acteur`, nous allons utiliser la classe `Actor` fournie par Pygame Zero. Voyez un `acteur` comme une super variable pouvant contenir ses propres variables (que l'on appelle `attributs`) et ses propres fonctions (que l'on appelle `méthodes`).
 
 ```python
-player = Actor('run__000') # Création du joueur
+player = Actor('run_000') # Création du joueur
 player.x = 100 # Position en x du joueur
 player.y = 400 # Position en y du joueur
 ```
@@ -142,7 +142,7 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
 
@@ -162,30 +162,30 @@ pgzrun.go()
 
 Notre joueur est statique pour le moment. Nous allons donc ajouter une animation pour le faire courir. Dans un jeu, une animation est une suite d'images qui se succèdent rapidement pour donner l'illusion du mouvement.
 
-```{image} ../media/run__000.png
+```{image} ../media/run_000.png
 ```
 
-```{image} ../media/run__003.png
+```{image} ../media/run_003.png
 ```
 
-```{image} ../media/run__009.png
+```{image} ../media/run_009.png
 ```
 
-Il nous faut commencer par définir la liste des images qui composent notre animation. Pour cela, nous ajoutons un attribut `images` à notre `player` qui contiendra toutes les images de notre animation.
+Il nous faut commencer par définir la liste des images qui composent notre animation. Pour cela, nous ajoutons un attribut `images` à notre `player` qui contiendra toutes les images de notre animation. Il s'agit des images `run_000` à `run_009` que nous avons dans le dossier `images`.
 
 ```python
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
-player.images = [f'run__00{i}' for i in range(10)] # Liste des images de l'animation (run__000 à run__009)
-# Raccourci pour ['run__000', 'run__001', ..., 'run__009']
+player.images = [f'run_00{i}' for i in range(10)] # Liste des images de l'animation (run_000 à run_009)
+# Raccourci pour ['run_000', 'run_001', ..., 'run_009']
 ```
 
 Pour faire avancer l'animation à chaque tour, il nous faut encore appeler `player.animate()` dans la fonction `update` principale. Par défaut, l'animation se fait à 5 fps (images par seconde) mais on peut choisir une autre valeur.
 
 ```python
 def update():
-    player.animate(20) # On anime le joueur à 20 fps (images par seconde)
+    player.animate(20) # On anime le joueur à 20 fps (20 images par seconde)
 ```
 
 ````{dropdown} Voir le code complet à ce point
@@ -198,10 +198,10 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
-player.images = [f'run__00{i}' for i in range(10)]
+player.images = [f'run_00{i}' for i in range(10)]
 
 def draw():
     screen.fill((163, 232, 254))
@@ -255,10 +255,10 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
-player.images = [f'run__00{i}' for i in range(10)]
+player.images = [f'run_00{i}' for i in range(10)]
 
 obstacle = Actor('cactus')
 obstacle.x = 850
@@ -283,27 +283,27 @@ pgzrun.go()
 
 ## 6. Permettre au joueur de sauter
 
-Pour pouvoir sauter et retomber, notre personnage doit posséder une vitesse verticale. Nous allons donc ajouter un attribut `vy` à notre  `player` qui représente donc la vitesse verticale du joueur.
+Pour pouvoir sauter et retomber, notre personnage doit posséder une vitesse verticale. Nous allons donc ajouter un attribut `vy` à notre  `player` qui représente la vitesse verticale du joueur. (Nous aurions pu la nommer `vitesse_y` ou n'importe quoi d'autre, mais `vy` est plus court et plus facile à écrire).
 
 ```python
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
-player.images = [f'run__00{i}' for i in range(10)]
+player.images = [f'run_00{i}' for i in range(10)]
 player.vy = 0 # Vitesse verticale à 0 par défaut
 ```
 
-Sauter correspond à une action de notre joueur que nous allons coder dans la fonction `update`. Mais avant de s'occuper du saut, occupons-nous d'appliquer la **gravité**. La gravité augmente la vitesse verticale `vy` du joueur. Ensuite, il faut appliquer cette vitesse verticale pour mettre à jour la position verticale `y` du joueur.
+Sauter correspond à une action de notre joueur que nous allons coder dans la fonction `update`. Mais avant de s'occuper du saut, occupons-nous d'appliquer la **gravité**. La gravité augmente la vitesse verticale `vy` du joueur pour le faire tomber vers le bas. Ensuite, il faut appliquer cette vitesse verticale pour mettre à jour la position verticale `y` du joueur.
 
 ```python
 def update():
     ...
-    player.vy += 1 # Augmentation de la vitesse verticale (gravité à 1 ici)
+    player.vy += 1 # Augmentation positive de la vitesse verticale (gravité à 1 ici)
     player.y += player.vy # Mise à jour de la position verticale du joueur
     ...
 ```
 
-Oups, notre personnage tombe du jeu et disparaît ! Pour éviter cela, nous allons devoir ajouter une condition (`if`) pour détecter le sol (coordonnée `y` à `400`) et remettre la vitesse verticale à `0`.
+Oups ! Notre personnage tombe du jeu et disparaît ! Pour éviter cela, nous allons devoir ajouter une condition (`if`) pour détecter le sol (coordonnée `y` à `400`) et remettre la vitesse verticale à `0` s'il touche ce sol.
 
 ```python
 def update():
@@ -342,10 +342,10 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
-player.images = [f'run__00{i}' for i in range(10)]
+player.images = [f'run_00{i}' for i in range(10)]
 player.vy = 0
 
 obstacle = Actor('cactus')
@@ -387,10 +387,10 @@ Pour détecter une collision, nous allons utiliser la méthode `collides_with(ac
 Nous allons l'utiliser pour détecter une collision entre le `player` et l'`obstacle`. Nous devons aussi créer une variable `game_over` pour savoir si le jeu est terminé. Par souci de simplicité, nous pouvons définir `game_over` comme un attribut de notre `player`.
 
 ```python
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
-player.images = [f'run__00{i}' for i in range(10)]
+player.images = [f'run_00{i}' for i in range(10)]
 player.vy = 0
 player.game_over = False # Ajout de l'attribut game_over
 
@@ -441,10 +441,10 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
-player.images = [f'run__00{i}' for i in range(10)]
+player.images = [f'run_00{i}' for i in range(10)]
 player.vy = 0
 player.game_over = False
 
@@ -489,10 +489,10 @@ pgzrun.go()
 Le score est important dans les jeux ! Pour en tenir un, on peut définir un attribut `score` à notre `player` et l'initialiser à `0`.
 
 ```python
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
-player.images = [f'run__00{i}' for i in range(10)]
+player.images = [f'run_00{i}' for i in range(10)]
 player.vy = 0
 player.game_over = False
 player.score = 0 # Initialisation du score à 0
@@ -529,10 +529,10 @@ TITLE = 'Runner'
 WIDTH = 800
 HEIGHT = 600
 
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
-player.images = [f'run__00{i}' for i in range(10)]
+player.images = [f'run_00{i}' for i in range(10)]
 player.vy = 0
 player.game_over = False
 player.score = 0
@@ -600,7 +600,7 @@ Pour lancer notre musique `ninja_music.mp3` au début du jeu, il ne reste qu'à 
 
 ```python
 music.play('ninja_music') # Ajout de la musique ici !
-player = Actor('run__000')
+player = Actor('run_000')
 player.x = 100
 player.y = 400
 ...
@@ -620,25 +620,25 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 
 **Totalement dans vos cordes (facile):**
 
-* Corriger le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s'il est au sol.
-* Changer/Stopper l'animation du joueur en cours de saut.
+* Corriger le bug des sauts infinis. Le joueur ne devrait pouvoir sauter que s'il touche le sol.
+* Faire en sorte que les obstacles accélèrent progressivement quand le score augmente.
+* Ajouter un deuxième obstacle décalé horizontalement par rapport au premier pour rendre le jeu plus difficile.
 * Créer un vrai écran de game over dans lequel on ne voit plus le jeu derrière mais un écran noir par exemple.
 * Permettre de mettre le jeu en pause en appuyant sur une touche.
-* Faire en sorte que les obstacles accélèrent progressivement quand le score augmente.
-* Faire en sorte que l'on puisse changer la taille de la fenêtre de jeu dans le code (`WIDTH` et `HEIGHT`) et que tout s'adapte automatiquement.
+* Changer/Stopper l'animation du joueur en cours de saut.
 
 **Un peu plus complexe (moyen):**
 
-* Permettre de relancer le jeu du début après un game over en appuyant sur une touche.
 * Ajouter un nouveau type d'obstacle pour lequel il faut rester au sol pour l'éviter.
-* Changer aléatoirement l'image de l'obstacle à chaque fois qu'il réapparaît. Piochez dans les images fournies ou trouvez-en d'autres.
-* Plusieurs obstacles peuvent apparaître en même temps. Indice: créez une liste d'obstacles.
 * Permettre au joueur de ramasser des objets pour augmenter son score, par exemple des pièces.
+* Donner de la vie au joueur lui permettant de prendre quelques coups avant de mourir. La vie du joueur est affichée et à chaque collision, l'obstacle disparaît et réapparaît à droite.
+* Permettre de relancer le jeu du début après un game over en appuyant sur une touche.
+* Changer aléatoirement l'image de l'obstacle à chaque fois qu'il réapparaît. Piochez dans les images fournies ou trouvez-en d'autres.
 
 **Challenging (difficile):**
 
 * Permettre au joueur de tirer sur les obstacles pour les détruire.
-* Donner de la vie au joueur lui permettant de prendre un certain nombre de coups avant de mourir. La vie du joueur est affichée et à chaque coup, le joueur est invincible pendant un court laps de temps.
+* Donner de la vie au joueur lui permettant de prendre un certain nombre de coups avant de mourir. La vie du joueur est affichée et à chaque coup, le joueur est invincible pendant un court laps de temps (l'obstacle ne disparaît pas au moment de la collision).
 * Créer un menu avant le début du jeu qui permet de choisir la difficulté ou d'autres options.
 * Créer un système de sauvegarde du score.
 * Autres idées..?
