@@ -384,7 +384,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="ajouter-le-joueur">
 <h2>3. Ajouter le joueur<a class="headerlink" href="#ajouter-le-joueur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps d’ajouter notre joueur. Il sera représenté par un <code class="docutils literal notranslate"><span class="pre">objet</span></code>. Chaque objet sera également représenté par une image (que nous appelerons un sprite) et une position. Chaque sprite doit être sauvegardé dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>.</p>
-<img alt="../_images/run__003.png" src="../_images/run__003.png"/>
+<img alt="media/run__003.png" src="media/run__003.png"/>
 <p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenny</a> contient énormément de sprites gratuits à utiliser pour vos jeux.</p>
 <p>Pour chaque nouvel objet que l’on veut ajouter à notre jeu, nous allons créer une <code class="docutils literal notranslate"><span class="pre">classe</span></code> associée. Voyez une classe comme un moule qui nous permettra de créer des objets, comme notre joueur. En <a href="https://courspython.com/classes-et-objets.html" target="_blank">programmation orientée objet</a>, une classe possède des <code class="docutils literal notranslate"><span class="pre">attributs</span></code> (des variables décrivant l’objet) et des <code class="docutils literal notranslate"><span class="pre">méthodes</span></code> (des fonctions pouvant être appelées par l’objet).</p>
 <p>Nous créons donc une classe <code class="docutils literal notranslate"><span class="pre">Player</span></code> qui hérite des attributs et méthodes d’une autre classe nommée <code class="docutils literal notranslate"><span class="pre">Actor</span></code> offerte par Pygame. En fait, tous les objets que nous allons ajouter à notre jeu sont des <code class="docutils literal notranslate"><span class="pre">Actor</span></code>.</p>
@@ -444,9 +444,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="animer-le-joueur">
 <h2>4. Animer le joueur<a class="headerlink" href="#animer-le-joueur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Notre joueur est statique pour le moment. Nous allons donc ajouter une animation pour le faire courir. Dans un jeu, une animation est une suite d’images qui se succèdent rapidement pour donner l’illusion du mouvement.</p>
-<img alt="../_images/run__000.png" src="../_images/run__000.png"/>
-<img alt="../_images/run__003.png" src="../_images/run__003.png"/>
-<img alt="../_images/run__009.png" src="../_images/run__009.png"/>
+<img alt="media/run__000.png" src="media/run__000.png"/>
+<img alt="media/run__003.png" src="media/run__003.png"/>
+<img alt="media/run__009.png" src="media/run__009.png"/>
 <p>Il nous faut commencer par définir la liste des images qui composent notre animation. Pour cela, nous ajoutons un attribut <code class="docutils literal notranslate"><span class="pre">images</span></code> à notre classe <code class="docutils literal notranslate"><span class="pre">Player</span></code> qui contiendra toutes les images de notre animation.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Player</span><span class="p">(</span><span class="n">Actor</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
