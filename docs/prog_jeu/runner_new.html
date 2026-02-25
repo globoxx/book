@@ -400,7 +400,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="ajouter-le-joueur">
 <h2>3. Ajouter le joueur<a class="headerlink" href="#ajouter-le-joueur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps d’ajouter notre joueur. Il sera représenté par un <code class="docutils literal notranslate"><span class="pre">acteur</span></code>. Chaque <code class="docutils literal notranslate"><span class="pre">acteur</span></code> sera également représenté par une image (que nous appelerons un sprite) et une position (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>). Chaque sprite doit être sauvegardé dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>.</p>
-<img alt="media/run_003.png" src="media/run_003.png"/>
+<img alt="../_images/run_003.png" src="../_images/run_003.png"/>
 <p>La plateforme <a href="https://kenney.nl/assets" target="_blank">Kenney</a> contient énormément de sprites gratuits à utiliser pour vos jeux.</p>
 <p>Pour créer un <code class="docutils literal notranslate"><span class="pre">acteur</span></code>, nous allons utiliser la classe <code class="docutils literal notranslate"><span class="pre">Actor</span></code> fournie par Pygame Zero. Voyez un <code class="docutils literal notranslate"><span class="pre">acteur</span></code> comme une super variable pouvant contenir ses propres variables (que l’on appelle <code class="docutils literal notranslate"><span class="pre">attributs</span></code>) et ses propres fonctions (que l’on appelle <code class="docutils literal notranslate"><span class="pre">méthodes</span></code>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span> <span class="c1"># Création du joueur</span>
@@ -455,9 +455,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="animer-le-joueur">
 <h2>4. Animer le joueur<a class="headerlink" href="#animer-le-joueur" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Notre joueur est statique pour le moment. Nous allons donc ajouter une animation pour le faire courir. Dans un jeu, une animation est une suite d’images qui se succèdent rapidement pour donner l’illusion du mouvement.</p>
-<img alt="media/run_000.png" src="media/run_000.png"/>
-<img alt="media/run_003.png" src="media/run_003.png"/>
-<img alt="media/run_009.png" src="media/run_009.png"/>
+<img alt="../_images/run_000.png" src="../_images/run_000.png"/>
+<img alt="../_images/run_003.png" src="../_images/run_003.png"/>
+<img alt="../_images/run_009.png" src="../_images/run_009.png"/>
 <p>Il nous faut commencer par définir la liste des images qui composent notre animation. Pour cela, nous ajoutons un attribut <code class="docutils literal notranslate"><span class="pre">images</span></code> à notre <code class="docutils literal notranslate"><span class="pre">player</span></code> qui contiendra toutes les images de notre animation. Il s’agit des images <code class="docutils literal notranslate"><span class="pre">run_000</span></code> à <code class="docutils literal notranslate"><span class="pre">run_009</span></code> que nous avons dans le dossier <code class="docutils literal notranslate"><span class="pre">images</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'run_000'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
