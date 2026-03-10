@@ -2,7 +2,7 @@
 
 # Projet d'histoire interactive
 
-Il est temps de mettre en pratique vos compétences de programmeur pour développer un petit jeu textuel en histoire interactive.
+Il est temps de mettre en pratique vos compétences de programmeur en développant un petit jeu textuel en histoire interactive.
 Le projet peut être réalisé par groupe de 2 ou seul.
 
 ## Consignes
@@ -11,25 +11,26 @@ Le projet peut être réalisé par groupe de 2 ou seul.
 :class: note
 **Le cahier des charges est le suivant:**
 
-- créer une histoire interactive où l'utilisateur peut interagir avec le programme pour prendre des choix
-- le programme correspond au logigramme du jeu
-- au moins 4 questions à choix multiples posées à l'utilisateur au cours de l'histoire (3 si projet seul)
-- au moins 3 tests automatiques se faisant sur l'inventaire ou sur une variable d'état (ex: vie ou argent) (2 si projet seul)
-- un système d'inventaire est mis en place et il est possible de ramasser au moins 2 objets différents qui ont des conséquences concrètes sur l'histoire
-- au moins 1 variable est utilisée pour représenter un état (ex: argent, vie, score, etc) et cette variable a des conséquences concrètes sur l'histoire
-- au moins 1 boucle permettant de revenir à un point antérieur dans l'histoire (ex: revenir au début pour explorer d'autres chemins)
-- au moins 1 possibilité de gagner dans le jeu
-- au moins 1 possibilité de perdre dans le jeu
-- le joueur ne peut pas se retrouver bloquer dans le jeu
-- gestion des erreurs de l'utilisateur (ex: le programme repose la question si la réponse n'est pas comprise)
-- le code est bien structuré et facile à lire (ex: les indentations sont correctes, les if elif else sont utilisés correctement, etc)
-- (bonus) histoire particulièrement complexe et/ou créative
-- (bonus) ajout d'éléments/notions non-vus en classe
+- Le programme correspond au logigramme du jeu
+- Au moins 5 questions à choix multiples posées à l'utilisateur au cours de l'histoire (3 si projet seul)
+- Un système d'inventaire est mis en place et il est possible de ramasser au moins 2 objets différents qui ont des conséquences concrètes sur l'histoire
+- Au moins 1 variable est utilisée pour représenter un état (ex: argent, vie, score, etc) et cette variable a des conséquences concrètes sur l'histoire
+- Au moins 3 tests automatiques se faisant sur l'inventaire ou sur une variable d'état (ex: vie ou argent) (2 si projet seul)
+- Au moins 1 boucle permettant de revenir à un point antérieur dans l'histoire (ex: revenir au début pour explorer d'autres chemins)
+- Au moins 1 possibilité de gagner
+- Au moins 1 possibilité de perdre
+- Le code est bien structuré et facile à lire (ex: les indentations sont correctes, les if elif else sont utilisés correctement, etc)
+
+Suivre les critères ci-dessus vous garantira la note de 5 au minimum.  
+Tout élément supplémentaire pourra faire monter la note jusqu'à 6.
+
+**Bonus:**
+- L'histoire est plus longue que le minimum demandé
+- L'histoire est particulièrement complexe et/ou créative
+- L'histoire comporte des éléments de programmation non vus en cours
 ```
 
-Vous aurez à rendre le logigramme représentant votre jeu et le code (`.py`) du programme.
-
-**Le respect de tous les critères garantit la note de 5 au minimum. Tout élément supplémentaire pourra faire monter la note jusqu'à 6.**
+Vous aurez à rendre le logigramme représentant votre jeu (`.drawio` ou image) et le code (`.py`) du programme.
 
 ```{admonition} Plagiat et tricherie
 :class: attention
