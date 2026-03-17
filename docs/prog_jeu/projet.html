@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Projets d’élèves" href="projets_eleves.html" /><link rel="prev" title="5. Jumper (platformer)" href="platformer.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="Projets d’élèves" href="projets_eleves.html" /><link rel="prev" title="5. Jumper (platformer)" href="platformer_new.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>Projet - Travaux pratiques</title>
@@ -264,7 +264,7 @@
 <li class="toctree-l1"><a class="reference internal" href="intro_pygame.html">2. Introduction à Pygame</a></li>
 <li class="toctree-l1"><a class="reference internal" href="runner_new.html">3. Running Ninja (runner)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="star_wars.html">4. Star wars (shooter)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="platformer.html">5. Jumper (platformer)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="platformer_new.html">5. Jumper (platformer)</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Projet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
 </ul>
@@ -316,66 +316,36 @@
 </div>
 <div class="note admonition">
 <p class="admonition-title">Critères à respecter:</p>
-<p>Vous avez le choix entre:</p>
-<ol class="simple">
-<li><p>Améliorer un tutoriel donné en classe et le transformer en vrai jeu</p></li>
-<li><p>Créer un jeu inédit en partant de rien (part avec un bonus car plus difficile)</p></li>
-</ol>
-<p><strong>Si vous améliorer un tutoriel:</strong></p>
 <ul class="simple">
-<li><p>Implémenter au moins 3 améliorations faciles.</p></li>
-<li><p>Implémenter au moins 2 améliorations moyennes.</p></li>
-<li><p>Implémenter au moins 1 amélioration difficile.</p></li>
-<li><p>Les améliorations faites sont clairement indiquées dans le code par des commentaires.</p></li>
-<li><p>Ajout d’au moins 1 nouvel acteur ayant un impact sur le jeu.</p></li>
-<li><p>Si absent du tutoriel, utilisation d’au moins 1 liste d’acteurs (ex: liste d’ennemis ou d’items à ramasser).</p></li>
-<li><p>Le jeu est jouable de bout en bout et ne plante jamais.</p></li>
-<li><p>Il est possible de perdre et de gagner (ou augmenter un score).</p></li>
-<li><p>Le code du jeu est propre et lisible.</p></li>
+<li><p>Le jeu est différent des tutoriels (même si une base commune peut exister).</p></li>
+<li><p>Le jeu est jouable, possède un objectif clair, ne contient pas de bug évident et ne plante pas.</p></li>
+<li><p>Le jeu comporte au moins 1 acteur déplaçable par l’utilisateur (à la souris ou au clavier).</p></li>
+<li><p>Le jeu comporte au moins 2 autres types d’acteurs différents qui se déplacent ou intéragissent avec le joueur.</p></li>
+<li><p>Le jeu comporte au moins 1 liste d’acteurs (ex: liste d’ennemis ou liste d’items à ramasser).</p></li>
+<li><p>Le jeu comporte des collisions entre acteurs.</p></li>
+<li><p>Il est possible de perdre et un game over doit alors s’afficher.</p></li>
+<li><p>Il est possible de gagner ou d’augmenter un score indéfiniment.</p></li>
+<li><p>Le jeu comporte au moins 1 musique de fond et 1 bruitage.</p></li>
+<li><p>Le jeu est développé de manière continue (pas de travail à la dernière minute).</p></li>
+<li><p>Le jeu est rendu à temps et défendu oralement.</p></li>
 </ul>
-<p><strong>Si vous partez de rien:</strong></p>
-<ul class="simple">
-<li><p>Le code du jeu est clairement différent des tutoriels.</p></li>
-<li><p>Le jeu est jouable de bout en bout et ne plante jamais.</p></li>
-<li><p>Le jeu comporte au moins 1 personnage ou objet déplaçable par l’utilisateur.</p></li>
-<li><p>Le jeu comporte au moins 2 autres objets ou personnages différents qui se déplacent ou intéragissent avec le joueur.</p></li>
-<li><p>Le jeu comporte au moins 1 liste d’éléments (ex: liste d’ennemis ou d’items à ramasser).</p></li>
-<li><p>Le jeu comporte au moins 1 objet pouvant interagir avec le joueur par collision (ex: item ramassable)</p></li>
-<li><p>Il est possible de perdre au jeu et un game over doit s’afficher.</p></li>
-<li><p>Il est possible de gagner ou d’augmenter son score au jeu.</p></li>
-<li><p>Le jeu comporte une musique ainsi qu’au moins un bruitage.</p></li>
-<li><p>Le joueur possède au moins 2 attributs utilisés dans le jeu (ex: vie, score, etc).</p></li>
-<li><p>Le code du jeu est propre et lisible.</p></li>
-</ul>
+<p>Suivre les critères ci-dessus vous garantira la minimale note de 5.<br/>
+La note maximale est atteignable en ajoutant des éléments bonus.</p>
 <p><strong>Bonus:</strong></p>
 <ul class="simple">
-<li><p>N’importe quel élément supplémentaire non demandé dans le cahier des charges.</p></li>
+<li><p>Des créations artistiques personnelles (images, sons, musiques).</p></li>
+<li><p>Des éléments de gamplay complexes (ex: améliorations difficiles vues en tutoriel).</p></li>
 <li><p>Une créativité particulière au niveau du gameplay (un gameplay très différent de ce qui a été vu en tutoriel).</p></li>
-<li><p>Un exploit technique dépassant le cadre du cours.</p></li>
+<li><p>Des notions de programmation non vus en cours.</p></li>
 </ul>
 </div>
-<p>Suivre le stric minimum des critères du cahier des charges vous garantira la note de 5.<br/>
-La note maximale est atteignable en ajoutant des éléments bonus.</p>
 <div class="attention admonition">
 <p class="admonition-title">Plagiat et tricherie</p>
 <p>Vous n’êtes pas autorisé à simplement copier-coller du code trouvé sur Internet où dans d’autres groupes.</p>
 <p>Il est cependant autorisé de s’inspirer de code d’autrui et de le modifier pour le faire sien. Dans ce cas, il vous est demandé d’ajouter un commentaire dans le code indiquant sa source.</p>
 <p>L’utilisation d’IA génératives telles que ChatGPT est autorisée à des fins d’assistance uniquement (avec commentaire indiquant son utilisation). Il n’est pas autorisé d’utiliser directement le code produit par une IA et de le coller dans son code en faisant 2-3 modifications sans citer son utilisation (sachez que cela se voit tout de suite).</p>
-<p>Enfin, <strong>chaque ligne de code doit pouvoir être expliquée et défendue par le groupe</strong>. L’enseignant se réserve le droit d’interroger le groupe sur le code en cas de doute, auquel cas l’élève qui est l’auteur de la ligne en question doit pouvoir l’expliquer en détails.</p>
+<p>Enfin, <strong>chaque ligne de code doit pouvoir être expliquée et défendue par le groupe</strong>. Une présentation orale de votre travail aura lieu pour évaluer cette compréhension.</p>
 </div>
-</section>
-<section id="trouver-les-ressources-sons-et-images">
-<h2>Trouver les ressources (sons et images)<a class="headerlink" href="#trouver-les-ressources-sons-et-images" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Voici des suggestions de plateformes pour facilement trouver vos ressources:</p>
-<ul class="simple">
-<li><p>Musiques et bruitages: <a href="https://opengameart.org/" target="_blank">OpenGameArt Music</a> ou <a href="https://freesound.org/" target="_blank">Freesound (login nécessaire)</a> ou <a href="https://universal-soundbank.com/index.htm" target="_blank">Universal Soundbank</a></p></li>
-<li><p>Sprites: <a href="https://kenney.nl/assets" target="_blank">Kenny</a></p></li>
-</ul>
-<p>Il va de soit que vous pouvez utiliser des ressources qui viennent d’ailleurs !</p>
-</section>
-<section id="feuille-de-triche-sur-pygame-zero">
-<h2>Feuille de triche sur Pygame Zero<a class="headerlink" href="#feuille-de-triche-sur-pygame-zero" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference download internal" download="" href="../_downloads/dfffca15f160eaadd4c3033f744d5156/pygame_zero_documentation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Télécharger</span> <span class="pre">ici</span></code></a></p>
 </section>
 </section>
 
@@ -393,7 +363,7 @@ La note maximale est atteignable en ajoutant des éléments bonus.</p>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="platformer.html">
+          <a class="prev-page" href="platformer_new.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
@@ -429,8 +399,6 @@ La note maximale est atteignable en ajoutant des éléments bonus.</p>
             <ul>
 <li><a class="reference internal" href="#">Projet</a><ul>
 <li><a class="reference internal" href="#cahier-des-charges">Cahier des charges</a></li>
-<li><a class="reference internal" href="#trouver-les-ressources-sons-et-images">Trouver les ressources (sons et images)</a></li>
-<li><a class="reference internal" href="#feuille-de-triche-sur-pygame-zero">Feuille de triche sur Pygame Zero</a></li>
 </ul>
 </li>
 </ul>

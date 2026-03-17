@@ -13,42 +13,27 @@ Vous avez carte blanche concernant le contenu de votre jeu. Cela concerne les im
 
 ```{admonition} Critères à respecter:
 :class: note
-Vous avez le choix entre:
-1. Améliorer un tutoriel donné en classe et le transformer en vrai jeu
-2. Créer un jeu inédit en partant de rien (part avec un bonus car plus difficile)
+- Le jeu est différent des tutoriels (même si une base commune peut exister).
+- Le jeu est jouable, possède un objectif clair, ne contient pas de bug évident et ne plante pas.
+- Le jeu comporte au moins 1 acteur déplaçable par l'utilisateur (à la souris ou au clavier).
+- Le jeu comporte au moins 2 autres types d'acteurs différents qui se déplacent ou intéragissent avec le joueur.
+- Le jeu comporte au moins 1 liste d'acteurs (ex: liste d'ennemis ou liste d'items à ramasser).
+- Le jeu comporte des collisions entre acteurs.
+- Il est possible de perdre et un game over doit alors s'afficher.
+- Il est possible de gagner ou d'augmenter un score indéfiniment.
+- Le jeu comporte au moins 1 musique de fond et 1 bruitage.
+- Le jeu est développé de manière continue (pas de travail à la dernière minute).
+- Le jeu est rendu à temps et défendu oralement.
 
-**Si vous améliorer un tutoriel:**
-- Implémenter au moins 3 améliorations faciles.
-- Implémenter au moins 2 améliorations moyennes.
-- Implémenter au moins 1 amélioration difficile.
-- Les améliorations faites sont clairement indiquées dans le code par des commentaires.
-- Ajout d'au moins 1 nouvel acteur ayant un impact sur le jeu.
-- Si absent du tutoriel, utilisation d'au moins 1 liste d'acteurs (ex: liste d'ennemis ou d'items à ramasser).
-- Le jeu est jouable de bout en bout et ne plante jamais.
-- Il est possible de perdre et de gagner (ou augmenter un score).
-- Le code du jeu est propre et lisible.
-
-**Si vous partez de rien:**
-- Le code du jeu est clairement différent des tutoriels.
-- Le jeu est jouable de bout en bout et ne plante jamais.
-- Le jeu comporte au moins 1 personnage ou objet déplaçable par l'utilisateur.
-- Le jeu comporte au moins 2 autres objets ou personnages différents qui se déplacent ou intéragissent avec le joueur.
-- Le jeu comporte au moins 1 liste d'éléments (ex: liste d'ennemis ou d'items à ramasser).
-- Le jeu comporte au moins 1 objet pouvant interagir avec le joueur par collision (ex: item ramassable)
-- Il est possible de perdre au jeu et un game over doit s'afficher.
-- Il est possible de gagner ou d'augmenter son score au jeu.
-- Le jeu comporte une musique ainsi qu'au moins un bruitage.
-- Le joueur possède au moins 2 attributs utilisés dans le jeu (ex: vie, score, etc).
-- Le code du jeu est propre et lisible.
+Suivre les critères ci-dessus vous garantira la minimale note de 5.  
+La note maximale est atteignable en ajoutant des éléments bonus.
 
 **Bonus:**
-- N'importe quel élément supplémentaire non demandé dans le cahier des charges.
+- Des créations artistiques personnelles (images, sons, musiques).
+- Des éléments de gamplay complexes (ex: améliorations difficiles vues en tutoriel).
 - Une créativité particulière au niveau du gameplay (un gameplay très différent de ce qui a été vu en tutoriel).
-- Un exploit technique dépassant le cadre du cours.
+- Des notions de programmation non vus en cours.
 ```
-
-Suivre le stric minimum des critères du cahier des charges vous garantira la note de 5.  
-La note maximale est atteignable en ajoutant des éléments bonus.
 
 ```{admonition} Plagiat et tricherie
 :class: attention
@@ -58,18 +43,5 @@ Il est cependant autorisé de s'inspirer de code d'autrui et de le modifier pour
 
 L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d'assistance uniquement (avec commentaire indiquant son utilisation). Il n'est pas autorisé d'utiliser directement le code produit par une IA et de le coller dans son code en faisant 2-3 modifications sans citer son utilisation (sachez que cela se voit tout de suite).
 
-Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. L'enseignant se réserve le droit d'interroger le groupe sur le code en cas de doute, auquel cas l'élève qui est l'auteur de la ligne en question doit pouvoir l'expliquer en détails.
+Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. Une présentation orale de votre travail aura lieu pour évaluer cette compréhension.
 ```
-
-## Trouver les ressources (sons et images)
-
-Voici des suggestions de plateformes pour facilement trouver vos ressources:
-
-- Musiques et bruitages: <a href="https://opengameart.org/" target="_blank">OpenGameArt Music</a> ou <a href="https://freesound.org/" target="_blank">Freesound (login nécessaire)</a> ou <a href="https://universal-soundbank.com/index.htm" target="_blank">Universal Soundbank</a>
-- Sprites: <a href="https://kenney.nl/assets" target="_blank">Kenny</a>
-
-Il va de soit que vous pouvez utiliser des ressources qui viennent d'ailleurs !
-
-## Feuille de triche sur Pygame Zero
-
-{download}`Télécharger ici<../data/pygame_zero_documentation.pdf>`
