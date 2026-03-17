@@ -144,7 +144,7 @@
 
 #### Calypso et Oumilika
 
-```{image} ../media/dessins_eleves/2526/calypso_oumi.png
+```{image} ../media/dessins_eleves/2526/calypso_oumi.gif
 ```
 
 #### Ayamé
