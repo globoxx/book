@@ -2,6 +2,156 @@
 
 # Projets de dessin d'élèves
 
+## 2025 - 2026
+
+### 1M01
+
+#### Issa et Daniel
+
+```{image} ../media/dessins_eleves/2526/daniel_issa.png
+```
+
+#### Kolya
+
+```{image} ../media/dessins_eleves/2526/kolya.png
+```
+
+#### Roqaya et Kalina
+
+```{image} ../media/dessins_eleves/2526/kalina_roqaya.png
+```
+
+#### Thomas et Chloé
+
+```{image} ../media/dessins_eleves/2526/thomas_chloe.gif
+```
+
+#### Zoé
+
+```{image} ../media/dessins_eleves/2526/zoe.png
+```
+
+#### Jonas et Elio
+
+```{image} ../media/dessins_eleves/2526/jonas_elio.png
+```
+
+#### Esteban
+
+```{image} ../media/dessins_eleves/2526/esteban.gif
+```
+
+#### Nahia et Raphael
+
+```{image} ../media/dessins_eleves/2526/raphael_nahia.gif
+```
+
+#### Louis
+
+```{image} ../media/dessins_eleves/2526/louis.png
+```
+
+#### Thibo et Timea
+
+```{image} ../media/dessins_eleves/2526/timea_thibo.png
+```
+
+### 1M03
+
+#### Noa
+
+#### Elshadai
+
+#### Anaé et Louise
+
+```{image} ../media/dessins_eleves/2526/louise_anae.png
+```
+
+#### Nolan et Douglas
+
+#### Arthur et Julien
+
+#### Luisa et Sara
+
+### Rémy et Sajan
+
+```{image} ../media/dessins_eleves/2526/remy_sajan.png
+```
+
+#### Anastasija et Camille S.
+
+```{image} ../media/dessins_eleves/2526/camille_anastasija.png
+```
+
+#### Lana et Eileen
+
+```{image} ../media/dessins_eleves/2526/lana_eileen.png
+```
+
+#### Camille W. et Alice
+
+```{image} ../media/dessins_eleves/2526/camille_alice.png
+```
+
+### 1M06
+
+#### Fatima Ab.
+
+#### Loris et Vianne
+
+#### Fatimal Al. et Nayara
+
+#### Chantal et Sébastien
+
+```{image} ../media/dessins_eleves/2526/sebastien_chantal.png
+```
+
+#### Timo et Ezra
+
+#### Adel et Jacques
+
+#### Thibaut
+
+#### Clémence et Salomé
+
+```{image} ../media/dessins_eleves/2526/salome_clemence.png
+```
+
+#### Thomas et Danny
+
+```{image} ../media/dessins_eleves/2526/thomas_danny.png
+```
+
+#### Erine et Emy
+
+```{image} ../media/dessins_eleves/2526/erine.png
+```
+
+#### Matteo et Engjellusha
+
+```{image} ../media/dessins_eleves/2526/matteo_engjellusha.png
+```
+
+#### Flore
+
+```{image} ../media/dessins_eleves/2526/flore.png
+```
+
+#### Maxima et Nhu-thiên
+
+```{image} ../media/dessins_eleves/2526/maxima_nhu-thien.png
+```
+
+#### Calypso et Oumilika
+
+```{image} ../media/dessins_eleves/2526/calypso_oumi.png
+```
+
+#### Ayamé
+
+```{image} ../media/dessins_eleves/2526/ayame.png
+```
+
 ## 2024 - 2025
 
 ### 1M02
