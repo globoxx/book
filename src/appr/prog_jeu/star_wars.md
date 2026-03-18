@@ -260,7 +260,7 @@ def update():
 
 ```{admonition} L'astéroïde sort de l'écran ?
 :class: warning
-Une fois arrivé en bas de l'écran, l'astéroïde disparaît pour toujours. C'est voulu dans ce tutoriel, mais vous pourriez faire réapparaître l'astéroïde en haut de l'écran quand il sort (comme dans le jeu du running ninja de la dernière fois).
+Une fois arrivé en bas de l'écran, l'astéroïde disparaît pour toujours. C'est voulu dans ce tutoriel, car nous ferons apparaître d'autres astéroïdes par la suite.
 ```
 
 ````{dropdown} Voir le code complet à ce point

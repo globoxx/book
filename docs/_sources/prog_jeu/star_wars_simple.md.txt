@@ -1,4 +1,4 @@
-(prog_jeu.star_wars)=
+(prog_jeu.star_wars_simple)=
 
 # 4. Star wars (shooter)
 
@@ -251,16 +251,11 @@ Occupons-nous à présent du déplacement de notre astéroïde. Il va simplement
 
 ```python
 ...
-asteroid.speed = 5 # Vitesse de déplacement de l'astéroïde
+asteroid.speed = 15 # Vitesse de déplacement de l'astéroïde
 
 def update():
     ...
     asteroid.y += asteroid.speed # Déplacement de l'astéroïde vers le bas
-```
-
-```{admonition} L'astéroïde sort de l'écran ?
-:class: warning
-Une fois arrivé en bas de l'écran, l'astéroïde disparaît pour toujours. C'est voulu dans ce tutoriel, car nous ferons apparaître d'autres astéroïdes par la suite.
 ```
 
 ````{dropdown} Voir le code complet à ce point
@@ -282,7 +277,7 @@ player.speed = 3
 asteroid = Actor('asteroid')
 asteroid.x = randint(0, WIDTH)
 asteroid.y = -50
-asteroid.speed = 5
+asteroid.speed = 15
 
 def draw():
     screen.blit('space_background', (0, 0))
@@ -306,15 +301,27 @@ pgzrun.go()
 ```
 ````
 
-## 6. Faire tourner l'astéroïde sur lui-même
+## 6. Faire tourner l'astéroïde sur lui-même et le faire réapparaître
 
-Nous allons tenter d'ajouter un peu de mouvement à notre jeu en faisant tournoyer notre astéroïde sur lui même. Pour cela, nous allons progressivement modifier l'`angle` de l'image représentant notre astéroïde. Cet attribut `angle` vaut `0` par défaut et correspond à l'angle de rotation de l'image. En modifiant cette valeur jusqu'à `360` degrés, on fait tourner l'image.
+Nous allons tenter d'ajouter un peu de mouvement à notre jeu en faisant tournoyer notre astéroïde sur lui même. Pour cela, nous allons progressivement modifier l'`angle` de l'image représentant notre astéroïde. Cet attribut `angle` vaut `0` par défaut et correspond à l'angle de rotation de l'image. En augmentant cette valeur, on fait tourner l'image.
 
 ```python
 def update():
     ...
     asteroid.y += asteroid.speed
     asteroid.angle += 5 # Fait tourner l'astéroïde de 5 degrés à chaque tour de jeu
+```
+
+Pour faire réapparaître notre astéroïde une fois qu'il a disparu en bas de l'écran, il suffit de contrôler sa coordonnée `y` et de lui redonner une coordonnée `y` en haut de l'écran ainsi qu'une coordonnée `x` aléatoire.
+
+```python
+def update():
+    ...
+    asteroid.y += asteroid.speed
+    asteroid.angle += 5
+    if asteroid.y > HEIGHT: # Si l'astéroïde est complètement sorti de l'écran
+        asteroid.x = randint(0, WIDTH) # On lui redonne une coordonnée x aléatoire
+        asteroid.y = -50 # On le replace en haut de l'écran
 ```
 
 ````{dropdown} Voir le code complet à ce point
@@ -336,7 +343,7 @@ player.speed = 3
 asteroid = Actor('asteroid')
 asteroid.x = randint(0, WIDTH)
 asteroid.y = -50
-asteroid.speed = 5
+asteroid.speed = 15
 
 def draw():
     screen.blit('space_background', (0, 0))
@@ -356,237 +363,51 @@ def update():
 
     asteroid.y += asteroid.speed
     asteroid.angle += 5
+    if asteroid.y > HEIGHT:
+        asteroid.x = randint(0, WIDTH)
+        asteroid.y = -50
 
 pgzrun.go()
 ```
 ````
 
-## 7. Ajouter plusieurs astéroïdes
-
-````{admonition} Partie importante
-:class: important
-Ce chapitre et le suivant sont particulièrement importants car ils expliquent comment gérer une grande quantité d'acteurs dans votre jeu. Jusqu'ici, nous avons créé un seul astéroïde que nous avons appelé `asteroid` et un `player`. Mais dans un vrai jeu, il y a souvent des dizaines d'acteurs à gérer en même temps. Comment faire pour les gérer tous ? Avec des *listes* !
-````
-
-Pour avoir plusieurs astéroïdes en même temps dans le jeu, nous pourrions créer `asteroid1`, `asteroid2`, `asteroid3`, etc. mais cela deviendrait rapidement ingérable. A la place, nous allons remplir une **liste d'astéroïdes**. Nous allons donc remplacer notre unique objet `asteroid` par une liste nommée `asteroids` que nous remplirons au départ avec 3 astéroïdes.
-
-```python
-asteroids = [] # Création de la liste d'astéroïdes, elle est vide au départ (d'où les crochets vides)
-for i in range(3): # On crée une boucle qui tourne 3 fois pour créer 3 astéroïdes
-    asteroid = Actor('asteroid')
-    asteroid.x = randint(0, WIDTH)
-    asteroid.y = -50
-    asteroid.speed = 5
-    asteroids.append(asteroid) # On ajoute l'astéroïde créé à la liste des astéroïdes
-```
-
-````{admonition} Attention
-:class: danger
-Il faut mettre à jour les fonctions `draw` et `update` car au lieu de dessiner `asteroid`, nous voulons à présent parcourir la liste `asteroids` et dessiner chacun d'eux. Un parcours de liste se fait avec une boucle `for`.
-
-```python
-def draw():
-    screen.blit('space_background', (0, 0))
-    player.draw()
-    for asteroid in asteroids: # Parcourt la liste des astéroïdes
-        asteroid.draw() # Dessine chacun d'eux
-
-def update():
-    ...
-
-    for asteroid in asteroids: # Parcourt la liste des astéroïdes
-        asteroid.y += asteroid.speed # Fait descendre chacun d'eux
-        asteroid.angle += 5 # Fait tourner chacun d'eux
-```
-````
-
-Nous avons à présent une liste d'astéroïdes qui contient `3` astéroïdes. Mais comment remplir cette liste au cours du jeu ?
-
-````{dropdown} Voir le code complet à ce point
-```python
-import pgzero
-import pgzrun
-from pgzhelper import *
-from random import *
-
-TITLE = 'Star Wars'
-WIDTH = 1000
-HEIGHT = 800
-
-player = Actor('ship')
-player.x = WIDTH/2
-player.y = HEIGHT/2
-player.speed = 3
-
-asteroids = []
-for i in range(3):
-    asteroid = Actor('asteroid')
-    asteroid.x = randint(0, WIDTH)
-    asteroid.y = -50
-    asteroid.speed = 5
-    asteroids.append(asteroid)
-
-def draw():
-    screen.blit('space_background', (0, 0))
-    player.draw()
-    for asteroid in asteroids:
-        asteroid.draw()
-
-def update():
-    if keyboard.a:
-        player.x -= player.speed
-    if keyboard.d:
-        player.x += player.speed
-
-    if keyboard.w:
-        player.y -= player.speed
-    if keyboard.s:
-        player.y += player.speed
-
-    for asteroid in asteroids:
-        asteroid.y += asteroid.speed
-        asteroid.angle += 5
-
-pgzrun.go()
-```
-````
-
-## 8. Ajouter des astéroïdes au cours du jeu
-
-Commençons par définir une nouvelle fonction qui va s'occuper d'ajouter un nouvel astéroïde à la liste. Dans cet exemple, je vais la nommer `add_asteroid`, mais vous pouvez lui donner le nom que vous voulez car ce n'est pas une fonction spéciale comme `update` ou `draw`.
-
-```{admonition} Où écrire cette fonction ?
-:class: warning
-Il faut écrire cette fonction assez haut dans le code, par exemple juste après avoir défini le titre et la taille de la fenêtre de jeu. En effet, nous allons devoir appeler la fonction et elle doit être définie avant son appel.
-```
-
-```python
-def add_asteroid():
-    asteroid = Actor('asteroid')
-    asteroid.x = randint(0, WIDTH)
-    asteroid.y = -50
-    asteroid.speed = 5
-    asteroids.append(asteroid) # Ajoute l'astéroïde à la liste des astéroïdes
-
-...
-
-for i in range(3):
-    add_asteroid() # Appelle la fonction add_asteroid 3 fois pour ajouter 3 astéroïdes au départ
-    # Cet appel remplace le code de création d'astéroïde que nous avions avant
-```
-
-La question est: quand appeler cette fonction ? Quand voulons-nous ajouter un astéroïde ? Ici, disons que nous aimerions ajouter un astéroïde toutes les 5 secondes. (Mais nous pourrions aussi choisir d'en ajouter un à chaque fois qu'un astéroïde est détruit ou sort de l'écran, ou à chaque fois que le joueur atteint un certain score, etc.)
-
-Pour appeler notre fonction toutes les 2 secondes, Pygame nous offre pour ceci un objet très utile: `clock`. **Cet objet permet d'agender des appels de fonction dans le temps**.
-
-```python
-...
-
-clock.schedule_interval(add_asteroid, 2.0)
-
-def draw():
-    ...
-```
-
-La méthode `schedule_interval(f, x)` permet d'appeler automatiquement une fonction `f` toutes les `x` secondes. Nous l'avons donc réglée pour appeler `add_asteroid` toutes les `2` secondes, mais vous pouvez modifier cette valeur.
-
-````{dropdown} Voir le code complet à ce point
-```python
-import pgzero
-import pgzrun
-from pgzhelper import *
-from random import *
-
-TITLE = 'Star Wars'
-WIDTH = 1000
-HEIGHT = 800
-
-def add_asteroid():
-    asteroid = Actor('asteroid')
-    asteroid.x = randint(0, WIDTH)
-    asteroid.y = -50
-    asteroid.speed = 5
-    asteroids.append(asteroid)
-
-player = Actor('ship')
-player.x = WIDTH/2
-player.y = HEIGHT/2
-player.speed = 3
-
-asteroids = []
-for i in range(3):
-    add_asteroid()
-
-clock.schedule_interval(add_asteroid, 2.0)
-
-def draw():
-    screen.blit('space_background', (0, 0))
-    player.draw()
-    for asteroid in asteroids:
-        asteroid.draw()
-
-def update():
-    if keyboard.a:
-        player.x -= player.speed
-    if keyboard.d:
-        player.x += player.speed
-
-    if keyboard.w:
-        player.y -= player.speed
-    if keyboard.s:
-        player.y += player.speed
-
-    for asteroid in asteroids:
-        asteroid.y += asteroid.speed
-        asteroid.angle += 5
-
-pgzrun.go()
-```
-````
-
-## 9. Tirer des lasers
+## 7. Tirer des lasers
 
 Il est temps de pouvoir tirer sur les astéroïdes ! Nous allons créer un nouvel acteur pour représenter un laser qui sera tiré en appuyant sur la touche `espace` et qui partira vers le haut.
 
-Commençons par créer une liste de lasers (vide au départ) qui se remplira à chaque fois que le joueur appuiera sur la touche `espace` pour tirer.  Il nous faut également une fonction `add_laser` qui s'occupera de créer un nouveau laser et de l'ajouter à la liste (très similaire à `add_asteroid`).
+Nous n'aurons pas qu'un seul laser à l'écran, mais potentiellement beaucoup ! Nous ne pouvons donc pas nous contenter de créer une variable `laser` pour représenter notre laser, il nous faut une liste de lasers qui pourra contenir tous les lasers présents à l'écran. Nous allons donc créer une liste `lasers` qui sera vide au départ.
 
 ```python
+asteroid = Actor('asteroid')
 ...
-
-def add_asteroid():
-    ...
-
-def add_laser():
-    laser = Actor('laser') # Création du laser
-    laser.x = player.x # Positionnement du laser à l'emplacement du joueur en x
-    laser.y = player.y # Positionnement du laser à l'emplacement du joueur en y
-    laser.speed = 10 # Vitesse de déplacement du laser
-    lasers.append(laser) # Ajout du laser à la liste des lasers
 
 lasers = [] # Création de la liste de lasers, elle est vide au départ
 ```
 
-Nous voulons appeler cette fonction `add_laser` à chaque fois que le joueur appuie sur la touche `espace`. Cette détection doit se faire dans la fonction `update`.
+Nous voulons ajouter un laser à cette liste à chaque fois que l'utilisateur appuie sur la touche `espace`.
 
 ```python
 def update():
     ...
     if keyboard.space: # Si la touche espace est enfoncée
-        add_laser() # On ajoute un laser
+        laser = Actor('laser') # Création d'un laser
+        laser.x = player.x # Positionnement du laser sur le vaisseau en x
+        laser.y = player.y # Positionnement du laser sur le vaisseau en y
+        lasers.append(laser) # Ajout du laser à la liste des lasers
 ```
 
-Il nous reste à afficher nos lasers en les ajoutant à la fonction `draw` et à les faire avancer dans la fonction `update` en modifiant leur coordonnée `y` pour les faire monter vers le haut de l'écran.
+Il nous reste à afficher nos lasers dans la fonction `draw` et à les faire avancer dans la fonction `update` en modifiant leur coordonnée `y` pour les faire monter vers le haut de l'écran. On peut parcourir la liste des lasers avec une boucle `for`.
 
 ```python
 def draw():
     ...
-    for laser in lasers: # Parcourt les lasers
-        laser.draw() # Dessine chacun d'eux
+    for laser in lasers: # Pour chaque laser dans la liste des lasers
+        laser.draw() # On dessine le laser
 
 def update():
     ...
-    for laser in lasers: # Parcourt les lasers
-        laser.y -= laser.speed # Fait monter chacun d'eux
+    for laser in lasers: # Pour chaque laser dans la liste des lasers
+        laser.y -= laser.speed # On fait avancer le laser vers le haut de l'écran
 ```
 
 ````{dropdown} Voir le code complet à ce point
@@ -600,38 +421,22 @@ TITLE = 'Star Wars'
 WIDTH = 1000
 HEIGHT = 800
 
-def add_asteroid():
-    asteroid = Actor('asteroid')
-    asteroid.x = randint(0, WIDTH)
-    asteroid.y = -50
-    asteroid.speed = 5
-    asteroids.append(asteroid)
-
-def add_laser():
-    laser = Actor('laser')
-    laser.x = player.x
-    laser.y = player.y
-    laser.speed = 10
-    lasers.append(laser)
-
 player = Actor('ship')
 player.x = WIDTH/2
 player.y = HEIGHT/2
 player.speed = 3
 
-asteroids = []
-for i in range(3):
-    add_asteroid()
+asteroid = Actor('asteroid')
+asteroid.x = randint(0, WIDTH)
+asteroid.y = -50
+asteroid.speed = 15
 
 lasers = []
-
-clock.schedule_interval(add_asteroid, 2.0)
 
 def draw():
     screen.blit('space_background', (0, 0))
     player.draw()
-    for asteroid in asteroids:
-        asteroid.draw()
+    asteroid.draw()
     for laser in lasers:
         laser.draw()
 
@@ -646,12 +451,15 @@ def update():
     if keyboard.s:
         player.y += player.speed
 
-    for asteroid in asteroids:
-        asteroid.y += asteroid.speed
-        asteroid.angle += 5
+    asteroid.y += asteroid.speed
+    asteroid.angle += 5
 
     if keyboard.space:
-        add_laser()
+        laser = Actor('laser')
+        laser.x = player.x
+        laser.y = player.y
+        laser.speed = 10
+        lasers.append(laser)
 
     for laser in lasers:
         laser.y -= laser.speed
@@ -660,8 +468,7 @@ pgzrun.go()
 ```
 ````
 
-
-## 10. Gérer les collisions
+## 8. Gérer les collisions
 
 Il est temps de donner du pouvoir à nos lasers pour détruire les astéroïdes ! Mais également à nos astéroïdes pour détruire notre vaisseau !
 
@@ -673,27 +480,27 @@ Il est temps de donner du pouvoir à nos lasers pour détruire les astéroïdes 
 Un check de collision entre un acteur et un autre acteur se fait avec la méthode `acteur.collides_with(autre_acteur)` qui retourne `True` s'il y a collision entre les deux acteurs et `False` sinon.
 ```
 
-Commençons par les collisions entre le vaisseau et les astéroïdes. Où ajouter ce check de collision ? Nous allons parcourir la liste des astéroïdes et contrôler si l'un d'eux est en contact avec le vaisseau.
+Commençons par les collisions entre le vaisseau et les astéroïdes. Où ajouter ce check de collision ? Dans la fonction `update` !
 
 ```python
 def update():
     ...
-    for asteroid in asteroids:
-        if player.collides_with(asteroid): # Si le joueur est en contact avec un astéroïde
-            exit() # On quitte le jeu
+    if player.collides_with(asteroid): # Si le joueur est en contact avec l'astéroïde
+        exit() # On quitte le jeu
 ```
 
-Passons à présent aux collisions entre les lasers et les astéroïdes. Où ajouter le contrôle de collision ? Le plus simple est de le faire après le déplacement d'un laser: on parcourt la liste des astéroïdes et on contrôle si le laser est en contact avec l'un d'eux.
+Passons à présent aux collisions entre les lasers et les astéroïdes. Où ajouter le contrôle de collision ? Le plus logique est de le faire après le déplacement d'un laser, toujours dans la fonction `update`.
 
 ```python
 def update():
     ...
-    for laser in lasers:
+    for laser in lasers: # Pour chaque laser dans la liste des lasers
         laser.y -= laser.speed
-        for asteroid in asteroids:
-            if laser.collides_with(asteroid): # Si le laser est en contact avec un astéroïde
-                asteroids.remove(asteroid) # On supprime l'astéroïde de la liste des astéroïdes
-                lasers.remove(laser) # On supprime le laser de la liste des lasers
+        if laser.collides_with(asteroid): # Si le laser est en contact avec un astéroïde
+            lasers.remove(laser) # On supprime le laser de la liste des lasers
+            # On fait réapparaître l'astéroïde comme vu précédemment
+            asteroid.x = randint(0, WIDTH)
+            asteroid.y = -50
 ```
 
 ```{admonition} Supprimer des acteurs
@@ -712,38 +519,22 @@ TITLE = 'Star Wars'
 WIDTH = 1000
 HEIGHT = 800
 
-def add_asteroid():
-    asteroid = Actor('asteroid')
-    asteroid.x = randint(0, WIDTH)
-    asteroid.y = -50
-    asteroid.speed = 5
-    asteroids.append(asteroid)
-
-def add_laser():
-    laser = Actor('laser')
-    laser.x = player.x
-    laser.y = player.y
-    laser.speed = 10
-    lasers.append(laser)
-
 player = Actor('ship')
 player.x = WIDTH/2
 player.y = HEIGHT/2
 player.speed = 3
 
-asteroids = []
-for i in range(3):
-    add_asteroid()
+asteroid = Actor('asteroid')
+asteroid.x = randint(0, WIDTH)
+asteroid.y = -50
+asteroid.speed = 15
 
 lasers = []
-
-clock.schedule_interval(add_asteroid, 2.0)
 
 def draw():
     screen.blit('space_background', (0, 0))
     player.draw()
-    for asteroid in asteroids:
-        asteroid.draw()
+    asteroid.draw()
     for laser in lasers:
         laser.draw()
 
@@ -758,21 +549,24 @@ def update():
     if keyboard.s:
         player.y += player.speed
 
-    for asteroid in asteroids:
-        asteroid.y += asteroid.speed
-        asteroid.angle += 5
-        if player.collides_with(asteroid):
-            exit()
+    asteroid.y += asteroid.speed
+    asteroid.angle += 5
+    if player.collides_with(asteroid):
+        exit()
 
     if keyboard.space:
-        add_laser()
+        laser = Actor('laser')
+        laser.x = player.x
+        laser.y = player.y
+        laser.speed = 10
+        lasers.append(laser)
 
     for laser in lasers:
         laser.y -= laser.speed
-        for asteroid in asteroids:
-            if laser.collides_with(asteroid):
-                asteroids.remove(asteroid)
-                lasers.remove(laser)
+        if laser.collides_with(asteroid):
+            lasers.remove(laser)
+            asteroid.x = randint(0, WIDTH)
+            asteroid.y = -50
 pgzrun.go()
 ```
 ````
@@ -780,10 +574,8 @@ pgzrun.go()
 ## Idées d'améliorations
 
 ```{admonition} Travail à rendre
-Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu:
-
-* 2 améliorations faciles
-* 1 amélioration moyenne
+* Au moins 1 amélioration facile
+* Réfléchir au contenu de votre jeu en remplissant le document fourni.
 ```
 
 Voici plusieurs idées d'amélioration du jeu.  
@@ -791,15 +583,14 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 
 **Totalement dans vos cordes (facile):**
 
-* Ajouter des bruitages (ex: tir + destruction d'astéroïde) et de la musique.
+* Ajouter au moins un bruitage (ex: tir ou destruction d'astéroïde) et de la musique.
 * Faire en sorte que le vaisseau ne puisse pas sortir de l'écran.
 * Ajouter un compteur d'astéroïdes détruits (score) et l'afficher à l'écran.
-* Les astéroïdes ne se déplacent pas tous à la même vitesse, certains sont plus rapides que d'autres (aléatoirement).
-* Détruire automatiquement les lasers et astéroïdes qui sortent de l'écran pour éviter d'avoir des listes qui se remplissent à l'infini et qui ralentissent le jeu.
-* Les astéroïdes n'ont pas tous la même taille ou la même image.
+* Détruire automatiquement les lasers qui sortent de l'écran pour éviter d'avoir des listes qui se remplissent à l'infini et qui ralentissent le jeu.
 
 **Un peu plus complexe (moyen):**
 
+* Ajouter plusieurs astéroïdes à l'écran en même temps. Vous pouvez les stocker dans une liste `asteroids` de la même manière que les lasers.
 * Faire en sorte qu'en cas de collision avec un astéroïde, le vaisseau perd de la vie et l'astéroïde est détruit. La vie du vaisseau est affichée à l'écran.
 * Faire en sorte que les astéroïdes doivent recevoir plusieurs tirs avant d'être détruits (en leur donnant une vie qui diminue à chaque tir).
 * Permettre au vaisseau de ramasser des objets pour augmenter son score ou sa vitesse.

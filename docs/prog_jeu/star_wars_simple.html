@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Recherche" href="../search.html" /><link rel="next" title="5. Jumper (platformer)" href="platformer_new.html" /><link rel="prev" title="3. Running Ninja (runner)" href="runner_new.html" />
 
     <link rel="shortcut icon" href="../_static/gymlab-icon.ico"/><meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
         <title>4. Star wars (shooter) - Travaux pratiques</title>
@@ -259,11 +259,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../web/projets_eleves.html">Projets d’élèves</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Programmation de jeu 2D</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="rappels.html">1. Rappels de programmation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="intro_pygame.html">2. Introduction à Pygame</a></li>
 <li class="toctree-l1"><a class="reference internal" href="runner_new.html">3. Running Ninja (runner)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="star_wars_simple.html">4. Star wars (shooter)</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">4. Star wars (shooter)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="platformer_new.html">5. Jumper (platformer)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projet.html">Projet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projets_eleves.html">Projets d’élèves</a></li>
@@ -306,7 +306,7 @@
         </div>
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="star-wars-shooter">
-<span id="prog-jeu-star-wars"></span><h1>4. Star wars (shooter)<a class="headerlink" href="#star-wars-shooter" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="prog-jeu-star-wars-simple"></span><h1>4. Star wars (shooter)<a class="headerlink" href="#star-wars-shooter" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Le jeu consiste en un vaisseau pouvant se déplacer dans une fenêtre et tirer des projectiles vers des astéroïdes qui se déplacent vers le bas de l’écran. Le but est de détruire les astéroïdes en les touchant avec les projectiles tout en les évitant.</p>
 <p><a class="reference download internal" download="" href="../_downloads/b08b822bce5b558f4c4e46f0768270ca/star_wars.zip"><code class="xref download docutils literal notranslate"><span class="pre">Téléchargement</span> <span class="pre">des</span> <span class="pre">ressources</span> <span class="pre">du</span> <span class="pre">jeu</span></code></a>.</p>
 <img alt="../_images/star_wars.gif" src="../_images/star_wars.gif"/>
@@ -536,16 +536,12 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 <p>Occupons-nous à présent du déplacement de notre astéroïde. Il va simplement “tomber” vers le bas de l’écran, c’est à dire que sa coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> va augmenter au cours du temps tandis que sa coordonnée <code class="docutils literal notranslate"><span class="pre">x</span></code> restera fixe. Nous allons lui donner une vitesse de déplacement <code class="docutils literal notranslate"><span class="pre">speed</span></code> comme pour le vaisseau.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
-<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Vitesse de déplacement de l'astéroïde</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">15</span> <span class="c1"># Vitesse de déplacement de l'astéroïde</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="c1"># Déplacement de l'astéroïde vers le bas</span>
 </pre></div>
-</div>
-<div class="warning admonition">
-<p class="admonition-title">L’astéroïde sort de l’écran ?</p>
-<p>Une fois arrivé en bas de l’écran, l’astéroïde disparaît pour toujours. C’est voulu dans ce tutoriel, car nous ferons apparaître d’autres astéroïdes par la suite.</p>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -571,7 +567,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
-<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">15</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -596,13 +592,23 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 </div>
 </details></section>
-<section id="faire-tourner-lasteroide-sur-lui-meme">
-<h2>6. Faire tourner l’astéroïde sur lui-même<a class="headerlink" href="#faire-tourner-lasteroide-sur-lui-meme" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous allons tenter d’ajouter un peu de mouvement à notre jeu en faisant tournoyer notre astéroïde sur lui même. Pour cela, nous allons progressivement modifier l’<code class="docutils literal notranslate"><span class="pre">angle</span></code> de l’image représentant notre astéroïde. Cet attribut <code class="docutils literal notranslate"><span class="pre">angle</span></code> vaut <code class="docutils literal notranslate"><span class="pre">0</span></code> par défaut et correspond à l’angle de rotation de l’image. En modifiant cette valeur jusqu’à <code class="docutils literal notranslate"><span class="pre">360</span></code> degrés, on fait tourner l’image.</p>
+<section id="faire-tourner-lasteroide-sur-lui-meme-et-le-faire-reapparaitre">
+<h2>6. Faire tourner l’astéroïde sur lui-même et le faire réapparaître<a class="headerlink" href="#faire-tourner-lasteroide-sur-lui-meme-et-le-faire-reapparaitre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Nous allons tenter d’ajouter un peu de mouvement à notre jeu en faisant tournoyer notre astéroïde sur lui même. Pour cela, nous allons progressivement modifier l’<code class="docutils literal notranslate"><span class="pre">angle</span></code> de l’image représentant notre astéroïde. Cet attribut <code class="docutils literal notranslate"><span class="pre">angle</span></code> vaut <code class="docutils literal notranslate"><span class="pre">0</span></code> par défaut et correspond à l’angle de rotation de l’image. En augmentant cette valeur, on fait tourner l’image.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span> <span class="c1"># Fait tourner l'astéroïde de 5 degrés à chaque tour de jeu</span>
+</pre></div>
+</div>
+<p>Pour faire réapparaître notre astéroïde une fois qu’il a disparu en bas de l’écran, il suffit de contrôler sa coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> et de lui redonner une coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> en haut de l’écran ainsi qu’une coordonnée <code class="docutils literal notranslate"><span class="pre">x</span></code> aléatoire.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+    <span class="o">...</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+    <span class="k">if</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">HEIGHT</span><span class="p">:</span> <span class="c1"># Si l'astéroïde est complètement sorti de l'écran</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span> <span class="c1"># On lui redonne une coordonnée x aléatoire</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span> <span class="c1"># On le replace en haut de l'écran</span>
 </pre></div>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -629,7 +635,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
-<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">15</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -649,188 +655,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
     <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
-
-<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</details></section>
-<section id="ajouter-plusieurs-asteroides">
-<h2>7. Ajouter plusieurs astéroïdes<a class="headerlink" href="#ajouter-plusieurs-asteroides" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Partie importante</p>
-<p>Ce chapitre et le suivant sont particulièrement importants car ils expliquent comment gérer une grande quantité d’acteurs dans votre jeu. Jusqu’ici, nous avons créé un seul astéroïde que nous avons appelé <code class="docutils literal notranslate"><span class="pre">asteroid</span></code> et un <code class="docutils literal notranslate"><span class="pre">player</span></code>. Mais dans un vrai jeu, il y a souvent des dizaines d’acteurs à gérer en même temps. Comment faire pour les gérer tous ? Avec des <em>listes</em> !</p>
-</div>
-<p>Pour avoir plusieurs astéroïdes en même temps dans le jeu, nous pourrions créer <code class="docutils literal notranslate"><span class="pre">asteroid1</span></code>, <code class="docutils literal notranslate"><span class="pre">asteroid2</span></code>, <code class="docutils literal notranslate"><span class="pre">asteroid3</span></code>, etc. mais cela deviendrait rapidement ingérable. A la place, nous allons remplir une <strong>liste d’astéroïdes</strong>. Nous allons donc remplacer notre unique objet <code class="docutils literal notranslate"><span class="pre">asteroid</span></code> par une liste nommée <code class="docutils literal notranslate"><span class="pre">asteroids</span></code> que nous remplirons au départ avec 3 astéroïdes.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Création de la liste d'astéroïdes, elle est vide au départ (d'où les crochets vides)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span> <span class="c1"># On crée une boucle qui tourne 3 fois pour créer 3 astéroïdes</span>
-    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span> <span class="c1"># On ajoute l'astéroïde créé à la liste des astéroïdes</span>
-</pre></div>
-</div>
-<div class="danger admonition">
-<p class="admonition-title">Attention</p>
-<p>Il faut mettre à jour les fonctions <code class="docutils literal notranslate"><span class="pre">draw</span></code> et <code class="docutils literal notranslate"><span class="pre">update</span></code> car au lieu de dessiner <code class="docutils literal notranslate"><span class="pre">asteroid</span></code>, nous voulons à présent parcourir la liste <code class="docutils literal notranslate"><span class="pre">asteroids</span></code> et dessiner chacun d’eux. Un parcours de liste se fait avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span> <span class="c1"># Parcourt la liste des astéroïdes</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine chacun d'eux</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
-    <span class="o">...</span>
-
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span> <span class="c1"># Parcourt la liste des astéroïdes</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="c1"># Fait descendre chacun d'eux</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span> <span class="c1"># Fait tourner chacun d'eux</span>
-</pre></div>
-</div>
-</div>
-<p>Nous avons à présent une liste d’astéroïdes qui contient <code class="docutils literal notranslate"><span class="pre">3</span></code> astéroïdes. Mais comment remplir cette liste au cours du jeu ?</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Voir le code complet à ce point<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-
-<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
-<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
-
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
-<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
-
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
-
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
-
-<span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</details></section>
-<section id="ajouter-des-asteroides-au-cours-du-jeu">
-<h2>8. Ajouter des astéroïdes au cours du jeu<a class="headerlink" href="#ajouter-des-asteroides-au-cours-du-jeu" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Commençons par définir une nouvelle fonction qui va s’occuper d’ajouter un nouvel astéroïde à la liste. Dans cet exemple, je vais la nommer <code class="docutils literal notranslate"><span class="pre">add_asteroid</span></code>, mais vous pouvez lui donner le nom que vous voulez car ce n’est pas une fonction spéciale comme <code class="docutils literal notranslate"><span class="pre">update</span></code> ou <code class="docutils literal notranslate"><span class="pre">draw</span></code>.</p>
-<div class="warning admonition">
-<p class="admonition-title">Où écrire cette fonction ?</p>
-<p>Il faut écrire cette fonction assez haut dans le code, par exemple juste après avoir défini le titre et la taille de la fenêtre de jeu. En effet, nous allons devoir appeler la fonction et elle doit être définie avant son appel.</p>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">add_asteroid</span><span class="p">():</span>
-    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span> <span class="c1"># Ajoute l'astéroïde à la liste des astéroïdes</span>
-
-<span class="o">...</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="n">add_asteroid</span><span class="p">()</span> <span class="c1"># Appelle la fonction add_asteroid 3 fois pour ajouter 3 astéroïdes au départ</span>
-    <span class="c1"># Cet appel remplace le code de création d'astéroïde que nous avions avant</span>
-</pre></div>
-</div>
-<p>La question est: quand appeler cette fonction ? Quand voulons-nous ajouter un astéroïde ? Ici, disons que nous aimerions ajouter un astéroïde toutes les 5 secondes. (Mais nous pourrions aussi choisir d’en ajouter un à chaque fois qu’un astéroïde est détruit ou sort de l’écran, ou à chaque fois que le joueur atteint un certain score, etc.)</p>
-<p>Pour appeler notre fonction toutes les 2 secondes, Pygame nous offre pour ceci un objet très utile: <code class="docutils literal notranslate"><span class="pre">clock</span></code>. <strong>Cet objet permet d’agender des appels de fonction dans le temps</strong>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
-
-<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
-    <span class="o">...</span>
-</pre></div>
-</div>
-<p>La méthode <code class="docutils literal notranslate"><span class="pre">schedule_interval(f,</span> <span class="pre">x)</span></code> permet d’appeler automatiquement une fonction <code class="docutils literal notranslate"><span class="pre">f</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">x</span></code> secondes. Nous l’avons donc réglée pour appeler <code class="docutils literal notranslate"><span class="pre">add_asteroid</span></code> toutes les <code class="docutils literal notranslate"><span class="pre">2</span></code> secondes, mais vous pouvez modifier cette valeur.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Voir le code complet à ce point<div class="summary-down docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
-<div class="summary-up docutils">
-<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-
-<span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
-<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">add_asteroid</span><span class="p">():</span>
-    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span>
-
-<span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
-<span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="n">add_asteroid</span><span class="p">()</span>
-
-<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
-    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-    <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
-
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">w</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
-    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
-        <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
-
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+    <span class="k">if</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">HEIGHT</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
@@ -838,41 +665,35 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 </details></section>
 <section id="tirer-des-lasers">
-<h2>9. Tirer des lasers<a class="headerlink" href="#tirer-des-lasers" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>7. Tirer des lasers<a class="headerlink" href="#tirer-des-lasers" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps de pouvoir tirer sur les astéroïdes ! Nous allons créer un nouvel acteur pour représenter un laser qui sera tiré en appuyant sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code> et qui partira vers le haut.</p>
-<p>Commençons par créer une liste de lasers (vide au départ) qui se remplira à chaque fois que le joueur appuiera sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code> pour tirer.  Il nous faut également une fonction <code class="docutils literal notranslate"><span class="pre">add_laser</span></code> qui s’occupera de créer un nouveau laser et de l’ajouter à la liste (très similaire à <code class="docutils literal notranslate"><span class="pre">add_asteroid</span></code>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">add_asteroid</span><span class="p">():</span>
-    <span class="o">...</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">add_laser</span><span class="p">():</span>
-    <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span> <span class="c1"># Création du laser</span>
-    <span class="n">laser</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="c1"># Positionnement du laser à l'emplacement du joueur en x</span>
-    <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="c1"># Positionnement du laser à l'emplacement du joueur en y</span>
-    <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Vitesse de déplacement du laser</span>
-    <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span> <span class="c1"># Ajout du laser à la liste des lasers</span>
+<p>Nous n’aurons pas qu’un seul laser à l’écran, mais potentiellement beaucoup ! Nous ne pouvons donc pas nous contenter de créer une variable <code class="docutils literal notranslate"><span class="pre">laser</span></code> pour représenter notre laser, il nous faut une liste de lasers qui pourra contenir tous les lasers présents à l’écran. Nous allons donc créer une liste <code class="docutils literal notranslate"><span class="pre">lasers</span></code> qui sera vide au départ.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+<span class="o">...</span>
 
 <span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># Création de la liste de lasers, elle est vide au départ</span>
 </pre></div>
 </div>
-<p>Nous voulons appeler cette fonction <code class="docutils literal notranslate"><span class="pre">add_laser</span></code> à chaque fois que le joueur appuie sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code>. Cette détection doit se faire dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p>
+<p>Nous voulons ajouter un laser à cette liste à chaque fois que l’utilisateur appuie sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span> <span class="c1"># Si la touche espace est enfoncée</span>
-        <span class="n">add_laser</span><span class="p">()</span> <span class="c1"># On ajoute un laser</span>
+        <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span> <span class="c1"># Création d'un laser</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="c1"># Positionnement du laser sur le vaisseau en x</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="c1"># Positionnement du laser sur le vaisseau en y</span>
+        <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span> <span class="c1"># Ajout du laser à la liste des lasers</span>
 </pre></div>
 </div>
-<p>Il nous reste à afficher nos lasers en les ajoutant à la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> et à les faire avancer dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> en modifiant leur coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> pour les faire monter vers le haut de l’écran.</p>
+<p>Il nous reste à afficher nos lasers dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> et à les faire avancer dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> en modifiant leur coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> pour les faire monter vers le haut de l’écran. On peut parcourir la liste des lasers avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="o">...</span>
-    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Parcourt les lasers</span>
-        <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Dessine chacun d'eux</span>
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Pour chaque laser dans la liste des lasers</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine le laser</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
-    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Parcourt les lasers</span>
-        <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="c1"># Fait monter chacun d'eux</span>
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Pour chaque laser dans la liste des lasers</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="c1"># On fait avancer le laser vers le haut de l'écran</span>
 </pre></div>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -891,38 +712,22 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">add_asteroid</span><span class="p">():</span>
-    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">add_laser</span><span class="p">():</span>
-    <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span>
-    <span class="n">laser</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span>
-    <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span>
-    <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
-
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
 
-<span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="n">add_asteroid</span><span class="p">()</span>
+<span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">15</span>
 
 <span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
@@ -937,12 +742,15 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
 
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
 
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
-        <span class="n">add_laser</span><span class="p">()</span>
+        <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span>
@@ -953,30 +761,30 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </div>
 </details></section>
 <section id="gerer-les-collisions">
-<h2>10. Gérer les collisions<a class="headerlink" href="#gerer-les-collisions" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>8. Gérer les collisions<a class="headerlink" href="#gerer-les-collisions" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps de donner du pouvoir à nos lasers pour détruire les astéroïdes ! Mais également à nos astéroïdes pour détruire notre vaisseau !</p>
 <img alt="../_images/collision.png" src="../_images/collision.png"/>
 <div class="note admonition">
 <p class="admonition-title">Rappel</p>
 <p>Un check de collision entre un acteur et un autre acteur se fait avec la méthode <code class="docutils literal notranslate"><span class="pre">acteur.collides_with(autre_acteur)</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> s’il y a collision entre les deux acteurs et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p>
 </div>
-<p>Commençons par les collisions entre le vaisseau et les astéroïdes. Où ajouter ce check de collision ? Nous allons parcourir la liste des astéroïdes et contrôler si l’un d’eux est en contact avec le vaisseau.</p>
+<p>Commençons par les collisions entre le vaisseau et les astéroïdes. Où ajouter ce check de collision ? Dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> !</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span> <span class="c1"># Si le joueur est en contact avec un astéroïde</span>
-            <span class="n">exit</span><span class="p">()</span> <span class="c1"># On quitte le jeu</span>
+    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span> <span class="c1"># Si le joueur est en contact avec l'astéroïde</span>
+        <span class="n">exit</span><span class="p">()</span> <span class="c1"># On quitte le jeu</span>
 </pre></div>
 </div>
-<p>Passons à présent aux collisions entre les lasers et les astéroïdes. Où ajouter le contrôle de collision ? Le plus simple est de le faire après le déplacement d’un laser: on parcourt la liste des astéroïdes et on contrôle si le laser est en contact avec l’un d’eux.</p>
+<p>Passons à présent aux collisions entre les lasers et les astéroïdes. Où ajouter le contrôle de collision ? Le plus logique est de le faire après le déplacement d’un laser, toujours dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
-    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Pour chaque laser dans la liste des lasers</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span>
-        <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">laser</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span> <span class="c1"># Si le laser est en contact avec un astéroïde</span>
-                <span class="n">asteroids</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span> <span class="c1"># On supprime l'astéroïde de la liste des astéroïdes</span>
-                <span class="n">lasers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span> <span class="c1"># On supprime le laser de la liste des lasers</span>
+        <span class="k">if</span> <span class="n">laser</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span> <span class="c1"># Si le laser est en contact avec un astéroïde</span>
+            <span class="n">lasers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span> <span class="c1"># On supprime le laser de la liste des lasers</span>
+            <span class="c1"># On fait réapparaître l'astéroïde comme vu précédemment</span>
+            <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+            <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
 </pre></div>
 </div>
 <div class="warning admonition">
@@ -999,38 +807,22 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">add_asteroid</span><span class="p">():</span>
-    <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
-    <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="n">asteroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">add_laser</span><span class="p">():</span>
-    <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span>
-    <span class="n">laser</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span>
-    <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span>
-    <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
-
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
 
-<span class="n">asteroids</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="n">add_asteroid</span><span class="p">()</span>
+<span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">15</span>
 
 <span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="n">clock</span><span class="o">.</span><span class="n">schedule_interval</span><span class="p">(</span><span class="n">add_asteroid</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
@@ -1045,21 +837,24 @@ Voir le code complet à ce point<div class="summary-down docutils">
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">s</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
 
-    <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
-        <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
-        <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span>
-            <span class="n">exit</span><span class="p">()</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
+    <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span>
+        <span class="n">exit</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
-        <span class="n">add_laser</span><span class="p">()</span>
+        <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">player</span><span class="o">.</span><span class="n">y</span>
+        <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span>
-        <span class="k">for</span> <span class="n">asteroid</span> <span class="ow">in</span> <span class="n">asteroids</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">laser</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span>
-                <span class="n">asteroids</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">asteroid</span><span class="p">)</span>
-                <span class="n">lasers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">laser</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span>
+            <span class="n">lasers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
+            <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+            <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1069,25 +864,23 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <h2>Idées d’améliorations<a class="headerlink" href="#idees-dameliorations" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition-travail-a-rendre admonition">
 <p class="admonition-title">Travail à rendre</p>
-<p>Votre travail consiste à ajouter au minimum les améliorations suivantes au jeu:</p>
 <ul class="simple">
-<li><p>2 améliorations faciles</p></li>
-<li><p>1 amélioration moyenne</p></li>
+<li><p>Au moins 1 amélioration facile</p></li>
+<li><p>Réfléchir au contenu de votre jeu en remplissant le document fourni.</p></li>
 </ul>
 </div>
 <p>Voici plusieurs idées d’amélioration du jeu.<br/>
 Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur difficulté.</p>
 <p><strong>Totalement dans vos cordes (facile):</strong></p>
 <ul class="simple">
-<li><p>Ajouter des bruitages (ex: tir + destruction d’astéroïde) et de la musique.</p></li>
+<li><p>Ajouter au moins un bruitage (ex: tir ou destruction d’astéroïde) et de la musique.</p></li>
 <li><p>Faire en sorte que le vaisseau ne puisse pas sortir de l’écran.</p></li>
 <li><p>Ajouter un compteur d’astéroïdes détruits (score) et l’afficher à l’écran.</p></li>
-<li><p>Les astéroïdes ne se déplacent pas tous à la même vitesse, certains sont plus rapides que d’autres (aléatoirement).</p></li>
-<li><p>Détruire automatiquement les lasers et astéroïdes qui sortent de l’écran pour éviter d’avoir des listes qui se remplissent à l’infini et qui ralentissent le jeu.</p></li>
-<li><p>Les astéroïdes n’ont pas tous la même taille ou la même image.</p></li>
+<li><p>Détruire automatiquement les lasers qui sortent de l’écran pour éviter d’avoir des listes qui se remplissent à l’infini et qui ralentissent le jeu.</p></li>
 </ul>
 <p><strong>Un peu plus complexe (moyen):</strong></p>
 <ul class="simple">
+<li><p>Ajouter plusieurs astéroïdes à l’écran en même temps. Vous pouvez les stocker dans une liste <code class="docutils literal notranslate"><span class="pre">asteroids</span></code> de la même manière que les lasers.</p></li>
 <li><p>Faire en sorte qu’en cas de collision avec un astéroïde, le vaisseau perd de la vie et l’astéroïde est détruit. La vie du vaisseau est affichée à l’écran.</p></li>
 <li><p>Faire en sorte que les astéroïdes doivent recevoir plusieurs tirs avant d’être détruits (en leur donnant une vie qui diminue à chaque tir).</p></li>
 <li><p>Permettre au vaisseau de ramasser des objets pour augmenter son score ou sa vitesse.</p></li>
@@ -1206,12 +999,30 @@ Depuis l’école<div class="summary-down docutils">
       <footer>
         
         <div class="related-pages">
-          
-          
+          <a class="next-page" href="platformer_new.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">5. Jumper (platformer)</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="runner_new.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">3. Running Ninja (runner)</div>
+                
+              </div>
+            </a>
         </div>
 
         <div class="related-information">
-            <a class="muted-link" href="../_sources/prog_jeu/star_wars.md.txt"
+            <a class="muted-link" href="../_sources/prog_jeu/star_wars_simple.md.txt"
                rel="nofollow">
               Montrer le code source
             </a>
@@ -1237,11 +1048,9 @@ Depuis l’école<div class="summary-down docutils">
 <li><a class="reference internal" href="#ajouter-le-vaisseau">3. Ajouter le vaisseau</a></li>
 <li><a class="reference internal" href="#deplacer-le-vaisseau">4. Déplacer le vaisseau</a></li>
 <li><a class="reference internal" href="#ajouter-un-asteroide">5. Ajouter un astéroïde</a></li>
-<li><a class="reference internal" href="#faire-tourner-lasteroide-sur-lui-meme">6. Faire tourner l’astéroïde sur lui-même</a></li>
-<li><a class="reference internal" href="#ajouter-plusieurs-asteroides">7. Ajouter plusieurs astéroïdes</a></li>
-<li><a class="reference internal" href="#ajouter-des-asteroides-au-cours-du-jeu">8. Ajouter des astéroïdes au cours du jeu</a></li>
-<li><a class="reference internal" href="#tirer-des-lasers">9. Tirer des lasers</a></li>
-<li><a class="reference internal" href="#gerer-les-collisions">10. Gérer les collisions</a></li>
+<li><a class="reference internal" href="#faire-tourner-lasteroide-sur-lui-meme-et-le-faire-reapparaitre">6. Faire tourner l’astéroïde sur lui-même et le faire réapparaître</a></li>
+<li><a class="reference internal" href="#tirer-des-lasers">7. Tirer des lasers</a></li>
+<li><a class="reference internal" href="#gerer-les-collisions">8. Gérer les collisions</a></li>
 <li><a class="reference internal" href="#idees-dameliorations">Idées d’améliorations</a></li>
 <li><a class="reference internal" href="#comment-faire-pour">Comment faire pour … ?</a><ul>
 <li><a class="reference internal" href="#afficher-du-texte-a-lecran">Afficher du texte à l’écran ?</a></li>
