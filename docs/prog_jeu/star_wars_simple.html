@@ -455,9 +455,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </pre></div>
 </div>
 <p>Vous remarquez que nous bougeons de <code class="docutils literal notranslate"><span class="pre">3</span></code> pixels par “tour de jeu”. Afin de pouvoir facilement modifier la vitesse de notre vaisseau par la suite, il serait plus judicieux de lui définir une vitesse.</p>
-<p>Nous pouvons ajouter un attribut <code class="docutils literal notranslate"><span class="pre">speed</span></code> à notre objet <code class="docutils literal notranslate"><span class="pre">player</span></code> et lui donner la valeur <code class="docutils literal notranslate"><span class="pre">3</span></code>. Ainsi, vous n’avez ensuite plus qu’à modifier cette valeur pour accélérer ou ralentir votre vaisseau à votre guise.</p>
+<p>Nous pouvons ajouter un attribut <code class="docutils literal notranslate"><span class="pre">speed</span></code> à notre objet <code class="docutils literal notranslate"><span class="pre">player</span></code> et lui donner la valeur <code class="docutils literal notranslate"><span class="pre">10</span></code>. Ainsi, vous n’avez ensuite plus qu’à modifier cette valeur pour accélérer ou ralentir votre vaisseau à votre guise.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">,</span> <span class="p">(</span><span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># Nouvel attribut speed pour régler la vitesse du vaisseau</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Nouvel attribut speed pour régler la vitesse du vaisseau</span>
 
 <span class="o">...</span>
 
@@ -491,7 +491,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
@@ -562,7 +562,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
@@ -630,7 +630,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
@@ -715,7 +715,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
@@ -744,6 +744,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
     <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
+    <span class="k">if</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">HEIGHT</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
 
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
         <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span>
@@ -763,7 +766,6 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="gerer-les-collisions">
 <h2>8. Gérer les collisions<a class="headerlink" href="#gerer-les-collisions" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il est temps de donner du pouvoir à nos lasers pour détruire les astéroïdes ! Mais également à nos astéroïdes pour détruire notre vaisseau !</p>
-<img alt="../_images/collision.png" src="../_images/collision.png"/>
 <div class="note admonition">
 <p class="admonition-title">Rappel</p>
 <p>Un check de collision entre un acteur et un autre acteur se fait avec la méthode <code class="docutils literal notranslate"><span class="pre">acteur.collides_with(autre_acteur)</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> s’il y a collision entre les deux acteurs et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p>
@@ -810,7 +812,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">player</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'ship'</span><span class="p">)</span>
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
-<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid'</span><span class="p">)</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
@@ -839,8 +841,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
     <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
-    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span>
-        <span class="n">exit</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">HEIGHT</span><span class="p">:</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
+        <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
 
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span>
         <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span>
@@ -849,12 +852,16 @@ Voir le code complet à ce point<div class="summary-down docutils">
         <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
         <span class="n">lasers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
 
+    <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span>
+        <span class="n">exit</span><span class="p">()</span>
+
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span>
         <span class="k">if</span> <span class="n">laser</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span>
             <span class="n">lasers</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">laser</span><span class="p">)</span>
             <span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span>
             <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
+
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -874,6 +881,7 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <p><strong>Totalement dans vos cordes (facile):</strong></p>
 <ul class="simple">
 <li><p>Ajouter au moins un bruitage (ex: tir ou destruction d’astéroïde) et de la musique.</p></li>
+<li><p>Empêcher le spam de lasers.</p></li>
 <li><p>Faire en sorte que le vaisseau ne puisse pas sortir de l’écran.</p></li>
 <li><p>Ajouter un compteur d’astéroïdes détruits (score) et l’afficher à l’écran.</p></li>
 <li><p>Détruire automatiquement les lasers qui sortent de l’écran pour éviter d’avoir des listes qui se remplissent à l’infini et qui ralentissent le jeu.</p></li>
@@ -901,6 +909,20 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 </section>
 <section id="comment-faire-pour">
 <h2>Comment faire pour … ?<a class="headerlink" href="#comment-faire-pour" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="empecher-le-spam-de-lasers">
+<h3>Empêcher le spam de lasers ?<a class="headerlink" href="#empecher-le-spam-de-lasers" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Vous pouvez ajouter un attribut <code class="docutils literal notranslate"><span class="pre">temps_pour_tirer</span></code> (ou <code class="docutils literal notranslate"><span class="pre">cooldown</span></code> en anglais) à votre <code class="docutils literal notranslate"><span class="pre">player</span></code> qui correspond au temps restant avant de pouvoir tirer à nouveau. Lorsqu’on tire un laser, on donne à cet attribut une valeur (ex: <code class="docutils literal notranslate"><span class="pre">player.temps_pour_tirer</span> <span class="pre">=</span> <span class="pre">0.5</span></code> pour 0.5 secondes) et ensuite on le diminue au cours du temps dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> avec <code class="docutils literal notranslate"><span class="pre">player.temps_pour_tirer</span> <span class="pre">-=</span> <span class="pre">dt</span></code> (dt est le temps écoulé depuis le dernier tour de jeu, il est automatiquement passé en paramètre de la fonction <code class="docutils literal notranslate"><span class="pre">update(dt)</span></code>). On laisse le joueur tirer un laser uniquement si <code class="docutils literal notranslate"><span class="pre">player.temps_pour_tirer</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>.</p>
+<p>Exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span><span class="o">.</span><span class="n">temps_pour_tirer</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Initialisation de l'attribut temps_pour_tirer à 0 au départ</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span> <span class="ow">and</span> <span class="n">player</span><span class="o">.</span><span class="n">temps_pour_tirer</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="o">...</span> <span class="c1"># Code pour tirer un laser</span>
+        <span class="n">player</span><span class="o">.</span><span class="n">temps_pour_tirer</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="n">player</span><span class="o">.</span><span class="n">temps_pour_tirer</span> <span class="o">-=</span> <span class="n">dt</span> <span class="c1"># dt est le temps écoulé en secondes depuis le dernier tour de jeu</span>
+</pre></div>
+</div>
+</section>
 <section id="afficher-du-texte-a-lecran">
 <h3>Afficher du texte à l’écran ?<a class="headerlink" href="#afficher-du-texte-a-lecran" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Il existe une fonction <code class="docutils literal notranslate"><span class="pre">screen.draw.text</span></code> qui permet d’afficher du texte à l’écran. Par exemple, <code class="docutils literal notranslate"><span class="pre">screen.draw.text('Score:</span> <span class="pre">10',</span> <span class="pre">(10,</span> <span class="pre">10),</span> <span class="pre">fontsize=30,</span> <span class="pre">color='white')</span></code> affichera le texte “Score: 10” en blanc avec une taille de police de 30 aux coordonnées (10, 10) de la fenêtre.</p>
@@ -1053,6 +1075,7 @@ Depuis l’école<div class="summary-down docutils">
 <li><a class="reference internal" href="#gerer-les-collisions">8. Gérer les collisions</a></li>
 <li><a class="reference internal" href="#idees-dameliorations">Idées d’améliorations</a></li>
 <li><a class="reference internal" href="#comment-faire-pour">Comment faire pour … ?</a><ul>
+<li><a class="reference internal" href="#empecher-le-spam-de-lasers">Empêcher le spam de lasers ?</a></li>
 <li><a class="reference internal" href="#afficher-du-texte-a-lecran">Afficher du texte à l’écran ?</a></li>
 <li><a class="reference internal" href="#ajouter-une-variable-dans-du-texte-affiche-a-lecran">Ajouter une variable dans du texte affiché à l’écran ?</a></li>
 <li><a class="reference internal" href="#tirer-un-nom-dimage-aleatoire">Tirer un nom d’image aléatoire ?</a></li>

@@ -165,11 +165,11 @@ def update():
 
 Vous remarquez que nous bougeons de `3` pixels par "tour de jeu". Afin de pouvoir facilement modifier la vitesse de notre vaisseau par la suite, il serait plus judicieux de lui définir une vitesse.
 
-Nous pouvons ajouter un attribut `speed` à notre objet `player` et lui donner la valeur `3`. Ainsi, vous n'avez ensuite plus qu'à modifier cette valeur pour accélérer ou ralentir votre vaisseau à votre guise.
+Nous pouvons ajouter un attribut `speed` à notre objet `player` et lui donner la valeur `10`. Ainsi, vous n'avez ensuite plus qu'à modifier cette valeur pour accélérer ou ralentir votre vaisseau à votre guise.
 
 ```python
 player = Actor('ship', (WIDTH/2, HEIGHT/2))
-player.speed = 3 # Nouvel attribut speed pour régler la vitesse du vaisseau
+player.speed = 10 # Nouvel attribut speed pour régler la vitesse du vaisseau
 
 ...
 
@@ -198,7 +198,7 @@ HEIGHT = 800
 player = Actor('ship')
 player.x = WIDTH/2
 player.y = HEIGHT/2
-player.speed = 3
+player.speed = 10
 
 def draw():
     screen.blit('space_background', (0, 0))
@@ -272,7 +272,7 @@ HEIGHT = 800
 player = Actor('ship')
 player.x = WIDTH/2
 player.y = HEIGHT/2
-player.speed = 3
+player.speed = 10
 
 asteroid = Actor('asteroid')
 asteroid.x = randint(0, WIDTH)
@@ -338,7 +338,7 @@ HEIGHT = 800
 player = Actor('ship')
 player.x = WIDTH/2
 player.y = HEIGHT/2
-player.speed = 3
+player.speed = 10
 
 asteroid = Actor('asteroid')
 asteroid.x = randint(0, WIDTH)
@@ -424,7 +424,7 @@ HEIGHT = 800
 player = Actor('ship')
 player.x = WIDTH/2
 player.y = HEIGHT/2
-player.speed = 3
+player.speed = 10
 
 asteroid = Actor('asteroid')
 asteroid.x = randint(0, WIDTH)
@@ -453,6 +453,9 @@ def update():
 
     asteroid.y += asteroid.speed
     asteroid.angle += 5
+    if asteroid.y > HEIGHT:
+        asteroid.x = randint(0, WIDTH)
+        asteroid.y = -50
 
     if keyboard.space:
         laser = Actor('laser')
@@ -471,9 +474,6 @@ pgzrun.go()
 ## 8. Gérer les collisions
 
 Il est temps de donner du pouvoir à nos lasers pour détruire les astéroïdes ! Mais également à nos astéroïdes pour détruire notre vaisseau !
-
-```{image} ../media/collision.png
-```
 
 ```{admonition} Rappel
 :class: note
@@ -522,7 +522,7 @@ HEIGHT = 800
 player = Actor('ship')
 player.x = WIDTH/2
 player.y = HEIGHT/2
-player.speed = 3
+player.speed = 10
 
 asteroid = Actor('asteroid')
 asteroid.x = randint(0, WIDTH)
@@ -551,8 +551,9 @@ def update():
 
     asteroid.y += asteroid.speed
     asteroid.angle += 5
-    if player.collides_with(asteroid):
-        exit()
+    if asteroid.y > HEIGHT:
+        asteroid.x = randint(0, WIDTH)
+        asteroid.y = -50
 
     if keyboard.space:
         laser = Actor('laser')
@@ -561,12 +562,16 @@ def update():
         laser.speed = 10
         lasers.append(laser)
 
+    if player.collides_with(asteroid):
+        exit()
+
     for laser in lasers:
         laser.y -= laser.speed
         if laser.collides_with(asteroid):
             lasers.remove(laser)
             asteroid.x = randint(0, WIDTH)
             asteroid.y = -50
+
 pgzrun.go()
 ```
 ````
@@ -584,6 +589,7 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 **Totalement dans vos cordes (facile):**
 
 * Ajouter au moins un bruitage (ex: tir ou destruction d'astéroïde) et de la musique.
+* Empêcher le spam de lasers.
 * Faire en sorte que le vaisseau ne puisse pas sortir de l'écran.
 * Ajouter un compteur d'astéroïdes détruits (score) et l'afficher à l'écran.
 * Détruire automatiquement les lasers qui sortent de l'écran pour éviter d'avoir des listes qui se remplissent à l'infini et qui ralentissent le jeu.
@@ -609,6 +615,20 @@ Vous pouvez bien sûr me proposer d'autres idées et je vous dirai leur difficul
 * Autres idées..?
 
 ## Comment faire pour ... ?
+
+### Empêcher le spam de lasers ?
+Vous pouvez ajouter un attribut `temps_pour_tirer` (ou `cooldown` en anglais) à votre `player` qui correspond au temps restant avant de pouvoir tirer à nouveau. Lorsqu'on tire un laser, on donne à cet attribut une valeur (ex: `player.temps_pour_tirer = 0.5` pour 0.5 secondes) et ensuite on le diminue au cours du temps dans la fonction `update` avec `player.temps_pour_tirer -= dt` (dt est le temps écoulé depuis le dernier tour de jeu, il est automatiquement passé en paramètre de la fonction `update(dt)`). On laisse le joueur tirer un laser uniquement si `player.temps_pour_tirer <= 0`.
+
+Exemple:
+```python
+player.temps_pour_tirer = 0 # Initialisation de l'attribut temps_pour_tirer à 0 au départ
+def update(dt):
+    ...
+    if keyboard.space and player.temps_pour_tirer <= 0:
+        ... # Code pour tirer un laser
+        player.temps_pour_tirer = 0.5
+    player.temps_pour_tirer -= dt # dt est le temps écoulé en secondes depuis le dernier tour de jeu
+```
 
 ### Afficher du texte à l'écran ?
 Il existe une fonction `screen.draw.text` qui permet d'afficher du texte à l'écran. Par exemple, `screen.draw.text('Score: 10', (10, 10), fontsize=30, color='white')` affichera le texte "Score: 10" en blanc avec une taille de police de 30 aux coordonnées (10, 10) de la fenêtre.
