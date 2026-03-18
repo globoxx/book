@@ -17,22 +17,20 @@ Vous avez carte blanche concernant le contenu de votre jeu. Cela concerne les im
 - Le jeu est jouable, possède un objectif clair, ne contient pas de bug évident et ne plante pas.
 - Le jeu comporte au moins 1 acteur déplaçable par l'utilisateur (à la souris ou au clavier).
 - Le jeu comporte au moins 2 autres types d'acteurs différents qui se déplacent ou intéragissent avec le joueur.
-- Le jeu comporte au moins 1 liste d'acteurs (ex: liste d'ennemis ou liste d'items à ramasser).
-- Le jeu comporte des collisions entre acteurs.
 - Il est possible de perdre et un game over doit alors s'afficher.
 - Il est possible de gagner ou d'augmenter un score indéfiniment.
 - Le jeu comporte au moins 1 musique de fond et 1 bruitage.
 - Le jeu est développé de manière continue (pas de travail à la dernière minute).
 - Le jeu est rendu à temps et défendu oralement.
 
-Suivre les critères ci-dessus vous garantira la minimale note de 5.  
+Suivre les critères ci-dessus vous garantira la note minimale de 5.  
 La note maximale est atteignable en ajoutant des éléments bonus.
 
 **Bonus:**
-- Des créations artistiques personnelles (images, sons, musiques).
+- Des créations artistiques personnelles (images, animations, musiques).
 - Des éléments de gamplay complexes (ex: améliorations difficiles vues en tutoriel).
-- Une créativité particulière au niveau du gameplay (un gameplay très différent de ce qui a été vu en tutoriel).
-- Des notions de programmation non vus en cours.
+- Une créativité particulière au niveau du gameplay (ex: un gameplay très différent de ce qui a été vu en tutoriel).
+- Des notions de programmation non vues en cours.
 ```
 
 ```{admonition} Plagiat et tricherie
