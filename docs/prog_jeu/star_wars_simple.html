@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -313,9 +313,9 @@
 <section id="faire-apparaitre-une-fenetre">
 <h2>1. Faire apparaître une fenêtre<a class="headerlink" href="#faire-apparaitre-une-fenetre" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La première étape est de définir le nom de notre jeu dans la variable <code class="docutils literal notranslate"><span class="pre">TITLE</span></code>, ainsi que la largeur <code class="docutils literal notranslate"><span class="pre">WIDTH</span></code> et la hauteur <code class="docutils literal notranslate"><span class="pre">HEIGHT</span></code> de notre fenêtre. Nous allons également importer des fonctions de <code class="docutils literal notranslate"><span class="pre">pgzhelper</span></code> afin de nous faciliter la vie. Pygame Zero s’occupe du reste !</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
-<span class="kn">import</span> <span class="nn">pgzrun</span>
-<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
 
@@ -327,19 +327,19 @@
 </div>
 <img alt="../_images/pygame_fenetre.png" src="../_images/pygame_fenetre.png"/>
 <p>Pygame Zero fonctionne avec 2 fonctions principales: <code class="docutils literal notranslate"><span class="pre">draw</span></code> et <code class="docutils literal notranslate"><span class="pre">update</span></code>. Tandis que <code class="docutils literal notranslate"><span class="pre">draw</span></code> est appelée pour afficher des choses à l’écran, <code class="docutils literal notranslate"><span class="pre">update</span></code> est appelée pour faire évoluer le jeu. Elles sont toutes 2 appelées en boucle automatiquement.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
-<span class="kn">import</span> <span class="nn">pgzrun</span>
-<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="k">pass</span> <span class="c1"># Ajouter ici tout ce qui concerne l'affichage</span>
     <span class="c1"># pass est une instruction qui ne fait rien, à remplacer par du code par la suite</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span> <span class="c1"># Ajouter ici tout ce qui concerne l'évolution du jeu</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
@@ -352,7 +352,7 @@
 On va y attacher cette image de fond.</p>
 <img alt="../_images/space_background.png" src="../_images/space_background.png"/>
 <p>Voici comment faire:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="c1"># Dessine l'image 'space_background' aux coordonnées (0, 0)</span>
 </pre></div>
 </div>
@@ -364,18 +364,18 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
-<span class="kn">import</span> <span class="nn">pgzrun</span>
-<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">HEIGHT</span> <span class="o">=</span> <span class="mi">800</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
@@ -393,7 +393,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </pre></div>
 </div>
 <p>Afin de dessiner notre vaisseau, il faut en dernier lieu appeler la méthode <code class="docutils literal notranslate"><span class="pre">player.draw()</span></code> dans la fonction principale <code class="docutils literal notranslate"><span class="pre">draw</span></code> de Pygame.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine le vaisseau ici !</span>
 </pre></div>
@@ -409,9 +409,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
-<span class="kn">import</span> <span class="nn">pgzrun</span>
-<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -421,11 +421,11 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">WIDTH</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">pass</span>
 
 <span class="n">pgzrun</span><span class="o">.</span><span class="n">go</span><span class="p">()</span>
@@ -436,13 +436,13 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="deplacer-le-vaisseau">
 <h2>4. Déplacer le vaisseau<a class="headerlink" href="#deplacer-le-vaisseau" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous allons déplacer le vaisseau grâce aux touches <code class="docutils literal notranslate"><span class="pre">w,</span> <span class="pre">a,</span> <span class="pre">s,</span> <span class="pre">d</span></code>. On va utiliser l’objet <code class="docutils literal notranslate"><span class="pre">keyboard</span></code> pour récupérer les touches enfoncées par l’utilisateur et modifier les coordonnées <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> du vaisseau.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span> <span class="c1"># Si la touche a est enfoncée</span>
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="mi">3</span> <span class="c1"># Déplace le vaisseau à gauche</span>
 </pre></div>
 </div>
 <p>Il nous suffit donc de contrôler quelles touches sont enfoncées et de modifier les coordonnées de notre vaisseau en conséquence:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="mi">3</span> <span class="c1"># Déplacement à gauche</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
@@ -461,7 +461,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="o">...</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
@@ -480,9 +480,9 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
-<span class="kn">import</span> <span class="nn">pgzrun</span>
-<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -493,11 +493,11 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">player</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">HEIGHT</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">player</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
@@ -518,7 +518,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p>Il est temps d’ajouter des astéroïdes pour pimenter un peu notre jeu. Ils apparaîtront en haut de l’écran et descendront vers le bas.</p>
 <img alt="../_images/asteroid.png" src="../_images/asteroid.png"/>
 <p>Nous pouvons ensuite créer un objet <code class="docutils literal notranslate"><span class="pre">asteroid</span></code> et lui donner des coordonnées de départ (<code class="docutils literal notranslate"><span class="pre">x</span></code> aléatoire et <code class="docutils literal notranslate"><span class="pre">y</span></code> fixe en haut de l’écran). La fonction permettant de tirer un nombre entier aléatoire entre 2 bornes <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> se nomme <code class="docutils literal notranslate"><span class="pre">randint(a,</span> <span class="pre">b)</span></code>. Pour qu’elle fonctionne, nous devons également importer le module <code class="docutils literal notranslate"><span class="pre">random</span></code> qui contient cette fonction.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># Importe tout un tas de fonctions pour faire de l'aléatoire</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span> <span class="c1"># Importe tout un tas de fonctions pour faire de l'aléatoire</span>
 
 <span class="o">...</span>
 
@@ -528,7 +528,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </pre></div>
 </div>
 <p>N’oublions pas d’appeler la méthode <code class="docutils literal notranslate"><span class="pre">asteroid.draw()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine l'astéroïde !</span>
@@ -538,7 +538,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">15</span> <span class="c1"># Vitesse de déplacement de l'astéroïde</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="c1"># Déplacement de l'astéroïde vers le bas</span>
 </pre></div>
@@ -550,10 +550,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
-<span class="kn">import</span> <span class="nn">pgzrun</span>
-<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -569,12 +569,12 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">15</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
@@ -595,14 +595,14 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <section id="faire-tourner-lasteroide-sur-lui-meme-et-le-faire-reapparaitre">
 <h2>6. Faire tourner l’astéroïde sur lui-même et le faire réapparaître<a class="headerlink" href="#faire-tourner-lasteroide-sur-lui-meme-et-le-faire-reapparaitre" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous allons tenter d’ajouter un peu de mouvement à notre jeu en faisant tournoyer notre astéroïde sur lui même. Pour cela, nous allons progressivement modifier l’<code class="docutils literal notranslate"><span class="pre">angle</span></code> de l’image représentant notre astéroïde. Cet attribut <code class="docutils literal notranslate"><span class="pre">angle</span></code> vaut <code class="docutils literal notranslate"><span class="pre">0</span></code> par défaut et correspond à l’angle de rotation de l’image. En augmentant cette valeur, on fait tourner l’image.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span> <span class="c1"># Fait tourner l'astéroïde de 5 degrés à chaque tour de jeu</span>
 </pre></div>
 </div>
 <p>Pour faire réapparaître notre astéroïde une fois qu’il a disparu en bas de l’écran, il suffit de contrôler sa coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> et de lui redonner une coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> en haut de l’écran ainsi qu’une coordonnée <code class="docutils literal notranslate"><span class="pre">x</span></code> aléatoire.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">+=</span> <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">angle</span> <span class="o">+=</span> <span class="mi">5</span>
@@ -618,10 +618,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
-<span class="kn">import</span> <span class="nn">pgzrun</span>
-<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -637,12 +637,12 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <span class="n">asteroid</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">50</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="mi">15</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
@@ -675,7 +675,7 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </pre></div>
 </div>
 <p>Nous voulons ajouter un laser à cette liste à chaque fois que l’utilisateur appuie sur la touche <code class="docutils literal notranslate"><span class="pre">espace</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span><span class="p">:</span> <span class="c1"># Si la touche espace est enfoncée</span>
         <span class="n">laser</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'laser'</span><span class="p">)</span> <span class="c1"># Création d'un laser</span>
@@ -685,12 +685,12 @@ Voir le code complet à ce point<div class="summary-down docutils">
 </pre></div>
 </div>
 <p>Il nous reste à afficher nos lasers dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> et à les faire avancer dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> en modifiant leur coordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code> pour les faire monter vers le haut de l’écran. On peut parcourir la liste des lasers avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Pour chaque laser dans la liste des lasers</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># On dessine le laser</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Pour chaque laser dans la liste des lasers</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span> <span class="c1"># On fait avancer le laser vers le haut de l'écran</span>
@@ -703,10 +703,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
-<span class="kn">import</span> <span class="nn">pgzrun</span>
-<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -724,14 +724,14 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
@@ -771,14 +771,14 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <p>Un check de collision entre un acteur et un autre acteur se fait avec la méthode <code class="docutils literal notranslate"><span class="pre">acteur.collides_with(autre_acteur)</span></code> qui retourne <code class="docutils literal notranslate"><span class="pre">True</span></code> s’il y a collision entre les deux acteurs et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p>
 </div>
 <p>Commençons par les collisions entre le vaisseau et les astéroïdes. Où ajouter ce check de collision ? Dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> !</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">collides_with</span><span class="p">(</span><span class="n">asteroid</span><span class="p">):</span> <span class="c1"># Si le joueur est en contact avec l'astéroïde</span>
         <span class="n">exit</span><span class="p">()</span> <span class="c1"># On quitte le jeu</span>
 </pre></div>
 </div>
 <p>Passons à présent aux collisions entre les lasers et les astéroïdes. Où ajouter le contrôle de collision ? Le plus logique est de le faire après le déplacement d’un laser, toujours dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="o">...</span>
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span> <span class="c1"># Pour chaque laser dans la liste des lasers</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">y</span> <span class="o">-=</span> <span class="n">laser</span><span class="o">.</span><span class="n">speed</span>
@@ -800,10 +800,10 @@ Voir le code complet à ce point<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pgzero</span>
-<span class="kn">import</span> <span class="nn">pgzrun</span>
-<span class="kn">from</span> <span class="nn">pgzhelper</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pgzero</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pgzrun</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pgzhelper</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">TITLE</span> <span class="o">=</span> <span class="s1">'Star Wars'</span>
 <span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -821,14 +821,14 @@ Voir le code complet à ce point<div class="summary-down docutils">
 
 <span class="n">lasers</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="s1">'space_background'</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
     <span class="n">player</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">asteroid</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">laser</span> <span class="ow">in</span> <span class="n">lasers</span><span class="p">:</span>
         <span class="n">laser</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">a</span><span class="p">:</span>
         <span class="n">player</span><span class="o">.</span><span class="n">x</span> <span class="o">-=</span> <span class="n">player</span><span class="o">.</span><span class="n">speed</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">d</span><span class="p">:</span>
@@ -914,7 +914,7 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <p>Vous pouvez ajouter un attribut <code class="docutils literal notranslate"><span class="pre">temps_pour_tirer</span></code> (ou <code class="docutils literal notranslate"><span class="pre">cooldown</span></code> en anglais) à votre <code class="docutils literal notranslate"><span class="pre">player</span></code> qui correspond au temps restant avant de pouvoir tirer à nouveau. Lorsqu’on tire un laser, on donne à cet attribut une valeur (ex: <code class="docutils literal notranslate"><span class="pre">player.temps_pour_tirer</span> <span class="pre">=</span> <span class="pre">0.5</span></code> pour 0.5 secondes) et ensuite on le diminue au cours du temps dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> avec <code class="docutils literal notranslate"><span class="pre">player.temps_pour_tirer</span> <span class="pre">-=</span> <span class="pre">dt</span></code> (dt est le temps écoulé depuis le dernier tour de jeu, il est automatiquement passé en paramètre de la fonction <code class="docutils literal notranslate"><span class="pre">update(dt)</span></code>). On laisse le joueur tirer un laser uniquement si <code class="docutils literal notranslate"><span class="pre">player.temps_pour_tirer</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>.</p>
 <p>Exemple:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span><span class="o">.</span><span class="n">temps_pour_tirer</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Initialisation de l'attribut temps_pour_tirer à 0 au départ</span>
-<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
     <span class="o">...</span>
     <span class="k">if</span> <span class="n">keyboard</span><span class="o">.</span><span class="n">space</span> <span class="ow">and</span> <span class="n">player</span><span class="o">.</span><span class="n">temps_pour_tirer</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="o">...</span> <span class="c1"># Code pour tirer un laser</span>
@@ -943,7 +943,7 @@ Vous pouvez bien sûr me proposer d’autres idées et je vous dirai leur diffic
 <h3>Détecter un clic de souris ?<a class="headerlink" href="#detecter-un-clic-de-souris" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pygame Zero offre une fonction spéciale <code class="docutils literal notranslate"><span class="pre">on_mouse_down(pos)</span></code> qui est appelée automatiquement à chaque fois que l’utilisateur clique avec la souris. La variable <code class="docutils literal notranslate"><span class="pre">pos</span></code> correspond aux coordonnées du clic de souris. Vous pouvez donc ajouter cette fonction à votre code et y mettre le code que vous voulez exécuter à chaque clic de souris.
 Exemple:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Vous avez cliqué aux coordonnées </span><span class="si">{</span><span class="n">pos</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>    
 </pre></div>
 </div>
@@ -953,11 +953,11 @@ Exemple:</p>
 <p>Pgzhelper vous fournit une classe <code class="docutils literal notranslate"><span class="pre">Button</span></code> qui permet de créer facilement des boutons cliquables. Vous pouvez créer un bouton avec <code class="docutils literal notranslate"><span class="pre">button</span> <span class="pre">=</span> <span class="pre">Button('mon_texte',</span> <span class="pre">(x,</span> <span class="pre">y),</span> <span class="pre">(largeur,</span> <span class="pre">hauteur))</span></code> et ensuite vérifier s’il a été cliqué dans la fonction <code class="docutils literal notranslate"><span class="pre">on_mouse_down(pos)</span></code> avec <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">button.collidepoint(pos):</span></code>. Important: n’oubliez pas d’appeler la méthode <code class="docutils literal notranslate"><span class="pre">button.draw()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> pour que le bouton soit visible à l’écran.
 Exemple:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">button</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="s1">'Cliquez-moi'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
-<span class="k">def</span> <span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_mouse_down</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">button</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">'Le bouton a été cliqué !'</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">draw</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw</span><span class="p">():</span>
     <span class="n">button</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="c1"># Affiche le bouton</span>
 </pre></div>
 </div>

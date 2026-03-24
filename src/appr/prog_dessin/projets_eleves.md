@@ -60,7 +60,13 @@
 
 #### Noa
 
+```{image} ../media/dessins_eleves/2526/noa.png
+```
+
 #### Elshadai
+
+```{image} ../media/dessins_eleves/2526/elshadai.png
+```
 
 #### Anaé et Louise
 
@@ -69,9 +75,18 @@
 
 #### Nolan et Douglas
 
+```{image} ../media/dessins_eleves/2526/nolan_douglas.png
+```
+
 #### Arthur et Julien
 
+```{image} ../media/dessins_eleves/2526/julien_arthur.png
+```
+
 #### Luisa et Sara
+
+```{image} ../media/dessins_eleves/2526/sara_luisa.png
+```
 
 ### Rémy et Sajan
 
