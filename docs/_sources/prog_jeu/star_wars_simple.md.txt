@@ -393,6 +393,7 @@ def update():
         laser = Actor('laser') # Création d'un laser
         laser.x = player.x # Positionnement du laser sur le vaisseau en x
         laser.y = player.y # Positionnement du laser sur le vaisseau en y
+        laser.speed = 10 # Vitesse de déplacement du laser
         lasers.append(laser) # Ajout du laser à la liste des lasers
 ```
 
