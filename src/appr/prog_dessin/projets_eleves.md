@@ -137,7 +137,7 @@
 
 #### Adel et Jacques
 
-```{image} ../media/dessins_eleves/2526/adel_jacques.png
+```{image} ../media/dessins_eleves/2526/jacques_adel.png
 ```
 
 #### Thibaut
