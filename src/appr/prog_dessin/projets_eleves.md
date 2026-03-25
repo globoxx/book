@@ -112,9 +112,18 @@
 
 #### Fatima Ab.
 
+```{image} ../media/dessins_eleves/2526/fatima.png
+```
+
 #### Loris et Vianne
 
+```{image} ../media/dessins_eleves/2526/vianne_loris.gif
+```
+
 #### Fatimal Al. et Nayara
+
+```{image} ../media/dessins_eleves/2526/fatima_nayara.png
+```
 
 #### Chantal et Sébastien
 
@@ -123,9 +132,18 @@
 
 #### Timo et Ezra
 
+```{image} ../media/dessins_eleves/2526/timo_ezra.png
+```
+
 #### Adel et Jacques
 
+```{image} ../media/dessins_eleves/2526/adel_jacques.png
+```
+
 #### Thibaut
+
+```{image} ../media/dessins_eleves/2526/thibaut.gif
+```
 
 #### Clémence et Salomé
 
