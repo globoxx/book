@@ -1,4 +1,4 @@
-(prog_jeu.hit_the_fly)=
+(prog_jeu.how_to)=
 
 # 6. Comment faire pour ..?
 
