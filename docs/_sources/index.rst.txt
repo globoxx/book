@@ -69,6 +69,7 @@ Bienvenue sur la plateforme de TP d'informatique !
    prog_jeu/runner_new
    prog_jeu/star_wars_simple
    prog_jeu/platformer_new
+   prog_jeu/how_to
    prog_jeu/projet
    prog_jeu/projets_eleves
 
