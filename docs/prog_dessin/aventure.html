@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/logic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/blanks.css" />
     <link rel="stylesheet" type="text/css" href="../_static/timeline.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/global.css" />
@@ -314,33 +314,261 @@ C’est-à-dire une <strong>histoire durant laquelle le lecteur peut faire des c
 <li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code> pour afficher le texte de l’histoire</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">input()</span></code> pour poser des questions au lecteur</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> et <code class="docutils literal notranslate"><span class="pre">else</span></code> pour créer les embranchements de l’histoire</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> pour répéter des choses</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> pour éventuellement répéter des choses</p></li>
 <li><p>éventuellement une <code class="docutils literal notranslate"><span class="pre">liste</span></code> pour stocker un inventaire</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span></code> pour définir des fonctions qui codent des parties de l’histoire</p></li>
 </ul>
+<p>Commençons par les bases.</p>
+<section id="comment-ecrire-du-texte">
+<h2>Comment écrire du texte ?<a class="headerlink" href="#comment-ecrire-du-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour écrire du texte, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code>. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Bienvenue dans mon aventure !"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous êtes dans une forêt sombre et vous entendez des bruits étranges."</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Si vous voulez inclure des variables dans votre texte, vous pouvez utiliser la syntaxe suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nom</span> <span class="o">=</span> <span class="s2">"Alice"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Bienvenue dans mon aventure,"</span><span class="p">,</span> <span class="n">nom</span> <span class="p">,</span> <span class="s2">"!"</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="comment-poser-des-questions-au-joueur">
+<h2>Comment poser des questions au joueur ?<a class="headerlink" href="#comment-poser-des-questions-au-joueur" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour poser des questions au joueur, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">input()</span></code>. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">choix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Voulez-vous aller à gauche ou à droite ? (gauche, droite) "</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"gauche"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous allez à gauche et vous trouvez un trésor !"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"droite"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous allez à droite et vous tombez dans un piège !"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous n'avez pas fait un choix valide."</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="comment-faire-varier-une-variable-durant-lhistoire">
+<h2>Comment faire varier une variable durant l’histoire<a class="headerlink" href="#comment-faire-varier-une-variable-durant-lhistoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez créer des variables pour stocker des informations sur le joueur, comme son argent ou sa vie. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">argent</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># On déclare une variable argent qui vaut 100 au début de l'aventure</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous avez"</span><span class="p">,</span> <span class="n">argent</span><span class="p">,</span> <span class="s2">"pièces d'or."</span><span class="p">)</span>
+
+<span class="n">choix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Voulez-vous acheter une épée pour 50 pièces d'or ? (oui, non) "</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"oui"</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">argent</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span> <span class="c1"># On vérifie que le joueur a assez d'argent pour acheter l'épée</span>
+        <span class="n">argent</span> <span class="o">=</span> <span class="n">argent</span> <span class="o">-</span> <span class="mi">50</span> <span class="c1"># On soustrait 50 à la variable argent pour payer l'épée</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous avez acheté une épée ! Il vous reste"</span><span class="p">,</span> <span class="n">argent</span><span class="p">,</span> <span class="s2">"pièces d'or."</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous n'avez pas assez d'argent pour acheter l'épée."</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"non"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous décidez de ne pas acheter l'épée."</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>N’oubliez pas que vous pouvez aussi déclarer des variables logiques ! Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">perdu</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># On déclare une variable perdu qui vaut False au début de l'aventure</span>
+<span class="n">choix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Voulez-vous entrer dans la grotte ? (oui, non) "</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"oui"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous entrez dans la grotte et vous êtes attaqué par un monstre !"</span><span class="p">)</span>
+    <span class="n">perdu</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># On met la variable perdu à True pour indiquer que le joueur a perdu</span>
+<span class="k">elif</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"non"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous décidez de ne pas entrer dans la grotte et vous continuez votre chemin."</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">perdu</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Game over !"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous continuez votre aventure !"</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Modifier une variable dans une fonction</p>
+<p>Si vous voulez modifier une variable qui a été déclarée en dehors d’une fonction, il faut utiliser l’instruction <code class="docutils literal notranslate"><span class="pre">global</span></code> pour indiquer que vous voulez modifier la variable dans la fonction. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">argent</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">acheter_epee</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">argent</span> <span class="c1"># On indique que nous voulons modifier la variable argent</span>
+    <span class="k">if</span> <span class="n">argent</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="n">argent</span> <span class="o">=</span> <span class="n">argent</span> <span class="o">-</span> <span class="mi">50</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous avez acheté une épée ! Il vous reste"</span><span class="p">,</span> <span class="n">argent</span><span class="p">,</span> <span class="s2">"pièces d'or."</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous n'avez pas assez d'argent pour acheter l'épée."</span><span class="p">)</span>
+<span class="n">acheter_epee</span><span class="p">()</span> <span class="c1"># On appelle la fonction acheter_epee </span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="comment-stocker-des-objets-dans-un-inventaire">
+<h2>Comment stocker des objets dans un inventaire ?<a class="headerlink" href="#comment-stocker-des-objets-dans-un-inventaire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez utiliser une liste pour stocker les objets que le joueur trouve durant son aventure. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">inventaire</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># On déclare une liste vide pour l'inventaire du joueur</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous trouvez une épée !"</span><span class="p">)</span>
+<span class="n">inventaire</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">"épée"</span><span class="p">)</span> <span class="c1"># On ajoute l'épée à l'inventaire du joueur</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Votre inventaire:"</span><span class="p">,</span> <span class="n">inventaire</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="s2">"épée"</span> <span class="ow">in</span> <span class="n">inventaire</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous avez une épée dans votre inventaire, vous pouvez l'utiliser pour combattre les monstres !"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous n'avez pas d'épée dans votre inventaire, vous êtes vulnérable face aux monstres !"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Notez que vous pouvez aussi enlever des objets de l’inventaire avec la méthode <code class="docutils literal notranslate"><span class="pre">remove()</span></code>. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">inventaire</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"épée"</span><span class="p">,</span> <span class="s2">"bouclier"</span><span class="p">,</span> <span class="s2">"potion"</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Votre inventaire:"</span><span class="p">,</span> <span class="n">inventaire</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous utilisez votre potion de soin."</span><span class="p">)</span>
+<span class="n">inventaire</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">"potion"</span><span class="p">)</span> <span class="c1"># On enlève la potion de l'inventaire du joueur</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Votre inventaire:"</span><span class="p">,</span> <span class="n">inventaire</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="comment-faire-des-boucles-ou-creer-des-raccourcis-dans-lhistoire">
+<h2>Comment faire des boucles ou créer des raccourcis dans l’histoire ?<a class="headerlink" href="#comment-faire-des-boucles-ou-creer-des-raccourcis-dans-lhistoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Le plus simple est d’utiliser des fonctions pour créer des parties de l’histoire qui peuvent être réutilisées. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">entrer_grotte</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous entrez dans la grotte et vous êtes attaqué par un monstre !"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Game over !"</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">continuer_aventure</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous continuez votre aventure !"</span><span class="p">)</span>
+
+<span class="n">choix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Voulez-vous entrer dans la grotte ? (oui, non) "</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"oui"</span><span class="p">:</span>
+    <span class="n">entrer_grotte</span><span class="p">()</span> <span class="c1"># On appelle la fonction entrer_grotte pour faire entrer le joueur dans la grotte</span>
+<span class="k">elif</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"non"</span><span class="p">:</span>
+    <span class="n">continuer_aventure</span><span class="p">()</span> <span class="c1"># On appelle la fonction continuer_aventure pour faire continuer l'aventure du joueur</span>
+</pre></div>
+</div>
+<p>Cela peut être utilisé pour faire des boucles dans l’histoire. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">commencer_aventure</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous êtes dans une forêt sombre et vous entendez des bruits étranges."</span><span class="p">)</span>
+    <span class="n">choix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Voulez-vous aller à gauche ou à droite ? (gauche, droite) "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"gauche"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous allez à gauche et vous trouvez un trésor !"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"droite"</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous allez à droite et vous tombez dans un piège !"</span><span class="p">)</span>
+        <span class="n">commencer_aventure</span><span class="p">()</span> <span class="c1"># On appelle la fonction commencer_aventure pour faire recommencer l'aventure du joueur</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous n'avez pas fait un choix valide."</span><span class="p">)</span>
+        <span class="n">commencer_aventure</span><span class="p">()</span> 
+<span class="n">commencer_aventure</span><span class="p">()</span> <span class="c1"># On appelle la fonction commencer_aventure pour démarrer l'aventure du joueur</span>
+</pre></div>
+</div>
+<p>Cela peut aussi permettre de créer des ponts entre des branches d’histoire parallèles. Vous pouvez par exemple “sauter” d’une branche à l’autre en appelant une fonction qui se trouve dans l’autre branche.</p>
+</section>
+<section id="exemples-daventures">
+<h2>Exemples d’aventures<a class="headerlink" href="#exemples-daventures" title="Lien permanent vers ce titre">¶</a></h2>
 <section id="exemple-1">
-<h2>Exemple 1<a class="headerlink" href="#exemple-1" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICByZXBvbnNlID0gaW5wdXQocXVlc3Rpb24gKyBzdHIoY2hvaXhfcG9zc2libGVzKSkKICAgIHdoaWxlIHJlcG9uc2Ugbm90IGluIGNob2l4X3Bvc3NpYmxlczoKICAgICAgICByZXBvbnNlID0gaW5wdXQocXVlc3Rpb24gKyBzdHIoY2hvaXhfcG9zc2libGVzKSkKICAgIHJldHVybiByZXBvbnNlCgppbnZlbnRhaXJlID0gW10KcGVyZHUgPSBGYWxzZQoKcHJpbnQoIlZvdXMgdmVuZXogZCdpbnZlbnRlciB1bmUgbWFjaGluZSDDoCB2b3lhZ2VyIGRhbnMgbGUgdGVtcHMuIikKY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiRW4gcXVlbGxlIGFubsOpZSB2b3VsZXotdm91cyBhbGxlciA/IiwgWyItMTAwJzAwMCcwMDAiLCAiLTI1ODAiLCAiLTUwIiwgIjE3ODkiLCAiMjEwMCJdKQppZiBjaG9peCA9PSAiLTEwMCcwMDAnMDAwIjoKICAgIHByaW50KCJBIHBlaW5lIGFycml2w6ksIHZvdXMgw6p0ZXMgYm91ZmbDqSBwYXIgdW4gZGlub3NhdXJlICEiKQogICAgcGVyZHUgPSBUcnVlCmVsaWYgY2hvaXggPT0gIi0yNTgwIjoKICAgIHByaW50KCJWb3VzIMOqdGVzIHbDqW7DqXLDqSBjb21tZSB1biBkaWV1IGVuIEVneXB0ZSBhbnRpcXVlLiIpCiAgICBwcmludCgiTGUgcGhyYXJhb24gS2jDqW9wcyB2b3VzIG9mZnJlIHNvbiBzY2VwdHJlIGVuIG9yLiIpCiAgICBpbnZlbnRhaXJlLmFwcGVuZCgiU2NlcHRyZSIpCmVsaWYgY2hvaXggPT0gIi01MCI6CiAgICBwcmludCgiVm91cyBmYWl0ZXMgbGEgcmVuY29udHJlIGRlIEp1bGVzIEPDqXNhci4iKQogICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiVm91bGV6LXZvdXMgcmVqb2luZHJlIHNhIGdhcmRlIHBlcnNvbm5lbGxlID8iLCBbIm91aSIsICJub24iXSkKICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgIHByaW50KCJWb3VzIHJlY2V2ZXogdW5lIGFybXVyZSBkZSByb21haW4uIikKICAgICAgICBpbnZlbnRhaXJlLmFwcGVuZCgiQXJtdXJlIikKICAgIGVsaWYgY2hvaXggPT0gIm5vbiI6CiAgICAgICAgcHJpbnQoIlZvdXMgcmVmdXNleiBwb2xpbWVudC4iKQplbGlmIGNob2l4ID09ICIxNzg5IjoKICAgIHByaW50KCJWb3VzIHZvdXMgZmFpdGVzIGNvdXBlciBsYSB0w6p0ZSBsb3JzIGRlIGxhIHLDqXZvbHV0aW9uIGZyYW7Dp2Fpc2UgISIpCiAgICBwZXJkdSA9IFRydWUKZWxpZiBjaG9peCA9PSAiMjEwMCI6CiAgICBwcmludCgiRGFucyBsZSBmdXR1ciwgdW4gc8OpcnVtIGQnaW1tb3J0YWxpdMOpIGVzdCB2ZW5kdSBlbiBwaGFybWFjaWUuIFZvdXMgZW4gcGlxdWV6IHVuIHBldS4iKQogICAgaW52ZW50YWlyZS5hcHBlbmQoIlPDqXJ1bSIpCgppZiBub3QgcGVyZHU6CiAgICBwcmludCgiVm91cyByZXZlbmV6IGRhbnMgbGUgcHLDqXNlbnQuIikKICAgIGlmICJTY2VwdHJlIiBpbiBpbnZlbnRhaXJlOgogICAgICAgIHByaW50KCJWb3RyZSBhdmVudHVyZSB2b3VzIGEgcmVuZHUgc3VwZXIgcmljaGUgISIpCiAgICBlbGlmICJBcm11cmUiIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlBsdXMgcGVyc29ubmUgbmUgdm91cyBjaGVyY2hlcmEgZCdlbm51aXMgYXZlYyBsJ2FybXVyZSBxdWUgdm91cyBhdmV6IHJhbWVuw6llICEiKQogICAgZWxpZiAiU8OpcnVtIiBpbiBpbnZlbnRhaXJlOgogICAgICAgIHByaW50KCJWb3VzIGNvbW1lcmNpYWxpc2V6IHZvdHJlIHPDqXJ1bSBldCByZW5kZXogdG91dGUgbCdodW1hbml0w6kgaW1tb3J0ZWxsZSAob3VwcykgISIpCgpwcmludCgiRmluIGRlIGwnYXZlbnR1cmUiKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
+<h3>Exemple 1<a class="headerlink" href="#exemple-1" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="aW52ZW50YWlyZSA9IFtdCnBlcmR1ID0gRmFsc2UKCnByaW50KCJWb3VzIHZlbmV6IGQnaW52ZW50ZXIgdW5lIG1hY2hpbmUgw6Agdm95YWdlciBkYW5zIGxlIHRlbXBzLiIpCmNob2l4ID0gaW5wdXQoIkVuIHF1ZWxsZSBhbm7DqWUgdm91bGV6LXZvdXMgYWxsZXIgPyAoLTEwMCcwMDAnMDAwLCAtMjU4MCwgLTUwLCAxNzg5LCAyMTAwKSAiKQppZiBjaG9peCA9PSAiLTEwMCcwMDAnMDAwIjoKICAgIHByaW50KCJBIHBlaW5lIGFycml2w6ksIHZvdXMgw6p0ZXMgYm91ZmbDqSBwYXIgdW4gZGlub3NhdXJlICEiKQogICAgcGVyZHUgPSBUcnVlCmVsaWYgY2hvaXggPT0gIi0yNTgwIjoKICAgIHByaW50KCJWb3VzIMOqdGVzIHbDqW7DqXLDqSBjb21tZSB1biBkaWV1IGVuIEVneXB0ZSBhbnRpcXVlLiIpCiAgICBwcmludCgiTGUgcGhyYXJhb24gS2jDqW9wcyB2b3VzIG9mZnJlIHNvbiBzY2VwdHJlIGVuIG9yLiIpCiAgICBpbnZlbnRhaXJlLmFwcGVuZCgiU2NlcHRyZSIpCmVsaWYgY2hvaXggPT0gIi01MCI6CiAgICBwcmludCgiVm91cyBmYWl0ZXMgbGEgcmVuY29udHJlIGRlIEp1bGVzIEPDqXNhci4iKQogICAgY2hvaXggPSBpbnB1dCgiVm91bGV6LXZvdXMgcmVqb2luZHJlIHNhIGdhcmRlIHBlcnNvbm5lbGxlID8gKG91aSwgbm9uKSAiKQogICAgaWYgY2hvaXggPT0gIm91aSI6CiAgICAgICAgcHJpbnQoIlZvdXMgcmVjZXZleiB1bmUgYXJtdXJlIGRlIHJvbWFpbi4iKQogICAgICAgIGludmVudGFpcmUuYXBwZW5kKCJBcm11cmUiKQogICAgZWxpZiBjaG9peCA9PSAibm9uIjoKICAgICAgICBwcmludCgiVm91cyByZWZ1c2V6IHBvbGltZW50LiIpCmVsaWYgY2hvaXggPT0gIjE3ODkiOgogICAgcHJpbnQoIlZvdXMgdm91cyBmYWl0ZXMgY291cGVyIGxhIHTDqnRlIGxvcnMgZGUgbGEgcsOpdm9sdXRpb24gZnJhbsOnYWlzZSAhIikKICAgIHBlcmR1ID0gVHJ1ZQplbGlmIGNob2l4ID09ICIyMTAwIjoKICAgIHByaW50KCJEYW5zIGxlIGZ1dHVyLCB1biBzw6lydW0gZCdpbW1vcnRhbGl0w6kgZXN0IHZlbmR1IGVuIHBoYXJtYWNpZS4gVm91cyBlbiBwaXF1ZXogdW4gcGV1LiIpCiAgICBpbnZlbnRhaXJlLmFwcGVuZCgiU8OpcnVtIikKCmlmIG5vdCBwZXJkdToKICAgIHByaW50KCJWb3VzIHJldmVuZXogZGFucyBsZSBwcsOpc2VudC4iKQogICAgaWYgIlNjZXB0cmUiIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdHJlIGF2ZW50dXJlIHZvdXMgYSByZW5kdSBzdXBlciByaWNoZSAhIikKICAgIGVsaWYgIkFybXVyZSIgaW4gaW52ZW50YWlyZToKICAgICAgICBwcmludCgiUGx1cyBwZXJzb25uZSBuZSB2b3VzIGNoZXJjaGVyYSBkJ2VubnVpcyBhdmVjIGwnYXJtdXJlIHF1ZSB2b3VzIGF2ZXogcmFtZW7DqWUgISIpCiAgICBlbGlmICJTw6lydW0iIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdXMgY29tbWVyY2lhbGlzZXogdm90cmUgc8OpcnVtIGV0IHJlbmRleiB0b3V0ZSBsJ2h1bWFuaXTDqSBpbW1vcnRlbGxlIChvdXBzKSAhIikKCnByaW50KCJGaW4gZGUgbCdhdmVudHVyZSIp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
 <section id="exemple-2">
-<h2>Exemple 2<a class="headerlink" href="#exemple-2" title="Lien permanent vers ce titre">¶</a></h2>
+<h3>Exemple 2<a class="headerlink" href="#exemple-2" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Voici le logigramme représentant une aventure plus complexe:</p>
 <a class="reference internal image-reference" href="../_images/aventure.png"><img alt="../_images/aventure.png" src="../_images/aventure.png" style="width: 800px;"/></a>
 <p>Et son code:</p>
-<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="IyBWb3VzIHBvdXZleiB1dGlsaXNlciBjZXR0ZSBmb25jdGlvbiBwb3VyIHBvc2VyIHVuZSBxdWVzdGlvbiBhdmVjIGRlcyBjaG9peCBwb3NzaWJsZXMgw6AgbCd1dGlsaXNhdGV1cgpkZWYgcG9zZXJfcXVlc3Rpb24ocXVlc3Rpb24sIGNob2l4X3Bvc3NpYmxlcyk6CiAgICByZXBvbnNlID0gaW5wdXQocXVlc3Rpb24gKyBzdHIoY2hvaXhfcG9zc2libGVzKSkKICAgIHdoaWxlIHJlcG9uc2Ugbm90IGluIGNob2l4X3Bvc3NpYmxlczoKICAgICAgICByZXBvbnNlID0gaW5wdXQocXVlc3Rpb24gKyBzdHIoY2hvaXhfcG9zc2libGVzKSkKICAgIHJldHVybiByZXBvbnNlCgpkZWYgZW50cmVyX2ZvcmV0KCk6CiAgICBwcmludCgiVm91cyBhcnJpdmV6IGRhbnMgdW5lIGdyYW5kZSBmb3LDqnQgbHVndWJyZS4iKQogICAgcHJpbnQoIkRldmFudCB2b3VzLCB2b3VzIHBvdXZleiB2b2lyIGRldXggY2hlbWlucy4gTGUgY2hlbWluIGRlIGdhdWNoZSBtw6huZSDDoCB1bmUgcml2acOocmUgZXQgbGUgY2hlbWluIGRlIGRyb2l0ZSBtw6huZSDDoCB1bmUgZ3JvdHRlIHNvbWJyZS4iKQogICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiU3VyIHF1ZWwgY2hlbWluIHZvdWxlei12b3VzIGFsbGVyID8iLCBbImdhdWNoZSIsICJkcm9pdGUiXSkKICAgIGlmIGNob2l4ID09ICJnYXVjaGUiOgogICAgICAgIGFycml2ZXJfcml2aWVyZSgpCiAgICBlbGlmIGNob2l4ID09ICJkcm9pdGUiOgogICAgICAgIGVudHJlcl9ncm90dGUoKQoKZGVmIGFycml2ZXJfcml2aWVyZSgpOgogICAgZ2xvYmFsIGFyZ2VudCAjIGNldHRlIGluc3RydWN0aW9uIGVzdCBuw6ljZXNzYWlyZSBwb3VyIHBvdXZvaXIgbW9kaWZpZXIgbGEgdmFyaWFibGUgYXJnZW50IGF1IHNlaW4gZGUgbGEgZm9uY3Rpb24KICAgIHByaW50KCJWb3VzIGFycml2ZXogw6AgbGEgcml2acOocmUuIikKICAgIHByaW50KCJWb3VzIHRyb3V2ZXogdW5lIHDDqXBpdGUgZCdvciAhIEFyZ2VudCArIDEwMCIpCiAgICBhcmdlbnQgPSBhcmdlbnQgKyAxMDAKICAgIHByaW50KCJWb3VzIHBvdXZleiB2b2lyIHVuZSBjYW5uZSDDoCBww6pjaGUgc3VyIGxhIGJlcmdlLiIpCiAgICBjaG9peCA9IHBvc2VyX3F1ZXN0aW9uKCJWb3VsZXotdm91cyByYW1hc3NlciBsYSBjYW5uZSDDoCBww6pjaGUgPyIsIFsib3VpIiwgIm5vbiJdKQogICAgaWYgY2hvaXggPT0gIm91aSI6CiAgICAgICAgaW52ZW50YWlyZS5hcHBlbmQoImNhbm5lIMOgIHDDqmNoZSIpCiAgICAgICAgcHJpbnQoIlZvdXMgYXZleiByYW1hc3PDqSBsYSBjYW5uZSDDoCBww6pjaGUuIikKICAgIGVsaWYgY2hvaXggPT0gIm5vbiI6CiAgICAgICAgcHJpbnQoIlZvdXMgYXZleiBkw6ljaWTDqSBkZSBuZSBwYXMgcHJlbmRyZSBsYSBjYW5uZSDDoCBww6pjaGUuIikKICAgIHByaW50KCJWb3VzIGTDqWNpZGV6IGRlIGxvbmdlciBsYSByaXZpw6hyZS4iKQogICAgcHJpbnQoIkFwcsOocyB1biBjZXJ0YWluIHRlbXBzLCB2b3VzIHRyb3V2ZXogdW4gcG9udCBlbiBib2lzIHF1aSB0cmF2ZXJzZSBsYSByaXZpw6hyZS4iKQogICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiVm91bGV6LXZvdXMgdHJhdmVyc2VyIGxlIHBvbnQgPyIsIFsib3VpIiwgIm5vbiJdKQogICAgaWYgY2hvaXggPT0gIm91aSI6CiAgICAgICAgcHJpbnQoIlZvdXMgdHJhdmVyc2V6IGxlIHBvbnQgZXQgdm91cyB2b3VzIHJldHJvdXZleiBzdXIgbCdhdXRyZSByaXZlIGRlIGxhIHJpdmnDqHJlLiIpCiAgICAgICAgcHJpbnQoIlZvdXMgdG9tYmV6IG5leiDDoCBuZXogYXZlYyB1biBob3JyaWJsZSBvZ3JlLiIpCiAgICAgICAgY2hvaXggPSBwb3Nlcl9xdWVzdGlvbigiVm91bGV6LXZvdXMgbCdhZmZyb250ZXIgPyIsIFsib3VpIiwgIm5vbiJdKQogICAgICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgICAgICBpZiAnw6lww6llJyBpbiBpbnZlbnRhaXJlOgogICAgICAgICAgICAgICAgcHJpbnQoIkdyw6JjZSDDoCB2b3RyZSDDqXDDqWUsIHZvdXMgdGVycmFzc2V6IGwnb2dyZSBlbiBsdWkgY291cGFudCBsYSB0w6p0ZS4iKQogICAgICAgICAgICAgICAgcHJpbnQoIlZvdXMgcmVwcmVuZXogbGEgcm91dGUgZXQgdHJvdXZleiBmaW5hbGVtZW50IHZvdHJlIG1haXNvbi4iKQogICAgICAgICAgICAgICAgcHJpbnQoIkbDqWxpY2l0YXRpb25zLCB2b3VzIGF2ZXogdGVybWluw6kgbCdhdmVudHVyZSEiKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcHJpbnQoIkNvbW1lIHZvdXMgbidhdmV6IHBhcyBkJ2FybWUsIGwnb2dyZSB2b3VzIMOpY3JhYm91aWxsZS4iKQogICAgICAgICAgICAgICAgcHJpbnQoIlZvdXMgw6p0ZXMgbW9ydC4iKQogICAgICAgIGVsaWYgY2hvaXggPT0gIm5vbiI6CiAgICAgICAgICAgIHByaW50KCJWb3VzIGTDqWNpZGV6IGRlIHJlYnJvdXNzZXIgY2hlbWluIGV0IHJldG91cm5leiBkYW5zIGxhIGZvcsOqdC4iKQogICAgICAgICAgICBlbnRyZXJfZm9yZXQoKQogICAgZWxpZiBjaG9peCA9PSAibm9uIjoKICAgICAgICBwcmludCgiVm91cyBkw6ljaWRleiBkZSBuZSBwYXMgdHJhdmVyc2VyIGxlIHBvbnQgZXQgcmV0b3VybmV6IGRhbnMgbGEgZm9yw6p0LiIpCiAgICAgICAgZW50cmVyX2ZvcmV0KCkKCmRlZiBlbnRyZXJfZ3JvdHRlKCk6CiAgICBwcmludCgiVm91cyBhcnJpdmV6IGRldmFudCB1bmUgZ3JvdHRlLiIpCiAgICBwcmludCgiVm91cyB2b3lleiB1bmUgdG9yY2hlIMOpdGVpbnRlIHByw6hzIGRlIGwnZW50csOpZSBkZSBsYSBncm90dGUuIikKICAgIGNob2l4ID0gcG9zZXJfcXVlc3Rpb24oIlZvdWxlei12b3VzIHByZW5kcmUgbGEgdG9yY2hlID8iLCBbIm91aSIsICJub24iXSkKICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgIGludmVudGFpcmUuYXBwZW5kKCJ0b3JjaGUiKQogICAgICAgIHByaW50KCJWb3VzIGF2ZXogcHJpcyBsYSB0b3JjaGUuIikKICAgIGVsaWYgY2hvaXggPT0gIm5vbiI6CiAgICAgICAgcHJpbnQoIlZvdXMgZMOpY2lkZXogZGUgbmUgcGFzIHByZW5kcmUgbGEgdG9yY2hlIGV0IHZvdXMgZW50cmV6IGRhbnMgbGEgZ3JvdHRlIHNhbnMgbHVtacOocmUuIikKICAgIHByaW50KCJWb3VzIGF2YW5jZXogZGFucyBsYSBncm90dGUgZXQgdm91cyByZW5jb250cmV6IHVuIGRyYWdvbiBxdWkgYmxvcXVlIHZvdHJlIGNoZW1pbi4iKQogICAgaWYgImNhbm5lIMOgIHDDqmNoZSIgaW4gaW52ZW50YWlyZSBvciAidG9yY2hlIiBpbiBpbnZlbnRhaXJlOgogICAgICAgIHByaW50KCJWb3VzIHV0aWxpc2V6IHZvdHJlIGFybWUgcG91ciBjb21iYXR0cmUgbGUgZHJhZ29uIGV0IHZvdXMgcsOpdXNzaXNzZXogw6AgbGUgdmFpbmNyZSAoaW5jcm95YWJsZSkuIikKICAgICAgICBlbnRyZXJfc2FsbGVfc2VjcmV0ZSgpCiAgICBlbHNlOgogICAgICAgIHByaW50KCJWb3VzIG4nYXZleiBwYXMgZCdhcm1lIHBvdXIgY29tYmF0dHJlIGxlIGRyYWdvbiBldCB2b3VzIMOqdGVzIGTDqXZvcsOpLiIpCiAgICAgICAgcHJpbnQoIlZvdXMgw6p0ZXMgbW9ydC4iKQoKZGVmIGVudHJlcl9zYWxsZV9zZWNyZXRlKCk6CiAgICBwcmludCgiVm91cyBjb250aW51ZXogdm90cmUgY2hlbWluIGp1c3F1J8OgIHRyb3V2ZXIgdW5lIHNhbGxlIHNlY3LDqHRlLiIpCiAgICBwcmludCgiVm91cyB0cm91dmV6IHVuZSBtYWduaWZpcXVlIMOpcMOpZSBzdXIgdW4gc29jbGUuIikKICAgIGNob2l4ID0gcG9zZXJfcXVlc3Rpb24oIlZvdWxlei12b3VzIHJhbWFzc2VyIGwnw6lww6llID8iLCBbIm91aSIsICJub24iXSkKICAgIGlmIGNob2l4ID09ICdvdWknOgogICAgICAgIHByaW50KCJWb3VzIHBhcnZlbmV6IMOgIGwnZXh0cmFpcmUgZHUgc29jbGUsIHZvdXMgw6p0cmUgcHJvYmFibGVtZW50IGwnw6lsdS4iKQogICAgICAgIGludmVudGFpcmUuYXBwZW5kKCLDqXDDqWUiKQogICAgZWxpZiBjaG9peCA9PSAnbm9uJzoKICAgICAgICBwcmludCgiVm91cyBkw6ljaWRleiBkJ2lnbm9yZXIgbCfDqXDDqWUgKG1haXMgcG91cnF1b2kgPz8/KS4iKQogICAgcHJpbnQoIkMnZXN0IHVuIGN1bCBkZSBzYWMsIHZvdXMgcmV0b3VybmV6IGRhbnMgbGEgZm9yw6p0LiIpCiAgICBlbnRyZXJfZm9yZXQoKQoKIyBEw6lidXQgZGUgbCdhdmVudHVyZQppbnZlbnRhaXJlID0gW10KYXJnZW50ID0gMAoKcHJpbnQoIkVuIHZvdXMgYmFsbGFkYW50IHVuIHBldSB0cm9wIGxvaW4gZGUgY2hleiB2b3VzLCB2b3VzIGF2ZXogZmluaSBwYXIgdm91cyBwZXJkcmUuIikKcHJpbnQoIlJldHJvdXZleiBsZSBjaGVtaW4gZGUgbGEgbWFpc29uLiIpCmVudHJlcl9mb3JldCgp" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div></section>
-<section id="ajouter-des-images-et-du-son">
-<h2>Ajouter des images et du son<a class="headerlink" href="#ajouter-des-images-et-du-son" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Le code suivant permet d’ouvrir une image affichant un game over tout en jouant un petit bruitage qui va bien avec.<br/>
-Notez qu’il faut importer 2 librairies <code class="docutils literal notranslate"><span class="pre">PIL</span></code> et <code class="docutils literal notranslate"><span class="pre">playsound</span></code> pour que cela fonctionne.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">from</span> <span class="nn">playsound</span> <span class="kn">import</span> <span class="n">playsound</span>
-
-<span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'game_over.jpg'</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># L'image game_over.jpg doit se trouver dans le même dossier que le code</span>
-<span class="n">playsound</span><span class="p">(</span><span class="s1">'game_over.wav'</span><span class="p">)</span> <span class="c1"># .wav et .mp3 devraient fonctionner</span>
+<div class="interactive_code"><iframe border="0" cellspacing="0" class="codeframe" data-code="ZGVmIGVudHJlcl9mb3JldCgpOgogICAgcHJpbnQoIlZvdXMgYXJyaXZleiBkYW5zIHVuZSBncmFuZGUgZm9yw6p0IGx1Z3VicmUuIikKICAgIHByaW50KCJEZXZhbnQgdm91cywgdm91cyBwb3V2ZXogdm9pciBkZXV4IGNoZW1pbnMuIExlIGNoZW1pbiBkZSBnYXVjaGUgbcOobmUgw6AgdW5lIHJpdmnDqHJlIGV0IGxlIGNoZW1pbiBkZSBkcm9pdGUgbcOobmUgw6AgdW5lIGdyb3R0ZSBzb21icmUuIikKICAgIGNob2l4ID0gaW5wdXQoIlN1ciBxdWVsIGNoZW1pbiB2b3VsZXotdm91cyBhbGxlciA/IChnYXVjaGUsIGRyb2l0ZSkgIikKICAgIGlmIGNob2l4ID09ICJnYXVjaGUiOgogICAgICAgIGFycml2ZXJfcml2aWVyZSgpCiAgICBlbGlmIGNob2l4ID09ICJkcm9pdGUiOgogICAgICAgIGVudHJlcl9ncm90dGUoKQoKZGVmIGFycml2ZXJfcml2aWVyZSgpOgogICAgZ2xvYmFsIGFyZ2VudCAjIGNldHRlIGluc3RydWN0aW9uIGVzdCBuw6ljZXNzYWlyZSBwb3VyIHBvdXZvaXIgbW9kaWZpZXIgbGEgdmFyaWFibGUgYXJnZW50IGF1IHNlaW4gZGUgbGEgZm9uY3Rpb24KICAgIHByaW50KCJWb3VzIGFycml2ZXogw6AgbGEgcml2acOocmUuIikKICAgIHByaW50KCJWb3VzIHRyb3V2ZXogdW5lIHDDqXBpdGUgZCdvciAhIEFyZ2VudCArIDEwMCIpCiAgICBhcmdlbnQgPSBhcmdlbnQgKyAxMDAKICAgIHByaW50KCJWb3VzIHBvdXZleiB2b2lyIHVuZSBjYW5uZSDDoCBww6pjaGUgc3VyIGxhIGJlcmdlLiIpCiAgICBjaG9peCA9IGlucHV0KCJWb3VsZXotdm91cyByYW1hc3NlciBsYSBjYW5uZSDDoCBww6pjaGUgPyAob3VpLCBub24pICIpCiAgICBpZiBjaG9peCA9PSAib3VpIjoKICAgICAgICBpbnZlbnRhaXJlLmFwcGVuZCgiY2FubmUgw6AgcMOqY2hlIikKICAgICAgICBwcmludCgiVm91cyBhdmV6IHJhbWFzc8OpIGxhIGNhbm5lIMOgIHDDqmNoZS4iKQogICAgZWxpZiBjaG9peCA9PSAibm9uIjoKICAgICAgICBwcmludCgiVm91cyBhdmV6IGTDqWNpZMOpIGRlIG5lIHBhcyBwcmVuZHJlIGxhIGNhbm5lIMOgIHDDqmNoZS4iKQogICAgcHJpbnQoIlZvdXMgZMOpY2lkZXogZGUgbG9uZ2VyIGxhIHJpdmnDqHJlLiIpCiAgICBwcmludCgiQXByw6hzIHVuIGNlcnRhaW4gdGVtcHMsIHZvdXMgdHJvdXZleiB1biBwb250IGVuIGJvaXMgcXVpIHRyYXZlcnNlIGxhIHJpdmnDqHJlLiIpCiAgICBjaG9peCA9IGlucHV0KCJWb3VsZXotdm91cyB0cmF2ZXJzZXIgbGUgcG9udCA/IChvdWksIG5vbikgIikKICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgIHByaW50KCJWb3VzIHRyYXZlcnNleiBsZSBwb250IGV0IHZvdXMgdm91cyByZXRyb3V2ZXogc3VyIGwnYXV0cmUgcml2ZSBkZSBsYSByaXZpw6hyZS4iKQogICAgICAgIHByaW50KCJWb3VzIHRvbWJleiBuZXogw6AgbmV6IGF2ZWMgdW4gaG9ycmlibGUgb2dyZS4iKQogICAgICAgIGNob2l4ID0gaW5wdXQoIlZvdWxlei12b3VzIGwnYWZmcm9udGVyID8gKG91aSwgbm9uKSAiKQogICAgICAgIGlmIGNob2l4ID09ICJvdWkiOgogICAgICAgICAgICBpZiAnw6lww6llJyBpbiBpbnZlbnRhaXJlOgogICAgICAgICAgICAgICAgcHJpbnQoIkdyw6JjZSDDoCB2b3RyZSDDqXDDqWUsIHZvdXMgdGVycmFzc2V6IGwnb2dyZSBlbiBsdWkgY291cGFudCBsYSB0w6p0ZS4iKQogICAgICAgICAgICAgICAgcHJpbnQoIlZvdXMgcmVwcmVuZXogbGEgcm91dGUgZXQgdHJvdXZleiBmaW5hbGVtZW50IHZvdHJlIG1haXNvbi4iKQogICAgICAgICAgICAgICAgcHJpbnQoIkbDqWxpY2l0YXRpb25zLCB2b3VzIGF2ZXogdGVybWluw6kgbCdhdmVudHVyZSEiKQogICAgICAgICAgICBlbHNlOgogICAgICAgICAgICAgICAgcHJpbnQoIkNvbW1lIHZvdXMgbidhdmV6IHBhcyBkJ2FybWUsIGwnb2dyZSB2b3VzIMOpY3JhYm91aWxsZS4iKQogICAgICAgICAgICAgICAgcHJpbnQoIlZvdXMgw6p0ZXMgbW9ydC4iKQogICAgICAgIGVsaWYgY2hvaXggPT0gIm5vbiI6CiAgICAgICAgICAgIHByaW50KCJWb3VzIGTDqWNpZGV6IGRlIHJlYnJvdXNzZXIgY2hlbWluIGV0IHJldG91cm5leiBkYW5zIGxhIGZvcsOqdC4iKQogICAgICAgICAgICBlbnRyZXJfZm9yZXQoKQogICAgZWxpZiBjaG9peCA9PSAibm9uIjoKICAgICAgICBwcmludCgiVm91cyBkw6ljaWRleiBkZSBuZSBwYXMgdHJhdmVyc2VyIGxlIHBvbnQgZXQgcmV0b3VybmV6IGRhbnMgbGEgZm9yw6p0LiIpCiAgICAgICAgZW50cmVyX2ZvcmV0KCkKCmRlZiBlbnRyZXJfZ3JvdHRlKCk6CiAgICBwcmludCgiVm91cyBhcnJpdmV6IGRldmFudCB1bmUgZ3JvdHRlLiIpCiAgICBwcmludCgiVm91cyB2b3lleiB1bmUgdG9yY2hlIMOpdGVpbnRlIHByw6hzIGRlIGwnZW50csOpZSBkZSBsYSBncm90dGUuIikKICAgIGNob2l4ID0gaW5wdXQoIlZvdWxlei12b3VzIHByZW5kcmUgbGEgdG9yY2hlID8gKG91aSwgbm9uKSAiKQogICAgaWYgY2hvaXggPT0gIm91aSI6CiAgICAgICAgaW52ZW50YWlyZS5hcHBlbmQoInRvcmNoZSIpCiAgICAgICAgcHJpbnQoIlZvdXMgYXZleiBwcmlzIGxhIHRvcmNoZS4iKQogICAgZWxpZiBjaG9peCA9PSAibm9uIjoKICAgICAgICBwcmludCgiVm91cyBkw6ljaWRleiBkZSBuZSBwYXMgcHJlbmRyZSBsYSB0b3JjaGUgZXQgdm91cyBlbnRyZXogZGFucyBsYSBncm90dGUgc2FucyBsdW1pw6hyZS4iKQogICAgcHJpbnQoIlZvdXMgYXZhbmNleiBkYW5zIGxhIGdyb3R0ZSBldCB2b3VzIHJlbmNvbnRyZXogdW4gZHJhZ29uIHF1aSBibG9xdWUgdm90cmUgY2hlbWluLiIpCiAgICBpZiAiY2FubmUgw6AgcMOqY2hlIiBpbiBpbnZlbnRhaXJlIG9yICJ0b3JjaGUiIGluIGludmVudGFpcmU6CiAgICAgICAgcHJpbnQoIlZvdXMgdXRpbGlzZXogdm90cmUgYXJtZSBwb3VyIGNvbWJhdHRyZSBsZSBkcmFnb24gZXQgdm91cyByw6l1c3Npc3NleiDDoCBsZSB2YWluY3JlIChpbmNyb3lhYmxlKS4iKQogICAgICAgIGVudHJlcl9zYWxsZV9zZWNyZXRlKCkKICAgIGVsc2U6CiAgICAgICAgcHJpbnQoIlZvdXMgbidhdmV6IHBhcyBkJ2FybWUgcG91ciBjb21iYXR0cmUgbGUgZHJhZ29uIGV0IHZvdXMgw6p0ZXMgZMOpdm9yw6kuIikKICAgICAgICBwcmludCgiVm91cyDDqnRlcyBtb3J0LiIpCgpkZWYgZW50cmVyX3NhbGxlX3NlY3JldGUoKToKICAgIHByaW50KCJWb3VzIGNvbnRpbnVleiB2b3RyZSBjaGVtaW4ganVzcXUnw6AgdHJvdXZlciB1bmUgc2FsbGUgc2VjcsOodGUuIikKICAgIHByaW50KCJWb3VzIHRyb3V2ZXogdW5lIG1hZ25pZmlxdWUgw6lww6llIHN1ciB1biBzb2NsZS4iKQogICAgY2hvaXggPSBpbnB1dCgiVm91bGV6LXZvdXMgcmFtYXNzZXIgbCfDqXDDqWUgPyAob3VpLCBub24pICIpCiAgICBpZiBjaG9peCA9PSAnb3VpJzoKICAgICAgICBwcmludCgiVm91cyBwYXJ2ZW5leiDDoCBsJ2V4dHJhaXJlIGR1IHNvY2xlLCB2b3VzIMOqdHJlIHByb2JhYmxlbWVudCBsJ8OpbHUuIikKICAgICAgICBpbnZlbnRhaXJlLmFwcGVuZCgiw6lww6llIikKICAgIGVsaWYgY2hvaXggPT0gJ25vbic6CiAgICAgICAgcHJpbnQoIlZvdXMgZMOpY2lkZXogZCdpZ25vcmVyIGwnw6lww6llIChtYWlzIHBvdXJxdW9pID8/PykuIikKICAgIHByaW50KCJDJ2VzdCB1biBjdWwgZGUgc2FjLCB2b3VzIHJldG91cm5leiBkYW5zIGxhIGZvcsOqdC4iKQogICAgZW50cmVyX2ZvcmV0KCkKCiMgRMOpYnV0IGRlIGwnYXZlbnR1cmUKaW52ZW50YWlyZSA9IFtdCmFyZ2VudCA9IDAKCnByaW50KCJFbiB2b3VzIGJhbGxhZGFudCB1biBwZXUgdHJvcCBsb2luIGRlIGNoZXogdm91cywgdm91cyBhdmV6IGZpbmkgcGFyIHZvdXMgcGVyZHJlLiIpCnByaW50KCJSZXRyb3V2ZXogbGUgY2hlbWluIGRlIGxhIG1haXNvbi4iKQplbnRyZXJfZm9yZXQoKQ==" data-file="Y29kZS5weQ==" frameborder="0" scrolling="no" src="../codeplay/frame.html"></iframe></div><p>Voyons maintenant des pistes pour rendre votre aventure plus immersive et plus agréable à jouer.</p>
+</section>
+</section>
+<section id="comment-faire-des-pauses-dans-le-texte">
+<h2>Comment faire des pauses dans le texte ?<a class="headerlink" href="#comment-faire-des-pauses-dans-le-texte" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">time.sleep()</span></code> pour faire des pauses dans le texte et ainsi créer du suspense. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous entrez dans la grotte et vous êtes attaqué par un monstre !"</span><span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># On fait une pause de 2 secondes pour créer du suspense</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Game over !"</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Malheureusement, <code class="docutils literal notranslate"><span class="pre">PIL</span></code> et <code class="docutils literal notranslate"><span class="pre">playsound</span></code> ne sont pas installés de base sur Thonny. Il faut aller dans <code class="docutils literal notranslate"><span class="pre">Outils</span></code> puis <code class="docutils literal notranslate"><span class="pre">Gérer</span> <span class="pre">les</span> <span class="pre">paquets</span></code> et rechercher et installer les paquets suivants: <code class="docutils literal notranslate"><span class="pre">pillow</span></code> et <code class="docutils literal notranslate"><span class="pre">playsound</span></code>.</p>
-<img alt="../_images/installation_paquets_thonny_1.png" src="../_images/installation_paquets_thonny_1.png"/>
-<img alt="../_images/installation_paquets_thonny_2.png" src="../_images/installation_paquets_thonny_2.png"/>
-<p>Dans le cas où vous avez une erreur avec <code class="docutils literal notranslate"><span class="pre">playsound</span></code>, tentez d’installer également le paquet <code class="docutils literal notranslate"><span class="pre">pyobjc</span></code>. Si rien ne fonctionne, appelez votre enseignant à la rescousse !</p>
+</section>
+<section id="comment-mesurer-le-temps-que-le-joueur-met-pour-faire-un-choix">
+<h2>Comment mesurer le temps que le joueur met pour faire un choix ?<a class="headerlink" href="#comment-mesurer-le-temps-que-le-joueur-met-pour-faire-un-choix" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">time.time()</span></code> pour mesurer le temps que le joueur met pour faire un choix. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous êtes dans une pièce avec deux portes. Vous devez choisir rapidement !"</span><span class="p">)</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="c1"># On enregistre le temps de départ</span>
+<span class="n">choix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Voulez-vous prendre la porte de gauche ou la porte de droite ? (gauche, droite) "</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="c1"># On enregistre le temps de fin</span>
+<span class="n">time_taken</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span> <span class="c1"># On calcule le temps que le joueur a mis pour faire son choix</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous avez mis"</span><span class="p">,</span> <span class="n">time_taken</span><span class="p">,</span> <span class="s2">"secondes pour faire votre choix."</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">time_taken</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous avez mis trop de temps pour faire votre choix et vous êtes attaqué par un monstre !"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Game over !"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous avez fait votre choix à temps et vous continuez votre aventure !"</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="comment-creer-des-evenements-aleatoires-dans-lhistoire">
+<h2>Comment créer des évènements aléatoires dans l’histoire ?<a class="headerlink" href="#comment-creer-des-evenements-aleatoires-dans-lhistoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">random.choice()</span></code> pour faire des choix aléatoires dans l’histoire. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous tombez dans un piège !"</span><span class="p">)</span>
+<span class="n">random_event</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s2">"monstre"</span><span class="p">,</span> <span class="s2">"piège à fléchettes"</span><span class="p">,</span> <span class="s2">"fossé"</span><span class="p">])</span>
+<span class="k">if</span> <span class="n">random_event</span> <span class="o">==</span> <span class="s2">"monstre"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Un monstre sort du mur et vous attaque !"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Game over !"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">random_event</span> <span class="o">==</span> <span class="s2">"piège à fléchettes"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Des fléchettes empoisonnées sortent du mur et vous empoisonnent !"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Game over !"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">random_event</span> <span class="o">==</span> <span class="s2">"fossé"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Le sol s'effondre sous vos pieds et vous tombez dans un fossé !"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Game over !"</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="comment-faire-repeter-une-question-jusqua-ce-que-le-joueur-fasse-un-choix-valide">
+<h2>Comment faire répéter une question jusqu’à ce que le joueur fasse un choix valide ?<a class="headerlink" href="#comment-faire-repeter-une-question-jusqua-ce-que-le-joueur-fasse-un-choix-valide" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Vous pouvez utiliser une boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> pour faire répéter une question jusqu’à ce que le joueur fasse un choix valide. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">choix</span> <span class="o">=</span> <span class="s2">""</span> <span class="c1"># Choix par défaut invalide pour démarrer la boucle</span>
+<span class="k">while</span> <span class="n">choix</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"gauche"</span><span class="p">,</span> <span class="s2">"droite"</span><span class="p">]:</span>
+    <span class="n">choix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Voulez-vous prendre la porte de gauche ou la porte de droite ? (gauche, droite) "</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"gauche"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous prenez la porte de gauche et vous trouvez un trésor !"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">choix</span> <span class="o">==</span> <span class="s2">"droite"</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous prenez la porte de droite et vous tombez dans un piège !"</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="comment-ajouter-du-son-et-des-images-a-votre-aventure">
+<h2>Comment ajouter du son et des images à votre aventure ?<a class="headerlink" href="#comment-ajouter-du-son-et-des-images-a-votre-aventure" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="warning admonition">
+<p class="admonition-title">Installation de packages supplémentaires</p>
+<p>Il sera nécessaire d’installer des librairies supplémentaires pour pouvoir ajouter du son et des images à votre aventure. Si vous utilisez Thonny, il est préférable de changer d’éditeur pour PyCharm. Appelez moi en cas de difficulté pour ouvrir cet éditeur.</p>
+<p>Avec PyCharm, vous pouvez installer les librairies nécessaires en suivant ces étapes:</p>
+<ol class="simple">
+<li><p>Ouvrez votre projet dans PyCharm.</p></li>
+<li><p>Allez dans “PyCharm” &gt; “Settings”.</p></li>
+<li><p>Dans le menu de gauche, sélectionnez “Project: [nom de votre projet]” &gt; “Python Interpreter”.</p></li>
+<li><p>Cliquez sur le bouton “+” pour ajouter une nouvelle librairie.</p></li>
+<li><p>Recherchez la librairie que vous souhaitez installer (par exemple, <code class="docutils literal notranslate"><span class="pre">playsound3</span></code>, <code class="docutils literal notranslate"><span class="pre">pillow</span></code> ou <code class="docutils literal notranslate"><span class="pre">ascii_magic</span></code>) et cliquez sur “Install Package”.</p></li>
+</ol>
+</div>
+<section id="ajouter-du-son">
+<h3>Ajouter du son<a class="headerlink" href="#ajouter-du-son" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour ajouter du son à votre aventure, vous pouvez utiliser la librairie <code class="docutils literal notranslate"><span class="pre">playsound3</span></code>. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">playsound3</span><span class="w"> </span><span class="kn">import</span> <span class="n">playsound</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous entrez dans la grotte et vous êtes attaqué par un monstre !"</span><span class="p">)</span>
+<span class="n">playsound</span><span class="p">(</span><span class="s1">'monstre.mp3'</span><span class="p">)</span> <span class="c1"># On joue le son du monstre</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Game over !"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Attention, il faut que le fichier <code class="docutils literal notranslate"><span class="pre">monstre.mp3</span></code> soit dans le même dossier que votre fichier Python pour que cela fonctionne.</p>
+</section>
+<section id="ajouter-des-images">
+<h3>Ajouter des images<a class="headerlink" href="#ajouter-des-images" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour ajouter des images à votre aventure, vous pouvez utiliser la librairie <code class="docutils literal notranslate"><span class="pre">PIL</span></code> (Pillow). Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous arrivez dans une grande forêt lugubre."</span><span class="p">)</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">'foret.jpg'</span><span class="p">)</span> <span class="c1"># On ouvre l'image de la forêt</span>
+<span class="n">image</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># On affiche l'image de la forêt</span>
+</pre></div>
+</div>
+<p>Attention, il faut que le fichier <code class="docutils literal notranslate"><span class="pre">foret.jpg</span></code> soit dans le même dossier que votre fichier Python pour que cela fonctionne.</p>
+<p>Si vous voulez afficher une image directement dans la console, vous pouvez utiliser la librairie <code class="docutils literal notranslate"><span class="pre">ascii_magic</span></code> pour convertir l’image en art ASCII. Par exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ascii_magic</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Vous arrivez dans une grande forêt lugubre."</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">ascii_magic</span><span class="o">.</span><span class="n">from_image_file</span><span class="p">(</span><span class="s1">'foret.jpg'</span><span class="p">)</span> <span class="c1"># On convertit l'image de la forêt en art ASCII</span>
+<span class="n">ascii_magic</span><span class="o">.</span><span class="n">to_terminal</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="c1"># On affiche l'art ASCII de la forêt dans la console</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="comment-ajouter-une-interface-graphique-a-votre-aventure">
+<h2>Comment ajouter une interface graphique à votre aventure ?<a class="headerlink" href="#comment-ajouter-une-interface-graphique-a-votre-aventure" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il existe plusieurs librairies pour créer des interfaces graphiques en Python, comme <code class="docutils literal notranslate"><span class="pre">tkinter</span></code> ou <code class="docutils literal notranslate"><span class="pre">pygame</span></code>. A vous de faire vos tests et chercher !</p>
 </section>
 </section>
 
@@ -393,9 +621,26 @@ Notez qu’il faut importer 2 librairies <code class="docutils literal notransla
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Histoire interactive</a><ul>
+<li><a class="reference internal" href="#comment-ecrire-du-texte">Comment écrire du texte ?</a></li>
+<li><a class="reference internal" href="#comment-poser-des-questions-au-joueur">Comment poser des questions au joueur ?</a></li>
+<li><a class="reference internal" href="#comment-faire-varier-une-variable-durant-lhistoire">Comment faire varier une variable durant l’histoire</a></li>
+<li><a class="reference internal" href="#comment-stocker-des-objets-dans-un-inventaire">Comment stocker des objets dans un inventaire ?</a></li>
+<li><a class="reference internal" href="#comment-faire-des-boucles-ou-creer-des-raccourcis-dans-lhistoire">Comment faire des boucles ou créer des raccourcis dans l’histoire ?</a></li>
+<li><a class="reference internal" href="#exemples-daventures">Exemples d’aventures</a><ul>
 <li><a class="reference internal" href="#exemple-1">Exemple 1</a></li>
 <li><a class="reference internal" href="#exemple-2">Exemple 2</a></li>
-<li><a class="reference internal" href="#ajouter-des-images-et-du-son">Ajouter des images et du son</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comment-faire-des-pauses-dans-le-texte">Comment faire des pauses dans le texte ?</a></li>
+<li><a class="reference internal" href="#comment-mesurer-le-temps-que-le-joueur-met-pour-faire-un-choix">Comment mesurer le temps que le joueur met pour faire un choix ?</a></li>
+<li><a class="reference internal" href="#comment-creer-des-evenements-aleatoires-dans-lhistoire">Comment créer des évènements aléatoires dans l’histoire ?</a></li>
+<li><a class="reference internal" href="#comment-faire-repeter-une-question-jusqua-ce-que-le-joueur-fasse-un-choix-valide">Comment faire répéter une question jusqu’à ce que le joueur fasse un choix valide ?</a></li>
+<li><a class="reference internal" href="#comment-ajouter-du-son-et-des-images-a-votre-aventure">Comment ajouter du son et des images à votre aventure ?</a><ul>
+<li><a class="reference internal" href="#ajouter-du-son">Ajouter du son</a></li>
+<li><a class="reference internal" href="#ajouter-des-images">Ajouter des images</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#comment-ajouter-une-interface-graphique-a-votre-aventure">Comment ajouter une interface graphique à votre aventure ?</a></li>
 </ul>
 </li>
 </ul>
