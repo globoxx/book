@@ -4,7 +4,7 @@
 
 Nous avons vu plusieurs tutoriels de jeux pygame, mais il y a tellement de possibilités que nous n'avons pas pu tout couvrir. Voici quelques pistes pour aller plus loin et faire des choses plus avancées dans vos jeux. Sachez néanmoins que le plus simple est souvent de parcourir la <a href="https://pygame-zero.readthedocs.io/en/stable/introduction.html" target="_blank">documentation officielle</a>.
 
-### Afficher du texte à l'écran ?
+## Afficher du texte à l'écran ?
 Il existe une fonction `screen.draw.text` qui permet d'afficher du texte à l'écran. Par exemple, `screen.draw.text('Score: 10', (10, 10), fontsize=30, color='white')` affichera le texte "Score: 10" en blanc avec une taille de police de 30 aux coordonnées (10, 10) de la fenêtre.
 
 Si vous voulez afficher une variable dans du texte, vous pouvez utiliser les f-strings de Python. Par exemple, si vous avez une variable `score`, vous pouvez l'afficher avec le texte en écrivant `screen.draw.text(f'Score: {score}', (10, 10), fontsize=30, color='white')`.
@@ -21,7 +21,7 @@ def draw():
     screen.draw.text(f'Score: {player.score}', (10, 10), fontsize=30, color='white')
 ```
 
-### Tirer un nom d'image aléatoire ?
+## Utiliser des images aléatoires ?
 Vous pouvez utiliser le module `random` de Python pour tirer un nom d'image aléatoire. Par exemple, si vous avez plusieurs images d'astéroïdes nommées `asteroid1.png`, `asteroid2.png`, etc., vous pouvez choisir une image aléatoire avec `random.choice(['asteroid1', 'asteroid2', 'asteroid3'])`.
 
 Exemple:
@@ -31,7 +31,20 @@ asteroid = Actor('asteroid1') # On crée un acteur avec une image par défaut
 asteroid.image = random.choice(['asteroid1', 'asteroid2', 'asteroid3'])
 ```
 
-### Détecter un clic de souris ?
+Pour rappel, il est possible de tirer des nombres aléatoires avec `random.randint(a, b)` qui retourne un entier aléatoire entre `a` et `b` inclus. Par exemple, `random.randint(1, 10)` retournera un nombre entier entre 1 et 10.
+
+Exemple:
+```python
+import random
+
+asteroid = Actor('asteroid1') # On crée un acteur avec une image par défaut
+asteroid.x = random.randint(0, WIDTH) # On attribue une position x aléatoire à l'astéroïde
+...
+asteroid.image = random.choice(['asteroid1', 'asteroid2', 'asteroid3'])
+asteroid.speed = random.randint(1, 10) # On attribue une vitesse aléatoire à l'astéroïde
+```
+
+## Détecter un clic de souris ?
 Pygame Zero offre une fonction spéciale `on_mouse_down(pos)` qui est appelée automatiquement à chaque fois que l'utilisateur clique avec la souris. La variable `pos` correspond aux coordonnées du clic de souris. Vous pouvez donc ajouter cette fonction à votre code et y mettre le code que vous voulez exécuter à chaque clic de souris.
 
 Exemple:
@@ -49,7 +62,7 @@ def on_mouse_move(pos):
     print(f'La souris est aux coordonnées {pos}')    
 ```
 
-### Ajouter un bouton ?
+## Ajouter un bouton ?
 Pgzhelper vous fournit une classe `Button` qui permet de créer facilement des boutons cliquables. Vous pouvez créer un bouton avec `button = Button('mon_texte', (x, y), (largeur, hauteur))` et ensuite vérifier s'il a été cliqué dans la fonction `on_mouse_down(pos)` avec `if button.collidepoint(pos):`. Important: n'oubliez pas d'appeler la méthode `button.draw()` dans la fonction `draw` pour que le bouton soit visible à l'écran.
 
 Exemple:
@@ -63,7 +76,7 @@ def draw():
     button.draw() # Affiche le bouton
 ```
 
-### Déplacer un acteur dans une direction donnée ?
+## Déplacer un acteur dans une direction donnée ?
 Si vous voulez déplacer un acteur dans une direction donnée, vous pouvez lui donner un attribut `direction` qui correspond à un angle en degrés (0 = vers la droite, 90 = vers le bas, 180 = vers la gauche, 270 = vers le haut). Ensuite, dans la fonction `update`, vous pouvez simplement appeler `acteur.move_in_direction(speed)` qui déplacera l'acteur à la vitesse `speed` dans la direction indiquée par son attribut `direction`. Cela remplace donc `acteur.x += ...` et `acteur.y += ...`.
 
 Exemple:
@@ -84,7 +97,7 @@ def update():
     player.move_in_direction(player.speed) # Le joueur se déplace à une vitesse de 5 pixels par tour de jeu
 ```
 
-### Calculer l'angle / la direction entre 2 acteurs ?
+## Calculer l'angle / la direction entre 2 acteurs ?
 Vous pouvez utiliser la fonction `angle_to` d'un acteur pour calculer l'angle entre lui et un autre acteur. Par exemple, `player.angle_to(ennemi)` vous donnera l'angle en degrés entre le joueur et un ennemi. Ces calculs peuvent être utiles pour faire un ennemi qui poursuit le joueur ou pour faire des tirs qui partent dans la direction d'un ennemi.
 
 Exemple:
@@ -109,7 +122,7 @@ def on_mouse_down(pos):
     player.move_in_direction(player.speed) # Le joueur se déplace à une vitesse de player.speed
 ```
 
-### Mesurer le temps écoulé depuis un évènement ?
+## Mesurer le temps écoulé depuis un évènement ?
 La fonction `update` de Pygame Zero reçoit un paramètre optionnel `dt` qui correspond au temps écoulé en secondes depuis le dernier tour de jeu. Cela peut être très utile pour faire des actions qui ne peuvent pas être faites à chaque tour de jeu, comme tirer un laser ou faire une animation. Par exemple, si vous voulez que le joueur puisse tirer un laser toutes les 0.5 secondes, vous pouvez créer une variable `timer` qui s'incrémente à chaque tour de jeu avec le temps écoulé `dt`, et vérifier si cette variable est supérieure ou égale à 0.5 avant de permettre un tir.
 
 Exemple:

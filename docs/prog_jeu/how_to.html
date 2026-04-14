@@ -325,13 +325,24 @@
 </pre></div>
 </div>
 </section>
-<section id="tirer-un-nom-dimage-aleatoire">
-<h2>Tirer un nom d’image aléatoire ?<a class="headerlink" href="#tirer-un-nom-dimage-aleatoire" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="utiliser-des-images-aleatoires">
+<h2>Utiliser des images aléatoires ?<a class="headerlink" href="#utiliser-des-images-aleatoires" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vous pouvez utiliser le module <code class="docutils literal notranslate"><span class="pre">random</span></code> de Python pour tirer un nom d’image aléatoire. Par exemple, si vous avez plusieurs images d’astéroïdes nommées <code class="docutils literal notranslate"><span class="pre">asteroid1.png</span></code>, <code class="docutils literal notranslate"><span class="pre">asteroid2.png</span></code>, etc., vous pouvez choisir une image aléatoire avec <code class="docutils literal notranslate"><span class="pre">random.choice(['asteroid1',</span> <span class="pre">'asteroid2',</span> <span class="pre">'asteroid3'])</span></code>.</p>
 <p>Exemple:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 <span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid1'</span><span class="p">)</span> <span class="c1"># On crée un acteur avec une image par défaut</span>
 <span class="n">asteroid</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'asteroid1'</span><span class="p">,</span> <span class="s1">'asteroid2'</span><span class="p">,</span> <span class="s1">'asteroid3'</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Pour rappel, il est possible de tirer des nombres aléatoires avec <code class="docutils literal notranslate"><span class="pre">random.randint(a,</span> <span class="pre">b)</span></code> qui retourne un entier aléatoire entre <code class="docutils literal notranslate"><span class="pre">a</span></code> et <code class="docutils literal notranslate"><span class="pre">b</span></code> inclus. Par exemple, <code class="docutils literal notranslate"><span class="pre">random.randint(1,</span> <span class="pre">10)</span></code> retournera un nombre entier entre 1 et 10.</p>
+<p>Exemple:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="n">asteroid</span> <span class="o">=</span> <span class="n">Actor</span><span class="p">(</span><span class="s1">'asteroid1'</span><span class="p">)</span> <span class="c1"># On crée un acteur avec une image par défaut</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">WIDTH</span><span class="p">)</span> <span class="c1"># On attribue une position x aléatoire à l'astéroïde</span>
+<span class="o">...</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'asteroid1'</span><span class="p">,</span> <span class="s1">'asteroid2'</span><span class="p">,</span> <span class="s1">'asteroid3'</span><span class="p">])</span>
+<span class="n">asteroid</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1"># On attribue une vitesse aléatoire à l'astéroïde</span>
 </pre></div>
 </div>
 </section>
@@ -352,8 +363,9 @@
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'La souris est aux coordonnées </span><span class="si">{</span><span class="n">pos</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>    
 </pre></div>
 </div>
+</section>
 <section id="ajouter-un-bouton">
-<h3>Ajouter un bouton ?<a class="headerlink" href="#ajouter-un-bouton" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Ajouter un bouton ?<a class="headerlink" href="#ajouter-un-bouton" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pgzhelper vous fournit une classe <code class="docutils literal notranslate"><span class="pre">Button</span></code> qui permet de créer facilement des boutons cliquables. Vous pouvez créer un bouton avec <code class="docutils literal notranslate"><span class="pre">button</span> <span class="pre">=</span> <span class="pre">Button('mon_texte',</span> <span class="pre">(x,</span> <span class="pre">y),</span> <span class="pre">(largeur,</span> <span class="pre">hauteur))</span></code> et ensuite vérifier s’il a été cliqué dans la fonction <code class="docutils literal notranslate"><span class="pre">on_mouse_down(pos)</span></code> avec <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">button.collidepoint(pos):</span></code>. Important: n’oubliez pas d’appeler la méthode <code class="docutils literal notranslate"><span class="pre">button.draw()</span></code> dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> pour que le bouton soit visible à l’écran.</p>
 <p>Exemple:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">button</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="s1">'Cliquez-moi'</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
@@ -367,7 +379,7 @@
 </div>
 </section>
 <section id="deplacer-un-acteur-dans-une-direction-donnee">
-<h3>Déplacer un acteur dans une direction donnée ?<a class="headerlink" href="#deplacer-un-acteur-dans-une-direction-donnee" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Déplacer un acteur dans une direction donnée ?<a class="headerlink" href="#deplacer-un-acteur-dans-une-direction-donnee" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Si vous voulez déplacer un acteur dans une direction donnée, vous pouvez lui donner un attribut <code class="docutils literal notranslate"><span class="pre">direction</span></code> qui correspond à un angle en degrés (0 = vers la droite, 90 = vers le bas, 180 = vers la gauche, 270 = vers le haut). Ensuite, dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>, vous pouvez simplement appeler <code class="docutils literal notranslate"><span class="pre">acteur.move_in_direction(speed)</span></code> qui déplacera l’acteur à la vitesse <code class="docutils literal notranslate"><span class="pre">speed</span></code> dans la direction indiquée par son attribut <code class="docutils literal notranslate"><span class="pre">direction</span></code>. Cela remplace donc <code class="docutils literal notranslate"><span class="pre">acteur.x</span> <span class="pre">+=</span> <span class="pre">...</span></code> et <code class="docutils literal notranslate"><span class="pre">acteur.y</span> <span class="pre">+=</span> <span class="pre">...</span></code>.</p>
 <p>Exemple:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="mi">90</span> <span class="c1"># Le joueur va vers le bas</span>
@@ -388,7 +400,7 @@
 </div>
 </section>
 <section id="calculer-langle-la-direction-entre-2-acteurs">
-<h3>Calculer l’angle / la direction entre 2 acteurs ?<a class="headerlink" href="#calculer-langle-la-direction-entre-2-acteurs" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Calculer l’angle / la direction entre 2 acteurs ?<a class="headerlink" href="#calculer-langle-la-direction-entre-2-acteurs" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vous pouvez utiliser la fonction <code class="docutils literal notranslate"><span class="pre">angle_to</span></code> d’un acteur pour calculer l’angle entre lui et un autre acteur. Par exemple, <code class="docutils literal notranslate"><span class="pre">player.angle_to(ennemi)</span></code> vous donnera l’angle en degrés entre le joueur et un ennemi. Ces calculs peuvent être utiles pour faire un ennemi qui poursuit le joueur ou pour faire des tirs qui partent dans la direction d’un ennemi.</p>
 <p>Exemple:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
@@ -399,7 +411,6 @@
     <span class="n">player</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span> <span class="c1"># Le joueur se déplace à une vitesse de</span>
 </pre></div>
 </div>
-</section>
 </section>
 <section id="deplacer-un-acteur-avec-la-souris">
 <h2>Déplacer un acteur avec la souris ?<a class="headerlink" href="#deplacer-un-acteur-avec-la-souris" title="Lien permanent vers ce titre">¶</a></h2>
@@ -412,8 +423,9 @@
     <span class="n">player</span><span class="o">.</span><span class="n">move_in_direction</span><span class="p">(</span><span class="n">player</span><span class="o">.</span><span class="n">speed</span><span class="p">)</span> <span class="c1"># Le joueur se déplace à une vitesse de player.speed</span>
 </pre></div>
 </div>
+</section>
 <section id="mesurer-le-temps-ecoule-depuis-un-evenement">
-<h3>Mesurer le temps écoulé depuis un évènement ?<a class="headerlink" href="#mesurer-le-temps-ecoule-depuis-un-evenement" title="Lien permanent vers ce titre">¶</a></h3>
+<h2>Mesurer le temps écoulé depuis un évènement ?<a class="headerlink" href="#mesurer-le-temps-ecoule-depuis-un-evenement" title="Lien permanent vers ce titre">¶</a></h2>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> de Pygame Zero reçoit un paramètre optionnel <code class="docutils literal notranslate"><span class="pre">dt</span></code> qui correspond au temps écoulé en secondes depuis le dernier tour de jeu. Cela peut être très utile pour faire des actions qui ne peuvent pas être faites à chaque tour de jeu, comme tirer un laser ou faire une animation. Par exemple, si vous voulez que le joueur puisse tirer un laser toutes les 0.5 secondes, vous pouvez créer une variable <code class="docutils literal notranslate"><span class="pre">timer</span></code> qui s’incrémente à chaque tour de jeu avec le temps écoulé <code class="docutils literal notranslate"><span class="pre">dt</span></code>, et vérifier si cette variable est supérieure ou égale à 0.5 avant de permettre un tir.</p>
 <p>Exemple:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">player</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Initialisation du timer à 0</span>
@@ -426,7 +438,6 @@
     <span class="n">player</span><span class="o">.</span><span class="n">timer</span> <span class="o">+=</span> <span class="n">dt</span> <span class="c1"># on incrémente le timer avec le temps écoulé depuis le dernier tour de jeu</span>
 </pre></div>
 </div>
-</section>
 </section>
 </section>
 
@@ -480,18 +491,14 @@
             <ul>
 <li><a class="reference internal" href="#">6. Comment faire pour …?</a><ul>
 <li><a class="reference internal" href="#afficher-du-texte-a-lecran">Afficher du texte à l’écran ?</a></li>
-<li><a class="reference internal" href="#tirer-un-nom-dimage-aleatoire">Tirer un nom d’image aléatoire ?</a></li>
+<li><a class="reference internal" href="#utiliser-des-images-aleatoires">Utiliser des images aléatoires ?</a></li>
 <li><a class="reference internal" href="#detecter-un-clic-de-souris">Détecter un clic de souris ?</a></li>
-<li><a class="reference internal" href="#detecter-un-deplacement-de-souris">Détecter un déplacement de souris ?</a><ul>
+<li><a class="reference internal" href="#detecter-un-deplacement-de-souris">Détecter un déplacement de souris ?</a></li>
 <li><a class="reference internal" href="#ajouter-un-bouton">Ajouter un bouton ?</a></li>
 <li><a class="reference internal" href="#deplacer-un-acteur-dans-une-direction-donnee">Déplacer un acteur dans une direction donnée ?</a></li>
 <li><a class="reference internal" href="#calculer-langle-la-direction-entre-2-acteurs">Calculer l’angle / la direction entre 2 acteurs ?</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#deplacer-un-acteur-avec-la-souris">Déplacer un acteur avec la souris ?</a><ul>
+<li><a class="reference internal" href="#deplacer-un-acteur-avec-la-souris">Déplacer un acteur avec la souris ?</a></li>
 <li><a class="reference internal" href="#mesurer-le-temps-ecoule-depuis-un-evenement">Mesurer le temps écoulé depuis un évènement ?</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
