@@ -48,6 +48,6 @@ Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le 
 
 Téléchargez ici la structure de base pour démarrer votre projet.
 
-{download}`Téléchargement des ressources du jeu<../data/prog_2d/project.zip>`.
+{download}`Téléchargement des ressources du projet<../data/prog_2d/projet.zip>`.
 
 Les dossiers `images`, `sounds` et `music` contiennent déjà toutes les ressources utilisées lors des tutoriels (et un peu plus).
