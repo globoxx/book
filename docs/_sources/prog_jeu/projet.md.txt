@@ -43,3 +43,11 @@ L'utilisation d'IA génératives telles que ChatGPT est autorisée à des fins d
 
 Enfin, **chaque ligne de code doit pouvoir être expliquée et défendue par le groupe**. Une présentation orale de votre travail aura lieu pour évaluer cette compréhension.
 ```
+
+## Ressources de base
+
+Téléchargez ici la structure de base pour démarrer votre projet.
+
+{download}`Téléchargement des ressources du jeu<../data/prog_2d/project.zip>`.
+
+Les dossiers `images`, `sounds` et `music` contiennent déjà toutes les ressources utilisées lors des tutoriels (et un peu plus).
