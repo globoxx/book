@@ -260,7 +260,7 @@ On a donc maintenant besoin d'un `décodeur`: en utilisant les 2 bits d'entrées
   ]
 }
 ```
-La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer toutes les portes **ET** par des portes **OU** et inversement. Le même circuit peut donc être réalisé avec des portes **OU**.
+La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer les portes **ET** par des portes **OU** et inversement. Le même circuit pourrait donc être réalisé avec des portes **OU** à l'aide de l'égalité: `A ET B = NON(NON A OU NON B)`.
 ````
 `````
 
@@ -270,7 +270,7 @@ Dans cette partie, vous allez concevoir des circuits traduisant des nombres déc
 
 ### Exercice 2.1 - Décodeur de clavier
 
-Complétez le circuit pour un décodeur de touches de clavier qui a le comportement suivant :
+Complétez le circuit pour faire un encodeur de touches de clavier qui a le comportement suivant :
 
 * Touche 1 appuyée produit la sortie binaire 01
 * Touche 2 appuyée produit la sortie binaire 10
@@ -325,7 +325,7 @@ Ajouter les touches 4 à 9 suit la même logique mais devient vite fastidieux (m
 :width: 300px
 ```
 
-Un dé de jeu peut afficher les nombres 1 à 6 à l'aide de 7 petits points que l'on peut représenter par 7 lampes.  
+Un dé de jeu peut afficher les nombres 1 à 6 à l'aide de 7 petits points que l'on peut représenter par 7 lampes (a, b, c, d, e, f, g).  
 Plusieurs lampes s'allument par paire. Voici la table de vérité.
 
 | b2 | b1 | b0 |valeur| a,g | b,f | c,e | d |
@@ -397,7 +397,6 @@ Pour résoudre l'exercice, il est nécessaire de trouver la fonction logique ass
 }
 ```
 Pour résoudre l'exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie 'a,g' vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte **OU** pour cette sortie. On procède ensuite de la même manière pour les autres sorties.
-````
 ````
 `````
 
@@ -532,4 +531,163 @@ Ce circuit représente un additionneur 3 bits (full adder). Il permet d'addition
 ````
 `````
 
-Si vous avez tout terminé, vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp2.html#addition-binaire" target="_blank">cette page modulo</a> qui contient des exercices plus avancés sur les additionneurs (à partir de l'exercice 10.6).
+## 5. Addition binaire
+
+Nous avons maintenant tous les éléments pour construire un additionneur binaire. Rappelons-nous que l'addition binaire est très simple.
+
+| A | B | A+B | C | S |
+|---|---|:---:|---|---|
+| 0 | 0 |  0  | 0 | 0 |
+| 0 | 1 |  1  | 0 | 1 |
+| 1 | 0 |  1  | 0 | 1 |
+| 1 | 1 |  2  | 1 | 0 |
+
+Le résultat `A+B` peut être 0, 1 ou 2.  Nous avons besoin de deux bits pour représenter le résultat :
+
+- le bit de somme `S`
+- le bit de retenue `C` (*carry* en anglais)
+
+En regardant la table de vérité, on constate que :
+
+- la somme `S` est exprimée par la fonction OU-X
+- la retenue `C` est exprimée par la fonction ET
+
+Vous trouvez le circuit ci-dessous à droite. Vérifiez sa fonction en cliquant sur ses entrées.
+
+Ajoutez encore 3 demi-additionneurs et montrez la table de vérité pour les 4 conditions d'entrée : 00, 01, 10, 11.
+
+```{logic}
+:ref: add
+:height: 450
+:showonly: in out and xor halfadder
+{
+  "v": 4,
+  "in": [
+    {"pos": [370, 270], "id": 0, "name": "A", "val": 0},
+    {"pos": [370, 320], "id": 1, "name": "B", "val": 0},
+    {"pos": [50, 60], "id": 18, "name": "A", "val": 0},
+    {"pos": [50, 100], "id": 19, "name": "B", "val": 0}
+  ],
+  "out": [
+    {"pos": [550, 280], "id": 8, "name": "S"},
+    {"pos": [550, 340], "ref": "c", "id": 9, "name": "C"},
+    {"pos": [190, 60], "id": 20, "name": "S (somme)"},
+    {"pos": [190, 100], "id": 21, "name": "C (retenue)"}
+  ],
+  "gates": [
+    {"type": "XOR", "pos": [480, 280], "in": [2, 3], "out": 4},
+    {"type": "AND", "pos": [480, 340], "in": [5, 6], "out": 7}
+  ],
+  "components": [
+    {"type": "halfadder", "pos": [120, 80], "in": [10, 11], "out": [12, 13]}
+  ],
+  "labels": [
+    {"pos": [100, 20], "text": "table de vérité"}
+  ],
+  "wires": [[0, 2], [0, 5], [1, 3], [1, 6], [4, 8], [7, 9], [18, 10], [19, 11], [12, 20], [13, 21]]
+}
+```
+
+### 5.1 Additionneur complet
+
+Dans le cas général de l'addition, nous n'additionnons pas deux bits, mais deux nombres à plusieurs bits. Voici l'addition en colonne de deux nombres 4 bits (3+11=14).
+
+```text
+ 0011
++1011
+-----
+ 1110
+ ```
+
+ Pour être explicite, nous introduisons une ligne supplémentaire qui représente la retenue (C = carry).
+
+```text
+ 0110 (retenue)
+ 0011
++1011
+-----
+ 1110
+ ```
+
+L'additionneur de 2 bits de la section précédente n'est plus suffisant. Pour le cas général, nous avons besoin d'un additionneur qui additionne 3 bits. Il faut tenir compte de la retenue (`Cin`), qu'il faut inclure dans l'addition. Voici donc la table de vérité pour un additionneur complet.
+
+| Cin | A | B |Cin+A+B| Cout | S |
+|:---:|:-:|:-:|:-----:|:----:|:-:|
+| 0   | 0 | 0 | 0     |   0  | 0 |
+| 0   | 0 | 1 | 1     |   0  | 1 |
+| 0   | 1 | 0 | 1     |   0  | 1 |
+| 0   | 1 | 1 | 2     |   1  | 0 |
+| 1   | 0 | 0 | 1     |   0  | 1 |
+| 1   | 0 | 1 | 2     |   1  | 0 |
+| 1   | 1 | 0 | 2     |   1  | 0 |
+| 1   | 1 | 1 | 3     |   1  | 1 |
+
+Regardez les colonnes et essayez de comprendre avec quelles portes on pourrait le construire.
+Vous constatez que la colonne `S` représente la parité. On pourra donc la construire avec des portes OU-X.
+
+- Ajoutez les deux fils qui manquent à l'entrée de la porte ET pour que le circuit produise le signal `Cout` et se comporte comme un additionneur complet.
+- Ajoutez des entrées et sorties au bloc de l'additionneur complet et vérifiez son fonctionnement.
+
+```{logic}
+:ref: adder
+:height: 450
+:showonly: in out and or adder
+{
+  "v": 4,
+  "in": [
+    {"pos": [70, 40], "id": 0, "name": "A", "val": 0},
+    {"pos": [70, 90], "id": 1, "name": "B", "val": 0},
+    {"pos": [70, 140], "id": 2, "name": "Cin", "val": 0}
+  ],
+  "out": [
+    {"pos": [420, 60], "id": 7, "name": "S"},
+    {"pos": [420, 130], "id": 26, "name": "Cout"}
+  ],
+  "gates": [
+    {"type": "AND", "pos": [270, 120], "in": [8, 9], "out": 10},
+    {"type": "AND", "pos": [220, 170], "in": [14, 15], "out": 16},
+    {"type": "XOR", "pos": [170, 50], "in": [17, 18], "out": 19},
+    {"type": "XOR", "pos": [290, 60], "in": [20, 21], "out": 22},
+    {"type": "OR", "pos": [350, 130], "in": [23, 24], "out": 25}
+  ],
+  "components": [
+    {"type": "adder", "pos": [140, 310], "orient": "n", "in": [27, 28, 29], "out": [30, 31]}
+  ],
+  "wires": [[0, 17], [1, 18], [19, 20], [2, 21], [22, 7], [19, 8], [10, 23], [16, 24], [25, 26], [2, 9]]
+}
+```
+
+### 5.2 Additionneur 4 bits
+
+Pour additionner deux nombres 4-bits (quartets) nous avons besoin de 4 additionneurs complets.
+Chaque sortie `Cout` est liée à la l'entrée `Cin` de l'additionneur suivant.
+
+Pour additionner **a** et **b** vous devez additionner les bits correspondants: a0+b0, a1+b1, etc.
+
+- Ajoutez les circuits manquants pour additionner deux nombres 4-bits.
+- Montrez l'addition de 7+5 dont le résultat devrait être 12.
+
+```{logic}
+:ref: add2
+:height: 500
+:showonly: adder
+{
+  "v": 4,
+  "in": [
+    {"type": "nibble", "pos": [50, 160], "id": [37, 38, 39, 40], "val": [1, 0, 1, 0], "name": "b"},
+    {"type": "nibble", "pos": [50, 290], "id": [74, 75, 76, 77], "val": [0, 1, 1, 0], "name": "a"}
+  ],
+  "out": [
+    {"type": "nibble-display", "pos": [430, 180], "id": [41, 42, 43, 44], "name": "s"},
+    {"type": "nibble-display", "pos": [170, 160], "id": [53, 54, 55, 56]},
+    {"type": "nibble-display", "pos": [170, 290], "id": [78, 79, 80, 81]}
+  ],
+  "components": [
+    {"type": "adder", "pos": [320, 170], "orient": "n", "in": [25, 26, 27], "out": [28, 29]},
+    {"type": "adder", "pos": [320, 70], "orient": "n", "in": [30, 31, 32], "out": [33, 34]}
+  ],
+  "wires": [[34, 27], [37, 31], [38, 26], [33, 41], [28, 42], [37, 53], [38, 54], [39, 55], [40, 56], [74, 78], [75, 79], [76, 80], [77, 81], [74, 30], [75, 25]]
+}
+```
+
+Vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp/alu.html" target="_blank">cette page modulo</a> qui permet d'aller plus loin que la matière du cours.
