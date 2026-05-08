@@ -687,20 +687,21 @@ Pour additionner **a** et **b** vous devez additionner les bits correspondants: 
 :mode: tryout
 
 {
-  v: 6,
+  v: 8,
+  opts: {origin: [-15, 2]},
   components: {
-    in0: {type: 'in', pos: [100, 115], id: 14, name: 'A'},
-    in1: {type: 'in', pos: [100, 175], id: 15, name: 'B'},
-    in2: {type: 'in', pos: [100, 235], id: 16, name: 'C'},
-    out0: {type: 'out', pos: [660, 150], id: 22, name: 'S1'},
-    out1: {type: 'out', pos: [660, 195], id: 23, name: 'S2'},
-    and0: {type: 'and', pos: [370, 50], in: [0, 1], out: 2},
-    and1: {type: 'and', pos: [370, 110], in: [3, 4], out: 5},
-    and2: {type: 'and', pos: [370, 170], in: [6, 7], out: 8},
-    or0: {type: 'or', pos: [540, 110], in: [12, 13, 17], out: 18, bits: 3},
-    xor0: {type: 'xor', pos: [385, 280], in: '24-26', out: 27, bits: 3},
+    in0: {type: 'in', pos: [50, 160], id: '37-40', name: 'b', bits: 4, val: '0101'},
+    in1: {type: 'in', pos: [50, 290], id: '74-77', name: 'a', bits: 4, val: '0110'},
+    disp0: {type: 'display', pos: [430, 180], id: '41-44', name: 's'},
+    disp1: {type: 'display', pos: [170, 160], id: '53-56'},
+    disp2: {type: 'display', pos: [170, 290], id: '78-81'},
+    adder0: {type: 'adder', pos: [320, 170], in: [26, 25, 27], out: [28, 29]},
+    adder1: {type: 'adder', pos: [320, 70], in: [31, 30, 32], out: [33, 34]},
+    adder2: {type: 'adder', pos: [320, 285], in: '0-2', out: [3, 4]},
+    out0: {type: 'out', pos: [405, 445], id: 6, name: 'retenue finale (overflow)'},
+    adder3: {type: 'adder', pos: [320, 395], in: '7-9', out: [10, 11]},
   },
-  wires: [[14, 0], [15, 1], [14, 3], [16, 4], [15, 6], [16, 7], [2, 12], [5, 13], [8, 17], [14, 24], [15, 25], [16, 26], [27, 23], [18, 22]]
+  wires: [[34, 27], [37, 31], [38, 26], [33, 41], [28, 42], [37, 53], [38, 54], [39, 55], [40, 56], [74, 78], [75, 79], [76, 80], [77, 81], [74, 30], [75, 25], [29, 2], [3, 43], [4, 9], [10, 44], [11, 6], [39, 0], [76, 1], [40, 7], [77, 8]]
 }
 ```
 ````
