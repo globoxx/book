@@ -683,7 +683,7 @@ Pour additionner **a** et **b** vous devez additionner les bits correspondants: 
 :animate: fade-in-slide-down
 
 ```{logic}
-:height: 390
+:height: 500
 :mode: tryout
 
 {
