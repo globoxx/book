@@ -572,14 +572,14 @@
     [1, 20, {"via": [[200, 220]]}]
   ]
 }
-</script></logic-editor></div><p class="card-text">La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer les portes <strong>ET</strong> par des portes <strong>OU</strong> et inversement. Le même circuit pourrait donc être réalisé avec des portes <strong>OU</strong> à l’aide de l’égalité: <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">ET</span> <span class="pre">B</span> <span class="pre">=</span> <span class="pre">NON(NON</span> <span class="pre">A</span> <span class="pre">OU</span> <span class="pre">NON</span> <span class="pre">B)</span></code>.</p>
+</script></logic-editor></div><p class="card-text">Vous aurez remarqué que cette solution ne comportent que des portes <strong>ET</strong> et <strong>NON</strong>. En effet, la <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer les portes <strong>ET</strong> par des portes <strong>OU</strong> et inversement. Le même circuit pourrait donc être réalisé uniquement avec des portes <strong>OU</strong> et <strong>NON</strong> à l’aide de l’égalité: <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">ET</span> <span class="pre">B</span> <span class="pre">=</span> <span class="pre">NON(NON</span> <span class="pre">A</span> <span class="pre">OU</span> <span class="pre">NON</span> <span class="pre">B)</span></code>.</p>
 </div>
 </details></div>
 </section>
 </section>
 <section id="binaire-et-decimal">
 <h2>2. Binaire et décimal<a class="headerlink" href="#binaire-et-decimal" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Dans cette partie, vous allez concevoir des circuits traduisant des nombres décimaux en nombres binaires.</p>
+<p>Dans cette partie, vous allez concevoir des circuits traduisant des nombres décimaux en nombres binaires ou en nombres représentés à l’aide d’un dé à 6 faces.</p>
 <section id="exercice-2-1-decodeur-de-clavier">
 <h3>Exercice 2.1 - Décodeur de clavier<a class="headerlink" href="#exercice-2-1-decodeur-de-clavier" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Complétez le circuit pour faire un encodeur de touches de clavier qui a le comportement suivant :</p>
@@ -775,6 +775,7 @@ Pour résoudre l’exercice, il est nécessaire de trouver la fonction logique a
   wires: [[8, 9], [26, 10], [8, 12], [26, 13], [11, 0], [11, 6], [14, 1], [14, 4], [26, 3], [26, 5], [7, 2]]
 }
 </script></logic-editor></div><p class="card-text">Pour résoudre l’exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie ‘a,g’ vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte <strong>OU</strong> pour cette sortie. On procède ensuite de la même manière pour les autres sorties.</p>
+<p class="card-text">C’est également de cette manière que les calculatrices font pour afficher les chiffres sur les écrans à 7 segments (qui sont très similaires aux dés à 6 faces).</p>
 </div>
 </details></div>
 </section>
@@ -841,8 +842,8 @@ Dans quel cas la valeur de sortie sera 1 ?</p>
 </div>
 </div>
 </form></div></section>
-<section id="table-mystere-challenge">
-<h2>4. Table mystère (Challenge)<a class="headerlink" href="#table-mystere-challenge" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="table-mystere">
+<h2>4. Table mystère<a class="headerlink" href="#table-mystere" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Créez le circuit logique correspondant à la table de vérité suivante:</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
@@ -1191,9 +1192,10 @@ Chaque sortie <code class="docutils literal notranslate"><span class="pre">Cout<
   },
   wires: [[34, 27], [37, 31], [38, 26], [33, 41], [28, 42], [37, 53], [38, 54], [39, 55], [40, 56], [74, 78], [75, 79], [76, 80], [77, 81], [74, 30], [75, 25], [29, 2], [3, 43], [4, 9], [10, 44], [11, 6], [39, 0], [76, 1], [40, 7], [77, 8]]
 }
-</script></logic-editor></div></div>
+</script></logic-editor></div><p class="card-text">La retenue finale est à 1 quand le résultat de l’addition dépasse 15 (1111 en binaire, plus grand nombre représentable avec 4 bits).</p>
+</div>
 </details></div>
-<p>Vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp/alu.html" target="_blank">cette page modulo</a> qui permet d’aller plus loin que la matière du cours.</p>
+<p>Vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp/alu.html" target="_blank">cette page modulo</a> qui permet d’aller plus loin.</p>
 </section>
 </section>
 </section>
@@ -1259,7 +1261,7 @@ Chaque sortie <code class="docutils literal notranslate"><span class="pre">Cout<
 </ul>
 </li>
 <li><a class="reference internal" href="#commutateurs">3. Commutateurs</a></li>
-<li><a class="reference internal" href="#table-mystere-challenge">4. Table mystère (Challenge)</a></li>
+<li><a class="reference internal" href="#table-mystere">4. Table mystère</a></li>
 <li><a class="reference internal" href="#addition-binaire">5. Addition binaire</a><ul>
 <li><a class="reference internal" href="#additionneur-complet">5.1 Additionneur complet</a></li>
 <li><a class="reference internal" href="#additionneur-4-bits">5.2 Additionneur 4 bits</a></li>

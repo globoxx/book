@@ -260,13 +260,13 @@ On a donc maintenant besoin d'un `décodeur`: en utilisant les 2 bits d'entrées
   ]
 }
 ```
-La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer les portes **ET** par des portes **OU** et inversement. Le même circuit pourrait donc être réalisé avec des portes **OU** à l'aide de l'égalité: `A ET B = NON(NON A OU NON B)`.
+Vous aurez remarqué que cette solution ne comportent que des portes **ET** et **NON**. En effet, la <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer les portes **ET** par des portes **OU** et inversement. Le même circuit pourrait donc être réalisé uniquement avec des portes **OU** et **NON** à l'aide de l'égalité: `A ET B = NON(NON A OU NON B)`.
 ````
 `````
 
 ## 2. Binaire et décimal
 
-Dans cette partie, vous allez concevoir des circuits traduisant des nombres décimaux en nombres binaires.
+Dans cette partie, vous allez concevoir des circuits traduisant des nombres décimaux en nombres binaires ou en nombres représentés à l'aide d'un dé à 6 faces.
 
 ### Exercice 2.1 - Décodeur de clavier
 
@@ -397,6 +397,8 @@ Pour résoudre l'exercice, il est nécessaire de trouver la fonction logique ass
 }
 ```
 Pour résoudre l'exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie 'a,g' vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte **OU** pour cette sortie. On procède ensuite de la même manière pour les autres sorties.
+
+C'est également de cette manière que les calculatrices font pour afficher les chiffres sur les écrans à 7 segments (qui sont très similaires aux dés à 6 faces).
 ````
 `````
 
@@ -465,7 +467,7 @@ Dans quel cas la valeur de sortie sera 1 ?
 De manière générale, la porte XOR est un détecteur de parité (pair/impair). La sortie vaut 1 seuelement si un nombre impair d'entrées valent 1 (ce qui est une propriété extrêmement utile).
 ```
 
-## 4. Table mystère (Challenge)
+## 4. Table mystère
 
 Créez le circuit logique correspondant à la table de vérité suivante:
 
@@ -704,7 +706,8 @@ Pour additionner **a** et **b** vous devez additionner les bits correspondants: 
   wires: [[34, 27], [37, 31], [38, 26], [33, 41], [28, 42], [37, 53], [38, 54], [39, 55], [40, 56], [74, 78], [75, 79], [76, 80], [77, 81], [74, 30], [75, 25], [29, 2], [3, 43], [4, 9], [10, 44], [11, 6], [39, 0], [76, 1], [40, 7], [77, 8]]
 }
 ```
+La retenue finale est à 1 quand le résultat de l'addition dépasse 15 (1111 en binaire, plus grand nombre représentable avec 4 bits).
 ````
 `````
 
-Vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp/alu.html" target="_blank">cette page modulo</a> qui permet d'aller plus loin que la matière du cours.
+Vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp/alu.html" target="_blank">cette page modulo</a> qui permet d'aller plus loin.
