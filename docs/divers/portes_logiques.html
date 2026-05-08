@@ -572,7 +572,7 @@
     [1, 20, {"via": [[200, 220]]}]
   ]
 }
-</script></logic-editor></div><p class="card-text">La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer toutes les portes <strong>ET</strong> par des portes <strong>OU</strong> et inversement. Le même circuit peut donc être réalisé avec des portes <strong>OU</strong>.</p>
+</script></logic-editor></div><p class="card-text">La <a href="http://serge.mehl.free.fr/anx/lois_morgan.html" target="_blank">loi de De Morgan</a> permet de remplacer les portes <strong>ET</strong> par des portes <strong>OU</strong> et inversement. Le même circuit pourrait donc être réalisé avec des portes <strong>OU</strong> à l’aide de l’égalité: <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">ET</span> <span class="pre">B</span> <span class="pre">=</span> <span class="pre">NON(NON</span> <span class="pre">A</span> <span class="pre">OU</span> <span class="pre">NON</span> <span class="pre">B)</span></code>.</p>
 </div>
 </details></div>
 </section>
@@ -582,7 +582,7 @@
 <p>Dans cette partie, vous allez concevoir des circuits traduisant des nombres décimaux en nombres binaires.</p>
 <section id="exercice-2-1-decodeur-de-clavier">
 <h3>Exercice 2.1 - Décodeur de clavier<a class="headerlink" href="#exercice-2-1-decodeur-de-clavier" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Complétez le circuit pour un décodeur de touches de clavier qui a le comportement suivant :</p>
+<p>Complétez le circuit pour faire un encodeur de touches de clavier qui a le comportement suivant :</p>
 <ul class="simple">
 <li><p>Touche 1 appuyée produit la sortie binaire 01</p></li>
 <li><p>Touche 2 appuyée produit la sortie binaire 10</p></li>
@@ -632,7 +632,7 @@
 <section id="exercice-2-2-decodeur-de-de">
 <h3>Exercice 2.2 - Décodeur de dé<a class="headerlink" href="#exercice-2-2-decodeur-de-de" title="Lien permanent vers ce titre">¶</a></h3>
 <a class="reference internal image-reference" href="../_images/de_6_faces.png"><img alt="../_images/de_6_faces.png" src="../_images/de_6_faces.png" style="width: 300px;"/></a>
-<p>Un dé de jeu peut afficher les nombres 1 à 6 à l’aide de 7 petits points que l’on peut représenter par 7 lampes.<br/>
+<p>Un dé de jeu peut afficher les nombres 1 à 6 à l’aide de 7 petits points que l’on peut représenter par 7 lampes (a, b, c, d, e, f, g).<br/>
 Plusieurs lampes s’allument par paire. Voici la table de vérité.</p>
 <div class="table-wrapper"><table class="colwidths-auto docutils align-default">
 <thead>
@@ -776,10 +776,7 @@ Pour résoudre l’exercice, il est nécessaire de trouver la fonction logique a
 }
 </script></logic-editor></div><p class="card-text">Pour résoudre l’exercice, il est conseillé de trouver la fonction logique associée à chaque sortie. Par exemple, la sortie ‘a,g’ vaut 1 si et seulement si b1 ou b2 vaut 1. On peut donc utiliser une porte <strong>OU</strong> pour cette sortie. On procède ensuite de la même manière pour les autres sorties.</p>
 </div>
-</details><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
+</details></div>
 </section>
 </section>
 <section id="commutateurs">
@@ -952,7 +949,251 @@ Dans quel cas la valeur de sortie sera 1 ?</p>
 </script></logic-editor></div><p class="card-text">Ce circuit représente un additionneur 3 bits (full adder). Il permet d’additionner 3 bits A, B et C et de récupérer le résultat sur 2 bits S1 et S2.</p>
 </div>
 </details></div>
-<p>Si vous avez tout terminé, vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp2.html#addition-binaire" target="_blank">cette page modulo</a> qui contient des exercices plus avancés sur les additionneurs (à partir de l’exercice 10.6).</p>
+</section>
+<section id="addition-binaire">
+<h2>5. Addition binaire<a class="headerlink" href="#addition-binaire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Rappelons-nous de la table de vérité de l’addition binaire de 2 bits.</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>A</p></th>
+<th class="head"><p>B</p></th>
+<th class="text-align:center head"><p>A+B</p></th>
+<th class="head"><p>C</p></th>
+<th class="head"><p>S</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td class="text-align:center"><p>2</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Le résultat <code class="docutils literal notranslate"><span class="pre">A+B</span></code> peut être 0, 1 ou 2.  Nous avons besoin de deux bits pour représenter le résultat :</p>
+<ul class="simple">
+<li><p>le bit de somme <code class="docutils literal notranslate"><span class="pre">S</span></code></p></li>
+<li><p>le bit de retenue <code class="docutils literal notranslate"><span class="pre">C</span></code> (<em>carry</em> en anglais)</p></li>
+</ul>
+<p>En regardant la table de vérité, on constate que :</p>
+<ul class="simple">
+<li><p>la somme <code class="docutils literal notranslate"><span class="pre">S</span></code> est exprimée par la fonction XOR</p></li>
+<li><p>la retenue <code class="docutils literal notranslate"><span class="pre">C</span></code> est exprimée par la fonction ET</p></li>
+</ul>
+<p>Vous trouvez le circuit ci-dessous ainsi que son abstraction en tant que bloc de demi-additionneur (half adder). Vous pouvez vérifier que leur comportement est identique et correspond bien à la table de vérité.</p>
+<div class="logic-container" style="height: 450px;"><logic-editor id="logic_add" showonly="in out and xor halfadder">
+<script type="application/json">
+{
+  v: 8,
+  opts: {origin: [-88, -60]},
+  components: {
+    in0: {type: 'in', pos: [55, 35], id: 0, name: 'A'},
+    in1: {type: 'in', pos: [55, 85], id: 1, name: 'B'},
+    in2: {type: 'in', pos: [50, 185], id: 18, name: 'A'},
+    in3: {type: 'in', pos: [50, 225], id: 19, name: 'B'},
+    out0: {type: 'out', pos: [235, 45], id: 8, name: 'S'},
+    c: {type: 'out', pos: [235, 105], id: 9, name: 'C'},
+    out1: {type: 'out', pos: [190, 185], id: 20, name: 'S (somme)'},
+    out2: {type: 'out', pos: [190, 225], id: 21, name: 'C (retenue)'},
+    xor0: {type: 'xor', pos: [165, 45], in: [2, 3], out: 4},
+    and0: {type: 'and', pos: [165, 105], in: [5, 6], out: 7},
+    hadder0: {type: 'halfadder', pos: [120, 205], in: [10, 11], out: [12, 13]},
+    label0: {type: 'label', pos: [120, 155], text: 'demi-additionneur'},
+  },
+  wires: [[0, 2], [0, 5], [1, 3], [1, 6], [4, 8], [7, 9], [18, 10], [19, 11], [12, 20], [13, 21]]
+}
+</script></logic-editor></div><section id="additionneur-complet">
+<h3>5.1 Additionneur complet<a class="headerlink" href="#additionneur-complet" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Dans le cas général de l’addition, nous n’additionnons pas deux bits, mais deux nombres à plusieurs bits. Voici l’addition en colonne de deux nombres 4 bits (3+11=14).</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> 0011
++1011
+-----
+ 1110
+</pre></div>
+</div>
+<p>Pour être explicite, nous introduisons une ligne supplémentaire qui représente la retenue (C = carry).</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> 0110 (retenue)
+ 0011
++1011
+-----
+ 1110
+</pre></div>
+</div>
+<p>L’additionneur de 2 bits de la section précédente n’est plus suffisant. Pour le cas général, nous avons besoin d’un additionneur qui additionne 3 bits. Il faut tenir compte de la retenue (<code class="docutils literal notranslate"><span class="pre">Cin</span></code>), qu’il faut inclure dans l’addition. Voici donc la table de vérité pour un additionneur complet.</p>
+<div class="table-wrapper"><table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Cin</p></th>
+<th class="text-align:center head"><p>A</p></th>
+<th class="text-align:center head"><p>B</p></th>
+<th class="text-align:center head"><p>Cin+A+B</p></th>
+<th class="text-align:center head"><p>Cout</p></th>
+<th class="text-align:center head"><p>S</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>3</p></td>
+<td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>1</p></td>
+</tr>
+</tbody>
+</table></div>
+<p>Vous trouvez le circuit ci-dessous ainsi que son abstraction en tant que bloc d’additionneur complet (full adder). Vous pouvez vérifier que leur comportement est identique et correspond bien à la table de vérité.</p>
+<div class="logic-container" style="height: 450px;"><logic-editor id="logic_adder" showonly="in out and or adder">
+<script type="application/json">
+{
+  v: 8,
+  opts: {origin: [-23, -24]},
+  components: {
+    in3: {type: 'in', pos: [70, 40], id: 0, name: 'A'},
+    in4: {type: 'in', pos: [70, 90], id: 1, name: 'B'},
+    in5: {type: 'in', pos: [70, 140], id: 2, name: 'Cin'},
+    out2: {type: 'out', pos: [420, 60], id: 7, name: 'S'},
+    out3: {type: 'out', pos: [420, 130], id: 26, name: 'Cout'},
+    and0: {type: 'and', pos: [270, 120], in: [8, 9], out: 10},
+    and1: {type: 'and', pos: [220, 170], in: [14, 15], out: 16},
+    xor0: {type: 'xor', pos: [170, 50], in: [17, 18], out: 19},
+    xor1: {type: 'xor', pos: [290, 60], in: [20, 21], out: 22},
+    or0: {type: 'or', pos: [350, 130], in: [23, 24], out: 25},
+    adder0: {type: 'adder', pos: [205, 280], in: [28, 27, 29], out: [30, 31]},
+    in0: {type: 'in', pos: [70, 220], id: 3, name: 'A'},
+    in1: {type: 'in', pos: [70, 270], id: 4, name: 'B'},
+    in2: {type: 'in', pos: [70, 320], id: 5, name: 'Cin'},
+    out0: {type: 'out', pos: [335, 260], id: 6, name: 'S'},
+    out1: {type: 'out', pos: [335, 330], id: 11, name: 'Cout'},
+  },
+  wires: [[0, 17], [1, 18], [19, 20], [2, 21], [22, 7], [19, 8], [10, 23], [16, 24], [25, 26], [2, 9], [0, 14], [1, 15], [3, 28], [4, 27], [5, 29], [30, 6], [31, 11]]
+}
+</script></logic-editor></div></section>
+<section id="additionneur-4-bits">
+<h3>5.2 Additionneur 4 bits<a class="headerlink" href="#additionneur-4-bits" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour additionner deux nombres 4-bits (quartets) nous avons besoin de 4 additionneurs complets.
+Chaque sortie <code class="docutils literal notranslate"><span class="pre">Cout</span></code> est liée à la l’entrée <code class="docutils literal notranslate"><span class="pre">Cin</span></code> de l’additionneur suivant.</p>
+<p>Pour additionner <strong>a</strong> et <strong>b</strong> vous devez additionner les bits correspondants: a0+b0, a1+b1, etc.</p>
+<ul class="simple">
+<li><p>Ajoutez les circuits manquants pour additionner deux nombres 4-bits.</p></li>
+<li><p>Montrez l’addition de 7+5 dont le résultat devrait être 12.</p></li>
+</ul>
+<div class="logic-container" style="height: 500px;"><logic-editor id="logic_add2" showonly="adder in out">
+<script type="application/json">
+{
+  "v": 4,
+  "in": [
+    {"type": "nibble", "pos": [50, 160], "id": [37, 38, 39, 40], "val": [1, 0, 1, 0], "name": "b"},
+    {"type": "nibble", "pos": [50, 290], "id": [74, 75, 76, 77], "val": [0, 1, 1, 0], "name": "a"}
+  ],
+  "out": [
+    {"type": "nibble-display", "pos": [430, 180], "id": [41, 42, 43, 44], "name": "s"},
+    {"type": "nibble-display", "pos": [170, 160], "id": [53, 54, 55, 56]},
+    {"type": "nibble-display", "pos": [170, 290], "id": [78, 79, 80, 81]}
+  ],
+  "components": [
+    {"type": "adder", "pos": [320, 170], "orient": "n", "in": [25, 26, 27], "out": [28, 29]},
+    {"type": "adder", "pos": [320, 70], "orient": "n", "in": [30, 31, 32], "out": [33, 34]}
+  ],
+  "wires": [[34, 27], [37, 31], [38, 26], [33, 41], [28, 42], [37, 53], [38, 54], [39, 55], [40, 56], [74, 78], [75, 79], [76, 80], [77, 81], [74, 30], [75, 25]]
+}
+</script></logic-editor></div><div class="hint admonition">
+<p class="admonition-title">Solution 5</p>
+<details class="sphinx-bs dropdown card mb-3 fade-in-slide-down">
+<summary class="summary-title card-header">
+<span style="color:grey">Cliquer ici pour voir la réponse</span><div class="summary-down docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-down" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z" fill-rule="evenodd"></path></svg></div>
+<div class="summary-up docutils">
+<svg aria-hidden="true" class="octicon octicon-chevron-up" height="24" version="1.1" viewbox="0 0 24 24" width="24"><path d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z" fill-rule="evenodd"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="logic-container" style="height: 390px;"><logic-editor mode="tryout">
+<script type="application/json">
+{
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [100, 115], id: 14, name: 'A'},
+    in1: {type: 'in', pos: [100, 175], id: 15, name: 'B'},
+    in2: {type: 'in', pos: [100, 235], id: 16, name: 'C'},
+    out0: {type: 'out', pos: [660, 150], id: 22, name: 'S1'},
+    out1: {type: 'out', pos: [660, 195], id: 23, name: 'S2'},
+    and0: {type: 'and', pos: [370, 50], in: [0, 1], out: 2},
+    and1: {type: 'and', pos: [370, 110], in: [3, 4], out: 5},
+    and2: {type: 'and', pos: [370, 170], in: [6, 7], out: 8},
+    or0: {type: 'or', pos: [540, 110], in: [12, 13, 17], out: 18, bits: 3},
+    xor0: {type: 'xor', pos: [385, 280], in: '24-26', out: 27, bits: 3},
+  },
+  wires: [[14, 0], [15, 1], [14, 3], [16, 4], [15, 6], [16, 7], [2, 12], [5, 13], [8, 17], [14, 24], [15, 25], [16, 26], [27, 23], [18, 22]]
+}
+</script></logic-editor></div></div>
+</details></div>
+<p>Vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp/alu.html" target="_blank">cette page modulo</a> qui permet d’aller plus loin que la matière du cours.</p>
+</section>
 </section>
 </section>
 
@@ -1018,6 +1259,11 @@ Dans quel cas la valeur de sortie sera 1 ?</p>
 </li>
 <li><a class="reference internal" href="#commutateurs">3. Commutateurs</a></li>
 <li><a class="reference internal" href="#table-mystere-challenge">4. Table mystère (Challenge)</a></li>
+<li><a class="reference internal" href="#addition-binaire">5. Addition binaire</a><ul>
+<li><a class="reference internal" href="#additionneur-complet">5.1 Additionneur complet</a></li>
+<li><a class="reference internal" href="#additionneur-4-bits">5.2 Additionneur 4 bits</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

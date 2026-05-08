@@ -533,7 +533,7 @@ Ce circuit représente un additionneur 3 bits (full adder). Il permet d'addition
 
 ## 5. Addition binaire
 
-Nous avons maintenant tous les éléments pour construire un additionneur binaire. Rappelons-nous que l'addition binaire est très simple.
+Rappelons-nous de la table de vérité de l'addition binaire de 2 bits.
 
 | A | B | A+B | C | S |
 |---|---|:---:|---|---|
@@ -549,42 +549,33 @@ Le résultat `A+B` peut être 0, 1 ou 2.  Nous avons besoin de deux bits pour re
 
 En regardant la table de vérité, on constate que :
 
-- la somme `S` est exprimée par la fonction OU-X
+- la somme `S` est exprimée par la fonction XOR
 - la retenue `C` est exprimée par la fonction ET
 
-Vous trouvez le circuit ci-dessous à droite. Vérifiez sa fonction en cliquant sur ses entrées.
-
-Ajoutez encore 3 demi-additionneurs et montrez la table de vérité pour les 4 conditions d'entrée : 00, 01, 10, 11.
+Vous trouvez le circuit ci-dessous ainsi que son abstraction en tant que bloc de demi-additionneur (half adder). Vous pouvez vérifier que leur comportement est identique et correspond bien à la table de vérité.
 
 ```{logic}
 :ref: add
 :height: 450
 :showonly: in out and xor halfadder
 {
-  "v": 4,
-  "in": [
-    {"pos": [370, 270], "id": 0, "name": "A", "val": 0},
-    {"pos": [370, 320], "id": 1, "name": "B", "val": 0},
-    {"pos": [50, 60], "id": 18, "name": "A", "val": 0},
-    {"pos": [50, 100], "id": 19, "name": "B", "val": 0}
-  ],
-  "out": [
-    {"pos": [550, 280], "id": 8, "name": "S"},
-    {"pos": [550, 340], "ref": "c", "id": 9, "name": "C"},
-    {"pos": [190, 60], "id": 20, "name": "S (somme)"},
-    {"pos": [190, 100], "id": 21, "name": "C (retenue)"}
-  ],
-  "gates": [
-    {"type": "XOR", "pos": [480, 280], "in": [2, 3], "out": 4},
-    {"type": "AND", "pos": [480, 340], "in": [5, 6], "out": 7}
-  ],
-  "components": [
-    {"type": "halfadder", "pos": [120, 80], "in": [10, 11], "out": [12, 13]}
-  ],
-  "labels": [
-    {"pos": [100, 20], "text": "table de vérité"}
-  ],
-  "wires": [[0, 2], [0, 5], [1, 3], [1, 6], [4, 8], [7, 9], [18, 10], [19, 11], [12, 20], [13, 21]]
+  v: 8,
+  opts: {origin: [-88, -60]},
+  components: {
+    in0: {type: 'in', pos: [55, 35], id: 0, name: 'A'},
+    in1: {type: 'in', pos: [55, 85], id: 1, name: 'B'},
+    in2: {type: 'in', pos: [50, 185], id: 18, name: 'A'},
+    in3: {type: 'in', pos: [50, 225], id: 19, name: 'B'},
+    out0: {type: 'out', pos: [235, 45], id: 8, name: 'S'},
+    c: {type: 'out', pos: [235, 105], id: 9, name: 'C'},
+    out1: {type: 'out', pos: [190, 185], id: 20, name: 'S (somme)'},
+    out2: {type: 'out', pos: [190, 225], id: 21, name: 'C (retenue)'},
+    xor0: {type: 'xor', pos: [165, 45], in: [2, 3], out: 4},
+    and0: {type: 'and', pos: [165, 105], in: [5, 6], out: 7},
+    hadder0: {type: 'halfadder', pos: [120, 205], in: [10, 11], out: [12, 13]},
+    label0: {type: 'label', pos: [120, 155], text: 'demi-additionneur'},
+  },
+  wires: [[0, 2], [0, 5], [1, 3], [1, 6], [4, 8], [7, 9], [18, 10], [19, 11], [12, 20], [13, 21]]
 }
 ```
 
@@ -622,38 +613,34 @@ L'additionneur de 2 bits de la section précédente n'est plus suffisant. Pour l
 | 1   | 1 | 0 | 2     |   1  | 0 |
 | 1   | 1 | 1 | 3     |   1  | 1 |
 
-Regardez les colonnes et essayez de comprendre avec quelles portes on pourrait le construire.
-Vous constatez que la colonne `S` représente la parité. On pourra donc la construire avec des portes OU-X.
-
-- Ajoutez les deux fils qui manquent à l'entrée de la porte ET pour que le circuit produise le signal `Cout` et se comporte comme un additionneur complet.
-- Ajoutez des entrées et sorties au bloc de l'additionneur complet et vérifiez son fonctionnement.
+Vous trouvez le circuit ci-dessous ainsi que son abstraction en tant que bloc d'additionneur complet (full adder). Vous pouvez vérifier que leur comportement est identique et correspond bien à la table de vérité.
 
 ```{logic}
 :ref: adder
 :height: 450
 :showonly: in out and or adder
 {
-  "v": 4,
-  "in": [
-    {"pos": [70, 40], "id": 0, "name": "A", "val": 0},
-    {"pos": [70, 90], "id": 1, "name": "B", "val": 0},
-    {"pos": [70, 140], "id": 2, "name": "Cin", "val": 0}
-  ],
-  "out": [
-    {"pos": [420, 60], "id": 7, "name": "S"},
-    {"pos": [420, 130], "id": 26, "name": "Cout"}
-  ],
-  "gates": [
-    {"type": "AND", "pos": [270, 120], "in": [8, 9], "out": 10},
-    {"type": "AND", "pos": [220, 170], "in": [14, 15], "out": 16},
-    {"type": "XOR", "pos": [170, 50], "in": [17, 18], "out": 19},
-    {"type": "XOR", "pos": [290, 60], "in": [20, 21], "out": 22},
-    {"type": "OR", "pos": [350, 130], "in": [23, 24], "out": 25}
-  ],
-  "components": [
-    {"type": "adder", "pos": [140, 310], "orient": "n", "in": [27, 28, 29], "out": [30, 31]}
-  ],
-  "wires": [[0, 17], [1, 18], [19, 20], [2, 21], [22, 7], [19, 8], [10, 23], [16, 24], [25, 26], [2, 9]]
+  v: 8,
+  opts: {origin: [-23, -24]},
+  components: {
+    in3: {type: 'in', pos: [70, 40], id: 0, name: 'A'},
+    in4: {type: 'in', pos: [70, 90], id: 1, name: 'B'},
+    in5: {type: 'in', pos: [70, 140], id: 2, name: 'Cin'},
+    out2: {type: 'out', pos: [420, 60], id: 7, name: 'S'},
+    out3: {type: 'out', pos: [420, 130], id: 26, name: 'Cout'},
+    and0: {type: 'and', pos: [270, 120], in: [8, 9], out: 10},
+    and1: {type: 'and', pos: [220, 170], in: [14, 15], out: 16},
+    xor0: {type: 'xor', pos: [170, 50], in: [17, 18], out: 19},
+    xor1: {type: 'xor', pos: [290, 60], in: [20, 21], out: 22},
+    or0: {type: 'or', pos: [350, 130], in: [23, 24], out: 25},
+    adder0: {type: 'adder', pos: [205, 280], in: [28, 27, 29], out: [30, 31]},
+    in0: {type: 'in', pos: [70, 220], id: 3, name: 'A'},
+    in1: {type: 'in', pos: [70, 270], id: 4, name: 'B'},
+    in2: {type: 'in', pos: [70, 320], id: 5, name: 'Cin'},
+    out0: {type: 'out', pos: [335, 260], id: 6, name: 'S'},
+    out1: {type: 'out', pos: [335, 330], id: 11, name: 'Cout'},
+  },
+  wires: [[0, 17], [1, 18], [19, 20], [2, 21], [22, 7], [19, 8], [10, 23], [16, 24], [25, 26], [2, 9], [0, 14], [1, 15], [3, 28], [4, 27], [5, 29], [30, 6], [31, 11]]
 }
 ```
 
@@ -670,7 +657,7 @@ Pour additionner **a** et **b** vous devez additionner les bits correspondants: 
 ```{logic}
 :ref: add2
 :height: 500
-:showonly: adder
+:showonly: adder in out
 {
   "v": 4,
   "in": [
@@ -689,5 +676,34 @@ Pour additionner **a** et **b** vous devez additionner les bits correspondants: 
   "wires": [[34, 27], [37, 31], [38, 26], [33, 41], [28, 42], [37, 53], [38, 54], [39, 55], [40, 56], [74, 78], [75, 79], [76, 80], [77, 81], [74, 30], [75, 25]]
 }
 ```
+
+`````{admonition} Solution 5
+:class: hint
+````{dropdown} <span style="color:grey">Cliquer ici pour voir la réponse</span>
+:animate: fade-in-slide-down
+
+```{logic}
+:height: 390
+:mode: tryout
+
+{
+  v: 6,
+  components: {
+    in0: {type: 'in', pos: [100, 115], id: 14, name: 'A'},
+    in1: {type: 'in', pos: [100, 175], id: 15, name: 'B'},
+    in2: {type: 'in', pos: [100, 235], id: 16, name: 'C'},
+    out0: {type: 'out', pos: [660, 150], id: 22, name: 'S1'},
+    out1: {type: 'out', pos: [660, 195], id: 23, name: 'S2'},
+    and0: {type: 'and', pos: [370, 50], in: [0, 1], out: 2},
+    and1: {type: 'and', pos: [370, 110], in: [3, 4], out: 5},
+    and2: {type: 'and', pos: [370, 170], in: [6, 7], out: 8},
+    or0: {type: 'or', pos: [540, 110], in: [12, 13, 17], out: 18, bits: 3},
+    xor0: {type: 'xor', pos: [385, 280], in: '24-26', out: 27, bits: 3},
+  },
+  wires: [[14, 0], [15, 1], [14, 3], [16, 4], [15, 6], [16, 7], [2, 12], [5, 13], [8, 17], [14, 24], [15, 25], [16, 26], [27, 23], [18, 22]]
+}
+```
+````
+`````
 
 Vous pouvez faire un tour sur <a href="https://logic.modulo-info.ch/" target="_blank">logic modulo</a> qui permet de designer des circuits en toute liberté avec des composants plus complexes que ceux vus en cours. Vous pouvez aussi visiter <a href="https://dev-apprendre.modulo-info.ch/archi/tp/alu.html" target="_blank">cette page modulo</a> qui permet d'aller plus loin que la matière du cours.
