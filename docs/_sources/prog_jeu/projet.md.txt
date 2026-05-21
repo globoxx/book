@@ -83,6 +83,8 @@ Programmez !
 ```{admonition} Aide
 :class: info
 
+**Il est impératif de rendre l'entiereté de votre projet avec tous son contenu (images, sons, musiques, code, etc.)**
+
 1. Rendez-vous sur la page Moodle du cours et descendez jusqu'à la section de rendu du projet.
 2. Retrouvez le dossier de votre projet sur votre ordinateur avec le Finder (Mac) ou l'Explorateur de fichiers (Windows). Depuis Pycharm et si vous ne savez pas où est sauvegardé votre projet, vous pouvez faire un clic droit sur le dossier de votre projet et sélectionner "Open In" -> "Finder". Cela ouvrira le Finder avec le dossier de votre projet.
 3. Si Moodle refuse le dépôt de votre dossier, zippez le dossier. Sur Mac, faites un clic droit sur le dossier de votre projet et sélectionnez "Compresser". Sur Windows, faites un clic droit sur le dossier de votre projet, sélectionnez "Envoyer vers" puis "Dossier compressé".
