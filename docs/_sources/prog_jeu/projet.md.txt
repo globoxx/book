@@ -80,8 +80,8 @@ Programmez !
 
 ## Rendre le projet
 
-```{admonition} 
-class: info
+```{admonition} Aide
+:class: info
 
 1. Rendez-vous sur la page Moodle du cours et descendez jusqu'à la section de rendu du projet.
 2. Retrouvez le dossier de votre projet sur votre ordinateur avec le Finder (Mac) ou l'Explorateur de fichiers (Windows). Depuis Pycharm et si vous ne savez pas où est sauvegardé votre projet, vous pouvez faire un clic droit sur le dossier de votre projet et sélectionner "Open In" -> "Finder". Cela ouvrira le Finder avec le dossier de votre projet.
